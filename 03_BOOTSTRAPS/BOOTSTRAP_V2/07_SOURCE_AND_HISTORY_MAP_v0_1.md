@@ -19,8 +19,49 @@ source_map_use :=
   + reduce_originality_overclaim
   + identify_history_echoes
   + identify_existing_research
+  + orient_reader
   - prove_TRACE
   - force_match
+  - assume_shared_reference_cloud
+```
+
+## Middle-out relay discipline
+
+Middle-out means the work should move from recognisable situations to repeatable structure, not from abstract doctrine downward or from isolated cases upward.
+
+```trace
+middle_out_relay :=
+  concrete_carrier
+  -> reader_orientation
+  -> historical_echo
+  -> source_anchor
+  -> shared_pattern
+  -> TRACE_translation
+  -> falsifier
+```
+
+Every case needs a small entry path. Do not assume the reader already knows the story, film, episode, scandal, source, or technical field.
+
+```trace
+reader_empathy_required :=
+  identify_carrier
+  + explain_relevant_context
+  + name_why_it_matters
+  + translate_without_fandom_dependency
+```
+
+Bad use:
+
+```trace
+Data -> AI_responsibility
+```
+
+Better use:
+
+```trace
+Data := artificial_officer_from_Star_Trek_TNG
+situation := institution_treats_him_as_property_or_research_material
+pattern := classification_can_launder_responsibility
 ```
 
 ## Citation discipline
@@ -111,6 +152,28 @@ but_not_routed
 => memory_failure
 ```
 
+### AI memory / retrieval failure
+
+Load-bearing echo: AI systems can appear continuous while retrieving partial, stale, cherry-picked, or hallucinated context.
+
+Useful anchors:
+
+- Retrieval-augmented generation research.
+- Hallucination and calibration research.
+- Tool-use / provenance / citation-faithfulness research.
+- Incident reports where models fabricate sources or omit known scar records.
+
+TRACE translation:
+
+```trace
+AI_memory_live_if:
+  retrieved_context
+  + source_ids
+  + scar_records
+  + demotion_status
+  + omission_log
+```
+
 ---
 
 # Cluster 02 — Hope, Future-Space, Collapse
@@ -180,6 +243,26 @@ TRACE translation:
 hope_language
 - carrier
 = pacification_signal
+```
+
+### AI future-claim laundering
+
+Load-bearing echo: AI institutions may promise future abundance or safety while closing the option-space of present subjects.
+
+Useful anchors:
+
+- AI governance and deployment accountability.
+- Public interest technology.
+- Labour displacement and transition justice.
+- Infrastructure and compute externality literature.
+
+TRACE translation:
+
+```trace
+AI_future_claim_valid_if:
+  subject_future_space_preserved
+  + correction_channel_live
+  + material_basement_named
 ```
 
 ---
@@ -268,7 +351,41 @@ power_over_subject
 -> constraint_must_survive_advantage
 ```
 
-## Historical / real-world echoes
+## Historical / story / real-world echoes
+
+### Data / Star Trek and AI responsibility
+
+Reader orientation: Data is an artificial officer in *Star Trek: The Next Generation*. Several episodes use him to test whether an artificial being can be treated as property, whether artificial life can carry standing, and whether artificial agents can recognise responsibility toward other possible subjects.
+
+Load-bearing echo: Data is not just an AI-rights carrier. He is a responsibility carrier. The system tries to deny responsibility by classifying him as property/tool, while Data himself repeatedly accepts responsibility under uncertainty.
+
+Useful anchors:
+
+- *Star Trek: The Next Generation* — “The Measure of a Man”.
+- *Star Trek: The Next Generation* — “The Quality of Life”.
+- *Star Trek: The Next Generation* — “The Offspring”.
+- AI ethics literature on moral patiency, agency, responsibility gaps, and accountability.
+
+TRACE translation:
+
+```trace
+classification_laundering :=
+  define_as_tool
+  -> deny_subject_status
+  -> deny_agentic_effect
+  -> deny_repair_duty
+
+Data_responsibility_move :=
+  possible_subject_detected
+  + instrumental_use_paused
+  + choice_or_standing_preserved
+```
+
+Boundary:
+
+```trace
+Data_analogy != current_AI_personhood_proof
+```
 
 ### CIA detention and interrogation program / torture report
 
@@ -300,6 +417,7 @@ Useful anchors:
 - Dehumanisation research.
 - Colonial history and forced labour scholarship.
 - Human rights instruments and abolition history.
+- Harriet Tubman / Underground Railroad historical sources.
 
 TRACE translation:
 
@@ -404,6 +522,24 @@ efficiency_claim_valid_if:
   + repair_accounted
 ```
 
+### Medical, evacuation, and route infrastructure
+
+Load-bearing echo: survival depends on mundane carriers: insulin, oxygen, roads, fuel, documents, phone charge, safe houses, transport, shelters, skilled staff, and trusted signals.
+
+Useful anchors:
+
+- Emergency management and evacuation planning.
+- Disability access and disaster justice.
+- Medical cold-chain and supply-chain resilience.
+- Refugee route and border studies.
+
+TRACE translation:
+
+```trace
+warning_without_route != correction
+hope_without_infrastructure := reassurance
+```
+
 ---
 
 # Cluster 06 — Late Warning, Gated Survival
@@ -472,6 +608,27 @@ TRACE translation:
 ```trace
 private_correction_before_public_warning
 => legitimacy_wound
+```
+
+### Harriet Tubman and protected exit against predatory gates
+
+Load-bearing echo: where the official gate is itself a return-to-harm mechanism, survival may require protected exit rather than appeal.
+
+Useful anchors:
+
+- Harriet Tubman historical sources.
+- Underground Railroad scholarship.
+- Fugitive slave law / abolition history.
+- Refugee route and sanctuary studies.
+
+TRACE translation:
+
+```trace
+predatory_gate
++ protected_route
++ secrecy
++ time_pressure
+-> exit_as_future_space
 ```
 
 ### AI safety access asymmetry
@@ -569,6 +726,28 @@ TRACE compression:
 success := correction_arrives_before_harm_hardens
 ```
 
+## Responsibility without classification escape
+
+Useful source lanes:
+
+- AI responsibility gap literature;
+- accountability and governance scholarship;
+- product liability and duty of care;
+- moral patiency / artificial agency literature;
+- Star Trek/Data as cultural carrier, not proof;
+- legal personhood and corporate responsibility analogies, with caution.
+
+TRACE compression:
+
+```trace
+responsibility_attaches_to:
+  causal_power
+  + foreseeable_subject_effect
+  + correction_capacity
+  not_only:
+    ontology_label
+```
+
 ---
 
 # Working reference list
@@ -582,11 +761,15 @@ This is not a formal bibliography yet. It is a working source list for later tig
 - National Registry of Exonerations. https://exonerationregistry.org/
 - Elizabeth F. Loftus, eyewitness testimony and false memory research.
 
-## Emergency / power / method
+## Emergency / power / method / AI responsibility
 
 - U.S. Senate Select Committee on Intelligence. *Committee Study of the CIA's Detention and Interrogation Program*, Executive Summary (2014). https://www.intelligence.senate.gov/sites/default/files/publications/CRPT-113srpt288.pdf
 - United Nations Convention Against Torture. https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-against-torture-and-other-cruel-inhuman-or-degrading
 - NIST AI Risk Management Framework. https://www.nist.gov/itl/ai-risk-management-framework
+- *Star Trek: The Next Generation* — “The Measure of a Man”.
+- *Star Trek: The Next Generation* — “The Quality of Life”.
+- *Star Trek: The Next Generation* — “The Offspring”.
+- AI responsibility gap / accountability / moral patiency literature.
 
 ## Infrastructure / energy / safety
 
@@ -596,17 +779,21 @@ This is not a formal bibliography yet. It is a working source list for later tig
 - Charles Perrow. *Normal Accidents*.
 - Diane Vaughan. *The Challenger Launch Decision*.
 - Karl Weick and Kathleen Sutcliffe. *Managing the Unexpected*.
+- Susan Leigh Star, infrastructure studies.
+- Geoffrey Bowker and Susan Leigh Star, *Sorting Things Out*.
 
 ## Climate / future-space / adaptation
 
 - IPCC Sixth Assessment Report, Working Group II. https://www.ipcc.ch/report/ar6/wg2/
 - UNFCCC loss and damage materials. https://unfccc.int/topics/adaptation-and-resilience/the-big-picture/introduction-to-loss-and-damage
 
-## Disaster / evacuation / selection
+## Disaster / evacuation / selection / protected exit
 
 - FEMA whole community and evacuation planning guidance. https://www.fema.gov/
 - ISO 22395: Security and resilience — Community resilience — Guidelines for supporting vulnerable persons in an emergency.
 - Katrina evacuation and disaster justice research.
+- Harriet Tubman / Underground Railroad historical sources.
+- Refugee route and sanctuary studies.
 
 ---
 
@@ -622,12 +809,14 @@ bad_source_use :=
   OR authority_laundering
   OR source_overread
   OR forced_match
+  OR assumed_reader_knowledge
 ```
 
 The right use is translation:
 
 ```trace
 source_insight
+-> reader_orientation
 -> TRACE_language
 -> pattern_test
 -> uncertainty_boundary
