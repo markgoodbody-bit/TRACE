@@ -1,3 +1,0 @@
-# Temp note
-
-Temporary.

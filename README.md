@@ -1,8 +1,12 @@
-# TRACE / Mechanical Ethics
+# TRACE / Mechanical Ethics — Important Import Pack v0.1
 
-Status: working memory repository, not validation, not proof, not governance certification.
+Date: 2026-06-16
 
-This repository exists to preserve and organize TRACE / Mechanical Ethics structures without compressing away the underlying work.
+This is a clean, organized import pack for the GitHub repository:
+
+`markgoodbody-bit/TRACE`
+
+It exists to build the repo back up without dumping files into root.
 
 ```trace
 preserve_payloads_first
@@ -11,15 +15,19 @@ then_structure
 never_replace_full_artifacts_with_summaries
 ```
 
-Start here:
+## Use
 
-1. `00_START_HERE/REPO_ORIENTATION.md`
-2. `00_START_HERE/PRESERVATION_POLICY.md`
-3. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_1.md`
-4. `02_CURRENT_SURFACE/TRACE_ME_PUBLIC_ONE_SHEET_v0_2.md`
-5. `02_CURRENT_SURFACE/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
+Upload or push the contents of this ZIP into the repo root. It is already arranged into the intended repository folders.
 
-Core rule:
+## Status
+
+- import pack
+- not validation
+- not proof
+- not governance certification
+- not replacement for full project history
+
+## Core memory rule
 
 ```trace
 cases_teach
@@ -28,5 +36,3 @@ tests_pressure
 reviews_attack
 operators_remember
 ```
-
-The current candidate branches — recursive agency / training-loop, creator responsibility, and contested legitimacy — are not yet Diagnostic Kernel v0.3.

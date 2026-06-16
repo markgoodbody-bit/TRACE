@@ -1,0 +1,5 @@
+# SHA256 Manifest — TRACE_ME_AI_Review_Digest_v0_1
+
+7ece6f732c32c02e3d8b9bf07ad07befdf92be48e9ea3d25357f28ba74c4f9e8  README.md
+b45ec73a9f01f9a35e0aa97b0bd0e23f601f27d9e830d1245ea5fb76365b2435  TRACE_ME_AI_Review_Digest_v0_1.csv
+7bfd87d69faab85f65457e1cf007e725fd5b0ddd4c955dc4498e627b0f141139  TRACE_ME_AI_Review_Digest_v0_1.md

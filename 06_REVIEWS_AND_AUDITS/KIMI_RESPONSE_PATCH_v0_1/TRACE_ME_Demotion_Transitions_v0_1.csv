@@ -1,0 +1,8 @@
+from_status,to_status,trigger,required_action
+known_guard,revised_guard/deprecated,"Guard blocks truth, creates harm, or is overbroad",Revise or demote
+core_operator,patterned_operator/hypothesis/deprecated,Fails to discriminate before outcomes or duplicates existing theory,Demote and add comparator
+patterned_operator,hypothesis/deprecated,Pattern overfits or lacks counterexample discipline,Demote
+boundary_claim,revised_boundary/deprecated,Activation/deactivation conditions unclear,Revise boundary
+hypothesis_operator,candidate_branch/deprecated/removed,Tested and supported OR fails to add remainder,"Promote only with pressure, else demote"
+candidate_branch,Kernel_candidate/deprecated,Passes candidate branch gate OR fails breaker case,Promote only after test
+deprecated,removed,"No active use, confusion risk remains",Remove from active layer
