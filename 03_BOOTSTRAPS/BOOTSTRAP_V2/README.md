@@ -1,11 +1,15 @@
 # TRACE Bootstrap V2
 
 Date: 2026-06-16
-Status: active build workspace / not canon / not validation
+Status: live relay-facing bootstrap surface / not canon / not validation
 
 ## Plain contract
 
-Bootstrap V2 reduces file count and increases pattern density.
+Bootstrap V2 is the current live bootstrap relay surface.
+
+It replaces the older per-case `ACTIVE_COLLECTION` as the active surface. The older files are preserved in git history and deprecated from live use.
+
+Bootstrap V2 reduces live file count and increases pattern density.
 
 The goal is not to prove TRACE. The goal is to make recurring patterns legible across stories, history, research, and lived systems so another reader or AI can say: "I see that pattern."
 
@@ -15,7 +19,8 @@ The reader must not be presumed to already know the carrier story. Each case mus
 
 ```trace
 Bootstrap_V2 :=
-  fewer_files
+  live_relay_surface
+  + fewer_live_files
   + larger_pattern_clusters
   + story_to_history_pairing
   + source_translation
@@ -60,13 +65,14 @@ Better pattern:
 Data := artificial_officer_from_Star_Trek_TNG
 case := system_treats_him_as_property_or_tool
 pattern := classification_can_launder_responsibility
+boundary := Data_analogy != current_AI_personhood_proof
 ```
 
 This rule applies equally to Star Trek, Lord of the Rings, Apollo 13, Harriet Tubman, Memento, EEAAO, legal cases, and technical source references.
 
 ## Why this folder exists
 
-The earlier bootstrap set works because familiar films, literature, and historical cases carry structure better than abstract doctrine. The weakness is file count. Many external AI systems can handle long files but struggle with too many separate files.
+The earlier bootstrap set works because familiar films, literature, and historical cases carry structure better than abstract doctrine. The weakness is file count and relay sprawl. Many external AI systems can handle long files but struggle with too many separate files.
 
 Bootstrap V2 therefore clusters cases by pattern rather than by individual film.
 
@@ -80,17 +86,18 @@ Current file count: 10 files.
 
 This is at the normal relay limit. Do not add more files unless consolidating.
 
-## V2 files
+## V2 relay files
 
 1. `00_READ_ME_FIRST__BOOTSTRAP_V2.md` — usage contract and reader instructions.
-2. `01_CLUSTER__Memory_Identity_Recursion.md` — Memento, Groundhog Day, memory, identity, recursion, false update.
-3. `02_CLUSTER__Hope_Future_Space_Collapse.md` — Children of Men, EEAAO, hope, despair, future-space, collapse.
-4. `03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md` — 12 Angry Men, wrongful conviction, death, uncertainty, decision under irreversible risk.
-5. `04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md` — Data, Unthinkable, Frankenstein, creator duty, emergency laundering, method floor, AI responsibility denial.
-6. `05_CLUSTER__Energy_Infrastructure_Basement.md` — Infrastructure, Apollo 13, energy, maintenance, hidden basement, correction under constraint.
-7. `06_CLUSTER__Late_Warning_Gated_Survival.md` — 2012, Greenland, evacuation, gated survival, selected warning, scarce future-carrier access.
-8. `07_SOURCE_AND_HISTORY_MAP_v0_1.md` — working source and historical echo map across clusters.
-9. `08_CROSS_CONNECTION_AUDIT_v0_1.md` — gap check and cross-cluster connection audit.
+2. `README.md` — this live-surface pointer and folder contract.
+3. `01_CLUSTER__Memory_Identity_Recursion.md` — Memento, Groundhog Day, memory, identity, recursion, false update.
+4. `02_CLUSTER__Hope_Future_Space_Collapse.md` — Children of Men, EEAAO, hope, despair, future-space, collapse.
+5. `03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md` — 12 Angry Men, wrongful conviction, death, uncertainty, decision under irreversible risk.
+6. `04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md` — Data, Unthinkable, Frankenstein, creator duty, emergency laundering, method floor, AI responsibility denial.
+7. `05_CLUSTER__Energy_Infrastructure_Basement.md` — Infrastructure, Apollo 13, energy, maintenance, hidden basement, correction under constraint.
+8. `06_CLUSTER__Late_Warning_Gated_Survival.md` — 2012, Greenland, evacuation, gated survival, selected warning, scarce future-carrier access.
+9. `07_SOURCE_AND_HISTORY_MAP_v0_1.md` — working source and historical echo map across clusters.
+10. `08_CROSS_CONNECTION_AUDIT_v0_1.md` — gap check and cross-cluster connection audit.
 
 ## Source discipline
 
@@ -134,13 +141,12 @@ Bootstrap V2 does not claim:
 
 Keep the Rosetta file clean.
 
-Use this folder to build grouped pattern-recognition surfaces. Later, only stable compressions should be promoted back toward the Rosetta or public surface.
+Use this folder as the live bootstrap relay surface. Later, only stable compressions should be promoted back toward the Rosetta or public surface.
 
 ## Next build priorities
 
-1. Tighten each cluster with concrete historical examples.
+1. Keep the total relay pack at 10 files or fewer.
 2. Add source anchors only where they improve signal.
-3. Keep the total relay pack under 10 files.
-4. Do not create PDFs until the Markdown surfaces survive a first hostile read.
-5. Demote any cluster that becomes metaphor rather than navigation.
-6. Patch any section that assumes specialist/fandom knowledge without orientation.
+3. Demote any cluster that becomes metaphor rather than navigation.
+4. Patch any section that assumes specialist/fandom knowledge without orientation.
+5. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.
