@@ -35,6 +35,10 @@ Target external relay size: 5-8 files, with 10 files as the hard normal limit.
 
 Each cluster file should be able to stand alone, but it should also point back to the Rosetta surface.
 
+Current file count: 9 files.
+
+This is still inside the normal relay limit.
+
 ## V2 files
 
 1. `00_READ_ME_FIRST__BOOTSTRAP_V2.md` — usage contract and reader instructions.
@@ -43,6 +47,8 @@ Each cluster file should be able to stand alone, but it should also point back t
 4. `03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md` — 12 Angry Men, wrongful conviction, death, uncertainty, decision under irreversible risk.
 5. `04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md` — Unthinkable, Frankenstein, creator duty, emergency laundering, method floor.
 6. `05_CLUSTER__Energy_Infrastructure_Basement.md` — Infrastructure, Apollo 13, energy, maintenance, hidden basement, correction under constraint.
+7. `06_CLUSTER__Late_Warning_Gated_Survival.md` — 2012, Greenland, evacuation, gated survival, selected warning, scarce future-carrier access.
+8. `07_SOURCE_AND_HISTORY_MAP_v0_1.md` — working source and historical echo map across clusters.
 
 ## Source discipline
 
@@ -75,10 +81,19 @@ Bootstrap V2 does not claim:
 - a story validates a theory;
 - one historical echo proves a universal pattern;
 - the selected source is exhaustive;
-- a familiar example gives permission to simplify real harm.
+- a familiar example gives permission to simplify real harm;
+- a source citation automatically validates a TRACE compression.
 
 ## Build rule
 
 Keep the Rosetta file clean.
 
 Use this folder to build grouped pattern-recognition surfaces. Later, only stable compressions should be promoted back toward the Rosetta or public surface.
+
+## Next build priorities
+
+1. Tighten each cluster with concrete historical examples.
+2. Add source anchors only where they improve signal.
+3. Keep the total relay pack under 10 files.
+4. Do not create PDFs until the Markdown surfaces survive a first hostile read.
+5. Demote any cluster that becomes metaphor rather than navigation.
