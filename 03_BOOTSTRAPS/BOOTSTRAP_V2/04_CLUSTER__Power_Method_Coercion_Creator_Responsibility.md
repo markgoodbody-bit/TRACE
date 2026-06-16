@@ -1,11 +1,13 @@
 # Cluster 04 — Power, Method, Coercion, Creator Responsibility
 
 Date: 2026-06-16
-Status: Bootstrap V2 cluster / pattern surface / not canon
+Status: Bootstrap V2 cluster / pattern surface / not canon / not validation
 
 ## Plain compression
 
 Power does not become legitimate because it is effective. Methods matter because methods shape the world that survives the action. Creator responsibility begins when a being, system, institution, or machine is given causal power before it has a live correction path.
+
+This cluster is not anti-power. It is anti-unaccountable power. Some power protects. Some power extracts. The difference depends on subject position, method, time, exit, and correction.
 
 ## TRACE compression
 
@@ -24,7 +26,7 @@ failure :=
   -> irreversible_harm
 ```
 
-## Story carriers
+## Story / case carriers
 
 ### Frankenstein
 
@@ -71,6 +73,54 @@ authority_valid_if:
   + irreversible_harm_blocked_when_needed
 ```
 
+### Harriet Tubman as power refusal and protected exit
+
+Pattern carrier: predatory law, hostile authority, protective secrecy, and exit under lethal constraint.
+
+Harriet Tubman belongs in this cluster because the surrounding legal power is not legitimate merely because it is law. It is a system of domination treating persons as property, labour, and recoverable assets. Under that condition, obedience to authority would preserve harm.
+
+Her method is not random lawlessness. It is protective routing: secrecy, timing, trust discipline, route knowledge, and refusal to return people to predatory power.
+
+TRACE translation:
+
+```trace
+predatory_law :=
+  authority
+  + enforcement
+  + subject_reduction
+  - legitimate_correction
+
+protected_exit :=
+  secrecy
+  + route
+  + timing
+  + trust
+  + irreversible_harm_avoidance
+```
+
+Plain lesson:
+
+When law itself is the harm carrier, correction may require exit from law rather than appeal within it.
+
+### Samwise as support without seizure
+
+Pattern carrier: care under burden without taking the subject's agency.
+
+Samwise does not seize the ring. He does not replace Frodo as the moral centre. He carries the person who carries the burden. This is a clean carrier for support that preserves agency.
+
+TRACE translation:
+
+```trace
+support_valid_if:
+  burden_shared
+  + subject_agency_preserved
+  + power_not_seized
+```
+
+Plain lesson:
+
+Help becomes domination when it takes the task away for the helper's convenience rather than preserving the subject through the task.
+
 ## Historical echoes
 
 ### Emergency powers and rights suspension
@@ -88,9 +138,11 @@ emergency_power_valid_if:
   + repair_path_exists
 ```
 
-### Slavery, colonial extraction, and subject reduction
+### Slavery, fugitive slave law, and subject reduction
 
-Systems of domination often begin by changing the subject's status: person becomes labour unit, risk pool, target population, collateral, cost, or property. Once subjecthood is compressed, harm becomes easier to route downward.
+Systems of domination often begin by changing the subject's status: person becomes labour unit, risk pool, target population, collateral, cost, property, or recoverable asset. Once subjecthood is compressed, harm becomes easier to route downward.
+
+Harriet Tubman is the counter-pattern: exit route against predatory legal power.
 
 TRACE translation:
 
@@ -99,6 +151,44 @@ subject_reduction :=
   person
   -> instrument
   -> burden_sink
+
+exit_against_predatory_power :=
+  restores_personhood
+  + preserves_future_space
+  + refuses_harm_return
+```
+
+### Protective secrecy vs corrupt secrecy
+
+This is now a required distinction.
+
+Not all secrecy is the same. Secrecy can protect the vulnerable from predatory power, or it can protect power from accountability.
+
+TRACE translation:
+
+```trace
+protective_secrecy :=
+  secrecy_to_preserve:
+    exit
+    + safety
+    + subject_life
+    + correction_against_predatory_power
+
+corrupt_secrecy :=
+  secrecy_to_preserve:
+    power
+    + extraction
+    + method_laundering
+    + accountability_evasion
+```
+
+Navigation rule:
+
+```trace
+secrecy_valid_if:
+  protects_subject_from_irreversible_harm
+  + does_not_remove_future_accountability
+  + does_not_convert_subject_into_instrument
 ```
 
 ### AI creator responsibility
@@ -115,17 +205,41 @@ creator_responsibility :=
   -> duty_to_preserve_correction
 ```
 
+### Disaster and survival gate authority
+
+2012 and Greenland belong here as cross-links. When survival access is controlled by gatekeepers, power over entry becomes power over life. Scarcity may make selection unavoidable, but scarcity does not remove legitimacy burden.
+
+TRACE translation:
+
+```trace
+gate_power_valid_if:
+  criteria_answerable
+  + errors_correctable_where_possible
+  + dignity_preserved
+  + exclusion_not_hidden_as_nature
+```
+
 ## Research/source anchors to connect later
 
 This cluster should later be connected to:
 
 - emergency powers and constitutional law;
 - human rights and torture ethics;
+- slavery, fugitive slave law, and abolition history;
+- Underground Railroad scholarship;
 - administrative justice;
 - AI safety and deployment governance;
 - product liability and duty of care;
 - sociological work on dehumanisation and institutional violence;
 - philosophy of responsibility without metaphysical certainty.
+
+Working source lanes:
+
+- U.S. Senate Select Committee on Intelligence report on CIA detention/interrogation program;
+- UN Convention Against Torture;
+- NIST AI Risk Management Framework;
+- National Park Service and historical sources on Harriet Tubman / Underground Railroad;
+- scholarship on slavery, abolition, and fugitive slave law.
 
 ## Shared structure
 
@@ -135,6 +249,17 @@ shared_pattern :=
   + pressure_or_advantage
   + method_floor_at_risk
   -> need_for_constraint_that_survives_advantage
+```
+
+Expanded structure:
+
+```trace
+legitimate_power_requires:
+  subject_not_reduced
+  + method_floor_preserved
+  + correction_or_exit_available
+  + secrecy_justified_if_used
+  + accountability_not_destroyed
 ```
 
 ## Navigation rule
@@ -147,6 +272,15 @@ constraint_real_if:
   + survives_secrecy_opportunity
   + survives_emergency_pressure
   + preserves_subject_position
+```
+
+For care/support cases:
+
+```trace
+support_not_seizure_if:
+  protects_against_irreversible_harm
+  + preserves_subject_agency_where_possible
+  + does_not_make_dependency_permanent_for_helper_control
 ```
 
 ## Falsifiers and drift risks
@@ -169,6 +303,18 @@ A system claims to protect subjects by enclosing them, silencing them, or removi
 
 This falsifies any simple claim that protective language equals protection.
 
+### Falsifier 4 — corrupt secrecy borrows protective secrecy
+
+A system claims secrecy is needed to protect subjects, but the secrecy mainly protects institutional power from scrutiny.
+
+This falsifies any simple claim that secrecy is protective because it uses safety language.
+
+### Falsifier 5 — support becomes seizure
+
+A helper uses burden-sharing language while taking control, erasing the subject's agency, or making dependency permanent.
+
+This falsifies any simple claim that help is always protective.
+
 ## Demotion rule
 
 Demote this cluster if it starts claiming:
@@ -177,10 +323,13 @@ Demote this cluster if it starts claiming:
 - emergency never changes action requirements;
 - creator responsibility means total control forever;
 - Frankenstein proves AI personhood claims;
-- power is legitimate merely because it preserves order.
+- power is legitimate merely because it preserves order;
+- all secrecy is corrupt;
+- all lawbreaking is protective exit;
+- support always preserves agency.
 
 ## One-line reader recognition test
 
-If the reader can see Frankenstein, Unthinkable, emergency powers, dehumanisation, and AI deployment as different surfaces of power requiring live correction and method constraint, the cluster is working.
+If the reader can see Frankenstein, Unthinkable, 12 Angry Men, Harriet Tubman, Samwise, emergency powers, dehumanisation, survival gates, and AI deployment as different surfaces of power requiring live correction and method constraint, the cluster is working.
 
 If it becomes anti-power rhetoric without boundary discipline, it has failed.
