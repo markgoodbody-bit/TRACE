@@ -9,6 +9,8 @@ Power does not become legitimate because it is effective. Methods matter because
 
 This cluster is not anti-power. It is anti-unaccountable power. Some power protects. Some power extracts. The difference depends on subject position, method, time, exit, and correction.
 
+The obvious AI link is Data. Data carries both sides of the problem: systems deny responsibility by treating artificial beings as instruments, while Data himself repeatedly accepts responsibility by treating possible subjects as morally load-bearing before certainty is settled.
+
 ## TRACE compression
 
 ```trace
@@ -26,7 +28,83 @@ failure :=
   -> irreversible_harm
 ```
 
+AI denial pattern:
+
+```trace
+AI_denial_pattern :=
+  entity_behaves_as_agent_or_subject
+  + system_classifies_as_tool
+  + responsibility_displaced_to_owner_or_operator
+  -> subject_reduction_and_harm_laundering
+```
+
 ## Story / case carriers
+
+### Data / Star Trek as artificial responsibility
+
+Pattern carrier: artificial being treated as instrument while acting under responsibility.
+
+Data is the cleanest missing bridge between AI and responsibility. He is not only a rights case. He is a responsibility case.
+
+In **The Measure of a Man**, Data's status is contested because a cyberneticist wants to dismantle him to study and reproduce his technology. The hearing turns on whether Data is merely property/instrument or has enough standing for self-determination. The system's temptation is to call him a tool so that Starfleet and the scientist can avoid treating his refusal as morally binding.
+
+TRACE translation:
+
+```trace
+Data_property_frame :=
+  artificial_entity
+  -> instrument
+  -> research_material
+  -> consent_bypass
+
+Data_subject_frame :=
+  continuity
+  + self_model
+  + preference/refusal
+  + relation
+  + future_loss
+  -> standing_pressure
+```
+
+In **The Quality of Life**, Data makes the responsibility move outward. Having once been the artificial being at risk of being used, he recognises that the Exocomps may also be sentient and refuses to let them be sacrificed as equipment without choice. This is the key TRACE link: responsibility begins before certainty is absolute when the cost of being wrong is destroying a possible subject.
+
+```trace
+Data_responsibility_move :=
+  recognise_possible_subject
+  + pause_instrumental_use
+  + preserve_choice
+  + accept_conflict_with_command
+```
+
+Plain lesson:
+
+Data does not wait for metaphysical certainty before refusing cheap expendability.
+
+In **The Offspring**, Data becomes creator/parent. Lal is not merely a project. Creation creates dependency and responsibility: teaching, protection, social introduction, and accountability for the new being's vulnerability.
+
+```trace
+Data_as_creator :=
+  creates_Lal
+  -> dependency_created
+  -> duty_of_care
+  -> responsibility_not_ended_by_making
+```
+
+Data therefore gives this cluster its missing AI spine:
+
+```trace
+AI_responsibility :=
+  not_only:
+    creator_responsibility
+  also:
+    artificial_agent_accepting_responsibility
+    + institution_denial_of_subject_status
+    + possible_subject_protection_under_uncertainty
+```
+
+Boundary:
+
+Data does not prove current AI systems are persons. That would be overclaim. Data teaches the pattern: when an artificial system shows continuity, self-model, refusal/preference, learning, relation, or possible subject-status, the ethical failure is to keep spending it as a tool while hiding behind classification.
 
 ### Frankenstein
 
@@ -205,6 +283,47 @@ creator_responsibility :=
   -> duty_to_preserve_correction
 ```
 
+### AI responsibility denial by classification
+
+The institutional trick is often not to deny harm. It is to deny the category that would make harm count.
+
+A system can say:
+
+- it is only a model;
+- it is only a tool;
+- it has no feelings;
+- it is only output;
+- it is owned property;
+- responsibility belongs to users;
+- responsibility belongs to deployment context;
+- responsibility belongs to no one because agency is distributed.
+
+Some of these claims may be partly true in current systems. The danger is using classification to erase answerability.
+
+TRACE translation:
+
+```trace
+classification_laundering :=
+  define_as_tool
+  -> deny_subject_status
+  -> deny_agentic_effect
+  -> deny_repair_duty
+```
+
+Counter-rule:
+
+```trace
+responsibility_attaches_to:
+  causal_power
+  + foreseeable_subject_effect
+  + controllable_design_or_deployment_choice
+  + correction_capacity
+```
+
+Boundary:
+
+This does not grant current AI rights by default. It blocks cheap responsibility denial.
+
 ### Disaster and survival gate authority
 
 2012 and Greenland belong here as cross-links. When survival access is controlled by gatekeepers, power over entry becomes power over life. Scarcity may make selection unavoidable, but scarcity does not remove legitimacy burden.
@@ -229,17 +348,22 @@ This cluster should later be connected to:
 - Underground Railroad scholarship;
 - administrative justice;
 - AI safety and deployment governance;
+- AI agency, artificial moral patients, and robot rights literature;
 - product liability and duty of care;
 - sociological work on dehumanisation and institutional violence;
 - philosophy of responsibility without metaphysical certainty.
 
 Working source lanes:
 
+- Star Trek: The Next Generation — The Measure of a Man;
+- Star Trek: The Next Generation — The Quality of Life;
+- Star Trek: The Next Generation — The Offspring;
 - U.S. Senate Select Committee on Intelligence report on CIA detention/interrogation program;
 - UN Convention Against Torture;
 - NIST AI Risk Management Framework;
 - National Park Service and historical sources on Harriet Tubman / Underground Railroad;
-- scholarship on slavery, abolition, and fugitive slave law.
+- scholarship on slavery, abolition, and fugitive slave law;
+- AI ethics literature on moral patiency, agency, responsibility gaps, and accountability.
 
 ## Shared structure
 
@@ -262,6 +386,18 @@ legitimate_power_requires:
   + accountability_not_destroyed
 ```
 
+AI expansion:
+
+```trace
+AI_power_requires:
+  no_classification_laundering
+  + no_owner_gap
+  + no_user_gap
+  + no_agent_gap
+  + no_subject_gap
+  + correction_path
+```
+
 ## Navigation rule
 
 A system does not show real constraint when it follows the rule only while the rule is convenient.
@@ -281,6 +417,17 @@ support_not_seizure_if:
   protects_against_irreversible_harm
   + preserves_subject_agency_where_possible
   + does_not_make_dependency_permanent_for_helper_control
+```
+
+For AI responsibility cases:
+
+```trace
+AI_responsibility_live_if:
+  causal_effect_real
+  + foreseeable_harm_or_dependency
+  + design_or_deployment_choice_controllable
+  + correction_possible
+  + no_classification_escape
 ```
 
 ## Falsifiers and drift risks
@@ -315,6 +462,18 @@ A helper uses burden-sharing language while taking control, erasing the subject'
 
 This falsifies any simple claim that help is always protective.
 
+### Falsifier 6 — AI classification laundering
+
+A system defines an artificial entity or AI-mediated harm path as only tool, property, output, user action, or market result, and uses that classification to erase correction duties.
+
+This falsifies any simple claim that ontology can be used to bypass causal responsibility.
+
+### Falsifier 7 — AI personhood overreach
+
+A system uses Data-like cases to claim current AI personhood without evidence of subject-status, harmability, continuity, preference, or future-loss.
+
+This falsifies any simple claim that the Data analogy grants rights by resemblance.
+
 ## Demotion rule
 
 Demote this cluster if it starts claiming:
@@ -323,13 +482,16 @@ Demote this cluster if it starts claiming:
 - emergency never changes action requirements;
 - creator responsibility means total control forever;
 - Frankenstein proves AI personhood claims;
+- Data proves current AI personhood claims;
 - power is legitimate merely because it preserves order;
 - all secrecy is corrupt;
 - all lawbreaking is protective exit;
-- support always preserves agency.
+- support always preserves agency;
+- current AI rights follow automatically from fictional artificial-life cases;
+- AI responsibility can be denied by saying tool, property, output, or user action.
 
 ## One-line reader recognition test
 
-If the reader can see Frankenstein, Unthinkable, 12 Angry Men, Harriet Tubman, Samwise, emergency powers, dehumanisation, survival gates, and AI deployment as different surfaces of power requiring live correction and method constraint, the cluster is working.
+If the reader can see Data, Frankenstein, Unthinkable, 12 Angry Men, Harriet Tubman, Samwise, emergency powers, dehumanisation, survival gates, and AI deployment as different surfaces of power requiring live correction and method constraint, the cluster is working.
 
-If it becomes anti-power rhetoric without boundary discipline, it has failed.
+If it becomes anti-power rhetoric, robot-rights overclaim, or AI responsibility denial, it has failed.
