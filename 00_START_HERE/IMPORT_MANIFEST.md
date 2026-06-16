@@ -2,7 +2,7 @@
 
 Date: 2026-06-16
 
-This pack is intended to build up `markgoodbody-bit/TRACE` without recreating the root-level file dump.
+This import built up `markgoodbody-bit/TRACE` without recreating the root-level file dump.
 
 ## Rule
 
@@ -28,11 +28,16 @@ never_replace_full_artifacts_with_summaries
 ## Counts
 
 ```trace
-import_pack_files := 230
+import_pack_files := 232
 included_reference_zips := 7
+missing_source_zips := 0
+zip_integrity_OK := true
 ```
 
 ## Warning
 
-This import pack should be uploaded/pushed into the repository root as structured folders. Do not flatten it into the GitHub root.
+This import belongs in structured folders. It must not be flattened into the GitHub root.
 
+## Current role
+
+This file is an import record. It is not the repo front door. Use `README.md` and `00_START_HERE/READ_ORDER.md` for navigation.
