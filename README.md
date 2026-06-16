@@ -89,8 +89,8 @@ candidate_annex != active_spine
 04_KERNEL_AND_TESTS/    diagnostic kernel and preregistered test template
 05_MAPS_AND_ATLASES/    subtraction concordance and case atlas
 06_REVIEWS_AND_AUDITS/  AI review digest and falsification/drift audits
-07_HANDOFFS/            relay packs and current stack handoffs
-90_ORIGINAL_ZIPS/       selected archived source ZIPs
+07_HANDOFFS/            relay pack only; duplicate unpacked stack removed from live route
+90_ORIGINAL_ZIPS/       selected archived source ZIPs and handoff ZIPs
 99_ARCHIVE_INDEXES/     file indexes and manifests
 ```
 
