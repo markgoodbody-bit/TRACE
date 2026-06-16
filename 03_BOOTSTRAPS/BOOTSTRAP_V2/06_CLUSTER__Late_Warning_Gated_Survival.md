@@ -5,21 +5,22 @@ Status: Bootstrap V2 cluster / pattern surface / not canon / not validation
 
 ## Plain compression
 
-Some disaster stories are not really about disaster. They are about warning, time, selection, gates, and who receives a survivable path before the correction window closes.
+Some disaster and survival stories are not really about disaster. They are about warning, time, selection, gates, and who receives a survivable path before the correction window closes.
 
 2012 and Greenland belong together because they show the same structure at different tonal levels.
 
 - **2012** exaggerates the structure into absurd spectacle: survival depends on secret arks, wealth, elite selection, last-second escapes, and one-second timing margins.
 - **Greenland** grounds the same structure in ordinary bodies, family separation, medicine, selection notices, gates, soldiers, traffic, and panic.
+- **Harriet Tubman / Underground Railroad** gives the serious historical counter-pattern: survival routing under predatory law, where secrecy and gate-evasion are protective rather than corrupt.
 
 The shared pattern is not comet or flood. The shared pattern is this:
 
 ```trace
-warning_seen_by_power
+warning_seen_by_some
 + correction_capacity_scarce
-+ public_warning_late
++ public_or_subject_warning_constrained
 + access_gate_controlled
--> survival_becomes_selection
+-> survival_becomes_selection_or_exit
 ```
 
 ## Source / script status
@@ -49,6 +50,8 @@ Current source anchors for later citation work:
 - Greenland film page: director Ric Roman Waugh, writer Chris Sparling, 2020 release, Garrity family selection, Nathan's diabetes, evacuation gates, Canada/Greenland route, and generally positive critical response.
 - NASA/Wired criticism of 2012's science as highly unrealistic.
 - Reviews distinguishing 2012 as spectacle and Greenland as more grounded family-scale disaster storytelling.
+- National Park Service / Library of Congress / historical sources on Harriet Tubman and the Underground Railroad.
+- Disaster sociology, evacuation justice, triage ethics, climate migration, and AI governance/access-asymmetry literature.
 
 These anchors should support framing only. They do not validate TRACE.
 
@@ -57,9 +60,9 @@ These anchors should support framing only. They do not validate TRACE.
 ```trace
 Late_Warning_Gated_Survival :=
   early_detection_by_some
-  + delayed_public_truth
+  + delayed_or_constrained_warning
   + scarce_exit_capacity
-  + authority_selection
+  + authority_selection_or_hostile_gate
   + closing_correction_window
 ```
 
@@ -76,6 +79,7 @@ ask :=
   + who_controlled_the_gate?
   + who_was_left_out?
   + could_errors_be_corrected?
+  + was_secrecy_protective_or_corrupt?
 ```
 
 ## 2012 — TRACE read
@@ -233,7 +237,89 @@ medical_dependency :=
 
 A survival system that ignores insulin, medication, disability, dependency, or child vulnerability is not merely inefficient. It is misreading the subject.
 
-## 2012 vs Greenland
+## Harriet Tubman / Underground Railroad — TRACE read
+
+### Historical function
+
+Harriet Tubman is not a disaster-film analogue. She is the real historical pressure point that prevents this cluster from becoming simple lifeboat abstraction.
+
+The gate in 2012 and Greenland is mostly a survival-selection gate controlled by authorities. The gate in Tubman's case is hostile law itself: a legal and enforcement environment structured to return people to enslavement.
+
+That means the survival route is not appeal to the gate. It is protected exit around the gate.
+
+### Structural beats
+
+```trace
+Tubman_beats :=
+  predatory_law_defines_person_as_property
+  -> ordinary_legal_route_closed
+  -> secrecy_becomes_protective
+  -> trusted_route_created
+  -> timing_and_signal_discipline_required
+  -> capture_risk_lethal_or_life_destroying
+  -> exit_restores_future_space
+```
+
+### K-gate reading
+
+For the enslaving/legal capture system:
+
+```trace
+K_predatory :=
+  W := subject_witness_suppressed
+  R := legal_record_serves_capture
+  A := authority_aligned_with_harm
+  Tm := correction_inside_system_absent_or_too_late
+  E := enforcement_against_subject
+  Rp := return_to_harm
+```
+
+For the protective exit network:
+
+```trace
+K_exit :=
+  W := trusted_guides_and_subject_knowledge
+  R := route_memory_protected
+  A := practical_route_authority
+  Tm := night_weather_timing_and_patrol_windows
+  E := secrecy_and_discipline
+  Rp := exit_to_future_space
+```
+
+### Main wound
+
+```trace
+wound_Tubman :=
+  when_authority_is_harm_carrier
+  correction_may_require_exit_not_appeal
+```
+
+### Protective secrecy
+
+Tubman forces the secrecy distinction.
+
+```trace
+protective_secrecy :=
+  secrecy_to_preserve:
+    life
+    + exit
+    + dignity
+    + future_space
+    + correction_against_predatory_power
+
+corrupt_secrecy :=
+  secrecy_to_preserve:
+    power
+    + extraction
+    + domination
+    + accountability_evasion
+```
+
+Plain lesson:
+
+Secrecy is not automatically corruption. Secrecy becomes morally load-bearing according to what it protects and who it endangers.
+
+## 2012 vs Greenland vs Tubman
 
 ```trace
 2012 :=
@@ -247,17 +333,23 @@ Greenland :=
   + selected_warning
   + medicine_and_gate
   + grounded_panic
+
+Tubman :=
+  hostile_law
+  + protected_exit
+  + secrecy_as_life_preservation
+  + future_space_restored
 ```
 
 Shared structure:
 
 ```trace
 shared :=
-  late_warning
-  + scarce_survival_capacity
-  + gate_authority
-  + time_collapse
-  + excluded_subjects
+  time_pressure
+  + gate_or_route
+  + survival_capacity
+  + subject_selection
+  + future_space_at_risk
 ```
 
 Key difference:
@@ -268,6 +360,9 @@ Key difference:
 
 Greenland_teaches :=
   selection_pressure_inside_ordinary_life
+
+Tubman_teaches :=
+  exit_route_against_predatory_authority
 ```
 
 ## Connections to other bootstrap clusters
@@ -278,9 +373,12 @@ Apollo 13 is urgency while correction remains live.
 
 2012 and Greenland are urgency when correction windows are nearly gone.
 
+Tubman is urgency when correction inside the official system is structurally hostile.
+
 ```trace
 Apollo_13 := correction_before_hardening
 2012_Greenland := correction_after_public_hardening_has_started
+Tubman := correction_by_exit_from_predatory_gate
 ```
 
 ### Children of Men
@@ -289,12 +387,15 @@ Children of Men asks what happens when future-space loses its carrier.
 
 2012 and Greenland provide physical future carriers: arks and bunkers.
 
+Tubman provides route-as-future-carrier.
+
 ```trace
 future_carrier :=
   child
   OR ark
   OR bunker
   OR evacuation_route
+  OR protected_exit_route
 ```
 
 But carrier legitimacy remains contested.
@@ -305,12 +406,16 @@ But carrier legitimacy remains contested.
 
 2012 and Greenland say move now when irreversible harm will occur through delay.
 
+Tubman says leave now when the gate itself is a return-to-harm mechanism.
+
 ```trace
 tempo_rule :=
   if system_rushing_to_wrongful_harm:
     slow_down
   if correction_window_closing_against_external_harm:
     act_now
+  if official_gate_is_predatory:
+    exit_before_capture
 ```
 
 ### Frankenstein
@@ -319,9 +424,11 @@ Frankenstein asks what creators owe to beings affected by what they release.
 
 2012 and Greenland ask what planners owe to people left outside the survival gate.
 
+Tubman asks what a system owes when its legal structure has already denied subjecthood; the answer may be refusal, resistance, and protected route-building.
+
 ### Infrastructure / Energy
 
-Arks, bunkers, evacuation routes, aircraft, fuel, radios, hospitals, insulin, gates, roads, and military bases are all material carriers of future-space.
+Arks, bunkers, evacuation routes, aircraft, fuel, radios, hospitals, insulin, gates, roads, military bases, safe houses, route memory, and trust networks are all material or social carriers of future-space.
 
 ```trace
 survival_requires :=
@@ -330,6 +437,17 @@ survival_requires :=
   + maintenance
   + access
   + trust
+  + route_memory
+```
+
+### Samwise / support without seizure
+
+Tubman and Samwise are different scales of the same care boundary: support preserves the subject's future-space without turning the subject into property of the helper.
+
+```trace
+support_route_valid_if:
+  subject_future_space_preserved
+  + helper_does_not_convert_subject_into_instrument
 ```
 
 ## Historical echoes
@@ -345,6 +463,21 @@ When capacity is scarce, selection criteria become power. Triage can be necessar
 ### Climate adaptation and migration
 
 As risks harden, some groups receive protection earlier: insurance, relocation, flood defences, energy security, migration options, or private escape. Others meet the truth late.
+
+### Refugee routes and hostile borders
+
+When people flee war, persecution, famine, or climate stress, survival becomes route, document, gate, boat, camp, sponsor, jurisdiction, and timing. The danger is not only the original harm. The route itself can become a secondary harm system.
+
+TRACE translation:
+
+```trace
+escape_route_failure :=
+  original_harm
+  + hostile_gate
+  + route_exploitation
+  + delayed_status
+  + dignity_loss
+```
 
 ### AI safety and deployment
 
@@ -365,6 +498,8 @@ This cluster should later connect to:
 - triage ethics;
 - climate adaptation justice;
 - infrastructure studies;
+- refugee and migration studies;
+- abolition history and Underground Railroad scholarship;
 - AI governance and access asymmetry;
 - risk communication and public trust;
 - moral philosophy of lifeboat cases, but without reducing real cases to toy problems.
@@ -381,9 +516,11 @@ lesson :=
     decide_survival
 ```
 
-Plain version:
+Expanded plain version:
 
 The time to preserve legitimacy is before survival becomes gated.
+
+If the gate is already predatory, the work becomes protected exit.
 
 ## Falsifiers and drift risks
 
@@ -411,6 +548,18 @@ Comets and cinematic arks may distort real-world slower risks.
 
 Correction: use these films as pressure diagrams, not predictions.
 
+### Falsifier 5 — all secrecy treated as corrupt
+
+A system may treat protective secrecy and corrupt secrecy as the same.
+
+Correction: secrecy must be judged by what it protects, who it exposes, whether accountability is preserved, and whether it prevents or enables irreversible harm.
+
+### Falsifier 6 — all exit treated as legitimacy
+
+A system may romanticise exit routes and ignore risks, coercion, exploitation, or abandonment inside the route.
+
+Correction: exit route legitimacy depends on preserving subject future-space rather than merely moving bodies.
+
 ## Demotion rule
 
 Demote this cluster if it starts claiming:
@@ -420,10 +569,12 @@ Demote this cluster if it starts claiming:
 - survival planning is inherently corrupt;
 - fictional timing proves real policy timing;
 - elite survival stories are equivalent to all disaster planning;
-- late-stage emergency action can substitute for early warning and public correction.
+- late-stage emergency action can substitute for early warning and public correction;
+- all lawbreaking is protected exit;
+- all exit routes are inherently emancipatory.
 
 ## One-line reader recognition test
 
-If the reader can see 2012, Greenland, evacuation justice, pandemic triage, climate adaptation, elite bunkers, and AI safety access as different surfaces of late warning and gated survival, the cluster is working.
+If the reader can see 2012, Greenland, Harriet Tubman, evacuation justice, pandemic triage, climate adaptation, refugee routes, elite bunkers, and AI safety access as different surfaces of late warning, gated survival, and protected exit, the cluster is working.
 
 If it becomes a generic disaster-film comparison, it has failed.
