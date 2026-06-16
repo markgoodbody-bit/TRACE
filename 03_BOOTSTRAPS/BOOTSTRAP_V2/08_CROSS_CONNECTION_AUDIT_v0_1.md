@@ -15,8 +15,43 @@ cross_connection_audit :=
   + preserve_patterns
   + detect_missing_links
   + prevent_cluster_silos
+  + protect_reader_entry
   - promote_new_operator
   - force_every_case_everywhere
+```
+
+## Reader-entry correction
+
+A case connection does not work if the reader must already know the reference.
+
+```trace
+connection_valid_if:
+  case_identified
+  + reader_oriented
+  + relevant_context_given
+  + pattern_named
+  + boundary_stated
+```
+
+Failure mode caught:
+
+```trace
+reference_cloud_failure :=
+  named_case
+  + assumed_familiarity
+  + immediate_abstraction
+  -> reader_position_failure
+```
+
+Example:
+
+```trace
+bad := Data -> AI_responsibility
+
+good :=
+  Data := artificial_officer_from_Star_Trek_TNG
+  + institution_attempts_property_frame
+  + pattern := classification_launders_responsibility
 ```
 
 ## Current case reservoir
@@ -32,6 +67,7 @@ Known source reservoir from the earlier bootstrap stack and live additions:
 - Harriet Tubman
 - Groundhog Day
 - Frankenstein
+- Data / Star Trek: The Next Generation
 - Infrastructure triad
 - Energy
 - 12 Angry Men
@@ -47,23 +83,32 @@ Known source reservoir from the earlier bootstrap stack and live additions:
 - Cluster 05 — Energy, Infrastructure, Basement
 - Cluster 06 — Late Warning, Gated Survival
 
-## Main finding
+## Main finding after patches
 
-The cluster shape is sound, but several cases are currently under-connected.
-
-Highest-priority missing links:
+The cluster shape is stronger. Several earlier high-priority gaps have been patched, but the files still need a reader-empathy pass and a hostile review.
 
 ```trace
-missing_links_high :=
-  Harriet_Tubman
-  + Samwise
-  + EEAAO
-  + Apollo_13
-  + 2012_Greenland
-  + Infrastructure
+patched_high :=
+  Harriet_Tubman_integration
+  + protective_secrecy_distinction
+  + support_without_seizure
+  + infrastructure_backlinks
+  + future_space_capacity_link
+  + Data_AI_responsibility_link
+  + reader_orientation_rule
 ```
 
-These cases should not necessarily become more files. They should become cross-links inside the existing cluster files.
+Remaining risks:
+
+```trace
+remaining_risks :=
+  assumed_reference_knowledge
+  + decorative_sources
+  + case_overload
+  + robot_rights_overclaim
+  + cluster_silo_recurrence
+  + middle_out_loss
+```
 
 ---
 
@@ -78,80 +123,81 @@ Existing links:
 - memory instability;
 - external record dependency;
 - corrupted continuity;
-- judgment failure.
+- judgment failure;
+- AI relay/context retrieval analogy.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 03 link: acting from unstable record under irreversible harm.
-- AI relay link: context/retrieval failure, false continuity, source citation theatre.
-- Source map link: eyewitness memory and false record.
+- strengthen reader orientation for anyone who has not seen the film;
+- avoid treating memory unreliability as universal memory collapse.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Memento -> Cluster_03 :=
-  corrupted_record
-  + irreversible_action
-  -> catastrophic_confidence
+Memento_link :=
+  external_record_dependency
+  + possible_record_corruption
+  + high_confidence_action
+  -> identity_or_decision_drift
 ```
 
-Status: partially handled, but can be stronger.
+Status: structurally good; needs reader-entry pass.
 
 ## Everything Everywhere All at Once
 
-Current placement: Cluster 01 and Cluster 02.
+Current placement: Cluster 01, Cluster 02, and Cluster 05.
 
 Existing links:
 
 - state-space overload;
 - null attractor;
 - future-space and hope;
-- care/restraint.
+- care/restraint;
+- surplus capacity without direction.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 04 link: over-open power can become predation or control if relation fails.
-- Cluster 05 link: energy/surplus without meaning can become waste, spectacle, or destructive capacity.
-- Cluster 06 link: not direct disaster, but selection among branches/gates to future selves may inform future-carrier logic.
+- orient reader before using EEAAO shorthand;
+- avoid making the film do proof-work for metaphysics.
 
-Patch needed:
+TRACE check:
 
 ```trace
-EEAAO -> Cluster_04 :=
-  unlimited_branch_access
+EEAAO_link :=
+  too_many_possible_branches
   - care_constraint
-  -> predation_or_collapse
+  -> null_attractor_or_predation
 ```
 
-Status: under-connected.
+Status: improved.
 
 ## Children of Men
 
-Current placement: Cluster 02 and Cluster 06.
+Current placement: Cluster 02, Cluster 05, Cluster 06.
 
 Existing links:
 
 - future-space collapse;
 - carrier of continuation;
 - social/institutional decay;
-- survival shell without legitimacy.
+- infrastructure shell without continuation;
+- state/refugee enclosure risk.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 05 link: infrastructure can persist physically while continuation meaning collapses.
-- Cluster 04 link: state violence and refugee enclosure under future-space collapse.
-- Cluster 03 link: urgency when future carrier is fragile and harm is irreversible.
+- ensure reader knows basic premise: a world without children/continuation;
+- avoid reducing political/refugee violence to pure metaphor.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Children_of_Men -> Cluster_04 :=
-  future_space_collapse
-  + state_power
-  -> subject_enclosure_risk
+Children_of_Men_link :=
+  future_carrier_absent
+  + infrastructure_still_present
+  -> legitimacy_decay
 ```
 
-Status: good base, needs power/infrastructure link.
+Status: improved.
 
 ## Unthinkable
 
@@ -164,108 +210,110 @@ Existing links:
 - tragedy not permission;
 - method floor.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 06 link: threat countdown, scarce information, gatekeeper pressure.
-- Cluster 01 link: intelligence record reliability under pressure.
-- Cluster 05 link: state security infrastructure and coercive capacity.
+- orient reader to premise before invoking title;
+- strengthen Cluster 01 link to intelligence record reliability under pressure.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Unthinkable -> Cluster_01 :=
-  intelligence_record_uncertain
-  + emergency_pressure
+Unthinkable_link :=
+  emergency_pressure
+  + uncertain_or_controlled_record
   -> method_floor_attack
 ```
 
-Status: mostly handled; record-quality link needed.
+Status: partly patched; record-quality link still weaker than it should be.
 
 ## Samwise Gamgee
 
-Current placement: Cluster 02.
+Current placement: Cluster 02, Cluster 04, Cluster 05.
 
 Existing links:
 
 - hope as next-step preservation;
 - burden-sharing;
-- continuation under exhaustion.
+- continuation under exhaustion;
+- support without seizure;
+- human support infrastructure.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 05 link: energy/load/conservation, carrying capacity, not infinite willpower.
-- Cluster 04 link: refusal to carry the ring as constraint on power; carrying the bearer rather than seizing agency.
-- Cluster 03 link: choice under irreversible world-harm without full certainty.
+- orient reader: Samwise is the companion who preserves Frodo's ability to continue without taking the ring/project as his own;
+- avoid making support sound passive or sentimental.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Samwise -> Cluster_04 :=
+Samwise_link :=
   support_agent
-  does_not_seize_power
-  preserves_subject_agency
+  + burden_shared
+  + power_not_seized
+  -> subject_agency_preserved
 ```
 
-Status: under-connected.
+Status: improved.
 
 ## Apollo 13
 
-Current placement: Cluster 05 and cross-link in Cluster 03/06.
+Current placement: Cluster 05, with cross-links to Cluster 01, 03, and 06.
 
 Existing links:
 
 - correction before hardening;
 - energy constraint;
 - infrastructure and repair;
-- urgency without panic.
+- urgency without panic;
+- telemetry and live record routing.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 01 link: record, telemetry, memory, ground-team knowledge, live routing.
-- Cluster 03 link: tempo discipline under uncertainty.
-- Cluster 06 contrast: open correction window vs late gated survival.
+- orient reader to mission accident if using Apollo as case carrier;
+- avoid reducing it to heroic competence; keep infrastructure/record/energy visible.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Apollo_13 -> Cluster_01 :=
+Apollo_13_link :=
   telemetry_record
   + ground_memory
+  + energy_constraint
   + live_routing
   -> correction_possible
 ```
 
-Status: strong, but memory link underwritten.
+Status: strong.
 
 ## Harriet Tubman
 
-Current placement: old bootstrap; weakly represented in V2.
+Current placement: Cluster 02, Cluster 04, Cluster 05, Cluster 06.
 
 Existing links:
 
 - exit routes under predatory law;
 - protective secrecy;
-- courage under lethal constraint.
+- predatory authority;
+- route infrastructure;
+- future-space as literal escape path.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 04 link: predatory law, illegitimate authority, protection against coercive power.
-- Cluster 06 link: gated survival, route access, selected warning, secrecy as protection.
-- Cluster 02 link: future-space as literal escape path.
-- Cluster 03 link: risk under lethal uncertainty and timing.
+- orient readers unfamiliar with Underground Railroad history;
+- ensure protected exit does not become a blanket endorsement of all secrecy/lawbreaking.
 
-Patch needed urgently:
+TRACE check:
 
 ```trace
-Harriet_Tubman -> Cluster_06 :=
-  exit_route
+Harriet_Tubman_link :=
+  predatory_gate
+  + protected_route
   + secrecy
-  + hostile_gate
   + lethal_time_pressure
-  -> survival_through_protected_path
+  -> exit_as_future_space
 ```
 
-Status: major missing connection.
+Status: major prior gap now patched.
 
 ## Groundhog Day
 
@@ -277,50 +325,80 @@ Existing links:
 - moral update not automatic;
 - manipulation vs care.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 04 link: recursive power over other subjects becomes manipulation unless method floor holds.
-- Cluster 02 link: hope as escape condition from repetition.
-- AI relay link: repeated debate can train theatre rather than correction.
+- stronger AI relay link: repeated review loops can train correction or theatre;
+- orient reader to time-loop premise.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Groundhog_Day -> AI_Relay :=
+Groundhog_Day_link :=
   repeated_loop
-  can_train_correction
-  OR train_theatre
+  can_train:
+    correction
+    OR manipulation
 ```
 
-Status: partially handled.
+Status: still needs targeted patch.
 
 ## Frankenstein
 
-Current placement: Cluster 04.
+Current placement: Cluster 04, with links to Cluster 02.
 
 Existing links:
 
 - created life;
 - creator abandonment;
 - responsibility after causal creation;
-- AI creator/deployer analogy.
+- future-space denial and social belonging.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 01 link: identity formation, record of harm, memory of abandonment.
-- Cluster 02 link: denied future-space and social belonging.
-- Cluster 06 link: exclusion from social gate / survival legitimacy.
+- orient reader: creator brings a vulnerable being into existence and abandons relation/care;
+- avoid using Frankenstein as automatic AI personhood proof.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Frankenstein -> Cluster_02 :=
-  created_subject
-  + denied_belonging
-  -> future_space_collapse
+Frankenstein_link :=
+  creation_event
+  + dependency_created
+  + abandonment
+  -> creator_responsibility
 ```
 
-Status: good but could be richer.
+Status: good; boundary must stay sharp.
+
+## Data / Star Trek: The Next Generation
+
+Current placement: Cluster 04.
+
+Existing links:
+
+- artificial being treated as property/tool;
+- classification laundering;
+- Data accepting responsibility toward possible artificial subjects;
+- creator responsibility through Lal;
+- AI responsibility denial pattern.
+
+Remaining needs:
+
+- add to Source Map and relay prompt as a major AI responsibility carrier;
+- ensure no overclaim: Data does not prove current AI personhood;
+- possible later brief standalone orientation paragraph in external relay pack.
+
+TRACE check:
+
+```trace
+Data_link :=
+  artificial_entity
+  + property_frame_attempted
+  + refusal_or_possible_subject_status
+  -> classification_laundering_exposed
+```
+
+Status: necessary late patch completed; must be made reader-friendly everywhere.
 
 ## Infrastructure triad
 
@@ -331,112 +409,114 @@ Existing links:
 - living systems;
 - maintenance;
 - safety defaults;
-- hidden basement.
+- hidden basement;
+- gates, transport, evacuation, survival routing.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 06 link: gates, transport, evacuation, survival routing.
-- Cluster 03 link: safety default under uncertainty.
-- Cluster 04 link: authority over infrastructure access.
+- define “infrastructure triad” before using the phrase externally;
+- possibly consolidate with Cluster 05 rather than treating as independent case.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Infrastructure -> Cluster_06 :=
-  survival_gate
-  is_also:
-    material_system
-    + authority_system
-    + access_system
+Infrastructure_link :=
+  material_system
+  + authority_system
+  + access_system
+  + repair_system
 ```
 
-Status: under-connected outside Cluster 05.
+Status: improved.
 
 ## Energy
 
-Current placement: Cluster 05.
+Current placement: Cluster 05, with links to Cluster 02 and 06.
 
 Existing links:
 
 - capacity to change state;
 - surplus;
 - future-space;
-- basement.
+- basement;
+- survival gates require logistics and power.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 02 link: hope needs energy/carrier; false hope may lack capacity.
-- Cluster 04 link: energy surplus can buy coercion or buy off correction.
-- Cluster 06 link: survival gates require energy and logistics.
+- avoid energy-as-good or energy-as-bad simplification;
+- connect to AI compute without becoming anti-compute rhetoric.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Energy -> Cluster_02 :=
+Energy_link :=
   future_space_requires_capacity
-  not_only_belief
+  but:
+    capacity_basement_must_be_named
 ```
 
-Status: under-connected to hope.
+Status: improved.
 
 ## 12 Angry Men
 
-Current placement: Cluster 03; secondary in Cluster 01/04.
+Current placement: Cluster 03; secondary in Cluster 01 and 04.
 
 Existing links:
 
 - uncertainty;
 - irreversible harm;
 - dissent;
-- record re-test.
+- record re-test;
+- legitimacy of condemnation depends on dissent.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 04 link: legitimacy of authority depends on real dissent.
-- Cluster 01 link: record becomes live only through re-examination.
+- orient reader to jury/death-penalty premise;
+- avoid treating film as proof that jury systems are safe or unsafe.
 
-Patch needed:
+TRACE check:
 
 ```trace
-12_Angry_Men -> Cluster_04 :=
+12_Angry_Men_link :=
   power_to_condemn
-  valid_only_if:
-    dissent_processed
-    + uncertainty_live
+  + uncertainty_live
+  + dissent_processed
+  -> irreversible_harm_blocked
 ```
 
-Status: mostly handled.
+Status: good.
 
 ## 2012
 
-Current placement: Cluster 06.
+Current placement: Cluster 06, with links to Cluster 05 and 02/04.
 
 Existing links:
 
 - private correction before public warning;
 - elite arks;
 - legitimacy wound;
-- late timing margins.
+- late timing margins;
+- ark as infrastructure/future-carrier with hidden basement.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 05 link: ark as infrastructure/energy/basement system.
-- Cluster 04 link: gate authority and selection legitimacy.
-- Cluster 02 link: future carrier preservation without moral stability.
+- orient reader that it is a disaster film with scientifically weak spectacle but structurally useful gate pattern;
+- avoid treating fictional ark politics as real-world proof.
 
-Patch needed:
+TRACE check:
 
 ```trace
-2012 -> Cluster_05 :=
-  ark := infrastructure_future_carrier
-  with_hidden_basement_and_gate_authority
+2012_link :=
+  private_correction_before_public_warning
+  + elite_survival_gate
+  -> legitimacy_wound
 ```
 
-Status: good new cluster, needs back-links.
+Status: improved.
 
 ## Greenland
 
-Current placement: Cluster 06.
+Current placement: Cluster 06, with links to Cluster 05, 03, and 04.
 
 Existing links:
 
@@ -444,27 +524,25 @@ Existing links:
 - fragile passage;
 - medicine dependency;
 - gate exclusion;
-- ordinary life under survival selection.
+- ordinary life under survival selection;
+- body/medicine/transport infrastructure.
 
-Missing / should strengthen:
+Remaining needs:
 
-- Cluster 03 link: urgent action under incomplete information.
-- Cluster 05 link: medicine, aircraft, bunkers, roads, military base as infrastructure.
-- Cluster 04 link: selection authority and dignity.
+- orient reader to family-disaster premise;
+- keep medical dependency as subject-reading issue, not plot trivia.
 
-Patch needed:
+TRACE check:
 
 ```trace
-Greenland -> Cluster_05 :=
-  survival_path_depends_on:
-    insulin
-    + transport
-    + gate
-    + bunker
-    + fuel
+Greenland_link :=
+  selected_warning
+  + medicine_dependency
+  + gate_access
+  -> survival_selection_pressure
 ```
 
-Status: strong new cluster, needs back-links.
+Status: strong.
 
 ---
 
@@ -472,15 +550,7 @@ Status: strong new cluster, needs back-links.
 
 ## 1. Protective secrecy vs corrupt secrecy
 
-Cases:
-
-- Harriet Tubman
-- 2012
-- Greenland
-- Unthinkable
-- AI relay / retrieval guard
-
-Need distinction:
+Status: patched in Cluster 04 and Cluster 06.
 
 ```trace
 protective_secrecy :=
@@ -490,20 +560,11 @@ corrupt_secrecy :=
   secrecy_to_preserve_power_or_avoid_accountability
 ```
 
-This is important because TRACE must not treat all secrecy as bad.
+Remaining risk: corrupt systems borrowing protective-secrecy language.
 
 ## 2. Gate legitimacy
 
-Cases:
-
-- Greenland
-- 2012
-- Harriet Tubman
-- 12 Angry Men
-- Children of Men
-- AI safety access
-
-Need distinction:
+Status: patched in Cluster 04, 05, and 06.
 
 ```trace
 gate_legitimate_if:
@@ -513,17 +574,11 @@ gate_legitimate_if:
   + subject_dignity_preserved
 ```
 
+Remaining risk: treating unavoidable scarcity and corrupt selection as identical.
+
 ## 3. Support without seizure
 
-Cases:
-
-- Samwise
-- Maisie/ferry analogy
-- medicine/dependency in Greenland
-- AI assistant role
-- parent/child/care systems
-
-Need distinction:
+Status: patched through Samwise in Cluster 02, 04, and 05.
 
 ```trace
 support_valid_if:
@@ -533,71 +588,77 @@ support_valid_if:
     avoiding_unnecessary_domination
 ```
 
+Remaining risk: support romanticism or helper-control.
+
 ## 4. Time as tempo selection
 
-Cases:
-
-- 12 Angry Men: slow down
-- Apollo 13: act fast
-- Greenland: move before gate closes
-- 2012: too late, seconds decide
-- climate/AI: delay hardens harm
-
-Need central line:
+Status: present in Cluster 03, 05, and 06.
 
 ```trace
 urgency != speed
 urgency := correct_tempo_before_hardening
 ```
 
+Remaining risk: readers flattening TRACE into always slow down or always act now.
+
 ## 5. Memory as active routing, not archive
 
-Cases:
-
-- Memento
-- Challenger/Columbia
-- public inquiries
-- AI relay
-- source map
-
-Need central line:
+Status: patched in Cluster 01 and 05.
 
 ```trace
 memory_live_if:
   record_changes_future_choice
 ```
 
+Remaining risk: citation/archive theatre.
+
+## 6. AI responsibility without classification escape
+
+Status: Data patch added to Cluster 04 and Source Map.
+
+```trace
+responsibility_attaches_to:
+  causal_power
+  + foreseeable_subject_effect
+  + correction_capacity
+  not_only:
+    ontology_label
+```
+
+Remaining risk: robot-rights overclaim or tool-classification denial.
+
+## 7. Reader empathy / no assumed reference cloud
+
+Status: README patched.
+
+Need: reader-empathy pass across all cluster files.
+
+```trace
+reader_position_failure :=
+  structure_correct
+  but:
+    entry_path_missing
+```
+
 ---
 
-# Patch priorities
+# Patch priorities now
 
-## Priority 1 — Add Harriet Tubman into V2
+## Priority 1 — Reader-empathy pass across all clusters
 
-This is the clearest missing case from the old bootstrap set.
+Every carrier needs one-sentence orientation before use.
 
-Best placement:
+## Priority 2 — Groundhog Day / AI relay loop patch
 
-- Cluster 04: power/method/coercion;
-- Cluster 06: late warning/gated survival;
-- Cluster 02: future-space as exit route.
+Still underdeveloped: recursion can train correction or theatre.
 
-Do not make a new file unless needed. Add cross-sections.
+## Priority 3 — Hostile read of Bootstrap V2
 
-## Priority 2 — Add cross-links into Cluster 05
+Attack overclaim, forced analogy, source decoration, reader assumptions, Data overreach, and metaphor drift.
 
-Cluster 05 should become the infrastructure connector for Apollo 13, 2012, Greenland, Energy, Infrastructure, AI compute, and survival gates.
+## Priority 4 — Prepare relay pack
 
-## Priority 3 — Add support-without-seizure to Cluster 04 or 02
-
-Samwise is currently too lightly connected. He is the cleanest carrier of support that preserves agency.
-
-## Priority 4 — Add protective secrecy distinction
-
-This will prevent drift when linking Harriet Tubman, emergency systems, and AI safety.
-
-## Priority 5 — Add a cross-cluster index later
-
-Current file count is at 10 after this audit. Do not add more files unless consolidating. If more connection material is needed, merge it into existing files or later fold into README/source map.
+Current file count is at 10. No new files. Consolidate if needed.
 
 ---
 
@@ -606,24 +667,23 @@ Current file count is at 10 after this audit. Do not add more files unless conso
 ```trace
 verdict :=
   V2_structure_good
+  + major_missing_links_patched
   but:
-    cross_links_needed
+    reader_entry_needs_work
+    + hostile_review_needed
 
-not_missing :=
-  core_cases
-  + file_count_control
-  + source_map
-
-missing :=
-  Harriet_Tubman_integration
-  + protective_secrecy_distinction
-  + support_without_seizure
-  + infrastructure_backlinks
-  + tempo_selection_as_cross_theme
+next_best_move :=
+  reader_empathy_pass
+  -> hostile_read
+  -> relay_pack
 ```
 
 Plain version:
 
-The V2 folder has the right structure. The main risk now is not absence of cases. The main risk is cluster siloing: each file starts becoming its own small theory.
+The V2 folder has become a connected middle-out structure. The main risk has shifted.
 
-The fix is cross-linking, not adding many new files.
+Earlier risk: missing links.
+
+Current risk: reader entry and over-density.
+
+The fix is now orientation, not more examples.
