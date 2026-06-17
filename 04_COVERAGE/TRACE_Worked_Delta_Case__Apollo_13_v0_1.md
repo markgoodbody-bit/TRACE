@@ -1,7 +1,19 @@
 # TRACE Worked Delta Case — Apollo 13 v0.1
 
 Date: 2026-06-17
-Status: worked comparison draft / not validation / not source-complete
+Status: worked-delta protocol / comparator not yet executed / verdict deferred / not validation / not source-complete
+
+## Status banner
+
+This is not yet a demonstrated TRACE delta. It is a protocol for testing whether a TRACE delta survives comparison with ordinary engineering-crisis, safety-engineering, and high-reliability analysis.
+
+```trace
+status :=
+  worked_delta_protocol
+  + comparator_not_executed
+  + verdict_deferred
+  - demonstrated_delta
+```
 
 ## Plain purpose
 
@@ -215,6 +227,18 @@ lever := state_changing_capacity
 distributed != dissolved
 ```
 
+## Success-case limitation
+
+Apollo 13 is a success case. That makes it useful as a clean recognition carrier, but weak as proof of an earlier-catch delta.
+
+The people inside the case already reached the relevant gates in time. TRACE is therefore not showing that it would have changed the outcome. It is re-compressing a successful correction pattern.
+
+```trace
+success_case_limitation :=
+  actual_actors_already_corrected
+  -> earlier_catch_delta_not_demonstrated
+```
+
 ## What TRACE does not add
 
 TRACE does not add the engineering explanation.
@@ -266,6 +290,19 @@ Apollo_TRACE_delta_falsified_if:
 
 If that condition holds, TRACE should demote this case to a recognition aid rather than a worked-delta example.
 
+## Current demotion pressure
+
+Audit pressure currently suggests Apollo 13 may already be close to its demotion condition because crisis-management, safety-engineering, and high-reliability analysis are mature on this terrain.
+
+```trace
+current_status_pressure :=
+  demotion_candidate
+  until:
+    source_backed_comparator_run
+```
+
+Plain version: keep Apollo 13 as useful training material, but do not treat it as a demonstrated TRACE delta unless it survives a real comparator pass.
+
 ## Cross-domain transfer test
 
 The Apollo pattern transfers only if the same movement helps outside aerospace.
@@ -305,10 +342,11 @@ provisional_result :=
     engineering_domain_already_strong
     + source_specificity_needed
     + external_comparator_needed
+    + demotion_pressure_live
 ```
 
 Plain version:
 
 Apollo 13 is useful because it shows correction before hardening with unusually visible records, clocks, carriers, and levers. The honest TRACE delta is not that TRACE understands Apollo 13 better than engineers. It is that TRACE compresses the movement into a portable diagnostic structure.
 
-That claim remains provisional until compared against ordinary crisis-management, safety-engineering, and high-reliability-organisation analysis.
+That claim remains provisional and under demotion pressure until compared against ordinary crisis-management, safety-engineering, and high-reliability-organisation analysis.
