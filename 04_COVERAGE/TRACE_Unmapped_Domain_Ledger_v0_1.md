@@ -1,23 +1,24 @@
-# TRACE Unmapped Domain Ledger v0.1
+# TRACE Applicability-Untested Domain Ledger v0.1
 
 Date: 2026-06-17
-Status: working coverage map / not canon / not validation
+Status: working applicability map / not canon / not validation / low-confidence backlog
 
 ## Plain purpose
 
-This file records the major domains that TRACE has not yet mapped cleanly.
+This file records domains where TRACE applicability is not yet structurally tested.
 
 It is outside the Bootstrap V2 relay surface on purpose. Bootstrap V2 should not become a carrier shelf or theory dump. This ledger preserves open territory without bloating the 10-file bootstrap pack.
 
 ```trace
-unmapped_domain_ledger :=
-  preserve_open_territory
+applicability_untested_ledger :=
+  preserve_open_questions
   + prevent_false_closure
-  + guide_future_mapping
+  + guide_future_testing
   + separate_bootstrap_from_full_TRACE
   - validation_claim
   - canon_claim
   - coverage_claim
+  - total_framework_claim
 ```
 
 ## Current honest state
@@ -49,10 +50,13 @@ TRACE_current_weakness :=
 Boundary:
 
 ```trace
-unmapped != absent
-unmapped != invalid
-unmapped := not_yet_structurally_integrated
+untested != absent
+untested != invalid
+untested != owned_by_TRACE
+untested := applicability_not_yet_structurally_tested
 ```
+
+Plain version: this ledger does not mean TRACE is entitled to map everything. It means these domains should not be quietly treated as already covered.
 
 ---
 
@@ -79,7 +83,9 @@ positive_life_gap :=
 
 If TRACE only maps catastrophe, it becomes a disaster ethics engine. That is too small. A system must know what it is preserving, not only what it is preventing.
 
-## Candidate carriers
+## Low-confidence candidate carriers
+
+These are recognition aids only, not a build queue:
 
 - friendship and loyalty narratives;
 - music, comedy, art, dance, sport, craft;
@@ -125,7 +131,9 @@ market_gap :=
 
 Many systems route harm through ordinary financial mechanisms while appearing voluntary, neutral, or efficient.
 
-## Candidate historical carriers
+## Low-confidence candidate historical carriers
+
+These are source paths to test later, not proof of TRACE coverage:
 
 - enclosure;
 - debt peonage;
@@ -177,7 +185,9 @@ ecology_gap :=
 
 Powerful systems do not only act on individual subjects. They alter habitats. AI, markets, states, and infrastructure can change the environment in which agency is possible.
 
-## Candidate carriers
+## Low-confidence candidate carriers
+
+These require source-led ecological testing before promotion:
 
 - keystone species;
 - pollinator collapse;
@@ -227,7 +237,9 @@ belief_gap :=
 
 Belief systems bind people. Sometimes they produce care, courage, and restraint. Often they launder hierarchy, obedience, exclusion, and violence. TRACE needs the distinction rather than a flat dismissal.
 
-## Candidate historical carriers
+## Low-confidence candidate historical carriers
+
+These require history-first treatment and must not become a culture-war list:
 
 - religious wars;
 - cults and coercive belief communities;
@@ -277,7 +289,9 @@ war_gap :=
 
 War is where timing, secrecy, classification, hierarchy, and irreversible harm combine under maximum pressure.
 
-## Candidate historical carriers
+## Low-confidence candidate historical carriers
+
+These require careful source discipline and should not be used as dramatic decoration:
 
 - Nuremberg and obedience defence;
 - My Lai;
@@ -329,7 +343,9 @@ body_gap :=
 
 A process can look fair while destroying the body-clock of the affected person. Contestability that arrives after exhaustion, relapse, breakdown, pain, or death is not real correction.
 
-## Candidate carriers
+## Low-confidence candidate carriers
+
+These require subject-facing source discipline and should not be treated as illustrative colour:
 
 - chronic illness and benefits systems;
 - addiction recovery and relapse loops;
@@ -383,7 +399,9 @@ AI_gap :=
 
 If TRACE is to matter for AI alignment, it must attach to the actual machine pipeline, not only to moral stories about machines.
 
-## Candidate carriers
+## Low-confidence candidate carriers
+
+These are source paths for future testing, not claims that TRACE already handles AI alignment:
 
 - reward hacking;
 - benchmark overfitting;
@@ -433,17 +451,19 @@ math_gap :=
   + loss_function_capture
 ```
 
-## Minimal candidate formalisation
+## Minimal candidate formalisation — illustrative only
+
+This notation is not yet a model. `T_h` and `T_c` are not presently measurable in most real cases. Treat this as a sketch of desired structure, not as precision.
 
 ```trace
 state := S_t
 action := a_t
 transition := S_t --a_t--> S_t+1
 harm_delta := ΔH(S_t, S_t+1)
-hardening_time := T_h
-correction_arrival := T_c
-correction_window := T_h - T_c
-TRACE_failure_if := correction_window <= 0
+hardening_time := T_h   # illustrative / not yet measured
+correction_arrival := T_c   # illustrative / not yet measured
+correction_window := T_h - T_c   # illustrative only
+TRACE_failure_if := correction_window <= 0   # not an operational model yet
 ```
 
 ## Why it matters
@@ -512,11 +532,13 @@ Recommended next build after this ledger:
 
 ```trace
 next_build :=
-  one_worked_delta_case
+  one_source_backed_comparator_run
   using:
-    AI_or_administrative_or_infrastructure_case
+    Minority_Report_or_real_administrative_or_AI_case
   with:
-    ordinary_pass
+    ordinary_comparator
     + TRACE_pass
-    + explicit_delta
+    + explicit_delta_or_demotion
 ```
+
+Plain version: the ledger is not a backlog to consume. It is a restraint device. Use it to choose tests, not to add domains endlessly.
