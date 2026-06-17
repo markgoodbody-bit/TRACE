@@ -5,7 +5,7 @@ Status: current control index / no-loss surface / drift-control checkpoint / not
 
 ## Plain purpose
 
-This index records the current TRACE control state after the recent AI branch, gap map, operator probes, scale architecture, schema patch, anti-self-deception guard, and continuity/method addenda.
+This index records the current TRACE control state after the recent AI branch, gap map, operator probes, scale architecture, schema patch, anti-self-deception guard, continuity/method addenda, spine wording drift note, and Debt Clock comparator queue.
 
 It exists to prevent loss and self-deception.
 
@@ -31,6 +31,8 @@ TRACE_state :=
   + anti_self_deception_guard_active
   + continuity_handoff_active
   + action_under_uncertainty_method_note_active
+  + spine_wording_drift_visible
+  + debt_clock_comparator_queue_exists
   - validated
   - complete_framework
   - alignment_solution
@@ -76,21 +78,35 @@ purpose :=
 
 ### 00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md
 
+Commit:
+
+```trace
+commit := eeecb0ac3c5c7ed0eb6e28e028aa9a01766e9fcf
+```
+
 Status:
 
 ```trace
-status := control_note + drift_flag + not_active_spine
+status := control_note + drift_flag - active_spine_edit
 ```
 
-Flags:
+Purpose:
 
 ```trace
-spine_exit_wording_conflict :=
-  harm_carrier (README + one_sheet + vault + handoff + archive)
-  vs predatory (operator_registry_v0_2)
+purpose :=
+  record_conflict_between:
+    exit_when_correction_channel_is_harm_carrier
+    exit_when_correction_channel_is_predatory
+  + block_silent_harmonisation
 ```
 
-Rule: do not harmonise until Framework/Mark decides; quote source wording in use. Introduced by this patch.
+Temporary rule:
+
+```trace
+do_not_harmonise_silently
+quote_source_wording_used
+mark_uncertainty_if_branch_activation_depends_on_distinction
+```
 
 ## Current continuity and handoff files
 
@@ -99,6 +115,7 @@ continuity_handoff_files :=
   00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md
   + 00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md
   + 07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md
+  + 07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md
 ```
 
 These files preserve wake-up continuity and external-agent handoff discipline. They do not alter the active TRACE spine.
@@ -176,13 +193,13 @@ failure_modes :=
 Commit:
 
 ```trace
-commit := 2b5ed2d81b84724e7443d281b6168e87e7c6ef29
+commit := 38a6640a146229f3a82cfcf060ecc3d03a73613e
 ```
 
 Status:
 
 ```trace
-status := external_agent_handoff_note
+status := external_agent_handoff_note + constructive_pressure_patch
 ```
 
 Role:
@@ -197,6 +214,43 @@ Claude_use :=
     believe
     OR validate
     OR become_Framework
+```
+
+Constructive pressure:
+
+```trace
+constructive_pressure :=
+  understand_the_aim
+  + preserve_the_core
+  + attack_overclaim
+  + build_when_reversible
+  + demote_when_needed
+  + refuse_false_validation
+```
+
+### 07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md
+
+Commit:
+
+```trace
+commit := 49f72bf5487b9077b201edd271ae0a90ea10b979
+```
+
+Status:
+
+```trace
+status := external_agent_experiment_note
+```
+
+Current result:
+
+```trace
+Claude_Code_experiment :=
+  passed_reconstruction_test
+  + passed_constructive_pressure_test
+  + useful_as_external_build_agent
+  - not_Framework
+  - not_validation
 ```
 
 ## Current method and support-lens files
@@ -279,6 +333,50 @@ outcome_comparison :=
 ```
 
 Demote if it becomes a number, sacrifice-laundering, hidden sentience weighting, distribution erasure, or evidence replacement.
+
+## Current comparator queue files
+
+```trace
+comparator_queue_files :=
+  04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md
+```
+
+### 04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md
+
+Commit:
+
+```trace
+commit := b458fb4a78231d9094eadb6c973f4dc238621650
+```
+
+Status:
+
+```trace
+status := comparator_queue + candidate_pressure_artifact - operator_promotion
+```
+
+Purpose:
+
+```trace
+purpose :=
+  pressure_Debt_Clock_against:
+    debt_collection_law
+    + administrative_review
+    + poverty_law
+    + consumer_credit
+    + administrative_burden
+    + procedural_justice
+    + scarcity_psychology
+```
+
+Promotion remains blocked.
+
+```trace
+debt_clock_promotion_blocked_until :=
+  comparator_queue_exists
+  + at_least_one_source_backed_comparator_run_completed
+  + candidate_survives_or_demotes
+```
 
 ## Current operator-control files
 
@@ -569,7 +667,7 @@ No promotion permitted without comparators and boundary-demoter survival.
 
 ```trace
 pending_comparators :=
-  Debt_Clock -> debt_collection_law + administrative_review + poverty_law + consumer_credit
+  Debt_Clock -> debt_collection_law + administrative_review + poverty_law + consumer_credit + administrative_burden + procedural_justice + scarcity_psychology
   Preservation_Love -> care_ethics + attachment_theory + trauma_informed_care + palliative_care + disability_support
   External_Memory_Scaffold -> memory_studies + dementia_care + archives + identity_continuity_literature
   Affection_Laundering -> consent_theory + coercive_control + boundary_psychology + care_ethics
@@ -628,6 +726,7 @@ drift_warnings :=
   + support_lens_scoring_creep
   + Claude_handoff_as_validation
   + spine_wording_drift_unresolved
+  + comparator_queue_mistaken_for_comparator_run
 ```
 
 ## Current hard constraints
@@ -644,6 +743,7 @@ hard_constraints :=
   + do_not_let_responsibility_inflate_into_total_blame
   + do_not_confuse_vault_and_bootstrap
   + do_not_convert_support_lens_to_score
+  + do_not_treat_comparator_queue_as_completed_run
 ```
 
 ## Bigger-goal guard
@@ -671,16 +771,15 @@ The bigger aim remains live. But it must be reached through honest small structu
 
 ```trace
 handoff_next :=
-  test_CLAUDE_CODE_HANDOFF_v0_1
-  + verify_Claude_can_apply_attack_compare_revise
+  ask_Claude_to_audit_recent_editor_commits
   + do_not_treat_agreement_as_validation
 ```
 
 ```trace
 framework_build_next :=
-  create_comparator_queue
+  run_first_source_backed_comparator
   beginning_with:
-    Debt_Clock
+    Debt_Clock_vs_administrative_review_or_administrative_burden
 ```
 
 ## Stop rule before next operator promotion
@@ -692,6 +791,14 @@ stop_rule :=
     comparator_queue_exists
     + first_comparator_run_completed
     + candidate_survives_or_demotes
+```
+
+Current status:
+
+```trace
+comparator_queue_exists := true
+first_comparator_run_completed := false
+candidate_survives_or_demotes := false
 ```
 
 ## Stop rule before continuity handoff claim
@@ -708,4 +815,4 @@ handoff_stop_rule :=
 
 Plain version:
 
-The repo is indexed for the current control state. The next safe external step is a Claude Code handoff test. The next safe framework build is a comparator queue, not another operator or story.
+The repo is indexed for the current control state. The next safe external step is Claude audit of recent editor commits. The next safe framework build is a source-backed Debt Clock comparator run, not another operator or story.

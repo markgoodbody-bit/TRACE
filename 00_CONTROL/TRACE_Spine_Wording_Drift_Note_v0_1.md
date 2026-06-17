@@ -1,94 +1,196 @@
 # TRACE Spine Wording Drift Note v0.1
 
 Date: 2026-06-17
-
-Status:
-
-```trace
-status :=
-  control_note
-  + drift_flag
-  + not_validation
-  + not_active_spine
-  + not_kernel_v0_3
-```
+Status: control note / drift flag / not validation / not proof / not active spine / not Kernel v0.3
 
 ## Plain purpose
 
-This note flags a live wording inconsistency in how the third element of the active TRACE spine is stated across the repo. It does not resolve the inconsistency and does not change the spine. It exists so that no one silently harmonises the wording or lets the difference change branch activation without a deliberate decision.
+This note records a live wording drift in the current TRACE active spine.
 
-## 1. The conflict
+It does not resolve the drift.
 
-The active spine's exit element is stated two different ways.
-
-Surfaces using `exit_when_correction_channel_is_harm_carrier`:
-
-- `README.md:24`
-- `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md:14`
-- `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md:210`
-- `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md:61` and `:245`
-- `99_ARCHIVE_INDEXES/SUBTRACTION_PATCH_v0_1_2026_06_16.md:53`
-
-Surface using `exit_when_correction_channel_is_predatory`:
-
-- `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md:104` (the "Public Definition After Subtraction" block)
-
-Note: the disagreement is asymmetric. The majority of surfaces (status, public one-sheet, vault, handoff, archive) use `harm_carrier`, while the single canonical operator-memory file uses `predatory`. The minority wording sits in the most authoritative file. The related operator `OP-011 Exit Route` and `OP-010 Predatory System Boundary` in that same registry use "before_capture" / "predatory" language at the operator layer; this note concerns the spine-level restatement only.
-
-## 2. Why it matters
+It exists so the ambiguity cannot silently change branch activation.
 
 ```trace
-harm_carrier := correction_channel_itself_carries_harm
-predatory     := correction_channel_intends_or_structurally_exploits
+spine_wording_drift_note :=
+  record_conflict
+  + block_silent_harmonisation
+  + preserve_source_wording
+  + require_explicit_decision
+  - active_spine_edit
+  - validation_claim
 ```
 
-- `harm_carrier` is broader. A correction channel can carry harm through negligence, capture, design failure, or delay, with no intent.
-- `predatory` is narrower and implies intention-like or structurally exploitative framing.
-- A channel can be a harm carrier without being predatory. Therefore the two wordings do not pick out the same set of cases.
-- Using both silently could change when the exit branch activates: a `predatory` reading would withhold exit in negligent-but-non-predatory harm cases that a `harm_carrier` reading would catch. This is an activation-threshold difference, not a cosmetic one.
+## The conflict
 
-## 3. Temporary rule (until Framework/Mark decides)
+Most current public/control surfaces use:
+
+```trace
+exit_when_correction_channel_is_harm_carrier
+```
+
+The canonical Operator Registry v0.2 public definition uses:
+
+```trace
+exit_when_correction_channel_is_predatory
+```
+
+This matters because the Operator Registry is a high-authority memory file, while the current README / public surface / handoff surface use the broader phrase.
+
+## Why it matters
+
+`harm_carrier` is broader.
+
+A correction channel can carry harm through:
+
+- predation,
+- capture,
+- negligence,
+- dependency,
+- design failure,
+- delay,
+- retaliation risk,
+- procedural burden,
+- or structural conflict of interest.
+
+`predatory` is narrower and more intention-like.
+
+It suggests that the system or channel is actively hunting, exploiting, or targeting the subject.
+
+```trace
+predatory_system ⊂ harm_carrier_system
+```
+
+If both phrases are used silently, the Exit Route branch may activate differently depending on which file a reader treats as controlling.
+
+That is unacceptable drift.
+
+## Temporary rule
+
+Until Framework / Mark explicitly decides the canonical wording:
 
 ```trace
 temporary_rule :=
-  do_not_harmonise_until_explicit_decision
-  + quote_the_source_wording_in_use
-  + if branch_activation_depends_on_distinction: mark_uncertainty
+  do_not_harmonise_silently
+  + quote_source_wording_used
+  + mark_uncertainty_if_branch_activation_depends_on_distinction
 ```
 
-- Do not harmonise the wording until Framework/Mark explicitly chooses.
-- When applying TRACE, quote the exact source wording being used and cite the file.
-- If a case's exit-branch activation turns on the harm_carrier-vs-predatory distinction, do not decide it silently. Mark the uncertainty and route it to the decision.
+When applying TRACE, use the exact wording from the file being applied.
 
-## 4. Candidate resolution options (no choice made here)
+If a case would fail under `predatory` but trigger under `harm_carrier`, record the ambiguity.
 
-- **Option A — harmonise to `harm_carrier`.** Update the registry line to match the majority surfaces. Broadest exit coverage; loses the narrower "predatory" signal unless preserved elsewhere.
-- **Option B — keep `predatory` as a subset of a `harm_carrier` branch.** Treat `harm_carrier` as the branch and `predatory` as a high-severity sub-case within it.
-- **Option C — split into `harm_carrier` and `predatory_system` with different activation thresholds.** Two distinct activation conditions; more discriminating but adds structure and must pass the normal candidate gate (this would not be done casually and is not a spine change made by this note).
+## Candidate resolution options
 
-No option is endorsed. Listing is not selection.
+This note does not choose among these.
 
-## 5. Demoters / removal
+### Option A — Harmonise to `harm_carrier`
+
+Use `exit_when_correction_channel_is_harm_carrier` everywhere.
+
+Reason:
+
+- broader;
+- captures systems that carry harm without requiring predatory intent;
+- better fits the existing Diagnostic Kernel v0.2 wording around official channel as harm carrier.
+
+Risk:
+
+- may over-trigger Exit Route branch if too broad;
+- may label ordinary institutional weakness as system danger.
+
+### Option B — Keep `predatory` as subset
+
+Use `harm_carrier` as the broad branch and `predatory_system` as a narrower high-risk subtype.
+
+Reason:
+
+- preserves both meanings;
+- allows stronger caution where exposure to the channel itself increases danger;
+- keeps predation language from doing too much work.
+
+Risk:
+
+- adds vocabulary complexity;
+- may invite premature subtype expansion.
+
+### Option C — Split branch thresholds
+
+Define separate activation thresholds:
 
 ```trace
-remove_if := wording_harmonised + all_affected_files_updated
-demote_if := conflict_already_deliberately_scoped_elsewhere
-keep_if   := ambiguity_remains_live
+harm_carrier_channel :=
+  official_route_carries_or_preserves_harm
+
+predatory_system :=
+  official_route_targets_or_exploits_subject
 ```
 
-- **Remove** this note once the wording is harmonised and every file in Section 1 is updated to the chosen wording.
-- **Demote** if it turns out the two wordings are already deliberately scoped (e.g. spine surface vs operator surface) and documented somewhere this note missed; then this note is redundant.
-- **Keep** while the ambiguity remains live and undecided.
+Reason:
 
-## Must-not-claim
+- clearer discrimination;
+- supports different escalation levels.
+
+Risk:
+
+- may become Kernel v0.3 by stealth;
+- requires comparator pressure and branch tests before promotion.
+
+## Current provisional preference
+
+No binding decision is made here.
+
+However, the safest likely future direction is:
 
 ```trace
-this_note != active_spine
-this_note != validation
-flagging_drift != resolving_drift
-AI_agreement != validation
+harm_carrier := broad_branch_language
+predatory := high_risk_subtype
 ```
 
-This note records a problem. It does not settle it, and it does not validate TRACE.
+This should not be treated as canonical until deliberately patched through affected files.
+
+## Demoters / removal conditions
+
+Remove this note if:
+
+```trace
+remove_if :=
+  canonical_wording_decided
+  + affected_files_updated
+  + read_order_or_control_index_updated
+```
+
+Demote this note if:
+
+```trace
+demote_if :=
+  deliberate_scope_distinction_already_documented_elsewhere
+  OR apparent_conflict_is_redundant
+```
+
+Keep this note if:
+
+```trace
+keep_if :=
+  ambiguity_remains_live
+  OR branch_activation_changes_by_wording
+```
+
+## Must not claim
+
+```trace
+must_not_claim :=
+  this_note_resolves_spine
+  OR this_note_creates_Kernel_v0_3
+  OR predatory_equals_harm_carrier
+  OR harm_carrier_implies_bad_faith
+  OR Claude_or_Framework_agreement_validates_TRACE
+```
+
+## Final line
+
+The conflict is now visible.
+
+Do not resolve it silently.
 
 End.
