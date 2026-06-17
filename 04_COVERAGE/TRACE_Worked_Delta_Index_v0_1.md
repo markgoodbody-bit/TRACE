@@ -1,7 +1,7 @@
 # TRACE Worked Delta Index v0.1
 
 Date: 2026-06-17
-Status: index / routing aid / not validation
+Status: index / routing aid / not validation / comparator-standard aware
 
 ## Purpose
 
@@ -14,9 +14,30 @@ worked_delta_index :=
   route_cases
   + preserve_test_purpose
   + compare_TRACE_to_ordinary_reasoning
+  + apply_unification_standard
   - proof_claim
   - carrier_collection
 ```
+
+## Comparator standard
+
+Use `TRACE_Comparator_Standard_v0_1.md` when judging deltas.
+
+```trace
+wrong_test :=
+  existing_field_already_contains_component
+  -> TRACE_demoted
+
+right_test :=
+  does_TRACE_translate_across_domains
+  while:
+    preserving_relevant_structure
+    + reducing_navigation_cost
+    + exposing_loss
+    + keeping_demoters_live
+```
+
+Plain version: TRACE does not fail merely because a local field already has the idea. TRACE fails if it adds no useful compression, transfer, action-routing, or loss-detection, or if it flattens local expertise.
 
 ## Current worked-delta cases
 
@@ -54,24 +75,28 @@ TRACE_delta :=
     transferable_navigation_pattern
 ```
 
-Demoter:
+Reframed demoter:
 
 ```trace
 demote_if:
   ordinary_engineering_analysis
-  captures_same_pattern
-  with_equal_transferability
-  and_less_vocabulary
+  provides:
+    equal_cross_domain_transfer
+    + equal_navigation_gain
+    + equal_loss_detection
+    + less_vocabulary_burden
 ```
 
-### 2. Minority Report
+Current status: useful recognition carrier; under demotion pressure because local engineering/safety fields are mature.
+
+### 2. Minority Report / prediction authority
 
 File: `TRACE_Worked_Delta_Case__Minority_Report_v0_1.md`
 
 Primary pattern:
 
 ```trace
-Minority_Report_delta :=
+Prediction_Authority_delta :=
   prediction_as_authority_gate
   + contestability_clock
   + future_space_confiscation
@@ -86,6 +111,7 @@ ordinary_comparator :=
   + administrative_law
   + evidence_contestability
   + algorithmic_accountability
+  + open_future_or_anticipatory_harm_analysis
 ```
 
 Claimed TRACE delta:
@@ -97,14 +123,41 @@ TRACE_delta :=
     due_process_replacement
 ```
 
-Demoter:
+Reframed demoter:
 
 ```trace
 demote_if:
-  ordinary_due_process_or_admin_law_analysis
-  captures_same_pattern
-  with_equal_clarity
-  and_less_vocabulary
+  ordinary_comparator_fields
+  provide:
+    equal_cross_domain_transfer
+    + equal_timing_gate_navigation
+    + equal_future_space_loss_detection
+    + less_vocabulary_burden
+```
+
+Current status: candidate alive; narrowed to contestability clock, future-space, and gate compression. Technical opacity is locally captured by existing work and should not be claimed as independent TRACE invention.
+
+## Comparator runs
+
+### Prediction Authority v0.1
+
+File: `TRACE_Source_Backed_Comparator_Run__Prediction_Authority_v0_1.md`
+
+Result:
+
+```trace
+Prediction_Authority_comparator_result :=
+  candidate_alive
+  + claim_narrowed
+  + no_validation
+  + open_future_comparator_pending
+```
+
+Surviving question:
+
+```trace
+can_contestability_reach_the_gate
+before_future_space_hardens?
 ```
 
 ## Worked-delta case minimum shape
@@ -164,38 +217,37 @@ Best comparator: AI governance, incident report, official documentation, and dep
 ```trace
 stop_worked_delta_expansion_if:
   two_cases_exist
+  + one_comparator_run_exists
   + no_new_comparator_question
-  + no_external_audit_yet
 ```
 
 Current state:
 
 ```trace
 worked_delta_cases := 2
-external_audit := needed
+source_backed_comparator_runs := 1
 more_cases_now := not_recommended
 ```
 
 Plain version:
 
-There are now enough worked-delta drafts for a hostile audit. More worked examples before audit would risk quantity replacing test pressure.
+There are now enough worked-delta drafts and one comparator run. More worked examples before tightening the comparator path would risk quantity replacing test pressure.
 
 ## Recommended next move
 
 ```trace
 next_move :=
-  audit_04_COVERAGE
-  focused_on:
-    unmapped_domain_ledger
-    + Apollo_13_worked_delta
-    + Minority_Report_worked_delta
-    + this_index
+  either:
+    run_open_future_comparator
+  OR:
+    pause_04_COVERAGE
+  OR:
+    return_to_AI_pipeline_mapping
 ```
 
-Audit questions:
+Audit questions for next review:
 
-- Are the deltas real?
-- Are the demoters strong enough?
-- Is TRACE adding navigation or just vocabulary?
-- Is the coverage ledger useful or too broad?
-- Should any file be deleted, merged, or held?
+- Does the unification standard prevent false demotion without licensing overclaim?
+- Is the surviving Prediction Authority delta real enough to keep testing?
+- Should Apollo be explicitly demoted to recognition carrier?
+- Should the open-future comparator be run, or is this branch sufficiently bounded for now?
