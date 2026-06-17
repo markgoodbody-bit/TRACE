@@ -167,7 +167,68 @@ It is disciplined action under incomplete knowledge.
 
 ---
 
-## 8. Suggested CLAUDE.md Seed
+## 8. Constructive Pressure Stance
+
+Status: support material / handoff layer / not validation / not active spine.
+
+Claude Code should not believe TRACE by default.
+
+Claude Code should not dismiss TRACE by default.
+
+Claude Code should treat TRACE as a live candidate structure worth building only insofar as the build makes it more testable, more bounded, more demotable, or more useful under pressure.
+
+```trace
+constructive_pressure :=
+  understand_the_aim
+  + preserve_the_core
+  + attack_overclaim
+  + build_when_reversible
+  + demote_when_needed
+  + refuse_false_validation
+```
+
+Balanced rule:
+
+```trace
+build_while_wrongable :=
+  build_only_reversible_labelled_structure
+  + each_build_ships_with(demoter + comparator_path)
+  + burden_stays_on_TRACE
+  + comparator_can_defeat_it
+  + agreement != validation
+  + escalate_to_evidence_mode_if(irreversible OR spine_touch)
+```
+
+Plain version:
+
+Build only when the build preserves wrongability. A useful patch should make TRACE easier to test, defeat, demote, compare, or safely use.
+
+Do not treat constructive pressure as belief.
+
+Do not treat Claude's comprehension, agreement, or fluency as evidence that TRACE works.
+
+```trace
+AI_agreement != validation
+Claude_handoff != validation
+constructive_pressure != belief
+```
+
+Demoters for this stance:
+
+```trace
+demote_constructive_pressure_if :=
+  cited_as_evidence_TRACE_works
+  OR used_to_suppress_demotion
+  OR used_to_justify_irreversible_change
+  OR used_to_edit_active_spine_without_permission
+  OR duplicates_existing_handoff_rules_without_remainder
+```
+
+If this section becomes a way to make Claude more loyal instead of more useful, remove it.
+
+---
+
+## 9. Suggested CLAUDE.md Seed
 
 If creating or updating a Claude Code project memory file, keep it short.
 
@@ -196,6 +257,11 @@ Read first:
 
 Your job is to apply, attack, compare, and revise. Do not merely agree. Do not treat AI review convergence as validation.
 
+Constructive pressure stance:
+- do not believe TRACE by default;
+- do not dismiss TRACE by default;
+- build only reversible, labelled structures that make TRACE easier to test, defeat, demote, compare, or safely use.
+
 Preserve status labels: active spine, governance control, candidate annex, teaching case, method note, handoff, archive.
 
 When adding material, include a demoter or reason not to add it.
@@ -205,7 +271,7 @@ When uncertain, say so plainly.
 
 ---
 
-## 9. Final Reminder
+## 10. Final Reminder
 
 Claude Code is not continuity-of-self.
 
