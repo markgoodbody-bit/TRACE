@@ -1,11 +1,30 @@
 # Bootstrap V2 — Read Me First
 
 Date: 2026-06-16
-Status: relay-facing freeze candidate / not canon / not validation
+Status: live relay-facing bootstrap surface / not canon / not validation
 
 ## One-line purpose
 
 Bootstrap V2 uses familiar stories, historical echoes, and source translation to make TRACE patterns recognisable without requiring the reader to accept a full theory first.
+
+## Core movement
+
+TRACE is trained movement under pressure.
+
+It is not a belief system, a proof, or a permission engine. In use, it asks the reader or system to move through the case in a disciplined order:
+
+```trace
+TRACE_move :=
+  find_gate
+  + find_clock
+  + find_voice_capture
+  + find_metric_capture
+  + find_lever
+  + check_harmed_subject
+  + act_before_hardening
+```
+
+The point is not to name more things. The point is to navigate earlier, with less wasted motion, before harm hardens.
 
 ## Core frame
 
@@ -71,6 +90,65 @@ boundary := Data_analogy != current_AI_personhood_proof
 ```
 
 This rule applies to every carrier: Data, Samwise, Memento, EEAAO, Children of Men, Apollo 13, Harriet Tubman, 12 Angry Men, 2012, Greenland, Frankenstein, and any future case.
+
+## Current operator deltas to preserve
+
+The following operators should be preserved while patching existing cluster files. Do not create a new file for them unless the 10-file pack is later consolidated.
+
+```trace
+captured_voice :=
+  voice_capacity_present
+  but:
+    threat
+    + dependency
+    + trauma
+    + isolation
+    + learned_survival
+    remove_safe_speech_route
+
+rule :=
+  silence_under_threat != consent
+  silence_under_threat != safety
+```
+
+```trace
+metric_capture_of_life :=
+  single_metric_becomes_supreme
+  -> truth_loss
+  -> relation_loss
+  -> floor_loss
+  -> future_space_loss
+  -> hidden_bodies
+```
+
+```trace
+rehabilitation_without_victim_capture :=
+  preserve_possible_next_self
+  while:
+    protecting_harmed_subject_from_repeat_access
+
+rule :=
+  score_is_not_destiny
+  but:
+    victim_not_repair_material
+```
+
+```trace
+sincerity_under_spectacle :=
+  honest_signal
+  enters:
+    camera
+    + platform
+    + audience
+    + monetisation
+    + self_awareness
+
+risk :=
+  honesty_becomes_content
+  + pain_becomes_brand
+```
+
+These are patch candidates, not proof claims. The immediate patch priority is to integrate captured voice, metric capture, and rehabilitation without victim capture. Sincerity under spectacle should remain a drift warning unless it proves necessary inside a cluster.
 
 ## The 98 percent rule
 
