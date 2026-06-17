@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: stable repo navigation after subtraction patch, updated with continuity/method addenda. Not validation. Not proof.
+Status: stable repo navigation after subtraction patch, updated with continuity/method addenda, spine drift note, and Debt Clock comparator queue. Not validation. Not proof.
 
 ## Fast orientation
 
@@ -18,22 +18,48 @@ Status: stable repo navigation after subtraction patch, updated with continuity/
 9. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
 10. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 
+## Control notes
+
+11. `00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md`
+12. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
+13. `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
+
+Control note rule:
+
+```trace
+control_note != active_spine
+spine_wording_drift_note != resolution
+quote_source_wording_used
+```
+
 ## Continuity and handoff addenda
 
 These files are support/control material. They do not change the active TRACE spine.
 
-11. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
-12. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
-13. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
-14. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
-15. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+14. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
+15. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
+16. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
+17. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
+18. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+19. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
+
+## Comparator and test layer
+
+20. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
+
+Comparator queue rule:
+
+```trace
+comparator_queue != comparator_run
+Debt_Clock_queue != Debt_Clock_promotion
+```
 
 ## Case and comparison layer
 
-16. `03_BOOTSTRAPS/ACTIVE_COLLECTION/02_SOURCE_MARKDOWN/`
-17. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
-18. `06_REVIEWS_AND_AUDITS/`
-19. `07_HANDOFFS/`
+21. `03_BOOTSTRAPS/ACTIVE_COLLECTION/02_SOURCE_MARKDOWN/`
+22. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
+23. `06_REVIEWS_AND_AUDITS/`
+24. `07_HANDOFFS/`
 
 ## Rule
 
