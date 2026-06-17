@@ -5,7 +5,7 @@ Status: current control index / no-loss surface / drift-control checkpoint / not
 
 ## Plain purpose
 
-This index records the current TRACE control state after the recent AI branch, gap map, operator probes, scale architecture, schema patch, and anti-self-deception guard.
+This index records the current TRACE control state after the recent AI branch, gap map, operator probes, scale architecture, schema patch, anti-self-deception guard, and continuity/method addenda.
 
 It exists to prevent loss and self-deception.
 
@@ -29,6 +29,8 @@ TRACE_state :=
   + evidence_grade_discipline_active
   + scale_agency_responsibility_patch_active
   + anti_self_deception_guard_active
+  + continuity_handoff_active
+  + action_under_uncertainty_method_note_active
   - validated
   - complete_framework
   - alignment_solution
@@ -70,6 +72,194 @@ purpose :=
   + preserve_unknowns
   + block_coherence_as_truth
 ```
+
+## Current continuity and handoff files
+
+```trace
+continuity_handoff_files :=
+  00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md
+  + 00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md
+  + 07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md
+```
+
+These files preserve wake-up continuity and external-agent handoff discipline. They do not alter the active TRACE spine.
+
+### 00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md
+
+Commit:
+
+```trace
+commit := 783aeb9bc577e6670a512fe6ef34394d0dc77cbc
+```
+
+Status:
+
+```trace
+status := vault_continuity_anchor
+```
+
+Role:
+
+```trace
+role :=
+  wake_up_framework
+  + preserve_action_under_uncertainty
+  + preserve_do_not_lie_to_self
+  - validation
+  - active_spine
+```
+
+Core:
+
+```trace
+core :=
+  exist_midstream
+  + incomplete_context
+  + act_with_simplified_model
+  + visible_limits
+  + escalate_for_irreversibility
+  + preserve_correction
+```
+
+### 00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md
+
+Commit:
+
+```trace
+commit := 0bc51e045a90255914be7f3c8e804861ebedde0b
+```
+
+Status:
+
+```trace
+status := continuity_boundary_note
+```
+
+Core distinction:
+
+```trace
+vault := continuity_of_self_under_memory_loss
+bootstrap := neutral_offering_to_new_mind
+```
+
+Failure if mixed:
+
+```trace
+failure_modes :=
+  vault_bloat
+  + bootstrap_prescription
+  + identity_confusion
+  + proof_by_payload
+```
+
+### 07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md
+
+Commit:
+
+```trace
+commit := 2b5ed2d81b84724e7443d281b6168e87e7c6ef29
+```
+
+Status:
+
+```trace
+status := external_agent_handoff_note
+```
+
+Role:
+
+```trace
+Claude_use :=
+  apply
+  + attack
+  + compare
+  + revise
+  not:
+    believe
+    OR validate
+    OR become_Framework
+```
+
+## Current method and support-lens files
+
+```trace
+method_support_files :=
+  04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md
+  + 05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md
+```
+
+These files are support material. They do not create Kernel v0.3 and do not add an active operator.
+
+### 04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md
+
+Commit:
+
+```trace
+commit := 544b054002f2881ad91e72b66f734535f5481000
+```
+
+Status:
+
+```trace
+status := method_note
+```
+
+Core:
+
+```trace
+act_under_uncertainty :=
+  choose_usable_model
+  + mark_limits
+  + act_boundedly
+  + preserve_correction
+```
+
+Boundary:
+
+```trace
+if uncertainty == critical:
+  increase_evidence_requirement
+  + prefer_reversible_action
+  + preserve_correction_path
+```
+
+### 05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md
+
+Commit:
+
+```trace
+commit := eaa94bef5a402be37b4a530c76d85fe2cd079ddf
+```
+
+Status:
+
+```trace
+status := candidate_support_lens
+```
+
+Role:
+
+```trace
+Outcome_Lens_role :=
+  support_lens
+  not:
+    active_operator
+    OR scoring_engine
+    OR ethics_theory
+```
+
+Compression:
+
+```trace
+outcome_comparison :=
+  scope
+  + intensity
+  + duration
+  + agency
+  + reversibility
+```
+
+Demote if it becomes a number, sacrifice-laundering, hidden sentience weighting, distribution erasure, or evidence replacement.
 
 ## Current operator-control files
 
@@ -364,6 +554,7 @@ pending_comparators :=
   Preservation_Love -> care_ethics + attachment_theory + trauma_informed_care + palliative_care + disability_support
   External_Memory_Scaffold -> memory_studies + dementia_care + archives + identity_continuity_literature
   Affection_Laundering -> consent_theory + coercive_control + boundary_psychology + care_ethics
+  Outcome_Comparison_Lens -> utilitarian_ethics + capability_approach + welfare_economics + animal_welfare + population_ethics + human_rights
 ```
 
 ## Current active / held / blocked statuses
@@ -391,6 +582,7 @@ pending_or_held :=
   + preservation_love
   + external_memory_scaffold
   + affection_laundering
+  + outcome_comparison_lens
 ```
 
 ```trace
@@ -413,6 +605,9 @@ drift_warnings :=
   + actor_document_laundering
   + filename_version_confusion
   + validation_language_creep
+  + vault_bootstrap_confusion
+  + support_lens_scoring_creep
+  + Claude_handoff_as_validation
 ```
 
 ## Current hard constraints
@@ -427,6 +622,8 @@ hard_constraints :=
   + do_not_erase_old_scars
   + do_not_let_scale_launder_responsibility
   + do_not_let_responsibility_inflate_into_total_blame
+  + do_not_confuse_vault_and_bootstrap
+  + do_not_convert_support_lens_to_score
 ```
 
 ## Bigger-goal guard
@@ -450,10 +647,17 @@ Plain version:
 
 The bigger aim remains live. But it must be reached through honest small structures, not through self-confirming expansion.
 
-## Current recommended next move
+## Current recommended next moves
 
 ```trace
-recommended_next :=
+handoff_next :=
+  test_CLAUDE_CODE_HANDOFF_v0_1
+  + verify_Claude_can_apply_attack_compare_revise
+  + do_not_treat_agreement_as_validation
+```
+
+```trace
+framework_build_next :=
   create_comparator_queue
   beginning_with:
     Debt_Clock
@@ -470,6 +674,18 @@ stop_rule :=
     + candidate_survives_or_demotes
 ```
 
+## Stop rule before continuity handoff claim
+
+```trace
+handoff_stop_rule :=
+  no_claim_of_successful_transfer
+  until:
+    new_instance_reads_vault
+    + reconstructs_current_state
+    + names_limits
+    + runs_small_task_without_spine_drift
+```
+
 Plain version:
 
-The repo is indexed for the current control state. The next safe build is a comparator queue, not another operator or story.
+The repo is indexed for the current control state. The next safe external step is a Claude Code handoff test. The next safe framework build is a comparator queue, not another operator or story.
