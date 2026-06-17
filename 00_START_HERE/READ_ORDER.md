@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: stable repo navigation after subtraction patch. Not validation. Not proof.
+Status: stable repo navigation after subtraction patch, updated with continuity/method addenda. Not validation. Not proof.
 
 ## Fast orientation
 
@@ -18,12 +18,22 @@ Status: stable repo navigation after subtraction patch. Not validation. Not proo
 9. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
 10. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 
+## Continuity and handoff addenda
+
+These files are support/control material. They do not change the active TRACE spine.
+
+11. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
+12. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
+13. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
+14. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
+15. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+
 ## Case and comparison layer
 
-11. `03_BOOTSTRAPS/ACTIVE_COLLECTION/02_SOURCE_MARKDOWN/`
-12. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
-13. `06_REVIEWS_AND_AUDITS/`
-14. `07_HANDOFFS/`
+16. `03_BOOTSTRAPS/ACTIVE_COLLECTION/02_SOURCE_MARKDOWN/`
+17. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
+18. `06_REVIEWS_AND_AUDITS/`
+19. `07_HANDOFFS/`
 
 ## Rule
 
@@ -45,3 +55,14 @@ no_kernel_v0_3
 candidate_annex != active_spine
 Concordance_remainder_default := none
 ```
+
+## Addendum discipline
+
+```trace
+continuity_addendum != active_spine
+method_note != Kernel_v0_3
+support_lens != scoring_system
+Claude_handoff != validation
+```
+
+End.
