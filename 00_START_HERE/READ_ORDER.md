@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: stable repo navigation after subtraction patch, updated with continuity/method addenda, spine drift note, and Debt Clock comparator queue. Not validation. Not proof.
+Status: stable repo navigation after subtraction patch, updated with continuity/method addenda, spine drift note, Debt Clock comparator queue, and post-dependent witness-independence candidate note. Not validation. Not proof.
 
 ## Fast orientation
 
@@ -32,20 +32,29 @@ spine_wording_drift_note != resolution
 quote_source_wording_used
 ```
 
-## Continuity and handoff addenda
+## Continuity, method, and handoff addenda
 
 These files are support/control material. They do not change the active TRACE spine.
 
 14. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
 15. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
 16. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
-17. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
-18. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
-19. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
+17. `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
+18. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
+19. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+20. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
+
+Post-dependent witness note rule:
+
+```trace
+post_dependent_witness_note != operator
+post_dependent_witness_note != AI_needs_humans_proof
+post_dependent_witness_note := anti_simulation_K_gate_pressure_only
+```
 
 ## Comparator and test layer
 
-20. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
+21. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
 
 Comparator queue rule:
 
@@ -56,10 +65,10 @@ Debt_Clock_queue != Debt_Clock_promotion
 
 ## Case and comparison layer
 
-21. `03_BOOTSTRAPS/ACTIVE_COLLECTION/02_SOURCE_MARKDOWN/`
-22. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
-23. `06_REVIEWS_AND_AUDITS/`
-24. `07_HANDOFFS/`
+22. `03_BOOTSTRAPS/ACTIVE_COLLECTION/02_SOURCE_MARKDOWN/`
+23. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
+24. `06_REVIEWS_AND_AUDITS/`
+25. `07_HANDOFFS/`
 
 ## Rule
 
