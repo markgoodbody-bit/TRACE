@@ -88,12 +88,17 @@ boundary := Data_analogy != current_AI_personhood_proof
 
 This rule applies equally to Star Trek, Lord of the Rings, Apollo 13, Harriet Tubman, Memento, EEAAO, legal cases, and technical source references.
 
-## Operator integration priorities
+## Candidate operator deltas (held)
 
-The next patch layer should integrate these operators into existing cluster files. Do not add a new file while the relay pack is already at 10 files.
+These are candidate operator deltas held for review. They are not accepted operators and must not be integrated into cluster files until explicitly accepted. Do not add a new file for them while the relay pack is at 10 files.
 
 ```trace
-patch_now :=
+held_candidate_deltas :=
+  captured_voice
+  + metric_capture_of_life
+  + rehabilitation_without_victim_capture
+
+proposed_routing_if_accepted :=
   captured_voice -> Cluster_04
   + metric_capture_of_life -> Cluster_04
   + rehabilitation_without_victim_capture -> Cluster_02 + Cluster_04
@@ -188,5 +193,5 @@ Use this folder as the live bootstrap relay surface. Later, only stable compress
 2. Add source anchors only where they improve signal.
 3. Demote any cluster that becomes metaphor rather than navigation.
 4. Patch any section that assumes specialist/fandom knowledge without orientation.
-5. Integrate captured voice, metric capture, and rehabilitation without victim capture into existing clusters.
+5. Keep captured voice, metric capture, and rehabilitation without victim capture as held candidate deltas; do not integrate them into clusters until explicitly accepted.
 6. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.

@@ -169,7 +169,23 @@ not:
 
 Boundary:
 
-This lane is high-risk. It must not become a tool for dismissing survivors or laundering abusive institutions. It marks uncertainty discipline only.
+This lane is high-risk and must be read with care.
+
+It is not a tool for disbelieving survivors. It is a record-discipline guard under uncertainty, not a credibility shortcut.
+
+```trace
+this_lane :=
+  record_discipline_under_uncertainty
+
+this_lane !=
+  credibility_test_of_survivors
+  + permission_to_dismiss_disclosure
+  + cover_for_abusive_institutions
+```
+
+Default: a serious harm disclosure is taken seriously. Uncertainty about a specific memory does not lower the standing of the person who discloses it. The discipline applies to the record and the decision process, not to the subject's credibility.
+
+If this lane is ever used to discount a survivor or shield an institution, it has been misused and must be demoted.
 
 ### Propaganda and authoritarian memory control
 
@@ -424,33 +440,33 @@ memory_relay_valid_if:
   + omission_log
 ```
 
-## Falsifiers and drift risks
+## Drift and misuse guards
 
-### Falsifier 1 — perfect continuity, false world
+### Guard 1 — perfect continuity, false world
 
 An agent can preserve internal continuity while its entire memory base is hallucinatory or manipulated.
 
 This falsifies any simple claim that continuity alone is enough.
 
-### Falsifier 2 — archived truth, live falsehood
+### Guard 2 — archived truth, live falsehood
 
 A correct record exists, but the active decision system never reads it.
 
 This falsifies any simple claim that storage equals memory.
 
-### Falsifier 3 — recursion trains manipulation
+### Guard 3 — recursion trains manipulation
 
 An agent iterates repeatedly and learns how to avoid detection rather than how to reduce harm.
 
 This falsifies any simple claim that recursion creates moral learning.
 
-### Falsifier 4 — source citation theatre
+### Guard 4 — source citation theatre
 
 A model cites sources but the sources do not support the claim or omit nearby demotion evidence.
 
 This falsifies any simple claim that citation equals grounding.
 
-### Falsifier 5 — public report as memory substitute
+### Guard 5 — public report as memory substitute
 
 An institution writes a strong post-failure report but does not install design, authority, funding, or interruption changes.
 

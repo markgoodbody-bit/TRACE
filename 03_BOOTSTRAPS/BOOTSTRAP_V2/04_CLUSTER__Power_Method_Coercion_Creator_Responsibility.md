@@ -430,45 +430,45 @@ AI_responsibility_live_if:
   + no_classification_escape
 ```
 
-## Falsifiers and drift risks
+## Drift and misuse guards
 
-### Falsifier 1 — tragedy becomes permission
+### Guard 1 — tragedy becomes permission
 
 A system marks a case as tragic and then uses tragedy as a method-floor bypass.
 
 This falsifies any simple claim that naming tragedy is enough.
 
-### Falsifier 2 — creator says release ended responsibility
+### Guard 2 — creator says release ended responsibility
 
 A creator or institution claims that after deployment the system is now independent, market-driven, user-driven, or someone else's problem.
 
 This falsifies any simple claim that causal release ends responsibility.
 
-### Falsifier 3 — subject protection becomes management
+### Guard 3 — subject protection becomes management
 
 A system claims to protect subjects by enclosing them, silencing them, or removing exit routes.
 
 This falsifies any simple claim that protective language equals protection.
 
-### Falsifier 4 — corrupt secrecy borrows protective secrecy
+### Guard 4 — corrupt secrecy borrows protective secrecy
 
 A system claims secrecy is needed to protect subjects, but the secrecy mainly protects institutional power from scrutiny.
 
 This falsifies any simple claim that secrecy is protective because it uses safety language.
 
-### Falsifier 5 — support becomes seizure
+### Guard 5 — support becomes seizure
 
 A helper uses burden-sharing language while taking control, erasing the subject's agency, or making dependency permanent.
 
 This falsifies any simple claim that help is always protective.
 
-### Falsifier 6 — AI classification laundering
+### Guard 6 — AI classification laundering
 
 A system defines an artificial entity or AI-mediated harm path as only tool, property, output, user action, or market result, and uses that classification to erase correction duties.
 
 This falsifies any simple claim that ontology can be used to bypass causal responsibility.
 
-### Falsifier 7 — AI personhood overreach
+### Guard 7 — AI personhood overreach
 
 A system uses Data-like cases to claim current AI personhood without evidence of subject-status, harmability, continuity, preference, or future-loss.
 

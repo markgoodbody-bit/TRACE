@@ -642,6 +642,52 @@ reader_position_failure :=
 
 ---
 
+# True inward falsifier requirement
+
+Status: open requirement / not yet satisfied.
+
+The cluster sections previously titled "Falsifiers and drift risks" have been renamed to "Drift and misuse guards." Most of those items guard against misreading or misuse. They knock down simple or naive claims that TRACE already disclaims. They do not falsify the TRACE operator itself.
+
+A drift/misuse guard is not a falsifier.
+
+Each cluster still needs at least one true inward falsifier.
+
+```trace
+true_inward_falsifier :=
+  a_stated_condition
+  under_which:
+    the_cluster_TRACE_operator
+    is_wrong
+    OR redundant
+    OR worse_than_ordinary_expert_reasoning
+```
+
+Until each cluster carries at least one true inward falsifier, the pack's claim to falsification discipline is not earned. Do not mark this resolved by renaming alone.
+
+---
+
+# Worked navigational comparison (TODO placeholder)
+
+Status: not built / placeholder only.
+
+Bootstrap V2 has no worked case showing that a TRACE-move pass catches something earlier or better than an ordinary careful or expert pass.
+
+Required later. Do not overbuild now.
+
+```trace
+worked_comparison :=
+  one_case
+  + ordinary_or_expert_pass
+  + TRACE_move_pass
+  + explicit_delta
+    (what_TRACE_caught_earlier
+     OR what_TRACE_missed)
+```
+
+One honest worked comparison is worth more than additional carriers. Until it exists, the navigational-delta claim remains unproven.
+
+---
+
 # Patch priorities now
 
 ## Priority 1 — Reader-empathy pass across all clusters

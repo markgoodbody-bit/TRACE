@@ -285,33 +285,33 @@ action_valid_if:
   + repair_path_preserved
 ```
 
-## Falsifiers and drift risks
+## Drift and misuse guards
 
-### Falsifier 1 — uncertainty as paralysis
+### Guard 1 — uncertainty as paralysis
 
 A system claims uncertainty means no action can ever be taken, even when inaction itself creates irreversible harm.
 
 This falsifies any simple rule that uncertainty always blocks action.
 
-### Falsifier 2 — emergency as permission
+### Guard 2 — emergency as permission
 
 A system defines emergency or tragedy so broadly that all forbidden methods become available.
 
 This falsifies any simple rule that dirty branches suspend the method floor.
 
-### Falsifier 3 — reasonable doubt as theatre
+### Guard 3 — reasonable doubt as theatre
 
 A system uses the language of doubt but does not let doubt alter the decision path.
 
 This falsifies any simple claim that naming uncertainty is enough.
 
-### Falsifier 4 — evidence ritual without record quality
+### Guard 4 — evidence ritual without record quality
 
 A system presents a large evidence bundle that is chaotic, unreadable, misleading, or impossible to process before the decision deadline.
 
 This falsifies any simple claim that more record equals better record.
 
-### Falsifier 5 — post-hoc correction as success
+### Guard 5 — post-hoc correction as success
 
 A system points to later correction while ignoring that the irreversible or hardening harm already landed.
 

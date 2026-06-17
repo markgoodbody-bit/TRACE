@@ -472,39 +472,39 @@ future_carrier_corrupt_if:
   + excluded_subjects_hidden
 ```
 
-## Falsifiers and drift risks
+## Drift and misuse guards
 
-### Falsifier 1 — manufactured hope
+### Guard 1 — manufactured hope
 
 A system produces hopeful language to keep subjects compliant while no repair path exists.
 
 This falsifies any simple claim that hope signals are good.
 
-### Falsifier 2 — future funded by present destruction
+### Guard 2 — future funded by present destruction
 
 A system claims to invest in the future while destroying present subjects as fuel.
 
 This falsifies any simple claim that future-space language justifies current sacrifice.
 
-### Falsifier 3 — infinite options, no action
+### Guard 3 — infinite options, no action
 
 A system preserves theoretical options but makes no concrete path usable.
 
 This falsifies any simple claim that more options always means more freedom.
 
-### Falsifier 4 — elite future substituted for subject future
+### Guard 4 — elite future substituted for subject future
 
 A system preserves the future of the institution, elite group, platform, model, state, or species abstraction while destroying the future-space of actual affected subjects.
 
 This falsifies any simple claim that continuation equals justice.
 
-### Falsifier 5 — despair pathologised without checking gates
+### Guard 5 — despair pathologised without checking gates
 
 A system treats despair as irrational while ignoring that the subject's routes are actually blocked.
 
 This falsifies any simple claim that optimism is the ethical response.
 
-### Falsifier 6 — route exists but subject cannot use it
+### Guard 6 — route exists but subject cannot use it
 
 A system points to an apparent path while ignoring cost, disability, status, language, violence, medicine, time, or coercion.
 

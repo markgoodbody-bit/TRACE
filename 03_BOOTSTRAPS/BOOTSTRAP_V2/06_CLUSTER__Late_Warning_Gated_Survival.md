@@ -106,6 +106,18 @@ The film shows a global survival architecture built before ordinary people can m
 
 ### K-gate reading
 
+K-gate terms (used throughout this cluster):
+
+```trace
+K_gate_terms :=
+  W := witness / detection
+  + R := record
+  + A := authority / access to act
+  + Tm := time before hardening
+  + E := enforcement / execution carrier
+  + Rp := repair capacity
+```
+
 For the inner planning system:
 
 ```trace
@@ -522,39 +534,39 @@ The time to preserve legitimacy is before survival becomes gated.
 
 If the gate is already predatory, the work becomes protected exit.
 
-## Falsifiers and drift risks
+## Drift and misuse guards
 
-### Falsifier 1 — impossible capacity
+### Guard 1 — impossible capacity
 
 If no system could plausibly save more people, judging the gate only by exclusion may be unfair.
 
 Correction: separate unavoidable scarcity from corrupt selection.
 
-### Falsifier 2 — total publicity causes panic
+### Guard 2 — total publicity causes panic
 
 Full transparency at the wrong time may increase deaths.
 
 Correction: honesty does not always mean broadcasting everything instantly. It means signal corruption must be minimised and affected people must not be reduced to scenery.
 
-### Falsifier 3 — survival gate becomes sacred
+### Guard 3 — survival gate becomes sacred
 
 A system may claim that because the gate preserves the future, all gatekeeping choices are justified.
 
 Correction: future carrier does not erase legitimacy burden.
 
-### Falsifier 4 — fictional disaster overfit
+### Guard 4 — fictional disaster overfit
 
 Comets and cinematic arks may distort real-world slower risks.
 
 Correction: use these films as pressure diagrams, not predictions.
 
-### Falsifier 5 — all secrecy treated as corrupt
+### Guard 5 — all secrecy treated as corrupt
 
 A system may treat protective secrecy and corrupt secrecy as the same.
 
 Correction: secrecy must be judged by what it protects, who it exposes, whether accountability is preserved, and whether it prevents or enables irreversible harm.
 
-### Falsifier 6 — all exit treated as legitimacy
+### Guard 6 — all exit treated as legitimacy
 
 A system may romanticise exit routes and ignore risks, coercion, exploitation, or abandonment inside the route.
 

@@ -7,6 +7,20 @@ Status: live relay-facing bootstrap surface / not canon / not validation
 
 Bootstrap V2 uses familiar stories, historical echoes, and source translation to make TRACE patterns recognisable without requiring the reader to accept a full theory first.
 
+## Notation legend
+
+The `trace` blocks in this pack use a small, fixed set of symbols. They are working shorthand, not a formal logic.
+
+```trace
+:=  means working definition
++   means required component / conjunction
+->  means causal or process transition
+!=  means not equivalent
+-   means removed / absent / negated component
+```
+
+A `trace` block never proves a claim. It compresses a claim already stated in plain English above it.
+
 ## Core movement
 
 TRACE is trained movement under pressure.
@@ -91,9 +105,9 @@ boundary := Data_analogy != current_AI_personhood_proof
 
 This rule applies to every carrier: Data, Samwise, Memento, EEAAO, Children of Men, Apollo 13, Harriet Tubman, 12 Angry Men, 2012, Greenland, Frankenstein, and any future case.
 
-## Current operator deltas to preserve
+## Candidate operator deltas (held)
 
-The following operators should be preserved while patching existing cluster files. Do not create a new file for them unless the 10-file pack is later consolidated.
+The following are candidate operator deltas held for review. They are not accepted operators. Do not integrate them into cluster files, and do not present them as part of the active TRACE operator set, until they are explicitly accepted. Do not create a new file for them.
 
 ```trace
 captured_voice :=
@@ -148,7 +162,7 @@ risk :=
   + pain_becomes_brand
 ```
 
-These are patch candidates, not proof claims. The immediate patch priority is to integrate captured voice, metric capture, and rehabilitation without victim capture. Sincerity under spectacle should remain a drift warning unless it proves necessary inside a cluster.
+These are held patch candidates, not proof claims and not accepted operators. They must not be integrated into clusters until explicitly accepted. Their proposed routing (captured voice, metric capture, and rehabilitation without victim capture into existing clusters) is a proposal only. Sincerity under spectacle should remain a drift warning unless it proves necessary inside a cluster.
 
 ## The 98 percent rule
 

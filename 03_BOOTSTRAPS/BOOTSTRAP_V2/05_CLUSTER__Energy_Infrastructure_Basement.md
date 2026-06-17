@@ -522,39 +522,39 @@ survival_gate :=
   + future_carrier
 ```
 
-## Falsifiers and drift risks
+## Drift and misuse guards
 
-### Falsifier 1 — all energy use becomes tragedy
+### Guard 1 — all energy use becomes tragedy
 
 A system treats all energy cost as ethical failure and therefore cannot distinguish ordinary maintenance from predatory extraction.
 
 This falsifies any simple anti-energy reading.
 
-### Falsifier 2 — efficient because excluded
+### Guard 2 — efficient because excluded
 
 A system appears efficient because its model excludes ecological, labour, jurisdictional, bodily, disability, or future repair costs.
 
 This falsifies any simple metric of efficiency.
 
-### Falsifier 3 — safety theatre
+### Guard 3 — safety theatre
 
 A system displays safety infrastructure while the actual correction channel is slow, captured, underfunded, or unable to bite.
 
 This falsifies any simple claim that visible safety apparatus equals safety.
 
-### Falsifier 4 — infrastructure worship
+### Guard 4 — infrastructure worship
 
 A system treats infrastructure as inherently good because it is impressive, large, technical, modern, or efficient.
 
 This falsifies any simple pro-infrastructure reading.
 
-### Falsifier 5 — route romanticism
+### Guard 5 — route romanticism
 
 A system treats exit routes as automatically liberating while ignoring exploitation, death risk, coercion, medical dependency, legal limbo, or abandonment inside the route.
 
 This falsifies any simple exit-as-solution reading.
 
-### Falsifier 6 — compute abstraction
+### Guard 6 — compute abstraction
 
 A system treats AI as immaterial cognition and ignores energy, water, chips, labour, cooling, geography, security, and capital concentration.
 
