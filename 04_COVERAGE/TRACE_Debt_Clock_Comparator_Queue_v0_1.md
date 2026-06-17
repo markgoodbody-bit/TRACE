@@ -425,6 +425,78 @@ demote_Debt_Clock_if :=
   scarcity_hardship_framework_explains_agency_window_closure_better
 ```
 
+## Comparator Lane 8 — Insolvency / Automatic Stay / Relief Against Forfeiture
+
+### What this comparator already explains
+
+Insolvency, bankruptcy, automatic-stay, moratorium, and relief-against-forfeiture doctrines already address:
+
+- stopping or pausing enforcement;
+- preventing creditor race dynamics;
+- preserving estate or household stability;
+- giving a debtor breathing space;
+- restructuring obligations;
+- preventing disproportionate forfeiture;
+- relief before irreversible asset or tenancy loss;
+- court-supervised pause or reversal mechanisms.
+
+### What TRACE / Debt Clock might add
+
+TRACE may add a generalized timing diagnostic across non-insolvency systems:
+
+```trace
+automatic_stay_analogue_missing :=
+  debt_or_recovery_pressure
+  + no_pause_during_dispute
+  + correction_slower_than_hardening
+```
+
+Possible remainder:
+
+Automatic stay and relief-against-forfeiture mechanisms may already be the closest existing legal form of correction-before-hardening. Debt Clock may add only if it can show a useful translation across administrative, welfare, algorithmic, or informal debt-pressure systems where no automatic stay analogue exists.
+
+### What would show TRACE adds nothing
+
+Demote if insolvency / automatic stay / relief-against-forfeiture concepts already provide the cleaner frame for:
+
+- stopping enforcement before correction;
+- pausing compounding burden;
+- preserving subject option-space;
+- reversing or preventing forfeiture;
+- distinguishing lawful recovery from excessive hardening.
+
+### Evidence needed for comparator run
+
+- availability of stay, moratorium, injunction, suspension, or relief mechanism;
+- trigger conditions;
+- whether pause is automatic or discretionary;
+- speed and cost of obtaining relief;
+- whether penalties, interest, credit damage, or enforcement continue;
+- subject access barriers;
+- whether relief restores the lost option-space or merely compensates late.
+
+### Demoter / removal condition
+
+```trace
+demote_Debt_Clock_if :=
+  automatic_stay_or_relief_against_forfeiture
+  already_provides_correction_before_hardening
+  with_less_distortion
+```
+
+### Effect on held neighbouring candidates
+
+This lane also pressures:
+
+```trace
+held_candidates_pressured :=
+  interest_as_hardening
+  + credit_scar
+  + repair_outbid_by_extraction
+```
+
+If existing stay, moratorium, interest-cap, or forfeiture-relief doctrines already capture those clocks better, narrow or demote the TRACE candidates.
+
 ## First source-backed comparator run candidate
 
 Recommended first run:
@@ -436,11 +508,12 @@ first_run_candidate :=
     administrative_review
     + administrative_burden
     + poverty_law
+    + insolvency_automatic_stay_or_relief_analogue
 ```
 
 Reason:
 
-The repo already has a source-backed Robodebt dry run. That makes it efficient to test whether `debt_clock` adds anything beyond existing administrative review, administrative burden, and poverty-law frames.
+The repo already has a source-backed Robodebt dry run. That makes it efficient to test whether `debt_clock` adds anything beyond existing administrative review, administrative burden, poverty-law frames, and the closest stop-the-clock legal analogue.
 
 Do not treat this as validation.
 
