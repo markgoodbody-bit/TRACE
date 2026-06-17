@@ -323,6 +323,29 @@ Cluster pressure:
 
 Boundary: *The Truman Show* does not prove ordinary relationships are fake. It pressures the boundary between relation and managed environment when exit and informed consent are missing.
 
+## Historical echo candidates for coverage probes
+
+These echoes are not full source claims yet. They are candidate bridges for later audit, source anchoring, and possible cluster promotion.
+
+```trace
+historical_echo_candidate_valid_if:
+  repeats_failure_shape
+  + has_source_path
+  + pressures_existing_cluster
+  + does_not_flatten_history_into_story
+```
+
+- **The Matrix** -> propaganda states, captive information ecologies, company towns, forced labour systems, platform attention capture, and institutional environments where the subject's available reality is routed by power.
+- **Ex Machina** -> human-subject research scandals, captive testing environments, coercive institutional interviews, intelligence interrogations, and experimental settings where the observer also becomes part of the experiment.
+- **2001 / HAL** -> automation accidents, classified mission governance, cockpit/flight-deck dependency, nuclear command-and-control secrecy, and high-reliability systems where hidden objectives or withheld information degrade trust.
+- **Jurassic Park** -> industrial disasters, biosafety/containment failures, complex system accidents, offshore drilling failures, nuclear accidents, and commercial systems that mistake control documentation for control reality.
+- **Minority Report** -> predictive policing, risk assessment tools, no-fly lists, preventive detention, pre-crime surveillance logic, and administrative systems that convert statistical suspicion into life restriction.
+- **Blade Runner** -> slavery, colonial labour extraction, indenture, forced migration, factory labour dehumanisation, and modern supply-chain systems where bodies are treated as replaceable infrastructure.
+- **Gattaca** -> eugenics, racial science, actuarial sorting, genetic discrimination, insurance risk classification, disability exclusion, and exam/credential systems that make a score look like destiny.
+- **The Truman Show** -> surveillance capitalism, reality television, institutional confinement, cult/social-world enclosure, coercive family systems, and workplaces/platforms that convert a life into managed content.
+
+Boundary: these are bridges, not equations. A historical echo must not be used to make the story look profound while simplifying the history.
+
 Hold rule: these carriers should not be promoted into full cluster sections until the worked navigational comparison or true inward falsifier pass has been completed.
 
 ## Why this folder exists
@@ -405,5 +428,5 @@ Use this folder as the live bootstrap relay surface. Later, only stable compress
 3. Demote any cluster that becomes metaphor rather than navigation.
 4. Patch any section that assumes specialist/fandom knowledge without orientation.
 5. Keep captured voice, metric capture, and rehabilitation without victim capture as held candidate deltas; do not integrate them into clusters until explicitly accepted.
-6. Test candidate coverage probes before promotion, especially Matrix / Ex Machina / 2001 / Jurassic Park / Minority Report / Blade Runner / Gattaca / The Truman Show.
+6. Test candidate coverage probes and historical echoes before promotion.
 7. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.
