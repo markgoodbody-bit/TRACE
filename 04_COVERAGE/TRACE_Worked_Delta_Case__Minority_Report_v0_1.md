@@ -1,7 +1,19 @@
 # TRACE Worked Delta Case — Minority Report v0.1
 
 Date: 2026-06-17
-Status: worked comparison draft / not validation / not source-complete
+Status: worked-delta protocol / comparator not yet executed / verdict deferred / not validation / not source-complete
+
+## Status banner
+
+This is not yet a demonstrated TRACE delta. It is a protocol for testing whether a TRACE delta survives comparison with ordinary due-process, administrative-law, open-future, anticipatory-harm, and algorithmic-accountability analysis.
+
+```trace
+status :=
+  worked_delta_protocol
+  + comparator_not_executed
+  + verdict_deferred
+  - demonstrated_delta
+```
 
 ## Plain purpose
 
@@ -60,6 +72,23 @@ ordinary_pass :=
 ```
 
 This ordinary pass is strong. TRACE does not own these concerns.
+
+## Comparator sources to run later
+
+The falsifier must be run against actual comparator material, not a self-written ordinary pass.
+
+Named comparator families:
+
+```trace
+comparator_sources_needed :=
+  due_process_and_administrative_law
+  + algorithmic_accountability
+  + right_to_an_open_future
+  + anticipatory_harm_analysis
+  + scored_society_or_risk_scoring_analysis
+```
+
+Plain version: the TRACE delta is only real if it survives serious comparison with the strongest existing work on prediction, preemption, scoring, procedural fairness, and future-oriented harm.
 
 ## TRACE pass
 
@@ -246,6 +275,8 @@ This case creates a direct falsifier for the claimed TRACE delta.
 ```trace
 Minority_Report_TRACE_delta_falsified_if:
   ordinary_due_process_or_admin_law_analysis
+  + open_future_or_anticipatory_harm_analysis
+  + algorithmic_accountability_analysis
   already_captures:
     prediction_as_authority_gate
     + contestability_clock
@@ -310,10 +341,11 @@ provisional_result :=
     ordinary_legal_analysis_already_strong
     + source_specificity_needed
     + prevention_boundary_needed
+    + comparator_not_yet_run
 ```
 
 Plain version:
 
 *Minority Report* is useful because it isolates the moment prediction becomes authority. The honest TRACE delta is the timing-and-future-space compression: a forecast becomes dangerous when it closes a person's possible next path before they can know, contest, or change the basis of action.
 
-That claim remains provisional until compared against ordinary due-process, administrative-law, and algorithmic-accountability analysis.
+That claim remains provisional until compared against ordinary due-process, administrative-law, open-future, anticipatory-harm, and algorithmic-accountability analysis.
