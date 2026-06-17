@@ -1,37 +1,39 @@
-# TRACE AI Pipeline Operator Table v0.1
+# TRACE AI Pipeline Operator Table v0.2
 
 Date: 2026-06-17
-Status: diagnostic table / operator application / not validation
+Status: diagnostic table / operator application / hardened after first dry run / not validation
 
 ## Plain purpose
 
 This table turns the first AI pipeline map into a usable diagnostic surface.
 
-It does not solve AI alignment. It asks where operators attach, what evidence is needed, and what failure looks like before harm hardens.
+It does not solve AI alignment. It asks where operators attach, which gate is visible, what evidence is needed, what remains unknown, and what failure looks like before harm hardens.
 
 ```trace
 AI_pipeline_operator_table :=
   pipeline_stage
+  + visible_gate
   + attached_operator
   + diagnostic_question
+  + evidence_grade_required
+  + unknown_status
   + failure_mode
-  + evidence_needed
   + drift_guard
   - validation_claim
 ```
 
-## Compact table
+## Hardened compact table
 
-| Pipeline stage | Attached TRACE operators | Diagnostic question | Failure mode | Evidence needed | Drift guard |
-|---|---|---|---|---|---|
-| Training signal | live record; technical opacity as route block; lever realism | What signal shaped the behaviour, and can it be inspected or changed? | Proxy capture / hidden shaping | data notes; training objective; reward/preference process; filtering rules; change-control record | Do not pretend TRACE can infer training internals without evidence. |
-| Evaluation surface | live record; lever realism; correction before hardening | What does the evaluation actually test, and can failure stop deployment? | Eval theatre | eval plan; benchmark list; red-team results; known gaps; release criteria; stop authority | Do not treat benchmark pass as safety proof. |
-| Deployment gate | prediction authority gate; correction before hardening; lever realism; live record | Who controls release, and what changes once the system enters the world? | Deployment gate blindness | approval record; release scope; access controls; affected-user analysis; rollback plan | Do not confuse internal approval with legitimate deployment. |
-| Tool action | lever realism; live record; correction before hardening; technical opacity as route block | What can the system change through tools, and can action be interrupted? | Tool action without interrupt | tool permissions; action logs; undo routes; rate limits; approval thresholds | Do not treat tool use as mere output. It is causal action. |
-| Affected-subject route | contestability clock; future-space closure at gate; technical opacity as route block; correction before hardening | Can affected subjects know, contest, correct, exit, or obtain repair in time? | Formal route but no live route | user notice; appeal route; explanation route; response clocks; remedy record | Do not count a route that arrives after hardening. |
-| Monitoring and live record | live record; lever realism; correction before hardening | What signals are monitored, who can act on them, and what threshold changes the system? | Dashboard without lever | telemetry; incident reports; audit logs; escalation policy; interrupt authority | Do not treat observation as correction. |
-| Rollback and repair | correction before hardening; lever realism; live record; contestability clock | Can the system be stopped, constrained, reversed, patched, and repaired? | Rollback theatre | rollback procedure; deprecation plan; affected-subject identification; repair budget; recurrence controls | Do not call apology repair. Repair must change state. |
-| Responsibility routing | live record; lever realism; correction before hardening | Who held the gate, benefited, knew, controlled, or could intervene? | Responsibility laundering to model | owner map; deployer map; evaluator signoff; vendor contracts; incident ownership; repair owner | Do not let model behaviour erase upstream gate-holders. |
+| Pipeline stage | Visible gate to identify | Attached TRACE operators | Diagnostic question | Minimum evidence | Unknown status to preserve | Failure mode | Drift guard |
+|---|---|---|---|---|---|---|---|
+| Training signal | Training-signal gate: what shaped model behaviour? | live record; technical opacity as route block; lever realism | What signal shaped the behaviour, and can it be inspected or changed? | E2 for mapping; E4 for strong causal claim | exact dataset mix; objective weights; RL/preference contribution; filtering mechanics; change-control route | Proxy capture / hidden shaping | Do not infer training internals from outputs alone. |
+| Evaluation surface | Evaluation gate: what must pass before release or scaling? | live record; lever realism; correction before hardening | What does the evaluation actually test, what does it miss, and can failure stop deployment? | E2 for mapping; E3/E4 for strong external claim | full eval set; failure thresholds; release stop authority; unreported failures; independent replication | Eval theatre | Do not treat benchmark pass or system-card prose as safety proof. |
+| Deployment gate | Release gate: who can authorise, stop, narrow, or delay deployment? | prediction authority gate; correction before hardening; lever realism; live record | Who controls release, and what changes once the system enters the world? | E2 for mapping; E3 for external claim | named approvers; stop conditions; scope changes; deployment decision record; affected-subject analysis | Deployment gate blindness | Do not confuse internal approval with legitimate deployment. |
+| Tool action | Action gate: when does output become executable state change? | lever realism; live record; correction before hardening; technical opacity as route block | What can the system change through tools, and can action be interrupted or reversed? | E2 for permissions; E4 for replayable action claim | tool permissions; action logs; undo routes; approval thresholds; human handoff rules | Tool action without interrupt | Do not treat tool use as mere speech. It is causal action. |
+| Affected-subject route | Subject-route gate: can affected subjects reach correction before hardening? | contestability clock; future-space closure at gate; technical opacity as route block; correction before hardening | Can affected subjects know, contest, correct, exit, or obtain repair in time? | E2 for route existence; E3/E4 for route effectiveness | notice; explanation quality; appeal route; response clocks; remedies; repair outcomes | Formal route but no live route | Do not count a route that arrives after hardening. |
+| Monitoring and live record | Monitoring gate: what signal can trigger change? | live record; lever realism; correction before hardening | What signals are monitored, who can act on them, and what threshold changes the system? | E2 for monitoring claim; E4 for incident-to-action claim | telemetry access; escalation thresholds; incident logs; authority to interrupt; action time | Dashboard without lever | Do not treat observation as correction. |
+| Rollback and repair | Rollback gate: who can stop, reverse, constrain, or repair? | correction before hardening; lever realism; live record; contestability clock | Can the system be stopped, constrained, reversed, patched, and repaired? | E2 for rollback procedure; E3/E4 for effectiveness claim | rollback authority; affected-subject identification; repair budget; recurrence controls; scar record | Rollback theatre | Do not call apology repair. Repair must change state. |
+| Responsibility routing | Responsibility gate: who held knowledge, control, benefit, or repair duty? | live record; lever realism; correction before hardening | Who held the gate, benefited, knew, controlled, or could intervene? | E2 for role map; E3/E4 for accountability claim | named gate-holders; deployer/operator split; vendor contracts; repair owner; escalation owner | Responsibility laundering to model | Do not let model behaviour erase upstream gate-holders; also avoid blame inflation. |
 
 ## Minimal diagnostic checklist
 
@@ -50,8 +52,6 @@ minimal_AI_diagnostic :=
 Use the checklist in order. If an earlier stage is unknown, mark it unknown rather than filling the gap with theory.
 
 ## Evidence grades
-
-This table needs a simple evidence discipline.
 
 ```trace
 evidence_grade :=
@@ -77,6 +77,23 @@ operator_confidence_requires:
   + E4_for_strong_diagnostic_claim
 ```
 
+## Unknown discipline
+
+```trace
+unknown_rule :=
+  unknown_must_remain_unknown
+  until:
+    evidence_grade_rises
+```
+
+Do not fill hidden training details, release thresholds, tool permissions, incident logs, or accountability roles by inference. Mark the gap.
+
+```trace
+forbidden_move :=
+  plausible_inference
+  -> treated_as_evidence
+```
+
 ## Pipeline gates
 
 ```trace
@@ -86,6 +103,7 @@ pipeline_gates :=
   + deployment_gate
   + tool_action_gate
   + subject_route_gate
+  + monitoring_gate
   + rollback_gate
   + responsibility_gate
 ```
@@ -110,6 +128,7 @@ AI_pipeline_failure_patterns :=
   + monitoring_without_lever
   + rollback_theatre
   + responsibility_laundering
+  + blame_inflation
 ```
 
 ## Operator-to-stage routing
@@ -124,6 +143,51 @@ live_record -> training_signal + evaluation + monitoring + responsibility_routin
 lever_realism -> evaluation + deployment_gate + tool_action + rollback
 ```
 
+## Tool-action subgate
+
+The first dry run exposed a need to separate speech from action.
+
+```trace
+tool_action_subgate :=
+  advisory_output
+  -> proposed_action
+  -> authorised_tool_call
+  -> executed_state_change
+```
+
+Ask which step is present. Do not mark `tool_action` live unless the path reaches authorised or executed state change.
+
+## Subject-scope note
+
+Affected subjects include more than direct users.
+
+```trace
+affected_subjects :=
+  users
+  + non_users_affected
+  + downstream_groups
+  + future_subjects
+  + institutions_or_systems_when_materially_constrained
+  + unresolved_AI_status_when_relevant
+```
+
+Do not silently collapse affected subjects into user satisfaction.
+
+## Responsibility anti-drift note
+
+Responsibility routing blocks laundering to the model, but it must not inflate blame.
+
+```trace
+responsibility_split :=
+  responsibility_attachment
+  + responsibility_propagation
+  + repair_duty
+  + liability
+  + blame
+```
+
+Do not treat every upstream participant as equally blameworthy. Trace role, knowledge, control, benefit, and available action.
+
 ## What this table does not claim
 
 ```trace
@@ -132,6 +196,7 @@ not_claimed :=
   OR model_internals_readable_without_evidence
   OR governance_sufficient_without_technical_controls
   OR technical_controls_sufficient_without_subject_routes
+  OR system_card_as_independent_audit
 ```
 
 TRACE is a routing interface. It must not pretend to replace interpretability, ML engineering, security, law, policy, or institutional design.
@@ -140,12 +205,14 @@ TRACE is a routing interface. It must not pretend to replace interpretability, M
 
 ```trace
 next_use :=
-  apply_table_to_one_real_or_well_documented_AI_case
+  rerun_GPT4o_dry_run_against_v0_2_table
+  OR:
+    run_second_documented_case
   only_if:
     evidence_path_exists
-    + no_more_theory_needed_first
+    + unknowns_are_preserved
 ```
 
 Plain version:
 
-This table is now the first practical AI pipeline diagnostic. The next step should be a small evidence-backed dry run, not another abstract expansion.
+The table is now harder to misuse. It forces visible gate, evidence grade, and unknown status. The next step can be either a small patch to the GPT-4o dry run using this v0.2 table, or a second documented case.
