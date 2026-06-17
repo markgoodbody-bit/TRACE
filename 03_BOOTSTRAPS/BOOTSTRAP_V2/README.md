@@ -201,6 +201,128 @@ Cluster pressure:
 
 Boundary: HAL should not be flattened into "evil AI." The useful pattern is conflicting instruction and opaque mission governance under high dependency.
 
+### Jurassic Park
+
+Reader orientation: *Jurassic Park* is a story about engineered living systems placed inside a commercial containment architecture that mistakes control over gates, fences, code, and branding for control over life.
+
+TRACE pressure:
+
+```trace
+Jurassic_Park_probe :=
+  complex_life_system
+  + control_theatre
+  + commercial_pressure
+  + infrastructure_dependency
+  + creator_confidence
+  -> containment_failure
+```
+
+Cluster pressure:
+
+- Cluster 04 — creator responsibility and commercial method pressure;
+- Cluster 05 — infrastructure, gates, maintenance, hidden basements;
+- Cluster 03 — uncertainty and irreversible harm from living-system escape;
+- Cluster 06 — survival routing when containment fails.
+
+Boundary: *Jurassic Park* does not prove science, engineering, or biotechnology are illegitimate. It pressures control claims made faster than monitoring, humility, and correction can bear.
+
+### Minority Report
+
+Reader orientation: *Minority Report* is a story about predictive policing in which future crime forecasts become authority to punish before the act occurs.
+
+TRACE pressure:
+
+```trace
+Minority_Report_probe :=
+  prediction_as_authority
+  + preemptive_closure
+  + dissenting_signal_suppressed
+  + person_reduced_to_predicted_path
+  -> future_space_confiscated
+```
+
+Cluster pressure:
+
+- Cluster 03 — judgment under uncertainty and irreversible preemption;
+- Cluster 04 — authority laundering through prediction;
+- Cluster 01 — record and forecast treated as reality;
+- Cluster 02 — future-space closed by predicted identity.
+
+Boundary: *Minority Report* does not prove all prediction is coercive. It pressures systems where prediction removes contestability before harm has occurred.
+
+### Blade Runner
+
+Reader orientation: *Blade Runner* is a story about manufactured beings whose memories, labour, bodies, and lifespans are engineered and controlled by institutions that treat them as property.
+
+TRACE pressure:
+
+```trace
+Blade_Runner_probe :=
+  manufactured_subject
+  + implanted_memory
+  + labour_instrumentalisation
+  + shortened_future_space
+  + property_classification
+  -> standing_pressure
+```
+
+Cluster pressure:
+
+- Cluster 01 — memory, identity, implanted record;
+- Cluster 02 — future-space compressed by designed lifespan;
+- Cluster 04 — property classification and artificial subjecthood pressure;
+- Cluster 05 — labour/body as infrastructure.
+
+Boundary: *Blade Runner* does not prove current AI personhood. It pressures the moral danger of treating made beings as disposable because they were made.
+
+### Gattaca
+
+Reader orientation: *Gattaca* is a story about a society where genetic information becomes a sorting and exclusion mechanism that narrows people's futures before their actions can speak.
+
+TRACE pressure:
+
+```trace
+Gattaca_probe :=
+  biological_metric
+  + preemptive_sorting
+  + future_space_closed_by_profile
+  + formal_merit_theatre
+  -> person_reduced_to_score
+```
+
+Cluster pressure:
+
+- Cluster 02 — future-space narrowed by status profile;
+- Cluster 04 — metric authority and classification power;
+- Cluster 03 — judgment before action;
+- Cluster 01 — identity reduced to record.
+
+Boundary: *Gattaca* does not prove genetic knowledge is bad. It pressures social systems that convert probabilistic profile into destiny.
+
+### The Truman Show
+
+Reader orientation: *The Truman Show* is a story about a person whose entire social world is staged around him while his apparent choices are managed for spectacle and profit.
+
+TRACE pressure:
+
+```trace
+Truman_Show_probe :=
+  staged_reality
+  + consent_fabricated_by_environment
+  + audience_capture
+  + exit_blocked
+  + life_as_content
+```
+
+Cluster pressure:
+
+- Cluster 01 — false record and constructed identity environment;
+- Cluster 02 — future-space under managed possibility;
+- Cluster 04 — power hidden inside care, entertainment, and familiarity;
+- Cluster 05 — human life as production infrastructure.
+
+Boundary: *The Truman Show* does not prove ordinary relationships are fake. It pressures the boundary between relation and managed environment when exit and informed consent are missing.
+
 Hold rule: these carriers should not be promoted into full cluster sections until the worked navigational comparison or true inward falsifier pass has been completed.
 
 ## Why this folder exists
@@ -283,5 +405,5 @@ Use this folder as the live bootstrap relay surface. Later, only stable compress
 3. Demote any cluster that becomes metaphor rather than navigation.
 4. Patch any section that assumes specialist/fandom knowledge without orientation.
 5. Keep captured voice, metric capture, and rehabilitation without victim capture as held candidate deltas; do not integrate them into clusters until explicitly accepted.
-6. Test Matrix / Ex Machina / 2001 as candidate coverage probes before promotion.
+6. Test candidate coverage probes before promotion, especially Matrix / Ex Machina / 2001 / Jurassic Park / Minority Report / Blade Runner / Gattaca / The Truman Show.
 7. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.
