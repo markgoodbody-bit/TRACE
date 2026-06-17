@@ -42,9 +42,9 @@ Not current use: proof, validation, governance certification, a complete ethics 
 9. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
 10. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 
-## Latest continuity and method addenda
+## Latest continuity, control, and method addenda
 
-These files preserve current handoff/method insight without changing the active TRACE spine.
+These files preserve current handoff/method/control insight without changing the active TRACE spine.
 
 ```trace
 latest_addenda :=
@@ -52,6 +52,8 @@ latest_addenda :=
   + action_under_uncertainty
   + outcome_comparison_lens
   + claude_code_handoff
+  + spine_wording_drift_note
+  + Debt_Clock_comparator_queue
 
 status :=
   support_material
@@ -64,6 +66,9 @@ status :=
 - `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
 - `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+- `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
+- `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
+- `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
 
 ## Core memory rule
 
@@ -90,6 +95,29 @@ status :=
   not_Diagnostic_Kernel_v0_3
 ```
 
+## Current visible drift flag
+
+```trace
+spine_wording_drift :=
+  exit_when_correction_channel_is_harm_carrier
+  vs
+  exit_when_correction_channel_is_predatory
+```
+
+This drift is recorded in `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`.
+
+Do not harmonise silently.
+
+## Current comparator queue status
+
+```trace
+Debt_Clock_comparator_queue_exists := true
+first_Debt_Clock_comparator_run_completed := false
+Debt_Clock_promoted := false
+```
+
+The queue exists to pressure the candidate, not promote it.
+
 ## Must-not-claim rules
 
 ```trace
@@ -100,15 +128,18 @@ operator_registry != source_replacement
 front_door != payload_archive
 summary != preservation
 candidate_annex != active_spine
+comparator_queue != comparator_run
 ```
 
 ## Repository structure
 
 ```text
 00_START_HERE/          orientation, read order, import manifest, vault continuity addenda
+00_CONTROL/             anti-self-deception, control index, spine drift note
 01_CANONICAL_MEMORY/    operator registry, claims ledger, demotion protocol
 02_CURRENT_SURFACE/     public one-sheet and current Rosetta front door
 03_BOOTSTRAPS/          active bootstrap collection and source markdown
+04_COVERAGE/            comparator queues and worked delta cases
 04_KERNEL_AND_TESTS/    diagnostic kernel, preregistered test template, method notes
 05_MAPS_AND_ATLASES/    subtraction concordance, case atlas, candidate support lenses
 06_REVIEWS_AND_AUDITS/  AI review digest and falsification/drift audits
@@ -123,4 +154,4 @@ New cases should not be added as bootstraps unless they reveal, pressure-test, o
 
 Claims must be demotable. If TRACE cannot lose claims, it becomes a belief system rather than a tool.
 
-No new operators. No Kernel v0.3. The current work is subtraction, preregistration, and real pressure testing.
+No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, and real pressure testing.
