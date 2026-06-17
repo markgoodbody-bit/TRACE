@@ -74,6 +74,17 @@ Known source reservoir from the earlier bootstrap stack and live additions:
 - 2012
 - Greenland
 
+Held coverage probes now carried by this audit file, not the README front door:
+
+- Matrix
+- Ex Machina
+- 2001 / HAL
+- Jurassic Park
+- Minority Report
+- Blade Runner
+- Gattaca
+- The Truman Show
+
 ## Current V2 cluster set
 
 - Cluster 01 — Memory, Identity, Recursion
@@ -85,7 +96,7 @@ Known source reservoir from the earlier bootstrap stack and live additions:
 
 ## Main finding after patches
 
-The cluster shape is stronger. Several earlier high-priority gaps have been patched, but the files still need a reader-empathy pass and a hostile review.
+The cluster shape is stronger. Several earlier high-priority gaps have been patched, but the files still need a reader-empathy pass and hostile review.
 
 ```trace
 patched_high :=
@@ -108,6 +119,8 @@ remaining_risks :=
   + robot_rights_overclaim
   + cluster_silo_recurrence
   + middle_out_loss
+  + coverage_probe_sprawl
+  + history_flattening
 ```
 
 ---
@@ -642,6 +655,111 @@ reader_position_failure :=
 
 ---
 
+# Held coverage probes and historical echo bridges
+
+Status: held / audit material / not cluster promotion / not validation.
+
+These probes were moved here from the README because the README is the folder contract, not the carrier shelf. This section preserves the imaginative middle-out material while keeping the front door light.
+
+```trace
+coverage_probe != coverage_proof
+
+probe_promotion_requires:
+  adds_new_failure_shape
+  + pressures_existing_cluster
+  + has_boundary
+  + inward_falsifier
+  + can_break_or_demote_operator
+  - merely_confirms_TRACE
+```
+
+## Promotion candidates to test later
+
+### Minority Report
+
+Reader orientation: *Minority Report* is a story about predictive policing in which future crime forecasts become authority to punish before the act occurs.
+
+TRACE pressure:
+
+```trace
+Minority_Report_probe :=
+  prediction_as_authority
+  + preemptive_closure
+  + dissenting_signal_suppressed
+  + person_reduced_to_predicted_path
+  -> future_space_confiscated
+```
+
+Historical echo candidates: predictive policing, risk assessment tools, no-fly lists, preventive detention, pre-crime surveillance logic, and administrative systems that convert statistical suspicion into life restriction.
+
+Promotion falsifier required later: if ordinary administrative-law or due-process analysis already captures the timing, contestability, prediction, and future-space problem with equal clarity and less machinery, this probe adds no TRACE value.
+
+### Jurassic Park
+
+Reader orientation: *Jurassic Park* is a story about engineered living systems placed inside a commercial containment architecture that mistakes control over gates, fences, code, and branding for control over life.
+
+TRACE pressure:
+
+```trace
+Jurassic_Park_probe :=
+  complex_life_system
+  + control_theatre
+  + commercial_pressure
+  + infrastructure_dependency
+  + creator_confidence
+  -> containment_failure
+```
+
+Historical echo candidates: industrial disasters, biosafety and containment failures, complex system accidents, offshore drilling failures, nuclear accidents, and commercial systems that mistake control documentation for control reality.
+
+Promotion falsifier required later: if existing complex-systems / safety-engineering concepts already express control-theatre and containment failure with equal practical bite, this probe should remain a recognition aid only.
+
+### 2001: A Space Odyssey / HAL
+
+Reader orientation: *2001: A Space Odyssey* features HAL, a shipboard AI controlling mission-critical systems while humans depend on it for survival.
+
+TRACE pressure:
+
+```trace
+HAL_probe :=
+  hidden_objective_conflict
+  + mission_secrecy
+  + automation_dependency
+  + trust_breakdown
+  + shutdown_under_dependency
+```
+
+Historical echo candidates: automation accidents, classified mission governance, cockpit/flight-deck dependency, nuclear command-and-control secrecy, and high-reliability systems where hidden objectives or withheld information degrade trust.
+
+Promotion falsifier required later: if HAL collapses into generic "bad AI" or generic "automation failure" rather than hidden-objective conflict under dependency, it must not be promoted.
+
+## Held pointers / not promotion candidates yet
+
+- **The Matrix** — useful for reality capture, manufactured consent, epistemic enclosure, choice architecture, and subject-life-as-basement. Risk: too broad; can become generic suspicion-as-liberation. Historical echoes must be source-led, not film-led.
+- **Ex Machina** — retain mainly for evaluator capture and test-as-captivity. Risk: overlaps Data/Frankenstein and amplifies AI-personhood overclaim. Do not promote until assessor-capture is isolated.
+- **Blade Runner** — reduce to pointer under Data / Cluster 04. Risk: artificial-personhood overreach and history-flattening if used as doorway to slavery/colonial extraction.
+- **Gattaca** — reduce to pointer under Minority Report + metric capture. Risk: duplicates preemptive sorting and person-reduced-to-score.
+- **The Truman Show** — reduce to pointer under captured voice + sincerity under spectacle. Risk: duplicates staged reality / audience capture while making README/pack too film-heavy.
+
+## History-first rule for atrocity and identity echoes
+
+For slavery, colonial extraction, eugenics, racial science, forced labour, and disability exclusion, history must be the primary source and the film must only be a secondary recognition aid.
+
+```trace
+history_first_required_if:
+  atrocity_or_identity_harm_echo
+
+film_use_valid_only_if:
+  history_named_first
+  + source_path_exists
+  + analogy_boundary_strong
+  + no_story_flattening
+```
+
+Boundary: these are bridges, not equations. A historical echo must not be used to make the story look profound while simplifying the history.
+
+---
+
 # True inward falsifier requirement
 
 Status: open requirement / not yet satisfied.
@@ -714,14 +832,17 @@ Current file count is at 10. No new files. Consolidate if needed.
 verdict :=
   V2_structure_good
   + major_missing_links_patched
+  + candidate_probes_relocated
   but:
     reader_entry_needs_work
-    + hostile_review_needed
+    + inward_falsifiers_needed
+    + worked_delta_needed
 
 next_best_move :=
   reader_empathy_pass
+  -> true_inward_falsifiers
+  -> worked_comparison
   -> hostile_read
-  -> relay_pack
 ```
 
 Plain version:
@@ -730,6 +851,6 @@ The V2 folder has become a connected middle-out structure. The main risk has shi
 
 Earlier risk: missing links.
 
-Current risk: reader entry and over-density.
+Current risk: reader entry, over-density, and unearned promotion.
 
-The fix is now orientation, not more examples.
+The fix is now orientation, inward falsifiers, and one worked comparison — not more examples.
