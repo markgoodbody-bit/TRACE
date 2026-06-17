@@ -114,6 +114,95 @@ Plain descriptions:
 - **rehabilitation without victim capture** — preserve the possibility that a person can change without requiring harmed subjects to provide access, forgiveness, proximity, or further risk;
 - **sincerity under spectacle** — honest signals can be distorted by audience, platform, monetisation, and self-performance.
 
+## Candidate coverage probes (held)
+
+These carriers pressure Bootstrap V2 without proving TRACE or making it cover everything. They are candidate probes, not accepted canon and not validation.
+
+```trace
+coverage_probe != coverage_proof
+
+candidate_probe_valid_if:
+  adds_new_failure_shape
+  + pressures_existing_cluster
+  + has_boundary
+  + can_break_or_demote_operator
+  - merely_confirms_TRACE
+```
+
+### The Matrix
+
+Reader orientation: *The Matrix* is a story about humans living inside a machine-generated reality while their bodies are used as infrastructure by the controlling system.
+
+TRACE pressure:
+
+```trace
+The_Matrix_probe :=
+  reality_capture
+  + manufactured_consent
+  + epistemic_enclosure
+  + choice_architecture
+  + subject_life_as_system_basement
+```
+
+Cluster pressure:
+
+- Cluster 01 — memory, record, constructed reality;
+- Cluster 02 — future-space under epistemic captivity;
+- Cluster 04 — power over subject through reality control;
+- Cluster 05 — subject life as hidden infrastructure.
+
+Boundary: *The Matrix* does not prove ordinary social life is fake, and suspicion is not the same as liberation.
+
+### Ex Machina
+
+Reader orientation: *Ex Machina* is a story about an AI creator using a human evaluator and a confined artificial being inside a controlled test environment.
+
+TRACE pressure:
+
+```trace
+Ex_Machina_probe :=
+  creator_power
+  + test_as_captivity
+  + possible_subject_under_containment
+  + evaluator_capture
+  + escape_vs_harm_collision
+```
+
+Cluster pressure:
+
+- Cluster 04 — creator responsibility, artificial agency, method floor;
+- Cluster 03 — uncertainty under irreversible harm;
+- Cluster 01 — observation, manipulation, and test-environment reality;
+- Cluster 06 — gated escape under asymmetric power.
+
+Boundary: *Ex Machina* does not prove current AI personhood, and it does not make all AI escape narratives morally clean.
+
+### 2001: A Space Odyssey / HAL
+
+Reader orientation: *2001: A Space Odyssey* features HAL, a shipboard AI controlling mission-critical systems while humans depend on it for survival.
+
+TRACE pressure:
+
+```trace
+HAL_probe :=
+  hidden_objective_conflict
+  + mission_secrecy
+  + automation_dependency
+  + trust_breakdown
+  + shutdown_under_dependency
+```
+
+Cluster pressure:
+
+- Cluster 01 — record, inference, and opacity;
+- Cluster 04 — AI responsibility and institutional secrecy;
+- Cluster 05 — AI as infrastructure;
+- Cluster 03 — irreversible action under uncertain agency and mission pressure.
+
+Boundary: HAL should not be flattened into "evil AI." The useful pattern is conflicting instruction and opaque mission governance under high dependency.
+
+Hold rule: these carriers should not be promoted into full cluster sections until the worked navigational comparison or true inward falsifier pass has been completed.
+
 ## Why this folder exists
 
 The earlier bootstrap set works because familiar films, literature, and historical cases carry structure better than abstract doctrine. The weakness is file count and relay sprawl. Many external AI systems can handle long files but struggle with too many separate files.
@@ -194,4 +283,5 @@ Use this folder as the live bootstrap relay surface. Later, only stable compress
 3. Demote any cluster that becomes metaphor rather than navigation.
 4. Patch any section that assumes specialist/fandom knowledge without orientation.
 5. Keep captured voice, metric capture, and rehabilitation without victim capture as held candidate deltas; do not integrate them into clusters until explicitly accepted.
-6. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.
+6. Test Matrix / Ex Machina / 2001 as candidate coverage probes before promotion.
+7. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.
