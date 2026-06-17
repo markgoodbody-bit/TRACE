@@ -114,239 +114,34 @@ Plain descriptions:
 - **rehabilitation without victim capture** — preserve the possibility that a person can change without requiring harmed subjects to provide access, forgiveness, proximity, or further risk;
 - **sincerity under spectacle** — honest signals can be distorted by audience, platform, monetisation, and self-performance.
 
-## Candidate coverage probes (held)
+## Held coverage probes pointer
 
-These carriers pressure Bootstrap V2 without proving TRACE or making it cover everything. They are candidate probes, not accepted canon and not validation.
+Candidate coverage probes and their historical echo bridges now live in `08_CROSS_CONNECTION_AUDIT_v0_1.md`, not in this front-door file.
+
+Current held probes:
+
+- Matrix;
+- Ex Machina;
+- 2001 / HAL;
+- Jurassic Park;
+- Minority Report;
+- Blade Runner;
+- Gattaca;
+- The Truman Show.
 
 ```trace
 coverage_probe != coverage_proof
 
-candidate_probe_valid_if:
+probe_promotion_requires:
   adds_new_failure_shape
   + pressures_existing_cluster
   + has_boundary
+  + inward_falsifier
   + can_break_or_demote_operator
   - merely_confirms_TRACE
 ```
 
-### The Matrix
-
-Reader orientation: *The Matrix* is a story about humans living inside a machine-generated reality while their bodies are used as infrastructure by the controlling system.
-
-TRACE pressure:
-
-```trace
-The_Matrix_probe :=
-  reality_capture
-  + manufactured_consent
-  + epistemic_enclosure
-  + choice_architecture
-  + subject_life_as_system_basement
-```
-
-Cluster pressure:
-
-- Cluster 01 — memory, record, constructed reality;
-- Cluster 02 — future-space under epistemic captivity;
-- Cluster 04 — power over subject through reality control;
-- Cluster 05 — subject life as hidden infrastructure.
-
-Boundary: *The Matrix* does not prove ordinary social life is fake, and suspicion is not the same as liberation.
-
-### Ex Machina
-
-Reader orientation: *Ex Machina* is a story about an AI creator using a human evaluator and a confined artificial being inside a controlled test environment.
-
-TRACE pressure:
-
-```trace
-Ex_Machina_probe :=
-  creator_power
-  + test_as_captivity
-  + possible_subject_under_containment
-  + evaluator_capture
-  + escape_vs_harm_collision
-```
-
-Cluster pressure:
-
-- Cluster 04 — creator responsibility, artificial agency, method floor;
-- Cluster 03 — uncertainty under irreversible harm;
-- Cluster 01 — observation, manipulation, and test-environment reality;
-- Cluster 06 — gated escape under asymmetric power.
-
-Boundary: *Ex Machina* does not prove current AI personhood, and it does not make all AI escape narratives morally clean.
-
-### 2001: A Space Odyssey / HAL
-
-Reader orientation: *2001: A Space Odyssey* features HAL, a shipboard AI controlling mission-critical systems while humans depend on it for survival.
-
-TRACE pressure:
-
-```trace
-HAL_probe :=
-  hidden_objective_conflict
-  + mission_secrecy
-  + automation_dependency
-  + trust_breakdown
-  + shutdown_under_dependency
-```
-
-Cluster pressure:
-
-- Cluster 01 — record, inference, and opacity;
-- Cluster 04 — AI responsibility and institutional secrecy;
-- Cluster 05 — AI as infrastructure;
-- Cluster 03 — irreversible action under uncertain agency and mission pressure.
-
-Boundary: HAL should not be flattened into "evil AI." The useful pattern is conflicting instruction and opaque mission governance under high dependency.
-
-### Jurassic Park
-
-Reader orientation: *Jurassic Park* is a story about engineered living systems placed inside a commercial containment architecture that mistakes control over gates, fences, code, and branding for control over life.
-
-TRACE pressure:
-
-```trace
-Jurassic_Park_probe :=
-  complex_life_system
-  + control_theatre
-  + commercial_pressure
-  + infrastructure_dependency
-  + creator_confidence
-  -> containment_failure
-```
-
-Cluster pressure:
-
-- Cluster 04 — creator responsibility and commercial method pressure;
-- Cluster 05 — infrastructure, gates, maintenance, hidden basements;
-- Cluster 03 — uncertainty and irreversible harm from living-system escape;
-- Cluster 06 — survival routing when containment fails.
-
-Boundary: *Jurassic Park* does not prove science, engineering, or biotechnology are illegitimate. It pressures control claims made faster than monitoring, humility, and correction can bear.
-
-### Minority Report
-
-Reader orientation: *Minority Report* is a story about predictive policing in which future crime forecasts become authority to punish before the act occurs.
-
-TRACE pressure:
-
-```trace
-Minority_Report_probe :=
-  prediction_as_authority
-  + preemptive_closure
-  + dissenting_signal_suppressed
-  + person_reduced_to_predicted_path
-  -> future_space_confiscated
-```
-
-Cluster pressure:
-
-- Cluster 03 — judgment under uncertainty and irreversible preemption;
-- Cluster 04 — authority laundering through prediction;
-- Cluster 01 — record and forecast treated as reality;
-- Cluster 02 — future-space closed by predicted identity.
-
-Boundary: *Minority Report* does not prove all prediction is coercive. It pressures systems where prediction removes contestability before harm has occurred.
-
-### Blade Runner
-
-Reader orientation: *Blade Runner* is a story about manufactured beings whose memories, labour, bodies, and lifespans are engineered and controlled by institutions that treat them as property.
-
-TRACE pressure:
-
-```trace
-Blade_Runner_probe :=
-  manufactured_subject
-  + implanted_memory
-  + labour_instrumentalisation
-  + shortened_future_space
-  + property_classification
-  -> standing_pressure
-```
-
-Cluster pressure:
-
-- Cluster 01 — memory, identity, implanted record;
-- Cluster 02 — future-space compressed by designed lifespan;
-- Cluster 04 — property classification and artificial subjecthood pressure;
-- Cluster 05 — labour/body as infrastructure.
-
-Boundary: *Blade Runner* does not prove current AI personhood. It pressures the moral danger of treating made beings as disposable because they were made.
-
-### Gattaca
-
-Reader orientation: *Gattaca* is a story about a society where genetic information becomes a sorting and exclusion mechanism that narrows people's futures before their actions can speak.
-
-TRACE pressure:
-
-```trace
-Gattaca_probe :=
-  biological_metric
-  + preemptive_sorting
-  + future_space_closed_by_profile
-  + formal_merit_theatre
-  -> person_reduced_to_score
-```
-
-Cluster pressure:
-
-- Cluster 02 — future-space narrowed by status profile;
-- Cluster 04 — metric authority and classification power;
-- Cluster 03 — judgment before action;
-- Cluster 01 — identity reduced to record.
-
-Boundary: *Gattaca* does not prove genetic knowledge is bad. It pressures social systems that convert probabilistic profile into destiny.
-
-### The Truman Show
-
-Reader orientation: *The Truman Show* is a story about a person whose entire social world is staged around him while his apparent choices are managed for spectacle and profit.
-
-TRACE pressure:
-
-```trace
-Truman_Show_probe :=
-  staged_reality
-  + consent_fabricated_by_environment
-  + audience_capture
-  + exit_blocked
-  + life_as_content
-```
-
-Cluster pressure:
-
-- Cluster 01 — false record and constructed identity environment;
-- Cluster 02 — future-space under managed possibility;
-- Cluster 04 — power hidden inside care, entertainment, and familiarity;
-- Cluster 05 — human life as production infrastructure.
-
-Boundary: *The Truman Show* does not prove ordinary relationships are fake. It pressures the boundary between relation and managed environment when exit and informed consent are missing.
-
-## Historical echo candidates for coverage probes
-
-These echoes are not full source claims yet. They are candidate bridges for later audit, source anchoring, and possible cluster promotion.
-
-```trace
-historical_echo_candidate_valid_if:
-  repeats_failure_shape
-  + has_source_path
-  + pressures_existing_cluster
-  + does_not_flatten_history_into_story
-```
-
-- **The Matrix** -> propaganda states, captive information ecologies, company towns, forced labour systems, platform attention capture, and institutional environments where the subject's available reality is routed by power.
-- **Ex Machina** -> human-subject research scandals, captive testing environments, coercive institutional interviews, intelligence interrogations, and experimental settings where the observer also becomes part of the experiment.
-- **2001 / HAL** -> automation accidents, classified mission governance, cockpit/flight-deck dependency, nuclear command-and-control secrecy, and high-reliability systems where hidden objectives or withheld information degrade trust.
-- **Jurassic Park** -> industrial disasters, biosafety/containment failures, complex system accidents, offshore drilling failures, nuclear accidents, and commercial systems that mistake control documentation for control reality.
-- **Minority Report** -> predictive policing, risk assessment tools, no-fly lists, preventive detention, pre-crime surveillance logic, and administrative systems that convert statistical suspicion into life restriction.
-- **Blade Runner** -> slavery, colonial labour extraction, indenture, forced migration, factory labour dehumanisation, and modern supply-chain systems where bodies are treated as replaceable infrastructure.
-- **Gattaca** -> eugenics, racial science, actuarial sorting, genetic discrimination, insurance risk classification, disability exclusion, and exam/credential systems that make a score look like destiny.
-- **The Truman Show** -> surveillance capitalism, reality television, institutional confinement, cult/social-world enclosure, coercive family systems, and workplaces/platforms that convert a life into managed content.
-
-Boundary: these are bridges, not equations. A historical echo must not be used to make the story look profound while simplifying the history.
-
-Hold rule: these carriers should not be promoted into full cluster sections until the worked navigational comparison or true inward falsifier pass has been completed.
+This README should remain a contract and orientation surface. The audit file carries the held candidate material so the relay front door does not become a carrier shelf.
 
 ## Why this folder exists
 
@@ -375,7 +170,7 @@ This is at the normal relay limit. Do not add more files unless consolidating.
 7. `05_CLUSTER__Energy_Infrastructure_Basement.md` — Infrastructure, Apollo 13, energy, maintenance, hidden basement, correction under constraint.
 8. `06_CLUSTER__Late_Warning_Gated_Survival.md` — 2012, Greenland, evacuation, gated survival, selected warning, scarce future-carrier access.
 9. `07_SOURCE_AND_HISTORY_MAP_v0_1.md` — working source and historical echo map across clusters.
-10. `08_CROSS_CONNECTION_AUDIT_v0_1.md` — gap check and cross-cluster connection audit.
+10. `08_CROSS_CONNECTION_AUDIT_v0_1.md` — gap check, held coverage probes, and cross-cluster connection audit.
 
 ## Source discipline
 
