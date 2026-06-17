@@ -160,6 +160,46 @@ can_contestability_reach_the_gate
 before_future_space_hardens?
 ```
 
+### Open Future v0.1
+
+File: `TRACE_Open_Future_Comparator_Run_v0_1.md`
+
+Result:
+
+```trace
+Open_Future_comparator_result :=
+  broad_future_space_claim_partly_demoted
+  + gate_clock_route_operator_survives
+  + no_validation
+```
+
+Narrowed surviving operator:
+
+```trace
+future_space_closure_at_gate :=
+  prediction_or_classification
+  gains_authority
+  before:
+    affected_subject_can_know_contest_or_alter_path
+  causing:
+    available_future_paths_to_shrink
+```
+
+## Current narrowed result
+
+```trace
+current_surviving_TRACE_delta :=
+  contestability_clock
+  + future_space_closure_at_gate
+  + prediction_authority_gate_as_cross_domain_compression
+
+not_surviving_as_independent_delta :=
+  technical_opacity_as_route_block
+  + broad_future_space_claim_without_gate_clock_route
+```
+
+Plain version: TRACE's strongest live candidate is not a broad future-space theory. It is the mechanical interface between prediction/classification, authority, contestability timing, and path closure.
+
 ## Worked-delta case minimum shape
 
 ```trace
@@ -217,37 +257,35 @@ Best comparator: AI governance, incident report, official documentation, and dep
 ```trace
 stop_worked_delta_expansion_if:
   two_cases_exist
-  + one_comparator_run_exists
-  + no_new_comparator_question
+  + two_comparator_runs_exist
+  + narrowed_surviving_delta_identified
 ```
 
 Current state:
 
 ```trace
 worked_delta_cases := 2
-source_backed_comparator_runs := 1
+source_backed_comparator_runs := 2
 more_cases_now := not_recommended
 ```
 
 Plain version:
 
-There are now enough worked-delta drafts and one comparator run. More worked examples before tightening the comparator path would risk quantity replacing test pressure.
+There are now enough worked-delta drafts and comparator runs. More worked examples now would risk quantity replacing test pressure.
 
 ## Recommended next move
 
 ```trace
 next_move :=
-  either:
-    run_open_future_comparator
-  OR:
-    pause_04_COVERAGE
-  OR:
-    return_to_AI_pipeline_mapping
+  pause_04_COVERAGE
+  then:
+    return_to_operator_registry
+    OR return_to_AI_pipeline_mapping
 ```
 
 Audit questions for next review:
 
 - Does the unification standard prevent false demotion without licensing overclaim?
-- Is the surviving Prediction Authority delta real enough to keep testing?
+- Is `future_space_closure_at_gate` the right narrowed operator?
 - Should Apollo be explicitly demoted to recognition carrier?
-- Should the open-future comparator be run, or is this branch sufficiently bounded for now?
+- Should coverage pause and route into the Operator Registry?
