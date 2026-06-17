@@ -15,6 +15,24 @@ The goal is not to prove TRACE. The goal is to make recurring patterns legible a
 
 The reader must not be presumed to already know the carrier story. Each case must briefly orient the reader before translating it into TRACE.
 
+## Core movement
+
+```trace
+TRACE :=
+  trained_movement_under_pressure
+
+TRACE_move :=
+  find_gate
+  + find_clock
+  + find_voice_capture
+  + find_metric_capture
+  + find_lever
+  + check_harmed_subject
+  + act_before_hardening
+```
+
+Plain version: TRACE should help a reader or system move through pressure without wasting motion, laundering harm, or arriving after the relevant path has hardened.
+
 ## Operating rule
 
 ```trace
@@ -69,6 +87,27 @@ boundary := Data_analogy != current_AI_personhood_proof
 ```
 
 This rule applies equally to Star Trek, Lord of the Rings, Apollo 13, Harriet Tubman, Memento, EEAAO, legal cases, and technical source references.
+
+## Operator integration priorities
+
+The next patch layer should integrate these operators into existing cluster files. Do not add a new file while the relay pack is already at 10 files.
+
+```trace
+patch_now :=
+  captured_voice -> Cluster_04
+  + metric_capture_of_life -> Cluster_04
+  + rehabilitation_without_victim_capture -> Cluster_02 + Cluster_04
+
+hold_as_warning :=
+  sincerity_under_spectacle -> Cross_Connection_Audit
+```
+
+Plain descriptions:
+
+- **captured voice** — when a subject technically has voice, complaint, consent, appeal, or exit language, but no safe usable route to exercise it;
+- **metric capture of life** — when a single score, target, profit line, risk rating, or performance measure becomes sovereign over truth, relation, floor, and future-space;
+- **rehabilitation without victim capture** — preserve the possibility that a person can change without requiring harmed subjects to provide access, forgiveness, proximity, or further risk;
+- **sincerity under spectacle** — honest signals can be distorted by audience, platform, monetisation, and self-performance.
 
 ## Why this folder exists
 
@@ -149,4 +188,5 @@ Use this folder as the live bootstrap relay surface. Later, only stable compress
 2. Add source anchors only where they improve signal.
 3. Demote any cluster that becomes metaphor rather than navigation.
 4. Patch any section that assumes specialist/fandom knowledge without orientation.
-5. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.
+5. Integrate captured voice, metric capture, and rehabilitation without victim capture into existing clusters.
+6. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.
