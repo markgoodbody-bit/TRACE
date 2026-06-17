@@ -42,6 +42,29 @@ Not current use: proof, validation, governance certification, a complete ethics 
 9. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
 10. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 
+## Latest continuity and method addenda
+
+These files preserve current handoff/method insight without changing the active TRACE spine.
+
+```trace
+latest_addenda :=
+  vault_continuity
+  + action_under_uncertainty
+  + outcome_comparison_lens
+  + claude_code_handoff
+
+status :=
+  support_material
+  + not_active_spine
+  + not_Kernel_v0_3
+```
+
+- `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
+- `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
+- `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
+- `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
+- `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+
 ## Core memory rule
 
 ```trace
@@ -82,14 +105,14 @@ candidate_annex != active_spine
 ## Repository structure
 
 ```text
-00_START_HERE/          orientation, read order, import manifest
+00_START_HERE/          orientation, read order, import manifest, vault continuity addenda
 01_CANONICAL_MEMORY/    operator registry, claims ledger, demotion protocol
 02_CURRENT_SURFACE/     public one-sheet and current Rosetta front door
 03_BOOTSTRAPS/          active bootstrap collection and source markdown
-04_KERNEL_AND_TESTS/    diagnostic kernel and preregistered test template
-05_MAPS_AND_ATLASES/    subtraction concordance and case atlas
+04_KERNEL_AND_TESTS/    diagnostic kernel, preregistered test template, method notes
+05_MAPS_AND_ATLASES/    subtraction concordance, case atlas, candidate support lenses
 06_REVIEWS_AND_AUDITS/  AI review digest and falsification/drift audits
-07_HANDOFFS/            relay pack only; duplicate unpacked stack removed from live route
+07_HANDOFFS/            relay pack and external-agent handoff notes
 90_ORIGINAL_ZIPS/       selected archived source ZIPs and handoff ZIPs
 99_ARCHIVE_INDEXES/     file indexes and manifests
 ```
