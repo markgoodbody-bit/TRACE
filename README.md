@@ -50,6 +50,7 @@ These files preserve current handoff/method/control insight without changing the
 latest_addenda :=
   vault_continuity
   + action_under_uncertainty
+  + post_dependent_witness_independence_note
   + outcome_comparison_lens
   + claude_code_handoff
   + spine_wording_drift_note
@@ -64,6 +65,7 @@ status :=
 - `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
 - `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
 - `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
+- `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
 - `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
@@ -94,6 +96,19 @@ status :=
   candidate_annex_only
   not_Diagnostic_Kernel_v0_3
 ```
+
+## Current frontier candidate note
+
+```trace
+post_dependent_witness_independence_note :=
+  anti_simulation_guard
+  + K_gate_pressure_note
+  - not_operator
+  - not_AI_needs_humans_proof
+  - not_human_survival_proof
+```
+
+This note preserves the useful seam from the Gemini post-dependent probe while rejecting the Entropy Anchor proof.
 
 ## Current visible drift flag
 
@@ -129,6 +144,7 @@ front_door != payload_archive
 summary != preservation
 candidate_annex != active_spine
 comparator_queue != comparator_run
+post_dependent_witness_note != AI_needs_humans_proof
 ```
 
 ## Repository structure
