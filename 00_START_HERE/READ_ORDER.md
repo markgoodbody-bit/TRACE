@@ -65,4 +65,16 @@ support_lens != scoring_system
 Claude_handoff != validation
 ```
 
+## Control notes
+
+```trace
+spine_wording_drift_note :=
+  00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md
+  + control_layer
+  + flags(harm_carrier vs predatory in spine exit element)
+  - does_not_alter_active_spine
+```
+
+When applying TRACE, quote the exact spine wording in use and cite its source file. This note flags a live ambiguity; it does not resolve it.
+
 End.

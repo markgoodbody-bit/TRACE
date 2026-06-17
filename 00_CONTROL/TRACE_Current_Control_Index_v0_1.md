@@ -46,6 +46,7 @@ TRACE has stronger control surfaces than before. It is still not validated.
 control_files :=
   00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md
   + 00_CONTROL/TRACE_Current_Control_Index_v0_1.md
+  + 00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md
 ```
 
 ### 00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md
@@ -72,6 +73,24 @@ purpose :=
   + preserve_unknowns
   + block_coherence_as_truth
 ```
+
+### 00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md
+
+Status:
+
+```trace
+status := control_note + drift_flag + not_active_spine
+```
+
+Flags:
+
+```trace
+spine_exit_wording_conflict :=
+  harm_carrier (README + one_sheet + vault + handoff + archive)
+  vs predatory (operator_registry_v0_2)
+```
+
+Rule: do not harmonise until Framework/Mark decides; quote source wording in use. Introduced by this patch.
 
 ## Current continuity and handoff files
 
@@ -608,6 +627,7 @@ drift_warnings :=
   + vault_bootstrap_confusion
   + support_lens_scoring_creep
   + Claude_handoff_as_validation
+  + spine_wording_drift_unresolved
 ```
 
 ## Current hard constraints
