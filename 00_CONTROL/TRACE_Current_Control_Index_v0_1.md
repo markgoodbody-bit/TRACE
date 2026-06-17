@@ -5,7 +5,7 @@ Status: current control index / no-loss surface / drift-control checkpoint / not
 
 ## Plain purpose
 
-This index records the current TRACE control state after the recent AI branch, gap map, operator probes, scale architecture, schema patch, anti-self-deception guard, continuity/method addenda, spine wording drift note, and Debt Clock comparator queue.
+This index records the current TRACE control state after the recent AI branch, gap map, operator probes, scale architecture, schema patch, anti-self-deception guard, continuity/method addenda, spine wording drift note, Debt Clock comparator queue, and Claude audit patches.
 
 It exists to prevent loss and self-deception.
 
@@ -33,6 +33,7 @@ TRACE_state :=
   + action_under_uncertainty_method_note_active
   + spine_wording_drift_visible
   + debt_clock_comparator_queue_exists
+  + automatic_stay_lane_added
   - validated
   - complete_framework
   - alignment_solution
@@ -81,7 +82,7 @@ purpose :=
 Commit:
 
 ```trace
-commit := eeecb0ac3c5c7ed0eb6e28e028aa9a01766e9fcf
+commit := 1ccd8d9141315203070fe22d307dffe3fb977445
 ```
 
 Status:
@@ -107,6 +108,16 @@ do_not_harmonise_silently
 quote_source_wording_used
 mark_uncertainty_if_branch_activation_depends_on_distinction
 ```
+
+Audit patch applied:
+
+```trace
+no_operational_preference := true
+```
+
+Meaning:
+
+The note lists candidate resolution options but chooses none. It cannot be used as default guidance.
 
 ## Current continuity and handoff files
 
@@ -346,7 +357,7 @@ comparator_queue_files :=
 Commit:
 
 ```trace
-commit := b458fb4a78231d9094eadb6c973f4dc238621650
+commit := f1dee64c286d1a565fa21ce4aa5c95d02c9e975f
 ```
 
 Status:
@@ -367,6 +378,13 @@ purpose :=
     + administrative_burden
     + procedural_justice
     + scarcity_psychology
+    + insolvency_automatic_stay_or_relief_against_forfeiture
+```
+
+Audit patch applied:
+
+```trace
+automatic_stay_lane_added := true
 ```
 
 Promotion remains blocked.
@@ -667,7 +685,7 @@ No promotion permitted without comparators and boundary-demoter survival.
 
 ```trace
 pending_comparators :=
-  Debt_Clock -> debt_collection_law + administrative_review + poverty_law + consumer_credit + administrative_burden + procedural_justice + scarcity_psychology
+  Debt_Clock -> debt_collection_law + administrative_review + poverty_law + consumer_credit + administrative_burden + procedural_justice + scarcity_psychology + insolvency_automatic_stay_or_relief_against_forfeiture
   Preservation_Love -> care_ethics + attachment_theory + trauma_informed_care + palliative_care + disability_support
   External_Memory_Scaffold -> memory_studies + dementia_care + archives + identity_continuity_literature
   Affection_Laundering -> consent_theory + coercive_control + boundary_psychology + care_ethics
@@ -727,6 +745,7 @@ drift_warnings :=
   + Claude_handoff_as_validation
   + spine_wording_drift_unresolved
   + comparator_queue_mistaken_for_comparator_run
+  + closest_prior_art_omission
 ```
 
 ## Current hard constraints
@@ -779,7 +798,7 @@ handoff_next :=
 framework_build_next :=
   run_first_source_backed_comparator
   beginning_with:
-    Debt_Clock_vs_administrative_review_or_administrative_burden
+    Debt_Clock_vs_administrative_review_or_administrative_burden_or_automatic_stay_analogue
 ```
 
 ## Stop rule before next operator promotion
@@ -815,4 +834,4 @@ handoff_stop_rule :=
 
 Plain version:
 
-The repo is indexed for the current control state. The next safe external step is Claude audit of recent editor commits. The next safe framework build is a source-backed Debt Clock comparator run, not another operator or story.
+The repo is indexed for the current control state. The next safe external step is Claude audit of recent editor commits. The next safe framework build is a source-backed Debt Clock comparator run, now including the automatic-stay / relief-against-forfeiture comparator lane. It is not another operator or story.
