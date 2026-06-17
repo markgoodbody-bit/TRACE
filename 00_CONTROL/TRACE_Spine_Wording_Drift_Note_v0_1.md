@@ -136,18 +136,20 @@ Risk:
 - may become Kernel v0.3 by stealth;
 - requires comparator pressure and branch tests before promotion.
 
-## Current provisional preference
+## No operative preference
 
 No binding decision is made here.
 
-However, the safest likely future direction is:
+No provisional preference is currently operative.
+
+The options above are candidate resolution paths only. They must not be used as default guidance unless Framework / Mark explicitly chooses one and patches the affected files.
 
 ```trace
-harm_carrier := broad_branch_language
-predatory := high_risk_subtype
+no_preference_rule :=
+  options_listed
+  - option_chosen
+  - default_guidance
 ```
-
-This should not be treated as canonical until deliberately patched through affected files.
 
 ## Demoters / removal conditions
 
@@ -185,6 +187,7 @@ must_not_claim :=
   OR predatory_equals_harm_carrier
   OR harm_carrier_implies_bad_faith
   OR Claude_or_Framework_agreement_validates_TRACE
+  OR candidate_option_is_default
 ```
 
 ## Final line
