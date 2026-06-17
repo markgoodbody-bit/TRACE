@@ -1,23 +1,43 @@
 # TRACE Source-Backed Comparator Run — Prediction Authority v0.1
 
 Date: 2026-06-17
-Status: first source-backed comparator run / provisional / not validation
+Status: first source-backed comparator run / provisional / not validation / unification-standard reframed
 
 ## Purpose
 
 This file runs the first comparator pass against the prediction-authority worked-delta protocol.
 
-The question is whether TRACE adds navigational value beyond existing due-process, administrative-law, contestability, reviewability, and algorithmic-accountability work.
+The question is not whether TRACE invented each component. TRACE is being tested as a candidate unifying language. The question is whether TRACE translates existing due-process, administrative-law, contestability, reviewability, and algorithmic-accountability moves into a cross-domain diagnostic without flattening or hiding local expertise.
 
 ```trace
 source_backed_comparator_run :=
   worked_delta_protocol
   + comparator_sources
-  + delta_test
+  + unification_test
   + demotion_test
   + residual_if_any
   - validation_claim
 ```
+
+## Comparator standard applied
+
+This file uses `TRACE_Comparator_Standard_v0_1.md`.
+
+```trace
+wrong_test :=
+  existing_field_already_contains_component
+  -> TRACE_demoted
+
+right_test :=
+  does_TRACE_translate_across_domains
+  while:
+    preserving_relevant_structure
+    + reducing_navigation_cost
+    + exposing_loss
+    + keeping_demoters_live
+```
+
+Existing literature already containing a component is expected. Demotion requires that TRACE adds no useful cross-domain compression, navigation gain, loss detection, or action-routing value.
 
 ## Claim being tested
 
@@ -31,21 +51,19 @@ TRACE_delta_candidate :=
   + technical_opacity_as_route_block
 ```
 
-Demotion condition:
+Reframed demotion condition:
 
 ```trace
 TRACE_delta_falsified_if:
   due_process_or_administrative_law
   + open_future_or_anticipatory_harm_analysis
   + algorithmic_accountability_analysis
-  already_captures:
-    prediction_as_authority_gate
-    + contestability_clock
-    + future_space_confiscation
-    + changed_conduct_as_relevant
-    + technical_opacity_as_route_block
-  with_equal_clarity
-  and_less_vocabulary
+  already_provides:
+    equal_cross_domain_transfer
+    + equal_navigation_gain
+    + equal_loss_detection
+    + equal_action_routing
+    + less_vocabulary_burden
 ```
 
 ## Comparator sources used in this first pass
@@ -88,16 +106,16 @@ forecast_gate :=
   -> present_constraint
 ```
 
-Assessment:
+Assessment under unification standard:
 
 ```trace
 prediction_as_authority_gate :=
-  mostly_captured_by_comparator
-  but:
-    TRACE_names_gate_transition_more_compactly
+  captured_locally
+  + compressed_by_TRACE
+  + transferable_by_TRACE
 ```
 
-Residual delta: small but real as diagnostic compression. Existing work captures the issue; TRACE gives a portable gate test.
+Residual delta: modest but legitimate as diagnostic compression. Existing fields capture the problem locally; TRACE gives a portable gate test.
 
 ### 2. Contestability clock
 
@@ -116,16 +134,16 @@ contestability_real_if:
     future_space_closes
 ```
 
-Assessment:
+Assessment under unification standard:
 
 ```trace
 contestability_clock :=
-  partially_captured_by_comparator
-  but:
-    TRACE_sharpens_timing_axis
+  captured_locally_in_part
+  + improved_by_TRACE_on_timing_axis
+  + transferable_by_TRACE
 ```
 
-Residual delta: strongest surviving contribution in this run.
+Residual delta: strongest surviving contribution in this run. The value is not that TRACE invented contestability, but that it routes contestability through time, gate, and hardening across domains.
 
 ### 3. Technical opacity as route block
 
@@ -141,15 +159,16 @@ opacity_harmful_if:
   + decision_changes_life_path
 ```
 
-Assessment:
+Assessment under unification standard:
 
 ```trace
 technical_opacity_as_route_block :=
-  strongly_captured_by_comparator
-  TRACE_delta := weak
+  captured_locally_strongly
+  + weak_TRACE_specific_gain
+  + retain_only_as_linked_component
 ```
 
-Residual delta: weak. Existing algorithmic-accountability and reviewability work already handles this better and with richer institutional detail.
+Residual delta: weak as an independent TRACE contribution. Keep it as part of the route, but do not claim it as a distinct discovery.
 
 ### 4. Future-space confiscation
 
@@ -167,16 +186,16 @@ future_space_confiscation :=
   -> present_closure
 ```
 
-Assessment:
+Assessment under unification standard:
 
 ```trace
 future_space_confiscation :=
-  partially_captured_by_comparator
+  captured_locally_in_part
+  + potentially_compressed_by_TRACE
   + open_future_comparator_pending
-  TRACE_delta := plausible_but_unproven
 ```
 
-Residual delta: plausible, but cannot be claimed as surviving until the open-future / anticipatory-harm comparator is actually read and tested.
+Residual delta: plausible, but not yet secure. It cannot be claimed as surviving until the open-future / anticipatory-harm comparator is actually read and tested.
 
 ### 5. Changed conduct as relevant
 
@@ -193,24 +212,23 @@ agency_erased_if:
     unchangeable_identity
 ```
 
-Assessment:
+Assessment under unification standard:
 
 ```trace
 changed_conduct_as_relevant :=
-  partly_captured_by_due_process_and_risk_error_frames
-  but:
-    TRACE_links_it_to_future_space_and_timing
+  captured_locally_in_part
+  + linked_by_TRACE_to_future_space_and_timing
 ```
 
 Residual delta: plausible but tied to the future-space claim.
 
-## Delta table
+## Delta table under unification standard
 
-| Claimed TRACE component | Comparator coverage | TRACE residual | Result |
+| Claimed TRACE component | Local comparator coverage | TRACE unification value | Result |
 |---|---:|---:|---|
-| prediction as authority gate | high | low-medium | survives as compression only |
-| contestability clock | medium | medium-high | strongest residual |
-| technical opacity as route block | high | low | mostly demoted |
+| prediction as authority gate | high | medium | survives as compression / transfer |
+| contestability clock | medium | high | strongest residual |
+| technical opacity as route block | high | low | retained as linked component only |
 | future-space confiscation | medium / incomplete | medium | plausible, comparator pending |
 | changed conduct as relevant | medium / incomplete | medium | plausible, comparator pending |
 
@@ -220,22 +238,22 @@ Residual delta: plausible but tied to the future-space claim.
 verdict :=
   TRACE_delta_not_fully_falsified
   but:
-    large_parts_captured_by_existing_work
+    large_parts_captured_locally_by_existing_work
 
 surviving_residual :=
   contestability_clock
   + future_space_confiscation_pending
   + gate_compression
 
-mostly_demoted :=
+weak_independent_component :=
   technical_opacity_as_route_block
 ```
 
 Plain version:
 
-TRACE does not beat the comparator literature wholesale. Reviewability, contestability, process explanation, and algorithmic-accountability work already capture much of the issue, especially opacity, record keeping, and challenge routes.
+TRACE does not replace the comparator literature. Reviewability, contestability, process explanation, and algorithmic-accountability work already capture much of the issue, especially opacity, record keeping, and challenge routes.
 
-The surviving TRACE contribution is narrower: timing and future-space as a diagnostic movement.
+The surviving TRACE contribution is narrower: timing and future-space as a portable diagnostic movement.
 
 ```trace
 surviving_question :=
@@ -245,13 +263,13 @@ surviving_question :=
 
 ## Demotion result
 
-The original demoter is only partly met.
+The original novelty-style demoter is inappropriate for a unifying system. Under the revised standard, the candidate is only partly demoted.
 
 ```trace
 demoter_status :=
-  technical_opacity_component_demoted
-  + prediction_gate_component_demoted_to_compression
-  + contestability_clock_survives
+  technical_opacity_component_not_independent_delta
+  + prediction_gate_component_survives_as_compression
+  + contestability_clock_survives_as_navigation_gain
   + future_space_component_pending_open_future_comparator
 ```
 
@@ -268,18 +286,17 @@ Prediction_Authority_status :=
 
 ## Patch implication
 
-Later, the worked-delta case should be narrowed:
+Later, the worked-delta case should be narrowed without treating local capture as automatic failure.
 
 ```trace
 patch_case_later :=
   narrow_TRACE_delta_to:
     contestability_clock
     + future_space_confiscation
-    + prediction_gate_as_compression
-  demote:
-    technical_opacity_as_route_block
+    + prediction_gate_as_cross_domain_compression
   mark:
-    open_future_comparator_pending
+    technical_opacity_as_locally_captured_component
+    + open_future_comparator_pending
 ```
 
 ## What this run does not settle
@@ -298,10 +315,10 @@ not_settled :=
 recommendation :=
   keep_candidate_alive
   + narrow_claim
-  + no_more_cases
-  + patch_index_or_case_later
+  + apply_unification_standard_to_future_comparators
+  + no_more_cases_until_next_comparator
 ```
 
 Plain version:
 
-This comparator run gives TRACE a limited survival: not a new field, not a replacement for due process or algorithmic accountability, but a compact timing-and-future-space diagnostic. That is enough to keep the candidate alive, not enough to promote it.
+This comparator run gives TRACE a limited but legitimate survival as a unifying interface: not a new field, not a replacement for due process or algorithmic accountability, but a compact timing-and-future-space diagnostic that may travel across domains. That is enough to keep the candidate alive, not enough to promote it.
