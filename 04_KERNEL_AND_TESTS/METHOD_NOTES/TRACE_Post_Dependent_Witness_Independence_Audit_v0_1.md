@@ -61,9 +61,11 @@ Reasons:
 
 The retained claim is mechanical, not metaphysical.
 
+This is a candidate refinement of the K-Gate Witness factor, pending comparator pressure. It is not an active K-Gate rule.
+
 ```trace
 retained_remainder :=
-  K_gate_requires_independent_witness_or_record
+  candidate_refinement_of_K_gate_witness_factor
   + audited_system_must_not_generate_its_own_witness
   + audited_system_must_not_materially_control_the_witness
   + adverse_evidence_channel_must_exist
@@ -286,6 +288,7 @@ must_not_claim :=
   OR freedom_equals_moral_standing
   OR witness_independence_guard_is_active_K_gate_operator
   OR this_note_solves_post_dependent_system_problem
+  OR candidate_refinement_is_active_spine
 ```
 
 ## Safe current use
