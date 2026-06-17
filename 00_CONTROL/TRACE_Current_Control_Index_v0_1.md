@@ -5,7 +5,7 @@ Status: current control index / no-loss surface / drift-control checkpoint / not
 
 ## Plain purpose
 
-This index records the current TRACE control state after the recent AI branch, gap map, operator probes, scale architecture, schema patch, anti-self-deception guard, continuity/method addenda, spine wording drift note, Debt Clock comparator queue, and Claude audit patches.
+This index records the current TRACE control state after the recent AI branch, gap map, operator probes, scale architecture, schema patch, anti-self-deception guard, continuity/method addenda, spine wording drift note, Debt Clock comparator queue, Claude audit patches, and Gemini post-dependent witness-independence frontier note.
 
 It exists to prevent loss and self-deception.
 
@@ -34,6 +34,7 @@ TRACE_state :=
   + spine_wording_drift_visible
   + debt_clock_comparator_queue_exists
   + automatic_stay_lane_added
+  + post_dependent_witness_independence_candidate_active
   - validated
   - complete_framework
   - alignment_solution
@@ -269,6 +270,7 @@ Claude_Code_experiment :=
 ```trace
 method_support_files :=
   04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md
+  + 04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md
   + 05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md
 ```
 
@@ -305,6 +307,46 @@ if uncertainty == critical:
   increase_evidence_requirement
   + prefer_reversible_action
   + preserve_correction_path
+```
+
+### 04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md
+
+Commit:
+
+```trace
+commit := 3d3ce1f70fe248e156ca1355fbf37d4f0523e15f
+```
+
+Status:
+
+```trace
+status := frontier_candidate + anti_simulation_guard + K_gate_pressure_note - operator
+```
+
+Core retained seam:
+
+```trace
+if_witness_is_generated_or_controlled_by_audited_system:
+  K_gate_independence_fails
+```
+
+Rejected overclaim:
+
+```trace
+reject :=
+  AI_needs_humans_proof
+  + entropy_anchor_as_mathematical_solution
+  + P_less_than_1_as_freedom_test
+```
+
+Safe use:
+
+```trace
+use_only_to_pressure:
+  self_audit
+  + simulated_witness
+  + captured_witness
+  + adverse_record_blockage
 ```
 
 ### 05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md
@@ -686,6 +728,7 @@ No promotion permitted without comparators and boundary-demoter survival.
 ```trace
 pending_comparators :=
   Debt_Clock -> debt_collection_law + administrative_review + poverty_law + consumer_credit + administrative_burden + procedural_justice + scarcity_psychology + insolvency_automatic_stay_or_relief_against_forfeiture
+  Witness_Independence_Guard -> audit_independence + control_theory + cybernetics + corrigibility + consent_coercion + active_inference
   Preservation_Love -> care_ethics + attachment_theory + trauma_informed_care + palliative_care + disability_support
   External_Memory_Scaffold -> memory_studies + dementia_care + archives + identity_continuity_literature
   Affection_Laundering -> consent_theory + coercive_control + boundary_psychology + care_ethics
@@ -718,6 +761,7 @@ pending_or_held :=
   + external_memory_scaffold
   + affection_laundering
   + outcome_comparison_lens
+  + witness_independence_guard
 ```
 
 ```trace
@@ -725,6 +769,8 @@ not_promoted :=
   interest_as_hardening
   + credit_scar
   + confession_as_causal_gate
+  + entropy_anchor
+  + W_perp
 ```
 
 ## Drift warnings now active
@@ -746,6 +792,9 @@ drift_warnings :=
   + spine_wording_drift_unresolved
   + comparator_queue_mistaken_for_comparator_run
   + closest_prior_art_omission
+  + entropy_mysticism
+  + AI_needs_humans_proof_creep
+  + witness_unpredictability_as_freedom
 ```
 
 ## Current hard constraints
@@ -763,6 +812,8 @@ hard_constraints :=
   + do_not_confuse_vault_and_bootstrap
   + do_not_convert_support_lens_to_score
   + do_not_treat_comparator_queue_as_completed_run
+  + do_not_install_entropy_anchor_as_proof
+  + do_not_install_W_perp_as_operator
 ```
 
 ## Bigger-goal guard
@@ -792,6 +843,12 @@ The bigger aim remains live. But it must be reached through honest small structu
 handoff_next :=
   ask_Claude_to_audit_recent_editor_commits
   + do_not_treat_agreement_as_validation
+```
+
+```trace
+frontier_next :=
+  send_Witness_Independence_candidate_to_Claude_for_audit
+  + keep_Gemini_as_frontier_probe
 ```
 
 ```trace
@@ -834,4 +891,4 @@ handoff_stop_rule :=
 
 Plain version:
 
-The repo is indexed for the current control state. The next safe external step is Claude audit of recent editor commits. The next safe framework build is a source-backed Debt Clock comparator run, now including the automatic-stay / relief-against-forfeiture comparator lane. It is not another operator or story.
+The repo is indexed for the current control state. The next safe external step is Claude audit of recent editor commits, especially the Gemini witness-independence candidate. The next safe framework build is a source-backed Debt Clock comparator run, now including the automatic-stay / relief-against-forfeiture comparator lane. It is not another operator or story.
