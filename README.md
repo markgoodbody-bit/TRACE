@@ -48,6 +48,7 @@ Not current use: proof, validation, governance certification, a complete ethics 
 15. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 16. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
 17. `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md`
+18. `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md`
 
 ## Surface roles
 
@@ -59,6 +60,7 @@ Scope_Map := scope_container + level_separator - active_spine
 Primitive_Registry := base_layer + composition_support - operator_set
 Domain_Translation_Registry := mapping_layer + comparator_pressure - operator_set
 Robodebt_Worked_Delta := first_worked_delta + modest_clock_compression - validation
+Tay_Worked_Delta := second_worked_delta + modest_clock_carrier_compression - validation
 ```
 
 Plain version:
@@ -70,6 +72,7 @@ Plain version:
 - `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md` records the primitive layer for composition and translation. It is not an operator registry and remains hostile-review pending.
 - `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md` maps local domains to primitives, operators, comparators, demoters, and must-not-claim rules. It is not an operator registry and remains hostile-review pending.
 - `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md` is the first worked delta. It shows modest TRACE compression, not new detection and not validation.
+- `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md` is the second worked delta. It shows modest TRACE clock/carrier compression, not new detection and not validation.
 
 ## Latest continuity, control, and method addenda
 
@@ -86,6 +89,7 @@ latest_addenda :=
   + Debt_Clock_comparator_queue
   + Debt_Clock_Robodebt_comparator_run_v0_1
   + TRACE_Robodebt_Worked_Delta_v0_1
+  + TRACE_Tay_Worked_Delta_v0_1
   + TRACE_scope_map_v0_1
   + TRACE_Primitive_Registry_v0_1
   + TRACE_Domain_Translation_Registry_v0_1
@@ -105,6 +109,7 @@ status :=
 - `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
 - `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
 - `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md`
+- `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
 - `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
@@ -147,11 +152,13 @@ The Domain Translation Registry now caps all unworked domains at T1 and caps war
 ## Current worked-delta result
 
 ```trace
-Robodebt_Worked_Delta_v0_1 :=
-  first_worked_delta
-  + ordinary_public_law_read_strong
-  + TRACE_read_useful_as_clock_compression
-  + result := Delta_B_limited + Delta_C_mostly
+worked_deltas_to_date :=
+  Robodebt_Worked_Delta_v0_1
+  + Tay_Worked_Delta_v0_1
+
+pattern_after_two_deltas :=
+  existing_fields_catch_domain_specific_failure
+  + TRACE_adds_limited_clock_or_carrier_compression
   - material_new_detection
   - validation
   - operator_promotion
@@ -159,7 +166,7 @@ Robodebt_Worked_Delta_v0_1 :=
 
 Plain version:
 
-TRACE did not beat ordinary public law on Robodebt. It clarified a reusable timing structure: correction matters only if it reaches the subject before burden, recovery, or irreversibility hardens the position.
+TRACE did not beat ordinary public law on Robodebt and did not beat ordinary AI safety on Tay. In both cases it clarified a reusable timing/carrier structure, but the domain-specific fields owned most of the detail.
 
 ## Current held branches
 
@@ -230,6 +237,7 @@ comparator_queue != comparator_run
 comparator_run != operator_promotion
 worked_delta != validation
 Robodebt_Worked_Delta != TRACE_beats_public_law
+Tay_Worked_Delta != TRACE_beats_AI_safety
 Scope_Map != active_spine
 Scope_Map != operator_promotion
 post_dependent_witness_note != AI_needs_humans_proof
@@ -264,4 +272,4 @@ Claims must be demotable. If TRACE cannot lose claims, it becomes a belief syste
 
 No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, scope mapping, primitive definition, domain translation, worked deltas, and real pressure testing.
 
-Next technical move: one more worked delta in a less law-owned domain before any new scaffolding file.
+Next technical move: decide whether the repeated clock/carrier compression is worth formalising, or run a third worked delta in policing/preemption, MI, or infrastructure before any new scaffolding file.
