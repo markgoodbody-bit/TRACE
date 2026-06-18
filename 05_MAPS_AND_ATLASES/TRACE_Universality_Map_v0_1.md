@@ -1,7 +1,7 @@
-# TRACE Universality Map v0.1
+# TRACE Scope / Applicability Map v0.1
 
 Date: 2026-06-18
-Status: universality architecture / map layer / not active spine / not validation / not proof / not operator promotion / not Kernel v0.3
+Status: scope architecture / applicability map / hostile-audit patched / not active spine / not validation / not proof / not operator promotion / not Kernel v0.3
 
 ## 0. Control header
 
@@ -13,9 +13,13 @@ It does not validate TRACE.
 
 It does not create Kernel v0.3.
 
+It does not prove TRACE is universal.
+
 It does not promote any bootstrap case, film, story, or analogy into evidence.
 
 It is a map for keeping the project wide while keeping the active spine narrow.
+
+Hostile-audit patch, 2026-06-18: the word `universality` is now treated as an aspiration and test direction, not a property TRACE has earned.
 
 ```trace
 purpose :=
@@ -23,9 +27,10 @@ purpose :=
   + preserve_imagination
   + separate_levels
   + block_operator_bloat
-  + show_how_everything_can_fit
+  + show_how_more_domains_may_fit
   - validation
   - proof
+  - universality_claim
 ```
 
 ## 1. Plain compression
@@ -34,10 +39,10 @@ TRACE is trying to become a general navigation grammar for systems under pressur
 
 It asks whether subjects, records, correction routes, and future options survive when power, time, infrastructure, and uncertainty interact.
 
-The project should be encompassing and universal. But universality does not mean one operator per domain.
+The project can remain encompassing and ambitious. But scope does not mean one operator per domain.
 
 ```trace
-universality_rule :=
+scope_rule :=
   widen_domain
   + compress_spine
   + translate_locally
@@ -49,59 +54,66 @@ Plain version:
 
 The field stays wide. The spine stays small. Domains get translations. Failed local operators become useful notes rather than false primitives.
 
-## 2. The Love / Death / Robots triad
+## 2. Love / Death / Robots as U0 mnemonic
 
-The phrase is useful because it compresses three pressures TRACE must hold together.
+The phrase is useful because it compresses three pressures TRACE keeps encountering.
 
-It is not a new operator. It is a universality carrier.
+It is not a new operator.
+
+It is not evidence.
+
+It is not a primitive-clustering engine.
+
+It is a U0 recognition carrier: a front-door mnemonic for remembering the scope of the project.
+
+```trace
+LDR_status :=
+  U0_recognition_carrier
+  + intro_mnemonic
+  - operator
+  - evidence
+  - structural_proof
+```
+
+Working mnemonic:
 
 ```trace
 Love :=
-  relation
+  relation_under_cost
   + care
-  + attachment
   + recognition
   + trust
-  + willingness_to_pay_cost
   + refusal_to_turn_subject_into_substrate
 
 Death :=
   irreversibility
   + hardening
   + loss
-  + one_way_door
   + future_space_collapse
   + correction_too_late
 
 Robots :=
   created_power
   + delegated_agency
+  + machinery
   + automation
-  + tool_life_ambiguity
-  + infrastructure
+  + bureaucracy
   + opacity
   + responsibility_laundering_risk
 ```
 
-The triad should be read as:
-
-```trace
-TRACE_universal_frame :=
-  Love := why_future_space_matters
-  + Death := why_time_matters
-  + Robots := why_creation_power_and_delegation_matter
-```
-
 Plain version:
 
-Can relation survive machinery? Can correction arrive before irreversibility? Can created systems carry delegated power without laundering responsibility?
+Love reminds TRACE why preservation matters. Death reminds TRACE why time matters. Robots remind TRACE why created/delegated machinery needs answerability.
 
-## 3. TRACE universality stack
+Do not use the mnemonic to carry analytic load. The primitive and domain registries carry that load.
+
+## 3. TRACE scope stack
 
 TRACE should separate primitives, operators, translations, cases, comparators, and formal bridges.
 
 ```trace
-TRACE_universality_stack :=
+TRACE_scope_stack :=
   L0_primitives
   -> L1_active_operators
   -> L2_domain_translations
@@ -124,80 +136,22 @@ Debt_Clock_after_hostile_audit :=
       + stay_like_pause
 ```
 
-## 4. Primitive registry sketch
+## 4. Primitive registry role
 
-TRACE does not yet have a full primitive registry. This file sketches the missing layer.
+TRACE now has a primitive registry, but it is hostile-review pending.
 
 Primitives are not operators. They are recurring basic quantities or relations that operators compose.
 
 ```trace
-TRACE_primitives :=
-  Time
-  + Harm
-  + Correction
-  + Subject
-  + Agency
-  + Witness
-  + Record
-  + Power
-  + Constraint
-  + Enforcement
-  + Repair
-  + Memory
-  + Future_Space
-  + Irreversibility
-  + Infrastructure
-  + Energy
-  + Trust
-  + Boundary
-  + Uncertainty
+Primitive_Registry_role :=
+  base_layer
+  + composition_support
+  + domain_translation_support
+  - operator_set
+  - proven_ontology
 ```
 
-Working definitions:
-
-```trace
-Time := ordering + delay + window + deadline + hardening_rate
-
-Harm := loss_or_collapse_of_real_future_options
-
-Correction := change_that_reaches_the_subject_before_hardening
-
-Subject := entity_or_being_whose_future_space_can_be_wronged_or_preserved
-
-Agency := capacity_to_select_or_continue_paths_under_constraint
-
-Witness := signal_source_that_can_register_state_or_harm
-
-Record := replayable_memory_surface_for_truth_or_contest
-
-Power := capacity_to shape_options_or_close_paths_for_subjects
-
-Constraint := boundary_that_changes_available_action_paths
-
-Enforcement := carrier_that_makes_constraint_real
-
-Repair := restoration_of_real_future_options_not_symbolic_closure
-
-Memory := continuity_bridge_across time + record + identity + correction
-
-Future_Space := live_set_of_paths_available_to_subject_or_system
-
-Irreversibility := condition_where_later_correction_cannot_restore_lost_path
-
-Infrastructure := material + procedural + energetic + authority support layer
-
-Energy := capacity_to_change_state_or_sustain_transition
-
-Trust := cooperation_with_verification_and_consequence
-
-Boundary := distinction_that_changes permitted routing_or_standing
-
-Uncertainty := incomplete_state_knowledge_under_action_pressure
-```
-
-This list is a sketch. It should become a proper primitive registry only after hostile review.
-
-## 5. Active spine currently kept narrow
+## 5. Active spine remains narrow
 
 The current active spine remains narrower than the project imagination.
 
@@ -214,7 +168,7 @@ active_spine_currently :=
   + demotion_wrongability_governance
 ```
 
-The project can be universal without promoting every useful phrase.
+The project can be broad without promoting every useful phrase.
 
 ```trace
 operator_rule :=
@@ -222,9 +176,10 @@ operator_rule :=
   domain_translation != operator
   case_pattern != operator
   story_carrier != evidence
+  mnemonic != structure
 ```
 
-## 6. Domain translation registry sketch
+## 6. Domain translation registry role
 
 A domain translation maps local language into the active spine without claiming a new operator.
 
@@ -237,82 +192,14 @@ domain_translation :=
   -> demoter
 ```
 
-Candidate domain translations to record later:
+The domain translation registry is a mapping layer and comparator-pressure surface. It is not an operator registry.
 
-```trace
-domain_translation_registry_needed :=
-  law
-  + administrative_governance
-  + AI_alignment
-  + mechanistic_interpretability
-  + medicine
-  + care_and_family
-  + religion_and_myth
-  + infrastructure
-  + climate_and_disaster
-  + war_and_emergency
-  + education
-  + labour_and_platform_power
-  + finance_and_debt
-  + media_and_spectacle
-  + memory_and_identity
-```
-
-Example already demoted and preserved:
-
-```trace
-Debt_Clock_translation :=
-  finance_and_debt:
-    correction_before_hardening
-    + stay_like_pause
-    + burden_under_time_pressure
-```
-
-Possible future examples:
-
-```trace
-medical_triage_translation :=
-  time_critical_harm
-  + subject_vulnerability
-  + scarce_capacity
-  + correction_or_action_window
-
-AI_deployment_translation :=
-  model_action
-  + opacity
-  + monitoring
-  + rollback
-  + affected_subject_contestability
-
-mechanistic_interpretability_translation :=
-  internal_feature_or_circuit
-  + evidence_channel
-  + intervention_point
-  + failure_path
-  + deployment_hardening
-
-religion_translation :=
-  love_death_meaning_structure
-  + authority_claim
-  + correction_channel
-  + capture_or_repair
-
-infrastructure_translation :=
-  energy
-  + maintenance
-  + hidden_basement
-  + failure_hardening
-  + repair_capacity
-```
-
-These are translations, not promotions.
-
-## 7. Universality ladder
+## 7. Applicability ladder
 
 A TRACE idea should climb levels only by earning it.
 
 ```trace
-universality_ladder :=
+applicability_ladder :=
   U0 := recognition_carrier
   U1 := domain_translation
   U2 := recurring_operator_candidate
@@ -337,6 +224,7 @@ U2_operator_candidate :=
   + deactivation_condition
   + comparator
   + demoter
+  + at_least_one_worked_delta_plan
 
 U3_cross_domain_invariant :=
   survives_at_least_two_unrelated_domains
@@ -351,7 +239,7 @@ U4_formal_or_mechanistic_expression :=
 U5_universal_move :=
   improves_navigation_across_domains
   + beats_or_complements_existing_expert_reasoning
-  + remains demotable
+  + remains_demotable
 ```
 
 No idea jumps from story to universal claim.
@@ -465,20 +353,6 @@ Plain version:
 
 TRACE must eventually say how something enters the circle of correction without pretending to have solved personhood.
 
-This layer must handle:
-
-```trace
-standing_cases :=
-  human_subjects
-  + animals
-  + children
-  + disabled_or_dependent_subjects
-  + institutions_as_non_subject_systems
-  + AI_systems_as_tools
-  + possible_created_subjects
-  + ambiguous_in_between_entities
-```
-
 Do not solve standing by assertion. Do not collapse uncertainty into permission to harm.
 
 ## 11. Tragic remainder layer needed
@@ -502,11 +376,21 @@ Plain version:
 
 `no_admissible_branch` is not a decision. It is a failure-state marker. The operator still must act, but the action should not be laundered as clean.
 
-## 12. Design pattern library needed
+## 12. Design pattern library needed, but not next
 
 TRACE is stronger at diagnosis than design.
 
-It needs a design pattern library: practical structures that install correction before hardening.
+It will need a design pattern library: practical structures that install correction before hardening.
+
+But hostile audit correctly warned that adding another architecture layer now would deepen the build-faster-than-test problem.
+
+```trace
+design_pattern_library_status :=
+  needed_later
+  but_not_next
+```
+
+Candidate design patterns later:
 
 ```trace
 design_patterns_needed :=
@@ -523,21 +407,6 @@ design_patterns_needed :=
   + hardship_hold
   + visible_capture_indicator
   + emergency_bounded_action
-```
-
-Each design pattern should include:
-
-```trace
-design_pattern_schema :=
-  pattern_name
-  + problem_addressed
-  + activation_condition
-  + deactivation_condition
-  + carrier
-  + affected_subject_route
-  + abuse_mode
-  + comparator
-  + demoter
 ```
 
 ## 13. Failure-mode atlas needed
@@ -575,7 +444,7 @@ This atlas should group existing cases by structure, not by topic.
 
 Bootstrap V2 already records that no worked case yet shows TRACE catching something earlier or better than an ordinary careful or expert pass.
 
-That remains true for the universal project.
+That remains true for the wider scope project.
 
 ```trace
 worked_delta_needed :=
@@ -603,57 +472,57 @@ true_inward_falsifier :=
 
 Misuse guards are not enough.
 
-## 16. Universality without bloat
+## 16. Scope without bloat
 
-The project can be more universal precisely because it demotes local relabels.
+The project can become more applicable precisely because it demotes local relabels.
 
 ```trace
-universal_growth_rule :=
-  primitives_expand
-  + translations_expand
+scope_growth_rule :=
+  primitives_expand_carefully
+  + translations_expand_cautiously
   + comparators_expand
-  + design_patterns_expand
+  + design_patterns_wait_until_delta
   while:
     active_operator_spine_remains_small
 ```
 
 Plain version:
 
-TRACE becomes bigger by mapping more domains onto fewer stronger moves.
+TRACE gets larger by mapping more domains onto fewer stronger moves.
 
-## 17. Current missing-build queue
+## 17. Current missing-build queue after hostile audit
 
-Recommended next artifacts, in order:
+Hostile audit changed the next action.
 
 ```trace
-next_artifacts :=
-  1_Primitive_Registry_v0_1
-  2_Domain_Translation_Registry_v0_1
-  3_Design_Pattern_Library_v0_1
-  4_Failure_Mode_Atlas_v0_1
-  5_Formal_MI_Bridge_v0_1
-  6_Standing_Wrongability_Map_v0_1
-  7_Tragic_Remainder_Action_Map_v0_1
+next_actions :=
+  1_hostile_audit_patch
+  + 2_one_worked_delta
+  then_maybe:
+    Design_Pattern_Library_v0_1
+    OR Failure_Mode_Atlas_v0_1
+    OR Formal_MI_Bridge_v0_1
+    OR Standing_Wrongability_Map_v0_1
+    OR Tragic_Remainder_Action_Map_v0_1
 ```
 
 Do not build all at once.
 
-The safest next build is Primitive Registry, because it allows TRACE to get more encompassing without operator bloat.
+The next technical move is one worked delta that can demote the architecture.
 
 ## 18. Final compression
 
 ```trace
-TRACE_universality :=
-  Love
-  + Death
-  + Robots
-  mapped_through:
-    primitives
-    + active_operators
-    + domain_translations
-    + case_surfaces
-    + hostile_comparators
-    + formal_mechanistic_bridge
+TRACE_scope_map_v0_1_after_hostile_audit :=
+  scope_container
+  + level_separator
+  + LDR_as_U0_mnemonic_only
+  + primitives_and_translations_as_support_layers
+  + worked_delta_now_required
+  - active_spine
+  - operator_promotion
+  - validation
+  - universality_claim
 
 success_condition :=
   more_domains_fit
@@ -664,10 +533,11 @@ failure_condition :=
   every_good_phrase_becomes_operator
   OR every_story_becomes_evidence
   OR every_domain_translation_claims_novelty
+  OR architecture_accumulates_without_worked_delta
 ```
 
 Plain conclusion:
 
-TRACE is not becoming smaller. It is becoming more universal by separating levels. Love names relation and care under cost. Death names irreversibility and the hardening clock. Robots name created power, delegation, opacity, and responsibility risk. The operators remain narrow so the project can stay large.
+TRACE is not becoming smaller. It is becoming more applicable by separating levels. Love / Death / Robots is a mnemonic, not evidence. The operator spine remains narrow so the project can stay large. The next move is not more scaffolding; it is one worked delta that can fail.
 
 End.
