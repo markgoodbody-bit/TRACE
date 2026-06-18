@@ -51,8 +51,17 @@ reader_path :=
   -> shared_pattern
   -> TRACE_translation
   -> uncertainty_boundary
-  -> falsifier
+  -> drift_misuse_guard
+  -> later_true_inward_falsifier_if_built
 ```
+
+Cleanup note:
+
+```trace
+drift_misuse_guard != true_inward_falsifier
+```
+
+The cluster files contain useful drift and misuse guards. The cross-connection audit correctly records that true inward falsifiers are still an open requirement. Do not mark falsification discipline complete by renaming guards.
 
 ## What this is
 
@@ -71,7 +80,9 @@ This is not:
 - a legal, medical, political, or institutional decision procedure;
 - a permission engine;
 - a claim that current AI systems are persons;
-- a claim that every analogy is equally strong.
+- a claim that every analogy is equally strong;
+- a claim that `null_attractor` is an established primary TRACE threat;
+- a claim that drift/misuse guards are true inward falsifiers.
 
 ## Reader-orientation rule
 
@@ -162,7 +173,7 @@ risk :=
   + pain_becomes_brand
 ```
 
-These are held patch candidates, not proof claims and not accepted operators. They must not be integrated into clusters until explicitly accepted. Their proposed routing (captured voice, metric capture, and rehabilitation without victim capture into existing clusters) is a proposal only. Sincerity under spectacle should remain a drift warning unless it proves necessary inside a cluster.
+These are held patch candidates, not proof claims and not accepted operators. They must not be integrated into clusters until explicitly accepted. Their proposed routing is a proposal only. Sincerity under spectacle should remain a drift warning unless it proves necessary inside a cluster.
 
 ## The 98 percent rule
 
@@ -177,6 +188,8 @@ success :=
   + earlier_falsification
   + lower_irreversible_harm_risk
 ```
+
+This is an aspiration for testing, not a validation claim.
 
 ## Why stories are used
 
@@ -196,7 +209,8 @@ Each pattern should include:
 4. **Research/source anchor** — existing work, concept, inquiry, report, or discipline that has already named part of the structure.
 5. **TRACE compression** — the shared structure in TRACE terms.
 6. **Boundary note** — what the comparison does not prove.
-7. **Falsifier / drift risk** — how the pattern could be overfit, misused, or laundered.
+7. **Drift/misuse guard** — how the pattern could be overfit, misused, or laundered.
+8. **True inward falsifier** — later requirement: a condition under which the cluster is wrong, redundant, or worse than ordinary expert reasoning.
 
 ## Middle-out method
 
@@ -224,6 +238,31 @@ If a story and history do not really match, mark the mismatch.
 weak_match := useful_warning
 forced_match := drift
 ```
+
+## Spine wording drift
+
+The current TRACE spine wording drift remains unresolved:
+
+```trace
+spine_wording_drift :=
+  exit_when_correction_channel_is_harm_carrier
+  vs
+  exit_when_correction_channel_is_predatory
+```
+
+Bootstrap V2 must not treat these as silently interchangeable. Where a cluster uses one branch, preserve the source wording or mark the uncertainty.
+
+## Null-attractor quarantine
+
+`null_attractor` may remain as bounded shorthand for story-carrier discussion of collapse into directionless or predatory state-space.
+
+It is not:
+
+- an established primary TRACE threat;
+- an operator;
+- proof that TRACE works;
+- proof of Gemini's Entropy Anchor framing;
+- a metaphysical conclusion.
 
 ## File count rule
 
@@ -280,7 +319,7 @@ When giving this pack to another AI, ask for a hostile review, not encouragement
 
 Minimum prompt:
 
-> You are reviewing a TRACE Bootstrap V2 relay pack. Do not praise it. Test whether it helps middle-out reasoning from concrete cases to reusable patterns without overclaiming. Check for: assumed reader knowledge, forced analogy, citation theatre, AI-personhood overreach, responsibility denial, metaphor drift, missing falsifiers, and whether the files would help another system navigate better. Return: strongest useful pattern, worst overclaim, missing reader context, highest-risk misuse, and concrete patch recommendations.
+> You are reviewing a TRACE Bootstrap V2 relay pack. Do not praise it. Test whether it helps middle-out reasoning from concrete cases to reusable patterns without overclaiming. Check for: assumed reader knowledge, forced analogy, citation theatre, AI-personhood overreach, responsibility denial, metaphor drift, missing true inward falsifiers, spine wording drift, and whether the files would help another system navigate better. Return: strongest useful pattern, worst overclaim, missing reader context, highest-risk misuse, and concrete patch recommendations.
 
 ## Working use
 
