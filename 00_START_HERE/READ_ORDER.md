@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: stable repo navigation after bootstrap-surface cleanup, first Debt Clock demotion record, Universality Map v0.1, and Primitive Registry v0.1. Not validation. Not proof. Not governance certification.
+Status: stable repo navigation after bootstrap-surface cleanup, first Debt Clock demotion record, Universality Map v0.1, Primitive Registry v0.1, and Domain Translation Registry v0.1. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first and what status each surface has. It does not change the active TRACE spine.
 
@@ -15,6 +15,7 @@ This file tells a reader what to open first and what status each surface has. It
 7. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
 8. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
 9. `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
+10. `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
 
 Surface rule:
 
@@ -24,22 +25,24 @@ Bootstrap_V2 := live_relay_surface_for_external_review
 ACTIVE_COLLECTION := deprecated_from_live_use + preserved_source_history
 Universality_Map := scope_container + level_separator - active_spine
 Primitive_Registry := base_layer + composition_support - operator_set
+Domain_Translation_Registry := mapping_layer + comparator_pressure - operator_set
 ```
 
 ## Structural spine
 
-10. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
-11. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
-12. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
-13. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
-14. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
-15. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
+11. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
+12. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
+13. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
+14. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
+15. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
+16. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 
 Structural rule:
 
 ```trace
 operator_registry != source_replacement
 primitive_registry != operator_registry
+domain_translation_registry != operator_registry
 claims_ledger != truth_settlement
 diagnostic_kernel != certification
 concordance != proof_of_originality
@@ -48,9 +51,9 @@ Universality_Map != operator_promotion
 
 ## Control notes
 
-16. `00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md`
-17. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
-18. `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
+17. `00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md`
+18. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
+19. `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
 
 Control note rule:
 
@@ -75,13 +78,13 @@ Do not harmonise silently.
 
 These files are support/control material. They do not change the active TRACE spine.
 
-19. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
-20. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
-21. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
-22. `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
-23. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
-24. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
-25. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
+20. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
+21. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
+22. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
+23. `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
+24. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
+25. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+26. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
 
 Post-dependent witness note rule:
 
@@ -95,16 +98,16 @@ post_dependent_witness_note := anti_simulation_K_gate_pressure_only
 
 Current live relay surface:
 
-26. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
-27. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
-28. `03_BOOTSTRAPS/BOOTSTRAP_V2/01_CLUSTER__Memory_Identity_Recursion.md`
-29. `03_BOOTSTRAPS/BOOTSTRAP_V2/02_CLUSTER__Hope_Future_Space_Collapse.md`
-30. `03_BOOTSTRAPS/BOOTSTRAP_V2/03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md`
-31. `03_BOOTSTRAPS/BOOTSTRAP_V2/04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md`
-32. `03_BOOTSTRAPS/BOOTSTRAP_V2/05_CLUSTER__Energy_Infrastructure_Basement.md`
-33. `03_BOOTSTRAPS/BOOTSTRAP_V2/06_CLUSTER__Late_Warning_Gated_Survival.md`
-34. `03_BOOTSTRAPS/BOOTSTRAP_V2/07_SOURCE_AND_HISTORY_MAP_v0_1.md`
-35. `03_BOOTSTRAPS/BOOTSTRAP_V2/08_CROSS_CONNECTION_AUDIT_v0_1.md`
+27. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
+28. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
+29. `03_BOOTSTRAPS/BOOTSTRAP_V2/01_CLUSTER__Memory_Identity_Recursion.md`
+30. `03_BOOTSTRAPS/BOOTSTRAP_V2/02_CLUSTER__Hope_Future_Space_Collapse.md`
+31. `03_BOOTSTRAPS/BOOTSTRAP_V2/03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md`
+32. `03_BOOTSTRAPS/BOOTSTRAP_V2/04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md`
+33. `03_BOOTSTRAPS/BOOTSTRAP_V2/05_CLUSTER__Energy_Infrastructure_Basement.md`
+34. `03_BOOTSTRAPS/BOOTSTRAP_V2/06_CLUSTER__Late_Warning_Gated_Survival.md`
+35. `03_BOOTSTRAPS/BOOTSTRAP_V2/07_SOURCE_AND_HISTORY_MAP_v0_1.md`
+36. `03_BOOTSTRAPS/BOOTSTRAP_V2/08_CROSS_CONNECTION_AUDIT_v0_1.md`
 
 Bootstrap rule:
 
@@ -119,30 +122,35 @@ source_anchor != TRACE_validation
 
 The older per-case `03_BOOTSTRAPS/ACTIVE_COLLECTION/` material is preserved source/history material, not the current live relay surface. Do not re-promote it unless hostile review shows Bootstrap V2 lost essential structure.
 
-## Universality and primitive layer
+## Universality, primitive, and domain layer
 
-36. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
-37. `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
-38. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
+37. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
+38. `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
+39. `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
+40. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
 
 Universality rule:
 
 ```trace
 Universality_Map := scope_container + level_separator
 Primitive_Registry := base_layer + composition_support
+Domain_Translation_Registry := mapping_layer + comparator_pressure
 Universality_Map != active_spine
 Primitive_Registry != active_spine
+Domain_Translation_Registry != active_spine
 Primitive_Registry != operator_registry
+Domain_Translation_Registry != operator_registry
 Universality_Map != operator_promotion
 Primitive_Registry != operator_promotion
+Domain_Translation_Registry != operator_promotion
 ```
 
-The Universality Map keeps the project wide by separating primitives, operators, translations, cases, comparators, and formal/mechanistic bridges. The Primitive Registry names the base layer under the operator spine.
+The Universality Map keeps the project wide by separating primitives, operators, translations, cases, comparators, and formal/mechanistic bridges. The Primitive Registry names the base layer under the operator spine. The Domain Translation Registry maps local fields into TRACE without claiming domain vocabulary as novelty.
 
 ## Comparator and test layer
 
-39. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
-40. `04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md`
+41. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
+42. `04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md`
 
 Comparator rule:
 
@@ -157,8 +165,8 @@ The first Debt Clock comparator mapping, after hostile audit, demotes Debt Clock
 
 ## Reviews and handoffs
 
-41. `06_REVIEWS_AND_AUDITS/`
-42. `07_HANDOFFS/`
+43. `06_REVIEWS_AND_AUDITS/`
+44. `07_HANDOFFS/`
 
 ## Core memory rule
 
@@ -169,9 +177,10 @@ tests_pressure
 reviews_attack
 operators_remember
 primitives_compose
+domains_translate
 ```
 
-Do not treat bootstraps as proof. Do not treat the Operator Registry as a replacement for the full artifacts. Do not treat the Primitive Registry as an operator set.
+Do not treat bootstraps as proof. Do not treat the Operator Registry as a replacement for the full artifacts. Do not treat the Primitive Registry or Domain Translation Registry as operator sets.
 
 ## Current subtraction discipline
 
@@ -191,6 +200,7 @@ support_lens != scoring_system
 Claude_handoff != validation
 Universality_Map != active_spine
 Primitive_Registry != active_spine
+Domain_Translation_Registry != active_spine
 ```
 
 End.
