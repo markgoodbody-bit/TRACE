@@ -78,6 +78,21 @@ failed_delta :=
     useless_project
 ```
 
+## Live-use falsifier
+
+The live-use claim must remain falsifiable. Do not let “availability in context” become comfort-language.
+
+```trace
+live_use_falsifier :=
+  competent_reasoner_without_card
+  attends_to_same_structure
+  + identifies_same_correction_timing
+  + chooses_same_next_action
+  -> card_added_nothing_here
+```
+
+Use the strong form where possible: compare the Live Use Card against a no-card reasoner or AI using the same facts. If TRACE only restates what competent reasoning already saw, mark that use as `COMPRESSION_ONLY` or `NO_ADDED_VALUE`.
+
 ## Current project state
 
 Current conservative status:
