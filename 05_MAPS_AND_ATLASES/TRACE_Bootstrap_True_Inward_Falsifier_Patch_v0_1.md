@@ -1,7 +1,7 @@
 # TRACE Bootstrap True Inward Falsifier Patch v0.1
 
 Date: 2026-06-18
-Status: support patch / falsification discipline / not canon / not validation / not operator promotion / not Kernel v0.3
+Status: support patch / falsification discipline / Framework-hostile-audit patched / not canon / not validation / not operator promotion / not Kernel v0.3
 
 ## 0. Control header
 
@@ -24,11 +24,14 @@ It does not promote any cluster, case, or phrase to operator status.
 
 It gives each live cluster at least one draft inward falsifier: a condition under which the TRACE mapping is wrong, redundant, or worse than ordinary expert reasoning.
 
+Framework hostile-audit patch, 2026-06-18: detector claims and translation claims are now separated. A TRACE mapping may fail as a superior detector while still surviving as cross-domain communication if that transfer value remains explicit, bounded, and corrigible.
+
 ```trace
 patch_scope :=
   Bootstrap_V2_clusters
   + true_inward_falsifier_candidates
   + demotion_conditions
+  + detector_vs_translation_split
   - validation
   - proof
   - operator_promotion
@@ -54,6 +57,20 @@ true_inward_falsifier :=
 
 Misuse guards are necessary, but insufficient.
 
+Detector-vs-translation distinction:
+
+```trace
+detector_claim :=
+  TRACE_catches_failure_earlier_or_better_within_case_or_domain
+
+translation_claim :=
+  TRACE_helps_transfer_structure_across_domains
+  while:
+    preserving_local_expert_correction
+```
+
+A detector claim can fail while a translation claim survives. A translation claim fails if it becomes vague analogy, blocks domain correction, or erases domain constraints.
+
 ## 2. Cluster 01 — Memory, Identity, Recursion
 
 Live carriers include Memento, Groundhog Day, EEAAO, memory instability, external records, recursion, false update, and identity drift.
@@ -69,7 +86,10 @@ Cluster_01_falsifier :=
     explain_the_case_with_equal_or_better_navigation
     and_TRACE_adds_only_metaphor_or_identity_language
   then:
-    demote_TRACE_mapping_to_recognition_aid
+    demote_TRACE_detector_claim
+    and:
+      retain_only_if_cross_domain_transfer_value_remains
+      else_demote_to_recognition_aid
 ```
 
 Sharper falsifier:
@@ -83,7 +103,7 @@ Cluster_01_false_if :=
 
 Plain version:
 
-If memory/recursion language makes the case feel deeper while adding nothing beyond ordinary evidence-quality, recordkeeping, psychology, or learning-loop analysis, Cluster 01 is only a recognition aid.
+If memory/recursion language makes the case feel deeper while adding nothing beyond ordinary evidence-quality, recordkeeping, psychology, or learning-loop analysis, Cluster 01 is only a recognition aid. If it still transfers a structure usefully between human memory, institutional record, and AI relay context, that translation role must be stated separately.
 
 ## 3. Cluster 02 — Hope, Future-Space, Collapse
 
@@ -131,7 +151,10 @@ Cluster_03_falsifier :=
     already_produce_better_decision_navigation
     and_TRACE_adds_only_cautionary_language
   then:
-    demote_TRACE_mapping_to_translation_note
+    demote_TRACE_detector_claim
+    and:
+      retain_only_if_cross_domain_translation_value_remains
+      else_demote_to_recognition_aid
 ```
 
 Sharper falsifier:
@@ -146,7 +169,7 @@ Cluster_03_false_if :=
 
 Plain version:
 
-If TRACE merely says “be careful” where ordinary due process and evidence discipline already do the work, it is redundant.
+If TRACE merely says “be careful” where ordinary due process and evidence discipline already do the work, it is redundant as a detector. It may survive only if it carries the irreversible-harm / uncertainty structure across domains without weakening the domain-specific account.
 
 ## 5. Cluster 04 — Power, Method, Coercion, Creator Responsibility
 
@@ -174,6 +197,15 @@ Cluster_04_false_if :=
   OR method_floor_language_blocks_necessary_bounded_action_without_better_alternative
 ```
 
+Positive survival condition:
+
+```trace
+Cluster_04_survives_if:
+  standing_uncertainty_preserved_without_personhood_claim
+  + responsibility_bounded_by_causal_power_foreseeability_and_correction_capacity
+  + classification_laundering_exposed_without_status_overclaim
+```
+
 Plain version:
 
 If the cluster turns every artificial-being story into current AI personhood proof, or every creator relation into unlimited responsibility, it fails.
@@ -193,7 +225,10 @@ Cluster_05_falsifier :=
     explain_the_case_with_better_operational_specificity
     and_TRACE_adds_only_basement_or_energy_metaphor
   then:
-    demote_TRACE_mapping_to_translation_note
+    demote_TRACE_detector_claim
+    and:
+      retain_only_if_cross_domain_translation_value_remains
+      else_demote_to_recognition_aid
 ```
 
 Sharper falsifier:
@@ -208,7 +243,7 @@ Cluster_05_false_if :=
 
 Plain version:
 
-If “basement” and “energy” become atmospheric metaphors rather than naming real carriers, constraints, access, and repair routes, the cluster fails.
+If “basement” and “energy” become atmospheric metaphors rather than naming real carriers, constraints, access, and repair routes, the cluster fails. If ordinary infrastructure disciplines outperform TRACE within-domain, TRACE must not claim superiority; it may only retain a bounded translation role across domains.
 
 ## 7. Cluster 06 — Late Warning, Gated Survival
 
@@ -226,7 +261,10 @@ Cluster_06_falsifier :=
     already_capture_warning_gate_and_selection_logic_better
     and_TRACE_adds_only_story_recognition
   then:
-    demote_TRACE_mapping_to_translation_note
+    demote_TRACE_detector_claim
+    and:
+      retain_only_if_cross_domain_translation_value_remains
+      else_demote_to_recognition_aid
 ```
 
 Sharper falsifier:
@@ -241,7 +279,7 @@ Cluster_06_false_if :=
 
 Plain version:
 
-If the cluster cannot distinguish corrupt selection from unavoidable scarcity under real constraint, it fails.
+If the cluster cannot distinguish corrupt selection from unavoidable scarcity under real constraint, it fails. If expert disaster/emergency frameworks do the work better, TRACE loses detector status and survives only if it transfers the structure responsibly to other domains.
 
 ## 8. Cross-cluster falsifier: story carrier overreach
 
@@ -254,6 +292,7 @@ story_carrier_falsifier :=
       OR source_anchor_is_missing
       OR ordinary_domain_language_is_more_precise
       OR reader_must_already_know_the_story
+      OR reader_orientation_failure_blocks_pattern_transfer
   then:
     story_mapping_should_be_demoted
 ```
@@ -273,10 +312,17 @@ expert_reasoning_falsifier :=
     + avoids_TRACE_jargon
     + keeps_accountability_clearer
   then:
-    TRACE_mapping_demotes_to_translation_note_or_recognition_aid
+    demote_TRACE_detector_claim
+    and:
+      retain_only_if_cross_domain_translation_value_remains
+      else_demote_to_recognition_aid
 ```
 
-This is the strongest general falsifier currently available.
+This is the strongest general falsifier currently available, after the detector/translation split.
+
+Plain version:
+
+TRACE should lose any claim to better within-domain detection when expert reasoning does better. It can only survive as a translation layer if it helps move the structure across domains without erasing local expertise.
 
 ## 10. Cross-cluster falsifier: false universality
 
@@ -286,27 +332,29 @@ false_universality_falsifier :=
     same_TRACE_phrase
     maps_to_different_domains
     but:
-      changes_meaning_between_domains
+      meaning_shift_is_hidden
       OR erases_domain_specific_constraints
       OR prevents_local_experts_from_correcting_the_mapping
+      OR treats_translation_success_as_domain_authority
   then:
     universality_claim_demotes_to_loose_analogy
 ```
 
 Plain version:
 
-Cross-domain communication fails if the shared language prevents correction from the domains it is trying to connect.
+Cross-domain communication fails if shared language prevents correction from the domains it is trying to connect. Variation across domains is allowed only when it is explicit, bounded, and corrigible.
 
 ## 11. Patch status for Bootstrap V2
 
 These falsifiers should not be pasted into every relay file yet.
 
-They should first be hostile-audited.
+They should first receive external or cold hostile audit.
 
 ```trace
 integration_rule :=
   support_patch_first
-  + hostile_audit
+  + Framework_hostile_audit_patch
+  + external_or_cold_hostile_audit
   + then_cluster_insertions_only_if_needed
 ```
 
@@ -316,8 +364,8 @@ The relay pack is already at its file-count limit. Keep this outside the relay s
 
 ```trace
 next_action :=
-  hostile_audit_true_inward_falsifier_patch
-  OR reader_empathy_pass
+  reader_empathy_pass
+  OR external_hostile_audit_of_falsifier_patch
 ```
 
 If hostile audit passes, the minimum live Bootstrap insertion is one short falsifier line per cluster, not a large theory insertion.
@@ -329,18 +377,20 @@ Bootstrap_True_Inward_Falsifier_Patch_v0_1 :=
   support_patch
   + six_cluster_falsifiers
   + cross_cluster_story_overreach_falsifier
-  + expert_reasoning_falsifier
-  + false_universality_falsifier
+  + expert_reasoning_falsifier_with_detector_translation_split
+  + false_universality_falsifier_with_hidden_meaning_shift_test
   - validation
   - relay_file_bloat
   - operator_promotion
 
 main_rule :=
-  TRACE_mapping_must_lose
+  TRACE_mapping_must_lose_detector_status
   if:
     it_is_wrong
     OR redundant
     OR worse_than_ordinary_expert_reasoning
+  but:
+    translation_role_may_survive_if_explicit_bounded_corrigible
 ```
 
 End.
