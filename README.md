@@ -33,14 +33,31 @@ Not current use: proof, validation, governance certification, a complete ethics 
 
 1. `00_START_HERE/READ_ORDER.md`
 2. `00_START_HERE/IMPORT_MANIFEST.md`
-3. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
-4. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
-5. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
-6. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
-7. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
-8. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
-9. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
-10. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
+3. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
+4. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
+5. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
+6. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
+7. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
+8. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
+9. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
+10. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
+11. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
+12. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
+13. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
+
+## Surface roles
+
+```trace
+Rosetta_front_door := conceptual_current_surface
+Bootstrap_V2 := live_relay_surface + hostile_review_surface
+ACTIVE_COLLECTION := deprecated_from_live_use + preserved_source_history
+```
+
+Plain version:
+
+- `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md` is the current conceptual front door.
+- `03_BOOTSTRAPS/BOOTSTRAP_V2/` is the current relay pack for external review and pattern-recognition testing.
+- Older per-case `03_BOOTSTRAPS/ACTIVE_COLLECTION/` material is preserved history/source material, not the active relay surface.
 
 ## Latest continuity, control, and method addenda
 
@@ -145,6 +162,10 @@ summary != preservation
 candidate_annex != active_spine
 comparator_queue != comparator_run
 post_dependent_witness_note != AI_needs_humans_proof
+Bootstrap_V2 != canon
+Bootstrap_V2 != validation
+story_carrier != evidence
+source_anchor != TRACE_validation
 ```
 
 ## Repository structure
@@ -154,7 +175,7 @@ post_dependent_witness_note != AI_needs_humans_proof
 00_CONTROL/             anti-self-deception, control index, spine drift note
 01_CANONICAL_MEMORY/    operator registry, claims ledger, demotion protocol
 02_CURRENT_SURFACE/     public one-sheet and current Rosetta front door
-03_BOOTSTRAPS/          active bootstrap collection and source markdown
+03_BOOTSTRAPS/          Bootstrap V2 live relay surface plus deprecated/preserved source history
 04_COVERAGE/            comparator queues and worked delta cases
 04_KERNEL_AND_TESTS/    diagnostic kernel, preregistered test template, method notes
 05_MAPS_AND_ATLASES/    subtraction concordance, case atlas, candidate support lenses
