@@ -1,7 +1,7 @@
 # TRACE Bootstrap Coverage Matrix v0.1
 
 Date: 2026-06-18
-Status: coverage map / bootstrap memory surface / not canon / not validation / not operator promotion / not Kernel v0.3
+Status: coverage map / bootstrap memory surface / hostile-audit patched / not canon / not validation / not operator promotion / not Kernel v0.3
 
 ## 0. Control header
 
@@ -30,6 +30,8 @@ It does not claim full coverage.
 
 It exists to prevent hidden blanks and over-mapping.
 
+Hostile-audit patch note, 2026-06-18: this file now records the existence of `TRACE_Bootstrap_True_Inward_Falsifier_Patch_v0_1.md` as a support patch. Those falsifiers are not yet installed in the Bootstrap V2 relay pack.
+
 ```trace
 coverage_matrix_scope :=
   map_TRACE_component
@@ -53,6 +55,7 @@ coverage_status :=
   TRANSLATION_ONLY := domain_translation_exists_but_story_carrier_not_live
   BLANK := no_clear_bootstrap_story_mapping_yet
   OVERMAPPED := too_many_carriers_or_story_doing_proof_work
+  SUPPORT_PATCH_CREATED := support_file_exists_but_not_installed_in_relay_pack
 ```
 
 ## 2. High-level result
@@ -68,12 +71,12 @@ bootstrap_coverage_state :=
   enforcement_carriers := under_mapped
   practical_design_patterns := not_live_mapped
   failure_mode_atlas := not_live_mapped
-  true_inward_falsifiers := missing
+  true_inward_falsifiers := support_patch_created_not_installed
 ```
 
 Plain version:
 
-Bootstrap V2 maps many of TRACE's recognisable human patterns well. It is weakest where TRACE becomes institutional, formal, enforcement-heavy, standing-heavy, or falsification-heavy.
+Bootstrap V2 maps many of TRACE's recognisable human patterns well. It is weakest where TRACE becomes institutional, formal, enforcement-heavy, standing-heavy, repair-heavy, or falsification-heavy.
 
 ## 3. Coverage matrix
 
@@ -83,6 +86,10 @@ Bootstrap V2 maps many of TRACE's recognisable human patterns well. It is weakes
 | Hope / future-space / collapse | Children of Men; EEAAO; Samwise | MAPPED | Avoid sentimentality; keep capacity and next-step structure visible | Reader-entry pass, especially Samwise and EEAAO |
 | Judgment under uncertainty / irreversible harm | 12 Angry Men; Unthinkable | MAPPED | Unthinkable record-quality link still weak | Add uncertainty / controlled-record link if editing Cluster 03/04 |
 | Emergency pressure / method laundering | Unthinkable; 2012; Greenland | MAPPED | Tragic remainder not fully separated from method-floor | Build later Tragic Remainder Action Map |
+| Repair after action | Unthinkable partial; disaster-gate partial; no clear live carrier | WEAK / TRANSLATION_ONLY | Post-action repair after unavoidable or already-hardened harm is not mapped clearly | Link later to Tragic Remainder Action Map and repair-before-closure design pattern |
+| Burden routing | Samwise partial; infrastructure partial; welfare/debt translation outside bootstrap | WEAK | Bootstrap does not yet explicitly ask who is forced to carry the system's unresolved contradiction | Add future-load/burden-routing row to source map or cluster note, without new story first |
+| Evidence-channel integrity | Memento; Apollo 13; Unthinkable partial | WEAK | Record reliability, telemetry, legal evidence, AI logs, and source authority are broader than memory | Later source-authority gradient / evidence-channel map |
+| Domain-expert correction route | none clear in live bootstrap | TRANSLATION_ONLY / BLANK | Universality requires local experts to correct mappings, but bootstrap has no clear carrier for this route | Add to false-universality guard and future review protocol |
 | Power / coercion / creator responsibility | Frankenstein; Data; Unthinkable | MAPPED / WEAK | Data and Frankenstein risk AI-personhood overclaim | Keep boundary: story carrier does not prove current AI personhood |
 | Classification laundering | Data; Blade Runner pointer | WEAK / PROBE | Needs more explicit link to responsibility-denial systems | Possible brief Data orientation patch |
 | Created subject / artificial subject uncertainty | Frankenstein; Data; Ex Machina pointer; Blade Runner pointer | WEAK / PROBE | Standing/wrongability not solved; story risk high | Treat as standing-layer input only |
@@ -111,7 +118,7 @@ Bootstrap V2 maps many of TRACE's recognisable human patterns well. It is weakes
 | Enforcement carrier taxonomy | Apollo 13 partial; infrastructure partial | WEAK | Legal/regulatory/technical teeth not fully mapped | Carrier taxonomy support file later |
 | Design pattern library | none live | BLANK | Diagnosis has stories; design structures lack story mapping | Later carrier-pattern note, not broad library |
 | Failure mode atlas | scattered across clusters | WEAK / BLANK | Many modes exist but not grouped by structure | Build atlas later after audit/falsifiers |
-| True inward falsifiers | none fully installed across clusters | BLANK | Drift/misuse guards are not inward falsifiers | Priority patch before claiming falsification discipline |
+| True inward falsifiers | support patch exists outside relay pack | SUPPORT_PATCH_CREATED / NOT_INSTALLED / HOSTILE_AUDIT_PENDING | Drift/misuse guards are not inward falsifiers; support patch not yet integrated | Patch falsifier support file after hostile audit; insert only short cluster lines later if needed |
 
 ## 4. What is completely unmapped?
 
@@ -119,8 +126,7 @@ Strictly unmapped or nearly blank in the bootstrap story layer:
 
 ```trace
 bootstrap_blanks :=
-  true_inward_falsifiers
-  + formal_mathematical_bridge
+  formal_mathematical_bridge
   + mature_standing_wrongability_layer
   + practical_design_pattern_library
   + failure_mode_atlas
@@ -129,6 +135,14 @@ bootstrap_blanks :=
   + labour_platform_power
   + animals_ecology_nonhuman_standing
   + religion_meaning_authority_systems
+  + domain_expert_correction_route
+```
+
+No longer strictly blank, but not installed:
+
+```trace
+support_patch_created_not_installed :=
+  true_inward_falsifiers
 ```
 
 Partially mapped but underdeveloped:
@@ -141,6 +155,9 @@ weak_maps :=
   created_subject_uncertainty := Data_Frankenstein_partial_boundary_sensitive
   captured_voice := Truman_Show_probe_only
   metric_capture := Gattaca_probe_only
+  repair_after_action := Unthinkable_and_disaster_gate_partial
+  burden_routing := Samwise_and_infrastructure_partial
+  evidence_channel_integrity := Memento_Apollo13_Unthinkable_partial
 ```
 
 ## 5. Areas over-mapped or at risk of story overload
@@ -159,11 +176,11 @@ Over-mapping is not fatal. It means the pack needs clearer routing so multiple c
 
 ```trace
 priority_order :=
-  1_reader_empathy_pass
-  + 2_true_inward_falsifiers
+  1_patch_falsifiers_after_framework_audit
+  + 2_reader_empathy_pass
   + 3_Groundhog_Day_AI_relay_loop_patch
   + 4_Bootstrap_worked_navigation_comparison
-  + 5_story_to_TRACE_coverage_matrix_hostile_audit
+  + 5_story_to_TRACE_coverage_matrix_external_hostile_audit
   then_maybe:
     enforcement_carrier_taxonomy
     OR standing_wrongability_map
@@ -210,16 +227,15 @@ Bootstrap_Coverage_Matrix_v0_1 :=
   + weak_maps_named
   + probe_only_areas_named
   + overmap_risks_named
+  + support_patch_status_named
   + build_order_set
   - validation
   - new_story_promotion
   - operator_promotion
 
 next_best_move :=
-  reader_empathy_pass
-  OR true_inward_falsifier_patch
-  not:
-    more_story_collection
+  patch_falsifiers_after_framework_audit
+  then_reader_empathy_pass
 ```
 
 End.
