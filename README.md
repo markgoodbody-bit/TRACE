@@ -49,6 +49,7 @@ Not current use: proof, validation, governance certification, a complete ethics 
 16. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
 17. `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md`
 18. `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md`
+19. `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1.md`
 
 ## Surface roles
 
@@ -61,6 +62,7 @@ Primitive_Registry := base_layer + composition_support - operator_set
 Domain_Translation_Registry := mapping_layer + comparator_pressure - operator_set
 Robodebt_Worked_Delta := first_worked_delta + modest_clock_compression - validation
 Tay_Worked_Delta := second_worked_delta + modest_clock_carrier_compression - validation
+Clock_Carrier_Compression_Note := support_note_after_two_deltas - operator
 ```
 
 Plain version:
@@ -73,6 +75,7 @@ Plain version:
 - `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md` maps local domains to primitives, operators, comparators, demoters, and must-not-claim rules. It is not an operator registry and remains hostile-review pending.
 - `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md` is the first worked delta. It shows modest TRACE compression, not new detection and not validation.
 - `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md` is the second worked delta. It shows modest TRACE clock/carrier compression, not new detection and not validation.
+- `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1.md` records the repeated result after two worked deltas. It is a support note, not an operator.
 
 ## Latest continuity, control, and method addenda
 
@@ -90,6 +93,7 @@ latest_addenda :=
   + Debt_Clock_Robodebt_comparator_run_v0_1
   + TRACE_Robodebt_Worked_Delta_v0_1
   + TRACE_Tay_Worked_Delta_v0_1
+  + TRACE_Clock_Carrier_Compression_Note_v0_1
   + TRACE_scope_map_v0_1
   + TRACE_Primitive_Registry_v0_1
   + TRACE_Domain_Translation_Registry_v0_1
@@ -110,6 +114,7 @@ status :=
 - `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
 - `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md`
 - `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md`
+- `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
 - `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
@@ -127,6 +132,7 @@ operators_remember
 primitives_compose
 domains_translate
 worked_deltas_demote_or_bound
+support_notes_do_not_promote
 ```
 
 Operators are the main memory unit for active TRACE moves, but the registry does not replace the source artifacts. Primitives are the composition layer beneath operators. Domain translations map local fields into primitives and operators without claiming novelty by default.
@@ -167,6 +173,26 @@ pattern_after_two_deltas :=
 Plain version:
 
 TRACE did not beat ordinary public law on Robodebt and did not beat ordinary AI safety on Tay. In both cases it clarified a reusable timing/carrier structure, but the domain-specific fields owned most of the detail.
+
+## Current support note result
+
+```trace
+Clock_Carrier_Compression_Note_v0_1 :=
+  after_two_worked_deltas:
+    TRACE_may_help_order:
+      hardening_clock
+      + correction_clock
+      + carrier_reality
+  while:
+    existing_fields_own_domain_detail
+    + no_new_operator
+    + no_validation
+    + third_delta_required
+```
+
+Plain version:
+
+TRACE is currently earning a role as a clock/carrier compression grammar, not as a superior detector. The next test must either strengthen that role or demote it.
 
 ## Current held branches
 
@@ -236,6 +262,8 @@ candidate_annex != active_spine
 comparator_queue != comparator_run
 comparator_run != operator_promotion
 worked_delta != validation
+support_note != operator
+Clock_Carrier_Compression_Note != operator
 Robodebt_Worked_Delta != TRACE_beats_public_law
 Tay_Worked_Delta != TRACE_beats_AI_safety
 Scope_Map != active_spine
@@ -255,7 +283,7 @@ source_anchor != TRACE_validation
 01_CANONICAL_MEMORY/    operator registry, primitive registry, domain translation registry, claims ledger, demotion protocol
 02_CURRENT_SURFACE/     public one-sheet and current Rosetta front door
 03_BOOTSTRAPS/          Bootstrap V2 live relay surface plus deprecated/preserved source history
-04_COVERAGE/            comparator queues and worked delta cases
+04_COVERAGE/            comparator queues, worked delta cases, and bounded support notes
 04_KERNEL_AND_TESTS/    diagnostic kernel, preregistered test template, method notes
 05_MAPS_AND_ATLASES/    subtraction concordance, scope/applicability map, case atlas, candidate support lenses
 06_REVIEWS_AND_AUDITS/  AI review digest and falsification/drift audits
@@ -270,6 +298,6 @@ New cases should not be added as bootstraps unless they reveal, pressure-test, o
 
 Claims must be demotable. If TRACE cannot lose claims, it becomes a belief system rather than a tool.
 
-No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, scope mapping, primitive definition, domain translation, worked deltas, and real pressure testing.
+No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, scope mapping, primitive definition, domain translation, worked deltas, bounded support notes, and real pressure testing.
 
-Next technical move: decide whether the repeated clock/carrier compression is worth formalising, or run a third worked delta in policing/preemption, MI, or infrastructure before any new scaffolding file.
+Next technical move: run a third worked delta in policing/preemption, MI, or infrastructure. If it shows no navigation gain, demote the Clock / Carrier Compression Note. If it repeats the pattern, keep it as a support check, not an operator.
