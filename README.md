@@ -146,13 +146,15 @@ Do not harmonise silently.
 
 ```trace
 Debt_Clock_comparator_queue_exists := true
-first_Debt_Clock_comparator_run_completed := true
+first_Debt_Clock_comparator_mapping_completed := true
 first_run_file := 04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md
 Debt_Clock_promoted := false
-Debt_Clock_result := retain_as_candidate_narrowed + high_demoter_pressure
+Debt_Clock_result := demote_to_translation_note
+merge_target := correction_before_hardening
+legal_analogue_note := automatic_stay_or_stay_like_pause
 ```
 
-The first source-backed run pressures the candidate. It does not promote it. It does not validate TRACE. The strongest demoter from the run is the automatic-stay / relief-against-forfeiture analogue.
+The first source-scoped run, after hostile audit, demotes Debt Clock. It remains only as a translation note: in debt-like systems, check whether recovery pressure hardens before correction or pause reaches the subject. It does not promote an operator and does not validate TRACE.
 
 ## Must-not-claim rules
 
