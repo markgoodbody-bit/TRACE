@@ -143,6 +143,41 @@ probe_promotion_requires:
 
 This README should remain a contract and orientation surface. The audit file carries the held candidate material so the relay front door does not become a carrier shelf.
 
+## Current cleanup notes
+
+Bootstrap V2 is cleaner than the older per-case surface, but it is not finished.
+
+```trace
+current_bootstrap_cleanup_state :=
+  live_relay_surface_cleaner
+  + active_collection_deprecated_from_live_use
+  + major_cross_links_patched
+  but:
+    true_inward_falsifiers_not_yet_installed
+    + worked_navigation_delta_not_yet_built
+    + reader_entry_pass_still_needed
+```
+
+Two guardrails control future edits:
+
+```trace
+drift_misuse_guard != true_inward_falsifier
+null_attractor := bounded_story_shorthand_only
+```
+
+The `null_attractor` phrase may appear as shorthand for collapse into directionless or predatory state-space in story-carrier discussion. It must not be treated as an established primary TRACE threat, an operator, or validation of any Gemini-derived metaphysical claim.
+
+The live spine wording drift also remains unresolved:
+
+```trace
+spine_wording_drift :=
+  exit_when_correction_channel_is_harm_carrier
+  vs
+  exit_when_correction_channel_is_predatory
+```
+
+Do not silently make these equivalent inside Bootstrap V2. When a cluster uses one branch, quote or preserve the branch it actually uses.
+
 ## Why this folder exists
 
 The earlier bootstrap set works because familiar films, literature, and historical cases carry structure better than abstract doctrine. The weakness is file count and relay sprawl. Many external AI systems can handle long files but struggle with too many separate files.
@@ -208,7 +243,9 @@ Bootstrap V2 does not claim:
 - the selected source is exhaustive;
 - a familiar example gives permission to simplify real harm;
 - a source citation automatically validates a TRACE compression;
-- readers already share the author's cultural references.
+- readers already share the author's cultural references;
+- drift/misuse guards are the same as true inward falsifiers;
+- `null_attractor` is an established TRACE threat model.
 
 ## Build rule
 
@@ -225,3 +262,5 @@ Use this folder as the live bootstrap relay surface. Later, only stable compress
 5. Keep captured voice, metric capture, and rehabilitation without victim capture as held candidate deltas; do not integrate them into clusters until explicitly accepted.
 6. Test candidate coverage probes and historical echoes before promotion.
 7. Do not re-promote old per-case bootstraps unless a hostile review shows V2 lost essential structure.
+8. Add true inward falsifiers only after the reader-entry pass, not by renaming misuse guards.
+9. Build one worked navigational comparison before claiming Bootstrap V2 improves navigation over an ordinary careful pass.
