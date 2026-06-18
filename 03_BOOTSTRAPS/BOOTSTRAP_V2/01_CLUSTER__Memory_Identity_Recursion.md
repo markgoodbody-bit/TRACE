@@ -11,6 +11,10 @@ For humans, memory is embodied, social, emotional, and reconstructive. For insti
 
 The shared problem is not forgetting alone. The shared problem is acting from a memory structure that feels stable while being incomplete, distorted, overloaded, or uncorrected.
 
+## Reader-entry orientation
+
+This cluster uses memory and repetition stories as pressure diagrams, not evidence. *Memento* shows a person depending on external records when internal memory fails; *Groundhog Day* shows repetition training whatever the feedback loop rewards; *Everything Everywhere All at Once* shows excessive branch-space collapsing direction without care or relation. The TRACE pattern is that memory, record, and recurrence are live only when they improve correction rather than preserving confident drift.
+
 ## TRACE compression
 
 ```trace
