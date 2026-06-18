@@ -44,6 +44,7 @@ Not current use: proof, validation, governance certification, a complete ethics 
 11. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
 12. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
 13. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
+14. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
 
 ## Surface roles
 
@@ -51,6 +52,7 @@ Not current use: proof, validation, governance certification, a complete ethics 
 Rosetta_front_door := conceptual_current_surface
 Bootstrap_V2 := live_relay_surface + hostile_review_surface
 ACTIVE_COLLECTION := deprecated_from_live_use + preserved_source_history
+Universality_Map := scope_container + level_separator - active_spine
 ```
 
 Plain version:
@@ -58,6 +60,7 @@ Plain version:
 - `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md` is the current conceptual front door.
 - `03_BOOTSTRAPS/BOOTSTRAP_V2/` is the current relay pack for external review and pattern-recognition testing.
 - Older per-case `03_BOOTSTRAPS/ACTIVE_COLLECTION/` material is preserved history/source material, not the active relay surface.
+- `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md` is a scope and architecture map. It does not add an operator or validate TRACE.
 
 ## Latest continuity, control, and method addenda
 
@@ -73,6 +76,7 @@ latest_addenda :=
   + spine_wording_drift_note
   + Debt_Clock_comparator_queue
   + Debt_Clock_Robodebt_comparator_run_v0_1
+  + TRACE_Universality_Map_v0_1
 
 status :=
   support_material
@@ -85,6 +89,7 @@ status :=
 - `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
 - `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
 - `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
+- `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
 - `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
@@ -101,7 +106,21 @@ reviews_attack
 operators_remember
 ```
 
-Operators are the main memory unit, but the registry does not replace the source artifacts. Cases, papers, bootstraps, ledgers, audits, and relay packs are supporting evidence, teaching surfaces, and pressure surfaces.
+Operators are the main memory unit, but the registry does not replace the source artifacts. Cases, papers, bootstraps, ledgers, audits, maps, and relay packs are supporting evidence, teaching surfaces, and pressure surfaces.
+
+## Universality discipline
+
+```trace
+universal_growth_rule :=
+  primitives_expand
+  + translations_expand
+  + comparators_expand
+  + design_patterns_expand
+  while:
+    active_operator_spine_remains_small
+```
+
+The Universality Map holds the large ambition: love, death, robots, primitives, domain translations, formal/mechanistic bridge, design patterns, failure modes, standing, and tragic remainder. It is a scope container, not an operator promotion surface.
 
 ## Current held branches
 
@@ -168,6 +187,8 @@ summary != preservation
 candidate_annex != active_spine
 comparator_queue != comparator_run
 comparator_run != operator_promotion
+Universality_Map != active_spine
+Universality_Map != operator_promotion
 post_dependent_witness_note != AI_needs_humans_proof
 Bootstrap_V2 != canon
 Bootstrap_V2 != validation
@@ -185,7 +206,7 @@ source_anchor != TRACE_validation
 03_BOOTSTRAPS/          Bootstrap V2 live relay surface plus deprecated/preserved source history
 04_COVERAGE/            comparator queues and worked delta cases
 04_KERNEL_AND_TESTS/    diagnostic kernel, preregistered test template, method notes
-05_MAPS_AND_ATLASES/    subtraction concordance, case atlas, candidate support lenses
+05_MAPS_AND_ATLASES/    subtraction concordance, universality map, case atlas, candidate support lenses
 06_REVIEWS_AND_AUDITS/  AI review digest and falsification/drift audits
 07_HANDOFFS/            relay pack and external-agent handoff notes
 90_ORIGINAL_ZIPS/       selected archived source ZIPs and handoff ZIPs
@@ -198,4 +219,4 @@ New cases should not be added as bootstraps unless they reveal, pressure-test, o
 
 Claims must be demotable. If TRACE cannot lose claims, it becomes a belief system rather than a tool.
 
-No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, and real pressure testing.
+No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, universality mapping, and real pressure testing.
