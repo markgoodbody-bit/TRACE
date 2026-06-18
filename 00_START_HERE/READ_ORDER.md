@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: stable repo navigation after bootstrap-surface cleanup and first Debt Clock demotion record. Not validation. Not proof. Not governance certification.
+Status: stable repo navigation after bootstrap-surface cleanup, first Debt Clock demotion record, and Universality Map v0.1. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first and what status each surface has. It does not change the active TRACE spine.
 
@@ -13,6 +13,7 @@ This file tells a reader what to open first and what status each surface has. It
 5. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
 6. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
 7. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
+8. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
 
 Surface rule:
 
@@ -20,16 +21,17 @@ Surface rule:
 Rosetta_front_door := conceptual_current_surface
 Bootstrap_V2 := live_relay_surface_for_external_review
 ACTIVE_COLLECTION := deprecated_from_live_use + preserved_source_history
+Universality_Map := scope_container + level_separator - active_spine
 ```
 
 ## Structural spine
 
-8. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
-9. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
-10. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
-11. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
-12. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
-13. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
+9. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
+10. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
+11. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
+12. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
+13. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
+14. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 
 Structural rule:
 
@@ -38,13 +40,14 @@ operator_registry != source_replacement
 claims_ledger != truth_settlement
 diagnostic_kernel != certification
 concordance != proof_of_originality
+Universality_Map != operator_promotion
 ```
 
 ## Control notes
 
-14. `00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md`
-15. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
-16. `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
+15. `00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md`
+16. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
+17. `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
 
 Control note rule:
 
@@ -69,13 +72,13 @@ Do not harmonise silently.
 
 These files are support/control material. They do not change the active TRACE spine.
 
-17. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
-18. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
-19. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
-20. `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
-21. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
-22. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
-23. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
+18. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
+19. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
+20. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
+21. `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
+22. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
+23. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+24. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
 
 Post-dependent witness note rule:
 
@@ -89,16 +92,16 @@ post_dependent_witness_note := anti_simulation_K_gate_pressure_only
 
 Current live relay surface:
 
-24. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
-25. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
-26. `03_BOOTSTRAPS/BOOTSTRAP_V2/01_CLUSTER__Memory_Identity_Recursion.md`
-27. `03_BOOTSTRAPS/BOOTSTRAP_V2/02_CLUSTER__Hope_Future_Space_Collapse.md`
-28. `03_BOOTSTRAPS/BOOTSTRAP_V2/03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md`
-29. `03_BOOTSTRAPS/BOOTSTRAP_V2/04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md`
-30. `03_BOOTSTRAPS/BOOTSTRAP_V2/05_CLUSTER__Energy_Infrastructure_Basement.md`
-31. `03_BOOTSTRAPS/BOOTSTRAP_V2/06_CLUSTER__Late_Warning_Gated_Survival.md`
-32. `03_BOOTSTRAPS/BOOTSTRAP_V2/07_SOURCE_AND_HISTORY_MAP_v0_1.md`
-33. `03_BOOTSTRAPS/BOOTSTRAP_V2/08_CROSS_CONNECTION_AUDIT_v0_1.md`
+25. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
+26. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
+27. `03_BOOTSTRAPS/BOOTSTRAP_V2/01_CLUSTER__Memory_Identity_Recursion.md`
+28. `03_BOOTSTRAPS/BOOTSTRAP_V2/02_CLUSTER__Hope_Future_Space_Collapse.md`
+29. `03_BOOTSTRAPS/BOOTSTRAP_V2/03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md`
+30. `03_BOOTSTRAPS/BOOTSTRAP_V2/04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md`
+31. `03_BOOTSTRAPS/BOOTSTRAP_V2/05_CLUSTER__Energy_Infrastructure_Basement.md`
+32. `03_BOOTSTRAPS/BOOTSTRAP_V2/06_CLUSTER__Late_Warning_Gated_Survival.md`
+33. `03_BOOTSTRAPS/BOOTSTRAP_V2/07_SOURCE_AND_HISTORY_MAP_v0_1.md`
+34. `03_BOOTSTRAPS/BOOTSTRAP_V2/08_CROSS_CONNECTION_AUDIT_v0_1.md`
 
 Bootstrap rule:
 
@@ -113,10 +116,26 @@ source_anchor != TRACE_validation
 
 The older per-case `03_BOOTSTRAPS/ACTIVE_COLLECTION/` material is preserved source/history material, not the current live relay surface. Do not re-promote it unless hostile review shows Bootstrap V2 lost essential structure.
 
+## Universality and maps layer
+
+35. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
+36. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
+
+Universality rule:
+
+```trace
+Universality_Map := scope_container + level_separator
+Universality_Map != active_spine
+Universality_Map != operator_promotion
+Universality_Map != validation
+```
+
+The Universality Map keeps the project wide by separating primitives, operators, translations, cases, comparators, and formal/mechanistic bridges.
+
 ## Comparator and test layer
 
-34. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
-35. `04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md`
+37. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
+38. `04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md`
 
 Comparator rule:
 
@@ -129,11 +148,10 @@ Debt_Clock_Robodebt_run_v0_1 := demotion_record + translation_note
 
 The first Debt Clock comparator mapping, after hostile audit, demotes Debt Clock to a translation note. It does not promote Debt Clock and does not validate TRACE.
 
-## Case and comparison layer
+## Reviews and handoffs
 
-36. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
-37. `06_REVIEWS_AND_AUDITS/`
-38. `07_HANDOFFS/`
+39. `06_REVIEWS_AND_AUDITS/`
+40. `07_HANDOFFS/`
 
 ## Core memory rule
 
@@ -163,6 +181,7 @@ continuity_addendum != active_spine
 method_note != Kernel_v0_3
 support_lens != scoring_system
 Claude_handoff != validation
+Universality_Map != active_spine
 ```
 
 End.
