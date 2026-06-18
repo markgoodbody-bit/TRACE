@@ -9,6 +9,10 @@ The harder the harm is to reverse, the more honestly the system must treat uncer
 
 This cluster is not an argument for paralysis. It is an argument for tempo discipline: slow down when the system is rushing toward irreversible harm under unresolved uncertainty; act quickly when delay itself is the irreversible harm path.
 
+## Reader-entry orientation
+
+This cluster uses stories where decisions may cause irreversible or hard-to-repair harm. *12 Angry Men* shows dissent slowing a rush toward conviction so the record can be re-tested; *Unthinkable* tests whether emergency pressure can launder forbidden methods; *Memento* warns against decisive action from a corrupted record. The TRACE pattern is tempo discipline: slow down when closure would harden wrongful harm, but act quickly when delay is itself the hardening path.
+
 ## TRACE compression
 
 ```trace
