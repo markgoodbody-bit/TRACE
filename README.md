@@ -72,6 +72,7 @@ latest_addenda :=
   + claude_code_handoff
   + spine_wording_drift_note
   + Debt_Clock_comparator_queue
+  + Debt_Clock_Robodebt_comparator_run_v0_1
 
 status :=
   support_material
@@ -88,6 +89,7 @@ status :=
 - `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
 - `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
 - `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
+- `04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md`
 
 ## Core memory rule
 
@@ -140,15 +142,17 @@ This drift is recorded in `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`.
 
 Do not harmonise silently.
 
-## Current comparator queue status
+## Current Debt Clock status
 
 ```trace
 Debt_Clock_comparator_queue_exists := true
-first_Debt_Clock_comparator_run_completed := false
+first_Debt_Clock_comparator_run_completed := true
+first_run_file := 04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md
 Debt_Clock_promoted := false
+Debt_Clock_result := retain_as_candidate_narrowed + high_demoter_pressure
 ```
 
-The queue exists to pressure the candidate, not promote it.
+The first source-backed run pressures the candidate. It does not promote it. It does not validate TRACE. The strongest demoter from the run is the automatic-stay / relief-against-forfeiture analogue.
 
 ## Must-not-claim rules
 
@@ -161,6 +165,7 @@ front_door != payload_archive
 summary != preservation
 candidate_annex != active_spine
 comparator_queue != comparator_run
+comparator_run != operator_promotion
 post_dependent_witness_note != AI_needs_humans_proof
 Bootstrap_V2 != canon
 Bootstrap_V2 != validation
