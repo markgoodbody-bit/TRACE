@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: stable repo navigation after bootstrap-surface cleanup and first Debt Clock comparator run. Not validation. Not proof. Not governance certification.
+Status: stable repo navigation after bootstrap-surface cleanup and first Debt Clock demotion record. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first and what status each surface has. It does not change the active TRACE spine.
 
@@ -124,10 +124,10 @@ Comparator rule:
 comparator_queue != comparator_run
 comparator_run != operator_promotion
 Debt_Clock_queue != Debt_Clock_promotion
-Debt_Clock_Robodebt_run_v0_1 := candidate_pressure_only
+Debt_Clock_Robodebt_run_v0_1 := demotion_record + translation_note
 ```
 
-The first Debt Clock comparator run narrows the candidate and creates high demoter pressure. It does not promote Debt Clock and does not validate TRACE.
+The first Debt Clock comparator mapping, after hostile audit, demotes Debt Clock to a translation note. It does not promote Debt Clock and does not validate TRACE.
 
 ## Case and comparison layer
 
