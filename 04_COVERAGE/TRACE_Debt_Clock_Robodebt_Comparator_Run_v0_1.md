@@ -1,13 +1,15 @@
 # TRACE Debt Clock — Robodebt Comparator Run v0.1
 
 Date: 2026-06-18
-Status: source-backed comparator run / candidate-pressure artifact / not validation / not proof / not operator promotion / not Kernel v0.3
+Status: source-scoped comparator mapping / demotion record / translation note / not validation / not proof / not operator promotion / not Kernel v0.3
 
 ## 0. Control header
 
-This file completes the first source-backed comparator run proposed in `TRACE_Debt_Clock_Comparator_Queue_v0_1.md`.
+This file records the first source-scoped comparator mapping proposed in `TRACE_Debt_Clock_Comparator_Queue_v0_1.md`.
 
 It does not promote `debt_clock`.
+
+It demotes `debt_clock` from pending candidate to translation note.
 
 It does not validate TRACE.
 
@@ -19,6 +21,8 @@ It does not treat the comparator queue as evidence.
 
 It does not use actor documents as independent confirmation.
 
+The prior version concluded `retain_as_candidate_narrowed`. Claude hostile audit identified that as too generous: the surviving remainder was only `correction_before_hardening` re-scoped to debt, and the file met its own relabel/demotion trigger. This revision accepts that hostile audit pressure as a correction, not as validation.
+
 ```trace
 run_scope :=
   Robodebt
@@ -29,13 +33,16 @@ run_scope :=
     + automatic_stay_or_relief_against_forfeiture_analogue
 
 run_result :=
-  retain_as_candidate_narrowed
-  + high_demoter_pressure
+  demote_to_translation_note
+  + merge_target := correction_before_hardening
+  + legal_analogue_note := automatic_stay_or_stay_like_pause
   - promotion
   - validation
 ```
 
 ## 1. Candidate under test
+
+Original candidate definition:
 
 ```trace
 debt_clock :=
@@ -47,15 +54,24 @@ debt_clock :=
 
 Plain version:
 
-Debt Clock asks whether a debt or debt-like claim creates pressure that hardens faster than the affected person can realistically contest, correct, pause, or repair it.
+Debt Clock asked whether a debt or debt-like claim creates pressure that hardens faster than the affected person can realistically contest, correct, pause, or repair it.
 
-The current test is not whether Robodebt was bad. That is already established by stronger sources. The test is whether Debt Clock adds anything beyond existing fields.
+The test was not whether Robodebt was bad. That is already established by stronger sources. The test was whether Debt Clock added anything beyond existing fields.
+
+The result is demotion:
+
+```trace
+Debt_Clock_after_run :=
+  correction_before_hardening(debt_scoped)
+  + stay_like_pause_translation
+  - standalone_candidate_operator
+```
 
 ## 2. Source hierarchy and evidence rules
 
-Preferred sources for this run:
+Preferred source classes for this run:
 
-1. Royal Commission into the Robodebt Scheme, Report page and recommendations.
+1. Royal Commission into the Robodebt Scheme, report page and recommendations.
 2. Commonwealth Ombudsman, `Centrelink's automated debt raising and recovery system` report, April 2017.
 3. Court / legal material where available.
 4. Non-actor journalism or advocacy only where official/legal material is unavailable or used to locate a claim.
@@ -73,25 +89,59 @@ actor_document_rule :=
     + independent_confirmation_of_repair_adequacy
 ```
 
-Core source anchors used:
+Core source anchors used or discussed:
 
-- Royal Commission report page: https://robodebt.royalcommission.gov.au/publications/report
+- Royal Commission report page and recommendations: https://robodebt.royalcommission.gov.au/publications/report
 - Commonwealth Ombudsman 2017 report: https://www.ombudsman.gov.au/__data/assets/pdf_file/0022/43528/Report-Centrelinks-automated-debt-raising-and-recovery-system-April-2017.pdf
 - 11 U.S.C. § 362 automatic stay: https://www.law.cornell.edu/uscode/text/11/362
 - Secondary reporting on post-admission recovery continuation: https://www.theguardian.com/australia-news/2021/may/05/robodebt-victims-referred-to-debt-collectors-even-after-government-admitted-scheme-was-unlawful
-- Secondary reporting on the Amato concession / income averaging issue: https://www.theguardian.com/australia-news/2019/dec/13/robodebt-private-information-may-have-been-improperly-handed-to-debt-collectors
+- Secondary reporting on debt-collector / private-information concern; not an Amato pinpoint and should not be used for that claim without relabelling: https://www.theguardian.com/australia-news/2019/dec/13/robodebt-private-information-may-have-been-improperly-handed-to-debt-collectors
+
+Evidence-grade note for this revision:
+
+```trace
+evidence_grades_used_here :=
+  E4 := official_primary_or_inquiry_source_with_direct_text
+  E3 := legal_or_official_source_outside_actor_control
+  E2 := secondary_reporting_or_independent_analysis
+  E1 := actor_statement_or_unsourced_internal_claim
+  E0 := unsupported_or_not_yet_gathered
+```
+
+Applied grades:
+
+```trace
+source_grades :=
+  Royal_Commission_recommendation_18_1 := E4
+  Royal_Commission_AAT_recommendations := E4
+  Ombudsman_2017_report_for_early_system_mechanics := E4_with_caveat
+  USC_362_automatic_stay := E3_cross_jurisdiction_analogue
+  Guardian_post_admission_recovery_reporting := E2_not_corroborated_here
+  Guardian_private_information_debt_collector_reporting := E2_descriptor_corrected
+```
+
+Caveat on the Ombudsman 2017 report:
+
+The Ombudsman report is useful for contemporaneous system mechanics, user-facing friction, and burden descriptions. It should not be treated as a clean final independent confirmation of legality or repair adequacy. Later Robodebt investigations put pressure on what the Ombudsman was told by departments.
 
 ## 3. Source-backed Robodebt baseline
 
 The Royal Commission report was tabled on 7 July 2023 and records recommendations across effects on individuals, vulnerability, advocacy and legal services, automated decision-making, debt recovery, AAT/administrative review, and Ombudsman reform.
 
-The Royal Commission's debt-recovery recommendation is the closest Robodebt-side source for Debt Clock. Recommendation 18.1 says Services Australia should develop comprehensive debt-recovery policy, treat recipients fairly and with dignity, consider each person's circumstances, and — subject to express legal authority — refrain from commencing or continuing recovery while a debt is being reviewed or disputed.
+The Royal Commission's debt-recovery recommendation is the strongest in-context demoter for Debt Clock. Recommendation 18.1 says Services Australia should develop a comprehensive debt-recovery policy and, among other requirements, staff must:
 
-The Ombudsman 2017 report gives the early system mechanics. It says the OCI matched Centrelink earnings records with ATO employer-reported income, shifted parts of the prior manual process into an automated process, and, if the customer did not engage or gaps remained, filled those gaps with fortnightly income derived from averaged ATO data.
+- treat recipients fairly and with dignity before recovery;
+- `refrain from commencing or continuing recovery action while a debt is being reviewed or disputed`;
+- consider hardship proportionately; and
+- give recipients appropriate opportunities to challenge, review, and seek guidance before referral for debt recovery.
 
-The Ombudsman also identified burdens relevant to this comparator run: unclear initial messaging, lack of crucial information such as a compliance phone number, people not realising income would be averaged if they did not enter fortnightly income, problems gathering old employment evidence, poor service delivery, long wait times, unclear explanations, and the need for more support for vulnerable customers.
+That recommendation already expresses much of the timing/pause logic Debt Clock was trying to name.
 
-The automatic-stay comparator is not Robodebt law. It is an analogue. Under 11 U.S.C. § 362, a bankruptcy petition generally operates as a stay of actions to recover pre-petition claims and acts to collect, assess, or recover those claims, while also allowing parties in interest to seek relief from stay for cause, including lack of adequate protection. This gives a clean legal comparator for "pause first, contested enforcement later under supervision."
+The Ombudsman 2017 report gives useful early system mechanics. It describes the OCI process as matching Centrelink earnings records with ATO employer-reported income, shifting parts of the prior manual process into an automated process, and, if the customer did not engage or gaps remained, filling those gaps with fortnightly income derived from averaged ATO data.
+
+The Ombudsman report also identifies burden surfaces relevant to this comparator mapping: unclear initial messaging, lack of crucial information such as a compliance phone number, customers not realising income would be averaged if they did not enter fortnightly income, problems gathering old employment evidence, service delivery problems, long wait times, unclear explanations, and need for more support for vulnerable customers.
+
+The automatic-stay comparator is not Robodebt law. It is a cross-jurisdictional analogue from US bankruptcy law. Under 11 U.S.C. § 362, a bankruptcy petition generally operates as a stay of proceedings or acts to recover pre-petition claims, while allowing parties in interest to seek relief from stay for cause. This expresses a clean legal form of pause-before-hardening within bankruptcy. It is not an Australian welfare-debt doctrine.
 
 ## 4. Comparator lane 1 — Administrative review
 
@@ -106,7 +156,8 @@ Administrative review already explains most of the public-law failure surface:
 - model-litigant obligations;
 - escalation of significant legal issues;
 - publication or visibility of significant review decisions;
-- correction of administrative error.
+- correction of administrative error;
+- interim or pause-like relief where available.
 
 The Royal Commission's AAT recommendations already address this field directly: systems for identifying significant AAT cases, training legal officers, identifying significant AAT decisions, publishing first-instance social security decisions with significant legal or policy implications, and reinstating an Administrative Review Council or equivalent.
 
@@ -117,11 +168,12 @@ administrative_review_already_sees :=
   + tribunal_signal_visibility
   + model_litigant_pressure
   + published_decision_need
+  + pause_or_interim_relief_question
 ```
 
-### 4.2 What Debt Clock might add
+### 4.2 Debt Clock delta after audit
 
-Debt Clock adds, at most, a liveness question:
+Debt Clock added only a liveness question:
 
 ```trace
 Debt_Clock_delta_admin_review :=
@@ -131,38 +183,19 @@ Debt_Clock_delta_admin_review :=
     + correction_may_arrive_after_debt_hardens
 ```
 
-Plain version:
+That is not a distinct operator. It is administrative review plus correction-before-hardening.
 
-Administrative review can tell us that a review route exists or should have worked. Debt Clock asks whether debt recovery, repayment, referral, hardship, stress, or evidentiary loss advances faster than that review route.
-
-### 4.3 What would make Debt Clock redundant
-
-Debt Clock is redundant in this lane if administrative review doctrine/practice already requires the live timing test:
+### 4.3 Lane result
 
 ```trace
-admin_review_redundancy_condition :=
-  review_available
-  + recovery_paused_during_dispute
-  + hardship_considered_before_recovery
-  + significant_legal_issue_escalated
+lane_1_result := redundant
+
+reason :=
+  administrative_review
+  + recovery_pause_during_dispute
   + correction_before_material_hardening
+  already_cover_the_live_timing_problem
 ```
-
-Royal Commission recommendation 18.1 already gets very close to this by prescribing non-commencement or non-continuation of recovery during review/dispute, subject to legal authority. That is a strong demoter.
-
-### 4.4 Lane result
-
-```trace
-lane_1_result :=
-  Debt_Clock_adds_clear_question
-  but:
-    administrative_review_plus_debt_recovery_pause
-    already_covers_much_of_the_work
-
-lane_1_status := high_demoter_pressure
-```
-
-Administrative review does not fully erase Debt Clock, but it narrows it. The candidate cannot claim novelty here. It survives only as a compact timing check: review must be live before recovery hardens harm.
 
 ## 5. Comparator lane 2 — Administrative burden
 
@@ -179,21 +212,11 @@ Administrative burden already explains:
 - access failure;
 - state-created obstacle courses.
 
-The Ombudsman report is a strong Robodebt example of administrative burden. It identified unclear messaging, poor system usability, difficulty obtaining older employment-income evidence, inadequate communication, long wait times, and the need for extra support for vulnerable people.
+The Ombudsman report is a Robodebt example of burden, not a substitute for administrative-burden scholarship.
 
-```trace
-administrative_burden_already_sees :=
-  learning_cost
-  + compliance_cost
-  + psychological_cost
-  + evidence_gathering_burden
-  + service_access_failure
-  + vulnerability_interaction
-```
+### 5.2 Debt Clock delta after audit
 
-### 5.2 What Debt Clock might add
-
-Debt Clock may add a temporal coupling:
+The prior version asserted that Debt Clock might force timer visibility:
 
 ```trace
 Debt_Clock_delta_admin_burden :=
@@ -203,40 +226,17 @@ Debt_Clock_delta_admin_burden :=
   -> burden_hardens_before_subject_can_correct
 ```
 
-Plain version:
+That remains plausible as a prompt but source-insufficient as a comparator verdict. The file did not cite administrative-burden scholarship strongly enough to adjudicate redundancy.
 
-Administrative burden explains why the person struggles to contest. Debt Clock asks what happens when that burden operates under a running recovery clock.
-
-### 5.3 What would make Debt Clock redundant
-
-Debt Clock is redundant if administrative burden analysis already captures:
+### 5.3 Lane result
 
 ```trace
-burden_redundancy_condition :=
-  required_steps
-  + burden_intensity
-  + time_limit
-  + recovery_escalation
-  + correction_delay
-  + hardship_consequence
-  + pause_or_non_pause_during_dispute
+lane_2_result := weak + source_insufficient
+
+reason :=
+  burden_field_not_directly_sourced
+  + timer_visibility_remainder_thin
 ```
-
-If the burden field is applied with explicit time and recovery consequences, Debt Clock becomes a relabel.
-
-### 5.4 Lane result
-
-```trace
-lane_2_result :=
-  narrow_survival
-  because:
-    burden_field_explains_friction
-    but_debt_clock_may_force_timer_visibility
-
-lane_2_status := retain_as_candidate_only
-```
-
-Debt Clock survives here only as a clocking discipline attached to administrative burden. It does not beat the administrative-burden field; it may make one failure dimension harder to miss.
 
 ## 6. Comparator lane 3 — Poverty law
 
@@ -256,20 +256,9 @@ Poverty law and welfare-rights practice already explain:
 
 The Royal Commission recommendations on design for the people served, vulnerability identification, advocacy access, legal-aid/community legal-centre funding, and debt recovery with dignity all sit naturally inside this field.
 
-```trace
-poverty_law_already_sees :=
-  low_buffer
-  + welfare_dependency
-  + hardship
-  + stigma
-  + legal_access_gap
-  + vulnerability
-  + recovery_as_subsistence_pressure
-```
+### 6.2 Debt Clock delta after audit
 
-### 6.2 What Debt Clock might add
-
-Debt Clock may add a narrower phrase for timing in welfare-debt cases:
+Debt Clock added a narrower phrase for timing in welfare-debt cases:
 
 ```trace
 Debt_Clock_delta_poverty_law :=
@@ -280,42 +269,19 @@ Debt_Clock_delta_poverty_law :=
   -> subsistence_or_agency_window_closes
 ```
 
-Plain version:
+That is useful as translation, not as a candidate operator. Poverty law and welfare-rights practice already own the low-buffer/hardship/recovery-pressure problem, and Recommendation 18.1 owns the pause-during-dispute principle in this case.
 
-Poverty law explains why debt recovery can be harsher for people without buffer. Debt Clock asks whether recovery moves faster than the person can realistically prove, contest, pause, or repair the debt.
-
-### 6.3 What would make Debt Clock redundant
-
-Debt Clock is redundant if poverty-law / welfare-rights analysis already supplies an operational rule such as:
+### 6.3 Lane result
 
 ```trace
-poverty_law_redundancy_condition :=
-  disputed_welfare_debt_recovery_must_pause
-  + hardship_must_be_assessed_before_recovery
-  + legal_support_must_be_accessible
-  + correction_must_precede_subsistence_harm
+lane_3_result := redundant_as_operator + translation_note_only
 ```
-
-Royal Commission recommendation 18.1 again creates demoter pressure because it provides the pause-during-review/dispute principle directly.
-
-### 6.4 Lane result
-
-```trace
-lane_3_result :=
-  Debt_Clock_not_novel_as_poverty_law
-  but:
-    useful_as_welfare_debt_timing_prompt
-
-lane_3_status := candidate_translation_note
-```
-
-In this lane, Debt Clock should be treated as a translation note unless it later outperforms existing poverty-law analysis in a worked case.
 
 ## 7. Comparator lane 4 — Automatic stay / relief against forfeiture analogue
 
 ### 7.1 What the existing field already explains
 
-Automatic stay and related relief doctrines already explain the strongest version of the Debt Clock shape:
+Automatic stay and related relief doctrines already explain the strongest abstract version of the Debt Clock shape:
 
 - stop or pause enforcement;
 - prevent a race to collection;
@@ -326,8 +292,10 @@ Automatic stay and related relief doctrines already explain the strongest versio
 
 Under 11 U.S.C. § 362, a bankruptcy petition generally operates as a stay of judicial, administrative, or other proceedings to recover pre-petition claims and of acts to collect, assess, or recover those claims. Section 362 also allows relief from stay after notice and hearing for cause, including lack of adequate protection.
 
+This is cross-jurisdictional and analogical. It should not be over-ranked against the Royal Commission's in-context recovery-pause recommendation.
+
 ```trace
-automatic_stay_already_sees :=
+automatic_stay_analogue_sees :=
   pause_enforcement
   + preserve_position
   + creditor_relief_path
@@ -335,9 +303,9 @@ automatic_stay_already_sees :=
   + enforcement_after_threshold
 ```
 
-### 7.2 What Debt Clock might add
+### 7.2 Debt Clock delta after audit
 
-Debt Clock may add cross-domain translation where automatic stay does not legally apply:
+The only surviving Debt Clock contribution would be translation into non-bankruptcy systems:
 
 ```trace
 Debt_Clock_delta_stay :=
@@ -349,131 +317,147 @@ Debt_Clock_delta_stay :=
     + informal_debt_pressure
 ```
 
-Plain version:
+That is not operator-worthy. It is a useful note attached to correction-before-hardening and stay-like pause design.
 
-Debt Clock is useful only if it helps ask whether a non-bankruptcy debt system needs a stay-like pause before recovery hardens harm.
-
-### 7.3 What would make Debt Clock redundant
-
-This lane is the strongest demoter. Debt Clock becomes redundant if the right answer is simply:
+### 7.3 Lane result
 
 ```trace
-demote_to_stay_analogue :=
-  install_or_require_automatic_stay_like_pause
-  when:
-    debt_is_disputed
-    OR legality_uncertain
-    OR hardship_active
-    OR review_pending
-```
-
-If automatic-stay / relief-against-forfeiture analogies already provide the cleaner legal architecture, Debt Clock should not become an operator.
-
-### 7.4 Lane result
-
-```trace
-lane_4_result := strongest_demoter
+lane_4_result := redundant_as_operator
 
 Debt_Clock_survives_only_as :=
-  cross_domain_prompt_for_stay_like_pause
+  stay_like_pause_translation_note
   - legal_doctrine
   - operator
 ```
 
-This lane sharply narrows Debt Clock. The automatic stay analogue already expresses the deepest legal structure: stop enforcement before correction loses meaning, but preserve a supervised route for legitimate enforcement.
-
-## 8. Cross-lane result
+## 8. Cross-lane result after hostile audit
 
 ```trace
 cross_lane_result :=
-  administrative_review := high_demoter_pressure
-  administrative_burden := partial_survival_as_timer_visibility
-  poverty_law := translation_note_pressure
-  automatic_stay := strongest_demoter
+  administrative_review := redundant
+  administrative_burden := weak + source_insufficient
+  poverty_law := translation_note_only
+  automatic_stay := redundant_as_operator + legal_analogue_note
 
 Debt_Clock_result :=
-  retain_as_candidate_narrowed
-  + demote_pressure_high
+  demote_to_translation_note
+  + merge_target := correction_before_hardening
+  + legal_analogue_note := automatic_stay_or_stay_like_pause
+  - candidate_operator
   - promote
   - validate
 ```
 
-Debt Clock does not currently earn operator status.
+Debt Clock does not earn operator status.
 
-It does earn a narrowed candidate role:
+Debt Clock no longer remains a pending candidate.
 
-```trace
-Debt_Clock_narrowed :=
-  portable_timing_question_for_debt_like_pressure:
-    does_recovery_or_collection_harden
-    before_correction_or_pause_reaches_subject?
-```
-
-This is useful because it forces a specific timing question across administrative, welfare, algorithmic, and debt-recovery settings. It is not yet distinctive enough to promote. It may later demote to an automatic-stay analogue note or merge into correction-before-hardening.
-
-## 9. What Debt Clock might add, if anything
-
-Debt Clock's best surviving remainder is not a new doctrine. It is a portable diagnostic question:
+The correct preserved form is:
 
 ```trace
-surviving_remainder :=
-  debt_or_debt_like_claim
-  + recovery_pressure
-  + subject_low_buffer_or_high_burden
-  + correction_slow
-  + no_pause_mechanism
-  -> hardening_before_review
+Debt_Clock_translation_note :=
+  in_debt_or_debt_like_processes:
+    ask_whether_recovery_or_collection_hardens
+    before_correction_or_pause_reaches_subject
 ```
 
 Plain version:
 
-The candidate may help readers ask whether a debt process has a live pause before review becomes merely post-hoc repair.
+Debt Clock is a debt-scoped way to remember correction-before-hardening and the need for stay-like pause in disputed, unlawful, hardship-active, or review-pending debt systems.
 
-That is a useful question. It is not enough for operator promotion.
+## 9. What remains useful
 
-## 10. Demotion triggers after this run
+The useful remainder is not a new doctrine. It is a translation note:
 
-Demote or merge Debt Clock if any of the following occurs in the next pressure test:
+```trace
+useful_remainder :=
+  debt_or_debt_like_claim
+  + recovery_pressure
+  + low_buffer_or_high_burden_subject
+  + correction_slow
+  + no_pause_mechanism
+  -> apply_correction_before_hardening
+     and_consider_stay_like_pause
+```
+
+This is a good reminder. It is not a standalone candidate operator.
+
+## 10. Why the prior conclusion was wrong
+
+The prior version said `retain_as_candidate_narrowed`.
+
+That was too generous.
+
+The file's own surviving remainder was:
+
+```trace
+does_recovery_or_collection_harden
+before_correction_or_pause_reaches_subject?
+```
+
+That is simply `correction_before_hardening` re-scoped to debt. It meets the demotion trigger:
 
 ```trace
 demote_or_merge_if :=
-  administrative_review_with_interim_relief_covers_it
-  OR administrative_burden_with_timing_covers_it
-  OR poverty_law_with_hardship_pause_covers_it
-  OR automatic_stay_analogue_covers_it
-  OR Debt_Clock_only_relabels_correction_before_hardening
-  OR no_case_shows_better_navigation_than_existing_fields
+  Debt_Clock_only_relabels_correction_before_hardening
 ```
 
-## 11. Required next test
+Therefore the corrected result is demotion, not narrow survival.
 
-The next test should not be more theory.
+## 11. Missing evidence retained as open, not rescue
 
-It should be one worked comparison:
+The following evidence would be needed for a worked historical delta test. Its absence does not keep Debt Clock alive as a candidate; it explains why no stronger claim can be made.
 
 ```trace
-next_test :=
-  one_Robodebt_sequence
-  + ordinary_admin_review_read
-  + administrative_burden_read
-  + poverty_law_read
-  + automatic_stay_analogue_read
-  + Debt_Clock_read
-  + explicit_delta_or_demotion
+needed_for_worked_delta :=
+  actual_recovery_timeline
+  + review_or_dispute_timeline
+  + pause_or_non_pause_during_dispute
+  + hardship_or_low_buffer_evidence
+  + correction_or_refund_timing
+  + source_independence
+  + administrative_burden_and_poverty_law_field_sources
+  + concrete_definition_of_what_Debt_Clock_caught_that_others_missed
 ```
 
-The key question:
+A future worked comparison may still be useful, but its default question is now:
 
 ```trace
 worked_delta_question :=
-  did_Debt_Clock_catch_any_live_timing_failure
-  that_the_existing_fields_missed
-  with_source_backing?
+  does_the_Debt_Clock_translation_note
+  catch_any_timing_failure
+  not_already_caught_by:
+    administrative_review
+    + administrative_burden
+    + poverty_law
+    + stay_like_pause
+    + correction_before_hardening?
 ```
 
-If not, demote.
+If not, the note can be removed entirely.
 
-## 12. Stop rules preserved
+## 12. Spine wording drift note
+
+This run does not invoke the Exit branch. It runs on correction-before-hardening / pause logic.
+
+Do not harmonise the unresolved spine wording:
+
+```trace
+exit_when_correction_channel_is_harm_carrier
+vs
+exit_when_correction_channel_is_predatory
+```
+
+If Robodebt were later assessed under an Exit branch, the distinction would matter:
+
+```trace
+Robodebt_under_harm_carrier := likely_trigger
+Robodebt_under_predatory := contestable
+```
+
+This comparator run does not resolve that drift.
+
+## 13. Stop rules preserved
 
 ```trace
 stop_rules :=
@@ -486,22 +470,22 @@ stop_rules :=
   + no_queue_as_evidence
 ```
 
-## 13. Final compression
+## 14. Final compression
 
 ```trace
-Debt_Clock_v0_1_run :=
-  completed_source_backed_comparator_run
-  + Robodebt_as_case
-  + four_lane_pressure
-  + narrow_candidate_survival
-  + strongest_demoter := automatic_stay_analogue
-  + next_required := worked_navigation_delta
-  - operator_promotion
-  - TRACE_validation
+Debt_Clock_v0_1_after_hostile_audit :=
+  source_scoped_mapping
+  + hostile_audit_applied
+  + surviving_remainder == correction_before_hardening(debt_scoped)
+  + legal_analogue_note := automatic_stay_or_stay_like_pause
+  -> demote_to_translation_note
+  - candidate_operator
+  - promotion
+  - validation
 ```
 
 Plain conclusion:
 
-Debt Clock survives this run only as a narrow candidate diagnostic: a portable question about whether debt-like pressure hardens faster than correction or pause can reach the subject. Existing fields already explain most of the Robodebt failure. Automatic-stay / relief-against-forfeiture logic is the strongest comparator and may ultimately demote Debt Clock into a legal-analogue note rather than an operator.
+Debt Clock is demoted. It remains only as a translation note: in debt-like systems, check whether recovery pressure hardens before correction or pause reaches the subject. The primary operator is correction-before-hardening. The closest legal analogue is a stay-like pause. Existing fields already explain most of the Robodebt failure.
 
 End.
