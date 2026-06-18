@@ -35,10 +35,10 @@ Not current use: proof, validation, governance certification, a complete ethics 
 2. `00_START_HERE/IMPORT_MANIFEST.md`
 3. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
 4. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
-5. `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
-6. `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
-7. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
-8. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
+5. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
+6. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
+7. `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
+8. `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
 9. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
 10. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
 11. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
@@ -54,7 +54,7 @@ Not current use: proof, validation, governance certification, a complete ethics 
 Rosetta_front_door := conceptual_current_surface
 Bootstrap_V2 := live_relay_surface + hostile_review_surface
 ACTIVE_COLLECTION := deprecated_from_live_use + preserved_source_history
-Universality_Map := scope_container + level_separator - active_spine
+Scope_Map := scope_container + level_separator - active_spine
 Primitive_Registry := base_layer + composition_support - operator_set
 Domain_Translation_Registry := mapping_layer + comparator_pressure - operator_set
 ```
@@ -64,9 +64,9 @@ Plain version:
 - `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md` is the current conceptual front door.
 - `03_BOOTSTRAPS/BOOTSTRAP_V2/` is the current relay pack for external review and pattern-recognition testing.
 - Older per-case `03_BOOTSTRAPS/ACTIVE_COLLECTION/` material is preserved history/source material, not the active relay surface.
-- `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md` is a scope and architecture map. It does not add an operator or validate TRACE.
-- `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md` records the primitive layer for composition and translation. It is not an operator registry.
-- `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md` maps local domains to primitives, operators, comparators, demoters, and must-not-claim rules. It is not an operator registry.
+- `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md` is a scope/applicability map. It does not add an operator or validate TRACE.
+- `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md` records the primitive layer for composition and translation. It is not an operator registry and remains hostile-review pending.
+- `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md` maps local domains to primitives, operators, comparators, demoters, and must-not-claim rules. It is not an operator registry and remains hostile-review pending.
 
 ## Latest continuity, control, and method addenda
 
@@ -82,7 +82,7 @@ latest_addenda :=
   + spine_wording_drift_note
   + Debt_Clock_comparator_queue
   + Debt_Clock_Robodebt_comparator_run_v0_1
-  + TRACE_Universality_Map_v0_1
+  + TRACE_scope_map_v0_1
   + TRACE_Primitive_Registry_v0_1
   + TRACE_Domain_Translation_Registry_v0_1
 
@@ -120,23 +120,23 @@ domains_translate
 
 Operators are the main memory unit for active TRACE moves, but the registry does not replace the source artifacts. Primitives are the composition layer beneath operators. Domain translations map local fields into primitives and operators without claiming novelty by default.
 
-## Universality discipline
+## Scope discipline after hostile audit
 
 ```trace
-universal_growth_rule :=
-  primitives_expand
-  + translations_expand
+scope_growth_rule :=
+  primitives_expand_carefully
+  + translations_expand_cautiously
   + comparators_expand
-  + design_patterns_expand
+  + design_patterns_wait_until_delta
   while:
     active_operator_spine_remains_small
 ```
 
-The Universality Map holds the large ambition: love, death, robots, primitives, domain translations, formal/mechanistic bridge, design patterns, failure modes, standing, and tragic remainder. It is a scope container, not an operator promotion surface.
+The Scope / Applicability Map holds the large ambition: love, death, robots, primitives, domain translations, formal/mechanistic bridge, design patterns, failure modes, standing, and tragic remainder. It is a scope container, not an operator promotion surface.
 
-The Primitive Registry supports that map by naming the base layer: Time, Harm, Correction, Subject, Agency, Witness, Record, Power, Constraint, Enforcement, Repair, Memory, Future Space, Irreversibility, Infrastructure, Energy, Trust, Boundary, and Uncertainty.
+The Primitive Registry now splits core primitives from derived/support terms.
 
-The Domain Translation Registry maps law, finance/debt, AI alignment, mechanistic interpretability, medicine, care/family, religion/myth, infrastructure, climate/disaster, war/emergency, education, labour/platform power, media/spectacle, memory/identity, and policing/security into TRACE primitives, comparators, demoters, and must-not-claim rules.
+The Domain Translation Registry now caps all unworked domains at T1 and caps war/emergency at T0 pending a Tragic Remainder Action Map.
 
 ## Current held branches
 
@@ -205,8 +205,8 @@ summary != preservation
 candidate_annex != active_spine
 comparator_queue != comparator_run
 comparator_run != operator_promotion
-Universality_Map != active_spine
-Universality_Map != operator_promotion
+Scope_Map != active_spine
+Scope_Map != operator_promotion
 post_dependent_witness_note != AI_needs_humans_proof
 Bootstrap_V2 != canon
 Bootstrap_V2 != validation
@@ -224,7 +224,7 @@ source_anchor != TRACE_validation
 03_BOOTSTRAPS/          Bootstrap V2 live relay surface plus deprecated/preserved source history
 04_COVERAGE/            comparator queues and worked delta cases
 04_KERNEL_AND_TESTS/    diagnostic kernel, preregistered test template, method notes
-05_MAPS_AND_ATLASES/    subtraction concordance, universality map, case atlas, candidate support lenses
+05_MAPS_AND_ATLASES/    subtraction concordance, scope/applicability map, case atlas, candidate support lenses
 06_REVIEWS_AND_AUDITS/  AI review digest and falsification/drift audits
 07_HANDOFFS/            relay pack and external-agent handoff notes
 90_ORIGINAL_ZIPS/       selected archived source ZIPs and handoff ZIPs
@@ -237,4 +237,6 @@ New cases should not be added as bootstraps unless they reveal, pressure-test, o
 
 Claims must be demotable. If TRACE cannot lose claims, it becomes a belief system rather than a tool.
 
-No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, universality mapping, primitive definition, domain translation, and real pressure testing.
+No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, scope mapping, primitive definition, domain translation, and real pressure testing.
+
+Next technical move: one worked delta that can demote the architecture. Not another scaffolding file.
