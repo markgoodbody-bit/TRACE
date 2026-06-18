@@ -195,4 +195,31 @@ failure_if :=
   OR pretty_language_hides_no_action
 ```
 
+## Counterfactual falsifier
+
+The card itself must be falsifiable. After each use, ask whether TRACE added anything beyond ordinary competent reasoning.
+
+```trace
+live_use_falsifier :=
+  competent_reasoner_without_card
+  attends_to_same_structure
+  + identifies_same_correction_timing
+  + chooses_same_next_action
+  -> card_added_nothing_here
+```
+
+Plain version: if a competent reasoner without the card would have seen the same structure and acted at the same time, mark the result as `COMPRESSION_ONLY` or `NO_ADDED_VALUE` for that use.
+
+Weak self-test: write down the no-card baseline before opening the card.
+
+Strong test: compare against a separate no-card reasoner or AI using the same facts.
+
+```trace
+live_use_result :=
+  useful
+  OR compression_only
+  OR no_added_value
+  OR harmful_confidence
+```
+
 End.
