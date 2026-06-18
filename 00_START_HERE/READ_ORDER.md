@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: stable repo navigation after hostile-audit patch, three worked deltas, clock/carrier support-note patch, and AI/MI bridge. Not validation. Not proof. Not governance certification.
+Status: stable repo navigation after hostile-audit patch, three worked deltas, clock/carrier support-note patch, AI/MI bridge, reader-empathy audit/synthesis, and Apollo 13 bootstrap navigation comparison. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first and what status each surface has. It does not change the active TRACE spine.
 
@@ -22,6 +22,7 @@ This file tells a reader what to open first and what status each surface has. It
 14. `04_COVERAGE/TRACE_CrowdStrike_Worked_Delta_v0_1.md`
 15. `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1.md`
 16. `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1_PATCH_after_CrowdStrike.md`
+17. `04_COVERAGE/TRACE_Bootstrap_Worked_Navigation_Comparison_Apollo13_v0_1.md`
 
 Surface rule:
 
@@ -37,16 +38,17 @@ Robodebt_Worked_Delta := first_worked_delta + modest_clock_compression - validat
 Tay_Worked_Delta := second_worked_delta + modest_clock_carrier_compression - validation
 CrowdStrike_Worked_Delta := third_worked_delta + deployment_rollback_recovery_clock_carrier_compression - validation
 Clock_Carrier_Compression_Note := support_note_after_three_deltas - operator
+Apollo13_Bootstrap_Navigation := worked_navigation_comparison + limited_delta - validation - story_as_evidence
 ```
 
 ## Structural spine and claim control
 
-17. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
-18. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
-19. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
-20. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
-21. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
-22. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
+18. `01_CANONICAL_MEMORY/OPERATOR_REGISTRY/TRACE_OPERATOR_REGISTRY_v0_2.md`
+19. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/CLAIMS_LEDGER_v0_5/TRACE_ME_Claims_Ledger_v0_5.md`
+20. `01_CANONICAL_MEMORY/CLAIMS_AND_DEMOTION/DEMOTION_PROTOCOL_v0_1/TRACE_ME_Claims_Demotion_Protocol_v0_1.md`
+21. `04_KERNEL_AND_TESTS/DIAGNOSTIC_KERNEL_v0_2/TRACE_ME_Diagnostic_Kernel_v0_2.md`
+22. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
+23. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 
 Structural rule:
 
@@ -60,11 +62,11 @@ concordance != proof_of_originality
 
 ## Scope, primitive, domain, and bridge layer
 
-23. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
-24. `05_MAPS_AND_ATLASES/TRACE_AI_Alignment_MI_Translation_Bridge_v0_1.md`
-25. `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
-26. `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
-27. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
+24. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
+25. `05_MAPS_AND_ATLASES/TRACE_AI_Alignment_MI_Translation_Bridge_v0_1.md`
+26. `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
+27. `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
+28. `05_MAPS_AND_ATLASES/CASE_ATLAS_v0_4/`
 
 Scope rule:
 
@@ -91,9 +93,9 @@ The Scope Map keeps the project wide by separating primitives, operators, transl
 
 ## Control notes
 
-28. `00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md`
-29. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
-30. `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
+29. `00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md`
+30. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
+31. `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
 
 Control note rule:
 
@@ -118,13 +120,13 @@ Do not harmonise silently.
 
 These files are support/control material. They do not change the active TRACE spine.
 
-31. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
-32. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
-33. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
-34. `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
-35. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
-36. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
-37. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
+32. `00_START_HERE/VAULT_CONTINUITY/VAULT_CORE_vNEXT.md`
+33. `00_START_HERE/VAULT_CONTINUITY/VAULT_BOOTSTRAP_DISTINCTION_v0_1.md`
+34. `04_KERNEL_AND_TESTS/METHOD_NOTES/ACTION_UNDER_UNCERTAINTY_v0_1.md`
+35. `04_KERNEL_AND_TESTS/METHOD_NOTES/TRACE_Post_Dependent_Witness_Independence_Audit_v0_1.md`
+36. `05_MAPS_AND_ATLASES/OUTCOME_COMPARISON_LENS_v0_1.md`
+37. `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
+38. `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
 
 Post-dependent witness note rule:
 
@@ -138,16 +140,16 @@ post_dependent_witness_note := anti_simulation_K_gate_pressure_only
 
 Current live relay surface:
 
-38. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
-39. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
-40. `03_BOOTSTRAPS/BOOTSTRAP_V2/01_CLUSTER__Memory_Identity_Recursion.md`
-41. `03_BOOTSTRAPS/BOOTSTRAP_V2/02_CLUSTER__Hope_Future_Space_Collapse.md`
-42. `03_BOOTSTRAPS/BOOTSTRAP_V2/03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md`
-43. `03_BOOTSTRAPS/BOOTSTRAP_V2/04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md`
-44. `03_BOOTSTRAPS/BOOTSTRAP_V2/05_CLUSTER__Energy_Infrastructure_Basement.md`
-45. `03_BOOTSTRAPS/BOOTSTRAP_V2/06_CLUSTER__Late_Warning_Gated_Survival.md`
-46. `03_BOOTSTRAPS/BOOTSTRAP_V2/07_SOURCE_AND_HISTORY_MAP_v0_1.md`
-47. `03_BOOTSTRAPS/BOOTSTRAP_V2/08_CROSS_CONNECTION_AUDIT_v0_1.md`
+39. `03_BOOTSTRAPS/BOOTSTRAP_V2/00_READ_ME_FIRST__BOOTSTRAP_V2.md`
+40. `03_BOOTSTRAPS/BOOTSTRAP_V2/README.md`
+41. `03_BOOTSTRAPS/BOOTSTRAP_V2/01_CLUSTER__Memory_Identity_Recursion.md`
+42. `03_BOOTSTRAPS/BOOTSTRAP_V2/02_CLUSTER__Hope_Future_Space_Collapse.md`
+43. `03_BOOTSTRAPS/BOOTSTRAP_V2/03_CLUSTER__Judgment_Uncertainty_Irreversible_Harm.md`
+44. `03_BOOTSTRAPS/BOOTSTRAP_V2/04_CLUSTER__Power_Method_Coercion_Creator_Responsibility.md`
+45. `03_BOOTSTRAPS/BOOTSTRAP_V2/05_CLUSTER__Energy_Infrastructure_Basement.md`
+46. `03_BOOTSTRAPS/BOOTSTRAP_V2/06_CLUSTER__Late_Warning_Gated_Survival.md`
+47. `03_BOOTSTRAPS/BOOTSTRAP_V2/07_SOURCE_AND_HISTORY_MAP_v0_1.md`
+48. `03_BOOTSTRAPS/BOOTSTRAP_V2/08_CROSS_CONNECTION_AUDIT_v0_1.md`
 
 Bootstrap rule:
 
@@ -164,13 +166,14 @@ The older per-case `03_BOOTSTRAPS/ACTIVE_COLLECTION/` material is preserved sour
 
 ## Comparator, worked-delta, and support-note layer
 
-48. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
-49. `04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md`
-50. `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md`
-51. `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md`
-52. `04_COVERAGE/TRACE_CrowdStrike_Worked_Delta_v0_1.md`
-53. `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1.md`
-54. `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1_PATCH_after_CrowdStrike.md`
+49. `04_COVERAGE/TRACE_Debt_Clock_Comparator_Queue_v0_1.md`
+50. `04_COVERAGE/TRACE_Debt_Clock_Robodebt_Comparator_Run_v0_1.md`
+51. `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md`
+52. `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md`
+53. `04_COVERAGE/TRACE_CrowdStrike_Worked_Delta_v0_1.md`
+54. `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1.md`
+55. `04_COVERAGE/TRACE_Clock_Carrier_Compression_Note_v0_1_PATCH_after_CrowdStrike.md`
+56. `04_COVERAGE/TRACE_Bootstrap_Worked_Navigation_Comparison_Apollo13_v0_1.md`
 
 Comparator/test rule:
 
@@ -178,6 +181,7 @@ Comparator/test rule:
 comparator_queue != comparator_run
 comparator_run != operator_promotion
 worked_delta != validation
+worked_navigation_comparison != validation
 support_note != operator
 Debt_Clock_queue != Debt_Clock_promotion
 Debt_Clock_Robodebt_run_v0_1 := demotion_record + translation_note
@@ -185,14 +189,15 @@ Robodebt_Worked_Delta_v0_1 := modest_clock_compression + no_material_new_detecti
 Tay_Worked_Delta_v0_1 := modest_clock_carrier_compression + no_material_new_detection
 CrowdStrike_Worked_Delta_v0_1 := modest_deployment_rollback_recovery_clock_carrier_compression + no_material_new_detection
 Clock_Carrier_Compression_Note_v0_1 := support_note_after_three_deltas + no_operator_promotion
+Apollo13_Bootstrap_Navigation_v0_1 := limited_delta + ordinary_expert_reasoning_beats_TRACE_inside_domain + cross_domain_transfer_only
 ```
 
-The first Debt Clock comparator mapping demotes Debt Clock to a translation note. The Robodebt worked delta says TRACE does not beat ordinary public law; it only offers limited timing/compression value. The Tay worked delta says TRACE does not beat ordinary AI safety; it only offers limited rollback/correction clock-carrier compression. The CrowdStrike worked delta says TRACE does not beat ordinary reliability/SRE; it only offers limited deployment/rollback/recovery clock-carrier compression. The clock/carrier note survives only as a support check.
+The first Debt Clock comparator mapping demotes Debt Clock to a translation note. The Robodebt worked delta says TRACE does not beat ordinary public law; it only offers limited timing/compression value. The Tay worked delta says TRACE does not beat ordinary AI safety; it only offers limited rollback/correction clock-carrier compression. The CrowdStrike worked delta says TRACE does not beat ordinary reliability/SRE; it only offers limited deployment/rollback/recovery clock-carrier compression. The clock/carrier note survives only as a support check. The Apollo 13 Bootstrap navigation comparison says ordinary engineering/incident-response reasoning beats TRACE inside domain; TRACE only adds limited cross-domain transfer around correction carrier and repair-window discipline.
 
 ## Reviews and handoffs
 
-55. `06_REVIEWS_AND_AUDITS/`
-56. `07_HANDOFFS/`
+57. `06_REVIEWS_AND_AUDITS/`
+58. `07_HANDOFFS/`
 
 ## Core memory rule
 
@@ -206,6 +211,7 @@ primitives_compose
 domains_translate
 bridges_translate_between_domains
 worked_deltas_demote_or_bound
+worked_navigation_comparisons_test_bootstrap_transfer
 support_notes_do_not_promote
 ```
 
@@ -232,6 +238,7 @@ AI_MI_Bridge != active_spine
 Primitive_Registry != active_spine
 Domain_Translation_Registry != active_spine
 worked_delta != validation
+worked_navigation_comparison != validation
 support_note != operator
 translation_bridge != operator
 ```
@@ -240,13 +247,10 @@ translation_bridge != operator
 
 ```trace
 next_technical_move :=
-  find_public_MI_case_with_real_intervention_point
+  hostile_read_Apollo13_bootstrap_navigation
+  OR safe_install_reader_entry_blocks_for_Cluster_04_to_06
   then:
-    run_worked_delta:
-      ordinary_MI_read
-      + ordinary_AI_safety_read
-      + TRACE_read
-      + explicit_delta_or_demote
+    return_to_public_MI_case_with_real_intervention_point
 ```
 
 End.
