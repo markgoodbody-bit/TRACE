@@ -47,6 +47,7 @@ Not current use: proof, validation, governance certification, a complete ethics 
 14. `04_KERNEL_AND_TESTS/PREREG_TEST_TEMPLATE_v0_1/TRACE_ME_PreRegistered_Test_Template_v0_1.md`
 15. `05_MAPS_AND_ATLASES/CONCORDANCE_v0_7/TRACE_ME_Concordance_v0_7.md`
 16. `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
+17. `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md`
 
 ## Surface roles
 
@@ -57,6 +58,7 @@ ACTIVE_COLLECTION := deprecated_from_live_use + preserved_source_history
 Scope_Map := scope_container + level_separator - active_spine
 Primitive_Registry := base_layer + composition_support - operator_set
 Domain_Translation_Registry := mapping_layer + comparator_pressure - operator_set
+Robodebt_Worked_Delta := first_worked_delta + modest_clock_compression - validation
 ```
 
 Plain version:
@@ -67,6 +69,7 @@ Plain version:
 - `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md` is a scope/applicability map. It does not add an operator or validate TRACE.
 - `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md` records the primitive layer for composition and translation. It is not an operator registry and remains hostile-review pending.
 - `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md` maps local domains to primitives, operators, comparators, demoters, and must-not-claim rules. It is not an operator registry and remains hostile-review pending.
+- `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md` is the first worked delta. It shows modest TRACE compression, not new detection and not validation.
 
 ## Latest continuity, control, and method addenda
 
@@ -82,6 +85,7 @@ latest_addenda :=
   + spine_wording_drift_note
   + Debt_Clock_comparator_queue
   + Debt_Clock_Robodebt_comparator_run_v0_1
+  + TRACE_Robodebt_Worked_Delta_v0_1
   + TRACE_scope_map_v0_1
   + TRACE_Primitive_Registry_v0_1
   + TRACE_Domain_Translation_Registry_v0_1
@@ -100,6 +104,7 @@ status :=
 - `05_MAPS_AND_ATLASES/TRACE_Universality_Map_v0_1.md`
 - `01_CANONICAL_MEMORY/PRIMITIVE_REGISTRY/TRACE_Primitive_Registry_v0_1.md`
 - `01_CANONICAL_MEMORY/DOMAIN_TRANSLATION_REGISTRY/TRACE_Domain_Translation_Registry_v0_1.md`
+- `04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_HANDOFF_v0_1.md`
 - `07_HANDOFFS/CLAUDE_CODE_FRAMEWORK_EXPERIMENT_STATUS_v0_1.md`
 - `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
@@ -116,6 +121,7 @@ reviews_attack
 operators_remember
 primitives_compose
 domains_translate
+worked_deltas_demote_or_bound
 ```
 
 Operators are the main memory unit for active TRACE moves, but the registry does not replace the source artifacts. Primitives are the composition layer beneath operators. Domain translations map local fields into primitives and operators without claiming novelty by default.
@@ -137,6 +143,23 @@ The Scope / Applicability Map holds the large ambition: love, death, robots, pri
 The Primitive Registry now splits core primitives from derived/support terms.
 
 The Domain Translation Registry now caps all unworked domains at T1 and caps war/emergency at T0 pending a Tragic Remainder Action Map.
+
+## Current worked-delta result
+
+```trace
+Robodebt_Worked_Delta_v0_1 :=
+  first_worked_delta
+  + ordinary_public_law_read_strong
+  + TRACE_read_useful_as_clock_compression
+  + result := Delta_B_limited + Delta_C_mostly
+  - material_new_detection
+  - validation
+  - operator_promotion
+```
+
+Plain version:
+
+TRACE did not beat ordinary public law on Robodebt. It clarified a reusable timing structure: correction matters only if it reaches the subject before burden, recovery, or irreversibility hardens the position.
 
 ## Current held branches
 
@@ -205,6 +228,8 @@ summary != preservation
 candidate_annex != active_spine
 comparator_queue != comparator_run
 comparator_run != operator_promotion
+worked_delta != validation
+Robodebt_Worked_Delta != TRACE_beats_public_law
 Scope_Map != active_spine
 Scope_Map != operator_promotion
 post_dependent_witness_note != AI_needs_humans_proof
@@ -237,6 +262,6 @@ New cases should not be added as bootstraps unless they reveal, pressure-test, o
 
 Claims must be demotable. If TRACE cannot lose claims, it becomes a belief system rather than a tool.
 
-No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, scope mapping, primitive definition, domain translation, and real pressure testing.
+No new operators. No Kernel v0.3. The current work is subtraction, preregistration, comparator runs, scope mapping, primitive definition, domain translation, worked deltas, and real pressure testing.
 
-Next technical move: one worked delta that can demote the architecture. Not another scaffolding file.
+Next technical move: one more worked delta in a less law-owned domain before any new scaffolding file.
