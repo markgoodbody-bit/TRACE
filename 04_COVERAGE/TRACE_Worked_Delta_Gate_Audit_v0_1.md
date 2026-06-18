@@ -1,7 +1,7 @@
 # TRACE Worked Delta Gate Audit v0.1
 
 Date: 2026-06-18
-Status: worked-delta gate audit / existing-run classification / not validation / not proof / not operator promotion / not Kernel v0.3
+Status: worked-delta gate audit / existing-run classification / hostile-audit tightened / not validation / not proof / not operator promotion / not Kernel v0.3
 
 ## 0. Control header
 
@@ -11,6 +11,8 @@ This file audits the worked-delta runs currently visible in the repo:
 - `04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md`
 - `04_COVERAGE/TRACE_CrowdStrike_Worked_Delta_v0_1.md`
 - `04_COVERAGE/TRACE_Golden_Gate_Claude_MI_Worked_Delta_v0_1.md`
+
+It has been tightened after an external hostile audit artifact by Claude Opus 4.8.
 
 It does not add a new case.
 
@@ -27,6 +29,7 @@ Worked_Delta_Gate_Audit_v0_1 :=
   + identify_recurring_pattern
   + identify_survivor_candidates
   + block_re_description_as_delta
+  + hostile_audit_tightening
   - validation
   - proof
   - operator_promotion
@@ -78,7 +81,7 @@ source_unverified_if :=
 ```trace
 classification_scale :=
   DELTA := decision_advantage_demonstrated
-  WEAK_CANDIDATE_DELTA := plausible_survivor_but_not_demonstrated
+  WEAK_CANDIDATE_DELTA := plausible_survivor_with_nontrivial_upgrade_path_but_not_demonstrated
   COMPRESSION_ONLY := useful_ordering_without_decision_advantage
   DEMOTE := baseline_owns_the_failure
   SOURCE_UNVERIFIED := source_gap_controls_verdict
@@ -90,23 +93,40 @@ No worked delta should be upgraded because the TRACE wording is attractive.
 pretty_language_not_delta := true
 ```
 
-## 3. Robodebt audit
+## 3. Cross-cutting hostile-audit correction
 
-### 3.1 Case file
+Claude's external hostile audit tightens the earlier in-repo audit.
+
+```trace
+hostile_audit_correction :=
+  four_runs_collectively_earn_one_pattern_not_four
+  + none_is_real_head_to_head
+  + compression_does_not_change_detection_timing_or_actionability_for_most_runs
+  + sources_not_independently_verified_here
+  + Robodebt_witness_independence_survivor_not_in_Robodebt_worked_delta_file
+```
+
+The important correction is this:
+
+```trace
+Golden_Gate_status_correction :=
+  from := WEAK_CANDIDATE_DELTA
+  to := COMPRESSION_ONLY_strongest_survivor_with_upgrade_path
+```
+
+Reason:
+
+The Golden Gate / MI bridge classification is the strongest survivor, but it has not yet changed a real deployment gate or alignment decision. Therefore it is not an earned weak candidate delta. It is a compression-only result with the cleanest upgrade path.
+
+## 4. Robodebt audit
 
 ```trace
 case_file := 04_COVERAGE/TRACE_Robodebt_Worked_Delta_v0_1.md
 ```
 
-### 3.2 Case summary
+Robodebt is a public-administration / administrative-review case. The worked-delta file asks whether TRACE catches anything materially earlier, clearer, or more navigable than an ordinary careful public-law / administrative-review read.
 
-Robodebt is a public-administration / administrative-review case. The file asks whether TRACE catches anything materially earlier, clearer, or more navigable than an ordinary careful public-law / administrative-review read.
-
-### 3.3 Baseline strength
-
-The ordinary baseline is strong. The worked delta itself says administrative law already catches formal review, tribunal review, procedural fairness, model-litigant obligations, significant case escalation, publication/visibility of review decisions, correction of administrative error, and interim/pause-like relief where available.
-
-### 3.4 TRACE contribution
+The ordinary baseline is strong. Administrative and public law already catch legality, procedural fairness, reasons/evidence, tribunal review, model-litigant obligations, significant-case escalation, publication or visibility of review decisions, correction of administrative error, and interim/pause-like relief where available.
 
 TRACE orders the case through review clock versus hardening clock:
 
@@ -117,7 +137,7 @@ Robodebt_TRACE_contribution :=
   + pause_or_stay_like_carrier_question
 ```
 
-### 3.5 Verdict
+Verdict:
 
 ```trace
 Robodebt_verdict := COMPRESSION_ONLY
@@ -127,37 +147,32 @@ Reason:
 
 The file's own worked result says `Delta_B_limited_navigation_compression + Delta_C_most_failure_already_caught + Delta_D_legal_specificity_belongs_to_public_law - Delta_A_material_new_detection`.
 
-### 3.6 Upgrade or kill condition
+Claude's hostile audit further notes that the earlier status-page witness-independence survivor is not in the Robodebt worked-delta file. It lives in a separate witness-dependence thread and must not be smuggled into this worked-delta verdict.
+
+Upgrade or kill condition:
 
 ```trace
 Robodebt_upgrade_if :=
-  source_backed_record_shows_TRACE_identifies_a_failure
-  not_captured_by_public_law_admin_burden_or_stay_like_comparator
+  independent_public_law_or_admin_burden_baseline_confirms_TRACE_identifies_specific_live_failure_or_remedy
+  not_captured_by_standard_review
+  + primary_or_strong_source_support
 ```
 
 ```trace
 Robodebt_kill_if :=
-  independent_decision_maker_bias_interim_relief_or_admin_burden_comparator
-  fully_absorbs_the_remaining_TRACE_pressure
+  interim_relief_stay_like_review_admin_burden_or_bias_comparator
+  fully_absorbs_remaining_TRACE_pressure
 ```
 
-## 4. Tay audit
-
-### 4.1 Case file
+## 5. Tay audit
 
 ```trace
 case_file := 04_COVERAGE/TRACE_Tay_Worked_Delta_v0_1.md
 ```
 
-### 4.2 Case summary
+Tay is an AI-deployment / public chatbot failure case. The worked-delta file asks whether TRACE catches anything materially earlier, clearer, or more navigable than an ordinary careful AI-safety / deployment-governance read.
 
-Tay is an AI-deployment / public chatbot failure case. The file asks whether TRACE catches anything materially earlier, clearer, or more navigable than an ordinary careful AI-safety / deployment-governance read.
-
-### 4.3 Baseline strength
-
-The ordinary AI-safety baseline is strong. It sees adversarial users, red-team gaps, filtering insufficiency, open public deployment, misuse case failure, monitoring, shutdown, and rollback.
-
-### 4.4 TRACE contribution
+The ordinary AI-safety baseline is strong. It sees adversarial users, abuse-case analysis, red-team gaps, filtering insufficiency, open public deployment, online-interaction risk, monitoring, shutdown, rollback, and incident response.
 
 TRACE orders Tay through rollback/correction speed versus public-output hardening speed:
 
@@ -168,7 +183,7 @@ Tay_TRACE_contribution :=
   + deployment_pause_or_carrier_question
 ```
 
-### 4.5 Verdict
+Verdict:
 
 ```trace
 Tay_verdict := COMPRESSION_ONLY
@@ -178,37 +193,38 @@ Reason:
 
 The file's own result says `Delta_B_limited_navigation_compression + Delta_C_most_failure_already_caught + Delta_D_technical_specificity_belongs_to_AI_safety - Delta_A_material_new_detection`.
 
-### 4.6 Upgrade or kill condition
+Source caution:
+
+```trace
+Tay_source_caution :=
+  Microsoft_blog_E1_actor_account
+  + no_independent_source_in_worked_delta
+  + actor_account_cannot_confirm_full_harm_or_repair_adequacy
+```
+
+Upgrade or kill condition:
 
 ```trace
 Tay_upgrade_if :=
-  source_backed_record_shows_TRACE_identifies_a_deployment_failure
-  not_already_captured_by_red_team_abuse_monitoring_or_rollback_comparator
+  independent_source_backed_incident_shows_TRACE_flags_deployment_gate_failure
+  missed_by_ordinary_AI_safety_review
 ```
 
 ```trace
 Tay_kill_if :=
-  ordinary_AI_safety_deployment_governance
-  fully_absorbs_rollback_clock_vs_public_output_hardening
+  monitoring_rollback_red_team_abuse_case_and_staged_rollout_comparators
+  fully_absorb_TRACE_clock_carrier_framing
 ```
 
-## 5. CrowdStrike audit
-
-### 5.1 Case file
+## 6. CrowdStrike audit
 
 ```trace
 case_file := 04_COVERAGE/TRACE_CrowdStrike_Worked_Delta_v0_1.md
 ```
 
-### 5.2 Case summary
+CrowdStrike is an infrastructure / software-incident case. The worked-delta file asks whether TRACE catches anything materially earlier, clearer, or more navigable than an ordinary careful reliability / SRE / incident-response read.
 
-CrowdStrike is an infrastructure / software-incident case. The file asks whether TRACE catches anything materially earlier, clearer, or more navigable than an ordinary careful reliability / SRE / incident-response read.
-
-### 5.3 Baseline strength
-
-The ordinary reliability/SRE baseline is strong. It sees release validation, content-update testing, blast radius, phased rollout, rollback, recovery, high-privilege agent risk, endpoint fleet homogeneity, dependency cascade, incident response, and post-incident process change.
-
-### 5.4 TRACE contribution
+The ordinary reliability/SRE baseline is very strong. It sees release validation, content-update testing, blast radius, phased rollout, rollback, recovery, high-privilege agent risk, endpoint fleet homogeneity, dependency cascade, incident response, and post-incident process change.
 
 TRACE orders the case through deployment, rollback, and recovery carriers against blast-radius, dependency-cascade, and manual-recovery hardening clocks.
 
@@ -223,29 +239,30 @@ CrowdStrike_TRACE_contribution :=
     + manual_recovery_burden_clock
 ```
 
-### 5.5 Verdict
+Verdict:
 
 ```trace
-CrowdStrike_verdict := COMPRESSION_ONLY
+CrowdStrike_verdict := COMPRESSION_ONLY_closest_to_DEMOTE
 ```
 
 Reason:
 
-The file's own result says `Delta_B_limited_navigation_compression + Delta_C_most_failure_already_caught + Delta_D_technical_specificity_belongs_to_reliability_engineering - Delta_A_material_new_detection`.
+The file's own result says `Delta_B_limited_navigation_compression + Delta_C_most_failure_already_caught + Delta_D_technical_specificity_belongs_to_reliability_engineering - Delta_A_material_new_detection`. Claude's hostile audit rightly calls this the weakest run because the ordinary SRE read is better on the substance.
 
-It does, however, strengthen the recurring support-check pattern.
+Support effect:
 
 ```trace
 CrowdStrike_support_effect :=
-  Clock_Carrier_Compression_retained_as_support_check
+  Clock_Carrier_Compression_portable_as_support_check
   - operator_status
+  - decision_advantage
 ```
 
-### 5.6 Upgrade or kill condition
+Upgrade or kill condition:
 
 ```trace
 CrowdStrike_upgrade_if :=
-  source_backed_record_shows_TRACE_identifies_a_carrier_or_hardening_failure
+  primary_source_backed_incident_shows_TRACE_carrier_or_hardening_failure
   not_already_captured_by_SRE_change_management_resilience_or_incident_response
 ```
 
@@ -255,23 +272,15 @@ CrowdStrike_kill_if :=
   fully_absorb_deployment_rollback_recovery_clock_carrier_framing
 ```
 
-## 6. Golden Gate Claude / MI audit
-
-### 6.1 Case file
+## 7. Golden Gate Claude / MI audit
 
 ```trace
 case_file := 04_COVERAGE/TRACE_Golden_Gate_Claude_MI_Worked_Delta_v0_1.md
 ```
 
-### 6.2 Case summary
+Golden Gate Claude is a mechanistic-interpretability / AI-MI bridge case. It uses Anthropic's feature-steering demo as a public MI case with a real intervention point. The worked-delta file asks whether TRACE adds useful navigation beyond an ordinary careful MI read and ordinary AI-safety read.
 
-Golden Gate Claude is a mechanistic-interpretability / AI-MI bridge case. It uses Anthropic's feature-steering demo as a public MI case with a real intervention point. The file asks whether TRACE adds useful navigation beyond an ordinary careful MI read and ordinary AI-safety read.
-
-### 6.3 Baseline strength
-
-The ordinary MI baseline is strong. It sees feature extraction, human-interpretable features, superposition, causal intervention by feature activation, feature steering, the gap between feature and circuit, and the fact that interpretability is not yet systematic control. The ordinary AI-safety baseline also sees that interpretability may help monitoring or steering but does not by itself prove deployment safety.
-
-### 6.4 TRACE contribution
+The ordinary MI baseline is strong. It sees feature extraction, human-interpretable features, superposition, causal intervention by feature activation, feature steering, feature-not-circuit limits, and interpretability-not-control. Ordinary AI safety already sees that interpretability may help monitoring or steering but does not prove deployment safety.
 
 TRACE sharpens the bridge status:
 
@@ -292,26 +301,22 @@ mistakes_blocked :=
   OR feature_steering_means_alignment_control
 ```
 
-### 6.5 Verdict
+Verdict, tightened:
 
 ```trace
-Golden_Gate_verdict := WEAK_CANDIDATE_DELTA
+Golden_Gate_verdict := COMPRESSION_ONLY_strongest_survivor
 ```
 
 Reason:
 
-The file's own result says no material new detection, and ordinary MI has better technical specificity. But TRACE's bridge-status classification is more than generic compression: it preserves the middle position between dismissal and alignment overclaim, and it may be operationally useful for deciding whether MI evidence has crossed into deployment correction.
+TRACE does not beat MI on the technical result. Its bridge-status classification is useful, but it remains a cleaner classification of a known position until it changes a real deployment gate or alignment decision. It is the strongest survivor, not an earned weak candidate delta.
 
-This is not demonstrated decision advantage.
-
-It is the strongest survivor candidate.
-
-### 6.6 Upgrade or kill condition
+Upgrade or kill condition:
 
 ```trace
 Golden_Gate_upgrade_if :=
   source_backed_case_shows_TRACE_bridge_status
-  changes_a_deployment_gate_or_alignment_decision
+  changes_a_real_deployment_gate_or_alignment_decision
   beyond_ordinary_MI_or_AI_safety_read
 ```
 
@@ -325,18 +330,28 @@ Golden_Gate_kill_if :=
     - subject_contestability_shown
 ```
 
-## 7. Cross-case pattern
+## 8. Cross-case pattern
 
-Across the first three worked deltas, the pattern is stable:
+Across all four worked deltas, the dominant pattern is this:
 
 ```trace
-three_delta_pattern :=
+cross_case_pattern :=
   existing_fields_catch_domain_specific_failure
-  + TRACE_adds_clock_carrier_ordering
+  + TRACE_adds_clock_carrier_or_bridge_ordering
   - material_new_detection
+  - demonstrated_decision_advantage
 ```
 
-Golden Gate adds a related but distinct bridge pattern:
+The collective result is not four independent wins.
+
+```trace
+collective_result :=
+  portability_of_correction_before_hardening_and_clock_carrier_framing
+  + useful_cross_domain_re_description
+  - decision_advantage
+```
+
+Golden Gate adds a related bridge pattern:
 
 ```trace
 MI_bridge_pattern :=
@@ -347,14 +362,18 @@ MI_bridge_pattern :=
   - alignment_solution_shown
 ```
 
-## 8. Current gate status
+## 9. Current gate status
 
 ```trace
 worked_delta_gate_status :=
   demonstrated_decision_advantage := false
+  earned_WEAK_CANDIDATE_DELTA := 0
+  DELTA := 0
+  COMPRESSION_ONLY := 4
   recurring_support_pattern := clock_carrier_compression
-  strongest_survivor := Golden_Gate_AI_MI_bridge_status_classifier
+  strongest_survivor := Golden_Gate_MI_bridge_classification
   secondary_survivor := clock_carrier_compression_as_support_check
+  weakest_run := CrowdStrike_closest_to_DEMOTE
   operator_promotion := false
   validation := false
 ```
@@ -363,15 +382,15 @@ Plain result:
 
 The worked deltas have not shown that TRACE beats competent ordinary analysis. They have shown a repeated compression pattern: TRACE can order failures through clocks, carriers, hardening, and bridge status. That is useful, but modest.
 
-## 9. Recommended next action
+## 10. Recommended next action
 
 The next repo move should not be another broad case.
 
 ```trace
 recommended_next :=
-  TRACE_Worked_Delta_Gate_Status_Patch_v0_1
-  OR
   TRACE_Golden_Gate_Delta_Hostile_Audit_Prompt_v0_1
+  OR
+  source_backed_case_where_MI_evidence_changed_real_deployment_gate
 ```
 
 Preferred path:
@@ -380,21 +399,23 @@ Preferred path:
 preferred_path :=
   hostile_audit_Golden_Gate_survivor
   because:
-    it_is_the_only_current_WEAK_CANDIDATE_DELTA
+    it_is_the_strongest_survivor
     + it_connects_directly_to_AI_MI_alignment_bridge
     + it_can_fail_cleanly
+    + it_is_not_yet_a_delta
 ```
 
-Alternative:
+The required test must include an independent expert baseline, not another self-authored ordinary-pass summary.
 
 ```trace
-alternative_path :=
-  source_backed_case_where_MI_evidence_changed_real_deployment_gate
-  if:
-    such_case_can_be_found
+next_required_test :=
+  one_case_with_INDEPENDENT_expert_baseline
+  + primary_or_strong_sources
+  + real_deployment_or_alignment_gate_decision
+  + delta_or_demote_verdict
 ```
 
-## 10. Stop rule
+## 11. Stop rule
 
 ```trace
 stop_rule :=
@@ -406,15 +427,16 @@ stop_rule :=
     OR one_source_backed_case_shows_decision_advantage
 ```
 
-## 11. Final compression
+## 12. Final compression
 
 ```trace
 Worked_Delta_Gate_Audit_v0_1 :=
   Robodebt := COMPRESSION_ONLY
   Tay := COMPRESSION_ONLY
-  CrowdStrike := COMPRESSION_ONLY + support_check_reinforcement
-  Golden_Gate_MI := WEAK_CANDIDATE_DELTA
+  CrowdStrike := COMPRESSION_ONLY_closest_to_DEMOTE + support_check_reinforcement
+  Golden_Gate_MI := COMPRESSION_ONLY_strongest_survivor_with_upgrade_path
   demonstrated_decision_advantage := false
+  earned_WEAK_CANDIDATE_DELTA := 0
   recurring_pattern := clock_carrier_compression
   strongest_survivor := AI_MI_bridge_status_classifier
   next := hostile_audit_Golden_Gate_survivor_or_find_real_deployment_gate_case
