@@ -37,6 +37,8 @@ TRACE_core :=
   + wrongability
 ```
 
+Wording note: `exit_when_correction_channel_is_harm_carrier` is the current provisional front-door wording. The unresolved spine wording drift against `exit_when_correction_channel_is_predatory` remains live; do not harmonise silently.
+
 Current use: orientation, live reasoning, mapping, case comparison, claims discipline, and pressure testing.
 
 Not current use: proof, validation, governance certification, a complete ethics theory, a complete alignment solution, or replacement for domain expertise.
