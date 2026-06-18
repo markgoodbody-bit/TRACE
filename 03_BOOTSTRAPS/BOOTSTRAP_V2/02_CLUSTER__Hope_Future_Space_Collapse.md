@@ -15,6 +15,10 @@ hope := future_space_with_carrier
 false_hope := reassurance_without_carrier
 ```
 
+## Reader-entry orientation
+
+This cluster uses continuation stories to distinguish real hope from reassurance. *Children of Men* imagines material society continuing after future-space has lost its carrier; *Everything Everywhere All at Once* shows option-space collapsing without relation; Samwise carries practical hope by preserving the next step without seizing the burden. Harriet Tubman and the Underground Railroad provide the serious historical pressure point: future-space can be a literal protected route out of predatory power.
+
 ## TRACE compression
 
 ```trace
