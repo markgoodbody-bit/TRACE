@@ -15,6 +15,8 @@ TRACE_core :=
   + wrongability
 ```
 
+Wording note: `exit_when_correction_channel_is_harm_carrier` is provisional front-door wording. The unresolved drift against `exit_when_correction_channel_is_predatory` remains live and should not be silently harmonised.
+
 This is narrower than earlier public surfaces. Recursive agency, creator responsibility, and contested legitimacy are preserved as candidate/teaching material, not active public spine.
 
 ## Core Test
