@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch and v0.2.1 hidden-carrier / anomaly-split patch. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -17,7 +17,7 @@ read_order :=
 Open these in order:
 
 1. `00_START_HERE/START_HERE_NOW_v0_1.md`
-2. `02_CURRENT_SURFACE/LIVE_USE_CARD_v0_1/TRACE_LIVE_USE_CARD_v0_1.md`
+2. `02_CURRENT_SURFACE/LIVE_USE_CARD_v0_2_1/TRACE_LIVE_USE_CARD_v0_2_1.md`
 3. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
 4. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
 5. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
