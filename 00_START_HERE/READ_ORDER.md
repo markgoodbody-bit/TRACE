@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, and real-use capture sheet. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, and positive systems atlas seed. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -95,6 +95,26 @@ Primitive_Registry != operator_registry
 Domain_Translation_Registry != operator_registry
 translation_bridge != field_solution
 ```
+
+## Positive systems atlas
+
+Open when mapping flourishing, play, childhood, repairable life, positive target conditions, or story-carried structure:
+
+1. `05_MAPS_AND_ATLASES/POSITIVE_TRACE_ATLAS_v0_1/TRACE_Positive_TRACE_Atlas_v0_1.md`
+
+Positive atlas rule:
+
+```trace
+Positive_TRACE_Atlas :=
+  map_of_positive_life_conditions
+  + story_anchor_set
+  + primitive_seed
+  - canon
+  - validation
+  - public_claim
+```
+
+Plain version: this atlas begins to map what TRACE is protecting, not only what TRACE is trying to prevent.
 
 ## Control notes
 
@@ -210,6 +230,8 @@ support_notes_do_not_promote
 
 Use the Live Use Card plus Pre-Escalation Guard plus Last-Touch / Local-Fix Sweep on one real situation, then complete the Real Use Capture Sheet.
 
+For positive-system mapping, use the Positive TRACE Atlas to identify what a case preserves, not only what it prevents.
+
 Then ask:
 
 ```trace
@@ -221,6 +243,12 @@ live_use_test :=
   + did_guard_prevent_respectable_wrongness?
   + did_sweep_find_last_touch/local_fix?
   + what_would_demote_this_read?
+
+positive_mapping_test :=
+  what_life_condition_is_being_preserved?
+  + what_positive_structure_does_TRACE_reveal?
+  + what_would_overmapping_kill?
+  + what_would_show_TRACE_added_no_value?
 ```
 
 End.
