@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, and positive systems atlas seed. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, and life/biology/ecology atlas seed. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -101,6 +101,7 @@ translation_bridge != field_solution
 Open when mapping flourishing, play, childhood, repairable life, positive target conditions, or story-carried structure:
 
 1. `05_MAPS_AND_ATLASES/POSITIVE_TRACE_ATLAS_v0_1/TRACE_Positive_TRACE_Atlas_v0_1.md`
+2. `05_MAPS_AND_ATLASES/POSITIVE_TRACE_ATLAS_v0_1/TRACE_Positive_Primitive_Demoter_Table_v0_1.md`
 
 Positive atlas rule:
 
@@ -115,6 +116,27 @@ Positive_TRACE_Atlas :=
 ```
 
 Plain version: this atlas begins to map what TRACE is protecting, not only what TRACE is trying to prevent.
+
+## Life / Biology / Ecology atlas
+
+Open when mapping living systems, biological constraint, boundary, metabolism, repair, ecology, predation, symbiosis, ageing, or death:
+
+1. `05_MAPS_AND_ATLASES/LIFE_BIOLOGY_ECOLOGY_ATLAS_v0_1/TRACE_Life_Biology_Ecology_Atlas_v0_1.md`
+
+Life atlas rule:
+
+```trace
+Life_Biology_Ecology_Atlas :=
+  substrate_map
+  + life_process_map
+  + ecological_relation_map
+  + primitive_seed
+  - canon
+  - validation
+  - scientific_authority_claim
+```
+
+Plain version: this atlas begins to map life as active persistence under energy, repair, boundary, dependency, ageing, and death constraints. It must not use biology as decorative metaphor.
 
 ## Control notes
 
@@ -232,6 +254,8 @@ Use the Live Use Card plus Pre-Escalation Guard plus Last-Touch / Local-Fix Swee
 
 For positive-system mapping, use the Positive TRACE Atlas to identify what a case preserves, not only what it prevents.
 
+For life/ecology mapping, use the Life / Biology / Ecology Atlas to identify boundary, energy, repair, dependency, hidden bills, and death distinctions without treating biology as metaphor-only.
+
 Then ask:
 
 ```trace
@@ -249,6 +273,13 @@ positive_mapping_test :=
   + what_positive_structure_does_TRACE_reveal?
   + what_would_overmapping_kill?
   + what_would_show_TRACE_added_no_value?
+
+life_mapping_test :=
+  what boundary is maintained?
+  + what energy or waste path is active?
+  + what repair loop exists?
+  + what dependency web is hidden?
+  + what would make the biology metaphor false?
 ```
 
 End.
