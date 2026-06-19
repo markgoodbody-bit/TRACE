@@ -44,12 +44,13 @@ positive_target :=
 The first positive/story maps form an expanding arc.
 
 ```trace
-Bluey -> Inside_Out -> Spirited_Away -> WALL_E -> The_Good_Place :=
+Bluey -> Inside_Out -> Spirited_Away -> WALL_E -> The_Good_Place -> Paddington :=
   external_repair_habitat
   -> internal_emotional_ecology
   -> hostile_liminal_system_survival
   -> world_abandonment_and_repair_seed
   -> moral_learning_and_judgment_repair
+  -> hospitality_and_civic_decency
 ```
 
 Plain version:
@@ -59,6 +60,7 @@ Plain version:
 - `Spirited Away` maps hostile-world survival: name retention, labour, greed, refusal of false reward, return changed.
 - `WALL-E` maps care after abandonment: planetary neglect, machine tenderness, comfort capture, stale directives, embodied return.
 - `The Good Place` maps moral learning after failure: broken judgment metrics, relation-based repair, accountability without permanent exile, and ending as release.
+- `Paddington` maps hospitality: vulnerable stranger reception, civic decency, anti-cruelty without naivety, and gentleness preserved under pressure.
 
 ## Anchor case 01 — Bluey
 
@@ -383,6 +385,71 @@ The_Good_Place_demoter :=
 
 Preserve comedy, accountability, growth, and metric-demotion pressure.
 
+## Anchor case 06 — Paddington
+
+Detailed anchor file:
+
+`05_MAPS_AND_ATLASES/POSITIVE_TRACE_ATLAS_v0_1/TRACE_Positive_Anchor_Paddington_v0_1.md`
+
+```trace
+Paddington :=
+  stranger_arrival
+  + hospitality_test
+  + civic_character_test
+  + gentleness_preserved_under_pressure
+```
+
+Core read:
+
+```trace
+Paddington_machine :=
+  vulnerable_stranger_arrives
+  -> receiving_system_tests_him
+  -> household_partially_opens
+  -> misunderstanding_and_mess
+  -> hostile_predator_or_institution_threatens
+  -> kindness_creates_reciprocity
+  -> community_repair_expands
+```
+
+Key primitives:
+
+```trace
+Paddington_adds :=
+  hospitality_as_repair_habitat
+  + stranger_vulnerability
+  + partial_welcome
+  + politeness_as_dignity_signal
+  + portable_home_token
+  + mistake_not_malice
+  + civic_decency
+  + hospitality_with_teeth
+```
+
+Plain version: `Paddington` adds the social grammar of welcome. It shows that a good system is not only one that repairs insiders; it is one that can recognise and protect a vulnerable outsider without erasing, exploiting, or sentimentalising them.
+
+Main TRACE rule:
+
+```trace
+hospitality :=
+  first_shelter
+  + subject_recognition
+  + boundary
+  + update_after_contact
+```
+
+Demoter:
+
+```trace
+Paddington_demoter :=
+  if_TRACE_turns_kindness_into_naivety
+  OR excuses_cruelty_as_realism
+  OR loses_boundary
+  then_mapping_failed
+```
+
+Preserve gentleness, boundary, civic specificity, and anti-predation.
+
 ## Extracted positive primitives
 
 These are seeds, not operators.
@@ -407,6 +474,10 @@ positive_primitives_seed :=
   + judgment_system_demoter
   + accountability_without_permanent_exile
   + ending_as_release
+  + hospitality_as_repair_habitat
+  + stranger_vulnerability
+  + mistake_not_malice
+  + civic_decency
 ```
 
 ### 1. Play as safe simulation
@@ -707,22 +778,97 @@ ending_error :=
   OR force_retention_as_goodness
 ```
 
+### 17. Hospitality as repair habitat
+
+```trace
+hospitality :=
+  first_shelter
+  + subject_recognition
+  + boundary
+  + update_after_contact
+```
+
+Failure mode:
+
+```trace
+hospitality_failure :=
+  stranger_reduced_to_risk
+  OR stranger_exploited_as_object
+  OR welcome_without_boundary
+```
+
+### 18. Stranger vulnerability
+
+```trace
+stranger_vulnerability :=
+  low_local_knowledge
+  + high_dependency
+  + weak standing
+  + misread signals
+  + exposure_to_predation
+```
+
+Failure mode:
+
+```trace
+stranger_read_error :=
+  misfit
+  -> threat_label
+  -> exclusion_before_subject_recognition
+```
+
+### 19. Mistake not malice
+
+```trace
+mistake_not_malice :=
+  bad_outcome
+  + no_predatory_intent
+  + learning_possible
+  -> correction_not_exile
+```
+
+Failure mode:
+
+```trace
+malice_projection :=
+  disruption
+  -> bad_character_claim
+  -> no_repair_channel
+```
+
+### 20. Civic decency
+
+```trace
+civic_decency :=
+  repeated_small_help
+  + tolerance_for_misfit
+  + local_memory
+  + anti-cruelty_norm
+```
+
+Failure mode:
+
+```trace
+civic_failure :=
+  no_small_help
+  + no_memory
+  + outsider_as_prey
+```
+
 ## Candidate next anchors
 
 Do not map all at once. Use only when the atlas needs contrast.
 
 ```trace
 candidate_next :=
-  Paddington
-  + Maisie_real_case
+  Maisie_real_case
   + Children_of_Men
 ```
 
 Recommended order:
 
-1. `Paddington` — hospitality, immigrant kindness, civic decency, anti-cruelty without naivety.
-2. `Maisie real case` — non-human care, ageing, illness, dependency, dignity, ordinary love.
-3. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
+1. `Maisie real case` — non-human care, ageing, illness, dependency, dignity, ordinary love.
+2. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
 
 ## Current positive atlas claim
 
@@ -738,6 +884,7 @@ current_claim :=
     + embodied_world_connection
     + care_after_abandonment
     + moral_learning_after_failure
+    + hospitality_toward_the_vulnerable_stranger
 
 claim_status :=
   promising_map
@@ -746,7 +893,7 @@ claim_status :=
   - public_claim
 ```
 
-Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, accountability, growth, and the ability to return changed without being erased.
+Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, accountability, growth, welcome, and the ability to return changed without being erased.
 
 ## Use rule
 
@@ -759,4 +906,4 @@ if_TRACE_analysis_turns_life_into_cold_mechanism
   then_check_overmapping
 ```
 
-TRACE should reveal structure without killing play, grief, strangeness, tenderness, comedy, accountability, or love.
+TRACE should reveal structure without killing play, grief, strangeness, tenderness, comedy, accountability, hospitality, or love.
