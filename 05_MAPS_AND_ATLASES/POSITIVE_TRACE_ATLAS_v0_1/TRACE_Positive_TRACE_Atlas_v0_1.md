@@ -1,11 +1,12 @@
 # TRACE Positive Systems Atlas v0.1
 
-Status: working atlas seed. Not canon by itself. Not validation. Not a claim that TRACE can explain all art, childhood, psychology, or culture. This file records a new direction: TRACE must map positive life, not only failure, harm, and institutional breakdown.
+Status: working atlas seed. Not canon by itself. Not validation. Not a claim that TRACE can explain all art, childhood, psychology, culture, non-human care, or political violence. This file records a new direction: TRACE must map positive life, not only failure, harm, and institutional breakdown.
 
 ```trace
 Positive_TRACE_Atlas_v0_1 :=
   positive_systems_map
   + story_anchor_set
+  + lived_care_anchor
   + primitive_seed
   + contrast_surface
   - validation
@@ -37,14 +38,16 @@ positive_target :=
   + ordinary_repair
   + memory_continuity
   + non_instrumental_value
+  + embodied_world_contact
+  + welcome
+  + maintenance_love
+  + future_space
 ```
 
 ## Current anchor arc
 
-The first positive/story maps form an expanding arc.
-
 ```trace
-Bluey -> Inside_Out -> Spirited_Away -> WALL_E -> The_Good_Place -> Paddington -> Maisie :=
+Bluey -> Inside_Out -> Spirited_Away -> WALL_E -> The_Good_Place -> Paddington -> Maisie -> Children_of_Men :=
   external_repair_habitat
   -> internal_emotional_ecology
   -> hostile_liminal_system_survival
@@ -52,6 +55,7 @@ Bluey -> Inside_Out -> Spirited_Away -> WALL_E -> The_Good_Place -> Paddington -
   -> moral_learning_and_judgment_repair
   -> hospitality_and_civic_decency
   -> nonhuman_care_and_dependency
+  -> future_space_reopened_under_extinction_pressure
 ```
 
 Plain version:
@@ -63,6 +67,7 @@ Plain version:
 - `The Good Place` maps moral learning after failure: broken judgment metrics, relation-based repair, accountability without permanent exile, and ending as release.
 - `Paddington` maps hospitality: vulnerable stranger reception, civic decency, anti-cruelty without naivety, and gentleness preserved under pressure.
 - `Maisie` maps lived non-human care: ageing, illness, dependency, dignity without language, maintenance love, and end-of-life humility.
+- `Children of Men` maps future-space collapse: fragile future subjects, state hardening, revolutionary capture risk, thin hope, and protective escort.
 
 ## Anchor case 01 — Bluey
 
@@ -264,20 +269,6 @@ WALL_E :=
   + repair_seed
 ```
 
-Core read:
-
-```trace
-WALL_E_machine :=
-  Earth_abandoned
-  -> maintenance_machine_keeps_working
-  -> small_care_practices_survive
-  -> EVE_arrives_as_search_carrier
-  -> plant_found
-  -> human_habit_system_resists_return
-  -> machine_care_interrupts_capture
-  -> embodied_repair_begins
-```
-
 Key primitives:
 
 ```trace
@@ -308,17 +299,6 @@ flourishing_requires :=
   + future_participation
 ```
 
-Demoter:
-
-```trace
-WALL_E_demoter :=
-  if_TRACE_treats_return_as_total_solution
-  OR reads_WALL_E_as_only_programmed_routine
-  then_mapping_failed
-```
-
-Preserve tenderness, ecological cost, and unsolved repair.
-
 ## Anchor case 05 — The Good Place
 
 Detailed anchor file:
@@ -333,20 +313,6 @@ The_Good_Place :=
   + relational_correction
   + moral_growth
   + repair_after_death
-```
-
-Core read:
-
-```trace
-The_Good_Place_machine :=
-  subjects_sorted_by_moral_accounting
-  -> accounting_system_fails_reality
-  -> false_reward/punishment_environment
-  -> reboots_repeat
-  -> relation_survives_reset
-  -> moral_learning_becomes_visible
-  -> judgment_system_revised
-  -> ending_becomes_release_not_punishment
 ```
 
 Key primitives:
@@ -375,18 +341,6 @@ moral_system_failure :=
   + no_path_to_growth
 ```
 
-Demoter:
-
-```trace
-The_Good_Place_demoter :=
-  if_TRACE_turns_repair_into_cheap_forgiveness
-  OR gives_infinite_chances_without_cost
-  OR erases_accountability
-  then_mapping_failed
-```
-
-Preserve comedy, accountability, growth, and metric-demotion pressure.
-
 ## Anchor case 06 — Paddington
 
 Detailed anchor file:
@@ -399,19 +353,6 @@ Paddington :=
   + hospitality_test
   + civic_character_test
   + gentleness_preserved_under_pressure
-```
-
-Core read:
-
-```trace
-Paddington_machine :=
-  vulnerable_stranger_arrives
-  -> receiving_system_tests_him
-  -> household_partially_opens
-  -> misunderstanding_and_mess
-  -> hostile_predator_or_institution_threatens
-  -> kindness_creates_reciprocity
-  -> community_repair_expands
 ```
 
 Key primitives:
@@ -440,18 +381,6 @@ hospitality :=
   + update_after_contact
 ```
 
-Demoter:
-
-```trace
-Paddington_demoter :=
-  if_TRACE_turns_kindness_into_naivety
-  OR excuses_cruelty_as_realism
-  OR loses_boundary
-  then_mapping_failed
-```
-
-Preserve gentleness, boundary, civic specificity, and anti-predation.
-
 ## Anchor case 07 — Maisie real case
 
 Detailed anchor file:
@@ -466,20 +395,6 @@ Maisie :=
   + illness_subject
   + nonverbal_signal_carrier
   + daily_responsibility_anchor
-```
-
-Core read:
-
-```trace
-Maisie_machine :=
-  beloved_nonhuman_subject
-  -> health_shock
-  -> emergency_care_decision
-  -> survival_with_scar
-  -> medication_rhythm
-  -> altered_capacity
-  -> continued_relation
-  -> ordinary_love_as_daily_carrier
 ```
 
 Key primitives:
@@ -509,17 +424,59 @@ not:
   decreased_value
 ```
 
+## Anchor case 08 — Children of Men
+
+Detailed anchor file:
+
+`05_MAPS_AND_ATLASES/POSITIVE_TRACE_ATLAS_v0_1/TRACE_Positive_Anchor_Children_of_Men_v0_1.md`
+
+```trace
+Children_of_Men :=
+  no_children_world
+  + future_space_collapse
+  + state_hardening
+  + refugee_disposability
+  + single_birth_as_future_signal
+  + escort_under_fire
+```
+
+Key primitives:
+
+```trace
+Children_of_Men_adds :=
+  future_space_collapse
+  + fragile_future_subject
+  + thin_hope
+  + protective_escort
+  + futureless_power
+  + liberation_capture
+  + micro_refuge
+  + recognition_moment_not_structural_repair
+```
+
+Plain version: `Children of Men` helps TRACE name why the future matters without turning the future into an abstraction. The future arrives as a vulnerable subject who must not be spent by either state power or revolutionary capture.
+
+Main TRACE rule:
+
+```trace
+hope :=
+  future_not_empty
+  + someone_to_protect
+  + route_still_possible
+  + cost_accepted
+```
+
 Demoter:
 
 ```trace
-Maisie_demoter :=
-  if_TRACE_confuses_owner_grief_with_subject_welfare
-  OR treats_survival_as_full_restoration
-  OR requires_human_language_before_care_binds
+Children_of_Men_demoter :=
+  if_TRACE_turns_Kee_or_the_baby_into_symbol_only
+  OR treats_recognition_moment_as_structural_repair
+  OR uses_future_as_excuse_to_spend_people
   then_mapping_failed
 ```
 
-Preserve love, welfare truth, nonhuman subject uncertainty, and medical humility.
+Preserve bleakness, thin hope, subject-not-symbol, and state/resistance demoters.
 
 ## Extracted positive primitives
 
@@ -553,9 +510,15 @@ positive_primitives_seed :=
   + care_without_contract
   + maintenance_love
   + dignity_under_impairment
+  + future_space_collapse
+  + fragile_future_subject
+  + thin_hope
+  + protective_escort
 ```
 
-### 1. Play as safe simulation
+## Primitive seed list
+
+### Play as safe simulation
 
 ```trace
 play :=
@@ -567,17 +530,7 @@ play :=
   + social_rule_testing
 ```
 
-Failure mode:
-
-```trace
-play_failure :=
-  domination
-  OR humiliation
-  OR adult_capture
-  OR no_reality_tether
-```
-
-### 2. Home as repair habitat
+### Home as repair habitat
 
 ```trace
 home_as_repair_habitat :=
@@ -588,16 +541,7 @@ home_as_repair_habitat :=
   + low_cost_repair
 ```
 
-Failure mode:
-
-```trace
-home_failure :=
-  every_error_becomes_identity
-  OR child_signal_not_received
-  OR adult_power_never_bends_down
-```
-
-### 3. Sadness as repair signal
+### Sadness as repair signal
 
 ```trace
 sadness :=
@@ -608,15 +552,7 @@ sadness :=
   + reality_acceptance
 ```
 
-Failure mode:
-
-```trace
-sadness_suppression :=
-  correction_signal_blocked
-  -> distress_without_repair
-```
-
-### 4. Mixed memory as maturity
+### Mixed memory as maturity
 
 ```trace
 maturity :=
@@ -629,16 +565,7 @@ maturity :=
     + grief
 ```
 
-Failure mode:
-
-```trace
-purity_demand :=
-  only_happy_memory_allowed
-  OR only_bad_memory_allowed
-  -> identity_distortion
-```
-
-### 5. Name as identity key
+### Name as identity key
 
 ```trace
 name :=
@@ -648,16 +575,7 @@ name :=
   + return_condition
 ```
 
-Failure mode:
-
-```trace
-functional_renaming :=
-  person
-  -> role_only
-  -> memory_of_wholeness_reduced
-```
-
-### 6. False gold
+### False gold
 
 ```trace
 false_gold :=
@@ -666,16 +584,7 @@ false_gold :=
     real_subject_need_remains_unseen
 ```
 
-Failure mode:
-
-```trace
-false_signal_capture :=
-  attention_for_gold
-  + status_for_consumption
-  + no_true_recognition
-```
-
-### 7. Pollution is not identity
+### Pollution is not identity
 
 ```trace
 pollution_not_identity :=
@@ -683,14 +592,7 @@ pollution_not_identity :=
   != subject_nature
 ```
 
-Failure mode:
-
-```trace
-diagnostic_error :=
-  treat_contaminated_subject_as_contamination_itself
-```
-
-### 8. Slow repair
+### Slow repair
 
 ```trace
 slow_repair :=
@@ -700,32 +602,7 @@ slow_repair :=
   + arrive_elsewhere
 ```
 
-Failure mode:
-
-```trace
-rush_repair :=
-  force_closure
-  + no_integration_time
-```
-
-### 9. Care after abandonment
-
-```trace
-care_after_abandonment :=
-  official_system_gone
-  + residual_carrier_remains
-  + small_value_preserved
-```
-
-Failure mode:
-
-```trace
-abandonment_read_error :=
-  assume_no_care_remains
-  because_formal_care_system_failed
-```
-
-### 10. Comfort capture
+### Comfort capture
 
 ```trace
 comfort_capture :=
@@ -736,31 +613,7 @@ comfort_capture :=
   -> agency_atrophy
 ```
 
-Failure mode:
-
-```trace
-comfort_capture_error :=
-  treat_absence_of_pain_as_absence_of_harm
-```
-
-### 11. Embodied attention
-
-```trace
-embodied_attention :=
-  look_up
-  + body_in_world
-  + direct_perception
-  + relation_without_interface
-```
-
-Failure mode:
-
-```trace
-mediated_world_error :=
-  interface_substitutes_for_contact
-```
-
-### 12. Repair as seed
+### Repair as seed
 
 ```trace
 repair_as_seed :=
@@ -770,14 +623,7 @@ repair_as_seed :=
   - solved_state
 ```
 
-Failure mode:
-
-```trace
-repair_seed_error :=
-  treat_beginning_as_restoration
-```
-
-### 13. Moral learning after failure
+### Moral learning after failure
 
 ```trace
 moral_learning_after_failure :=
@@ -788,16 +634,7 @@ moral_learning_after_failure :=
   + changed_default
 ```
 
-Failure mode:
-
-```trace
-cheap_redemption_error :=
-  confession
-  + no_changed_action
-  + no_cost
-```
-
-### 14. Judgment-system demoter
+### Judgment-system demoter
 
 ```trace
 judgment_system_demoter :=
@@ -807,53 +644,7 @@ judgment_system_demoter :=
   then_judgment_claim_degrades
 ```
 
-Failure mode:
-
-```trace
-judgment_error :=
-  score_confidence
-  + context_blindness
-  + no_revision_path
-```
-
-### 15. Accountability without permanent exile
-
-```trace
-accountability_without_exile :=
-  wrongdoing_named
-  + repair_path_available
-  + changed_action_required
-  + no_fake_absolution
-```
-
-Failure mode:
-
-```trace
-accountability_failure :=
-  either:
-    permanent_exile_without_learning
-    OR forgiveness_without_repair
-```
-
-### 16. Ending as release
-
-```trace
-ending_as_release :=
-  consent
-  + completion
-  + non-coercive_exit
-  + no_claim_of_failure
-```
-
-Failure mode:
-
-```trace
-ending_error :=
-  treat_all_endings_as_harm
-  OR force_retention_as_goodness
-```
-
-### 17. Hospitality as repair habitat
+### Hospitality
 
 ```trace
 hospitality :=
@@ -863,112 +654,7 @@ hospitality :=
   + update_after_contact
 ```
 
-Failure mode:
-
-```trace
-hospitality_failure :=
-  stranger_reduced_to_risk
-  OR stranger_exploited_as_object
-  OR welcome_without_boundary
-```
-
-### 18. Stranger vulnerability
-
-```trace
-stranger_vulnerability :=
-  low_local_knowledge
-  + high_dependency
-  + weak standing
-  + misread signals
-  + exposure_to_predation
-```
-
-Failure mode:
-
-```trace
-stranger_read_error :=
-  misfit
-  -> threat_label
-  -> exclusion_before_subject_recognition
-```
-
-### 19. Mistake not malice
-
-```trace
-mistake_not_malice :=
-  bad_outcome
-  + no_predatory_intent
-  + learning_possible
-  -> correction_not_exile
-```
-
-Failure mode:
-
-```trace
-malice_projection :=
-  disruption
-  -> bad_character_claim
-  -> no_repair_channel
-```
-
-### 20. Civic decency
-
-```trace
-civic_decency :=
-  repeated_small_help
-  + tolerance_for_misfit
-  + local_memory
-  + anti-cruelty_norm
-```
-
-Failure mode:
-
-```trace
-civic_failure :=
-  no_small_help
-  + no_memory
-  + outsider_as_prey
-```
-
-### 21. Nonhuman subject signal
-
-```trace
-nonhuman_subject_signal :=
-  behaviour
-  + appetite
-  + movement
-  + comfort_seeking
-  + distress_signal
-  + routine_response
-```
-
-Failure mode:
-
-```trace
-nonhuman_signal_failure :=
-  language_absence
-  -> subject_absence_claim
-```
-
-### 22. Care without contract
-
-```trace
-care_without_contract :=
-  no_bargain
-  + dependency
-  + carer_control_over_risk
-  + duty_without_transaction
-```
-
-Failure mode:
-
-```trace
-contract_error :=
-  no_reciprocal_bargain
-  -> no_responsibility
-```
-
-### 23. Maintenance love
+### Maintenance love
 
 ```trace
 maintenance_love :=
@@ -979,29 +665,20 @@ maintenance_love :=
   + no_applause
 ```
 
-Failure mode:
+### Future-space collapse and thin hope
 
 ```trace
-heroic_care_bias :=
-  value_only_dramatic_rescue
-  + ignore_daily_stability_work
-```
+future_space_collapse :=
+  no_successors
+  + no_believable_tomorrow
+  + repair_motivation_thins
+  + control_intensifies
 
-### 24. Dignity under impairment
-
-```trace
-dignity_under_impairment :=
-  subject_still_same_subject
-  + environment_adjusts
-  + care_reads_new_limits
-```
-
-Failure mode:
-
-```trace
-capacity_error :=
-  capacity_loss
-  -> value_loss_claim
+thin_hope :=
+  nonzero_future_path
+  + low_certainty
+  + high_cost
+  + action_required
 ```
 
 ## Candidate next anchors
@@ -1010,12 +687,16 @@ Do not map all at once. Use only when the atlas needs contrast.
 
 ```trace
 candidate_next :=
-  Children_of_Men
+  consolidate_positive_atlas
+  + add_demoter_table
+  + optionally_map_life_biology_ecology_next
 ```
 
 Recommended next:
 
-1. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
+1. Consolidate: create a compact `Positive_TRACE_Atlas_Primitives_v0_1.md`.
+2. Add demoter table: where each positive primitive fails or becomes sentimental overreach.
+3. Then move to Life/Biology/Ecology rather than another story loop.
 
 ## Current positive atlas claim
 
@@ -1033,6 +714,7 @@ current_claim :=
     + moral_learning_after_failure
     + hospitality_toward_the_vulnerable_stranger
     + care_for_nonhuman_dependent_subjects
+    + fragile_future_subjects
 
 claim_status :=
   promising_map
@@ -1041,7 +723,7 @@ claim_status :=
   - public_claim
 ```
 
-Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, accountability, growth, welcome, nonhuman care, and the ability to return changed without being erased.
+Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, accountability, growth, welcome, nonhuman care, and future-space.
 
 ## Use rule
 
@@ -1054,4 +736,4 @@ if_TRACE_analysis_turns_life_into_cold_mechanism
   then_check_overmapping
 ```
 
-TRACE should reveal structure without killing play, grief, strangeness, tenderness, comedy, accountability, hospitality, animal dignity, or love.
+TRACE should reveal structure without killing play, grief, strangeness, tenderness, comedy, accountability, hospitality, animal dignity, future-space, or love.
