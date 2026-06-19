@@ -34,6 +34,7 @@ pressure_test_question :=
 ## Current tests
 
 1. `TRACE_Cross_Atlas_Pressure_Test_WALL_E_v0_1.md`
+2. `TRACE_Cross_Atlas_Pressure_Test_Maisie_v0_1.md`
 
 ## Standard test questions
 
@@ -55,6 +56,26 @@ value_added_test :=
   + did_it_reveal_missing_carrier_or_constraint?
   + did_it_preserve_case_life?
   + did_it_avoid_validation_claim?
+```
+
+## Current test signals
+
+```trace
+WALL_E_result :=
+  stack_added_value_by_separating:
+    care_after_abandonment
+    + ecological_hidden_bill
+    + comfort_capture
+    + stale_directive_failure
+    + repair_seed_not_restoration
+
+Maisie_result :=
+  stack_added_value_by_separating:
+    maintenance_love
+    + ageing_body_truth
+    + nonverbal_subject_signal
+    + asymmetric_carer_responsibility
+    + veterinary_truth_carrier
 ```
 
 ## Demoter
