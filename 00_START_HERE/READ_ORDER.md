@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, and last-touch/local-fix sweep. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, and real-use capture sheet. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -20,9 +20,10 @@ Open these in order:
 2. `02_CURRENT_SURFACE/LIVE_USE_CARD_v0_2_1/TRACE_LIVE_USE_CARD_v0_2_1.md`
 3. `02_CURRENT_SURFACE/PRE_ESCALATION_GUARD_v0_1/TRACE_Pre_Escalation_Guard_v0_1.md`
 4. `02_CURRENT_SURFACE/LAST_TOUCH_LOCAL_FIX_SWEEP_v0_1/TRACE_Last_Touch_Local_Fix_Sweep_v0_1.md`
-5. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
-6. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
-7. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
+5. `02_CURRENT_SURFACE/REAL_USE_CAPTURE_v0_1/TRACE_Real_Use_Capture_Sheet_v0_1.md`
+6. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
+7. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
+8. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
 
 Use this path when the task is to orient to a real situation, not audit the whole repo.
 
@@ -207,7 +208,7 @@ support_notes_do_not_promote
 
 ## Next useful move
 
-Use the Live Use Card plus Pre-Escalation Guard plus Last-Touch / Local-Fix Sweep on one real situation.
+Use the Live Use Card plus Pre-Escalation Guard plus Last-Touch / Local-Fix Sweep on one real situation, then complete the Real Use Capture Sheet.
 
 Then ask:
 
