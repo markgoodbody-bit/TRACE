@@ -1,4 +1,4 @@
-# TRACE for New Readers v0.1
+# TRACE for New Readers v0.1.1
 
 Status: cold-reader front door. Not canon. Not validation. Not a complete theory. This file gives a plain first contact with TRACE for someone who has never seen Mechanical Ethics, TRACE, glyphs, or the repo.
 
@@ -8,8 +8,20 @@ TRACE_for_new_readers :=
   + low_entry_cost
   + use_before_theory
   + claim_control
+  + micro_glossary
   - full_system
   - validation
+```
+
+## One sentence
+
+TRACE is a way to ask who carries the hidden cost, what gets worse with time, and what repair path is still available.
+
+```trace
+public_sentence :=
+  who_carries_hidden_cost?
+  + what_gets_worse_with_time?
+  + what_repair_path_remains?
 ```
 
 ## What is TRACE?
@@ -29,6 +41,27 @@ TRACE :=
 ```
 
 Plain version: TRACE helps you notice when a system looks clean at the surface while pushing cost, risk, delay, or damage somewhere else.
+
+## Five useful terms
+
+```trace
+micro_glossary :=
+  hidden_bill := cost_moved_somewhere_less_visible
+  clock := what_gets_worse_with_time
+  carrier := who_or_what_can_carry_repair
+  option_space := choices_that_actually_exist
+  demoter := what_would_show_the_read_is_wrong
+  future_space := remaining_paths_for_life_repair_or_choice
+```
+
+Plain version:
+
+- A hidden bill is a cost that has been moved somewhere easier to ignore.
+- A clock is what gets worse if action is delayed.
+- A carrier is the person, process, record, rule, or tool that can actually carry repair.
+- Option-space means the choices that really exist, not just the choices listed on paper.
+- A demoter is the fact that would show your interpretation is wrong or overstated.
+- Future-space means the remaining paths for life, repair, choice, or recovery.
 
 ## Why should anyone care?
 
@@ -156,6 +189,7 @@ Open:
 ```trace
 next_reader_path :=
   USE_TRACE_ON_ONE_PROBLEM_v0_1
+  -> TRACE_WORKED_EXAMPLE_WALL_E_v0_1
   -> WHAT_TRACE_IS_NOT_v0_1
   -> READ_ORDER_if_needed
 ```
