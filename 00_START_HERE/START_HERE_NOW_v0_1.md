@@ -20,16 +20,18 @@ Open these first:
 
 1. `00_START_HERE/TRACE_FOR_NEW_READERS_v0_1.md`
 2. `00_START_HERE/USE_TRACE_ON_ONE_PROBLEM_v0_1.md`
-3. `00_START_HERE/WHAT_TRACE_IS_NOT_v0_1.md`
+3. `00_START_HERE/TRACE_WORKED_EXAMPLE_WALL_E_v0_1.md`
+4. `00_START_HERE/WHAT_TRACE_IS_NOT_v0_1.md`
 
 ```trace
 cold_reader_path :=
   what_TRACE_is
   -> use_once
+  -> worked_example
   -> claim_boundaries
 ```
 
-Plain version: understand what TRACE is, try it once, and know what it is not before reading the deeper repo.
+Plain version: understand what TRACE is, try it once, see one example, and know what it is not before reading the deeper repo.
 
 ## Current frame
 
@@ -88,6 +90,7 @@ Those files are the current practical front-door instruments. They are designed 
 current_status :=
   live_use_stack := strengthened
   cold_reader_front_door := added
+  worked_example_front_door := added
   positive_atlas := seed
   life_biology_ecology_atlas := seed
   agency_free_will_mandelbrot_atlas := seed
