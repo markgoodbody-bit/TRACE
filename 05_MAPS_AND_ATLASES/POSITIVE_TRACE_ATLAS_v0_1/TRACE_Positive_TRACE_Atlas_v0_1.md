@@ -41,13 +41,14 @@ positive_target :=
 
 ## Current anchor arc
 
-The first three positive/story maps form a developmental arc.
+The first positive/story maps form an expanding arc.
 
 ```trace
-Bluey -> Inside_Out -> Spirited_Away :=
+Bluey -> Inside_Out -> Spirited_Away -> WALL_E :=
   external_repair_habitat
   -> internal_emotional_ecology
   -> hostile_liminal_system_survival
+  -> world_abandonment_and_repair_seed
 ```
 
 Plain version:
@@ -55,6 +56,7 @@ Plain version:
 - `Bluey` maps a healthy external repair habitat: family, play, parent participation, ordinary correction.
 - `Inside Out` maps internal emotional ecology: sadness as repair signal, mixed memory, identity transition.
 - `Spirited Away` maps hostile-world survival: name retention, labour, greed, refusal of false reward, return changed.
+- `WALL-E` maps care after abandonment: planetary neglect, machine tenderness, comfort capture, stale directives, embodied return.
 
 ## Anchor case 01 — Bluey
 
@@ -240,6 +242,77 @@ Spirited_Away_demoter :=
 
 Map structure, but preserve strangeness.
 
+## Anchor case 04 — WALL-E
+
+Detailed anchor file:
+
+`05_MAPS_AND_ATLASES/POSITIVE_TRACE_ATLAS_v0_1/TRACE_Positive_Anchor_Wall_E_v0_1.md`
+
+```trace
+WALL_E :=
+  abandoned_world
+  + machine_care
+  + planetary_neglect
+  + habit_capture
+  + embodied_return
+  + repair_seed
+```
+
+Core read:
+
+```trace
+WALL_E_machine :=
+  Earth_abandoned
+  -> maintenance_machine_keeps_working
+  -> small_care_practices_survive
+  -> EVE_arrives_as_search_carrier
+  -> plant_found
+  -> human_habit_system_resists_return
+  -> machine_care_interrupts_capture
+  -> embodied_repair_begins
+```
+
+Key primitives:
+
+```trace
+WALL_E_adds :=
+  care_after_abandonment
+  + machine_tenderness
+  + object_memory
+  + fragile_future_signal
+  + comfort_capture
+  + embodied_attention
+  + stale_directive_failure
+  + repair_as_seed
+```
+
+Plain version: `WALL-E` helps TRACE name a positive condition that is not merely safety: embodied, attentive, world-connected life that can still care after abandonment and start repair without pretending the damage is already solved.
+
+Main TRACE rule:
+
+```trace
+survival != flourishing
+
+flourishing_requires :=
+  body
+  + agency
+  + relation
+  + memory
+  + shared_world
+  + future_participation
+```
+
+Demoter:
+
+```trace
+WALL_E_demoter :=
+  if_TRACE_treats_return_as_total_solution
+  OR reads_WALL_E_as_only_programmed_routine
+  then_mapping_failed
+```
+
+Preserve tenderness, ecological cost, and unsolved repair.
+
 ## Extracted positive primitives
 
 These are seeds, not operators.
@@ -256,6 +329,10 @@ positive_primitives_seed :=
   + slow_repair
   + child_time
   + correction_without_exile
+  + care_after_abandonment
+  + comfort_capture
+  + embodied_attention
+  + repair_as_seed
 ```
 
 ### 1. Play as safe simulation
@@ -411,14 +488,82 @@ rush_repair :=
   + no_integration_time
 ```
 
+### 9. Care after abandonment
+
+```trace
+care_after_abandonment :=
+  official_system_gone
+  + residual_carrier_remains
+  + small_value_preserved
+```
+
+Failure mode:
+
+```trace
+abandonment_read_error :=
+  assume_no_care_remains
+  because_formal_care_system_failed
+```
+
+### 10. Comfort capture
+
+```trace
+comfort_capture :=
+  remove_friction
+  + automate_choice
+  + feed_distraction
+  + prevent_body_contact
+  -> agency_atrophy
+```
+
+Failure mode:
+
+```trace
+comfort_capture_error :=
+  treat_absence_of_pain_as_absence_of_harm
+```
+
+### 11. Embodied attention
+
+```trace
+embodied_attention :=
+  look_up
+  + body_in_world
+  + direct_perception
+  + relation_without_interface
+```
+
+Failure mode:
+
+```trace
+mediated_world_error :=
+  interface_substitutes_for_contact
+```
+
+### 12. Repair as seed
+
+```trace
+repair_as_seed :=
+  credible_beginning
+  + high_future_labour
+  + uncertain_outcome
+  - solved_state
+```
+
+Failure mode:
+
+```trace
+repair_seed_error :=
+  treat_beginning_as_restoration
+```
+
 ## Candidate next anchors
 
 Do not map all at once. Use only when the atlas needs contrast.
 
 ```trace
 candidate_next :=
-  Wall_E
-  + The_Good_Place
+  The_Good_Place
   + Paddington
   + Maisie_real_case
   + Children_of_Men
@@ -426,11 +571,10 @@ candidate_next :=
 
 Recommended order:
 
-1. `Wall-E` — care after planetary neglect; machine tenderness; habit-collapse; repair after abandonment.
-2. `The Good Place` — moral learning, accountability, systems of judgment, afterlife bureaucracy, repair after death.
-3. `Paddington` — hospitality, immigrant kindness, civic decency, anti-cruelty without naivety.
-4. `Maisie real case` — non-human care, ageing, illness, dependency, dignity, ordinary love.
-5. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
+1. `The Good Place` — moral learning, accountability, systems of judgment, afterlife bureaucracy, repair after death.
+2. `Paddington` — hospitality, immigrant kindness, civic decency, anti-cruelty without naivety.
+3. `Maisie real case` — non-human care, ageing, illness, dependency, dignity, ordinary love.
+4. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
 
 ## Current positive atlas claim
 
@@ -443,6 +587,8 @@ current_claim :=
     + identity_continuity
     + refusal_of_false_reward
     + repairable_transition
+    + embodied_world_connection
+    + care_after_abandonment
 
 claim_status :=
   promising_map
@@ -451,7 +597,7 @@ claim_status :=
   - public_claim
 ```
 
-Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, and the ability to return changed without being erased.
+Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, and the ability to return changed without being erased.
 
 ## Use rule
 
@@ -464,4 +610,4 @@ if_TRACE_analysis_turns_life_into_cold_mechanism
   then_check_overmapping
 ```
 
-TRACE should reveal structure without killing play, grief, strangeness, or love.
+TRACE should reveal structure without killing play, grief, strangeness, tenderness, or love.
