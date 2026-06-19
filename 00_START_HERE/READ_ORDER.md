@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch and v0.2.1 hidden-carrier / anomaly-split patch. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, and pre-escalation guard. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -18,9 +18,10 @@ Open these in order:
 
 1. `00_START_HERE/START_HERE_NOW_v0_1.md`
 2. `02_CURRENT_SURFACE/LIVE_USE_CARD_v0_2_1/TRACE_LIVE_USE_CARD_v0_2_1.md`
-3. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
-4. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
-5. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
+3. `02_CURRENT_SURFACE/PRE_ESCALATION_GUARD_v0_1/TRACE_Pre_Escalation_Guard_v0_1.md`
+4. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
+5. `02_CURRENT_SURFACE/FRONT_DOOR_v0_3/TRACE_BOOTSTRAP_ROSETTA_CURRENT_FRONT_DOOR_v0_3.md`
+6. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
 
 Use this path when the task is to orient to a real situation, not audit the whole repo.
 
@@ -100,7 +101,8 @@ Open when drift, self-deception, or continuity risk appears:
 1. `00_CONTROL/TRACE_Anti_Self_Deception_and_Loss_Guard_v0_1.md`
 2. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
 3. `00_CONTROL/TRACE_Spine_Wording_Drift_Note_v0_1.md`
-4. `CLAUDE.md`
+4. `00_CONTROL/TRACE_Kimi_Break_Register_v0_1.md`
+5. `CLAUDE.md`
 
 Known live ambiguity:
 
@@ -112,6 +114,16 @@ spine_wording_drift :=
 ```
 
 Do not harmonise silently. Quote the wording used and cite its source file.
+
+Kimi break register rule:
+
+```trace
+Kimi_break_register :=
+  failure_ledger
+  + patch_pressure
+  + anti_self_deception_record
+  - validation
+```
 
 ## Bootstrap / relay layer
 
@@ -194,7 +206,7 @@ support_notes_do_not_promote
 
 ## Next useful move
 
-Use the Live Use Card on one real situation.
+Use the Live Use Card plus Pre-Escalation Guard on one real situation.
 
 Then ask:
 
@@ -204,6 +216,7 @@ live_use_test :=
   + did_it_clarify_harm_or_hardening?
   + did_it_clarify_correction_route?
   + did_it_improve_next_action?
+  + did_guard_prevent_respectable_wrongness?
   + what_would_demote_this_read?
 ```
 
