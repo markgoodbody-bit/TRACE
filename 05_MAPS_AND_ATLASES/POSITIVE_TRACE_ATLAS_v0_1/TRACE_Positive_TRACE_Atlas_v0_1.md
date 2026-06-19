@@ -44,13 +44,14 @@ positive_target :=
 The first positive/story maps form an expanding arc.
 
 ```trace
-Bluey -> Inside_Out -> Spirited_Away -> WALL_E -> The_Good_Place -> Paddington :=
+Bluey -> Inside_Out -> Spirited_Away -> WALL_E -> The_Good_Place -> Paddington -> Maisie :=
   external_repair_habitat
   -> internal_emotional_ecology
   -> hostile_liminal_system_survival
   -> world_abandonment_and_repair_seed
   -> moral_learning_and_judgment_repair
   -> hospitality_and_civic_decency
+  -> nonhuman_care_and_dependency
 ```
 
 Plain version:
@@ -61,6 +62,7 @@ Plain version:
 - `WALL-E` maps care after abandonment: planetary neglect, machine tenderness, comfort capture, stale directives, embodied return.
 - `The Good Place` maps moral learning after failure: broken judgment metrics, relation-based repair, accountability without permanent exile, and ending as release.
 - `Paddington` maps hospitality: vulnerable stranger reception, civic decency, anti-cruelty without naivety, and gentleness preserved under pressure.
+- `Maisie` maps lived non-human care: ageing, illness, dependency, dignity without language, maintenance love, and end-of-life humility.
 
 ## Anchor case 01 — Bluey
 
@@ -450,6 +452,75 @@ Paddington_demoter :=
 
 Preserve gentleness, boundary, civic specificity, and anti-predation.
 
+## Anchor case 07 — Maisie real case
+
+Detailed anchor file:
+
+`05_MAPS_AND_ATLASES/POSITIVE_TRACE_ATLAS_v0_1/TRACE_Positive_Anchor_Maisie_Real_Case_v0_1.md`
+
+```trace
+Maisie :=
+  dog
+  + family_member
+  + ageing_subject
+  + illness_subject
+  + nonverbal_signal_carrier
+  + daily_responsibility_anchor
+```
+
+Core read:
+
+```trace
+Maisie_machine :=
+  beloved_nonhuman_subject
+  -> health_shock
+  -> emergency_care_decision
+  -> survival_with_scar
+  -> medication_rhythm
+  -> altered_capacity
+  -> continued_relation
+  -> ordinary_love_as_daily_carrier
+```
+
+Key primitives:
+
+```trace
+Maisie_adds :=
+  nonhuman_subject_signal
+  + care_without_contract
+  + dependency_increases_responsibility
+  + maintenance_love
+  + survival_with_scar
+  + dignity_under_impairment
+  + temperament_continuity
+  + end_of_life_humility
+```
+
+Plain version: `Maisie` moves the positive atlas from fiction into lived care. It shows that ordinary love is medication timing, watching signals, adjusting the world, preserving comfort, and carrying responsibility for a subject who cannot explain herself in human terms.
+
+Main TRACE rule:
+
+```trace
+language_absence != subject_absence
+
+dependency
+-> increased_responsibility
+not:
+  decreased_value
+```
+
+Demoter:
+
+```trace
+Maisie_demoter :=
+  if_TRACE_confuses_owner_grief_with_subject_welfare
+  OR treats_survival_as_full_restoration
+  OR requires_human_language_before_care_binds
+  then_mapping_failed
+```
+
+Preserve love, welfare truth, nonhuman subject uncertainty, and medical humility.
+
 ## Extracted positive primitives
 
 These are seeds, not operators.
@@ -478,6 +549,10 @@ positive_primitives_seed :=
   + stranger_vulnerability
   + mistake_not_malice
   + civic_decency
+  + nonhuman_subject_signal
+  + care_without_contract
+  + maintenance_love
+  + dignity_under_impairment
 ```
 
 ### 1. Play as safe simulation
@@ -855,20 +930,92 @@ civic_failure :=
   + outsider_as_prey
 ```
 
+### 21. Nonhuman subject signal
+
+```trace
+nonhuman_subject_signal :=
+  behaviour
+  + appetite
+  + movement
+  + comfort_seeking
+  + distress_signal
+  + routine_response
+```
+
+Failure mode:
+
+```trace
+nonhuman_signal_failure :=
+  language_absence
+  -> subject_absence_claim
+```
+
+### 22. Care without contract
+
+```trace
+care_without_contract :=
+  no_bargain
+  + dependency
+  + carer_control_over_risk
+  + duty_without_transaction
+```
+
+Failure mode:
+
+```trace
+contract_error :=
+  no_reciprocal_bargain
+  -> no_responsibility
+```
+
+### 23. Maintenance love
+
+```trace
+maintenance_love :=
+  repeated_small_action
+  + timing
+  + attention
+  + memory
+  + no_applause
+```
+
+Failure mode:
+
+```trace
+heroic_care_bias :=
+  value_only_dramatic_rescue
+  + ignore_daily_stability_work
+```
+
+### 24. Dignity under impairment
+
+```trace
+dignity_under_impairment :=
+  subject_still_same_subject
+  + environment_adjusts
+  + care_reads_new_limits
+```
+
+Failure mode:
+
+```trace
+capacity_error :=
+  capacity_loss
+  -> value_loss_claim
+```
+
 ## Candidate next anchors
 
 Do not map all at once. Use only when the atlas needs contrast.
 
 ```trace
 candidate_next :=
-  Maisie_real_case
-  + Children_of_Men
+  Children_of_Men
 ```
 
-Recommended order:
+Recommended next:
 
-1. `Maisie real case` — non-human care, ageing, illness, dependency, dignity, ordinary love.
-2. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
+1. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
 
 ## Current positive atlas claim
 
@@ -885,6 +1032,7 @@ current_claim :=
     + care_after_abandonment
     + moral_learning_after_failure
     + hospitality_toward_the_vulnerable_stranger
+    + care_for_nonhuman_dependent_subjects
 
 claim_status :=
   promising_map
@@ -893,7 +1041,7 @@ claim_status :=
   - public_claim
 ```
 
-Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, accountability, growth, welcome, and the ability to return changed without being erased.
+Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, accountability, growth, welcome, nonhuman care, and the ability to return changed without being erased.
 
 ## Use rule
 
@@ -906,4 +1054,4 @@ if_TRACE_analysis_turns_life_into_cold_mechanism
   then_check_overmapping
 ```
 
-TRACE should reveal structure without killing play, grief, strangeness, tenderness, comedy, accountability, hospitality, or love.
+TRACE should reveal structure without killing play, grief, strangeness, tenderness, comedy, accountability, hospitality, animal dignity, or love.
