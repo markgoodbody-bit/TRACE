@@ -44,11 +44,12 @@ positive_target :=
 The first positive/story maps form an expanding arc.
 
 ```trace
-Bluey -> Inside_Out -> Spirited_Away -> WALL_E :=
+Bluey -> Inside_Out -> Spirited_Away -> WALL_E -> The_Good_Place :=
   external_repair_habitat
   -> internal_emotional_ecology
   -> hostile_liminal_system_survival
   -> world_abandonment_and_repair_seed
+  -> moral_learning_and_judgment_repair
 ```
 
 Plain version:
@@ -57,6 +58,7 @@ Plain version:
 - `Inside Out` maps internal emotional ecology: sadness as repair signal, mixed memory, identity transition.
 - `Spirited Away` maps hostile-world survival: name retention, labour, greed, refusal of false reward, return changed.
 - `WALL-E` maps care after abandonment: planetary neglect, machine tenderness, comfort capture, stale directives, embodied return.
+- `The Good Place` maps moral learning after failure: broken judgment metrics, relation-based repair, accountability without permanent exile, and ending as release.
 
 ## Anchor case 01 — Bluey
 
@@ -313,6 +315,74 @@ WALL_E_demoter :=
 
 Preserve tenderness, ecological cost, and unsolved repair.
 
+## Anchor case 05 — The Good Place
+
+Detailed anchor file:
+
+`05_MAPS_AND_ATLASES/POSITIVE_TRACE_ATLAS_v0_1/TRACE_Positive_Anchor_The_Good_Place_v0_1.md`
+
+```trace
+The_Good_Place :=
+  flawed_subjects
+  + broken_judgment_system
+  + repeated_reboot
+  + relational_correction
+  + moral_growth
+  + repair_after_death
+```
+
+Core read:
+
+```trace
+The_Good_Place_machine :=
+  subjects_sorted_by_moral_accounting
+  -> accounting_system_fails_reality
+  -> false_reward/punishment_environment
+  -> reboots_repeat
+  -> relation_survives_reset
+  -> moral_learning_becomes_visible
+  -> judgment_system_revised
+  -> ending_becomes_release_not_punishment
+```
+
+Key primitives:
+
+```trace
+The_Good_Place_adds :=
+  moral_learning_after_failure
+  + judgment_system_demoter
+  + metric_context_failure
+  + accountability_without_permanent_exile
+  + relation_based_repair
+  + care_without_theory
+  + nonhuman_standing_uncertainty
+  + ending_as_release
+```
+
+Plain version: `The Good Place` helps TRACE avoid a crude moral binary. It shows that a system can be unjust not because it refuses punishment, but because it cannot recognise context, learning, repair, or completion.
+
+Main TRACE rule:
+
+```trace
+moral_system_failure :=
+  judgment_without_update
+  + punishment_without_repair
+  + metric_without_context
+  + no_path_to_growth
+```
+
+Demoter:
+
+```trace
+The_Good_Place_demoter :=
+  if_TRACE_turns_repair_into_cheap_forgiveness
+  OR gives_infinite_chances_without_cost
+  OR erases_accountability
+  then_mapping_failed
+```
+
+Preserve comedy, accountability, growth, and metric-demotion pressure.
+
 ## Extracted positive primitives
 
 These are seeds, not operators.
@@ -333,6 +403,10 @@ positive_primitives_seed :=
   + comfort_capture
   + embodied_attention
   + repair_as_seed
+  + moral_learning_after_failure
+  + judgment_system_demoter
+  + accountability_without_permanent_exile
+  + ending_as_release
 ```
 
 ### 1. Play as safe simulation
@@ -557,24 +631,98 @@ repair_seed_error :=
   treat_beginning_as_restoration
 ```
 
+### 13. Moral learning after failure
+
+```trace
+moral_learning_after_failure :=
+  wrong_action_history
+  + feedback
+  + relation
+  + repeated_choice
+  + changed_default
+```
+
+Failure mode:
+
+```trace
+cheap_redemption_error :=
+  confession
+  + no_changed_action
+  + no_cost
+```
+
+### 14. Judgment-system demoter
+
+```trace
+judgment_system_demoter :=
+  if_system_cannot_detect_growth
+  OR cannot_revise_metric
+  OR ignores_context
+  then_judgment_claim_degrades
+```
+
+Failure mode:
+
+```trace
+judgment_error :=
+  score_confidence
+  + context_blindness
+  + no_revision_path
+```
+
+### 15. Accountability without permanent exile
+
+```trace
+accountability_without_exile :=
+  wrongdoing_named
+  + repair_path_available
+  + changed_action_required
+  + no_fake_absolution
+```
+
+Failure mode:
+
+```trace
+accountability_failure :=
+  either:
+    permanent_exile_without_learning
+    OR forgiveness_without_repair
+```
+
+### 16. Ending as release
+
+```trace
+ending_as_release :=
+  consent
+  + completion
+  + non-coercive_exit
+  + no_claim_of_failure
+```
+
+Failure mode:
+
+```trace
+ending_error :=
+  treat_all_endings_as_harm
+  OR force_retention_as_goodness
+```
+
 ## Candidate next anchors
 
 Do not map all at once. Use only when the atlas needs contrast.
 
 ```trace
 candidate_next :=
-  The_Good_Place
-  + Paddington
+  Paddington
   + Maisie_real_case
   + Children_of_Men
 ```
 
 Recommended order:
 
-1. `The Good Place` — moral learning, accountability, systems of judgment, afterlife bureaucracy, repair after death.
-2. `Paddington` — hospitality, immigrant kindness, civic decency, anti-cruelty without naivety.
-3. `Maisie real case` — non-human care, ageing, illness, dependency, dignity, ordinary love.
-4. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
+1. `Paddington` — hospitality, immigrant kindness, civic decency, anti-cruelty without naivety.
+2. `Maisie real case` — non-human care, ageing, illness, dependency, dignity, ordinary love.
+3. `Children of Men` — future-space collapse, fertility, hope, sacred future, state brutality.
 
 ## Current positive atlas claim
 
@@ -589,6 +737,7 @@ current_claim :=
     + repairable_transition
     + embodied_world_connection
     + care_after_abandonment
+    + moral_learning_after_failure
 
 claim_status :=
   promising_map
@@ -597,7 +746,7 @@ claim_status :=
   - public_claim
 ```
 
-Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, and the ability to return changed without being erased.
+Plain version: this atlas gives TRACE a positive target condition. It begins to answer what the framework is protecting: not merely survival, but repairable life, play, belonging, truth, memory, names, world-contact, accountability, growth, and the ability to return changed without being erased.
 
 ## Use rule
 
@@ -610,4 +759,4 @@ if_TRACE_analysis_turns_life_into_cold_mechanism
   then_check_overmapping
 ```
 
-TRACE should reveal structure without killing play, grief, strangeness, tenderness, or love.
+TRACE should reveal structure without killing play, grief, strangeness, tenderness, comedy, accountability, or love.
