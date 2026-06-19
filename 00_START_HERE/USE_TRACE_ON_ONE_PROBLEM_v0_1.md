@@ -1,11 +1,12 @@
-# Use TRACE on One Problem v0.1
+# Use TRACE on One Problem v0.1.1
 
 Status: cold-reader use sheet. Not canon. Not validation. Not advice that replaces domain expertise. Use this to try TRACE once on a real or fictional problem.
 
 ```trace
-Use_TRACE_On_One_Problem_v0_1 :=
+Use_TRACE_On_One_Problem_v0_1_1 :=
   one_problem
   + one_pass
+  + quick_start
   + visible_next_action
   + demoter
   - full_theory
@@ -24,6 +25,25 @@ start :=
   + one_pass
   + one_next_action
 ```
+
+## Three-step quick start
+
+If you only have five minutes, use this first.
+
+```trace
+quick_start :=
+  what_is_happening?
+  + what_gets_worse_with_time?
+  + who_or_what_can_change_the_path?
+```
+
+Plain version:
+
+1. What is happening?
+2. What gets worse if this is delayed?
+3. Who or what can actually help repair it?
+
+If that already gives you a useful next action, record it. If the situation is more complex, continue with the full ten-step pass below.
 
 ## Step 1 — Name the situation
 
@@ -121,7 +141,7 @@ hidden_bill_questions :=
   + who_pays_later?
   + what_work_is_unseen?
   + what_repair_is_unfunded?
-  + what_body_or ecology_absorbs_cost?
+  + what_body_or_ecology_absorbs_cost?
 ```
 
 ## Step 6 — Find the option-space
