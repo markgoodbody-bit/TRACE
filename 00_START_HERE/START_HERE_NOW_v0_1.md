@@ -1,17 +1,35 @@
-# START HERE NOW v0.1
+# START HERE NOW v0.2
 
-Status: current navigation patch / front-door correction / not validation / not proof / not active spine edit.
+Status: current navigation patch / cold-reader front door / live-use orientation / not validation / not proof / not active spine edit.
 
 This file exists because the repo is controlled but overgrown. Use it to orient before opening the larger read order.
 
 ```trace
 start_here_now :=
-  reduce_surface_bloat
+  reduce_entry_cost
   + preserve_control
+  + point_to_cold_reader_path
   + point_to_live_use
   - delete_archive
   - promote_claims
 ```
+
+## New to TRACE?
+
+Open these first:
+
+1. `00_START_HERE/TRACE_FOR_NEW_READERS_v0_1.md`
+2. `00_START_HERE/USE_TRACE_ON_ONE_PROBLEM_v0_1.md`
+3. `00_START_HERE/WHAT_TRACE_IS_NOT_v0_1.md`
+
+```trace
+cold_reader_path :=
+  what_TRACE_is
+  -> use_once
+  -> claim_boundaries
+```
+
+Plain version: understand what TRACE is, try it once, and know what it is not before reading the deeper repo.
 
 ## Current frame
 
@@ -49,9 +67,12 @@ right_question :=
 
 If you want to use TRACE rather than audit the whole repo, open:
 
-`02_CURRENT_SURFACE/LIVE_USE_CARD_v0_1/TRACE_LIVE_USE_CARD_v0_1.md`
+1. `02_CURRENT_SURFACE/LIVE_USE_CARD_v0_2_1/TRACE_LIVE_USE_CARD_v0_2_1.md`
+2. `02_CURRENT_SURFACE/PRE_ESCALATION_GUARD_v0_1/TRACE_Pre_Escalation_Guard_v0_1.md`
+3. `02_CURRENT_SURFACE/LAST_TOUCH_LOCAL_FIX_SWEEP_v0_1/TRACE_Last_Touch_Local_Fix_Sweep_v0_1.md`
+4. `02_CURRENT_SURFACE/REAL_USE_CAPTURE_v0_1/TRACE_Real_Use_Capture_Sheet_v0_1.md`
 
-That file is the current front-door use instrument. It is designed for a human or AI to apply TRACE to a real situation in minutes.
+Those files are the current practical front-door instruments. They are designed for a human or AI to apply TRACE to a real situation in minutes.
 
 ## Then open for context
 
@@ -65,9 +86,12 @@ That file is the current front-door use instrument. It is designed for a human o
 
 ```trace
 current_status :=
-  cross_domain_translation_scaffold := strengthened
-  correction_before_hardening_portability := visible
-  clock_carrier_compression := support_check_only
+  live_use_stack := strengthened
+  cold_reader_front_door := added
+  positive_atlas := seed
+  life_biology_ecology_atlas := seed
+  agency_free_will_mandelbrot_atlas := seed
+  cross_atlas_pressure_tests := bounded_signal
   decision_advantage := not_shown
   validation := false
   proof := false
@@ -78,39 +102,9 @@ Worked-delta and hostile-review loops have demoted overclaims. They have not kil
 
 ```trace
 worked_delta_result :=
-  no_demonstrated_decision_advantage_yet
-  + useful_compression_in_parts
+  useful_compression
+  + claim_demotion
   - validation
-  - expert_replacement
-```
-
-## Current repo health
-
-```trace
-repo_health :=
-  conceptual_control := good
-  status_honesty := good
-  public_usability := improving
-  bloat := moderate_high
-  harmful_drift := contained
-  surface_drift := active
-```
-
-The repo should now prioritise live-use surfaces over more review packets, bridges, or speculative operators.
-
-## Next useful move
-
-Use the Live Use Card on one real situation.
-
-Then ask:
-
-```trace
-live_use_test :=
-  did_TRACE_make_structure_visible?
-  + did_it_clarify_harm_or_hardening?
-  + did_it_clarify_correction_route?
-  + did_it_improve_next_action?
-  + what_would_demote_this_read?
 ```
 
 End.
