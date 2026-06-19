@@ -1,6 +1,6 @@
-# START HERE NOW v0.2
+# START HERE NOW v0.3
 
-Status: current navigation patch / cold-reader front door / live-use orientation / not validation / not proof / not active spine edit.
+Status: current navigation patch / cold-reader front door / worked-example route / live-use orientation / not validation / not proof / not active spine edit.
 
 This file exists because the repo is controlled but overgrown. Use it to orient before opening the larger read order.
 
@@ -9,6 +9,7 @@ start_here_now :=
   reduce_entry_cost
   + preserve_control
   + point_to_cold_reader_path
+  + point_to_worked_example
   + point_to_live_use
   - delete_archive
   - promote_claims
@@ -27,7 +28,7 @@ Open these first:
 cold_reader_path :=
   what_TRACE_is
   -> use_once
-  -> worked_example
+  -> see_one_worked_example
   -> claim_boundaries
 ```
 
@@ -90,7 +91,7 @@ Those files are the current practical front-door instruments. They are designed 
 current_status :=
   live_use_stack := strengthened
   cold_reader_front_door := added
-  worked_example_front_door := added
+  cold_reader_worked_example := added
   positive_atlas := seed
   life_biology_ecology_atlas := seed
   agency_free_will_mandelbrot_atlas := seed
