@@ -146,6 +146,7 @@ Plain version: this atlas begins to map life as active persistence under energy,
 Open when mapping choice, agency, responsibility, option-space, pressure, coercion, recursive scale patterns, or selection under constraint:
 
 1. `05_MAPS_AND_ATLASES/AGENCY_FREE_WILL_MANDELBROT_ATLAS_v0_1/TRACE_Agency_Free_Will_Mandelbrot_Atlas_v0_1.md`
+2. `05_MAPS_AND_ATLASES/AGENCY_FREE_WILL_MANDELBROT_ATLAS_v0_1/TRACE_Agency_Primitive_Demoter_Table_v0_1.md`
 
 Agency atlas rule:
 
