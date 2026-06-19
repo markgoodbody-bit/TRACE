@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, and life/biology/ecology atlas seed. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, life/biology/ecology atlas seed, and agency/free-will/Mandelbrot atlas seed. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -122,6 +122,9 @@ Plain version: this atlas begins to map what TRACE is protecting, not only what 
 Open when mapping living systems, biological constraint, boundary, metabolism, repair, ecology, predation, symbiosis, ageing, or death:
 
 1. `05_MAPS_AND_ATLASES/LIFE_BIOLOGY_ECOLOGY_ATLAS_v0_1/TRACE_Life_Biology_Ecology_Atlas_v0_1.md`
+2. `05_MAPS_AND_ATLASES/LIFE_BIOLOGY_ECOLOGY_ATLAS_v0_1/TRACE_Life_Primitive_Demoter_Table_v0_1.md`
+3. `05_MAPS_AND_ATLASES/LIFE_BIOLOGY_ECOLOGY_ATLAS_v0_1/TRACE_Ecology_Hidden_Bill_Note_v0_1.md`
+4. `05_MAPS_AND_ATLASES/LIFE_BIOLOGY_ECOLOGY_ATLAS_v0_1/TRACE_Predation_Symbiosis_Contrast_v0_1.md`
 
 Life atlas rule:
 
@@ -137,6 +140,28 @@ Life_Biology_Ecology_Atlas :=
 ```
 
 Plain version: this atlas begins to map life as active persistence under energy, repair, boundary, dependency, ageing, and death constraints. It must not use biology as decorative metaphor.
+
+## Agency / Free Will / Mandelbrot atlas
+
+Open when mapping choice, agency, responsibility, option-space, pressure, coercion, recursive scale patterns, or selection under constraint:
+
+1. `05_MAPS_AND_ATLASES/AGENCY_FREE_WILL_MANDELBROT_ATLAS_v0_1/TRACE_Agency_Free_Will_Mandelbrot_Atlas_v0_1.md`
+
+Agency atlas rule:
+
+```trace
+Agency_Free_Will_Mandelbrot_Atlas :=
+  agency_map
+  + selection_under_constraint
+  + responsibility_after_selection
+  + recursive_scale_map
+  + demoter_surface
+  - metaphysical_proof
+  - validation
+  - canon_promotion
+```
+
+Plain version: this atlas lets TRACE talk about choice without pretending to solve free will. It treats agency as constrained selection with consequences and possible correction.
 
 ## Control notes
 
@@ -256,6 +281,8 @@ For positive-system mapping, use the Positive TRACE Atlas to identify what a cas
 
 For life/ecology mapping, use the Life / Biology / Ecology Atlas to identify boundary, energy, repair, dependency, hidden bills, and death distinctions without treating biology as metaphor-only.
 
+For agency/free-will/Mandelbrot mapping, use the Agency atlas to identify option-space, pressure, constraint, selection, consequence, correction, and recursive scale pattern without claiming metaphysical proof.
+
 Then ask:
 
 ```trace
@@ -280,6 +307,14 @@ life_mapping_test :=
   + what repair loop exists?
   + what dependency web is hidden?
   + what would make the biology metaphor false?
+
+agency_mapping_test :=
+  what options existed?
+  + who shaped the option-space?
+  + what pressure changed selection?
+  + what constraint preserved_or_destroyed_future_space?
+  + what consequence attached?
+  + what update became possible?
 ```
 
 End.
