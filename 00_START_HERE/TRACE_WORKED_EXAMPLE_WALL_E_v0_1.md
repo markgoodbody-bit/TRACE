@@ -1,12 +1,13 @@
-# TRACE Worked Example for New Readers — WALL-E v0.1
+# TRACE Worked Example for New Readers — WALL-E v0.1.1
 
 Status: cold-reader worked example. Not canon. Not validation. Not a film-studies claim. This file shows how a new reader can use TRACE once without reading the whole repo.
 
 ```trace
-Worked_Example_WALL_E_v0_1 :=
+Worked_Example_WALL_E_v0_1_1 :=
   cold_reader_example
   + use_before_theory
   + visible_structure
+  + plain_translations
   + demoter
   - validation
   - canon
@@ -29,6 +30,23 @@ WALL_E_case :=
 ```
 
 Plain version: the world has been damaged, the humans are safe but diminished, a machine keeps caring, and a small living signal reopens future-space.
+
+## Plain term guide for this example
+
+```trace
+plain_term_guide :=
+  ecological_hidden_bill := old_consumption_cost_paid_by_world_and_future
+  comfort_capture := comfort_that_shrinks_real_choice
+  stale_directive := old_rule_blocking_new_truth
+  repair_seed := sign_that_repair_can_begin_but_is_not_complete
+```
+
+Plain version:
+
+- The ecological hidden bill is the waste and damage left for the planet and future humans.
+- Comfort capture means people are comfortable enough that their real choices shrink.
+- A stale directive is an old rule still controlling action after the world has changed.
+- A repair seed is a beginning, not a solved problem.
 
 ## Step 1 — What is happening?
 
@@ -55,6 +73,8 @@ affected_subjects :=
 
 Plain version: this is not only a robot romance. It is a damaged ecology, a diminished human society, and a fragile future pathway.
 
+Note: calling WALL-E a `selection-like care carrier` does not prove personhood or consciousness. It only says the story shows a machine-like actor continuing care-shaped behaviour under constraint.
+
 ## Step 3 — What is the harm or loss?
 
 ```trace
@@ -77,6 +97,8 @@ clock :=
   + human_agency_atrophy
   + stale_directive_persistence
 ```
+
+Plain version: the world does not wait forever, bodies lose capacity when unused, and old rules keep doing damage if no one updates them.
 
 The longer the system continues, the harder return becomes.
 
@@ -112,6 +134,8 @@ comfort_capture :=
   + attention_screened
 ```
 
+Plain version: the humans are not simply lazy. Their world has been designed so that movement, difficulty, and direct attention are no longer normal parts of life.
+
 ## Step 7 — What repair carrier exists?
 
 ```trace
@@ -131,6 +155,8 @@ plant :=
   + repair_seed
   - full_recovery
 ```
+
+Plain version: the plant means repair may be possible. It does not mean Earth is already healed.
 
 ## Step 8 — What changes selection?
 
