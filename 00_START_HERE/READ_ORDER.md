@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, life/biology/ecology atlas seed, and agency/free-will/Mandelbrot atlas seed. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, life/biology/ecology atlas seed, agency/free-will/Mandelbrot atlas seed, and cross-atlas pressure-test seed. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -164,6 +164,26 @@ Agency_Free_Will_Mandelbrot_Atlas :=
 
 Plain version: this atlas lets TRACE talk about choice without pretending to solve free will. It treats agency as constrained selection with consequences and possible correction.
 
+## Cross-atlas pressure tests
+
+Open when checking whether multiple atlas layers add structure or only produce elegant language:
+
+1. `05_MAPS_AND_ATLASES/CROSS_ATLAS_PRESSURE_TESTS_v0_1/README.md`
+2. `05_MAPS_AND_ATLASES/CROSS_ATLAS_PRESSURE_TESTS_v0_1/TRACE_Cross_Atlas_Pressure_Test_WALL_E_v0_1.md`
+
+Cross-atlas rule:
+
+```trace
+Cross_Atlas_Pressure_Tests :=
+  atlas_stack_use
+  + value_added_check
+  + demoter_check
+  - validation
+  - canon_promotion
+```
+
+Plain version: more layers are not automatically better. The stack must clarify selection, harm, repair, constraint, or future-space; otherwise it is only prettier language.
+
 ## Control notes
 
 Open when drift, self-deception, or continuity risk appears:
@@ -284,6 +304,8 @@ For life/ecology mapping, use the Life / Biology / Ecology Atlas to identify bou
 
 For agency/free-will/Mandelbrot mapping, use the Agency atlas to identify option-space, pressure, constraint, selection, consequence, correction, and recursive scale pattern without claiming metaphysical proof.
 
+For cross-atlas pressure testing, use the Cross-Atlas folder to check whether the stack adds real structure or only elegant language.
+
 Then ask:
 
 ```trace
@@ -316,6 +338,13 @@ agency_mapping_test :=
   + what constraint preserved_or_destroyed_future_space?
   + what consequence attached?
   + what update became possible?
+
+cross_atlas_test :=
+  did the stack separate distinct structures?
+  + did it reduce overclaim?
+  + did it reveal missing carrier or constraint?
+  + did it preserve case life?
+  + did it avoid validation claim?
 ```
 
 End.
