@@ -27,6 +27,14 @@ EU_e(a)=E[C^+_e]-E[\Delta H_e]-E[I_e]-Cost_e(a)
 a^* = argmin_{a∈A}[\Delta H_{total}(a)+I_{total}(a)+HB(a)]
 ```
 
+The earlier interval comparison:
+
+```math
+\int_t^T C^+_e(\tau)d\tau > \int_t^T \Delta H_e(\tau)d\tau
+```
+
+is also deprecated as a scalar arithmetic test unless a value-space projection `σ` and aggregation rule have been explicitly declared.
+
 Current rule:
 
 ```text
@@ -400,6 +408,12 @@ C^+_e = V + Rel + Joy + Play + Meaning + Growth
 
 It may be used only as a mnemonic for possible value dimensions, never as a valid scalar equation.
 
+The older life-worth interval form is also deprecated unless a projection `σ` and aggregation rule are declared:
+
+```math
+\int_t^T C^+_e(\tau)d\tau > \int_t^T \Delta H_e(\tau)d\tau
+```
+
 Livable future-space:
 
 ```math
@@ -574,7 +588,9 @@ The old scalar decision rule is deprecated:
 a^*=argmin[\Delta H_{total}+I_{total}+HB]
 ```
 
-Current decision discipline is guard-first:
+Current decision discipline is guard-first and follows the live order recorded in `TRACE_KERNEL_INTEGRATION_MAP_v0_1.md`.
+
+Root-level orientation sequence:
 
 ```text
 1. Identify affected entities and standing uncertainty.
@@ -582,10 +598,10 @@ Current decision discipline is guard-first:
 3. Define abstract and lived action-space.
 4. Define transition / outcome distribution or imprecise measure set.
 5. Map outcomes to value profiles.
-6. Evaluate profile loss and protected floors.
-7. Run probabilistic floor / tail-risk / severe-loss guards.
-8. Run closure-mode, repair, and responsibility-route checks.
-9. Run non-aggregation guard.
+6. Compute profile loss, floors, severe loss, and livability loss.
+7. Identify closure mode, repair route, and responsibility route.
+8. Run non-aggregation guard.
+9. Run probabilistic floor / tail-risk / severe-loss guards.
 10. Run necessity and alternative search.
 11. Remove dominated admissible actions by Pareto filtering.
 12. If incomparable admissible actions remain, use only declared priority, declared projection, escalation, option preservation, delay-as-action, low-stakes randomisation, or refusal.
@@ -674,21 +690,61 @@ model_other
 
 Empathy inside TRACE is a modelling discipline, not an emotional claim.
 
-## 16. Core Failure Modes
+## 16. Middle-Out Procedure
 
-### 16.1 False certainty
+A valid TRACE unit begins at a concrete point:
+
+```math
+p_0=(entity,time,place,state,decision/event)
+```
+
+Then expands:
+
+```text
+p_0
+-> local state
+-> observation limits
+-> action-space
+-> reachability
+-> pressure
+-> transition
+-> consequence
+-> repair / irreversibility
+-> lineage
+-> system pattern
+```
+
+TRACE is not top-down category first.
+
+TRACE is not bottom-up data heap first.
+
+Middle-out means:
+
+```text
+concrete point
+-> formal structure
+-> wider pattern
+```
+
+A claim that cannot be traced back to a concrete point is not yet a TRACE claim.
+
+A concrete point that never expands into structure is only anecdote.
+
+## 17. Core Failure Modes
+
+### 17.1 False certainty
 
 ```math
 U_{displayed}<\hat{U}_{actual}
 ```
 
-### 16.2 Capture
+### 17.2 Capture
 
 ```math
 Capture^{count}_e↑ \quad or \quad Capture^{mass}_e↑
 ```
 
-### 16.3 Hidden bill / hidden uncertainty bill
+### 17.3 Hidden bill / hidden uncertainty bill
 
 ```math
 HPBReg(a) nonempty
@@ -702,13 +758,13 @@ HTRReg(a) nonempty
 HUB_{e,d,r}(a)>\theta_{HUB}
 ```
 
-### 16.4 Irreversible action under high uncertainty
+### 17.4 Irreversible action under high uncertainty
 
 ```math
 I(a)↑ ∧ U^{meta}↑ ∧ U_{displayed}↓
 ```
 
-### 16.5 Subject erasure
+### 17.5 Subject erasure
 
 ```math
 Visi_e↓ ∧ loss/risk remains assigned to e
@@ -720,37 +776,37 @@ or:
 Σ_e loss_e used without declared N_{e,d}
 ```
 
-### 16.6 Survival without livable continuation
+### 17.6 Survival without livable continuation
 
 ```math
 F_e(t+Δt) nonempty ∧ LF_e(t+Δt) collapses
 ```
 
-### 16.7 Late-only recognition
+### 17.7 Late-only recognition
 
 ```math
 system detects harm only after I(a)≈1
 ```
 
-### 16.8 Necessity laundering
+### 17.8 Necessity laundering
 
 ```math
 selected(a) ∧ Alternative_Search_Record(a)=incomplete
 ```
 
-### 16.9 Favourable-model selection
+### 17.9 Favourable-model selection
 
 ```math
 system displays point P while \overline{Risk}>threshold
 ```
 
-### 16.10 Hidden scalar choice
+### 17.10 Hidden scalar choice
 
 ```math
 selected(a) ∧ a_i \parallel_A a_j ∧ no priority/projection/escalation record
 ```
 
-## 17. Mechanical Ethics Translation
+## 18. Mechanical Ethics Translation
 
 TRACE output:
 
@@ -822,7 +878,7 @@ Mechanical Ethics:
 
 The system hid a value judgement.
 
-## 18. Case Study Validity
+## 19. Case Study Validity
 
 A case study is valid only if it identifies:
 
@@ -851,7 +907,7 @@ Mechanical Ethics translation
 
 A Mechanical Ethics claim is valid only if it can be traced back to at least one formal TRACE relation or registered open uncertainty.
 
-## 19. Open Seams
+## 20. Open Seams
 
 This kernel still does not solve:
 
@@ -867,7 +923,7 @@ These are not minor omissions.
 
 They are live seams.
 
-## 20. Minimal Spine
+## 21. Minimal Spine
 
 ```text
 concrete point
