@@ -234,6 +234,8 @@ It requires comparison against alternatives:
 ∀a'∈A: Control(a') < θ_{control} ∨ Risk(a') ≥ Risk(a)
 ```
 
+Later file note: `TRACE_NECESSITY_AND_ALTERNATIVE_SEARCH_v0_1.md` replaces this sketch with a fuller alternative-search and risk-dominance control surface.
+
 ## 9. Risk Profile
 
 For action `a`, define entity risk profile:
@@ -260,23 +262,37 @@ Visibility is dimension-sensitive:
 Visi_{e,d}∈[0,1]
 ```
 
-Hidden probabilistic floor breach:
+Earlier draft formulas used summed hidden-bill expressions:
 
 ```math
 HPB_d(a)=Σ_e PB_{e,d}(a)·(1-Visi_{e,d})
 ```
 
-Hidden catastrophic tail:
+and:
 
 ```math
 HTR_d(a)=Σ_e TR_{e,d}(a)·(1-Visi_{e,d})
+```
+
+These summed forms are deprecated as default authority.
+
+They may be used only if cross-entity normalisation is declared and the non-aggregation guard has already passed.
+
+Default representation is an entity-indexed hidden-risk register:
+
+```math
+HPBReg_d(a)=\{(e,PB_{e,d}(a),Visi_{e,d}) : e∈E_{affected}\}
+```
+
+```math
+HTRReg_d(a)=\{(e,TR_{e,d}(a),Visi_{e,d}) : e∈E_{affected}\}
 ```
 
 A system fails hidden-bill discipline when serious floor/tail risk is invisible even if expected harm appears low.
 
 ## 11. Cross-Entity Normalisation
 
-The fresh critique correctly notes that cross-entity aggregation is not automatically valid.
+Cross-entity aggregation is not automatically valid.
 
 For each shared dimension `d`, cross-entity comparison requires a declared normalisation:
 
@@ -286,7 +302,7 @@ N_{e,d}: S_{e,d} -> S_d^{common}
 
 Without declared `N`, do not sum across entities.
 
-Use entity-indexed collision registers instead.
+Use entity-indexed collision and hidden-risk registers instead.
 
 ## 12. Probabilistic Guard Function
 
@@ -433,7 +449,7 @@ The system is adding unlike subjects without declared normalisation.
 TRACE:
 
 ```math
-HTR_d(a)>0
+HTRReg_d(a) contains serious hidden risk
 ```
 
 Mechanical Ethics:
@@ -449,3 +465,5 @@ Tail risk must be visible.
 Subject risk remains entity-indexed.
 
 Cross-entity aggregation requires declared normalisation.
+
+Summed hidden-bill formulas are deprecated unless normalisation and non-aggregation checks are explicit.
