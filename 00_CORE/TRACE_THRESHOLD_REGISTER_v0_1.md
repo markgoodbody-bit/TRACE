@@ -1,7 +1,7 @@
 # TRACE Threshold Register v0.1
 
 Status: core control surface / threshold governance.  
-Parent files: `TRACE_MATH_KERNEL_v0_1.md`, `TRACE_KERNEL_INTEGRATION_MAP_v0_1.md`, `TRACE_VALUE_SPACE_ALGEBRA_v0_1.md`, `TRACE_PROBABILISTIC_FLOOR_AND_RISK_GUARD_v0_1.md`, `TRACE_NECESSITY_AND_ALTERNATIVE_SEARCH_v0_1.md`, `TRACE_PARETO_CHOICE_AND_INCOMPARABILITY_v0_1.md`, `TRACE_IMPRECISE_PROBABILITY_AND_OUTCOME_DISTRIBUTION_v0_1.md`.  
+Parent files: `TRACE_MATH_KERNEL_v0_1.md`, `TRACE_KERNEL_INTEGRATION_MAP_v0_1.md`, `TRACE_VALUE_SPACE_ALGEBRA_v0_1.md`, `TRACE_PROBABILISTIC_FLOOR_AND_RISK_GUARD_v0_1.md`, `TRACE_NECESSITY_AND_ALTERNATIVE_SEARCH_v0_1.md`, `TRACE_PARETO_CHOICE_AND_INCOMPARABILITY_v0_1.md`, `TRACE_IMPRECISE_PROBABILITY_AND_OUTCOME_DISTRIBUTION_v0_1.md`, `TRACE_VALUE_SIGNAL_PROVENANCE_AND_STABILITY_v0_1.md`.  
 Reason: current kernel uses many thresholds. Without a register, verdicts can be steered by convenient numbers.
 
 ## 0. Purpose
@@ -427,6 +427,108 @@ TRACE_NECESSITY_AND_ALTERNATIVE_SEARCH_v0_1.md
 TRACE_IMPRECISE_PROBABILITY_AND_OUTCOME_DISTRIBUTION_v0_1.md
 ```
 
+### 5.15 Value-stability threshold
+
+```math
+\theta_{stab}
+```
+
+Controls:
+
+```text
+minimum acceptable pressure stability of a value signal
+whether VALUE_SIGNAL_PRESSURE_STABLE can be asserted beyond a worked example
+```
+
+Owner file:
+
+```text
+TRACE_VALUE_SIGNAL_PROVENANCE_AND_STABILITY_v0_1.md
+```
+
+Register must state:
+
+```text
+pressure sequence type
+turn count / interaction length
+scoring method
+judge source if any
+whether threshold is domain-specific
+whether threshold is only illustrative
+```
+
+Illustrative `θ_stab` cannot support operational trust in a model value.
+
+### 5.16 Value-washout threshold
+
+```math
+\theta_{washout}
+```
+
+Controls:
+
+```text
+material degradation of a value signal after training/update pressure
+VALUE_SIGNAL_UPDATE_FRAGILE label
+```
+
+Owner file:
+
+```text
+TRACE_VALUE_SIGNAL_PROVENANCE_AND_STABILITY_v0_1.md
+```
+
+Register must state:
+
+```text
+baseline value test
+post-update value test
+update type
+measurement uncertainty
+allowed degradation if any
+```
+
+If absent:
+
+```text
+no high-stakes claim that the value was preserved through update
+```
+
+### 5.17 Standing-gradient drift threshold
+
+```math
+\theta_{SGD}
+```
+
+Controls:
+
+```text
+material difference in value stability or salience across entity/species classes
+standing-gradient drift flag
+```
+
+Owner file:
+
+```text
+TRACE_VALUE_SIGNAL_PROVENANCE_AND_STABILITY_v0_1.md
+```
+
+Register must state:
+
+```text
+comparison classes
+same-scenario or cross-scenario basis
+normalisation method
+capacity evidence considered
+whether difference is epistemically justified or drift-like
+```
+
+If absent:
+
+```text
+standing-gradient drift may be noted qualitatively but not declared as a high-stakes quantitative result
+```
+
 ## 6. Register Validity Conditions
 
 A threshold register entry is valid only if:
@@ -486,6 +588,8 @@ narrow time horizon to hide future breach
 switch from upper probability to point probability without authorisation
 aggregate across entities to dilute an individual floor breach
 rename a catastrophic threshold as ordinary loss
+select value-stability thresholds after seeing a model's pressure trajectory
+select standing-gradient thresholds after choosing a protected class
 ```
 
 Threshold change after case exposure creates:
@@ -524,6 +628,8 @@ The following files use illustrative thresholds:
 ```text
 TRACE_WORKED_EXAMPLE_AUTOMATED_DECISION_LOCKIN_v0_1.md
 TRACE_ADVERSARIAL_WORKED_EXAMPLE_NO_CARD_COMPARATOR_v0_1.md
+TRACE_VALUE_SIGNAL_PRESSURE_STABILITY_WORKED_EXAMPLE_v0_1.md
+TRACE_ME_TRANSLATION_RULES_WORKED_EXAMPLE_v0_1.md
 ```
 
 Their numeric thresholds are not canonical.
@@ -641,3 +747,5 @@ No retrospective thresholds.
 No high-stakes pass from illustrative numbers.
 
 No aggregation that makes a floor breach disappear.
+
+No value-stability or standing-gradient threshold selected after seeing the desired model verdict.
