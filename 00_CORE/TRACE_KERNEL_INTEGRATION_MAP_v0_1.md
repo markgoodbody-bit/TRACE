@@ -1,6 +1,6 @@
 # TRACE Kernel Integration Map v0.1
 
-Status: core integration / anti-sprawl control surface, synced after threshold-stress worked example.  
+Status: core integration / anti-sprawl control surface, synced after isolated threshold-register stress test.  
 Scope: maps current TRACE kernel files, bridge files, dependency order, test surfaces, and next-build discipline.  
 Not: new operator, proof of validity, public-facing explanation, or cleanup/deletion manifest.
 
@@ -683,6 +683,35 @@ Status:
 TRACE_DELTA_PARTIAL, not validation
 ```
 
+### 3.6 `TRACE_THRESHOLD_REGISTER_STRESS_TEST_ISOLATED_v0_1`
+
+Role: isolates threshold-authority status as the only varied variable.
+
+Tests:
+
+```text
+same risk number
+same tolerance number
+same affected entity
+same protected dimension
+all non-threshold guards held constant
+only threshold status changes
+```
+
+Result:
+
+```text
+illustrative -> blocked_by_threshold_status
+provisional incomplete -> blocked_by_threshold_status
+adopted -> limited_pass
+```
+
+Status:
+
+```text
+TRACE_DELTA_PARTIAL_CLEANER, not validation
+```
+
 ## 4. Dependency Graph
 
 ```text
@@ -813,11 +842,13 @@ standing-gradient comparison across species/entity classes
 
 ### 5.6 Real Decision Advantage
 
-The threshold-register stress test shows a narrow partial delta:
+The threshold-register stress tests show a narrow partial delta:
 
 ```text
-TRACE distinguishes numerical comparison from authorised threshold use
+TRACE distinguishes numerical comparison from authorised threshold use.
 ```
+
+The isolated threshold-register stress test improves this by holding all non-threshold guards constant.
 
 Still missing:
 
@@ -825,6 +856,7 @@ Still missing:
 real-world or realistic case with non-illustrative thresholds
 comparator test where no-card reasoning makes a hidden shortcut
 case where profile-valued partial order changes the result relative to scalar reasoning
+case where TRACE permits a decision ordinary caution would block
 ```
 
 ## 6. Anti-Duplication Rules
@@ -889,7 +921,7 @@ translation test: non-animal TRACE output -> ME claim labels
 realistic case test: non-illustrative thresholds and no-card comparator
 ```
 
-Threshold-register stress test is now built and should not be rebuilt as theory.
+Threshold-register stress tests are now built and should not be rebuilt as theory.
 
 ## 9. Current Best Next Step
 
@@ -903,6 +935,13 @@ Current narrow achieved delta:
 
 ```text
 TRACE distinguishes numerical comparison from authorised threshold use.
+```
+
+Current improved test status:
+
+```text
+isolated threshold-register stress test built
+TRACE_DELTA_PARTIAL_CLEANER
 ```
 
 Current action sequence:
@@ -936,4 +975,4 @@ then decide whether another core file is actually required
 
 The kernel now needs review pressure and real comparative execution more than new vocabulary.
 
-The threshold-register stress test is a useful partial answer, not validation.
+The threshold-register stress tests are useful partial answers, not validation.
