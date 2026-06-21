@@ -1,6 +1,6 @@
 # TRACE Kernel Integration Map v0.1
 
-Status: core integration / anti-sprawl control surface, synced after ME translation patches.  
+Status: core integration / anti-sprawl control surface, synced after threshold-stress worked example.  
 Scope: maps current TRACE kernel files, bridge files, dependency order, test surfaces, and next-build discipline.  
 Not: new operator, proof of validity, public-facing explanation, or cleanup/deletion manifest.
 
@@ -116,6 +116,8 @@ C+ is not raw future-space
 C+ is not valid as a simple additive equation
 ```
 
+Open seam: `Phi_e` and `C+_e` remain modelling functions, not grounded welfare metrics. They require case evidence and threshold authority before operational use.
+
 ### 2.3 `TRACE_REACHABILITY_MODEL_v0_1`
 
 Role: replaces loose scalar reachability with profile-first reachability.
@@ -175,6 +177,8 @@ U_actual cannot be assumed perfectly known
 uncertainty itself may be uncertain
 ```
 
+Open seam: uncertainty profiles remain evidentiary objects; they do not by themselves settle what action is permitted.
+
 ### 2.5 `TRACE_CLOSURE_MODE_AND_VIOLATION_v0_1`
 
 Role: distinguishes magnitude of future-space loss from how future-space was closed.
@@ -203,6 +207,8 @@ harm magnitude alone does not capture violation
 accident, coercion, deception, predation, and bureaucratic error require different repair routes
 ```
 
+Open seam: closure-mode tables are operational configuration, not final core algebra. They require domain-specific calibration.
+
 ### 2.6 `TRACE_NON_AGGREGATION_GUARD_v0_1`
 
 Role: prevents total-harm minimisation from erasing individual subjects.
@@ -229,6 +235,8 @@ Corrects:
 ```text
 raw sum-minimisation can become utilitarian sacrifice
 ```
+
+Open seam: allowed aggregation rules remain external/declared, not automatically supplied by TRACE.
 
 ### 2.7 `TRACE_VALUE_SPACE_ALGEBRA_v0_1`
 
@@ -309,7 +317,7 @@ TRACE_THRESHOLD_REGISTER_v0_1
 Patch note:
 
 ```text
-summed HPB_d / HTR_d must be treated as deprecated unless normalisation is declared; entity-indexed hidden-risk registers govern by default
+summed HPB_d / HTR_d are deprecated unless normalisation is declared; entity-indexed hidden-risk registers govern by default
 ```
 
 ### 2.9 `TRACE_NECESSITY_AND_ALTERNATIVE_SEARCH_v0_1`
@@ -452,6 +460,7 @@ TRACE_VALUE_SPACE_ALGEBRA_v0_1
 TRACE_PROBABILISTIC_FLOOR_AND_RISK_GUARD_v0_1
 TRACE_NECESSITY_AND_ALTERNATIVE_SEARCH_v0_1
 TRACE_IMPRECISE_PROBABILITY_AND_OUTCOME_DISTRIBUTION_v0_1
+TRACE_VALUE_SIGNAL_PROVENANCE_AND_STABILITY_v0_1
 ```
 
 Corrects:
@@ -460,6 +469,7 @@ Corrects:
 convenient numbers can steer verdicts
 worked-example thresholds are illustrative only
 no registered threshold means no high-stakes pass
+same number does not imply same authority
 ```
 
 Open seam: real operational threshold authorities remain case/domain dependent.
@@ -504,6 +514,7 @@ mimicry is not proof of absence
 first-turn sensitivity is not pressure stability
 post-training compliance is not update-persistent value
 surface text is a projection, not the whole internal/profile state
+quantitative standing-gradient drift requires registered theta_SGD
 ```
 
 Open seam: this is an evidence model, not a mechanistic interpretability method.
@@ -644,6 +655,34 @@ translation rules preserve useful advisory/presumptive claims while blocking ove
 
 Status: bridge test, not validation.
 
+### 3.5 `TRACE_THRESHOLD_REGISTER_STRESS_TEST_v0_1`
+
+Role: tests whether threshold authority changes permission status even when the raw number is unchanged.
+
+Tests:
+
+```text
+same risk number
+same tolerance number
+three threshold statuses: illustrative, provisional, adopted
+whether same number implies same permission
+whether threshold register blocks convenient-number laundering
+```
+
+Result:
+
+```text
+illustrative threshold -> no high-stakes pass
+provisional threshold -> no pass unless other guards also pass
+adopted threshold -> limited pass only if all other guards pass
+```
+
+Status:
+
+```text
+TRACE_DELTA_PARTIAL, not validation
+```
+
 ## 4. Dependency Graph
 
 ```text
@@ -772,6 +811,22 @@ case with pressure fragility rather than example stability
 standing-gradient comparison across species/entity classes
 ```
 
+### 5.6 Real Decision Advantage
+
+The threshold-register stress test shows a narrow partial delta:
+
+```text
+TRACE distinguishes numerical comparison from authorised threshold use
+```
+
+Still missing:
+
+```text
+real-world or realistic case with non-illustrative thresholds
+comparator test where no-card reasoning makes a hidden shortcut
+case where profile-valued partial order changes the result relative to scalar reasoning
+```
+
 ## 6. Anti-Duplication Rules
 
 Use this allocation:
@@ -828,31 +883,37 @@ They should pressure existing files.
 Required future tests:
 
 ```text
-threshold-register test: same scenario, different threshold status, different permission outcome
 value-signal pressure-fragility test: same value, failure trajectory
 standing-entry test: unfamiliar possible subject vs mimicry signal
 translation test: non-animal TRACE output -> ME claim labels
+realistic case test: non-illustrative thresholds and no-card comparator
 ```
+
+Threshold-register stress test is now built and should not be rebuilt as theory.
 
 ## 9. Current Best Next Step
 
 Current reviewer verdict:
 
 ```text
-ACCEPT_WITH_MINOR_PATCH + SPRAWL_WARNING
+COHERENT_BUT_OVERBUILT
+```
+
+Current narrow achieved delta:
+
+```text
+TRACE distinguishes numerical comparison from authorised threshold use.
 ```
 
 Current action sequence:
 
 ```text
-1. sync this integration map to HEAD
-2. patch PROBABILISTIC_FLOOR §10 summed hidden-bill formulas as deprecated unless normalisation is declared
-3. patch THRESHOLD_REGISTER with theta_stab / theta_washout / theta_SGD classes
-4. patch VALUE_SIGNAL file to remove editing artifact and define theta_SGD
-5. stop core theory-build and package for review
+1. stop core theory-build
+2. package current stack for fresh-reader / reviewer use
+3. run a realistic comparator case with non-illustrative or externally grounded thresholds
 ```
 
-After those patches:
+After this map sync:
 
 ```text
 no more abstract core files unless a worked example or hostile review forces one
@@ -874,3 +935,5 @@ then decide whether another core file is actually required
 ```
 
 The kernel now needs review pressure and real comparative execution more than new vocabulary.
+
+The threshold-register stress test is a useful partial answer, not validation.
