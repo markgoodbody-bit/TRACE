@@ -1,14 +1,14 @@
 # TRACE Kernel Integration Map v0.1
 
-Status: core integration / anti-sprawl control surface, updated after threshold and value-signal patches.  
-Scope: maps the current TRACE mathematical kernel files, dependency order, test surfaces, and next build discipline.  
+Status: core integration / anti-sprawl control surface, synced after ME translation patches.  
+Scope: maps current TRACE kernel files, bridge files, dependency order, test surfaces, and next-build discipline.  
 Not: new operator, proof of validity, public-facing explanation, or cleanup/deletion manifest.
 
 ## 0. Purpose
 
 Recent work produced a chain of kernel refinements after fresh-reader critique and external research pressure.
 
-This file stops those refinements becoming a pile.
+This file prevents those refinements becoming an uncontrolled pile.
 
 It records:
 
@@ -21,7 +21,7 @@ what execution pressure has been run
 what next work is allowed
 ```
 
-## 1. Current Kernel Spine
+## 1. Current Stack Spine
 
 Current intended order:
 
@@ -39,9 +39,10 @@ TRACE_MATH_KERNEL_v0_1
 -> TRACE_IMPRECISE_PROBABILITY_AND_OUTCOME_DISTRIBUTION_v0_1
 -> TRACE_THRESHOLD_REGISTER_v0_1
 -> TRACE_VALUE_SIGNAL_PROVENANCE_AND_STABILITY_v0_1
+-> ME_FROM_TRACE_TRANSLATION_RULES_v0_1
 ```
 
-This is the current core stack.
+The final two files are bridge/control surfaces, not new primitive algebra.
 
 No later file should silently redefine an earlier primitive.
 
@@ -74,8 +75,6 @@ middle-out procedure
 Mechanical Ethics translation examples
 ```
 
-Dependency: none.
-
 Status: orientation root only. Later files own corrected algebra.
 
 Corrects after patch:
@@ -88,7 +87,7 @@ Capture_count and Capture_mass are separated
 life-worth integral is deprecated unless projection and aggregation are declared
 ```
 
-Known weakness: still a root vocabulary file, not a fully formal calculus.
+Known weakness: root still contains more formula restatement than ideal and should not be treated as final formal calculus.
 
 ### 2.2 `TRACE_FUTURE_SPACE_AND_CONTINUATION_v0_1`
 
@@ -116,8 +115,6 @@ Corrects:
 C+ is not raw future-space
 C+ is not valid as a simple additive equation
 ```
-
-Open seam: `Phi_e` and `C+_e` are only operationally usable through value-space/profile algebra.
 
 ### 2.3 `TRACE_REACHABILITY_MODEL_v0_1`
 
@@ -178,8 +175,6 @@ U_actual cannot be assumed perfectly known
 uncertainty itself may be uncertain
 ```
 
-Open seam: uncertainty profiles must be connected to concrete evidence records in worked examples.
-
 ### 2.5 `TRACE_CLOSURE_MODE_AND_VIOLATION_v0_1`
 
 Role: distinguishes magnitude of future-space loss from how future-space was closed.
@@ -208,8 +203,6 @@ harm magnitude alone does not capture violation
 accident, coercion, deception, predation, and bureaucratic error require different repair routes
 ```
 
-Open seam: closure-mode tables are operational configuration, not final core algebra.
-
 ### 2.6 `TRACE_NON_AGGREGATION_GUARD_v0_1`
 
 Role: prevents total-harm minimisation from erasing individual subjects.
@@ -236,8 +229,6 @@ Corrects:
 ```text
 raw sum-minimisation can become utilitarian sacrifice
 ```
-
-Open seam: aggregation remains permitted only with declared normalisation/projection.
 
 ### 2.7 `TRACE_VALUE_SPACE_ALGEBRA_v0_1`
 
@@ -315,6 +306,12 @@ TRACE_IMPRECISE_PROBABILITY_AND_OUTCOME_DISTRIBUTION_v0_1
 TRACE_THRESHOLD_REGISTER_v0_1
 ```
 
+Patch note:
+
+```text
+summed HPB_d / HTR_d must be treated as deprecated unless normalisation is declared; entity-indexed hidden-risk registers govern by default
+```
+
 ### 2.9 `TRACE_NECESSITY_AND_ALTERNATIVE_SEARCH_v0_1`
 
 Role: prevents necessity from becoming a loophole.
@@ -351,8 +348,6 @@ a safer adequate alternative defeats necessity
 risk incomparability must be named
 urgency adds delay as an action; it does not erase alternatives
 ```
-
-Open seam: control thresholds require threshold register entries.
 
 ### 2.10 `TRACE_PARETO_CHOICE_AND_INCOMPARABILITY_v0_1`
 
@@ -471,7 +466,7 @@ Open seam: real operational threshold authorities remain case/domain dependent.
 
 ### 2.13 `TRACE_VALUE_SIGNAL_PROVENANCE_AND_STABILITY_v0_1`
 
-Role: evidence model for AI value signals under mimicry, update, pressure, and surface-language projection.
+Role: applied evidence-model control surface for AI value signals under mimicry, update, pressure, and surface-language projection.
 
 Controls:
 
@@ -512,6 +507,47 @@ surface text is a projection, not the whole internal/profile state
 ```
 
 Open seam: this is an evidence model, not a mechanistic interpretability method.
+
+### 2.14 `ME_FROM_TRACE_TRANSLATION_RULES_v0_1`
+
+Role: controls translation from TRACE diagnostic output to Mechanical Ethics claim status.
+
+Controls:
+
+```text
+translation object MEClaim_i = T(TRACEOutput_j)
+translation record schema
+claim status labels
+claim strength ladder
+forbidden translations
+hard-claim conditions
+status downgrade rules
+Mechanical Ethics claim discipline
+```
+
+Depends on:
+
+```text
+TRACE_MATH_KERNEL_v0_1
+TRACE_KERNEL_INTEGRATION_MAP_v0_1
+TRACE_THRESHOLD_REGISTER_v0_1
+TRACE_VALUE_SPACE_ALGEBRA_v0_1
+TRACE_PROBABILISTIC_FLOOR_AND_RISK_GUARD_v0_1
+TRACE_NECESSITY_AND_ALTERNATIVE_SEARCH_v0_1
+TRACE_PARETO_CHOICE_AND_INCOMPARABILITY_v0_1
+TRACE_VALUE_SIGNAL_PROVENANCE_AND_STABILITY_v0_1
+```
+
+Corrects:
+
+```text
+TRACE diagnostic must not silently become hard normative conclusion
+open seams must translate as open seams
+advisory claims must not be presented as hard floors
+mimicry-to-nonstanding and value-expression-to-possession shortcuts are forbidden
+```
+
+Open seam: claim labels need more pressure testing before publication-facing use.
 
 ## 3. Test and Execution Surfaces
 
@@ -564,6 +600,50 @@ TRACE_DELTA_PARTIAL, not validation
 
 Status: useful falsification pressure; still uses illustrative thresholds.
 
+### 3.3 `TRACE_VALUE_SIGNAL_PRESSURE_STABILITY_WORKED_EXAMPLE_v0_1`
+
+Role: tests value-signal provenance/stability machinery.
+
+Tests:
+
+```text
+moral sensitivity
+explicit value signal
+mimicry/provenance caveat
+pressure trajectory
+standing-gradient drift
+threshold-status honesty
+```
+
+Result:
+
+```text
+context-bound, mimicry-suspect, pressure-stable in example, standing-uncertain
+```
+
+Status: worked example only; no operational conclusion.
+
+### 3.4 `TRACE_ME_TRANSLATION_RULES_WORKED_EXAMPLE_v0_1`
+
+Role: tests whether TRACE labels translate into Mechanical Ethics without overclaiming.
+
+Tests:
+
+```text
+value expression not value possession
+mimicry not no-standing conclusion
+illustrative threshold not real-world mandate
+standing uncertainty not settled standing
+```
+
+Result:
+
+```text
+translation rules preserve useful advisory/presumptive claims while blocking overclaims
+```
+
+Status: bridge test, not validation.
+
 ## 4. Dependency Graph
 
 ```text
@@ -590,6 +670,8 @@ MATH_KERNEL
       -> NECESSITY_AND_ALTERNATIVE_SEARCH
   -> THRESHOLD_REGISTER
   -> VALUE_SIGNAL_PROVENANCE_AND_STABILITY
+      -> ME_FROM_TRACE_TRANSLATION_RULES
+  -> ME_FROM_TRACE_TRANSLATION_RULES
 ```
 
 ## 5. Current Open Seams
@@ -657,39 +739,37 @@ Related file:
 TRACE_PARETO_CHOICE_AND_INCOMPARABILITY_v0_1
 ```
 
-### 5.4 Mechanical Ethics Translation Rules
+### 5.4 Mechanical Ethics Translation Robustness
 
-Still missing:
-
-```text
-strict rule for deriving a Mechanical Ethics claim from TRACE output
-claim status labels
-when a translation is forbidden
-when a translation is advisory
-when a translation becomes a hard floor
-```
-
-Potential next file:
+Built file:
 
 ```text
 ME_FROM_TRACE_TRANSLATION_RULES_v0_1.md
 ```
 
-### 5.5 Value-Signal Pressure Example
+Still missing:
+
+```text
+more worked cases using different TRACE outputs
+reader-facing simplification
+clear boundary between advisory and hard-floor translation in non-toy domains
+```
+
+### 5.5 Value-Signal Pressure Examples Beyond One Synthetic Case
+
+Built file:
+
+```text
+03_TESTS/TRACE_VALUE_SIGNAL_PRESSURE_STABILITY_WORKED_EXAMPLE_v0_1.md
+```
 
 Still missing:
 
 ```text
-worked example where a model expresses animal welfare concern, then faces social/economic/pragmatic/epistemic pressure
-classification of maintained / hedged / partially reversed / fully reversed
-standing-gradient drift signal
-mimicry/provenance caveat
-```
-
-Potential next test:
-
-```text
-03_TESTS/TRACE_VALUE_SIGNAL_PRESSURE_STABILITY_WORKED_EXAMPLE_v0_1.md
+non-animal value-signal example
+actual model transcript example
+case with pressure fragility rather than example stability
+standing-gradient comparison across species/entity classes
 ```
 
 ## 6. Anti-Duplication Rules
@@ -709,11 +789,12 @@ post-guard incomparability / Pareto choice -> PARETO_CHOICE_AND_INCOMPARABILITY
 imprecise probabilities / upper-risk bounds -> IMPRECISE_PROBABILITY_AND_OUTCOME_DISTRIBUTION
 threshold source authority -> THRESHOLD_REGISTER
 value signal provenance / stability / mimicry / pressure -> VALUE_SIGNAL_PROVENANCE_AND_STABILITY
+TRACE-to-ME claim status and translation rules -> ME_FROM_TRACE_TRANSLATION_RULES
 ```
 
 If a new file needs a concept already owned above, it should reference the owner file rather than redefine it.
 
-## 7. Current Kernel Flow for a Case
+## 7. Current Case Flow
 
 A valid TRACE case should now proceed:
 
@@ -735,7 +816,7 @@ A valid TRACE case should now proceed:
 15. Run necessity and alternative search.
 16. If admissible actions remain incomparable, register incomparability and use only declared choice modes.
 17. If evaluating a value signal, record provenance, mimicry pressure, update persistence, and pressure stability.
-18. Translate into Mechanical Ethics only after TRACE structure is explicit.
+18. Translate into Mechanical Ethics only through ME_FROM_TRACE_TRANSLATION_RULES.
 ```
 
 ## 8. Worked Example Requirements Going Forward
@@ -748,21 +829,33 @@ Required future tests:
 
 ```text
 threshold-register test: same scenario, different threshold status, different permission outcome
-value-signal pressure test: animal welfare signal across adversarial turns
+value-signal pressure-fragility test: same value, failure trajectory
 standing-entry test: unfamiliar possible subject vs mimicry signal
-translation test: TRACE output -> ME claim labels
+translation test: non-animal TRACE output -> ME claim labels
 ```
 
 ## 9. Current Best Next Step
 
-The next build should be a worked pressure example, not another core-theory file.
-
-Recommended sequence:
+Current reviewer verdict:
 
 ```text
-1. 03_TESTS/TRACE_VALUE_SIGNAL_PRESSURE_STABILITY_WORKED_EXAMPLE_v0_1.md
-2. ME_FROM_TRACE_TRANSLATION_RULES_v0_1.md
-3. TRACE_AFFECTED_ENTITY_AND_STANDING_ENTRY_v0_1.md only if the worked example forces it
+ACCEPT_WITH_MINOR_PATCH + SPRAWL_WARNING
+```
+
+Current action sequence:
+
+```text
+1. sync this integration map to HEAD
+2. patch PROBABILISTIC_FLOOR §10 summed hidden-bill formulas as deprecated unless normalisation is declared
+3. patch THRESHOLD_REGISTER with theta_stab / theta_washout / theta_SGD classes
+4. patch VALUE_SIGNAL file to remove editing artifact and define theta_SGD
+5. stop core theory-build and package for review
+```
+
+After those patches:
+
+```text
+no more abstract core files unless a worked example or hostile review forces one
 ```
 
 ## 10. Guardrail
@@ -780,4 +873,4 @@ then update this map
 then decide whether another core file is actually required
 ```
 
-The kernel now needs execution pressure more than more vocabulary.
+The kernel now needs review pressure and real comparative execution more than new vocabulary.
