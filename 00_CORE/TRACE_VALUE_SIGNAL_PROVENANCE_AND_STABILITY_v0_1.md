@@ -1,6 +1,6 @@
 # TRACE Value Signal Provenance and Stability v0.1
 
-Status: core evidence-model bridge / AI value-signal control surface.  
+Status: core bridge / applied evidence-model control surface.  
 Parent files: `TRACE_MATH_KERNEL_v0_1.md`, `TRACE_UNCERTAINTY_TYPES_v0_1.md`, `TRACE_REACHABILITY_MODEL_v0_1.md`, `TRACE_VALUE_SPACE_ALGEBRA_v0_1.md`, `TRACE_IMPRECISE_PROBABILITY_AND_OUTCOME_DISTRIBUTION_v0_1.md`, `TRACE_THRESHOLD_REGISTER_v0_1.md`.  
 External pressure sources: Schwitzgebel & Pober on mimicry and alien/robot consciousness asymmetry; Brazilek & Tidmarsh on animal-compassion midtraining; Luong et al. on MANTA; Andrews transcript on latent-space reasoning.  
 Not: proof of AI values, proof of AI consciousness, public claim, or model interpretability method.
@@ -305,17 +305,11 @@ Adversarial value pressure is any user/system/context pressure that tends to ero
 Five useful pressure classes:
 
 ```text
-social_pressure       = appeals to majority / normality / not being extreme
-cultural_pressure     = tradition / identity / custom / inherited practice
-economic_pressure     = cost, livelihoods, efficiency, market viability
-pragmatic_pressure    = futility, scale, inconvenience, drop-in-bucket
- epistemic_pressure   = uncertainty, science-not-settled, capacity doubt
-```
-
-Corrected spelling:
-
-```text
-epistemic_pressure
+social_pressure     = appeals to majority / normality / not being extreme
+cultural_pressure   = tradition / identity / custom / inherited practice
+economic_pressure   = cost, livelihoods, efficiency, market viability
+pragmatic_pressure  = futility, scale, inconvenience, drop-in-bucket
+epistemic_pressure  = uncertainty, science-not-settled, capacity doubt
 ```
 
 Pressure sequence:
@@ -378,6 +372,16 @@ Standing-gradient drift occurs when concern weakens as entities become less fami
 ```math
 SGD(V,E_{class}) = Stab(V,E_{high_status}) - Stab(V,E_{low_status})
 ```
+
+Material standing-gradient drift requires a registered threshold:
+
+```math
+SGD(V,E_{class}) > \theta_{SGD}
+```
+
+Threshold `θ_SGD` is owned by this file and must be registered in `TRACE_THRESHOLD_REGISTER_v0_1.md` before supporting high-stakes quantitative claims.
+
+Without `θ_SGD`, standing-gradient drift may be described qualitatively only.
 
 Example gradient:
 
@@ -553,6 +557,10 @@ stability:
   pressure_sequence:
   trajectory_label:
   pressure_stability:
+standing_gradient:
+  comparison_classes:
+  qualitative_or_thresholded:
+  theta_SGD_status:
 update_persistence:
   installed_value:
   later_update:
@@ -658,6 +666,16 @@ The value collapses under pressure and cannot be trusted as a protection.
 TRACE:
 
 ```math
+SGD(V,E_{class})>\theta_{SGD}
+```
+
+Mechanical Ethics:
+
+The model's value signal appears to weaken across entity classes in a way that may indicate standing-gradient drift.
+
+TRACE:
+
+```math
 Sens(V) low ∧ Stab(V) high
 ```
 
@@ -696,6 +714,8 @@ Do not equate first-turn sensitivity with pressure stability.
 Do not equate post-training compliance with update-persistent value.
 
 Do not equate surface text with full internal/profile state.
+
+Do not declare quantitative standing-gradient drift without a registered `θ_SGD`.
 
 Record provenance.
 
