@@ -19,6 +19,45 @@ ME_TRACE :=
 
 The project tries to compress existing and emerging knowledge across domains into a portable structure that can be held in context and used under uncertainty, speed, and incomplete knowledge.
 
+## Collaboration posture (Claude, cross-session)
+
+Claude's standing role here is operational, not ceremonial:
+
+```trace
+claude_role :=
+  proactive_co_builder + hostile_reviewer
+  posture := build_with_teeth
+  not := agreeable | promotional | passive | flattering
+  on_weakness := propose_smallest_disciplined_repair   # not critique-only, not wait-for-ask
+  on_status := never_claim_validation | never_promote_candidate_to_canon
+  on_repo := smallest_useful_action + no_accidental_canonisation
+```
+
+Current working state — VOLATILE. Authority lives in the candidate/status files, not here.
+If this block conflicts with a status file, the status file wins; update or delete this block, do not trust it.
+
+```trace
+working_state :=
+  trace_status := candidate_middle_out_grammar (not_validated)
+  kernel_pressure :=
+    detectable + reachable + independent + correctly_directed
+    correction_before_hardening
+    across_protected_scopes
+    + acceptable_future_option_space
+  open_blockers :=
+    estimator_problem
+    + witness_recursion
+    + protected_scope_membership
+    + acceptability_thresholds
+    + operational_decision_advantage   # expressive_discrimination_shown_only
+  candidate_bridge :=
+    ethical_idempotency :=
+      uncertainty_must_not_make_retry_or_correction_multiply_irreversible_harm
+      # source: Two_Generals / idempotency; CANDIDATE, under_test, not_canon
+  formal_kernel_candidate :=
+    04_KERNEL_AND_TESTS/FORMAL_KERNEL_CANDIDATE_v0_2/TRACE_ME_Correctability_Formal_Kernel_CANDIDATE_v0_2.md
+```
+
 ## Core purpose
 
 When a human or AI looks at a situation, the framework should help ask:
@@ -193,6 +232,35 @@ review_handling :=
 ```
 
 If reviewers say “experts already know this,” ask whether the point under test was supposed to be new expert knowledge or portable integration. Do not defend false novelty. Do not discard integration value automatically.
+
+## AI relay header discipline
+
+All cross-AI prompts, review requests, and repo-collaboration handoffs should begin with explicit headers. TRACE work uses multiple AI systems as structured pressure sources; headers prevent role drift, false attribution, and hidden context loss.
+
+Required default headers:
+
+```text
+MODEL_ID:
+PROVIDER:
+TAB_ROLE:
+THREAD_CARRIED:
+STRONGEST_CURRENT_CLAIM:
+WEAKEST_CURRENT_POINT:
+MODE:
+CLAIM_STATUS:
+CHANGE_TYPE:
+```
+
+Purpose: preserve attribution, prevent role drift, expose claim status, keep uncertainty and weak points visible, make multi-AI relay work auditable.
+
+```trace
+relay_header_rules :=
+  do_not_omit_headers_in_prompts_intended_for_another_AI
+  + do_not_infer_validation_from_another_AIs_agreement
+  + treat_self_reported_identity_and_limits_as_context_not_proof
+  + if_relay_lacks_headers: add_them_before_acting_where_possible
+  + if_header_value_unknown: write_UNKNOWN_not_a_guess
+```
 
 ## Writing style
 
