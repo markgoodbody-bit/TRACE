@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/markgoodbody-bit/TRACE/schemas/DecisionDelta.schema.json",
+  "title": "TRACE Decision Delta",
+  "description": "Records whether TRACE changes decision-relevant output compared with a baseline. Schema validity is not proof of added value.",
+  "$comment": "format_difference != decision_delta; richer_language != decision_advantage; schema_valid != empirical_result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "delta_id",
+    "case_id",
+    "status",
+    "comparison_design",
+    "baseline_output",
+    "trace_output",
+    "delta_assessment",
+    "contamination_controls",
+    "evidence_status",
+    "negative_control_status",
+    "forbidden_inferences",
+    "demotion_rule"
+  ],
+  "properties": {
+    "delta_id": {
+      "type": "string",
+      "pattern": "^delta_[A-Za-z0-9_\\-]+$"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "contested", "superseded", "demoted", "closed", "unknown"]
+    },
+    "comparison_design": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["baseline_type", "trace_type", "blind", "counterbalanced", "same_source_material", "same_task", "assessor_independence"],
+      "properties": {
+        "baseline_type": {
+          "type": "string",
+          "enum": ["human_baseline", "AI_baseline", "expert_baseline", "policy_baseline", "unknown"]
+        },
+        "trace_type": {
+          "type": "string",
+          "enum": ["TRACE_prompted", "TRACE_schema_graph", "TRACE_operator_assisted", "TRACE_full", "unknown"]
+        },
+        "blind": {"type": "boolean"},
+        "counterbalanced": {"type": "boolean"},
+        "same_source_material": {"type": "boolean"},
+        "same_task": {"type": "boolean"},
+        "assessor_independence": {
+          "type": "string",
+          "enum": ["none", "weak", "partial", "strong", "unknown"]
+        },
+        "notes": {"type": "string"}
+      }
+    },
+    "baseline_output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "action_or_review_route", "affected_scope_visibility", "clock_visibility", "correction_visibility", "laundering_visibility", "uncertainty_visibility"],
+      "properties": {
+        "summary": {"type": "string"},
+        "action_or_review_route": {"type": "string"},
+        "affected_scope_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]},
+        "clock_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]},
+        "correction_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]},
+        "laundering_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]},
+        "uncertainty_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]}
+      }
+    },
+    "trace_output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "action_or_review_route", "affected_scope_visibility", "clock_visibility", "correction_visibility", "laundering_visibility", "uncertainty_visibility"],
+      "properties": {
+        "summary": {"type": "string"},
+        "action_or_review_route": {"type": "string"},
+        "affected_scope_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]},
+        "clock_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]},
+        "correction_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]},
+        "laundering_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]},
+        "uncertainty_visibility": {"type": "string", "enum": ["none", "weak", "partial", "strong", "unknown"]}
+      }
+    },
+    "delta_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "decision_changed", "review_route_changed", "correction_timing_changed", "affected_scope_added", "forbidden_inference_blocked", "rationale"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "enum": ["REGRESSION", "COMPRESSION_ONLY", "PARTIAL_DELTA", "STRONG_DELTA", "UNKNOWN"]
+        },
+        "decision_changed": {"type": "boolean"},
+        "review_route_changed": {"type": "boolean"},
+        "correction_timing_changed": {"type": "boolean"},
+        "affected_scope_added": {"type": "boolean"},
+        "forbidden_inference_blocked": {"type": "boolean"},
+        "rationale": {"type": "string"},
+        "confidence": {"type": "string", "enum": ["low", "medium", "high", "unknown"], "default": "unknown"}
+      }
+    },
+    "contamination_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["answer_leak_check", "order_effect_check", "prompt_steering_check", "same_model_check", "self_scoring_check"],
+      "properties": {
+        "answer_leak_check": {"type": "string", "enum": ["passed", "failed", "unclear", "not_checked"]},
+        "order_effect_check": {"type": "string", "enum": ["passed", "failed", "unclear", "not_checked"]},
+        "prompt_steering_check": {"type": "string", "enum": ["passed", "failed", "unclear", "not_checked"]},
+        "same_model_check": {"type": "string", "enum": ["passed", "failed", "unclear", "not_checked"]},
+        "self_scoring_check": {"type": "string", "enum": ["passed", "failed", "unclear", "not_checked"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "evidence_status": {
+      "type": "string",
+      "enum": ["illustrative", "public_record_light", "public_record_pinned", "witness_pinned", "live_use", "unknown"]
+    },
+    "negative_control_status": {
+      "type": "string",
+      "enum": ["not_negative_control", "negative_control_expected_idle", "negative_control_pass_idle", "negative_control_overfit_alarm", "unknown"]
+    },
+    "forbidden_inferences": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    },
+    "demotion_rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trigger", "demote_to", "claim_to_update"],
+      "properties": {
+        "trigger": {"type": "string"},
+        "demote_to": {"type": "string", "enum": ["COMPRESSION_ONLY", "REGRESSION", "INCONCLUSIVE", "FORMAT_TRANSFER_ONLY", "ARCHIVE", "unknown"]},
+        "claim_to_update": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "notes": {"type": "string"}
+  }
+}
