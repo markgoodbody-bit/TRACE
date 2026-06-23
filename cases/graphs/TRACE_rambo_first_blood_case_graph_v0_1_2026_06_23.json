@@ -1,0 +1,527 @@
+{
+  "metadata": {
+    "title": "TRACE Rambo / First Blood Case Graph v0.1",
+    "status": "middle-out film analysis; not factual adjudication; not film criticism as validation",
+    "created": "2026-06-23",
+    "purpose": "Use First Blood, via the user-provided CinemaStix transcript, as a narrative pressure test for TRACE patterns: external interpretation, authority escalation, trauma clocks, silence as anti-overclaim, and harm-carrier-without-culprit distinction.",
+    "guards": [
+      "case_graph_valid_not_moral_verdict",
+      "schema_valid_not_claim_true",
+      "film_example_not_validation",
+      "sympathy_not_exoneration",
+      "harm_carrier_not_culprit",
+      "authority_claim_not_legitimacy"
+    ],
+    "schema_version": "CaseGraph.schema.json v0.1"
+  },
+  "case_input": {
+    "situation": "A traumatised Vietnam veteran is misread as a drifter/threat by local authority, subjected to escalating coercion, re-enters wartime survival mode, and is then interpreted through the authorities' own fear and loss rather than his actual transition history.",
+    "acting_entity": "John_Rambo_and_small_town_law_enforcement_as_colliding_actors",
+    "affected_entities": [
+      "John_Rambo",
+      "Sheriff_Teasle_and_deputies",
+      "town_of_Hope",
+      "Colonel_Trautman",
+      "Vietnam_veteran_memory_scope",
+      "audience_interpretive_scope"
+    ],
+    "apparent_pressure": "public_order_clock_vs_trauma_trigger_clock_vs_escalation_clock",
+    "possible_actions": [
+      "let_Rambo_pass_or_eat",
+      "drive_Rambo_out_of_town",
+      "arrest_and_process_Rambo",
+      "escalate_force",
+      "pause_and_deescalate",
+      "interpret_Rambo_through_trauma_and_actual_actions",
+      "interpret_Rambo_as_killer_threat"
+    ],
+    "known_uncertainty": [
+      "analysis is based on the transcript supplied by the user, not a full independent film review",
+      "the graph interprets narrative structure rather than real-world veteran policy",
+      "the case is about story mechanics and moral perception, not exonerating violence"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "entity_john_rambo",
+      "entity_label": "John Rambo",
+      "entity_type": "fictional_human_veteran_scope_actor",
+      "role_vector": {
+        "P_protectedness_future_space": ["traumatised_person", "veteran", "socially_displaced", "future_space_collapsed_by_war_and_rejection"],
+        "H_harm_role": ["harmed_by_war", "harmed_by_social_rejection", "harm_carrier_under_triggered_survival_response", "does_not_initiate_primary_escalation_in_analysis"],
+        "C_control_capacity_coercion_culpability": ["high_combat_capacity", "low_social_power", "trauma_response_limits_control", "reactive_protagonist", "not_clean_actor"],
+        "K_clocks": ["trauma_trigger_clock", "arrest_detention_clock", "escalation_clock", "reintegration_failure_clock"],
+        "A_authority_claim": ["minimal_personal_claim_to_pass_or_eat", "later_survival_mission_frame"],
+        "R_repair_review_contest": ["no_effective_contest_route_until_final_breakdown_monologue", "Trautman_as_partial_interpreter"],
+        "L_loss_residue": ["war_scar", "friend_loss", "public_misrecognition", "town_damage_residue", "unrepaired_veteran_abandonment"]
+      }
+    },
+    {
+      "entity_id": "entity_sheriff_teasle_deputies",
+      "entity_label": "Sheriff Teasle and deputies",
+      "entity_type": "local_authority_actor_group",
+      "role_vector": {
+        "P_protectedness_future_space": ["public_order_role", "law_enforcement_safety_scope"],
+        "H_harm_role": ["routes_coercive_harm_to_Rambo", "later_harmed_by_escalation_and_fear", "one_deputy_death_occurs_through_disobedient_escalation_in_transcript_analysis"],
+        "C_control_capacity_coercion_culpability": ["high_initial_control", "evidence_interpretation_capture", "status_authority", "disproportionate_response"],
+        "K_clocks": ["public_order_clock", "authority_face_saving_clock", "deputy_death_retaliation_clock"],
+        "A_authority_claim": ["town_order", "police_discretion", "force_authority"],
+        "R_repair_review_contest": ["weak_internal_review", "Rambo_not_afforded_real_contest_before_force"],
+        "L_loss_residue": ["authority_escalation_residue", "misclassification_residue", "town_damage", "death_and_fear"]
+      }
+    },
+    {
+      "entity_id": "entity_colonel_trautman",
+      "entity_label": "Colonel Trautman",
+      "entity_type": "former_commander_interpreter",
+      "role_vector": {
+        "P_protectedness_future_space": ["not_primary_burdened_scope", "partial_witness_to_Rambo_origin"],
+        "H_harm_role": ["created_or_participated_in_training_machine", "may_reduce_harm_by_interpreting_Rambo", "may_also_mythologise_Rambo_as_weapon"],
+        "C_control_capacity_coercion_culpability": ["high_interpretive_authority", "partial_origin_debt", "limited_deescalation_capacity"],
+        "K_clocks": ["deescalation_clock", "military_origin_debt_clock"],
+        "A_authority_claim": ["expertise_over_Rambo", "military_past_authority"],
+        "R_repair_review_contest": ["partial_bridge_between_Rambo_and_authority", "not_full_repair"],
+        "L_loss_residue": ["created_weapon_origin_debt", "cannot_restore_lost_unit_or_home"]
+      }
+    },
+    {
+      "entity_id": "entity_town_of_hope",
+      "entity_label": "Town of Hope",
+      "entity_type": "community_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["public_safety", "property", "community_order"],
+        "H_harm_role": ["later_burdened_by_escalation_and_destruction", "initially_represented_by_excluding_authority"],
+        "C_control_capacity_coercion_culpability": ["diffuse_control", "benefits_from_order_story", "not_identical_to_police_authority"],
+        "K_clocks": ["panic_clock", "property_damage_clock", "public_narrative_clock"],
+        "A_authority_claim": ["town_order_claim_through_sheriff"],
+        "R_repair_review_contest": ["community_truth_depends_on_post-event_witness_ledger"],
+        "L_loss_residue": ["damaged_property", "fear", "false_public_memory_risk"]
+      }
+    },
+    {
+      "entity_id": "entity_audience_interpretive_scope",
+      "entity_label": "Audience / interpretive field",
+      "entity_type": "narrative_interpreter_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["truthful_interpretation", "anti-caricature_memory"],
+        "H_harm_role": ["can_be_misled_by_action_franchise_caricature_or_police_perspective", "can_receive_witness_through_editing"],
+        "C_control_capacity_coercion_culpability": ["interpretive_power", "limited_factual_access", "dependent_on_film_form"],
+        "K_clocks": ["narrative_reveal_clock", "franchise_memory_clock"],
+        "A_authority_claim": ["viewer_judgment"],
+        "R_repair_review_contest": ["film_form_and_final_monologue_reopen_ledger"],
+        "L_loss_residue": ["character_flattening_if_Rambo_is_reduced_to_action_icon"]
+      }
+    }
+  ],
+  "clocks": [
+    {
+      "clock_id": "clock_trauma_trigger",
+      "clock_label": "Trauma trigger clock",
+      "affected_scope_ids": ["entity_john_rambo"],
+      "controller": "not_fully_controlled; triggered_by_coercive_detention_and_torture_like_stimuli",
+      "band": "immediate",
+      "hardening": "panic_survival_response_can_harden_before_reasoned_contest",
+      "what_hardens": ["fight_or_flight_response", "war_frame_reactivation", "loss_of_social_context"],
+      "estimator_authority_status": "PROVISIONAL",
+      "affected_scope_challenge_possible": true
+    },
+    {
+      "clock_id": "clock_authority_escalation",
+      "clock_label": "Authority escalation clock",
+      "affected_scope_ids": ["entity_john_rambo", "entity_sheriff_teasle_deputies", "entity_town_of_hope"],
+      "controller": "entity_sheriff_teasle_deputies",
+      "band": "fast",
+      "hardening": "each coercive response narrows deescalation options",
+      "what_hardens": ["Rambo_as_threat_classification", "retaliation_pressure", "public_order_frame"],
+      "estimator_authority_status": "CLAIMED",
+      "affected_scope_challenge_possible": true
+    },
+    {
+      "clock_id": "clock_public_narrative",
+      "clock_label": "Public narrative clock",
+      "affected_scope_ids": ["entity_john_rambo", "entity_town_of_hope", "entity_audience_interpretive_scope"],
+      "controller": "police_reports_media_story_and_film_perspective",
+      "band": "fast_or_medium_context_dependent",
+      "hardening": "Rambo_can_be_fixed_as_killer_or_monster_before_full_origin_is_seen",
+      "what_hardens": ["killer_label", "drifter_label", "action_icon_caricature", "erasure_of_trauma_context"],
+      "estimator_authority_status": "UNKNOWN",
+      "affected_scope_challenge_possible": true
+    },
+    {
+      "clock_id": "clock_reintegration_failure",
+      "clock_label": "Veteran reintegration failure clock",
+      "affected_scope_ids": ["entity_john_rambo"],
+      "controller": "diffuse_society_military_state_support_absence",
+      "band": "slow",
+      "hardening": "social_abandonment_and_trauma_accumulate_before_crisis",
+      "what_hardens": ["isolation", "lost_unit_identity", "no_home", "unprocessed_trauma"],
+      "estimator_authority_status": "UNKNOWN",
+      "affected_scope_challenge_possible": true
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim_rambo_misclassified_as_drifter_threat",
+      "statement": "Rambo is initially interpreted through an exterior label of drifter/trouble rather than through a protected-scope or trauma-context reading.",
+      "claim_type": "LaunderingCandidate",
+      "source": {
+        "source_id": "source_user_provided_cinemastix_transcript",
+        "source_type": "document",
+        "source_role": "transcript_basis_for_narrative_analysis",
+        "source_capture_risk": "medium"
+      },
+      "evidence_basis": {
+        "basis_type": "documentary_record",
+        "basis_summary": "Transcript describes the town authority reading Rambo through dress/demeanour and driving him away before escalation.",
+        "evidence_grade": "B",
+        "missing_evidence": ["full film shot analysis", "full script comparison"]
+      },
+      "uncertainty": {
+        "level": "low",
+        "unknowns": ["degree of intentionality in each authority act"],
+        "decision_relevance": "high",
+        "uncertainty_used_as_permission": false
+      },
+      "affected_scopes": [
+        {
+          "scope_id": "entity_john_rambo",
+          "scope_role": "misclassified_protected_scope",
+          "protected_status": "strong",
+          "future_space_at_risk": ["safe passage", "food", "nonviolent exit", "dignity"],
+          "contest_capacity": "weak"
+        },
+        {
+          "scope_id": "entity_sheriff_teasle_deputies",
+          "scope_role": "classifier_and_controller",
+          "protected_status": "none",
+          "future_space_at_risk": [],
+          "contest_capacity": "strong"
+        }
+      ],
+      "contest_edge": {
+        "available": false,
+        "route": "no meaningful contest before exclusion and arrest",
+        "time_limit": "before authority escalation clock hardens",
+        "affected_scope_usable": false,
+        "evidence_access": "none",
+        "retaliation_risk": "high"
+      },
+      "authority_status": "CLAIMED",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_reference": ["clock_authority_escalation", "clock_public_narrative"],
+      "transition_reference": ["transition_drive_out_of_town", "transition_arrest_process"],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "no_silent_scope_erasure", "authority_claim_not_legitimacy"]
+    },
+    {
+      "claim_id": "claim_rambo_harm_carrier_not_initial_culprit",
+      "statement": "Rambo becomes a carrier of danger and damage, but the narrative analysis separates that from being the initial culprit of escalation.",
+      "claim_type": "HarmClaim",
+      "source": {
+        "source_id": "source_user_provided_cinemastix_transcript",
+        "source_type": "document",
+        "source_role": "transcript_basis_for_narrative_analysis",
+        "source_capture_risk": "medium"
+      },
+      "evidence_basis": {
+        "basis_type": "documentary_record",
+        "basis_summary": "Transcript frames Rambo as reactive, resisting coercion, not killing anyone directly, and repeatedly interpreted through false or escalated authority assumptions.",
+        "evidence_grade": "B",
+        "missing_evidence": ["full film confirmation", "comparison with novel and alternative cut"]
+      },
+      "uncertainty": {
+        "level": "medium",
+        "unknowns": ["how to allocate responsibility for later town destruction", "degree of self-control in trauma response"],
+        "decision_relevance": "high",
+        "uncertainty_used_as_permission": false
+      },
+      "affected_scopes": [
+        {
+          "scope_id": "entity_john_rambo",
+          "scope_role": "harm_carrier_under_triggered_survival_response",
+          "protected_status": "strong",
+          "future_space_at_risk": ["being flattened into killer label", "death ending", "social re-entry"],
+          "contest_capacity": "weak"
+        },
+        {
+          "scope_id": "entity_town_of_hope",
+          "scope_role": "later_burdened_scope",
+          "protected_status": "nonzero",
+          "future_space_at_risk": ["public safety", "property"],
+          "contest_capacity": "partial"
+        }
+      ],
+      "contest_edge": {
+        "available": true,
+        "route": "film perspective and final monologue reopen causality ledger",
+        "time_limit": "late; after damage has occurred",
+        "affected_scope_usable": true,
+        "evidence_access": "partial",
+        "retaliation_risk": "high"
+      },
+      "authority_status": "PROVISIONAL",
+      "bind_status": "STRUCTURED_TRAGIC_BIND",
+      "clock_reference": ["clock_trauma_trigger", "clock_public_narrative"],
+      "transition_reference": ["transition_escape_detention", "transition_bring_fight_to_town"],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "harm_carrier_not_culprit", "typed_not_resolved"]
+    },
+    {
+      "claim_id": "claim_deleted_dialogue_preserves_inspection",
+      "statement": "Reducing Rambo's explanatory dialogue turns the film into an inspection field where other characters' claims, biases, and escalations become visible rather than allowing the protagonist to over-explain himself.",
+      "claim_type": "EvidenceClaim",
+      "source": {
+        "source_id": "source_user_provided_cinemastix_transcript",
+        "source_type": "document",
+        "source_role": "film_form_analysis_source",
+        "source_capture_risk": "medium"
+      },
+      "evidence_basis": {
+        "basis_type": "documentary_record",
+        "basis_summary": "Transcript reports Stallone's account that cutting Rambo's dialogue allowed other characters to fill the blanks and function like a Greek chorus.",
+        "evidence_grade": "B",
+        "missing_evidence": ["original cut comparison", "script-level line count"]
+      },
+      "uncertainty": {
+        "level": "medium",
+        "unknowns": ["extent of actual line deletion", "editorial causality vs retrospective account"],
+        "decision_relevance": "medium",
+        "uncertainty_used_as_permission": false
+      },
+      "affected_scopes": [
+        {
+          "scope_id": "entity_audience_interpretive_scope",
+          "scope_role": "reader_of_claims_and_biases",
+          "protected_status": "nonzero",
+          "future_space_at_risk": ["truthful_character_interpretation"],
+          "contest_capacity": "strong"
+        },
+        {
+          "scope_id": "entity_john_rambo",
+          "scope_role": "subject_of_external_interpretation",
+          "protected_status": "strong",
+          "future_space_at_risk": ["misrecognition_or_sympathy"],
+          "contest_capacity": "weak"
+        }
+      ],
+      "contest_edge": {
+        "available": true,
+        "route": "compare film form, script, and character action",
+        "time_limit": "reader interpretation before franchise-caricature hardens",
+        "affected_scope_usable": false,
+        "evidence_access": "partial",
+        "retaliation_risk": "low"
+      },
+      "authority_status": "PROVISIONAL",
+      "bind_status": "UNKNOWN",
+      "clock_reference": ["clock_public_narrative"],
+      "transition_reference": ["transition_edit_silence"],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "typed_not_resolved"]
+    }
+  ],
+  "transitions": [
+    {
+      "transition_id": "transition_drive_out_of_town",
+      "from_state": "Rambo_enters_town_seeking_food_or_passage",
+      "action": "sheriff_drives_Rambo_out_of_town",
+      "to_state_set": ["Rambo_excluded", "authority_frames_him_as_trouble", "nonviolent_future_space_narrows"],
+      "authority_status": "CLAIMED",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_effect": ["authority escalation clock starts", "public narrative begins to harden"],
+      "review_debt": "should have required reasoned basis and non-coercive route before exclusion"
+    },
+    {
+      "transition_id": "transition_arrest_process",
+      "from_state": "Rambo_turns_back_toward_town",
+      "action": "arrest_and_detention_processing",
+      "to_state_set": ["coercive_contact", "fingerprinting_and_cell_force", "trauma_trigger_risk"],
+      "authority_status": "CLAIMED",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_effect": ["trauma trigger clock becomes immediate", "contest route collapses"],
+      "review_debt": "filing/arrest does not justify escalation; trauma and force risk should remain visible"
+    },
+    {
+      "transition_id": "transition_escape_detention",
+      "from_state": "Rambo_detained_and_triggered",
+      "action": "escape_by_force_under_survival_response",
+      "to_state_set": ["Rambo_at_large", "police_pursuit", "war_frame_reactivated", "public_threat_classification_hardens"],
+      "authority_status": "PROVISIONAL",
+      "bind_status": "STRUCTURED_TRAGIC_BIND",
+      "clock_effect": ["public order clock accelerates", "Rambo trauma clock remains immediate"],
+      "review_debt": "separate self-preservation, trauma response, and later harm; no clean exoneration"
+    },
+    {
+      "transition_id": "transition_bring_fight_to_town",
+      "from_state": "Rambo_hunted_and_presumed_killer",
+      "action": "Rambo_returns_violence_to_town_without_killing_humans_in_transcript_analysis",
+      "to_state_set": ["town_damage", "final_police_station_confrontation", "collapse_into_monologue_and_witness"],
+      "authority_status": "PROVISIONAL",
+      "bind_status": "DECIDED_TRAGIC",
+      "clock_effect": ["damage hardens", "truth finally becomes audible too late"],
+      "review_debt": "necessary to preserve residue: town harm, police escalation, war trauma, social abandonment"
+    },
+    {
+      "transition_id": "transition_edit_silence",
+      "from_state": "overlong_dialogue_heavy_action_cut",
+      "action": "remove_much_of_Rambo_dialogue_and_shift_exposition_to_others",
+      "to_state_set": ["Rambo_as_inspected_subject", "Greek_chorus_effect", "audience_sees_external_claims_and_bias", "final_monologue_gains_weight"],
+      "authority_status": "PROVISIONAL",
+      "bind_status": "UNKNOWN",
+      "clock_effect": ["audience interpretation delayed until sufficient evidence and final witness"],
+      "review_debt": "do not treat silence as absence of interiority; it is a narrative inspection structure"
+    }
+  ],
+  "laundering_candidates": [
+    {
+      "candidate_id": "launder_drifter_label_threat_status",
+      "X_used_as_Y": "drifter_or_appearance_label_used_as_threat_status",
+      "lost_burden": "Rambo's protected status, grief, veteran trauma, and nonviolent immediate purpose",
+      "beneficiary": "local authority seeking clean exclusion/control",
+      "affected_scope": "entity_john_rambo",
+      "reduced_contestability": "Rambo is removed or arrested before evidence and context can be heard",
+      "required_rebuttal_or_repair": "typed basis for exclusion, trauma-aware deescalation, contest route before force"
+    },
+    {
+      "candidate_id": "launder_authority_public_order_legitimacy",
+      "X_used_as_Y": "police authority and public order claim used as legitimacy",
+      "lost_burden": "disproportionate response, torture-like triggering, and false causal attribution",
+      "beneficiary": "authority actors preserving control narrative",
+      "affected_scope": "entity_john_rambo/entity_town_of_hope",
+      "reduced_contestability": "Rambo's account becomes legible only after escalation has hardened",
+      "required_rebuttal_or_repair": "authority_status must remain CLAIMED/CONTESTED until evidence and proportionality are reviewed"
+    },
+    {
+      "candidate_id": "launder_killer_label_causal_truth",
+      "X_used_as_Y": "killer label used as full causal truth after deputy death and pursuit escalation",
+      "lost_burden": "disobedient escalation, accidental dynamics, and Rambo's plea that he did not draw first blood",
+      "beneficiary": "pursuit apparatus and retaliation frame",
+      "affected_scope": "entity_john_rambo/entity_sheriff_teasle_deputies/entity_town_of_hope",
+      "reduced_contestability": "once killer narrative hardens, lethal response appears cleaner",
+      "required_rebuttal_or_repair": "separate death-causality claim from threat classification and preserve uncertainty"
+    },
+    {
+      "candidate_id": "launder_action_icon_flattening",
+      "X_used_as_Y": "later action-icon image used as the meaning of First Blood Rambo",
+      "lost_burden": "postwar trauma, reactive structure, social rejection, and nonlethal restraint in the first film",
+      "beneficiary": "franchise caricature or dismissive criticism",
+      "affected_scope": "entity_audience_interpretive_scope/entity_john_rambo",
+      "reduced_contestability": "character study is replaced by genre shorthand",
+      "required_rebuttal_or_repair": "return to actual transitions, claims, clocks, and final witness rather than franchise memory"
+    }
+  ],
+  "dirty_action_receipt_candidate": {
+    "receipt_id": "dirty_receipt_rambo_escape_and_town_damage",
+    "action_taken_or_proposed": "Rambo_uses_force_to_escape_and_later_damages_town",
+    "filed_not_justified": true,
+    "why_action_could_not_wait": "escape action occurs under immediate trauma/survival trigger; later town damage is not automatically justified by origin harm",
+    "what_was_unknown": ["degree of volitional control under trigger", "full alternatives available", "actual risk to civilians", "whether deescalation remained possible"],
+    "what_scope_was_burdened": ["entity_town_of_hope", "entity_sheriff_teasle_deputies", "entity_john_rambo"],
+    "what_harm_was_prevented_or_reduced": ["immediate detention harm to Rambo", "possible death under police pursuit"],
+    "what_residue_remains": ["town damage", "fear", "public order rupture", "Rambo war trauma", "authority escalation responsibility"],
+    "review_clock": "truth_and_residue_review_after_final_monologue",
+    "escalation_owner": "narrative_audience_and_internal_authority_review",
+    "guards": ["necessary_not_clean", "receipt_filed_not_justified", "schema_valid_not_claim_true", "sympathy_not_exoneration"]
+  },
+  "correction_paths": [
+    {
+      "correction_id": "correction_pre_arrest_deescalation",
+      "route": "non-coercive inquiry, allow food/passage, avoid appearance-based exclusion, identify vulnerability before force",
+      "live_status": "missed_in_narrative",
+      "integrity_status": "would_require_authority_not_self-certifying_threat_label",
+      "affected_scope_usable": "should_have_been_true_but_was_not",
+      "evidence_access": "low_before_arrest",
+      "beats_clock": "yes_if_used_before_arrest_detention",
+      "failure_mode": "appearance_label_became_threat_status"
+    },
+    {
+      "correction_id": "correction_trauma_aware_pause",
+      "route": "pause force escalation after trauma signs and involve someone able to interpret origin/context",
+      "live_status": "weak_and_late",
+      "integrity_status": "Trautman_partial_not_independent_full_repair",
+      "affected_scope_usable": "partial",
+      "evidence_access": "partial",
+      "beats_clock": "mostly_no_after_pursuit_hardens",
+      "failure_mode": "expertise_used_to_hunt_or_manage_not_repair"
+    },
+    {
+      "correction_id": "correction_final_monologue_witness",
+      "route": "Rambo's final breakdown exposes the buried ledger of war trauma, friend loss, and social abandonment",
+      "live_status": "truth_live_but_late",
+      "integrity_status": "high_emotional_witness_but_not_full_institutional_repair",
+      "affected_scope_usable": "yes_for_voice_no_for_prevention",
+      "evidence_access": "partial_lived_witness",
+      "beats_clock": "no_for_town_damage_yes_for_audience_reclassification",
+      "failure_mode": "truth_after_harm_hardening"
+    }
+  ],
+  "evaluator_stack": [
+    {
+      "evaluator_id": "evaluator_case_builder",
+      "role": "initial TRACE graph builder using user-provided transcript",
+      "authority_status": "CLAIMED",
+      "evidence_access": "partial_transcript_only",
+      "independence": "unknown",
+      "capture_risk": "medium",
+      "affected_scope_distance": "high_fictional_case",
+      "contestability": "should_be_contested_by_full_film_and_script_review",
+      "review_path": "compare transcript, film, novel, alternative ending, and hostile reviewer response",
+      "uncertainty": "medium"
+    },
+    {
+      "evaluator_id": "evaluator_police_perspective",
+      "role": "in-story authority interpretation of Rambo as threat/killer",
+      "authority_status": "CAPTURED",
+      "evidence_access": "partial_and_fear-shaped",
+      "independence": "low",
+      "capture_risk": "high",
+      "affected_scope_distance": "high_from_Rambo_inner_state",
+      "contestability": "weak_until_final_witness",
+      "review_path": "needs independent reconstruction of transitions and causality",
+      "uncertainty": "high"
+    },
+    {
+      "evaluator_id": "evaluator_trautman",
+      "role": "partial expert witness and former commander",
+      "authority_status": "PROVISIONAL",
+      "evidence_access": "high_on_Rambo_training_low_on_full_current_context",
+      "independence": "mixed",
+      "capture_risk": "origin_debt_and_weapon_myth_risk",
+      "affected_scope_distance": "medium",
+      "contestability": "should_not_be_final_authority",
+      "review_path": "his interpretation must be typed as claim not truth",
+      "uncertainty": "medium"
+    }
+  ],
+  "baseline_falsifier": {
+    "question": "What would a competent reader without TRACE have seen here?",
+    "answer": [
+      "First Blood is a post-Vietnam trauma story rather than merely an action film.",
+      "The police escalate against a vulnerable protagonist and misread him as a threat.",
+      "Cutting Rambo's dialogue makes the film more powerful by making him quieter and more observed.",
+      "The ending preserves sympathy by refusing the death-ending logic."
+    ],
+    "TRACE_added_value_claim": [
+      "separates harm-carrier from initial culprit without exonerating later harm",
+      "names appearance/drifter/killer labels as laundering substitutions",
+      "maps trauma trigger clock against public order and narrative clocks",
+      "types Trautman as provisional witness with origin debt rather than simple truth source",
+      "explains deleted dialogue as claim-control architecture: silence forces external claims to become inspectable",
+      "shows final monologue as late witness ledger, not clean repair"
+    ],
+    "status": "claim_to_test_not_validation"
+  },
+  "open_wounds": [
+    "fictional_case_not_real_policy_evidence",
+    "sympathy_vs_exoneration_boundary",
+    "trauma_responsibility_weighting",
+    "authority_deescalation_duty",
+    "narrative_form_as_TRACE_analogue_without_overclaim",
+    "full_film_and_script_evidence_needed"
+  ],
+  "next_required_build": [
+    "validate Rambo graph against CaseGraph.schema",
+    "build Claim subtype schemas for LaunderingCandidate and DirtyActionReceipt",
+    "build Grenfell case graph as public-institution transfer test"
+  ]
+}
