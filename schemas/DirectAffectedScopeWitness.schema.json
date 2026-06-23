@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trace.local/schemas/DirectAffectedScopeWitness.schema.json",
+  "title": "TRACE Direct Affected Scope Witness",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "A witness slot for directly affected scopes. This prevents TRACE outputs from speaking structurally about harmed people while omitting their own account, contest route, or silence status.",
+  "required": [
+    "witness_id",
+    "affected_scope_id",
+    "witness_status",
+    "source_basis",
+    "claim_summary",
+    "agency_status",
+    "contest_route",
+    "silence_risk",
+    "guards"
+  ],
+  "properties": {
+    "witness_id": {
+      "type": "string"
+    },
+    "affected_scope_id": {
+      "type": "string"
+    },
+    "witness_status": {
+      "type": "string",
+      "enum": [
+        "direct_testimony_available",
+        "representative_statement_available",
+        "indirect_public_record_only",
+        "not_accessed",
+        "not_available",
+        "silenced_or_unheard",
+        "unknown"
+      ]
+    },
+    "source_basis": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "claim_summary": {
+      "type": "string",
+      "description": "Brief statement of what the affected scope says, or what is missing if not accessed."
+    },
+    "agency_status": {
+      "type": "string",
+      "enum": [
+        "voice_preserved",
+        "voice_represented",
+        "voice_inferred",
+        "voice_absent",
+        "voice_suppressed",
+        "unknown"
+      ]
+    },
+    "contest_route": {
+      "type": "string",
+      "description": "How the affected scope can contest the representation or decision."
+    },
+    "silence_risk": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ]
+    },
+    "guards": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": [
+        "affected_scope_discussed != affected_scope_heard",
+        "representative_statement != direct_voice",
+        "absence_of_witness != absence_of_harm",
+        "structure_about_person != permission_to_speak_over_person"
+      ]
+    }
+  }
+}
