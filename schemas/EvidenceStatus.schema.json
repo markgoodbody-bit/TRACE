@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trace.local/schemas/EvidenceStatus.schema.json",
+  "title": "TRACE Evidence Status",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "Evidence status label for TRACE case graphs, claims, transfer runs, and public-facing packets. This prevents illustrative, public-record, evidence-pinned, live, and fictional uses from being silently laundered into one another.",
+  "required": [
+    "status",
+    "scope",
+    "source_basis",
+    "citation_requirement",
+    "allowed_claim_level",
+    "upgrade_path",
+    "guards"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "illustrative",
+        "public_record_light",
+        "public_record_pinned",
+        "live_case",
+        "fictional_or_narrative",
+        "unknown"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "description": "What this evidence status applies to: whole graph, individual claim, prompt, transfer run, or narrative interpretation."
+    },
+    "source_basis": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Sources or source classes used: official report, public journalism, user-provided transcript, stylized example, etc."
+    },
+    "citation_requirement": {
+      "type": "string",
+      "enum": [
+        "none_for_structure_only",
+        "cite_if_public_claim_made",
+        "official_or_primary_sources_required",
+        "full_evidence_pack_required",
+        "unknown"
+      ]
+    },
+    "allowed_claim_level": {
+      "type": "string",
+      "enum": [
+        "structure_only",
+        "illustrative_pattern",
+        "public_record_summary",
+        "bounded_case_analysis",
+        "decision_relevant_analysis",
+        "unknown"
+      ]
+    },
+    "upgrade_path": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What is required to move to a stronger evidence status."
+    },
+    "guards": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": [
+        "evidence_status_valid != claim_true",
+        "illustrative != evidence_pinned",
+        "public_record_light != public_record_pinned",
+        "narrative_interpretation != real_world_adjudication",
+        "live_case requires higher evidence discipline"
+      ]
+    }
+  }
+}
