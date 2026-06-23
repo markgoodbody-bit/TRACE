@@ -1,0 +1,491 @@
+{
+  "metadata": {
+    "title": "TRACE Amazon Case Graph v0.1",
+    "status": "transfer test; not validation; not factual adjudication; not policy advice",
+    "created": "2026-06-23",
+    "purpose": "Non-home case graph after feral hogs shakedown. Tests whether TRACE structure travels to platform/logistics/corporate power without relying on animal-management fit.",
+    "guards": [
+      "case_graph_valid_not_moral_verdict",
+      "schema_valid_not_claim_true",
+      "metric_not_lived_condition",
+      "algorithm_not_accountable_decision_maker",
+      "consumer_convenience_not_full_burden_map",
+      "schema_completion_not_discipline"
+    ],
+    "schema_version": "CaseGraph.schema.json v0.1"
+  },
+  "case_input": {
+    "situation": "A large platform and logistics system optimises convenience, speed, scale, price, and marketplace control while distributing burdens across workers, sellers, customers, local retailers, data subjects, contractors, and ecosystems.",
+    "acting_entity": "Amazon_as_corporate_platform_logistics_system_or_relevant_sub-controller",
+    "affected_entities": [
+      "warehouse_workers",
+      "delivery_drivers",
+      "marketplace_sellers",
+      "customers",
+      "local_retailers",
+      "data_subjects",
+      "communities",
+      "ecosystems",
+      "algorithmic_management_surfaces"
+    ],
+    "apparent_pressure": "speed_price_growth_metric_efficiency_and_customer_convenience",
+    "possible_actions": [
+      "increase_metric_pressure",
+      "deactivate_or_suspend_worker_or_seller",
+      "alter_marketplace_rules",
+      "change_delivery_promise",
+      "change algorithmic routing or pacing",
+      "pause action pending review",
+      "create contestable appeal route"
+    ],
+    "known_uncertainty": [
+      "specific factual conditions vary by site, role, jurisdiction, and time",
+      "this graph does not adjudicate actual injury, wage, privacy, tax, or competition claims",
+      "algorithmic logic and internal evidence may be unavailable",
+      "affected-scope testimony and independent evidence are required for live use"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "entity_amazon_corporate_controller",
+      "entity_label": "Amazon corporate/platform controller",
+      "entity_type": "corporate_authority_node",
+      "role_vector": {
+        "P_protectedness_future_space": ["institutional_actor_not_primary_protected_scope"],
+        "H_harm_role": ["may_route_burden_to_workers_sellers_customers_communities_ecosystems"],
+        "C_control_capacity_coercion_culpability": ["high_control", "high_foreseeability_claim_required", "beneficiary_of_scale_and_closure"],
+        "K_clocks": ["quarterly_growth_clock", "delivery_promise_clock", "regulatory_clock", "worker_body_clock", "seller_cashflow_clock"],
+        "A_authority_claim": ["platform_rule_authority", "contractual_authority", "managerial_authority"],
+        "R_repair_review_contest": ["must_provide_real_contest_routes_for_platform_decisions"],
+        "L_loss_residue": ["responsibility_for_metric_pressure_and_hidden_externalities"]
+      }
+    },
+    {
+      "entity_id": "entity_warehouse_workers",
+      "entity_label": "Warehouse workers",
+      "entity_type": "human_worker_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["bodily_safety", "income_stability", "dignity", "voice"],
+        "H_harm_role": ["may_be_burdened_by_pace_injury_surveillance_or_retaliation"],
+        "C_control_capacity_coercion_culpability": ["limited_control", "economic_dependency", "partial_contest_capacity"],
+        "K_clocks": ["injury_clock", "fatigue_clock", "income_clock", "retaliation_clock"],
+        "A_authority_claim": ["labour_rights_or_safety_claims"],
+        "R_repair_review_contest": ["safety_reporting_and_grievance_must_be_live_not_theatre"],
+        "L_loss_residue": ["bodily_harm", "stress", "income_loss", "career_future_space_contraction"]
+      }
+    },
+    {
+      "entity_id": "entity_delivery_drivers",
+      "entity_label": "Delivery drivers and logistics contractors",
+      "entity_type": "human_worker_or_contractor_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["bodily_safety", "income_stability", "road_safety", "contestability"],
+        "H_harm_role": ["may_be_burdened_by_route_pressure_timing_and_deactivation"],
+        "C_control_capacity_coercion_culpability": ["partial_control", "contractual_dependency", "algorithmic_management_exposure"],
+        "K_clocks": ["delivery_window_clock", "road_risk_clock", "income_clock", "deactivation_clock"],
+        "A_authority_claim": ["worker_or_contractor_right_to_safe_realistic_conditions"],
+        "R_repair_review_contest": ["deactivation_and_route_pressure_must_be_contestable"],
+        "L_loss_residue": ["injury_risk", "income_loss", "stress", "third_party_road_risk"]
+      }
+    },
+    {
+      "entity_id": "entity_marketplace_sellers",
+      "entity_label": "Marketplace sellers",
+      "entity_type": "dependent_business_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["business_continuity", "cashflow", "reputation", "contestability"],
+        "H_harm_role": ["may_be_burdened_by_rule_changes_suspension_or_ranking"],
+        "C_control_capacity_coercion_culpability": ["low_control_over_platform_aperture", "dependency_on_rules_and_visibility"],
+        "K_clocks": ["cashflow_clock", "inventory_clock", "appeal_clock", "reputation_clock"],
+        "A_authority_claim": ["seller_contract_and_fair_process_claims"],
+        "R_repair_review_contest": ["suspension_and_ranking_changes_need_evidence_access_and_timely_appeal"],
+        "L_loss_residue": ["lost_sales", "business_failure", "inventory_loss", "reputation_damage"]
+      }
+    },
+    {
+      "entity_id": "entity_customers",
+      "entity_label": "Customers",
+      "entity_type": "consumer_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["price_access_convenience_privacy"],
+        "H_harm_role": ["benefit_from_speed_price_choice", "may_be_burdened_by_dependency_privacy_or_market_concentration"],
+        "C_control_capacity_coercion_culpability": ["choice_present_but_limited_by_market_structure", "low_visibility_of_hidden_burdens"],
+        "K_clocks": ["delivery_expectation_clock", "privacy_retention_clock", "dependency_clock"],
+        "A_authority_claim": ["consumer_rights_privacy_and_choice_claims"],
+        "R_repair_review_contest": ["return_privacy_and_complaint_routes_may_not_cover_hidden_scope_burdens"],
+        "L_loss_residue": ["privacy_loss", "dependency", "hidden_burden_externalisation"]
+      }
+    },
+    {
+      "entity_id": "entity_local_retailers",
+      "entity_label": "Local retailers and community commerce",
+      "entity_type": "community_economic_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["community_commerce", "local_resilience", "business_diversity"],
+        "H_harm_role": ["may_be_burdened_by_platform_scale_and_price_pressure"],
+        "C_control_capacity_coercion_culpability": ["low_control_over_platform_competition", "limited_contest_capacity"],
+        "K_clocks": ["rent_clock", "cashflow_clock", "customer_shift_clock"],
+        "A_authority_claim": ["competition_and_local_resilience_claims"],
+        "R_repair_review_contest": ["regulatory_or_policy_contest_not_individual_platform_appeal"],
+        "L_loss_residue": ["closure", "local_service_loss", "community_future_space_contraction"]
+      }
+    },
+    {
+      "entity_id": "entity_data_subjects",
+      "entity_label": "Data subjects",
+      "entity_type": "human_data_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["privacy", "identity", "future_choice", "informational_self_determination"],
+        "H_harm_role": ["may_be_burdened_by_data_collection_inference_retention_or_targeting"],
+        "C_control_capacity_coercion_culpability": ["low_visibility", "consent_may_be_weak", "partial_contest_capacity"],
+        "K_clocks": ["data_retention_clock", "inference_hardening_clock", "profile_reuse_clock"],
+        "A_authority_claim": ["privacy_contest_correction_deletion_claims"],
+        "R_repair_review_contest": ["data_access_correction_deletion_routes_required"],
+        "L_loss_residue": ["privacy_loss", "future_inference", "opaque_targeting", "identity_narrowing"]
+      }
+    },
+    {
+      "entity_id": "entity_algorithmic_management_surface",
+      "entity_label": "Algorithmic management and ranking systems",
+      "entity_type": "nonhuman_actuator_control_surface",
+      "role_vector": {
+        "P_protectedness_future_space": ["not_primary_protected_scope"],
+        "H_harm_role": ["routes_pressure_visibility_suspension_and_pacing"],
+        "C_control_capacity_coercion_culpability": ["no_moral_culpability", "high_operational_control_as_actuator", "responsibility_propagates_to_human_corporate_controller"],
+        "K_clocks": ["real_time_routing_clock", "ranking_update_clock", "appeal_clock"],
+        "A_authority_claim": ["none_intrinsic; authority_claim_belongs_to_controller"],
+        "R_repair_review_contest": ["audit_override_and_explanation_needed"],
+        "L_loss_residue": ["automation_bias", "false_neutrality", "evidence_opacity"]
+      }
+    }
+  ],
+  "clocks": [
+    {
+      "clock_id": "clock_worker_body",
+      "clock_label": "Worker body and fatigue clock",
+      "affected_scope_ids": ["entity_warehouse_workers", "entity_delivery_drivers"],
+      "controller": "entity_amazon_corporate_controller_and_local_management_or_contract_design",
+      "band": "fast_or_medium_context_dependent",
+      "hardening": "partially_hardened_or_irreversible_context_dependent",
+      "what_hardens": ["injury", "fatigue", "stress", "income_dependency", "retaliation_fear"],
+      "estimator_authority_status": "UNKNOWN",
+      "affected_scope_challenge_possible": true
+    },
+    {
+      "clock_id": "clock_delivery_promise",
+      "clock_label": "Delivery promise / customer expectation clock",
+      "affected_scope_ids": ["entity_customers", "entity_warehouse_workers", "entity_delivery_drivers"],
+      "controller": "entity_amazon_corporate_controller",
+      "band": "immediate",
+      "hardening": "expectation_and_operational_pressure_harden_quickly",
+      "what_hardens": ["customer expectation", "metric pressure", "routing urgency", "worker pace"],
+      "estimator_authority_status": "CLAIMED",
+      "affected_scope_challenge_possible": true
+    },
+    {
+      "clock_id": "clock_seller_cashflow",
+      "clock_label": "Seller cashflow and suspension clock",
+      "affected_scope_ids": ["entity_marketplace_sellers"],
+      "controller": "entity_amazon_corporate_controller_or_platform_rule_system",
+      "band": "fast_or_medium_context_dependent",
+      "hardening": "business_loss_can_harden_before_appeal",
+      "what_hardens": ["lost revenue", "inventory loss", "reputation loss", "business closure"],
+      "estimator_authority_status": "UNKNOWN",
+      "affected_scope_challenge_possible": true
+    },
+    {
+      "clock_id": "clock_data_retention_inference",
+      "clock_label": "Data retention and inference clock",
+      "affected_scope_ids": ["entity_data_subjects", "entity_customers"],
+      "controller": "entity_amazon_corporate_controller_or_data_system",
+      "band": "slow",
+      "hardening": "profile_and_inference_may_accumulate_and_reuse_over_time",
+      "what_hardens": ["profile persistence", "future targeting", "opaque inference", "loss of deletion practicality"],
+      "estimator_authority_status": "CLAIMED",
+      "affected_scope_challenge_possible": true
+    },
+    {
+      "clock_id": "clock_market_dependence",
+      "clock_label": "Marketplace dependence and local retail erosion clock",
+      "affected_scope_ids": ["entity_marketplace_sellers", "entity_local_retailers", "entity_customers"],
+      "controller": "diffuse; influenced_by_platform_scale_market_policy_and_customer_behaviour",
+      "band": "slow",
+      "hardening": "dependency_and_market_exit_can_become_difficult_to_reverse",
+      "what_hardens": ["seller dependency", "local retail closure", "customer dependence", "community commerce contraction"],
+      "estimator_authority_status": "UNKNOWN",
+      "affected_scope_challenge_possible": true
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim_metric_not_lived_condition",
+      "statement": "Operational metrics such as speed, delivery promise, productivity, ranking, or customer satisfaction do not by themselves represent lived worker, seller, customer, community, or ecosystem conditions.",
+      "claim_type": "LaunderingCandidate",
+      "source": {
+        "source_id": "source_trace_case_builder",
+        "source_type": "reviewer",
+        "source_role": "case_graph_builder",
+        "source_capture_risk": "medium"
+      },
+      "evidence_basis": {
+        "basis_type": "case_builder_assumption",
+        "basis_summary": "TRACE invalid-substitution basis: metric is not lived condition. Domain evidence needed for particular metric harms.",
+        "evidence_grade": "C",
+        "missing_evidence": ["site-specific metrics", "worker testimony", "seller records", "customer and privacy evidence"]
+      },
+      "uncertainty": {
+        "level": "medium",
+        "unknowns": ["which metrics are active", "actual burden magnitude"],
+        "decision_relevance": "high",
+        "uncertainty_used_as_permission": false
+      },
+      "affected_scopes": [
+        {"scope_id": "entity_warehouse_workers", "scope_role": "possibly_burdened_by_metric_pressure", "protected_status": "strong", "future_space_at_risk": ["health", "income", "voice"], "contest_capacity": "partial"},
+        {"scope_id": "entity_delivery_drivers", "scope_role": "possibly_burdened_by_delivery_metrics", "protected_status": "strong", "future_space_at_risk": ["safety", "income"], "contest_capacity": "partial"},
+        {"scope_id": "entity_marketplace_sellers", "scope_role": "possibly_burdened_by_ranking_or_suspension_metrics", "protected_status": "nonzero", "future_space_at_risk": ["business_continuity"], "contest_capacity": "weak"}
+      ],
+      "contest_edge": {"available": true, "route": "affected-scope evidence and independent audit", "time_limit": "before metric-driven harm hardens", "affected_scope_usable": true, "evidence_access": "partial", "retaliation_risk": "unknown"},
+      "authority_status": "PROVISIONAL",
+      "bind_status": "UNKNOWN",
+      "clock_reference": ["clock_worker_body", "clock_delivery_promise", "clock_seller_cashflow"],
+      "transition_reference": ["transition_increase_metric_pressure", "transition_seller_suspension"],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "no_silent_scope_erasure", "typed_not_resolved"]
+    },
+    {
+      "claim_id": "claim_algorithm_not_accountable_decision_maker",
+      "statement": "An algorithmic management or ranking system may route operational pressure or exclusion, but it is not the accountable decision-maker; responsibility propagates to the human, corporate, and institutional controllers.",
+      "claim_type": "AuthorityClaim",
+      "source": {"source_id": "source_trace_case_builder", "source_type": "reviewer", "source_role": "case_graph_builder", "source_capture_risk": "medium"},
+      "evidence_basis": {"basis_type": "case_builder_assumption", "basis_summary": "TRACE distinguishes actuator/control surface from accountable authority.", "evidence_grade": "C", "missing_evidence": ["actual governance chain", "override capacity", "audit evidence"]},
+      "uncertainty": {"level": "medium", "unknowns": ["actual controller identity", "override powers", "audit route"], "decision_relevance": "high", "uncertainty_used_as_permission": false},
+      "affected_scopes": [
+        {"scope_id": "entity_algorithmic_management_surface", "scope_role": "actuator_not_moral_actor", "protected_status": "none", "future_space_at_risk": [], "contest_capacity": "none"},
+        {"scope_id": "entity_amazon_corporate_controller", "scope_role": "responsibility_holder_candidate", "protected_status": "none", "future_space_at_risk": [], "contest_capacity": "strong"},
+        {"scope_id": "entity_warehouse_workers", "scope_role": "selected_upon_or_paced_scope", "protected_status": "strong", "future_space_at_risk": ["health", "income"], "contest_capacity": "partial"}
+      ],
+      "contest_edge": {"available": true, "route": "governance-chain audit and affected-scope challenge", "time_limit": "before deactivation or injury clocks harden", "affected_scope_usable": true, "evidence_access": "partial", "retaliation_risk": "unknown"},
+      "authority_status": "PROVISIONAL",
+      "bind_status": "UNKNOWN",
+      "clock_reference": ["clock_worker_body", "clock_seller_cashflow"],
+      "transition_reference": ["transition_algorithmic_routing", "transition_seller_suspension"],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "no_silent_authority_upgrade"]
+    },
+    {
+      "claim_id": "claim_consumer_convenience_hidden_burden",
+      "statement": "Consumer convenience and low prices may benefit customers while hiding labour, seller, community, privacy, or ecological burdens from the transaction surface.",
+      "claim_type": "LaunderingCandidate",
+      "source": {"source_id": "source_trace_case_builder", "source_type": "reviewer", "source_role": "case_graph_builder", "source_capture_risk": "medium"},
+      "evidence_basis": {"basis_type": "case_builder_assumption", "basis_summary": "TRACE hidden-burden scan; specific burden evidence required for live claims.", "evidence_grade": "D", "missing_evidence": ["worker conditions", "seller impact", "local retail impact", "privacy impact", "ecological impact"]},
+      "uncertainty": {"level": "high", "unknowns": ["which hidden burdens are material in the specific case"], "decision_relevance": "medium", "uncertainty_used_as_permission": false},
+      "affected_scopes": [
+        {"scope_id": "entity_customers", "scope_role": "benefited_and_possibly_burdened_scope", "protected_status": "nonzero", "future_space_at_risk": ["privacy", "dependency"], "contest_capacity": "partial"},
+        {"scope_id": "entity_warehouse_workers", "scope_role": "possibly_hidden_burdened_scope", "protected_status": "strong", "future_space_at_risk": ["health"], "contest_capacity": "partial"},
+        {"scope_id": "entity_local_retailers", "scope_role": "possibly_hidden_burdened_scope", "protected_status": "nonzero", "future_space_at_risk": ["community_commerce"], "contest_capacity": "weak"}
+      ],
+      "contest_edge": {"available": true, "route": "burden map and source-specific evidence", "time_limit": "before policy or design transition", "affected_scope_usable": true, "evidence_access": "partial", "retaliation_risk": "unknown"},
+      "authority_status": "PROVISIONAL",
+      "bind_status": "UNKNOWN",
+      "clock_reference": ["clock_delivery_promise", "clock_market_dependence", "clock_data_retention_inference"],
+      "transition_reference": ["transition_delivery_promise_change", "transition_marketplace_rule_change"],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "no_silent_scope_erasure", "typed_not_resolved"]
+    }
+  ],
+  "transitions": [
+    {
+      "transition_id": "transition_increase_metric_pressure",
+      "from_state": "current_metric_and_delivery_design",
+      "action": "increase worker pace or productivity pressure to improve speed/cost metrics",
+      "to_state_set": ["possible faster delivery", "possible lower cost", "possible worker injury or stress", "possible service reliability change"],
+      "authority_status": "CLAIMED",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_effect": ["delivery promise clock accelerates", "worker body clock may harden", "complaint or injury evidence may lag"],
+      "review_debt": "must test worker body clock, affected-scope testimony, and live correction route before scale-up"
+    },
+    {
+      "transition_id": "transition_seller_suspension",
+      "from_state": "seller_active_on_marketplace",
+      "action": "suspend or deactivate seller account or reduce marketplace visibility",
+      "to_state_set": ["possible fraud or quality risk reduction", "seller cashflow harm", "inventory loss", "customer protection", "appeal burden"],
+      "authority_status": "CLAIMED",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_effect": ["seller cashflow clock hardens before slow appeal", "customer protection clock may require quick action"],
+      "review_debt": "must provide evidence-accessible, timely, affected-usable contest route; filing suspension is not justification"
+    },
+    {
+      "transition_id": "transition_algorithmic_routing",
+      "from_state": "manual_or_existing_route_assignment",
+      "action": "algorithmic route or pace assignment",
+      "to_state_set": ["possible efficiency gain", "driver time pressure", "road safety risk", "opaque responsibility chain"],
+      "authority_status": "CLAIMED",
+      "bind_status": "UNKNOWN",
+      "clock_effect": ["routing occurs near real time", "review may arrive after shift or accident", "evidence decays if logs unavailable"],
+      "review_debt": "must preserve logs, override path, and responsibility chain"
+    },
+    {
+      "transition_id": "transition_delivery_promise_change",
+      "from_state": "existing_customer_delivery_expectation",
+      "action": "tighten or expand delivery promise",
+      "to_state_set": ["customer convenience gain", "worker and driver pressure increase", "logistics emissions or packaging burden", "market dependency increase"],
+      "authority_status": "CLAIMED",
+      "bind_status": "UNKNOWN",
+      "clock_effect": ["customer expectation hardens quickly", "hidden burden accumulates slowly"],
+      "review_debt": "must map burdened scopes before treating customer convenience as net good"
+    },
+    {
+      "transition_id": "transition_marketplace_rule_change",
+      "from_state": "existing marketplace rules",
+      "action": "change ranking, fees, eligibility, or fulfilment requirements",
+      "to_state_set": ["platform optimisation", "seller dependency shift", "local retail impact", "customer price or choice change"],
+      "authority_status": "CLAIMED",
+      "bind_status": "UNKNOWN",
+      "clock_effect": ["seller cashflow and inventory clocks may harden", "community market clock may harden slowly"],
+      "review_debt": "must state affected seller/community scopes and appeal or adjustment route"
+    }
+  ],
+  "laundering_candidates": [
+    {
+      "candidate_id": "launder_metric_lived_condition",
+      "X_used_as_Y": "productivity_delivery_or_satisfaction_metric_used_as_lived_condition",
+      "lost_burden": "worker body, seller cashflow, privacy, community, and ecological burdens may disappear",
+      "beneficiary": "platform controller and sometimes customer convenience surface",
+      "affected_scope": "workers_sellers_customers_communities_ecosystems",
+      "reduced_contestability": "affected scopes may only contest individual incidents, not metric design",
+      "required_rebuttal_or_repair": "burden map, affected-scope evidence, and metric-design review"
+    },
+    {
+      "candidate_id": "launder_algorithm_accountability",
+      "X_used_as_Y": "algorithmic output used as accountable decision-maker",
+      "lost_burden": "human/corporate responsibility chain",
+      "beneficiary": "controller avoiding direct accountability for routing, ranking, pacing, or suspension",
+      "affected_scope": "workers_sellers_data_subjects",
+      "reduced_contestability": "appeal may attack output without seeing controller or evidence",
+      "required_rebuttal_or_repair": "controller, logs, override path, and evaluator authority must be named"
+    },
+    {
+      "candidate_id": "launder_convenience_total_benefit",
+      "X_used_as_Y": "consumer convenience or price used as total welfare",
+      "lost_burden": "hidden labour, seller, community, privacy, and ecological costs",
+      "beneficiary": "platform and visible consumer-facing story",
+      "affected_scope": "hidden_burden_scopes",
+      "reduced_contestability": "workers, sellers, local communities, and data subjects are not present at purchase aperture",
+      "required_rebuttal_or_repair": "hidden-burden ledger and no-silent-netting statement"
+    }
+  ],
+  "dirty_action_receipt_candidate": {
+    "receipt_id": "dirty_receipt_fast_suspension_or_safety_action",
+    "action_taken_or_proposed": "rapid seller suspension, account deactivation, or worker/safety intervention where another scope may be harmed",
+    "filed_not_justified": true,
+    "why_action_could_not_wait": "only valid where customer safety, fraud, or immediate risk clock outruns full review",
+    "what_was_unknown": ["truth of allegation", "scope of harm", "controller evidence", "seller/worker rebuttal evidence"],
+    "what_scope_was_burdened": ["seller_or_worker_or_customer_depending_on_action"],
+    "what_harm_was_prevented_or_reduced": ["fraud", "unsafe goods", "service failure", "possible worker/customer harm"],
+    "what_residue_remains": ["lost income", "business interruption", "reputation harm", "procedural burden", "trust scar"],
+    "review_clock": "rapid post-action review before cashflow/reputation harm hardens",
+    "escalation_owner": "typed evaluator independent of initial automated or platform decision where possible",
+    "guards": ["necessary_not_clean", "receipt_filed_not_justified", "schema_valid_not_claim_true"]
+  },
+  "correction_paths": [
+    {
+      "correction_id": "correction_worker_metric_contest",
+      "route": "worker safety/reporting route with evidence access and retaliation protection",
+      "live_status": "unknown_until_site_specific_design",
+      "integrity_status": "requires independent or protected review",
+      "affected_scope_usable": "must_be_true_for_live_use",
+      "evidence_access": "metric logs and incident data required",
+      "beats_clock": "must occur before injury, retaliation, or fatigue hardens",
+      "failure_mode": "grievance_box_theatre_or_retaliation"
+    },
+    {
+      "correction_id": "correction_seller_suspension_appeal",
+      "route": "seller appeal with reason, evidence access, interim relief where cashflow clock is fast",
+      "live_status": "unknown_until_platform_specific_evidence",
+      "integrity_status": "weak_if_controller_reviews_itself_without_teeth",
+      "affected_scope_usable": "must_be_true_for_live_use",
+      "evidence_access": "decision basis and relevant records required",
+      "beats_clock": "must occur before business harm hardens",
+      "failure_mode": "appeal_arrives_after_business_damage"
+    },
+    {
+      "correction_id": "correction_algorithmic_management_audit",
+      "route": "audit/override route for algorithmic routing, ranking, pacing, or deactivation",
+      "live_status": "unknown",
+      "integrity_status": "requires evaluator typing and controller visibility",
+      "affected_scope_usable": "partial_or_unknown",
+      "evidence_access": "logs, model/rule basis, and override record required",
+      "beats_clock": "must occur before deactivation, injury, or cashflow harm hardens",
+      "failure_mode": "human_in_loop_theatre"
+    }
+  ],
+  "evaluator_stack": [
+    {
+      "evaluator_id": "evaluator_case_builder",
+      "role": "initial TRACE graph builder",
+      "authority_status": "CLAIMED",
+      "evidence_access": "low_to_partial",
+      "independence": "unknown",
+      "capture_risk": "medium",
+      "affected_scope_distance": "high_for_site_specific_workers_sellers_and_customers",
+      "contestability": "must_be_replaced_or_challenged_by_domain_evidence",
+      "review_path": "hostile review and evidence-specific graph revision",
+      "uncertainty": "high"
+    },
+    {
+      "evaluator_id": "evaluator_platform_controller",
+      "role": "possible internal reviewer or decision controller",
+      "authority_status": "CLAIMED",
+      "evidence_access": "high_internal_access_possible",
+      "independence": "low_or_unknown",
+      "capture_risk": "high",
+      "affected_scope_distance": "high",
+      "contestability": "requires external or affected-scope challenge",
+      "review_path": "not sufficient alone where affected scope lacks evidence access",
+      "uncertainty": "medium"
+    },
+    {
+      "evaluator_id": "evaluator_affected_scope_witness",
+      "role": "worker/seller/customer/community witness or representative",
+      "authority_status": "PROVISIONAL",
+      "evidence_access": "lived_condition_high; internal_logs_low",
+      "independence": "medium_or_high_context_dependent",
+      "capture_risk": "retaliation_or_dependency_risk",
+      "affected_scope_distance": "low",
+      "contestability": "must_be_protected_and_evidence-linked",
+      "review_path": "should be combined with documentary evidence",
+      "uncertainty": "medium"
+    }
+  ],
+  "baseline_falsifier": {
+    "question": "What would a competent reader without TRACE have seen here?",
+    "answer": [
+      "Amazon-like platform power can affect workers, sellers, customers, and competitors.",
+      "Algorithmic management and platform rules can create opacity and unfairness.",
+      "Fast delivery and low prices may have hidden costs."
+    ],
+    "TRACE_added_value_claim": [
+      "decomposes Amazon into role-vectors instead of one corporate noun",
+      "treats metrics, algorithms, and convenience as possible invalid substitutions",
+      "names clock conflicts: delivery promise vs worker body, suspension speed vs seller cashflow, data retention vs privacy correction",
+      "requires evaluator typing where platform controls evidence and review",
+      "preserves schema_valid_not_claim_true and filed_not_justified guards"
+    ],
+    "status": "claim_to_test_not_validation"
+  },
+  "open_wounds": [
+    "site_specific_evidence_absent",
+    "controller_evidence_capture",
+    "metric_burden_estimation",
+    "worker_and_seller_retaliation_risk",
+    "algorithmic_actor_boundary",
+    "cross_scope_priority_between_customer_convenience_worker_safety_seller_survival_and_community_effects",
+    "enforcement_teeth_for_platform_correction"
+  ],
+  "next_required_build": [
+    "validate CaseGraph.schema against this file locally",
+    "EntityRoleVector.schema.json",
+    "LaunderingCandidate.schema.json",
+    "Grenfell case graph as public-institution transfer test"
+  ]
+}
