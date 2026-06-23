@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/markgoodbody-bit/TRACE/schemas/EntityRoleVector.schema.json",
+  "title": "TRACE Entity Role Vector",
+  "description": "Role-vector schema for a bounded entity inside a specific transition. Entity nouns are not enough; role in transition is the unit. A valid role vector is not a moral verdict.",
+  "$comment": "entity_noun != role_analysis; role_vector_valid != moral_status_resolved",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "entity_id",
+    "entity_label",
+    "entity_type",
+    "case_role_summary",
+    "role_vector",
+    "guards"
+  ],
+  "properties": {
+    "entity_id": {
+      "type": "string",
+      "pattern": "^entity_[A-Za-z0-9_\\-]+$"
+    },
+    "entity_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entity_type": {
+      "type": "string",
+      "description": "Loose class of entity. This is not the role analysis."
+    },
+    "case_role_summary": {
+      "type": "string",
+      "description": "Plain-language description of what this entity is doing or undergoing in this case graph."
+    },
+    "role_vector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "P_protectedness_future_space",
+        "H_harm_role",
+        "C_control_capacity_coercion_culpability",
+        "K_clocks",
+        "A_authority_claim",
+        "R_repair_review_contest",
+        "L_loss_residue"
+      ],
+      "properties": {
+        "P_protectedness_future_space": {
+          "type": "array",
+          "description": "Protectedness, vulnerability, dependency, continuity, and future-space stakes.",
+          "items": {"type": "string"}
+        },
+        "H_harm_role": {
+          "type": "array",
+          "description": "Whether the entity is harmed, harm-carrying, harm-imposing, harm-routing, or both.",
+          "items": {"type": "string"}
+        },
+        "C_control_capacity_coercion_culpability": {
+          "type": "array",
+          "description": "Control, capacity, knowledge, coercion, foreseeability, culpability, dependency.",
+          "items": {"type": "string"}
+        },
+        "K_clocks": {
+          "type": "array",
+          "description": "Active clocks and hardening pressures relevant to this entity.",
+          "items": {"type": "string"}
+        },
+        "A_authority_claim": {
+          "type": "array",
+          "description": "Authority claimed by or over this entity.",
+          "items": {"type": "string"}
+        },
+        "R_repair_review_contest": {
+          "type": "array",
+          "description": "Repair, review, exit, contest, appeal, witness, proxy route.",
+          "items": {"type": "string"}
+        },
+        "L_loss_residue": {
+          "type": "array",
+          "description": "Loss, residue, scar, review debt, unrepaired burden.",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "protected_status_overall": {
+      "type": "string",
+      "enum": ["none", "nonzero", "strong", "floor_candidate", "uncertain"],
+      "default": "uncertain"
+    },
+    "primary_pattern_flags": {
+      "type": "array",
+      "description": "Pattern-basis flags active for this entity in this case.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "bounded_entity",
+          "partial_information",
+          "role_vector_identity",
+          "protected_scope_future_space",
+          "typed_claim",
+          "transition",
+          "aperture_control",
+          "clock_hardening",
+          "correction_before_hardening",
+          "invalid_substitution_laundering",
+          "authority_capture",
+          "witness_ledger",
+          "dirty_correction_residue",
+          "harm_carrier_without_culpability",
+          "origin_debt_candidate",
+          "human_compass_discipline"
+        ]
+      },
+      "default": []
+    },
+    "known_uncertainties": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "guards": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "entity_noun_not_role_analysis",
+          "role_vector_valid_not_moral_status_resolved",
+          "harm_carrier_not_culprit",
+          "protected_scope_nonzero_not_absolute_veto",
+          "authority_claim_not_legitimacy",
+          "schema_valid_not_truth"
+        ]
+      },
+      "minItems": 1
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
