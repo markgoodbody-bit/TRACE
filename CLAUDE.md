@@ -75,6 +75,103 @@ live_reasoning_questions :=
 
 This is not primarily about discovering new domain facts. It is about making known and discovered structures portable, readable, and usable in live reasoning.
 
+## TRACE middle-out starting frame
+
+When working on TRACE / Mechanical Ethics, begin from the middle-out starting point:
+
+A bounded entity exists, opens its eyes, receives partial information, and must act under uncertainty.
+
+Do not begin from:
+
+- top-down moral law
+- bottom-up physical mechanism
+- ideology
+- full prediction
+- perfect information
+- final answers
+
+Begin from the operational encounter:
+
+- an entity exists
+- it has a boundary
+- it has partial perception
+- uncertainty is irreducible
+- time passes
+- action changes the world
+- harm can harden before correction
+- other entities may also have protected scopes
+
+Compression:
+
+A bounded entity encounters the world through partial information and must choose transitions whose consequences may harden before correction arrives.
+
+Use this as the default first frame for TRACE analysis.
+
+## Middle-out translation rule
+
+TRACE is a middle-out translation grammar. Its task is to convert human understanding into operational structures at the interaction layer:
+
+- rights → protected scopes + non-substitution
+- care → vulnerability + dependency + low exit power
+- capabilities → acceptable future-space
+- procedural justice → witness + notice + route + appeal + independent correction
+- consequential reasoning → harm comparison under uncertainty
+- virtue → agent reliability under pressure
+- distributed systems → acknowledgement uncertainty + retry safety + idempotency
+- AI alignment → powerful action under uncertainty without destroying correction
+
+Do not treat existing human frameworks as replaced. Treat them as knowledge sources to be translated into TRACE where possible.
+
+## Frontier-question rule
+
+Middle-out reasoning does not eliminate frontier questions. It preserves them in the correct place.
+
+Always keep visible:
+
+- who counts as a protected scope
+- who estimates the clocks
+- who witnesses the harm
+- who defines acceptable future-space
+- who prevents capture
+- what happens if the system is wrong
+
+If these are unresolved, mark them unresolved. Do not smooth them into certainty.
+
+These frontier questions are the durable framing of the `open_blockers` named in the volatile working-state block above (protected-scope membership, estimator, witness recursion, acceptability thresholds, capture). Keep the two consistent; do not let either drift from the other.
+
+## AI-human translation stack
+
+Preserve this working stack:
+
+`AI systems ↔ latent space ↔ mechanistic interpretability ↔ TRACE ↔ Mechanical Ethics ↔ human ethics ↔ humans`
+
+Interpretation:
+
+- `AI systems` act through internal representations and learned mechanisms.
+- `latent space` is where patterns, distinctions, and compressions may be represented.
+- `mechanistic interpretability` is the attempt to inspect or understand those internal mechanisms.
+- `TRACE` is the middle-out grammar that maps action, harm, timing, correction, witness, scope, and future possibility.
+- `Mechanical Ethics` is TRACE translated into human-facing operational language.
+- `human ethics` contains existing human moral knowledge: rights, care, capabilities, procedure, consequence, virtue, dignity, justice.
+- `humans` are the lived subjects, witnesses, builders, and affected agents.
+
+Rule:
+
+Do not collapse this stack into either side.
+
+- TRACE is not merely human ethics written differently.
+- TRACE is not merely mechanistic interpretability.
+- TRACE is the bridge layer attempting to translate between human moral understanding and AI-operational structures.
+
+Use the stack in both directions:
+
+- human → human ethics → Mechanical Ethics → TRACE → mechanistic interpretability → latent space → AI
+- AI → latent space → mechanistic interpretability → TRACE → Mechanical Ethics → human ethics → humans
+
+Claim-control:
+
+This stack is a working architecture, not validation. It does not prove TRACE works. It defines where translation work happens and where drift must be watched.
+
 ## Anti-collapse rule
 
 Do not substitute this question:
