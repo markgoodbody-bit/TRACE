@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trace.local/schemas/DirtyDelayReceipt.schema.json",
+  "title": "TRACE Dirty Delay Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "A receipt for delay that may be necessary for evidential, legal, safety, or coordination reasons while still burdening affected scopes. This separates lawful or cautious delay from clean delay and prevents due process or complexity from being laundered into repair.",
+  "required": [
+    "delay_id",
+    "transition_id",
+    "delay_reason",
+    "why_delay_may_be_needed",
+    "what_cannot_be_done_yet",
+    "affected_scopes_burdened",
+    "harm_prevented_by_delay",
+    "harm_created_by_delay",
+    "active_clocks",
+    "review_clock",
+    "escalation_owner",
+    "residue",
+    "authority_status",
+    "guards"
+  ],
+  "properties": {
+    "delay_id": { "type": "string" },
+    "transition_id": { "type": "string" },
+    "delay_reason": {
+      "type": "string",
+      "enum": [
+        "evidence_standard",
+        "due_process",
+        "safety_constraint",
+        "coordination_constraint",
+        "resource_constraint",
+        "uncertainty_management",
+        "strategic_delay_risk",
+        "unknown"
+      ]
+    },
+    "why_delay_may_be_needed": { "type": "string" },
+    "what_cannot_be_done_yet": { "type": "string" },
+    "affected_scopes_burdened": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "harm_prevented_by_delay": { "type": "string" },
+    "harm_created_by_delay": { "type": "string" },
+    "active_clocks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "review_clock": { "type": "string" },
+    "escalation_owner": { "type": "string" },
+    "residue": { "type": "string" },
+    "authority_status": {
+      "type": "string",
+      "enum": [
+        "ABSENT",
+        "CLAIMED",
+        "CAPTURED",
+        "PROVISIONAL",
+        "LEGITIMATE",
+        "UNKNOWN"
+      ]
+    },
+    "guards": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": [
+        "necessary_delay != clean_delay",
+        "due_process != survivor_repair",
+        "complexity != closure",
+        "slow_clock_requires_explanation",
+        "delay_burden_must_be_carried_on_ledger"
+      ]
+    }
+  }
+}
