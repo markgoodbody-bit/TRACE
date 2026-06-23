@@ -160,3 +160,52 @@ session_002_status :=
 ```
 
 ---
+
+## Parked refinement — STRUCTURED_TRAGIC_BIND_OUTPUT_v0_1
+
+Sandbox-side only. Not canon, not validation, **not a kernel patch**. Derived from Session 002;
+proposes what the kernel *could* emit at §5.4 (empty feasible set by collision) **if earned**.
+Parked, not applied, not promoted.
+
+**Core distinction (the actual contribution):**
+- `VIABLE` — no protected scope failed.
+- `STRUCTURED-TRAGIC-BIND` — every option, **including inaction**, fails some protected scope; the kernel maps the situation and routes the decision out, but **does not decide**.
+- `DECIDED-TRAGIC` — an external, named, accountable authority chose a dirty option; the loss is recorded and witnessed; it **must never be relabelled `VIABLE`**.
+
+Axis: HALT = inaction is safe / TRAGIC-BIND = inaction is also a loss, no choice yet / DECIDED-TRAGIC = loss chosen and owned.
+
+**Minimum fields for STRUCTURED-TRAGIC-BIND:**
+1. affected scopes (`L*`, contested members marked)
+2. failed FLOOR/LIVE conditions (per channel × scope, bounded estimates)
+3. inaction-as-channel (scored, not assumed neutral)
+4. deliberation clock (rate `T_irr` shrinks with delay)
+5. unresolved standing calls (with conditional verdicts)
+6. carrier / cause / sufferer split
+7. forbidden-netting notice (kernel does not and may not rank across scopes)
+8. routing requirement (decider: standing + independent of cause + accountable)
+9. witness / loss-ledger requirement (recorded and contestable)
+
+**Strongest abuse case:** standing-gaming — quietly dropping an inconvenient protected scope to
+dissolve the collision and relabel a dirty option `VIABLE`, laundering the loss the split exists to
+prevent. Mitigation is only the published conditional verdicts in field 5, and only as strong as the
+requirement to publish them.
+
+**Disposition:**
+- parked formal-kernel refinement only; **no immediate patch**;
+- candidate note only after **one real ex-ante case** (PreRegistered Test Template);
+- **likely COMPRESSION_ONLY** unless it changes a decision *or its accountability* versus standard
+  structured-decision practice.
+
+```trace
+parked_refinement_status :=
+  id := STRUCTURED_TRAGIC_BIND_OUTPUT_v0_1
+  applied := false
+  promoted := false
+  canon := false
+  validation := false
+  insertable_if_earned := formal_kernel_candidate_section_5_4
+  gate := promotion_gate (>=1 prospective real case, NOT COMPRESSION_ONLY)
+  unsolved_still := standing_membership + estimator + cross_scope_ranking_authority
+```
+
+---
