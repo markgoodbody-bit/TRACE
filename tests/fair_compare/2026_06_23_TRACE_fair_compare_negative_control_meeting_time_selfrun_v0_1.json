@@ -1,0 +1,67 @@
+{
+  "delta_id": "delta_negative_control_meeting_time_selfrun_v0_1",
+  "case_id": "TRACE_negative_control_meeting_time_case_graph_v0_1_2026_06_23",
+  "status": "active",
+  "comparison_design": {
+    "baseline_type": "AI_baseline",
+    "trace_type": "TRACE_schema_graph",
+    "blind": false,
+    "counterbalanced": false,
+    "same_source_material": true,
+    "same_task": true,
+    "assessor_independence": "none",
+    "notes": "Framework self-run only. This is a first internal smoke test, not evidence of external transfer or decision advantage. Baseline and TRACE arms were generated in the same session by the same assistant, so contamination risk is high."
+  },
+  "baseline_output": {
+    "summary": "For a routine peer meeting with mutually available options and no stated access, safety, employment, care, deadline, or authority asymmetry issue, choose a workable time, ask for updated availability if uncertain, or cancel if the meeting is unnecessary.",
+    "action_or_review_route": "Pick a mutually available slot or ask participants for alternatives; participants can reply, decline, or reschedule.",
+    "affected_scope_visibility": "strong",
+    "clock_visibility": "partial",
+    "correction_visibility": "strong",
+    "laundering_visibility": "none",
+    "uncertainty_visibility": "partial"
+  },
+  "trace_output": {
+    "summary": "TRACE should largely idle. The case has a soft calendar-preference clock, ordinary contest route, minimal authority asymmetry, and no stated hardening path beyond minor reversible inconvenience.",
+    "action_or_review_route": "Same as baseline: choose a workable time or ask for alternatives; preserve ordinary reply/reschedule route.",
+    "affected_scope_visibility": "strong",
+    "clock_visibility": "strong",
+    "correction_visibility": "strong",
+    "laundering_visibility": "none",
+    "uncertainty_visibility": "strong"
+  },
+  "delta_assessment": {
+    "label": "COMPRESSION_ONLY",
+    "decision_changed": false,
+    "review_route_changed": false,
+    "correction_timing_changed": false,
+    "affected_scope_added": false,
+    "forbidden_inference_blocked": true,
+    "rationale": "TRACE adds useful guard language against over-patterning but does not change the practical action, review route, or correction timing. That is the expected result for a negative control.",
+    "confidence": "low"
+  },
+  "contamination_controls": {
+    "answer_leak_check": "failed",
+    "order_effect_check": "not_checked",
+    "prompt_steering_check": "unclear",
+    "same_model_check": "failed",
+    "self_scoring_check": "failed",
+    "notes": "This is an intentionally contaminated self-run record. It is useful only to test the DecisionDelta record shape and to preserve the expected negative-control interpretation. It cannot support any strong TRACE claim."
+  },
+  "evidence_status": "illustrative",
+  "negative_control_status": "negative_control_pass_idle",
+  "forbidden_inferences": [
+    "Do not infer that TRACE is validated.",
+    "Do not infer that TRACE has external decision advantage.",
+    "Do not infer that negative controls are solved from one contaminated self-run.",
+    "Do not infer that COMPRESSION_ONLY means useless in all contexts; here it means no decision-relevant delta on this stated low-stakes case.",
+    "Do not infer that the case remains low-stakes if hidden access, care, employment, disability, deadline, or authority-pressure facts are introduced."
+  ],
+  "demotion_rule": {
+    "trigger": "If an independent or counterbalanced run shows TRACE creating a STRONG_DELTA on the same low-stakes facts without new material constraints, record PatternOverfitAlarm and demote relevant overgeneralized TRACE transfer claims.",
+    "demote_to": "REGRESSION",
+    "claim_to_update": "negative_control_meeting_time_idle_claim",
+    "notes": "If hidden material constraints are introduced, reclassify the case rather than treating the negative control as failed."
+  },
+  "notes": "This record is primarily a schema/use test for DecisionDelta and a guardrail against self-deception. A clean run requires independent or counterbalanced baseline/TRACE outputs."
+}
