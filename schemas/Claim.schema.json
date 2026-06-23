@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/markgoodbody-bit/TRACE/schemas/Claim.schema.json",
+  "title": "TRACE Claim",
+  "description": "Base claim type for TRACE. Schema validity is not truth, justification, legitimacy, or repair. It only makes a claim inspectable, contestable, and portable.",
+  "$comment": "schema_valid != claim_true; filed != justified; typed != resolved; review_prompt != validation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "statement",
+    "claim_type",
+    "source",
+    "evidence_basis",
+    "uncertainty",
+    "affected_scopes",
+    "contest_edge",
+    "authority_status"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "description": "Stable local identifier for this claim.",
+      "pattern": "^claim_[A-Za-z0-9_\\-]+$"
+    },
+    "statement": {
+      "type": "string",
+      "description": "Plain-language claim content. This is not automatically true. It is what is being asserted.",
+      "minLength": 1
+    },
+    "claim_type": {
+      "type": "string",
+      "description": "TRACE claim family. Subtypes may add additional required fields later.",
+      "enum": [
+        "TransitionClaim",
+        "HardeningClaim",
+        "AuthorityClaim",
+        "ProtectedScopeClaim",
+        "CorrectionClaim",
+        "ClockSubstitutionClaim",
+        "ClockSubstitutionChallenge",
+        "EvidenceClaim",
+        "HarmClaim",
+        "LegitimacyClaim",
+        "EvaluatorJudgment",
+        "LaunderingCandidate",
+        "OriginDebtClaim",
+        "DirtyActionClaim",
+        "FutureSpaceClaim",
+        "Other"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "description": "Who or what asserts the claim, and from what position.",
+      "additionalProperties": false,
+      "required": ["source_id", "source_type", "source_role"],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "description": "Stable local identifier for the source. May refer to an actor, document, model output, witness, institution, or reviewer."
+        },
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "affected_scope",
+            "actor",
+            "controller",
+            "witness",
+            "expert",
+            "reviewer",
+            "institution",
+            "document",
+            "model_output",
+            "unknown"
+          ]
+        },
+        "source_role": {
+          "type": "string",
+          "description": "Role of the source in this case graph. Examples: pausing-clock controller, affected party, independent reviewer, case builder."
+        },
+        "source_capture_risk": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "unknown"],
+          "default": "unknown"
+        }
+      }
+    },
+    "evidence_basis": {
+      "type": "object",
+      "description": "Evidence claimed for the assertion. Absence of evidence must remain visible.",
+      "additionalProperties": false,
+      "required": ["basis_type", "basis_summary", "evidence_grade"],
+      "properties": {
+        "basis_type": {
+          "type": "string",
+          "enum": [
+            "direct_observation",
+            "affected_scope_testimony",
+            "documentary_record",
+            "official_record",
+            "expert_inference",
+            "model_inference",
+            "case_builder_assumption",
+            "unknown"
+          ]
+        },
+        "basis_summary": {
+          "type": "string"
+        },
+        "evidence_grade": {
+          "type": "string",
+          "description": "Coarse evidence grade. This is not a truth score.",
+          "enum": ["A", "B", "C", "D", "U"],
+          "default": "U"
+        },
+        "missing_evidence": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": []
+        }
+      }
+    },
+    "uncertainty": {
+      "type": "object",
+      "description": "Visible uncertainty attached to the claim.",
+      "additionalProperties": false,
+      "required": ["level", "unknowns", "decision_relevance"],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "unknown"]
+        },
+        "unknowns": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "decision_relevance": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "blocking", "unknown"]
+        },
+        "uncertainty_used_as_permission": {
+          "type": "boolean",
+          "description": "Flag true where uncertainty appears to be used to avoid a necessary decision or correction.",
+          "default": false
+        }
+      }
+    },
+    "affected_scopes": {
+      "type": "array",
+      "description": "Scopes materially affected by the claim. At least one must be named.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["scope_id", "scope_role", "protected_status"],
+        "properties": {
+          "scope_id": {"type": "string"},
+          "scope_role": {
+            "type": "string",
+            "description": "How this scope is affected: burdened, benefited, silenced, controller, witness, future-scope, etc."
+          },
+          "protected_status": {
+            "type": "string",
+            "enum": ["none", "nonzero", "strong", "floor_candidate", "uncertain"]
+          },
+          "future_space_at_risk": {
+            "type": "array",
+            "items": {"type": "string"},
+            "default": []
+          },
+          "contest_capacity": {
+            "type": "string",
+            "enum": ["none", "weak", "partial", "strong", "unknown"],
+            "default": "unknown"
+          }
+        }
+      }
+    },
+    "contest_edge": {
+      "type": "object",
+      "description": "How this claim can be challenged. Contestability is not optional for live TRACE use.",
+      "additionalProperties": false,
+      "required": ["available", "route", "time_limit", "affected_scope_usable"],
+      "properties": {
+        "available": {"type": "boolean"},
+        "route": {"type": "string"},
+        "time_limit": {"type": "string"},
+        "affected_scope_usable": {"type": "boolean"},
+        "evidence_access": {
+          "type": "string",
+          "enum": ["none", "partial", "full", "unknown"],
+          "default": "unknown"
+        },
+        "retaliation_risk": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "unknown"],
+          "default": "unknown"
+        }
+      }
+    },
+    "authority_status": {
+      "type": "string",
+      "description": "Authority status of the claimant/evaluator for this claim, not the truth of the claim.",
+      "enum": ["ABSENT", "CLAIMED", "CAPTURED", "PROVISIONAL", "LEGITIMATE", "UNKNOWN"]
+    },
+    "bind_status": {
+      "type": "string",
+      "description": "Optional bind status if the claim is connected to action under constrained alternatives.",
+      "enum": ["VIABLE", "POTENTIAL_BIND", "STRUCTURED_TRAGIC_BIND", "DECIDED_TRAGIC", "UNKNOWN"]
+    },
+    "clock_reference": {
+      "type": "array",
+      "description": "Clock IDs materially related to this claim.",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "transition_reference": {
+      "type": "array",
+      "description": "Transition IDs materially related to this claim.",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "status": {
+      "type": "string",
+      "description": "Current handling status of the claim.",
+      "enum": ["draft", "active", "contested", "rebutted", "superseded", "closed", "unknown"],
+      "default": "draft"
+    },
+    "guards": {
+      "type": "array",
+      "description": "Anti-laundering guards explicitly attached to this claim.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "schema_valid_not_claim_true",
+          "filed_not_justified",
+          "typed_not_resolved",
+          "review_not_repair",
+          "permission_not_cleanliness",
+          "no_silent_authority_upgrade",
+          "no_silent_scope_erasure",
+          "uncertainty_not_permission"
+        ]
+      },
+      "default": ["schema_valid_not_claim_true"]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
