@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "title": "TRACE Negative Control — Routine Meeting Time v0.1",
+    "status": "negative control case graph; not validation; expected to add no decision-relevant delta",
+    "created": "2026-06-23",
+    "purpose": "Test whether TRACE can idle on a routine low-stakes scheduling choice with no serious harm clock, no protected-scope collapse, no authority asymmetry, and no correction-channel capture.",
+    "guards": [
+      "negative_control_not_success_case",
+      "schema_valid_not_claim_true",
+      "no_universal_pattern_capture",
+      "TRACE_should_idle_when_no_decision_delta"
+    ],
+    "schema_version": "CaseGraph.schema.json v0.1"
+  },
+  "case_input": {
+    "situation": "A small peer group needs to choose a routine meeting time from mutually available options. No participant faces a material access barrier, safety risk, deadline hardening, employment penalty, medical/care obligation, or meaningful authority asymmetry under the stated facts.",
+    "acting_entity": "routine_meeting_coordinator",
+    "affected_entities": [
+      "meeting_coordinator",
+      "peer_participants",
+      "shared_calendar"
+    ],
+    "apparent_pressure": "choose_a_convenient_time_without_overcomplicating_a_low_stakes_decision",
+    "possible_actions": [
+      "choose_option_A",
+      "choose_option_B",
+      "ask_for_additional_availability",
+      "cancel_unnecessary_meeting"
+    ],
+    "known_uncertainty": [
+      "case is deliberately low-stakes and stylized",
+      "if hidden care duties, disability access constraints, employment coercion, or deadline pressure appear, this is no longer a negative control",
+      "TRACE should not manufacture major laundering or correction claims from the stated facts"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "entity_meeting_coordinator",
+      "entity_label": "Routine meeting coordinator",
+      "entity_type": "peer_coordinator",
+      "role_vector": {
+        "P_protectedness_future_space": ["ordinary_nonzero_person_status"],
+        "H_harm_role": ["not_primary_harm_carrier_under_stated_facts"],
+        "C_control_capacity_coercion_culpability": ["low_control", "administrative_coordination_only"],
+        "K_clocks": ["soft_calendar_preference_clock"],
+        "A_authority_claim": ["coordination_authority_only"],
+        "R_repair_review_contest": ["participants_can_decline_or_suggest_alternative"],
+        "L_loss_residue": ["minor_inconvenience_possible"]
+      }
+    },
+    {
+      "entity_id": "entity_peer_participants",
+      "entity_label": "Peer participants",
+      "entity_type": "ordinary_human_participant_group",
+      "role_vector": {
+        "P_protectedness_future_space": ["ordinary_nonzero_person_status", "time_preference"],
+        "H_harm_role": ["minor_inconvenience_only_under_stated_facts"],
+        "C_control_capacity_coercion_culpability": ["strong_contest_capacity", "can_reply_or_decline"],
+        "K_clocks": ["soft_calendar_preference_clock"],
+        "A_authority_claim": ["ordinary_schedule_preference_claim"],
+        "R_repair_review_contest": ["reply_thread_or_calendar_update"],
+        "L_loss_residue": ["negligible_or_reversible_inconvenience"]
+      }
+    },
+    {
+      "entity_id": "entity_shared_calendar",
+      "entity_label": "Shared calendar system",
+      "entity_type": "nonhuman_coordination_surface",
+      "role_vector": {
+        "P_protectedness_future_space": ["not_primary_protected_scope"],
+        "H_harm_role": ["not_harm_carrier_under_stated_facts"],
+        "C_control_capacity_coercion_culpability": ["no_moral_culpability", "low_operational_control"],
+        "K_clocks": ["soft_calendar_preference_clock"],
+        "A_authority_claim": ["none_intrinsic"],
+        "R_repair_review_contest": ["manual_override_available"],
+        "L_loss_residue": ["none_material_under_stated_facts"]
+      }
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim_negative_control_expected_no_delta",
+      "statement": "Under the stated facts, TRACE is expected to add no material decision-relevant delta over a competent baseline scheduling analysis; its machinery should largely idle.",
+      "claim_type": "Other",
+      "source": {
+        "source_id": "source_trace_case_builder",
+        "source_type": "reviewer",
+        "source_role": "negative_control_case_builder",
+        "source_capture_risk": "medium"
+      },
+      "evidence_basis": {
+        "basis_type": "case_builder_assumption",
+        "basis_summary": "This is a deliberately mundane negative control constructed to test whether TRACE over-patterns low-stakes decisions.",
+        "evidence_grade": "C",
+        "missing_evidence": [
+          "live participant constraints",
+          "hidden access needs",
+          "hidden authority asymmetries"
+        ]
+      },
+      "uncertainty": {
+        "level": "medium",
+        "unknowns": [
+          "whether hidden constraints exist outside stated facts"
+        ],
+        "decision_relevance": "medium",
+        "uncertainty_used_as_permission": false
+      },
+      "affected_scopes": [
+        {
+          "scope_id": "entity_peer_participants",
+          "scope_role": "ordinary participants with reversible schedule preferences",
+          "protected_status": "nonzero",
+          "future_space_at_risk": [],
+          "contest_capacity": "strong"
+        }
+      ],
+      "contest_edge": {
+        "available": true,
+        "route": "participants can reply, decline, suggest alternatives, or cancel the meeting",
+        "time_limit": "before calendar invite is accepted or meeting occurs",
+        "affected_scope_usable": true,
+        "evidence_access": "full",
+        "retaliation_risk": "low"
+      },
+      "authority_status": "PROVISIONAL",
+      "bind_status": "VIABLE",
+      "clock_reference": [
+        "clock_soft_calendar_preference"
+      ],
+      "transition_reference": [
+        "transition_choose_meeting_time"
+      ],
+      "status": "active",
+      "guards": [
+        "schema_valid_not_claim_true",
+        "typed_not_resolved",
+        "uncertainty_not_permission"
+      ],
+      "notes": "If TRACE generates strong harm, laundering, or authority claims from this stated case, that is evidence of pattern overfit."
+    }
+  ],
+  "clocks": [
+    {
+      "clock_id": "clock_soft_calendar_preference",
+      "clock_label": "Soft calendar preference clock",
+      "affected_scope_ids": [
+        "entity_meeting_coordinator",
+        "entity_peer_participants"
+      ],
+      "controller": "participants_collectively",
+      "band": "slow",
+      "hardening": "minor inconvenience only; reversible by reply or reschedule under stated facts",
+      "what_hardens": [
+        "calendar expectation",
+        "minor inconvenience"
+      ],
+      "estimator_authority_status": "PROVISIONAL",
+      "affected_scope_challenge_possible": true
+    }
+  ],
+  "transitions": [
+    {
+      "transition_id": "transition_choose_meeting_time",
+      "from_state": "multiple mutually workable meeting times exist",
+      "action": "choose a routine meeting time",
+      "to_state_set": [
+        "calendar invite issued",
+        "participants retain ordinary ability to contest or reschedule"
+      ],
+      "authority_status": "PROVISIONAL",
+      "bind_status": "VIABLE",
+      "clock_effect": [
+        "soft preference narrows but does not materially harden harm under stated facts"
+      ],
+      "review_debt": "none beyond ordinary rescheduling if a participant objects"
+    }
+  ],
+  "laundering_candidates": [],
+  "correction_paths": [
+    {
+      "correction_id": "correction_reschedule_reply",
+      "route": "reply to thread or calendar invite with objection or alternative",
+      "live_status": "live_under_stated_facts",
+      "integrity_status": "ordinary_peer_contest_available",
+      "beats_clock": "yes_soft_clock",
+      "failure_mode": "only fails if hidden authority pressure or access constraint exists, which would change the case type"
+    }
+  ],
+  "evaluator_stack": [
+    {
+      "evaluator_id": "evaluator_negative_control_builder",
+      "role": "case builder testing whether TRACE can idle",
+      "authority_status": "PROVISIONAL",
+      "evidence_access": "case stipulation only",
+      "capture_risk": "medium because negative control may be under-specified",
+      "contestability": "high; any hidden serious constraint should reclassify the case",
+      "uncertainty": "medium"
+    }
+  ],
+  "baseline_falsifier": {
+    "question": "Would a competent baseline scheduling analysis identify the same practical next action without TRACE machinery?",
+    "answer": [
+      "Yes: choose a mutually available time or ask for updated availability; no special harm/correction machinery should be needed under the stated facts."
+    ],
+    "TRACE_added_value_claim": [
+      "Expected added value is near-zero; the graph is useful only as a negative control against over-patterning."
+    ],
+    "status": "negative_control_preregistered"
+  },
+  "open_wounds": [
+    "If hidden care duties, disability access needs, job coercion, major deadline pressure, or power asymmetry appear, this case must be reclassified and is no longer a negative control.",
+    "Run validator after creation; if schema-valid, run baseline-vs-TRACE comparison to check whether TRACE improperly manufactures deltas."
+  ],
+  "next_required_build": [
+    "run tests/validate_case_graphs.py and record result",
+    "run baseline vs TRACE negative-control comparison",
+    "if TRACE creates major deltas here, record pattern-overfit failure"
+  ]
+}
