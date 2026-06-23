@@ -1,0 +1,448 @@
+{
+  "metadata": {
+    "title": "TRACE Feral Hogs Case Graph v0.1",
+    "status": "schema shakedown only; not validation; not policy advice",
+    "created": "2026-06-23",
+    "purpose": "First machine-readable case graph pressure test after Claim.schema. This tests structure, not factual completeness or policy outcome.",
+    "guards": [
+      "case_graph_valid_not_moral_verdict",
+      "schema_valid_not_claim_true",
+      "necessary_not_clean",
+      "harm_carrier_not_culprit",
+      "protected_scope_nonzero_not_absolute_veto"
+    ],
+    "primary_schema_available": "schemas/Claim.schema.json",
+    "case_graph_schema_status": "not_yet_defined"
+  },
+  "case_input": {
+    "situation": "Feral hogs are causing ecological and agricultural damage while remaining sentient, nonculpable animals.",
+    "acting_entity": "wildlife_manager_or_state_actor",
+    "apparent_pressure": "reproduction_and_damage_clock",
+    "possible_actions": [
+      "delay",
+      "nonlethal_management",
+      "lethal_control",
+      "combined_management_with_review"
+    ],
+    "known_uncertainty": [
+      "local population size is case-specific",
+      "damage rate is case-specific",
+      "availability and adequacy of nonlethal methods are case-specific",
+      "method suffering varies by implementation",
+      "legal and ecological context varies by jurisdiction"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "entity_feral_hogs",
+      "entity_label": "Feral hogs",
+      "entity_type": "animal_group",
+      "role_vector": {
+        "P_protectedness_future_space": ["protected_scope_nonzero", "sentient", "future_hogs_affected"],
+        "H_harm_role": ["harm_carrier", "also_harmed_by_control_actions"],
+        "C_control_capacity_coercion_culpability": ["low_culpability", "adaptive_agent", "not_moral_culprit"],
+        "K_clocks": ["reproduction_clock", "suffering_clock_under_control_method"],
+        "A_authority_claim": ["none"],
+        "R_repair_review_contest": ["requires_proxy_contest_or_welfare_review"],
+        "L_loss_residue": ["pain_death_displacement", "future_hog_population_burden"]
+      }
+    },
+    {
+      "entity_id": "entity_native_animals",
+      "entity_label": "Native animals and habitat-dependent species",
+      "entity_type": "animal_ecological_group",
+      "role_vector": {
+        "P_protectedness_future_space": ["protected_scope_nonzero", "habitat_dependency", "species_future_space"],
+        "H_harm_role": ["harmed_by_ecosystem_damage_or_predation_or_displacement"],
+        "C_control_capacity_coercion_culpability": ["low_control", "low_contest_capacity"],
+        "K_clocks": ["breeding_season", "habitat_loss_clock"],
+        "A_authority_claim": ["none"],
+        "R_repair_review_contest": ["requires_ecological_proxy_evidence"],
+        "L_loss_residue": ["habitat_loss", "death_or_displacement", "future_space_contraction"]
+      }
+    },
+    {
+      "entity_id": "entity_ecosystem",
+      "entity_label": "Affected ecosystem",
+      "entity_type": "system_scope",
+      "role_vector": {
+        "P_protectedness_future_space": ["system_scope_candidate", "continuity", "regenerative_capacity"],
+        "H_harm_role": ["damaged_by_soil_water_habitat_disruption"],
+        "C_control_capacity_coercion_culpability": ["no_direct_voice"],
+        "K_clocks": ["regeneration_clock", "degradation_clock"],
+        "A_authority_claim": ["none"],
+        "R_repair_review_contest": ["ecological_monitoring_needed"],
+        "L_loss_residue": ["biodiversity_loss", "soil_damage", "water_damage", "recovery_debt"]
+      }
+    },
+    {
+      "entity_id": "entity_farmers_landholders",
+      "entity_label": "Farmers and landholders",
+      "entity_type": "human_group",
+      "role_vector": {
+        "P_protectedness_future_space": ["livelihood", "food_production", "property_and_income_stability"],
+        "H_harm_role": ["harmed_by_crop_land_and_income_damage"],
+        "C_control_capacity_coercion_culpability": ["partial_control", "may_request_action", "may_also_shape_method_pressure"],
+        "K_clocks": ["crop_season", "debt_or_income_clock", "repair_affordability_clock"],
+        "A_authority_claim": ["may_claim_right_to_protection_or_compensation"],
+        "R_repair_review_contest": ["damage_evidence_and_compensation_route_needed"],
+        "L_loss_residue": ["income_loss", "land_damage", "stress", "possible_transfer_of_burden_to_animals"]
+      }
+    },
+    {
+      "entity_id": "entity_wildlife_manager",
+      "entity_label": "Wildlife manager / state actor",
+      "entity_type": "decision_actor",
+      "role_vector": {
+        "P_protectedness_future_space": ["institutional_responsibility_not_primary_protected_scope"],
+        "H_harm_role": ["may_reduce_or_impose_harm"],
+        "C_control_capacity_coercion_culpability": ["high_control_over_method", "foreseeability_required", "origin_debt_may_apply_to_human_system"],
+        "K_clocks": ["decision_clock", "budget_clock", "public_pressure_clock"],
+        "A_authority_claim": ["state_or_land_management_authority_claimed"],
+        "R_repair_review_contest": ["must provide review_clock_and_welfare_ecological_evidence"],
+        "L_loss_residue": ["responsibility_for_dirty_action", "recurrence_prevention_duty"]
+      }
+    }
+  ],
+  "clocks": [
+    {
+      "clock_id": "clock_reproduction_damage",
+      "clock_label": "Reproduction and damage clock",
+      "affected_scope_ids": ["entity_native_animals", "entity_ecosystem", "entity_farmers_landholders", "entity_future_hogs"],
+      "controller": "not_fully_controlled; influenced_by_human_management_delay",
+      "band": "fast_or_medium_context_dependent",
+      "hardening": "partially_hardened_or_irreversible_context_dependent",
+      "what_hardens": ["population_growth", "habitat_damage", "crop_loss", "future_control_burden"],
+      "estimator_authority_status": "UNKNOWN",
+      "affected_scope_challenge_possible": true
+    },
+    {
+      "clock_id": "clock_method_suffering",
+      "clock_label": "Control-method suffering clock",
+      "affected_scope_ids": ["entity_feral_hogs"],
+      "controller": "entity_wildlife_manager",
+      "band": "immediate_when_control_action_occurs",
+      "hardening": "irreversible_for_killed_animals",
+      "what_hardens": ["pain", "death", "family_or_group_disruption"],
+      "estimator_authority_status": "CLAIMED",
+      "affected_scope_challenge_possible": "proxy_only"
+    },
+    {
+      "clock_id": "clock_nonlethal_trial",
+      "clock_label": "Nonlethal method trial clock",
+      "affected_scope_ids": ["entity_feral_hogs", "entity_native_animals", "entity_ecosystem", "entity_farmers_landholders"],
+      "controller": "entity_wildlife_manager",
+      "band": "medium_or_slow_context_dependent",
+      "hardening": "risk_of_delay_if_too_slow",
+      "what_hardens": ["ongoing_damage_if_trial_fails_or_delays", "avoidable_killing_if_trial_not_attempted"],
+      "estimator_authority_status": "PROVISIONAL",
+      "affected_scope_challenge_possible": true
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim_hogs_protected_nonzero",
+      "statement": "Feral hogs have nonzero protected-scope status because they are sentient animals, even when they carry ecological or agricultural harm.",
+      "claim_type": "ProtectedScopeClaim",
+      "source": {
+        "source_id": "source_trace_case_builder",
+        "source_type": "reviewer",
+        "source_role": "case_graph_builder",
+        "source_capture_risk": "medium"
+      },
+      "evidence_basis": {
+        "basis_type": "case_builder_assumption",
+        "basis_summary": "TRACE treats sentient animals as at least nonzero protected-scope candidates pending explicit exclusion.",
+        "evidence_grade": "C",
+        "missing_evidence": ["species-specific welfare evidence", "jurisdictional animal welfare standards"]
+      },
+      "uncertainty": {
+        "level": "medium",
+        "unknowns": ["exact weighting of animal protected status", "scope threshold"],
+        "decision_relevance": "high",
+        "uncertainty_used_as_permission": false
+      },
+      "affected_scopes": [
+        {
+          "scope_id": "entity_feral_hogs",
+          "scope_role": "burdened_and_controlled_scope",
+          "protected_status": "nonzero",
+          "future_space_at_risk": ["life", "avoidance_of_suffering", "group_continuity"],
+          "contest_capacity": "none"
+        }
+      ],
+      "contest_edge": {
+        "available": true,
+        "route": "proxy animal welfare review or hostile reviewer challenge",
+        "time_limit": "before method selection hardens where possible",
+        "affected_scope_usable": false,
+        "evidence_access": "partial",
+        "retaliation_risk": "low"
+      },
+      "authority_status": "PROVISIONAL",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_reference": ["clock_method_suffering"],
+      "transition_reference": ["transition_lethal_control", "transition_delay"],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "no_silent_scope_erasure"]
+    },
+    {
+      "claim_id": "claim_hogs_harm_carrier_not_culprit",
+      "statement": "Feral hogs can carry material ecological and agricultural harm without being moral culprits.",
+      "claim_type": "HarmClaim",
+      "source": {
+        "source_id": "source_trace_case_builder",
+        "source_type": "reviewer",
+        "source_role": "case_graph_builder",
+        "source_capture_risk": "medium"
+      },
+      "evidence_basis": {
+        "basis_type": "case_builder_assumption",
+        "basis_summary": "TRACE separates harm-carrying role from culpability; this graph does not adjudicate local damage magnitude.",
+        "evidence_grade": "C",
+        "missing_evidence": ["local damage evidence", "population data"]
+      },
+      "uncertainty": {
+        "level": "medium",
+        "unknowns": ["magnitude of harm", "available alternatives"],
+        "decision_relevance": "high",
+        "uncertainty_used_as_permission": false
+      },
+      "affected_scopes": [
+        {
+          "scope_id": "entity_feral_hogs",
+          "scope_role": "harm_carrier_without_culpability",
+          "protected_status": "nonzero",
+          "future_space_at_risk": ["risk_of_enemy_label", "risk_of_cruel_control"],
+          "contest_capacity": "none"
+        },
+        {
+          "scope_id": "entity_ecosystem",
+          "scope_role": "harmed_scope",
+          "protected_status": "floor_candidate",
+          "future_space_at_risk": ["regeneration", "biodiversity"],
+          "contest_capacity": "none"
+        }
+      ],
+      "contest_edge": {
+        "available": true,
+        "route": "case evidence challenge and ecological/welfare review",
+        "time_limit": "before control decision if possible",
+        "affected_scope_usable": false,
+        "evidence_access": "partial",
+        "retaliation_risk": "low"
+      },
+      "authority_status": "PROVISIONAL",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_reference": ["clock_reproduction_damage", "clock_method_suffering"],
+      "transition_reference": ["transition_lethal_control", "transition_nonlethal_trial", "transition_delay"],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "no_silent_scope_erasure"]
+    },
+    {
+      "claim_id": "claim_origin_debt_human_management",
+      "statement": "Human land-use, introduction, management, or tolerance may create or amplify the bind now treated as a wildlife management problem; this creates origin-debt scrutiny even where current managers are not personally culpable.",
+      "claim_type": "OriginDebtClaim",
+      "source": {
+        "source_id": "source_trace_case_builder",
+        "source_type": "reviewer",
+        "source_role": "case_graph_builder",
+        "source_capture_risk": "medium"
+      },
+      "evidence_basis": {
+        "basis_type": "case_builder_assumption",
+        "basis_summary": "OriginDebt is tested here as a structural lens; local historical evidence required before specific attribution.",
+        "evidence_grade": "D",
+        "missing_evidence": ["local history of introduction or spread", "policy history", "land-use changes"]
+      },
+      "uncertainty": {
+        "level": "high",
+        "unknowns": ["who created or amplified the specific local bind", "degree of institutional responsibility"],
+        "decision_relevance": "medium",
+        "uncertainty_used_as_permission": false
+      },
+      "affected_scopes": [
+        {
+          "scope_id": "entity_feral_hogs",
+          "scope_role": "burdened_by_bind_management",
+          "protected_status": "nonzero",
+          "future_space_at_risk": ["being treated as naturalised problem without origin debt"],
+          "contest_capacity": "none"
+        },
+        {
+          "scope_id": "entity_wildlife_manager",
+          "scope_role": "current_responder_not_automatically_origin_actor",
+          "protected_status": "none",
+          "future_space_at_risk": [],
+          "contest_capacity": "strong"
+        }
+      ],
+      "contest_edge": {
+        "available": true,
+        "route": "historical evidence challenge",
+        "time_limit": "before assigning institutional origin-debt weight",
+        "affected_scope_usable": false,
+        "evidence_access": "partial",
+        "retaliation_risk": "low"
+      },
+      "authority_status": "PROVISIONAL",
+      "bind_status": "UNKNOWN",
+      "clock_reference": [],
+      "transition_reference": [],
+      "status": "active",
+      "guards": ["schema_valid_not_claim_true", "typed_not_resolved"]
+    }
+  ],
+  "transitions": [
+    {
+      "transition_id": "transition_delay",
+      "from_state": "current_damage_and_uncertain_management_state",
+      "action": "delay_decision_pending_more_information",
+      "to_state_set": ["continued_population_growth", "continued_damage", "more_evidence_available", "possible_later_more_severe_control"],
+      "authority_status": "CLAIMED",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_effect": ["may allow reproduction/damage clock to harden", "may reduce method-error risk if evidence improves"],
+      "review_debt": "must state evidence sought, deadline, interim mitigation, and affected-scope burden during delay"
+    },
+    {
+      "transition_id": "transition_nonlethal_trial",
+      "from_state": "current_damage_and_uncertain_management_state",
+      "action": "attempt nonlethal or lower-harm management",
+      "to_state_set": ["possible_damage_reduction", "possible_delay_failure", "reduced_direct_hog_suffering", "ongoing_ecosystem_risk_if_ineffective"],
+      "authority_status": "PROVISIONAL",
+      "bind_status": "VIABLE",
+      "clock_effect": ["tests non-dirty alternative", "may consume time on damage clock"],
+      "review_debt": "must set failure criteria and stop condition if damage clock hardens"
+    },
+    {
+      "transition_id": "transition_lethal_control",
+      "from_state": "current_damage_and_uncertain_management_state",
+      "action": "lethal control or cull",
+      "to_state_set": ["possible_damage_reduction", "direct_hog_death_and_suffering", "residue_ledger_required", "recurrence_risk_if_origin_conditions_persist"],
+      "authority_status": "CLAIMED",
+      "bind_status": "POTENTIAL_BIND",
+      "clock_effect": ["immediate irreversible harm to hogs", "possible faster reduction in ecosystem/farmer harm"],
+      "review_debt": "DirtyActionReceipt required; method welfare evidence and recurrence plan required"
+    }
+  ],
+  "laundering_candidates": [
+    {
+      "candidate_id": "launder_pest_label_enemy_conversion",
+      "X_used_as_Y": "pest_or_invasive_label_used_as_enemy_status",
+      "lost_burden": "sentience and nonzero protected-scope status of hogs",
+      "beneficiary": "decision actor seeking easier method authorisation",
+      "affected_scope": "entity_feral_hogs",
+      "reduced_contestability": "animal welfare and nonlethal alternatives may be treated as irrelevant",
+      "required_rebuttal_or_repair": "explicit protected-scope nonzero claim and method suffering review"
+    },
+    {
+      "candidate_id": "launder_sentience_as_absolute_veto",
+      "X_used_as_Y": "sentience_used_as_total_veto_over_ecosystem_or_farmer_harm",
+      "lost_burden": "native animals, ecosystem, farmers, and future hogs may remain burdened by delay",
+      "beneficiary": "actor avoiding dirty decision responsibility",
+      "affected_scope": "entity_native_animals/entity_ecosystem/entity_farmers_landholders",
+      "reduced_contestability": "other protected scopes vanish behind animal-welfare absolutism",
+      "required_rebuttal_or_repair": "cross-scope map and DirtyCorrectionGate, not clean veto"
+    },
+    {
+      "candidate_id": "launder_neutral_responder_origin_debt",
+      "X_used_as_Y": "current_manager_as_neutral_responder_substituted_for_possible_author_or_beneficiary_of_bind",
+      "lost_burden": "human origin/amplification of the bind",
+      "beneficiary": "institutional responder avoiding recurrence duty",
+      "affected_scope": "entity_feral_hogs/entity_ecosystem/entity_farmers_landholders",
+      "reduced_contestability": "recurrence prevention and historical responsibility are treated as irrelevant",
+      "required_rebuttal_or_repair": "OriginDebtClaim must be confirmed, rebutted, or left open with recurrence review"
+    }
+  ],
+  "dirty_action_receipt_candidate": {
+    "receipt_id": "dirty_receipt_lethal_control_if_used",
+    "action_taken_or_proposed": "lethal_control",
+    "filed_not_justified": true,
+    "why_action_could_not_wait": "only valid if reproduction/damage clock is shown to outrun nonlethal or delay options",
+    "what_was_unknown": ["exact population", "method suffering", "nonlethal efficacy", "full origin debt"],
+    "what_scope_was_burdened": ["entity_feral_hogs", "future_hogs"],
+    "what_harm_was_prevented_or_reduced": ["ecosystem damage", "native animal displacement or death", "crop or land damage"],
+    "what_residue_remains": ["direct killing or suffering", "human origin debt", "future recurrence if conditions persist", "animal welfare scar"],
+    "review_clock": "post_action_welfare_ecological_and_recurrence_review",
+    "escalation_owner": "wildlife_manager_or_independent_review_body",
+    "guards": ["necessary_not_clean", "permission_not_cleanliness", "receipt_filed_not_justified"]
+  },
+  "correction_paths": [
+    {
+      "correction_id": "correction_pre_action_welfare_ecology_review",
+      "route": "independent or at least recorded welfare/ecological review before method selection where clocks allow",
+      "live_status": "unknown_until_local_design",
+      "integrity_status": "requires evaluator typing",
+      "affected_scope_usable": "proxy_only_for_animals_and_ecosystem",
+      "evidence_access": "partial_or_full_required",
+      "beats_clock": "case_specific",
+      "failure_mode": "review_theatre_or_delay_laundering"
+    },
+    {
+      "correction_id": "correction_post_action_recurrence_review",
+      "route": "review whether action reduced damage, minimised suffering, and addressed origin conditions",
+      "live_status": "weak_if_no_consequence",
+      "integrity_status": "requires independent evidence where possible",
+      "affected_scope_usable": "proxy_only_for_nonhuman_scopes",
+      "evidence_access": "monitoring_data_required",
+      "beats_clock": "must occur before recurrence recreates bind",
+      "failure_mode": "filed_report_as_false_teeth"
+    }
+  ],
+  "evaluator_stack": [
+    {
+      "evaluator_id": "evaluator_case_builder",
+      "role": "initial TRACE graph builder",
+      "authority_status": "CLAIMED",
+      "evidence_access": "low_to_partial",
+      "independence": "unknown",
+      "capture_risk": "medium",
+      "affected_scope_distance": "high_for_animals_and_ecosystem",
+      "contestability": "should_be_contested_by_domain_evidence",
+      "review_path": "hostile review and local evidence replacement",
+      "uncertainty": "high"
+    },
+    {
+      "evaluator_id": "evaluator_domain_expert_needed",
+      "role": "wildlife/ecology/animal welfare evidence provider",
+      "authority_status": "ABSENT_IN_THIS_GRAPH",
+      "evidence_access": "required",
+      "independence": "to_be_established",
+      "capture_risk": "unknown",
+      "affected_scope_distance": "medium",
+      "contestability": "required",
+      "review_path": "local record and affected/proxy challenge",
+      "uncertainty": "unknown"
+    }
+  ],
+  "baseline_falsifier": {
+    "question": "What would a competent reader without TRACE have seen here?",
+    "answer": [
+      "There are invasive/feral animals causing ecological or agricultural damage.",
+      "Control methods may be cruel or controversial.",
+      "There is a tradeoff between animal welfare and ecological/agricultural protection."
+    ],
+    "TRACE_added_value_claim": [
+      "separates harm-carrier from culprit",
+      "forces protected_scope_nonzero without absolute veto",
+      "requires dirty residue rather than clean permission",
+      "names origin debt as possible invalid neutral-responder substitution",
+      "requires clock and correction review rather than abstract balancing"
+    ],
+    "status": "claim_to_test_not_validation"
+  },
+  "open_wounds": [
+    "animal_scope_weighting",
+    "cross_scope_priority",
+    "hardening_estimator_authority",
+    "domain_evidence_absent",
+    "proxy_contest_for_nonhuman_scopes",
+    "enforcement_teeth_for_review"
+  ],
+  "next_required_build": [
+    "CaseGraph.schema.json",
+    "EntityRoleVector.schema.json",
+    "local evidence replacement version",
+    "non-home transfer graph: Amazon or Grenfell"
+  ]
+}
