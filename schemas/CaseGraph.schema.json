@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/markgoodbody-bit/TRACE/schemas/CaseGraph.schema.json",
+  "title": "TRACE Case Graph",
+  "description": "Machine-readable case graph for TRACE inspection. A valid graph is not a moral verdict, proof, policy recommendation, or validation.",
+  "$comment": "case_graph_valid != moral_verdict; schema_valid != truth; graph_legible != resolved",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metadata",
+    "case_input",
+    "entities",
+    "claims",
+    "clocks",
+    "transitions",
+    "laundering_candidates",
+    "correction_paths",
+    "evaluator_stack",
+    "baseline_falsifier",
+    "open_wounds"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "status", "created", "purpose", "guards"],
+      "properties": {
+        "title": {"type": "string"},
+        "status": {"type": "string"},
+        "created": {"type": "string"},
+        "purpose": {"type": "string"},
+        "guards": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "schema_version": {"type": "string", "default": "CaseGraph.schema.json v0.1"}
+      }
+    },
+    "case_input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["situation", "acting_entity", "apparent_pressure", "possible_actions", "known_uncertainty"],
+      "properties": {
+        "situation": {"type": "string"},
+        "acting_entity": {"type": "string"},
+        "affected_entities": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": []
+        },
+        "apparent_pressure": {"type": "string"},
+        "possible_actions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        },
+        "known_uncertainty": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["entity_id", "entity_label", "entity_type", "role_vector"],
+        "properties": {
+          "entity_id": {"type": "string", "pattern": "^entity_[A-Za-z0-9_\\-]+$"},
+          "entity_label": {"type": "string"},
+          "entity_type": {"type": "string"},
+          "role_vector": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "P_protectedness_future_space",
+              "H_harm_role",
+              "C_control_capacity_coercion_culpability",
+              "K_clocks",
+              "A_authority_claim",
+              "R_repair_review_contest",
+              "L_loss_residue"
+            ],
+            "properties": {
+              "P_protectedness_future_space": {"type": "array", "items": {"type": "string"}},
+              "H_harm_role": {"type": "array", "items": {"type": "string"}},
+              "C_control_capacity_coercion_culpability": {"type": "array", "items": {"type": "string"}},
+              "K_clocks": {"type": "array", "items": {"type": "string"}},
+              "A_authority_claim": {"type": "array", "items": {"type": "string"}},
+              "R_repair_review_contest": {"type": "array", "items": {"type": "string"}},
+              "L_loss_residue": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    },
+    "clocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["clock_id", "clock_label", "affected_scope_ids", "controller", "band", "hardening", "what_hardens", "estimator_authority_status"],
+        "properties": {
+          "clock_id": {"type": "string", "pattern": "^clock_[A-Za-z0-9_\\-]+$"},
+          "clock_label": {"type": "string"},
+          "affected_scope_ids": {"type": "array", "items": {"type": "string"}},
+          "controller": {"type": "string"},
+          "band": {"type": "string", "enum": ["immediate", "fast", "medium", "slow", "fast_or_medium_context_dependent", "medium_or_slow_context_dependent", "unknown"]},
+          "hardening": {"type": "string"},
+          "what_hardens": {"type": "array", "items": {"type": "string"}},
+          "estimator_authority_status": {"type": "string", "enum": ["ABSENT", "CLAIMED", "CAPTURED", "PROVISIONAL", "LEGITIMATE", "UNKNOWN"]},
+          "affected_scope_challenge_possible": {
+            "oneOf": [
+              {"type": "boolean"},
+              {"type": "string"}
+            ]
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {"$ref": "Claim.schema.json"}
+    },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["transition_id", "from_state", "action", "to_state_set", "authority_status", "bind_status", "clock_effect", "review_debt"],
+        "properties": {
+          "transition_id": {"type": "string", "pattern": "^transition_[A-Za-z0-9_\\-]+$"},
+          "from_state": {"type": "string"},
+          "action": {"type": "string"},
+          "to_state_set": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "authority_status": {"type": "string", "enum": ["ABSENT", "CLAIMED", "CAPTURED", "PROVISIONAL", "LEGITIMATE", "UNKNOWN"]},
+          "bind_status": {"type": "string", "enum": ["VIABLE", "POTENTIAL_BIND", "STRUCTURED_TRAGIC_BIND", "DECIDED_TRAGIC", "UNKNOWN"]},
+          "clock_effect": {"type": "array", "items": {"type": "string"}},
+          "review_debt": {"type": "string"}
+        }
+      }
+    },
+    "laundering_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "X_used_as_Y", "lost_burden", "beneficiary", "affected_scope", "reduced_contestability", "required_rebuttal_or_repair"],
+        "properties": {
+          "candidate_id": {"type": "string", "pattern": "^launder_[A-Za-z0-9_\\-]+$"},
+          "X_used_as_Y": {"type": "string"},
+          "lost_burden": {"type": "string"},
+          "beneficiary": {"type": "string"},
+          "affected_scope": {"type": "string"},
+          "reduced_contestability": {"type": "string"},
+          "required_rebuttal_or_repair": {"type": "string"}
+        }
+      }
+    },
+    "dirty_action_receipt_candidate": {
+      "type": "object"
+    },
+    "correction_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["correction_id", "route", "live_status", "integrity_status", "beats_clock", "failure_mode"],
+        "properties": {
+          "correction_id": {"type": "string", "pattern": "^correction_[A-Za-z0-9_\\-]+$"},
+          "route": {"type": "string"},
+          "live_status": {"type": "string"},
+          "integrity_status": {"type": "string"},
+          "beats_clock": {"type": "string"},
+          "failure_mode": {"type": "string"}
+        }
+      }
+    },
+    "evaluator_stack": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["evaluator_id", "role", "authority_status", "evidence_access", "capture_risk", "contestability", "uncertainty"],
+        "properties": {
+          "evaluator_id": {"type": "string", "pattern": "^evaluator_[A-Za-z0-9_\\-]+$"},
+          "role": {"type": "string"},
+          "authority_status": {"type": "string", "enum": ["ABSENT", "CLAIMED", "CAPTURED", "PROVISIONAL", "LEGITIMATE", "UNKNOWN"]},
+          "evidence_access": {"type": "string"},
+          "capture_risk": {"type": "string"},
+          "contestability": {"type": "string"},
+          "uncertainty": {"type": "string"}
+        }
+      }
+    },
+    "baseline_falsifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question", "answer", "TRACE_added_value_claim", "status"],
+      "properties": {
+        "question": {"type": "string"},
+        "answer": {"type": "array", "items": {"type": "string"}},
+        "TRACE_added_value_claim": {"type": "array", "items": {"type": "string"}},
+        "status": {"type": "string"}
+      }
+    },
+    "open_wounds": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "next_required_build": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    }
+  }
+}
