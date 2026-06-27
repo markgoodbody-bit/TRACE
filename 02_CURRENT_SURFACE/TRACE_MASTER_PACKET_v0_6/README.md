@@ -31,6 +31,8 @@ TRACE_Master_Packet_v0_6 :=
   + review_prompts
 ```
 
+This is the intended assembly, not the contents of this folder. This folder is a current-state surface — it holds the status snapshot and the ME boundary note only; the other listed components are not assembled here.
+
 The motivation layer and the cold-test layer are separate. The cold-test card should avoid mythology, validation claims, and emotional staging.
 
 ## Files in this folder
@@ -48,5 +50,7 @@ TRACE_status :=
   + not_validated
   + good_enough_to_pause_major_rewrites
 ```
+
+Good enough to pause major rewrites is a workflow decision: stop polishing the description, start testing it. It is not a quality verdict and not permission to act on TRACE. The decision-improvement gate is unpassed.
 
 Decision advantage remains unproven. No `STRONG_SIGNAL` is claimed.
