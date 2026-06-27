@@ -141,4 +141,6 @@ TRACE_v0_6 :=
   + good_enough_to_pause_major_rewrites
 ```
 
+Good enough to pause major rewrites is a workflow decision: stop polishing the description, start testing it. It is not a quality verdict and not permission to act on TRACE. The decision-improvement gate is unpassed.
+
 Further TRACE work should mostly be testing, case records, and minor repairs. The next major build should be the separate Mechanical Ethics artifact.
