@@ -229,6 +229,7 @@ reviews/CLAUDE_REVIEW_CLOCK_SUBSTITUTION_CLAIM.md
 reviews/CLAUDE_REVIEW_TRACE_STRUCTURE_AND_SCALE_2026_06_23.md
 reviews/CLAUDE_REVIEW_TRACE_WHOLE_PACKET_2026_06_23.md
 reviews/TRACE_clock_substitution_claim_claude_review_2026_06_23.md
+reviews/TRACE_Kernel_Failure_Surface_Note_Audit_Result_PLACEHOLDER_2026_07_01.md
 reviews/TRACE_temporal_clock_index_claude_review_prompt_2026_06_23.md
 reviews/TRACE_temporal_clock_index_zai_review_2026_06_23.md
 reviews/TRACE_v0_11_external_review_prompt_2026_06_23.md
@@ -246,7 +247,7 @@ review_record != proof
 review_prompt != result
 ```
 
-Likely later action: fold into `06_REVIEWS_AND_AUDITS/` only after checking for duplicates and current references.
+Likely later action: fold into `06_REVIEWS_AND_AUDITS/` only after checking for duplicates and current references. The failure-surface audit placeholder is not an audit result; replace it only after actual audit output exists.
 
 ## Test layer
 
