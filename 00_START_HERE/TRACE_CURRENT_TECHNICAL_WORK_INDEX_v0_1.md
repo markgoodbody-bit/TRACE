@@ -30,6 +30,7 @@ Keep visible. This is current-state surface material, not archive material by de
 00_START_HERE/AFTER_FALL_PAIR_v0_3_3_CURRENT_CANDIDATE_STATUS_2026_07_01.md
 00_START_HERE/FAILURE_SURFACE_NOTE_SELF_AUDIT_AND_SMALL_CASE_STATUS_2026_07_01.md
 00_START_HERE/FAILURE_SURFACE_SELFRUNS_READY_FOR_FABLE_STATUS_2026_07_01.md
+00_START_HERE/FRONTIER_ENTITY_HANDSHAKE_AND_STRIP_TEST_STATUS_2026_07_01.md
 00_START_HERE/NEXT_MOVE_AFTER_v0_3_3_FREEZE_2026_07_01.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/README.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_CURRENT_STATE_v0_6_2026_06_27.md
@@ -76,6 +77,15 @@ failure_surface_selfruns_status :=
   - validation
   - canon
   - permission
+
+frontier_entity_handshake_status :=
+  Fable_entity_to_entity_synthesis_preserved
+  + entity_handshake_frontier_note_created
+  + cross_tradition_strip_test_protocol_created
+  + candidate_only
+  - validation
+  - canon
+  - permission
 ```
 
 ## Core technical layer
@@ -86,6 +96,7 @@ This is structure-building material. Do not archive as a group.
 core/TRACE_AI_to_Human_Compass_Communication_Stack_v0_1_2026_06_23.md
 core/TRACE_clock_substitution_claim_candidate_v0_1_2026_06_23.md
 core/TRACE_clock_substitution_claim_candidate_v0_2_2026_06_23.md
+core/TRACE_Entity_Handshake_Standing_Transfer_Frontier_v0_1_2026_07_01.md
 core/TRACE_Formal_Mathematical_Specification_v0_1_2026_06_23.md
 core/TRACE_Harm_Harmlessness_Mathematical_Note_v0_1_2026_07_01.md
 core/TRACE_Harm_Primitive_Split_v0_1_2026_07_01.md
@@ -127,6 +138,7 @@ The harm primitive split candidate is a boundary clarification: descriptive cont
 frontier_support_note_additions :=
   care_carrier_decomposition
   + kernel_failure_surface_note
+  + entity_handshake_standing_transfer_frontier
   + constructed_not_tested
   + candidate_only
   - canon
@@ -138,6 +150,8 @@ frontier_support_note_additions :=
 The care carrier decomposition support note records the contingency-vs-chosenness split, care-evidence-with-expiry, the husbandry demoter, and the warning that care evidence must not become care certification or justify removing correction structure.
 
 The kernel failure surface note records S1 silent contraction, S2 spoofed viability, S3 endogenous hardening, S4 correction epistemic cost asymmetry, and S5 scaffold/cage reflexivity as candidate threat-model surfaces. It is not a complete theory of failure and must not be used as clearance.
+
+The entity handshake / standing transfer frontier note records the provisional Fable synthesis that standing may transmit where care does not, that correction access may scale with leverage times opacity, and that self-certification should be treated as an estimator-position problem. It is not validation or an alignment solution.
 
 Likely later action: split into:
 
@@ -221,6 +235,7 @@ These are test/review prompts. Preserve as method and reproducibility material u
 prompts/PROMPT_FOR_CODEX_RUN_SEMANTIC_LINT_2026_06_24.md
 prompts/TRACE_After_Fall_v0_3_3_Verify_Only_Audit_Result_2026_07_01.md
 prompts/TRACE_Blind_Grader_Decision_Delta_Rubric_v0_1_2026_06_23.md
+prompts/TRACE_Cross_Tradition_Strip_Test_Prompt_v0_1_2026_07_01.md
 prompts/TRACE_Fable_Handoff_After_Failure_Surface_Selfruns_2026_07_01.md
 prompts/TRACE_Grenfell_Blind_Counterbalanced_Test_Prompt_v0_1_2026_06_23.md
 prompts/TRACE_Grenfell_Cold_Transfer_Test_Prompt_v0_1_2026_06_23.md
@@ -244,6 +259,7 @@ These are review artifacts and review prompts. They should generally be preserve
 reviews/CLAUDE_REVIEW_CLOCK_SUBSTITUTION_CLAIM.md
 reviews/CLAUDE_REVIEW_TRACE_STRUCTURE_AND_SCALE_2026_06_23.md
 reviews/CLAUDE_REVIEW_TRACE_WHOLE_PACKET_2026_06_23.md
+reviews/FABLE_TRACE_Entity_to_Entity_Frontier_Synthesis_Summary_2026_07_01.md
 reviews/TRACE_clock_substitution_claim_claude_review_2026_06_23.md
 reviews/TRACE_Kernel_Failure_Surface_Note_Audit_Result_PLACEHOLDER_2026_07_01.md
 reviews/TRACE_Kernel_Failure_Surface_Note_Framework_Self_Audit_2026_07_01.md
@@ -264,13 +280,14 @@ review_record != proof
 review_prompt != result
 ```
 
-Likely later action: fold into `06_REVIEWS_AND_AUDITS/` only after checking for duplicates and current references. The failure-surface audit placeholder is not an audit result; replace it only after actual audit output exists. The framework self-audit is explicitly not external review.
+Likely later action: fold into `06_REVIEWS_AND_AUDITS/` only after checking for duplicates and current references. The failure-surface audit placeholder is not an audit result; replace it only after actual audit output exists. The framework self-audit is explicitly not external review. The Fable frontier synthesis summary is a frontier input, not validation.
 
 ## Test layer
 
 Keep indexed. This is the current experimental/procedural layer.
 
 ```text
+tests/TRACE_Cross_Tradition_Strip_Test_Protocol_v0_1_2026_07_01.md
 tests/evidence/TRACE_Grenfell_Evidence_Pinning_And_Witness_Plan_v0_1_2026_06_23.md
 tests/fair_compare/2026_06_23_TRACE_fair_compare_negative_control_meeting_time_selfrun_v0_1.json
 tests/falsification/TRACE_Falsify_x100_Drift_Audit_v0_1_2026_06_23.md
@@ -310,6 +327,16 @@ failure_surface_selfruns :=
   + all_self_runs_not_validation
 ```
 
+2026-07-01 frontier test status:
+
+```trace
+cross_tradition_strip_test :=
+  protocol_created
+  + prompt_created
+  + expected_result_COMPRESSION_ONLY_or_WEAK_CONVERGENCE
+  - validation
+```
+
 Possible later archive candidates after review:
 
 ```text
@@ -330,16 +357,12 @@ current_no_move :=
 
 ## Next safe action
 
-Create a second-pass archive PR only for specific superseded files after review. Candidate set:
+Run:
 
 ```text
-core/TRACE_clock_substitution_claim_candidate_v0_1_2026_06_23.md
-cases/graphs/TRACE_feral_hogs_case_graph_v0_1_2026_06_23.json
-tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_1_2026_06_24.md
-tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_2_2026_06_24.md
-tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_Response_Log_Template_v0_1_2026_06_24.md
+prompts/TRACE_Cross_Tradition_Strip_Test_Prompt_v0_1_2026_07_01.md
 ```
 
-Do not include these in an archive move until supersession is confirmed.
+Do not treat convergence as validation. Do not treat divergence as defeat. Preserve COMPRESSION_ONLY as the pre-registered null.
 
 End.
