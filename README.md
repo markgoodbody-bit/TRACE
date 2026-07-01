@@ -25,6 +25,8 @@ If you want to use TRACE rather than audit the whole repo, start here:
 4. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
 5. `00_START_HERE/READ_ORDER.md`
 
+For repo-shape and current-work visibility, see `00_START_HERE/TRACE_REPO_MAP_v0_1.md`.
+
 ## What TRACE is now
 
 TRACE is a diagnostic and design grammar for asking whether correction can reach affected subjects before harm hardens.
@@ -94,6 +96,7 @@ Live_Use_Card := current_use_instrument + live_reasoning_surface
 Public_One_Sheet := public_orientation_surface
 Control_Index := current_status_and_drift_control
 Read_Order := deeper_repo_navigation
+Repo_Map := current_work_visibility + archive_boundary
 CLAUDE_md := Claude_Code_operating_frame
 ```
 
@@ -116,17 +119,26 @@ clean_description != decision_advantage
 ```text
 00_START_HERE/          orientation, start-here surfaces, import manifest, vault continuity addenda
 00_CONTROL/             anti-self-deception, control index, spine drift note
+00_CORE/                current core deltas / integration-map material not yet fully folded into the reader path
 01_CANONICAL_MEMORY/    operator registry, primitive registry, domain translation registry, claims ledger, demotion protocol
-02_CURRENT_SURFACE/     live use card, public one-sheet, current Rosetta front door
+02_CURRENT_SURFACE/     live use card, public one-sheet, current Rosetta front door, current-state packet candidates
 03_BOOTSTRAPS/          Bootstrap V2 live relay surface plus deprecated/preserved source history
+03_TESTS/               comparator / test material not yet fully consolidated
 04_COVERAGE/            comparator queues, worked delta cases, bounded support notes
 04_KERNEL_AND_TESTS/    diagnostic kernel, preregistered test template, method notes
 05_MAPS_AND_ATLASES/    concordance, scope/applicability map, AI/MI bridge, case atlas, support lenses
+05_OPERATORS/           operator-support material and schema patches
+06_AI_PIPELINE/         AI pipeline notes and branch index material
 06_REVIEWS_AND_AUDITS/  review digests and falsification/drift audits
 07_HANDOFFS/            relay pack and external-agent handoff notes
+08_ORCHESTRATION/       relay workflow and orchestration support
 90_ORIGINAL_ZIPS/       selected archived source ZIPs and handoff ZIPs
+99_ARCHIVE/             preserved superseded material moved out of the live reader path
 99_ARCHIVE_INDEXES/     file indexes and manifests
+core/ schemas/ cases/ tests/ prompts/ reviews/  recent flat technical work; current-unindexed, not archive-only by default
 ```
+
+Repo map: `00_START_HERE/TRACE_REPO_MAP_v0_1.md`.
 
 ## Working discipline
 
