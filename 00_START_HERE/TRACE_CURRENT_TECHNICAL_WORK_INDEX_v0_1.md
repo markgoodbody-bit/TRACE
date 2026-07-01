@@ -1,0 +1,244 @@
+# TRACE Current Technical Work Index v0.1
+
+Status: file-level navigation and repo-hygiene index. Not canon. Not validation. Not proof. Not a new operator.
+
+Purpose: index the current unindexed technical layer after the first archive pass. This file prevents live technical work from being mistaken for archive junk merely because it sits in root-level folders.
+
+```trace
+technical_work_index_v0_1 :=
+  file_level_visibility
+  + current_unindexed_status
+  + archive_candidate_boundary
+  + no_blind_moves
+  - validation
+  - canon_promotion
+```
+
+## Rule
+
+```trace
+unindexed_recent_work != archive_only
+```
+
+The folders indexed here should not be moved or archived as a bulk set. Each file needs a status decision.
+
+## Current surface packet
+
+Keep visible. This is current-state surface material, not archive material by default.
+
+```text
+02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/README.md
+02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_CURRENT_STATE_v0_6_2026_06_27.md
+02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_ME_BOUNDARY_NOTE_v0_1.md
+```
+
+Status: `KEEP_VISIBLE_CURRENT_SURFACE`.
+
+Decision still owed: whether v0.6 remains a current-state packet, is folded into a later reader pair, or becomes preserved current-history after the After Fall reader layer.
+
+## Core technical layer
+
+This is structure-building material. Do not archive as a group.
+
+```text
+core/TRACE_AI_to_Human_Compass_Communication_Stack_v0_1_2026_06_23.md
+core/TRACE_clock_substitution_claim_candidate_v0_1_2026_06_23.md
+core/TRACE_clock_substitution_claim_candidate_v0_2_2026_06_23.md
+core/TRACE_Formal_Mathematical_Specification_v0_1_2026_06_23.md
+core/TRACE_Middle_Out_Mathematical_Core_Packet_v0_1_2026_06_23.md
+core/TRACE_Middle_Out_Mathematical_Support_v0_1_2026_06_23.md
+core/TRACE_Middle_Out_Method_Control_v0_1_2026_06_23.md
+core/TRACE_Pattern_Basis_Index_v0_1_2026_06_23.md
+core/TRACE_Scale_With_Teeth_Program_v0_1_2026_06_23.md
+core/TRACE_Structure_And_Scale_Architecture_v0_1_2026_06_23.md
+core/TRACE_temporal_clock_index_candidate_v0_1_2026_06_23.md
+core/TRACE_v0_10_kernel_delta_2026_06_23.md
+core/TRACE_v0_11_1_hold_note_2026_06_23.md
+core/TRACE_v0_11_transition_governance_2026_06_23.md
+```
+
+Status: `CURRENT_TECHNICAL_CANDIDATE_LAYER`.
+
+Likely later action: split into:
+
+```text
+KEEP_REFERENCE
+SUPERSEDED_BUT_PRESERVE
+ARCHIVE_CANDIDATE_AFTER_REVIEW
+```
+
+Obvious candidate for review, not automatic move:
+
+```text
+core/TRACE_clock_substitution_claim_candidate_v0_1_2026_06_23.md
+```
+
+Reason: a v0.2 file exists. Confirm v0.2 fully supersedes v0.1 before moving.
+
+## Machine schema layer
+
+These are live technical interface files unless explicitly replaced.
+
+```text
+schemas/CaseGraph.schema.json
+schemas/Claim.schema.json
+schemas/DecisionDelta.schema.json
+schemas/DirectAffectedScopeWitness.schema.json
+schemas/DirtyDelayReceipt.schema.json
+schemas/EntityRoleVector.schema.json
+schemas/EvidenceStatus.schema.json
+```
+
+Status: `KEEP_LIVE_SCHEMA_LAYER`.
+
+Rule:
+
+```trace
+schema_valid != claim_true
+case_graph_valid != moral_verdict
+role_vector_valid != moral_status_resolved
+```
+
+## Case graph layer
+
+These are machine-readable case graph shakedowns / transfer tests. Keep indexed; do not bulk archive.
+
+```text
+cases/graphs/TRACE_amazon_case_graph_v0_1_2026_06_23.json
+cases/graphs/TRACE_feral_hogs_case_graph_v0_1_1_2026_06_23.json
+cases/graphs/TRACE_feral_hogs_case_graph_v0_1_2026_06_23.json
+cases/graphs/TRACE_negative_control_meeting_time_case_graph_v0_1_2026_06_23.json
+cases/graphs/TRACE_rambo_first_blood_case_graph_v0_1_2026_06_23.json
+```
+
+Status: `CURRENT_CASE_GRAPH_LAYER_WITH_ONE_SUPERSESSION_CANDIDATE`.
+
+Archive candidate after review:
+
+```text
+cases/graphs/TRACE_feral_hogs_case_graph_v0_1_2026_06_23.json
+```
+
+Reason: patched v0.1.1 exists. Do not move until the provenance / failure reason of v0.1 is recorded or confirmed elsewhere.
+
+## Case note layer
+
+```text
+cases/TRACE_100_entity_middle_out_atlas_v0_1_2026_06_23.md
+cases/TRACE_feral_hogs_dirty_correction_multiscope_test_v0_1_2026_06_23.md
+cases/TRACE_Grenfell_middle_out_government_response_v0_1.md
+```
+
+Status: `CURRENT_CASE_NOTE_LAYER`.
+
+Do not archive without checking whether these are referenced by tests, prompts, reviews, or current case atlas material.
+
+## Prompt layer
+
+These are test/review prompts. Preserve as method and reproducibility material unless clearly superseded.
+
+```text
+prompts/PROMPT_FOR_CODEX_RUN_SEMANTIC_LINT_2026_06_24.md
+prompts/TRACE_Blind_Grader_Decision_Delta_Rubric_v0_1_2026_06_23.md
+prompts/TRACE_Grenfell_Blind_Counterbalanced_Test_Prompt_v0_1_2026_06_23.md
+prompts/TRACE_Grenfell_Cold_Transfer_Test_Prompt_v0_1_2026_06_23.md
+prompts/TRACE_Grenfell_Existing_Run_Blind_Regrade_Prompt_v0_1_2026_06_23.md
+prompts/TRACE_Public_AI_Middle_Out_Transfer_Test_Prompt_v0_1_2026_06_23.md
+```
+
+Status: `CURRENT_TEST_PROMPT_LAYER`.
+
+Do not treat AI prompt material as validation. It is procedure/provenance only.
+
+## Review layer
+
+These are review artifacts and review prompts. They should generally be preserved, not read as validation.
+
+```text
+reviews/CLAUDE_REVIEW_CLOCK_SUBSTITUTION_CLAIM.md
+reviews/CLAUDE_REVIEW_TRACE_STRUCTURE_AND_SCALE_2026_06_23.md
+reviews/CLAUDE_REVIEW_TRACE_WHOLE_PACKET_2026_06_23.md
+reviews/TRACE_clock_substitution_claim_claude_review_2026_06_23.md
+reviews/TRACE_temporal_clock_index_claude_review_prompt_2026_06_23.md
+reviews/TRACE_temporal_clock_index_zai_review_2026_06_23.md
+reviews/TRACE_v0_11_external_review_prompt_2026_06_23.md
+reviews/TRACE_v0_11_external_review_synthesis_2026_06_23.md
+reviews/TRACE_v0_11_grok_qwen_review_addendum_2026_06_23.md
+```
+
+Status: `PRESERVE_REVIEW_RECORDS`.
+
+Rule:
+
+```trace
+AI_review_agreement != validation
+review_record != proof
+review_prompt != result
+```
+
+Likely later action: fold into `06_REVIEWS_AND_AUDITS/` only after checking for duplicates and current references.
+
+## Test layer
+
+Keep indexed. This is the current experimental/procedural layer.
+
+```text
+tests/evidence/TRACE_Grenfell_Evidence_Pinning_And_Witness_Plan_v0_1_2026_06_23.md
+tests/fair_compare/2026_06_23_TRACE_fair_compare_negative_control_meeting_time_selfrun_v0_1.json
+tests/falsification/TRACE_Falsify_x100_Drift_Audit_v0_1_2026_06_23.md
+tests/gates/TRACE_Cheap_Gates_Status_v0_1_2026_06_23.md
+tests/readers/robodebt/external_reviews/Zai_Robodebt_Packet_Audit_v0_1_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_Packet_v0_1_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_1_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_2_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_3_CLEAN_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_Response_Log_Template_v0_1_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_Response_Log_Template_v0_2_2026_06_24.md
+tests/runs/2026_06_23_TRACE_cold_transfer_Grenfell_external_unknown_v0_1.md
+tests/runs/2026_06_23_TRACE_cold_transfer_Grenfell_MetaAI_MuseSpark_v0_1.md
+tests/runs/2026_06_23_TRACE_warm_transfer_Grenfell_Framework_selfrun_v0_1.md
+tests/semantic_lint/trace_semantic_lint.py
+tests/TRACE_Cold_Transfer_Test_Protocol_v0_1_2026_06_23.md
+tests/TRACE_FairCompare_Protocol_v0_1_2026_06_23.md
+tests/TRACE_reader_harness_v0_1_2026_06_23.md
+tests/TRACE_schema_validation_report_2026_06_23.md
+tests/TRACE_v0_11_transition_reconstruction_test_2026_06_23.md
+tests/validate_case_graphs.py
+tests/validation/TRACE_Case_Graph_Validation_Status_2026_06_23.md
+```
+
+Status: `CURRENT_TEST_AND_PROVENANCE_LAYER`.
+
+Possible later archive candidates after review:
+
+```text
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_1_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_2_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_Response_Log_Template_v0_1_2026_06_24.md
+```
+
+Reason: later versions exist. Do not move until v0.3/v0.2 status is confirmed and provenance is recorded.
+
+## Current no-move decision
+
+```trace
+current_no_move :=
+  all_files_in_this_index
+  until file_level_supersession_review
+```
+
+## Next safe action
+
+Create a second-pass archive PR only for specific superseded files after review. Candidate set:
+
+```text
+core/TRACE_clock_substitution_claim_candidate_v0_1_2026_06_23.md
+cases/graphs/TRACE_feral_hogs_case_graph_v0_1_2026_06_23.json
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_1_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_READER_ONLY_v0_2_2026_06_24.md
+tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_Response_Log_Template_v0_1_2026_06_24.md
+```
+
+Do not include these in an archive move until supersession is confirmed.
+
+End.
