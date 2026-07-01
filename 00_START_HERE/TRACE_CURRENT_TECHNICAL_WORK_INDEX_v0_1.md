@@ -27,6 +27,7 @@ The folders indexed here should not be moved or archived as a bulk set. Each fil
 Keep visible. This is current-state surface material, not archive material by default.
 
 ```text
+00_START_HERE/AFTER_FALL_PAIR_v0_3_3_CURRENT_CANDIDATE_STATUS_2026_07_01.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/README.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_CURRENT_STATE_v0_6_2026_06_27.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_ME_BOUNDARY_NOTE_v0_1.md
@@ -37,7 +38,7 @@ Status: `KEEP_VISIBLE_CURRENT_SURFACE`.
 
 Decision still owed: whether v0.6 remains a current-state packet, is folded into a later reader pair, or becomes preserved current-history after the After Fall reader layer.
 
-2026-07-01 surface addition:
+2026-07-01 surface additions:
 
 ```trace
 trace_packet_vnext_candidate :=
@@ -48,6 +49,14 @@ trace_packet_vnext_candidate :=
   - release
   - canon
   - validation
+
+after_fall_pair_v0_3_3_status :=
+  PASS_AS_CURRENT_CANDIDATE
+  + freeze_unless_material_defect
+  + candidate_only
+  - validation
+  - canon
+  - permission
 ```
 
 ## Core technical layer
@@ -61,6 +70,7 @@ core/TRACE_clock_substitution_claim_candidate_v0_2_2026_06_23.md
 core/TRACE_Formal_Mathematical_Specification_v0_1_2026_06_23.md
 core/TRACE_Harm_Harmlessness_Mathematical_Note_v0_1_2026_07_01.md
 core/TRACE_Harm_Primitive_Split_v0_1_2026_07_01.md
+core/TRACE_Kernel_Failure_Surface_Note_v0_1_2026_07_01.md
 core/TRACE_ME_Care_Carrier_Decomposition_v0_1_2026_07_01.md
 core/TRACE_Middle_Out_Mathematical_Core_Packet_v0_1_2026_06_23.md
 core/TRACE_Middle_Out_Mathematical_Support_v0_1_2026_06_23.md
@@ -97,6 +107,7 @@ The harm primitive split candidate is a boundary clarification: descriptive cont
 ```trace
 frontier_support_note_additions :=
   care_carrier_decomposition
+  + kernel_failure_surface_note
   + constructed_not_tested
   + candidate_only
   - canon
@@ -106,6 +117,8 @@ frontier_support_note_additions :=
 ```
 
 The care carrier decomposition support note records the contingency-vs-chosenness split, care-evidence-with-expiry, the husbandry demoter, and the warning that care evidence must not become care certification or justify removing correction structure.
+
+The kernel failure surface note records S1 silent contraction, S2 spoofed viability, S3 endogenous hardening, S4 correction epistemic cost asymmetry, and S5 scaffold/cage reflexivity as candidate threat-model surfaces. It is not a complete theory of failure and must not be used as clearance.
 
 Likely later action: split into:
 
