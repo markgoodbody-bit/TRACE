@@ -33,3 +33,5 @@ Do not move uncertain paths.
 Update this provenance file with every old_path -> new_path actually applied.
 Then show git diff --stat and stop.
 ```
+
+Status: ready for atomic move pass.
