@@ -200,16 +200,18 @@ These are test/review prompts. Preserve as method and reproducibility material u
 
 ```text
 prompts/PROMPT_FOR_CODEX_RUN_SEMANTIC_LINT_2026_06_24.md
+prompts/TRACE_After_Fall_v0_3_3_Verify_Only_Audit_Result_2026_07_01.md
 prompts/TRACE_Blind_Grader_Decision_Delta_Rubric_v0_1_2026_06_23.md
 prompts/TRACE_Grenfell_Blind_Counterbalanced_Test_Prompt_v0_1_2026_06_23.md
 prompts/TRACE_Grenfell_Cold_Transfer_Test_Prompt_v0_1_2026_06_23.md
 prompts/TRACE_Grenfell_Existing_Run_Blind_Regrade_Prompt_v0_1_2026_06_23.md
+prompts/TRACE_Kernel_Failure_Surface_Note_Fable_Audit_Prompt_2026_07_01.md
 prompts/TRACE_Public_AI_Middle_Out_Transfer_Test_Prompt_v0_1_2026_06_23.md
 ```
 
 Status: `CURRENT_TEST_PROMPT_LAYER`.
 
-Do not treat AI prompt material as validation. It is procedure/provenance only.
+Do not treat AI prompt material as validation. It is procedure/provenance only. The v0.3.3 verify-only audit result records PASS_AS_CURRENT_CANDIDATE but remains an audit record, not proof.
 
 ## Review layer
 
