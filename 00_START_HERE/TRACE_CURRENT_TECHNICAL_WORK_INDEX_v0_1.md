@@ -28,6 +28,7 @@ Keep visible. This is current-state surface material, not archive material by de
 
 ```text
 00_START_HERE/AFTER_FALL_PAIR_v0_3_3_CURRENT_CANDIDATE_STATUS_2026_07_01.md
+00_START_HERE/NEXT_MOVE_AFTER_v0_3_3_FREEZE_2026_07_01.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/README.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_CURRENT_STATE_v0_6_2026_06_27.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_ME_BOUNDARY_NOTE_v0_1.md
@@ -57,6 +58,12 @@ after_fall_pair_v0_3_3_status :=
   - validation
   - canon
   - permission
+
+next_move_after_v0_3_3 :=
+  freeze_after_fall_pair
+  + audit_failure_surface_note
+  + test_surfaces_on_cases
+  - pair_polishing
 ```
 
 ## Core technical layer
