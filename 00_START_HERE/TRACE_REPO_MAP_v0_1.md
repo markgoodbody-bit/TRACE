@@ -73,6 +73,12 @@ unindexed_recent_work != archive_only
 
 Treat these as `CURRENT_UNINDEXED` until reviewed. They should be indexed, folded into a numbered current-work layer, or deliberately archived only after a specific map/decision.
 
+File-level index:
+
+```text
+00_START_HERE/TRACE_CURRENT_TECHNICAL_WORK_INDEX_v0_1.md
+```
+
 ## TRACE_MASTER_PACKET_v0_6
 
 `02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/` is recent current-state packet work. It is not archive material by default.
