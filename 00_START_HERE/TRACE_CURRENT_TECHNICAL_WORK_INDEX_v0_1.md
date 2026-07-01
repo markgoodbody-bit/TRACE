@@ -30,11 +30,25 @@ Keep visible. This is current-state surface material, not archive material by de
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/README.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_CURRENT_STATE_v0_6_2026_06_27.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_ME_BOUNDARY_NOTE_v0_1.md
+02_CURRENT_SURFACE/TRACE_PACKET_vNext_CANDIDATE/TRACE_PACKET_vNext_CANDIDATE_2026_07_01.md
 ```
 
 Status: `KEEP_VISIBLE_CURRENT_SURFACE`.
 
 Decision still owed: whether v0.6 remains a current-state packet, is folded into a later reader pair, or becomes preserved current-history after the After Fall reader layer.
+
+2026-07-01 surface addition:
+
+```trace
+trace_packet_vnext_candidate :=
+  current_surface_candidate
+  + integrates_harm_split
+  + integrates_care_evidence_boundary
+  + anti_permission_grammar
+  - release
+  - canon
+  - validation
+```
 
 ## Core technical layer
 
