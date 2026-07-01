@@ -47,6 +47,7 @@ core/TRACE_clock_substitution_claim_candidate_v0_2_2026_06_23.md
 core/TRACE_Formal_Mathematical_Specification_v0_1_2026_06_23.md
 core/TRACE_Harm_Harmlessness_Mathematical_Note_v0_1_2026_07_01.md
 core/TRACE_Harm_Primitive_Split_v0_1_2026_07_01.md
+core/TRACE_ME_Care_Carrier_Decomposition_v0_1_2026_07_01.md
 core/TRACE_Middle_Out_Mathematical_Core_Packet_v0_1_2026_06_23.md
 core/TRACE_Middle_Out_Mathematical_Support_v0_1_2026_06_23.md
 core/TRACE_Middle_Out_Method_Control_v0_1_2026_06_23.md
@@ -76,6 +77,21 @@ primitive_formalisation_additions :=
 ```
 
 The harm primitive split candidate is a boundary clarification: descriptive contraction and protected-scope designation should not be hidden inside one harm primitive. It keeps the scope blocker visible and does not solve protectedness.
+
+2026-07-01 frontier support note additions:
+
+```trace
+frontier_support_note_additions :=
+  care_carrier_decomposition
+  + constructed_not_tested
+  + candidate_only
+  - canon
+  - validation
+  - care_certification
+  - permission
+```
+
+The care carrier decomposition support note records the contingency-vs-chosenness split, care-evidence-with-expiry, the husbandry demoter, and the warning that care evidence must not become care certification or justify removing correction structure.
 
 Likely later action: split into:
 
