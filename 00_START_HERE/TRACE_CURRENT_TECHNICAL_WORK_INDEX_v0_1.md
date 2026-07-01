@@ -46,6 +46,7 @@ core/TRACE_clock_substitution_claim_candidate_v0_1_2026_06_23.md
 core/TRACE_clock_substitution_claim_candidate_v0_2_2026_06_23.md
 core/TRACE_Formal_Mathematical_Specification_v0_1_2026_06_23.md
 core/TRACE_Harm_Harmlessness_Mathematical_Note_v0_1_2026_07_01.md
+core/TRACE_Harm_Primitive_Split_v0_1_2026_07_01.md
 core/TRACE_Middle_Out_Mathematical_Core_Packet_v0_1_2026_06_23.md
 core/TRACE_Middle_Out_Mathematical_Support_v0_1_2026_06_23.md
 core/TRACE_Middle_Out_Method_Control_v0_1_2026_06_23.md
@@ -66,12 +67,15 @@ Status: `CURRENT_TECHNICAL_CANDIDATE_LAYER`.
 ```trace
 primitive_formalisation_additions :=
   harm_harmlessness_math_note
+  + harm_primitive_split_candidate
   + primitive_transition_grammar
   + candidate_only
   - canon
   - validation
   - permission
 ```
+
+The harm primitive split candidate is a boundary clarification: descriptive contraction and protected-scope designation should not be hidden inside one harm primitive. It keeps the scope blocker visible and does not solve protectedness.
 
 Likely later action: split into:
 
