@@ -45,10 +45,12 @@ core/TRACE_AI_to_Human_Compass_Communication_Stack_v0_1_2026_06_23.md
 core/TRACE_clock_substitution_claim_candidate_v0_1_2026_06_23.md
 core/TRACE_clock_substitution_claim_candidate_v0_2_2026_06_23.md
 core/TRACE_Formal_Mathematical_Specification_v0_1_2026_06_23.md
+core/TRACE_Harm_Harmlessness_Mathematical_Note_v0_1_2026_07_01.md
 core/TRACE_Middle_Out_Mathematical_Core_Packet_v0_1_2026_06_23.md
 core/TRACE_Middle_Out_Mathematical_Support_v0_1_2026_06_23.md
 core/TRACE_Middle_Out_Method_Control_v0_1_2026_06_23.md
 core/TRACE_Pattern_Basis_Index_v0_1_2026_06_23.md
+core/TRACE_Primitive_Transition_Grammar_v0_1_2026_07_01.md
 core/TRACE_Scale_With_Teeth_Program_v0_1_2026_06_23.md
 core/TRACE_Structure_And_Scale_Architecture_v0_1_2026_06_23.md
 core/TRACE_temporal_clock_index_candidate_v0_1_2026_06_23.md
@@ -58,6 +60,18 @@ core/TRACE_v0_11_transition_governance_2026_06_23.md
 ```
 
 Status: `CURRENT_TECHNICAL_CANDIDATE_LAYER`.
+
+2026-07-01 primitive additions:
+
+```trace
+primitive_formalisation_additions :=
+  harm_harmlessness_math_note
+  + primitive_transition_grammar
+  + candidate_only
+  - canon
+  - validation
+  - permission
+```
 
 Likely later action: split into:
 
