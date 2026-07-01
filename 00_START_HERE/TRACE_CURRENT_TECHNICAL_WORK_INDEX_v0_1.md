@@ -28,6 +28,8 @@ Keep visible. This is current-state surface material, not archive material by de
 
 ```text
 00_START_HERE/AFTER_FALL_PAIR_v0_3_3_CURRENT_CANDIDATE_STATUS_2026_07_01.md
+00_START_HERE/FAILURE_SURFACE_NOTE_SELF_AUDIT_AND_SMALL_CASE_STATUS_2026_07_01.md
+00_START_HERE/FAILURE_SURFACE_SELFRUNS_READY_FOR_FABLE_STATUS_2026_07_01.md
 00_START_HERE/NEXT_MOVE_AFTER_v0_3_3_FREEZE_2026_07_01.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/README.md
 02_CURRENT_SURFACE/TRACE_MASTER_PACKET_v0_6/TRACE_CURRENT_STATE_v0_6_2026_06_27.md
@@ -64,6 +66,16 @@ next_move_after_v0_3_3 :=
   + audit_failure_surface_note
   + test_surfaces_on_cases
   - pair_polishing
+
+failure_surface_selfruns_status :=
+  support_note_self_audited
+  + small_case_selfrun_complete
+  + public_power_selfrun_complete
+  + AI_facing_selfrun_complete
+  + Fable_handoff_prompt_ready
+  - validation
+  - canon
+  - permission
 ```
 
 ## Core technical layer
@@ -209,10 +221,13 @@ These are test/review prompts. Preserve as method and reproducibility material u
 prompts/PROMPT_FOR_CODEX_RUN_SEMANTIC_LINT_2026_06_24.md
 prompts/TRACE_After_Fall_v0_3_3_Verify_Only_Audit_Result_2026_07_01.md
 prompts/TRACE_Blind_Grader_Decision_Delta_Rubric_v0_1_2026_06_23.md
+prompts/TRACE_Fable_Handoff_After_Failure_Surface_Selfruns_2026_07_01.md
 prompts/TRACE_Grenfell_Blind_Counterbalanced_Test_Prompt_v0_1_2026_06_23.md
 prompts/TRACE_Grenfell_Cold_Transfer_Test_Prompt_v0_1_2026_06_23.md
 prompts/TRACE_Grenfell_Existing_Run_Blind_Regrade_Prompt_v0_1_2026_06_23.md
+prompts/TRACE_Kernel_Failure_Surface_Note_AI_Facing_Case_Test_Prompt_2026_07_01.md
 prompts/TRACE_Kernel_Failure_Surface_Note_Fable_Audit_Prompt_2026_07_01.md
+prompts/TRACE_Kernel_Failure_Surface_Note_Public_Power_Case_Test_Prompt_2026_07_01.md
 prompts/TRACE_Kernel_Failure_Surface_Note_Small_Case_Test_Prompt_2026_07_01.md
 prompts/TRACE_Public_AI_Middle_Out_Transfer_Test_Prompt_v0_1_2026_06_23.md
 ```
@@ -231,6 +246,7 @@ reviews/CLAUDE_REVIEW_TRACE_STRUCTURE_AND_SCALE_2026_06_23.md
 reviews/CLAUDE_REVIEW_TRACE_WHOLE_PACKET_2026_06_23.md
 reviews/TRACE_clock_substitution_claim_claude_review_2026_06_23.md
 reviews/TRACE_Kernel_Failure_Surface_Note_Audit_Result_PLACEHOLDER_2026_07_01.md
+reviews/TRACE_Kernel_Failure_Surface_Note_Framework_Self_Audit_2026_07_01.md
 reviews/TRACE_temporal_clock_index_claude_review_prompt_2026_06_23.md
 reviews/TRACE_temporal_clock_index_zai_review_2026_06_23.md
 reviews/TRACE_v0_11_external_review_prompt_2026_06_23.md
@@ -248,7 +264,7 @@ review_record != proof
 review_prompt != result
 ```
 
-Likely later action: fold into `06_REVIEWS_AND_AUDITS/` only after checking for duplicates and current references. The failure-surface audit placeholder is not an audit result; replace it only after actual audit output exists.
+Likely later action: fold into `06_REVIEWS_AND_AUDITS/` only after checking for duplicates and current references. The failure-surface audit placeholder is not an audit result; replace it only after actual audit output exists. The framework self-audit is explicitly not external review.
 
 ## Test layer
 
@@ -269,6 +285,9 @@ tests/readers/robodebt/TRACE_Robodebt_Cold_Reader_Response_Log_Template_v0_2_202
 tests/runs/2026_06_23_TRACE_cold_transfer_Grenfell_external_unknown_v0_1.md
 tests/runs/2026_06_23_TRACE_cold_transfer_Grenfell_MetaAI_MuseSpark_v0_1.md
 tests/runs/2026_06_23_TRACE_warm_transfer_Grenfell_Framework_selfrun_v0_1.md
+tests/runs/2026_07_01_TRACE_failure_surface_AI_facing_selfrun_v0_1.md
+tests/runs/2026_07_01_TRACE_failure_surface_public_power_selfrun_v0_1.md
+tests/runs/2026_07_01_TRACE_failure_surface_small_case_selfrun_v0_1.md
 tests/semantic_lint/trace_semantic_lint.py
 tests/TRACE_Cold_Transfer_Test_Protocol_v0_1_2026_06_23.md
 tests/TRACE_FairCompare_Protocol_v0_1_2026_06_23.md
@@ -280,6 +299,16 @@ tests/validation/TRACE_Case_Graph_Validation_Status_2026_06_23.md
 ```
 
 Status: `CURRENT_TEST_AND_PROVENANCE_LAYER`.
+
+2026-07-01 failure-surface self-run status:
+
+```trace
+failure_surface_selfruns :=
+  small_case_complete
+  + public_power_case_complete
+  + AI_facing_case_complete
+  + all_self_runs_not_validation
+```
 
 Possible later archive candidates after review:
 
