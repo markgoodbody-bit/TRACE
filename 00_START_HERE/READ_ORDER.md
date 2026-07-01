@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, life/biology/ecology atlas seed, agency/free-will/Mandelbrot atlas seed, and cross-atlas pressure-test seed. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, life/biology/ecology atlas seed, agency/free-will/Mandelbrot atlas seed, cross-atlas pressure-test seed, and repo-map current-work visibility patch. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -9,6 +9,7 @@ read_order :=
   live_use_first
   + context_second
   + control_third
+  + repo_map_when_auditing_structure
   + deep_archive_only_if_needed
 ```
 
@@ -26,6 +27,12 @@ Open these in order:
 8. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
 
 Use this path when the task is to orient to a real situation, not audit the whole repo.
+
+For repo-shape/current-work visibility, open:
+
+```text
+00_START_HERE/TRACE_REPO_MAP_v0_1.md
+```
 
 ## Current frame
 
@@ -183,6 +190,20 @@ Cross_Atlas_Pressure_Tests :=
 ```
 
 Plain version: more layers are not automatically better. The stack must clarify selection, harm, repair, constraint, or future-space; otherwise it is only prettier language.
+
+## Repo map / current-work visibility
+
+Open when auditing the repo shape, deciding what is live, or deciding what to archive:
+
+1. `00_START_HERE/TRACE_REPO_MAP_v0_1.md`
+
+Current rule:
+
+```trace
+unindexed_recent_work != archive_only
+```
+
+Plain version: the flat root folders (`core/`, `schemas/`, `cases/`, `tests/`, `prompts/`, `reviews/`) and recent current-state packet work should not be blindly archived. They need indexing or controlled relocation.
 
 ## Control notes
 
