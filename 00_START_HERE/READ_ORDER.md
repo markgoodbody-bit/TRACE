@@ -1,6 +1,6 @@
 # TRACE Read Order
 
-Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, life/biology/ecology atlas seed, agency/free-will/Mandelbrot atlas seed, cross-atlas pressure-test seed, and repo-map current-work visibility patch. Not validation. Not proof. Not governance certification.
+Status: simplified repo navigation after live-use front-door patch, v0.2.1 hidden-carrier / anomaly-split patch, pre-escalation guard, last-touch/local-fix sweep, real-use capture sheet, positive systems atlas seed, life/biology/ecology atlas seed, agency/free-will/Mandelbrot atlas seed, cross-atlas pressure-test seed, repo-map current-work visibility patch, and current technical work index. Not validation. Not proof. Not governance certification.
 
 This file tells a reader what to open first. It does not change the active TRACE spine.
 
@@ -10,6 +10,7 @@ read_order :=
   + context_second
   + control_third
   + repo_map_when_auditing_structure
+  + technical_index_when_reviewing_flat_tree
   + deep_archive_only_if_needed
 ```
 
@@ -32,6 +33,7 @@ For repo-shape/current-work visibility, open:
 
 ```text
 00_START_HERE/TRACE_REPO_MAP_v0_1.md
+00_START_HERE/TRACE_CURRENT_TECHNICAL_WORK_INDEX_v0_1.md
 ```
 
 ## Current frame
@@ -196,6 +198,7 @@ Plain version: more layers are not automatically better. The stack must clarify 
 Open when auditing the repo shape, deciding what is live, or deciding what to archive:
 
 1. `00_START_HERE/TRACE_REPO_MAP_v0_1.md`
+2. `00_START_HERE/TRACE_CURRENT_TECHNICAL_WORK_INDEX_v0_1.md`
 
 Current rule:
 
