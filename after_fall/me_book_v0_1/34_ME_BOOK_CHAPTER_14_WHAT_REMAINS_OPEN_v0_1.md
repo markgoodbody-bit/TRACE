@@ -126,7 +126,7 @@ It is continuity of responsibility.
 
 Systems often survive longer than the people who were harmed by them.
 
-Staff move on. Contracts change. software is replaced. Teams merge. Reviews close. Ministers change. Managers retire. Companies rename products. Policies are updated. Archives move. Passwords expire. Links break. The person grows tired.
+Staff move on. Contracts change. Software is replaced. Teams merge. Reviews close. Ministers change. Managers retire. Companies rename products. Policies are updated. Archives move. Passwords expire. Links break. The person grows tired.
 
 Forgetting has many helpers.
 
