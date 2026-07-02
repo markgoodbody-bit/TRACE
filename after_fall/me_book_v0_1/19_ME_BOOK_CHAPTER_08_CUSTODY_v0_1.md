@@ -114,7 +114,7 @@ Custody must protect against taking.
 
 It must also protect against decay.
 
-Records decay in ordinary ways. Links expire. phones break. people move. inboxes fill. passwords are forgotten. organisations close. staff leave. file formats change. names are misspelled. images lose context. screenshots become untraceable. evidence is separated from the sentence that explains why it mattered.
+Records decay in ordinary ways. Links expire. Phones break. people move. inboxes fill. passwords are forgotten. organisations close. staff leave. file formats change. names are misspelled. images lose context. screenshots become untraceable. evidence is separated from the sentence that explains why it mattered.
 
 A record without context can survive as an object and die as evidence.
 
