@@ -1,0 +1,359 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "After-Fall v0.6 Operational Carrier Field Schemas v0.1",
+  "status": "candidate_not_validation_not_permission",
+  "definitions": {
+    "EnforcementVector": {
+      "type": "object",
+      "required": [
+        "enforcement_status",
+        "can_compel_routing",
+        "can_sanction_nonresponse",
+        "can_halt_or_reverse_action"
+      ],
+      "properties": {
+        "enforcer_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "enforcement_power_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "legal",
+            "contractual",
+            "market",
+            "insurance",
+            "platform",
+            "technical",
+            "physical",
+            "publicity",
+            "none",
+            "unknown",
+            null
+          ]
+        },
+        "enforcement_evidence_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "enforcement_status": {
+          "type": "string",
+          "enum": [
+            "present",
+            "absent",
+            "pending",
+            "captured",
+            "unknown"
+          ]
+        },
+        "force_control_holder": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "can_compel_routing": {
+          "type": "boolean"
+        },
+        "can_sanction_nonresponse": {
+          "type": "boolean"
+        },
+        "can_halt_or_reverse_action": {
+          "type": "boolean"
+        },
+        "retaliation_protection_available": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CarrierMassProofs": {
+      "type": "object",
+      "properties": {
+        "money": {
+          "type": "object"
+        },
+        "time": {
+          "type": "object"
+        },
+        "evidence_custody": {
+          "type": "object"
+        },
+        "adjudication_custody": {
+          "type": "object"
+        },
+        "succession": {
+          "type": "object"
+        },
+        "price": {
+          "type": "object"
+        },
+        "force_control": {
+          "type": "object"
+        },
+        "attention_publicity": {
+          "type": "object"
+        },
+        "technical_lockout": {
+          "type": "object"
+        }
+      }
+    },
+    "IndependenceVector": {
+      "type": "object",
+      "required": [
+        "selected_by",
+        "paid_by",
+        "data_control",
+        "scope_control",
+        "time_control",
+        "publicity_control",
+        "contamination_flags"
+      ],
+      "properties": {
+        "selected_by": {
+          "type": "string"
+        },
+        "paid_by": {
+          "type": "string"
+        },
+        "data_control": {
+          "type": "string"
+        },
+        "scope_control": {
+          "type": "string"
+        },
+        "enforcement_power": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "witness_access": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "time_control": {
+          "type": "string"
+        },
+        "publicity_control": {
+          "type": "string"
+        },
+        "origin_cluster": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "infrastructure_funding_independence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contamination_flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ShadowLedgerEntry": {
+      "type": "object",
+      "required": [
+        "entry_id",
+        "category",
+        "omitted_scope",
+        "reason",
+        "timestamp"
+      ],
+      "properties": {
+        "entry_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "known_omission",
+            "foreseeable_blindspot",
+            "external_claimed_omission",
+            "aperture_limit",
+            "surprise_entry"
+          ]
+        },
+        "omitted_scope": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "beneficiary_of_omission": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "D_or_mu_effect": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "submitter": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "proof_hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publication_state": {
+          "type": "string",
+          "enum": [
+            "public",
+            "escrowed",
+            "sealed",
+            "private"
+          ]
+        }
+      }
+    },
+    "DirtyActionReceipt": {
+      "type": "object",
+      "required": [
+        "action_id",
+        "rationale",
+        "reversible_options_considered",
+        "challenger_notification_list",
+        "minimum_delay_seconds"
+      ],
+      "properties": {
+        "action_id": {
+          "type": "string"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "reversible_options_considered": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "challenger_notification_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "escrowed_fund_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "minimum_delay_seconds": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "why_not_clean": {
+          "type": "string"
+        }
+      }
+    },
+    "WitnessPackEvidenceItem": {
+      "type": "object",
+      "required": [
+        "item_id",
+        "item_type",
+        "quality_status",
+        "description",
+        "sensitivity",
+        "metadata_redaction_check"
+      ],
+      "properties": {
+        "item_id": {
+          "type": "string"
+        },
+        "item_type": {
+          "type": "string",
+          "enum": [
+            "observation",
+            "claim",
+            "inference",
+            "document",
+            "testimony",
+            "derived_analysis"
+          ]
+        },
+        "quality_status": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date_observed": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "storage_location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "extreme"
+          ]
+        },
+        "metadata_redaction_check": {
+          "type": "string",
+          "enum": [
+            "passed",
+            "failed",
+            "not_checked",
+            "not_applicable"
+          ]
+        },
+        "chain_of_custody": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}
