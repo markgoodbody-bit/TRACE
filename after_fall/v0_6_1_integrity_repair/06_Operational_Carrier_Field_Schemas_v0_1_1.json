@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trace/operational-carrier-field-schemas-v0-1-1.json",
+  "title": "Operational Carrier Field Schemas v0.1.1 Integrity Repair",
+  "status": "candidate_not_validation_not_permission_not_clearance",
+  "type": "object",
+  "$defs": {
+    "test_packet_manifest": {
+      "type": "object",
+      "required": ["target_artifact", "target_hash", "tester_identity", "tester_independence_vector", "pre_registered_null", "verdict_scope"],
+      "properties": {
+        "target_artifact": {"type": "string"},
+        "target_hash": {"type": "string"},
+        "symbols_used_must_resolve_against_target": {"type": "array", "items": {"type": "string"}},
+        "claims_under_test_quoted_not_paraphrased": {"type": "array", "items": {"type": "string"}},
+        "tester_identity": {"type": "string"},
+        "tester_independence_vector": {"type": "object"},
+        "pre_registered_null": {"type": "string"},
+        "verdict_scope": {"type": "string"},
+        "correlation_cluster_note": {"type": "string"},
+        "date": {"type": "string"}
+      }
+    },
+    "trusted_intermediary_record": {
+      "type": "object",
+      "required": ["intermediary_id", "role", "independence_vector", "capacity_limit", "succession_plan", "compelled_disclosure_risk"],
+      "properties": {
+        "intermediary_id": {"type": ["string", "null"]},
+        "role": {"enum": ["intake", "custody", "aggregation", "safe_contact", "review", "escalation", "other"]},
+        "selected_by": {"type": "string"},
+        "paid_by": {"type": ["string", "null"]},
+        "independence_vector": {"type": "object"},
+        "capacity_limit": {"type": "string"},
+        "burnout_or_overload_risk": {"enum": ["low", "medium", "high", "unknown"]},
+        "succession_plan": {"type": "string"},
+        "compelled_disclosure_risk": {"enum": ["low", "medium", "high", "unknown"]},
+        "capture_risk": {"type": "string"}
+      }
+    },
+    "compelled_disclosure_risk": {
+      "type": "object",
+      "required": ["holder_id", "jurisdiction", "likely_compulsion_route", "identity_material_at_risk", "content_material_at_risk", "mitigation", "residual_risk"],
+      "properties": {
+        "holder_id": {"type": "string"},
+        "jurisdiction": {"type": "string"},
+        "likely_compulsion_route": {"enum": ["subpoena", "court_order", "employment_pressure", "platform_request", "police_power", "unknown", "other"]},
+        "identity_material_at_risk": {"type": "boolean"},
+        "content_material_at_risk": {"type": "boolean"},
+        "mitigation": {"type": "string"},
+        "residual_risk": {"enum": ["low", "medium", "high", "unknown"]}
+      }
+    },
+    "non_discharge_ledger": {
+      "type": "object",
+      "required": ["ledger_location", "stream_id", "cross_case_index_available", "access_conditions"],
+      "properties": {
+        "ledger_location": {"enum": ["public_register", "escrowed_archive", "trusted_intermediary", "private_pack_only", "none"]},
+        "holder_independence_vector": {"type": "object"},
+        "stream_id": {"type": ["string", "null"]},
+        "cross_case_index_available": {"type": "boolean"},
+        "access_conditions": {"type": "string"},
+        "if_private_only": {"type": "string"}
+      }
+    },
+    "binding_route": {
+      "type": "object",
+      "required": ["rule_id", "binding_language", "binds_via", "claim_ceiling"],
+      "properties": {
+        "rule_id": {"type": "string"},
+        "binding_language": {"enum": ["must", "forbidden", "required", "blocked", "invalid", "other"]},
+        "binds_via": {"enum": ["law", "contract", "escrow", "technical_lockout", "public_register", "custodian_policy", "institutional_adoption", "none"]},
+        "if_none": {"type": "string"},
+        "claim_ceiling": {"type": "string"}
+      }
+    },
+    "small_N_risk": {
+      "type": "object",
+      "required": ["group_size_known_to_actor", "actor_can_infer_identity_from_pattern", "k_anonymity_floor", "aggregation_allowed"],
+      "properties": {
+        "group_size_known_to_actor": {"type": "string"},
+        "distinctive_location_or_timing": {"type": "boolean"},
+        "actor_can_infer_identity_from_pattern": {"type": "boolean"},
+        "k_anonymity_floor": {"type": "string"},
+        "aggregation_allowed": {"enum": ["yes", "no", "only_sealed", "affected_side_accepts_risk"]}
+      }
+    }
+  }
+}
