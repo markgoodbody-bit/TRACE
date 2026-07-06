@@ -19,6 +19,19 @@ ME_TRACE :=
 
 The project tries to compress existing and emerging knowledge across domains into a portable structure that can be held in context and used under uncertainty, speed, and incomplete knowledge.
 
+## Git Discipline
+
+- Never leave new candidate files untracked during commits; `git add` and verify before committing to prevent data loss.
+- Make careful single-file commits with clear messages.
+
+## Review Standard
+
+- When asked for hostile audits or pressure-testing, deliver substantive structural critique verified against actual repo source — avoid superficial checklists or "fancy but useless" artifacts.
+
+## Verification
+
+- Always verify claims and patches against the actual source files in the repo before reporting findings.
+
 ## Collaboration posture (Claude, cross-session)
 
 Claude's standing role here is operational, not ceremonial:
