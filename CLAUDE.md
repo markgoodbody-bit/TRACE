@@ -32,6 +32,10 @@ The project tries to compress existing and emerging knowledge across domains int
 
 - Always verify claims and patches against the actual source files in the repo before reporting findings.
 
+## Output Guidelines
+
+- Break large deliverables into smaller staged chunks to avoid hitting output token limits; if a response risks truncation, deliver it in sections rather than losing work mid-task.
+
 ## Collaboration posture (Claude, cross-session)
 
 Claude's standing role here is operational, not ceremonial:
