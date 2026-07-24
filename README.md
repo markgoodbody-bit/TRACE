@@ -9,5 +9,6 @@ TRACE is not a moral authority, policy checklist, certification system, or finis
 Start here:
 
 - `TRACE.pdf`
+- `TRACE_FORMAL_SEED_v0_2_5.md` — the latest formal TRACE seed, plain-Markdown and machine-readable
 - `PROJECT/PROJECT.md`
 - `PROJECT/MAP.md`
