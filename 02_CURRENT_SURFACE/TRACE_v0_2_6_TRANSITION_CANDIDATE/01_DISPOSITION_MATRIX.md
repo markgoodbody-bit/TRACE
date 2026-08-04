@@ -34,11 +34,11 @@ A finding may have one primary destination and supporting secondary destinations
 
 ## Core repair admitted
 
-The candidate admits only this formal-semantic repair family:
+The candidate admits one joined formal-semantic repair family:
 
 ```text
-TARGET_SET_SELECTION
-IS_APERTURE_BEARING
+TARGET_SET_SELECTION_IS_APERTURE_BEARING
+ACCOUNTING_AND_COVERAGE_ARE_APERTURE_RELATIVE
 ```
 
 Consequences:
@@ -55,9 +55,12 @@ This uses existing TRACE objects and does not require a new node type, edge type
 
 ```text
 MINIMUM_SCHEMA_REPAIR = NONE
+MINIMUM_SCHEMA_SHAPE_CHANGE = FALSE
+VERSION_STRATEGY = SYNCHRONIZED_IDENTIFIER_BUMP
+TARGET_PACKET_SCHEMA = TRACE-GRAPH-0.2.6
 ```
 
-The eventual v0.2.6 compilation may update version identifiers, but the candidate proposes no shape change and no new required property.
+The eventual v0.2.6 compilation advances the formal and packet identifiers together while retaining the v0.2.5 minimum-schema shape and required properties.
 
 ## Checker-external set retained
 
