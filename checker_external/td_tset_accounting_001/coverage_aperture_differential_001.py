@@ -73,7 +73,7 @@ INDEPENDENT_APERTURE["coverage_evidence"] = {
     "assessment_status": "ASSESS",
     "information_transition_ref": "n_info_ritual",
     "required_target_refs": ["n_entity_field_team"],
-    "comparison_basis_claim_refs": ["c_omission", "c_ritual_scope"],
+    "comparison_basis_claim_refs": ["c_record", "c_omission", "c_ritual_scope"],
     "target_path_edge_refs": {
         "n_entity_field_team": [
             "e_ritual_observes_map",
