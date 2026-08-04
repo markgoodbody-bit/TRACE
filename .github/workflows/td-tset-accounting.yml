@@ -30,9 +30,14 @@ jobs:
           python checker_external/td_tset_accounting_001/test_integrity.py
           python checker_external/td_tset_accounting_001/test_run_suite.py
           python checker_external/td_tset_accounting_001/test_applied_scene.py
+          python checker_external/td_tset_accounting_001/test_search_coverage.py
+          python checker_external/td_tset_accounting_001/test_search_coverage_integrity.py
+          python checker_external/td_tset_accounting_001/test_run_search_coverage.py
       - name: Run fixture bundles
         run: |
           python checker_external/td_tset_accounting_001/checker.py checker_external/td_tset_accounting_001/fixtures.json --all
           python checker_external/td_tset_accounting_001/integrity.py checker_external/td_tset_accounting_001/fixtures_hostile.json --all
           python checker_external/td_tset_accounting_001/run_suite.py regress
           python checker_external/td_tset_accounting_001/minimum_schema.py
+          python checker_external/td_tset_accounting_001/search_coverage.py
+          python checker_external/td_tset_accounting_001/run_search_coverage.py regress
