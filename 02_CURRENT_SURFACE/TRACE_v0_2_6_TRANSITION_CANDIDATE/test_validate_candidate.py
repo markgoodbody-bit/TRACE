@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 import unittest
 from copy import deepcopy
-from pathlib import Path
 
 from validate_candidate import (
     DEFAULT_BASE_SEED,
@@ -39,6 +38,10 @@ class TraceV026TransitionCandidateTests(unittest.TestCase):
         self.assertEqual("PASS", result.status)
         self.assertEqual([], result.errors)
         self.assertEqual(["F03", "F04"], result.details["primary_core_repairs"])
+        self.assertEqual("TRACE-GRAPH-0.2.6", result.details["target_packet_schema"])
+        self.assertEqual(
+            "SYNCHRONIZED_IDENTIFIER_BUMP", result.details["version_strategy"]
+        )
 
     def test_missing_source_anchor_fails(self) -> None:
         manifest = deepcopy(self.manifest)
@@ -75,6 +78,20 @@ class TraceV026TransitionCandidateTests(unittest.TestCase):
         result = self.validate(manifest)
         self.assertEqual("FAIL", result.status)
         self.assertTrue(any("F03 and F04" in error for error in result.errors))
+
+    def test_unsynchronised_version_strategy_fails(self) -> None:
+        manifest = deepcopy(self.manifest)
+        manifest["version_strategy"] = "FORMAL_ONLY"
+        result = self.validate(manifest)
+        self.assertEqual("FAIL", result.status)
+        self.assertTrue(any("SYNCHRONIZED_IDENTIFIER_BUMP" in error for error in result.errors))
+
+    def test_wrong_packet_schema_target_fails(self) -> None:
+        manifest = deepcopy(self.manifest)
+        manifest["target_packet_schema"] = "TRACE-GRAPH-0.2.5"
+        result = self.validate(manifest)
+        self.assertEqual("FAIL", result.status)
+        self.assertIn("target_packet_schema must be TRACE-GRAPH-0.2.6", result.errors)
 
     def test_release_gate_cannot_be_dropped(self) -> None:
         manifest = deepcopy(self.manifest)
