@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
-"""Validate the bounded TRACE v0.2.6 transition candidate."""
+"""Check TRACE v0.2.6 transition-package integrity and declared contract.
+
+This executable does not validate the truth, adequacy, or operational effect of
+the candidate's formal argument. Its scope is intentionally limited to package
+integrity, bounded manifest closure, source anchors, and release gates.
+"""
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Mapping
@@ -13,28 +20,42 @@ CANDIDATE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = CANDIDATE_DIR.parents[1]
 DEFAULT_MANIFEST = CANDIDATE_DIR / "candidate_manifest.json"
 DEFAULT_BASE_SEED = REPO_ROOT / "TRACE_FORMAL_SEED_v0_2_5.md"
+DEFAULT_MATRIX = CANDIDATE_DIR / "01_DISPOSITION_MATRIX.md"
 DEFAULT_PATCH = CANDIDATE_DIR / "02_NARROW_FORMAL_PATCH.md"
 DEFAULT_REGRESSION = CANDIDATE_DIR / "03_REGRESSION_CONTRACT.md"
 DEFAULT_README = CANDIDATE_DIR / "README.md"
 
+CHECK_SCOPE = "PACKAGE_INTEGRITY_AND_DECLARED_CONTRACT_ONLY"
 EXPECTED_FINDINGS = {f"F{number:02d}" for number in range(1, 13)}
 EXPECTED_PRIMARY_CORE = {"F03", "F04"}
-EXPECTED_PATCH_TOKENS = {
-    "TARGET_SET != WORLD_SCOPE",
-    "INFORMATION_TRANSITION_REPRESENTED",
-    "DIVERGENT_READINGS != AUTHORITY",
-    "ROUTE_TO_BRAKE != CORRECTION_COMPLETED",
-    "record_target_set_apertures_and_alternatives(R)",
-    "Every material search-coverage claim references a target-set aperture",
-    "TRACE-GRAPH-0.2.5               -> TRACE-GRAPH-0.2.6",
-    "minimum_schema_shape_change: false",
-}
 EXPECTED_REGRESSION_IDS = {
     *(f"R{number:02d}" for number in range(1, 13)),
     *(f"V26-{letter}" for letter in "ABCDEFGH"),
 }
+EXPECTED_PATCH_SECTIONS = list("ABCDEFG")
 EXPECTED_VERSION_STRATEGY = "SYNCHRONIZED_IDENTIFIER_BUMP"
 EXPECTED_PACKET_SCHEMA = "TRACE-GRAPH-0.2.6"
+EXPECTED_DIGEST_ARTIFACTS = {
+    "01_DISPOSITION_MATRIX.md",
+    "02_NARROW_FORMAL_PATCH.md",
+    "03_REGRESSION_CONTRACT.md",
+}
+EXPECTED_PATCH_PHRASES = {
+    "TARGET_SET != WORLD_SCOPE",
+    "INFORMATION_TRANSITION_REPRESENTED != OUTWARD_SEARCH_COVERAGE",
+    "DIVERGENT_READINGS != AUTHORITY",
+    "ROUTE_TO_BRAKE != CORRECTION_COMPLETED",
+    "record_target_set_apertures_and_alternatives(R)",
+    "Every material search-coverage claim references a target-set aperture",
+    "TRACE-GRAPH-0.2.5 -> TRACE-GRAPH-0.2.6",
+    "minimum_schema_shape_change: false",
+}
+EXPECTED_MATRIX_PHRASES = {
+    "## Containment test for F03 and F04",
+    "target_set_source_ref",
+    "known_omitted_target_categories",
+    "If a full-seed compilation cannot preserve that specialization using existing objects",
+}
 
 
 @dataclass(slots=True)
@@ -47,11 +68,25 @@ class ValidationResult:
     def to_dict(self) -> dict[str, Any]:
         return {
             "candidate_id": "TRACE-V0.2.6-TRANSITION-CANDIDATE-001",
+            "check_scope": CHECK_SCOPE,
             "status": self.status,
             "errors": self.errors,
             "warnings": self.warnings,
             "details": self.details,
         }
+
+
+def normalize_text(value: str) -> str:
+    """Collapse all Unicode whitespace for non-semantic integrity comparison."""
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def normalized_sha256(value: str) -> str:
+    return hashlib.sha256(normalize_text(value).encode("utf-8")).hexdigest()
+
+
+def _contains_normalized(text: str, phrase: str) -> bool:
+    return normalize_text(phrase) in normalize_text(text)
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -61,10 +96,36 @@ def _load_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def _extract_regression_sections(text: str) -> dict[str, str]:
+    lines = text.splitlines()
+    starts: list[tuple[int, str]] = []
+    pattern = re.compile(r"^###\s+(R\d{2}|V26-[A-H])\b")
+    for index, line in enumerate(lines):
+        match = pattern.match(line)
+        if match:
+            starts.append((index, match.group(1)))
+
+    sections: dict[str, str] = {}
+    for offset, (start, section_id) in enumerate(starts):
+        end = starts[offset + 1][0] if offset + 1 < len(starts) else len(lines)
+        sections[section_id] = "\n".join(lines[start + 1 : end]).strip()
+    return sections
+
+
+def _extract_patch_sections(text: str) -> list[str]:
+    pattern = re.compile(r"^##\s+Patch\s+([A-G])\b")
+    return [
+        match.group(1)
+        for line in text.splitlines()
+        if (match := pattern.match(line)) is not None
+    ]
+
+
 def validate_manifest(
     manifest: Mapping[str, Any],
     *,
     base_seed_text: str,
+    matrix_text: str,
     patch_text: str,
     regression_text: str,
     readme_text: str,
@@ -76,6 +137,8 @@ def validate_manifest(
         errors.append("candidate_id mismatch")
     if manifest.get("status") != "WORKING_CANDIDATE":
         errors.append("status must remain WORKING_CANDIDATE")
+    if manifest.get("check_scope") != CHECK_SCOPE:
+        errors.append(f"check_scope must be {CHECK_SCOPE}")
     if manifest.get("target_formal_version") != "0.2.6":
         errors.append("target_formal_version must be 0.2.6")
     if manifest.get("target_packet_schema") != EXPECTED_PACKET_SCHEMA:
@@ -150,31 +213,79 @@ def validate_manifest(
     if missing_anchors:
         errors.append("base seed is missing source anchors: " + ", ".join(missing_anchors))
 
-    missing_patch_tokens = sorted(
-        token for token in EXPECTED_PATCH_TOKENS if token not in patch_text
-    )
-    if missing_patch_tokens:
-        errors.append("narrow patch is missing required tokens: " + ", ".join(missing_patch_tokens))
+    containment = manifest.get("containment_test")
+    if not isinstance(containment, dict):
+        errors.append("containment_test must be an object")
+    else:
+        if containment.get("finding_ids") != ["F03", "F04"]:
+            errors.append("containment_test finding_ids must be exactly F03 and F04")
+        for key in ("v025_general_rules", "nonduplicative_specialization"):
+            values = containment.get(key)
+            if not isinstance(values, list) or len(values) < 3 or not all(
+                isinstance(item, str) and item.strip() for item in values
+            ):
+                errors.append(f"containment_test {key} must contain at least three strings")
 
-    missing_regression_ids = sorted(
-        token for token in EXPECTED_REGRESSION_IDS if token not in regression_text
-    )
-    if missing_regression_ids:
+    for phrase in EXPECTED_MATRIX_PHRASES:
+        if not _contains_normalized(matrix_text, phrase):
+            errors.append(f"disposition matrix is missing containment content: {phrase}")
+
+    patch_sections = _extract_patch_sections(patch_text)
+    if patch_sections != EXPECTED_PATCH_SECTIONS:
         errors.append(
-            "regression contract is missing ids: " + ", ".join(missing_regression_ids)
+            "patch section closure mismatch; "
+            f"expected={EXPECTED_PATCH_SECTIONS}, observed={patch_sections}"
         )
+    for phrase in EXPECTED_PATCH_PHRASES:
+        if not _contains_normalized(patch_text, phrase):
+            errors.append(f"narrow patch is missing normalized phrase: {phrase}")
+
+    regression_sections = _extract_regression_sections(regression_text)
+    observed_regression_ids = set(regression_sections)
+    if observed_regression_ids != EXPECTED_REGRESSION_IDS:
+        missing = sorted(EXPECTED_REGRESSION_IDS - observed_regression_ids)
+        extra = sorted(observed_regression_ids - EXPECTED_REGRESSION_IDS)
+        errors.append(f"regression section closure mismatch; missing={missing}, extra={extra}")
+    for section_id, body in regression_sections.items():
+        word_count = len(re.findall(r"\b[\w-]+\b", body))
+        if word_count < 8:
+            errors.append(f"{section_id} regression body is substantively empty")
+
+    digest_map = manifest.get("normalized_artifact_sha256")
+    if not isinstance(digest_map, dict) or set(digest_map) != EXPECTED_DIGEST_ARTIFACTS:
+        errors.append(
+            "normalized_artifact_sha256 must contain exactly: "
+            + ", ".join(sorted(EXPECTED_DIGEST_ARTIFACTS))
+        )
+        digest_map = {}
+
+    artifact_texts = {
+        "01_DISPOSITION_MATRIX.md": matrix_text,
+        "02_NARROW_FORMAL_PATCH.md": patch_text,
+        "03_REGRESSION_CONTRACT.md": regression_text,
+    }
+    for name, text in artifact_texts.items():
+        expected_digest = digest_map.get(name)
+        observed_digest = normalized_sha256(text)
+        if expected_digest != observed_digest:
+            errors.append(
+                f"normalized artifact digest mismatch for {name}; "
+                f"expected={expected_digest}, observed={observed_digest}"
+            )
 
     for forbidden in ("Status: **RELEASED**", "Status: **CANON**", "validated and ready"):
         if forbidden in readme_text:
             errors.append(f"README contains forbidden promotion: {forbidden}")
 
-    for required_readme_token in (
+    for required_readme_phrase in (
         "formal seed: 0.2.6",
         "packet schema: TRACE-GRAPH-0.2.6",
         "minimum schema shape: unchanged from 0.2.5",
+        "check scope: PACKAGE_INTEGRITY_AND_DECLARED_CONTRACT_ONLY",
+        "green CI != semantic validity",
     ):
-        if required_readme_token not in readme_text:
-            errors.append(f"README is missing version boundary: {required_readme_token}")
+        if not _contains_normalized(readme_text, required_readme_phrase):
+            errors.append(f"README is missing scope/version boundary: {required_readme_phrase}")
 
     release_gate = manifest.get("release_gate")
     if not isinstance(release_gate, dict) or not all(
@@ -196,6 +307,7 @@ def validate_manifest(
         errors=errors,
         warnings=warnings,
         details={
+            "check_scope": manifest.get("check_scope"),
             "finding_count": len(findings),
             "primary_core_repairs": sorted(primary_core),
             "source_anchor_count": len(anchors),
@@ -203,6 +315,8 @@ def validate_manifest(
             "version_strategy": manifest.get("version_strategy"),
             "minimum_schema_shape_change": manifest.get("minimum_schema_shape_change"),
             "compiled_seed_present": manifest.get("compiled_seed_present"),
+            "artifact_digests_checked": sorted(artifact_texts),
+            "regression_sections_checked": len(regression_sections),
         },
     )
 
@@ -211,6 +325,7 @@ def validate_paths(
     *,
     manifest_path: Path = DEFAULT_MANIFEST,
     base_seed_path: Path = DEFAULT_BASE_SEED,
+    matrix_path: Path = DEFAULT_MATRIX,
     patch_path: Path = DEFAULT_PATCH,
     regression_path: Path = DEFAULT_REGRESSION,
     readme_path: Path = DEFAULT_README,
@@ -218,6 +333,7 @@ def validate_paths(
     try:
         manifest = _load_json(manifest_path)
         base_seed_text = base_seed_path.read_text(encoding="utf-8")
+        matrix_text = matrix_path.read_text(encoding="utf-8")
         patch_text = patch_path.read_text(encoding="utf-8")
         regression_text = regression_path.read_text(encoding="utf-8")
         readme_text = readme_path.read_text(encoding="utf-8")
@@ -227,6 +343,7 @@ def validate_paths(
     return validate_manifest(
         manifest,
         base_seed_text=base_seed_text,
+        matrix_text=matrix_text,
         patch_text=patch_text,
         regression_text=regression_text,
         readme_text=readme_text,
