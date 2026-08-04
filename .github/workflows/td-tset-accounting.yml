@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "checker_external/td_tset_accounting_001/**"
+      - "TRACE_FORMAL_SEED_v0_2_5.md"
       - ".github/workflows/td-tset-accounting.yml"
   workflow_dispatch:
 
@@ -19,13 +20,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install test dependency
+        run: |
+          python -m pip install --disable-pip-version-check \
+            -r checker_external/td_tset_accounting_001/requirements-test.txt
       - name: Run unit regressions
         run: |
           python checker_external/td_tset_accounting_001/test_checker.py
           python checker_external/td_tset_accounting_001/test_integrity.py
           python checker_external/td_tset_accounting_001/test_run_suite.py
+          python checker_external/td_tset_accounting_001/test_applied_scene.py
       - name: Run fixture bundles
         run: |
           python checker_external/td_tset_accounting_001/checker.py checker_external/td_tset_accounting_001/fixtures.json --all
           python checker_external/td_tset_accounting_001/integrity.py checker_external/td_tset_accounting_001/fixtures_hostile.json --all
           python checker_external/td_tset_accounting_001/run_suite.py regress
+          python checker_external/td_tset_accounting_001/minimum_schema.py
