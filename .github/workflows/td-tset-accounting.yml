@@ -31,6 +31,7 @@ jobs:
           python checker_external/td_tset_accounting_001/test_run_suite.py
           python checker_external/td_tset_accounting_001/test_applied_scene.py
           python checker_external/td_tset_accounting_001/test_search_coverage.py
+          python checker_external/td_tset_accounting_001/test_search_coverage_integrity.py
       - name: Run fixture bundles
         run: |
           python checker_external/td_tset_accounting_001/checker.py checker_external/td_tset_accounting_001/fixtures.json --all
