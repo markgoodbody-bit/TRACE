@@ -1,0 +1,65 @@
+name: TRACE v0.2.6 falsify x100
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-2-6-falsify-x100
+    paths:
+      - "TRACE_FORMAL_SEED_v0_2_5.md"
+      - "TRACE_FORMAL_SEED_v0_2_6.md"
+      - "TRACE_v0_2_6_BASELINE_RELEASE.md"
+      - "README.md"
+      - "TRACE.pdf"
+      - "tools/compile_trace_v026.py"
+      - "falsification/**"
+      - ".github/workflows/trace-v026-falsify-x100.yml"
+  pull_request:
+    paths:
+      - "TRACE_FORMAL_SEED_v0_2_5.md"
+      - "TRACE_FORMAL_SEED_v0_2_6.md"
+      - "TRACE_v0_2_6_BASELINE_RELEASE.md"
+      - "README.md"
+      - "TRACE.pdf"
+      - "tools/compile_trace_v026.py"
+      - "falsification/**"
+      - ".github/workflows/trace-v026-falsify-x100.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run 100 falsification and drift probes
+        run: |
+          python falsification/trace_v026_falsify_x100.py \
+            --json-out /tmp/trace-v026-falsify-x100.json
+
+      - name: Verify audit instrument closure
+        run: python falsification/trace_v026_falsify_x100.py --self-test
+
+      - name: Check whitespace and diff integrity
+        run: git diff --check
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-v026-falsify-x100-report
+          path: /tmp/trace-v026-falsify-x100.json
+          if-no-files-found: error
+
+      - name: Claim boundary
+        run: |
+          echo "Green workflow means the 100 probes executed and the mutation detector closed."
+          echo "It does not mean TRACE survived every probe or is validated."
