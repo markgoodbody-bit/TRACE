@@ -1,4 +1,4 @@
-name: TRACE v0.2.6 transition candidate
+name: TRACE v0.2.6 transition package integrity
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  package-integrity:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -20,9 +20,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate transition package
+      - name: Check transition package integrity
         run: |
           python 02_CURRENT_SURFACE/TRACE_v0_2_6_TRANSITION_CANDIDATE/validate_candidate.py
-      - name: Run transition regressions
+      - name: Run hostile package-integrity tests
         run: |
           python 02_CURRENT_SURFACE/TRACE_v0_2_6_TRANSITION_CANDIDATE/test_validate_candidate.py
