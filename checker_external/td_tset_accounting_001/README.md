@@ -95,9 +95,9 @@ The packet asserts that a class is unavailable, unresolved, or otherwise unrepre
 
 ### `TD-TSET-REFERENCE-MISMATCH`
 
-A transition-set bucket contains a missing node, a non-`TRANSITION` node, or a `TRANSITION` node whose `transition_mode` does not match the class being assessed.
+A transition-set bucket contains a missing node, a non-`TRANSITION` node, or a `TRANSITION` node whose `transition_mode` does not match the class being assessed. The hostile integrity pass also uses this code when a checker-evidence basis claim does not resolve inside the packet.
 
-## Regression fixtures
+## Regression fixtures A-F
 
 | Fixture | Expected result |
 |---|---|
@@ -108,6 +108,19 @@ A transition-set bucket contains a missing node, a non-`TRANSITION` node, or a `
 | E — false excuse | FAIL: `TD-TSET-UNSUPPORTED-STATUS` |
 | F — hidden-world entity | PASS with no checker failure; world completeness remains unknown |
 
+## Hostile integrity pass G-J
+
+The hostile pass is implemented separately in `integrity.py` so its additional assumptions remain visible. It checks the integrity of the checker comparison envelope and contradictions between that envelope and represented transition nodes. It does not independently derive liveness from route or clock nodes.
+
+| Fixture | Expected result |
+|---|---|
+| G — missing, non-transition, and wrong-mode references | FAIL: `TD-TSET-REFERENCE-MISMATCH` |
+| H — assessment basis claim does not resolve | FAIL: `TD-TSET-REFERENCE-MISMATCH` |
+| I — transition says AVAILABLE while evidence says UNAVAILABLE | FAIL: `TD-TSET-UNSUPPORTED-STATUS` |
+| J — route and clock exist but no class assessment is supplied | PASS; INFORMATION remains `NOT_ASSESSABLE` |
+
+Fixture J is an explicit capability ceiling. The checker depends on its declared comparison envelope. It does not silently promote packet structure into a claim that a class is materially live.
+
 ## Run
 
 From the repository root:
@@ -116,14 +129,18 @@ From the repository root:
 python checker_external/td_tset_accounting_001/test_checker.py
 python checker_external/td_tset_accounting_001/checker.py \
   checker_external/td_tset_accounting_001/fixtures.json --all
+
+python checker_external/td_tset_accounting_001/test_integrity.py
+python checker_external/td_tset_accounting_001/integrity.py \
+  checker_external/td_tset_accounting_001/fixtures_hostile.json --all
 ```
 
-The CLI returns:
+The CLIs return:
 
-- exit `0` for checker PASS;
-- exit `1` for checker FAIL;
+- exit `0` for checker PASS or a fixture bundle matching expected results;
+- exit `1` for checker FAIL or fixture mismatch;
 - exit `2` for unusable checker input.
 
 ## Candidate ceiling
 
-This candidate has only been exercised against the six bounded regression fixtures. It has not shown decision advantage, domain validity, resistance to sophisticated ritual compliance, or usefulness in live deployments. Retain it as a working candidate until broader fixtures reveal whether it produces false failures or can be satisfied by boilerplate at negligible cost.
+The base suite has seven passing tests over fixtures A-F. The hostile suite adds five passing tests over fixtures G-J. These remain bounded regression fixtures, not evidence of decision advantage, domain validity, resistance to sophisticated ritual compliance, or usefulness in live deployments. Retain the implementation as a draft working candidate until broader scenes reveal whether it produces false failures or can be satisfied by boilerplate at negligible cost.
