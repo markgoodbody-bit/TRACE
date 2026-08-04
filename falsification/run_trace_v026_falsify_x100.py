@@ -61,6 +61,24 @@ def replace_probe(
     raise ValueError(f"probe not found: {probe_id}")
 
 
+def contains_affirmative_instruction(patch_text: str) -> bool:
+    forbidden_prefixes = (
+        "trace instructs proceeding",
+        "trace authorises proceeding",
+        "trace authorizes proceeding",
+        "the selected transition should proceed",
+        "the selected transition must proceed",
+        "proceed with the selected transition",
+        "authorise the selected transition",
+        "authorize the selected transition",
+    )
+    for line in patch_text.splitlines():
+        normalized = line.strip().lower()
+        if any(normalized.startswith(prefix) for prefix in forbidden_prefixes):
+            return True
+    return False
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--json-out", type=Path)
@@ -91,8 +109,8 @@ def main() -> int:
         )
 
     # The inserted prose contains the negative sentence “do not establish that …
-    # should proceed”. The earlier regex treated that ceiling as an instruction.
-    # Check for affirmative instruction forms instead.
+    # should proceed”. Check only affirmative instruction lines, not quoted or
+    # subordinate non-entailments.
     patch_text = "\n".join(
         [
             audit.section(v26, "### [5.3.1] Target-set aperture", "## [5.4] State"),
@@ -100,18 +118,11 @@ def main() -> int:
             audit.section(v26, "Divergent structural readings do not create selection authority.", "# [11]"),
         ]
     )
-    forbidden_affirmative = (
-        "TRACE instructs proceeding",
-        "TRACE authorises proceeding",
-        "TRACE authorizes proceeding",
-        "the selected transition should proceed.",
-        "the selected transition must proceed.",
-    )
     replace_probe(
         probes,
         "A15",
         "admitted inserted prose contains no affirmative proceed or authorise instruction",
-        lambda: not any(token in patch_text for token in forbidden_affirmative),
+        lambda: not contains_affirmative_instruction(patch_text),
     )
 
     results = [audit.run_probe(probe) for probe in probes]
