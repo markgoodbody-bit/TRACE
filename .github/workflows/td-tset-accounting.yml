@@ -1,0 +1,31 @@
+name: TD-TSET accounting candidate
+
+on:
+  pull_request:
+    paths:
+      - "checker_external/td_tset_accounting_001/**"
+      - ".github/workflows/td-tset-accounting.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run unit regressions
+        run: |
+          python checker_external/td_tset_accounting_001/test_checker.py
+          python checker_external/td_tset_accounting_001/test_integrity.py
+          python checker_external/td_tset_accounting_001/test_run_suite.py
+      - name: Run fixture bundles
+        run: |
+          python checker_external/td_tset_accounting_001/checker.py checker_external/td_tset_accounting_001/fixtures.json --all
+          python checker_external/td_tset_accounting_001/integrity.py checker_external/td_tset_accounting_001/fixtures_hostile.json --all
+          python checker_external/td_tset_accounting_001/run_suite.py regress
