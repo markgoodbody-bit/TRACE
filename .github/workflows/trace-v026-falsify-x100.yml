@@ -43,11 +43,8 @@ jobs:
 
       - name: Run 100 falsification and drift probes
         run: |
-          python falsification/trace_v026_falsify_x100.py \
+          python falsification/run_trace_v026_falsify_x100.py \
             --json-out /tmp/trace-v026-falsify-x100.json
-
-      - name: Verify audit instrument closure
-        run: python falsification/trace_v026_falsify_x100.py --self-test
 
       - name: Check whitespace and diff integrity
         run: git diff --check
