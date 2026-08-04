@@ -121,26 +121,54 @@ The hostile pass is implemented separately in `integrity.py` so its additional a
 
 Fixture J is an explicit capability ceiling. The checker depends on its declared comparison envelope. It does not silently promote packet structure into a claim that a class is materially live.
 
-## Run
+## Single orchestration entry point
+
+`run_suite.py` runs both passes without merging their failure codes, result objects, or epistemic ceilings.
+
+Check one envelope through both passes:
+
+```bash
+python checker_external/td_tset_accounting_001/run_suite.py check envelope.json
+```
+
+Run both bounded regression bundles:
+
+```bash
+python checker_external/td_tset_accounting_001/run_suite.py regress
+```
+
+The combined status reports whether either pass failed or encountered unusable input. It is not a replacement semantic verdict. The output retains `accounting_result` and `integrity_result` as separate objects and explicitly records that failure codes are not merged.
+
+The orchestration regressions preserve complementary failure behavior:
+
+- Fixture D fails accounting while hostile integrity remains PASS.
+- Fixture I passes base accounting while hostile integrity detects the represented-status contradiction.
+- A missing bundle produces `INPUT_ERROR` for that pass without suppressing execution of the other bundle.
+
+## Run all tests
 
 From the repository root:
 
 ```bash
 python checker_external/td_tset_accounting_001/test_checker.py
+python checker_external/td_tset_accounting_001/test_integrity.py
+python checker_external/td_tset_accounting_001/test_run_suite.py
+
 python checker_external/td_tset_accounting_001/checker.py \
   checker_external/td_tset_accounting_001/fixtures.json --all
-
-python checker_external/td_tset_accounting_001/test_integrity.py
 python checker_external/td_tset_accounting_001/integrity.py \
   checker_external/td_tset_accounting_001/fixtures_hostile.json --all
+python checker_external/td_tset_accounting_001/run_suite.py regress
 ```
 
 The CLIs return:
 
-- exit `0` for checker PASS or a fixture bundle matching expected results;
+- exit `0` for checker PASS or regression bundles matching expected results;
 - exit `1` for checker FAIL or fixture mismatch;
 - exit `2` for unusable checker input.
 
+The path-scoped GitHub Actions workflow `.github/workflows/td-tset-accounting.yml` runs the three unit suites and all three fixture commands on pull-request changes to this candidate.
+
 ## Candidate ceiling
 
-The base suite has seven passing tests over fixtures A-F. The hostile suite adds five passing tests over fixtures G-J. These remain bounded regression fixtures, not evidence of decision advantage, domain validity, resistance to sophisticated ritual compliance, or usefulness in live deployments. Retain the implementation as a draft working candidate until broader scenes reveal whether it produces false failures or can be satisfied by boilerplate at negligible cost.
+The base suite has seven tests over fixtures A-F. The hostile suite adds five tests over fixtures G-J. The orchestration suite adds five tests for result separation, complementary failures, regression execution, and partial input failure. These remain bounded regression fixtures, not evidence of decision advantage, domain validity, resistance to sophisticated ritual compliance, or usefulness in live deployments. Retain the implementation as a draft working candidate until broader scenes reveal whether it produces false failures or can be satisfied by boilerplate at negligible cost.
