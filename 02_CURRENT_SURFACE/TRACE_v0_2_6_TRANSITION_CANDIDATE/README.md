@@ -25,9 +25,9 @@ The candidate does not copy every checker result into TRACE. It proposes the sma
 
 ## Current disposition
 
-One finding crosses the formal-seed boundary:
+One repair family crosses the formal-seed boundary:
 
-> **Selection of the target set used for search, comparison, or coverage assessment is itself aperture-bearing.**
+> **Selection of the target set used for search, comparison, or coverage assessment is itself aperture-bearing, and any accounting or coverage result is relative to that declared aperture.**
 
 TRACE v0.2.5 already represents apertures, blindspots, transition-set symmetry, layer handoff, routes, brakes, commitment receipts and anti-clearance limits. The new evidence does not justify new primitives for search coverage, authority legitimacy, contestability, brake effectiveness, or policy quality.
 
@@ -46,22 +46,29 @@ The v0.2.6 candidate therefore proposes:
 ## Candidate package
 
 - `01_DISPOSITION_MATRIX.md` — destination of each finding.
-- `02_NARROW_FORMAL_PATCH.md` — exact semantic patch proposed for compilation into a full v0.2.6 seed.
+- `02_NARROW_FORMAL_PATCH.md` — exact semantic and identifier patch proposed for compilation into a full v0.2.6 seed.
 - `03_REGRESSION_CONTRACT.md` — invariants and adversarial cases the compiled seed must preserve.
 - `candidate_manifest.json` — machine-readable candidate state.
-- `validate_candidate.py` — verifies the manifest, source anchors and disposition closure.
+- `validate_candidate.py` — verifies the manifest, source anchors, version strategy and disposition closure.
 - `test_validate_candidate.py` — negative and positive regressions for the transition package.
 
 ## Version posture
 
 This is a **transition candidate**, not yet the compiled full formal seed.
 
-A later compilation step may produce `TRACE_FORMAL_SEED_v0_2_6.md` only after the narrow patch survives review. At compilation:
+The version strategy is fixed:
 
-- the formal version becomes `0.2.6`;
-- the minimum schema identifier may advance to `TRACE-GRAPH-0.2.6` solely to identify the revised semantic contract;
-- the minimum schema shape remains unchanged unless review finds a concrete shape defect;
-- checker-external rules remain outside the embedded minimum validator.
+```text
+formal seed: 0.2.6
+packet schema: TRACE-GRAPH-0.2.6
+minimum schema shape: unchanged from 0.2.5
+```
+
+At full compilation, update the formal seed title/version, canonical graph constants, embedded schema `$id` and title, pseudocode initialiser and validator target. No new required property or controlled vocabulary is added.
+
+A v0.2.5 packet is not silently relabelled as v0.2.6. Compatibility is structural, but version identity remains explicit.
+
+Checker-external rules remain outside the embedded minimum validator.
 
 A version-label change is not evidence that the system is validated or operationally effective.
 
