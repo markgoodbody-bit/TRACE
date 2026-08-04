@@ -52,7 +52,7 @@ jobs:
       - name: Commit generated full seed
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- TRACE_FORMAL_SEED_v0_2_6.md; then
+          if [ -z "$(git status --porcelain -- TRACE_FORMAL_SEED_v0_2_6.md)" ]; then
             echo "Compiled seed already current"
             exit 0
           fi
