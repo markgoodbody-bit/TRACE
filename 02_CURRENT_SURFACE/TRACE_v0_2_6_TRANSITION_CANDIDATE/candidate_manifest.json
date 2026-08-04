@@ -4,6 +4,8 @@
   "base_commit": "983aeec18d41935ec59dd84c70bc6b0dcd49e287",
   "base_seed": "TRACE_FORMAL_SEED_v0_2_5.md",
   "target_formal_version": "0.2.6",
+  "target_packet_schema": "TRACE-GRAPH-0.2.6",
+  "version_strategy": "SYNCHRONIZED_IDENTIFIER_BUMP",
   "compiled_seed_present": false,
   "minimum_schema_shape_change": false,
   "new_node_types": [],
@@ -99,7 +101,8 @@
     "DIVERGENCE_AUTHORITY_HANDOFF_CEILING",
     "OPERATOR_PSEUDOCODE_HOOKS",
     "CHECKER_EXTERNAL_BINDING_RULES",
-    "PACKET_USE_ANTI_COMPRESSION"
+    "PACKET_USE_ANTI_COMPRESSION",
+    "SYNCHRONIZED_VERSION_IDENTIFIERS"
   ],
   "rejected_promotions": [
     "COMPLETE_TARGET_DISCOVERY",
@@ -113,7 +116,7 @@
   ],
   "release_gate": {
     "requires_full_seed_compilation": true,
-    "requires_version_strategy_decision": true,
+    "requires_version_strategy_lock": true,
     "requires_regression_pass": true,
     "requires_human_release_authority": true
   }
