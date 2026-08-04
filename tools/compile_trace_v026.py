@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Compile and verify TRACE_FORMAL_SEED_v0_2_6.md from the v0.2.5 seed.
+"""Compile and verify TRACE_FORMAL_SEED_v0_2_6.md from v0.2.5.
 
-This compiler applies only the bounded semantic and identifier repair admitted by
-TRACE v0.2.6 transition candidate PR #17. It does not declare the output canon,
-released, validated, or operationally effective.
+The compiler applies only the bounded semantic and identifier repair admitted by
+TRACE v0.2.6 transition candidate PR #17. Its output remains a compiled working
+candidate: not canon, not released, not validation, and not authority.
 """
 
 from __future__ import annotations
@@ -11,7 +11,6 @@ from __future__ import annotations
 import argparse
 import copy
 import json
-import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -72,6 +71,8 @@ A target-set aperture may be represented using existing `APERTURE`, `CLAIM`, `RE
 """
 
 TRANSITION_RELATIVITY_SECTION = r"""
+ACCOUNTING_AND_COVERAGE_ARE_APERTURE_RELATIVE
+
 Transition-set exposure is relative to the declared scene, evidence, receiver, primitive, and comparison apertures.
 
 ```text
@@ -165,7 +166,7 @@ A v0.2.5 packet is not silently relabelled as v0.2.6. Structural compatibility d
 
 """
 
-REQUIRED_COMPILED_TOKENS = (
+REQUIRED_TOKENS = (
     "### [5.3.1] Target-set aperture",
     "TARGET_SET != WORLD_SCOPE",
     "ACCOUNTING_AND_COVERAGE_ARE_APERTURE_RELATIVE",
@@ -229,13 +230,10 @@ def extract_minimum_schema(text: str) -> dict[str, Any]:
     fence_end = text.find("```", fence_start + len("```json"))
     if fence_start < 0 or fence_end < 0:
         raise ValueError("minimum validator JSON fence missing")
-    payload = text[fence_start + len("```json") : fence_end].strip()
-    return json.loads(payload)
+    return json.loads(text[fence_start + len("```json") : fence_end].strip())
 
 
 def normalize_schema_version(value: Any) -> Any:
-    result = copy.deepcopy(value)
-
     def walk(item: Any) -> Any:
         if isinstance(item, dict):
             return {key: walk(val) for key, val in item.items()}
@@ -249,12 +247,11 @@ def normalize_schema_version(value: Any) -> Any:
             )
         return item
 
-    return walk(result)
+    return walk(copy.deepcopy(value))
 
 
 def compile_seed(base: str) -> str:
     text = base
-
     text = replace_once(
         text,
         "**Version:** v0.2.5 TRANSITION DISCIPLINE CANDIDATE  ",
@@ -269,15 +266,18 @@ def compile_seed(base: str) -> str:
         "status header",
     )
 
-    text = insert_before(text, "\n## [5.4] State\n", TARGET_SET_SECTION, "target-set aperture")
+    # Synchronize current-contract identifiers before inserting text that must still
+    # refer historically to v0.2.5. The base seed has no version changelog.
+    text = text.replace("0_2_5", "0_2_6")
+    text = text.replace("0.2.5", "0.2.6")
 
+    text = insert_before(text, "\n## [5.4] State\n", TARGET_SET_SECTION, "target-set aperture")
     text = insert_before(
         text,
         "\n## [6.2] Coupling\n",
-        """ACCOUNTING_AND_COVERAGE_ARE_APERTURE_RELATIVE\n\n""" + TRANSITION_RELATIVITY_SECTION,
+        TRANSITION_RELATIVITY_SECTION,
         "transition aperture relativity",
     )
-
     text = insert_before(
         text,
         "\n# [11] RECURSIVE ZOOM / MANDELBROT RULE\n",
@@ -330,11 +330,6 @@ def compile_seed(base: str) -> str:
         "minimum-validator semantic boundary",
     )
 
-    # Synchronize current-version identifiers throughout the full seed. The v0.2.5
-    # file contains only current-contract identifiers, not a historical changelog.
-    text = text.replace("0_2_5", "0_2_6")
-    text = text.replace("0.2.5", "0.2.6")
-
     if not text.endswith("\n"):
         text += "\n"
     return text
@@ -343,7 +338,7 @@ def compile_seed(base: str) -> str:
 def verify_compiled(base: str, compiled: str) -> VerificationReport:
     errors: list[str] = []
 
-    for token in REQUIRED_COMPILED_TOKENS:
+    for token in REQUIRED_TOKENS:
         if token not in compiled:
             errors.append(f"missing required compiled token: {token}")
 
@@ -356,13 +351,10 @@ def verify_compiled(base: str, compiled: str) -> VerificationReport:
 
     if compiled.count("### [5.3.1] Target-set aperture") != 1:
         errors.append("target-set aperture section must occur exactly once")
-
     if compiled.count("ACCOUNTING_AND_COVERAGE_ARE_APERTURE_RELATIVE") != 1:
         errors.append("aperture-relative accounting marker must occur exactly once")
-
     if "**Status:** compiled working candidate;" not in compiled:
         errors.append("compiled status boundary missing")
-
     if "not authority; not permission; not clearance" not in compiled:
         errors.append("claim ceiling was not preserved")
 
@@ -377,8 +369,11 @@ def verify_compiled(base: str, compiled: str) -> VerificationReport:
     if compiled_schema.get("title") != f"{SCHEMA_ID} minimum validator":
         errors.append("compiled schema title mismatch")
 
-    graph_schema = compiled_schema.get("properties", {}).get("trace_graph", {})
-    graph_properties = graph_schema.get("properties", {})
+    graph_properties = (
+        compiled_schema.get("properties", {})
+        .get("trace_graph", {})
+        .get("properties", {})
+    )
     if graph_properties.get("schema", {}).get("const") != SCHEMA_ID:
         errors.append("compiled packet schema const mismatch")
     if graph_properties.get("trace_version", {}).get("const") != VERSION:
@@ -394,18 +389,15 @@ def verify_compiled(base: str, compiled: str) -> VerificationReport:
     if compiled_lines <= base_lines:
         errors.append("compiled seed did not grow despite admitted semantic repair")
 
-    inserted_sections = sum(
-        1
-        for token in (
-            "### [5.3.1] Target-set aperture",
-            "ACCOUNTING_AND_COVERAGE_ARE_APERTURE_RELATIVE",
-            "DIVERGENT_READINGS != AUTHORITY",
-            "Every material search-coverage claim references a target-set aperture",
-            "TARGET_SET_RECORDED != TARGET_SET_COMPLETE",
-            "minimum-schema shape remains identical to v0.2.5",
-        )
-        if token in compiled
+    section_tokens = (
+        "### [5.3.1] Target-set aperture",
+        "ACCOUNTING_AND_COVERAGE_ARE_APERTURE_RELATIVE",
+        "DIVERGENT_READINGS != AUTHORITY",
+        "Every material search-coverage claim references a target-set aperture",
+        "TARGET_SET_RECORDED != TARGET_SET_COMPLETE",
+        "minimum-schema shape remains identical to v0.2.5",
     )
+    inserted_sections = sum(token in compiled for token in section_tokens)
 
     return VerificationReport(
         status="PASS" if not errors else "FAIL",
@@ -420,9 +412,8 @@ def verify_compiled(base: str, compiled: str) -> VerificationReport:
 
 def self_test(base: str) -> None:
     compiled = compile_seed(base)
-    baseline = verify_compiled(base, compiled)
-    if baseline.status != "PASS":
-        raise AssertionError(baseline.as_dict())
+    if verify_compiled(base, compiled).status != "PASS":
+        raise AssertionError("baseline compilation failed")
 
     gutted = compiled.replace(TARGET_SET_SECTION.strip(), "This section asserts nothing.", 1)
     if verify_compiled(base, gutted).status != "FAIL":
@@ -440,21 +431,17 @@ def self_test(base: str) -> None:
     if verify_compiled(base, schema_growth).status != "FAIL":
         raise AssertionError("minimum-schema shape growth did not fail")
 
-    whitespace = compiled.replace(
-        "TRACE-GRAPH-0.2.6 minimum validator",
-        "TRACE-GRAPH-0.2.6 minimum validator",
-        1,
-    )
-    if verify_compiled(base, whitespace).status != "PASS":
-        raise AssertionError("semantically neutral text did not preserve pass")
+    crlf = compiled.replace("\n", "\r\n")
+    if verify_compiled(base, crlf).status != "PASS":
+        raise AssertionError("line-ending-only reflow did not preserve pass")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--write", action="store_true", help="write the compiled seed")
-    mode.add_argument("--check", action="store_true", help="verify committed output")
-    mode.add_argument("--self-test", action="store_true", help="run hostile compiler tests")
+    mode.add_argument("--write", action="store_true")
+    mode.add_argument("--check", action="store_true")
+    mode.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
 
     base = BASE_PATH.read_text(encoding="utf-8")
@@ -478,9 +465,7 @@ def main() -> int:
     if not OUTPUT_PATH.exists():
         print(json.dumps({"status": "FAIL", "errors": ["compiled seed missing"]}))
         return 1
-
-    observed = OUTPUT_PATH.read_text(encoding="utf-8")
-    if observed != expected:
+    if OUTPUT_PATH.read_text(encoding="utf-8") != expected:
         print(json.dumps({"status": "FAIL", "errors": ["compiled seed is stale or altered"]}))
         return 1
 
