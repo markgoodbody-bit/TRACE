@@ -29,7 +29,7 @@ One repair family crosses the formal-seed boundary:
 
 > **Selection of the target set used for search, comparison, or coverage assessment is itself aperture-bearing, and any accounting or coverage result is relative to that declared aperture.**
 
-TRACE v0.2.5 already represents apertures, blindspots, transition-set symmetry, layer handoff, routes, brakes, commitment receipts and anti-clearance limits. The new evidence does not justify new primitives for search coverage, authority legitimacy, contestability, brake effectiveness, or policy quality.
+TRACE v0.2.5 already represents apertures, blindspots, transition-set symmetry, layer handoff, routes, brakes, commitment receipts and anti-clearance limits. The proposed repair is not justified merely by repeating that general principle. `01_DISPOSITION_MATRIX.md` now carries the explicit containment test: v0.2.5 does not require an inspectable target-set source, selected targets, known omitted categories, alternatives, control/custody, uncertainty, or distinct target-set provenance for a material coverage claim.
 
 The v0.2.6 candidate therefore proposes:
 
@@ -45,12 +45,34 @@ The v0.2.6 candidate therefore proposes:
 
 ## Candidate package
 
-- `01_DISPOSITION_MATRIX.md` — destination of each finding.
+- `01_DISPOSITION_MATRIX.md` — destination of each finding and the F03/F04 containment warrant.
 - `02_NARROW_FORMAL_PATCH.md` — exact semantic and identifier patch proposed for compilation into a full v0.2.6 seed.
 - `03_REGRESSION_CONTRACT.md` — invariants and adversarial cases the compiled seed must preserve.
-- `candidate_manifest.json` — machine-readable candidate state.
-- `validate_candidate.py` — verifies the manifest, source anchors, version strategy and disposition closure.
-- `test_validate_candidate.py` — negative and positive regressions for the transition package.
+- `candidate_manifest.json` — machine-readable package state, scope, gates and normalized artefact digests.
+- `validate_candidate.py` — compatibility filename for the transition package integrity checker.
+- `test_validate_candidate.py` — positive, negative and hostile package-integrity tests.
+
+## Integrity-check scope
+
+The executable check is deliberately narrower than semantic validation:
+
+```text
+check scope: PACKAGE_INTEGRITY_AND_DECLARED_CONTRACT_ONLY
+green CI != semantic validity
+green CI != adequacy of the formal argument
+green CI != TRACE validation
+```
+
+The checker verifies:
+
+- manifest closure and bounded destinations;
+- source anchors in v0.2.5;
+- synchronized version posture;
+- normalized integrity digests for the patch, regression contract and disposition matrix;
+- expected patch sections and R01-R12 / V26-A-H section closure;
+- release gates and non-promotion boundaries.
+
+Normalized digests make whitespace-only reflow non-material while causing gutted or substituted artefacts to fail. This establishes that CI is checking the reviewed package, not that the package's argument is true. Semantic review remains external and must not be replaced by the green signal.
 
 ## Version posture
 
