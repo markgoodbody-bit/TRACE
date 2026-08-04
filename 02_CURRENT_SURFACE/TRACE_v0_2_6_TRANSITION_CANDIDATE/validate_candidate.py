@@ -26,11 +26,15 @@ EXPECTED_PATCH_TOKENS = {
     "ROUTE_TO_BRAKE != CORRECTION_COMPLETED",
     "record_target_set_apertures_and_alternatives(R)",
     "Every material search-coverage claim references a target-set aperture",
+    "TRACE-GRAPH-0.2.5               -> TRACE-GRAPH-0.2.6",
+    "minimum_schema_shape_change: false",
 }
 EXPECTED_REGRESSION_IDS = {
     *(f"R{number:02d}" for number in range(1, 13)),
     *(f"V26-{letter}" for letter in "ABCDEFGH"),
 }
+EXPECTED_VERSION_STRATEGY = "SYNCHRONIZED_IDENTIFIER_BUMP"
+EXPECTED_PACKET_SCHEMA = "TRACE-GRAPH-0.2.6"
 
 
 @dataclass(slots=True)
@@ -74,6 +78,10 @@ def validate_manifest(
         errors.append("status must remain WORKING_CANDIDATE")
     if manifest.get("target_formal_version") != "0.2.6":
         errors.append("target_formal_version must be 0.2.6")
+    if manifest.get("target_packet_schema") != EXPECTED_PACKET_SCHEMA:
+        errors.append(f"target_packet_schema must be {EXPECTED_PACKET_SCHEMA}")
+    if manifest.get("version_strategy") != EXPECTED_VERSION_STRATEGY:
+        errors.append(f"version_strategy must be {EXPECTED_VERSION_STRATEGY}")
     if manifest.get("compiled_seed_present") is not False:
         errors.append("transition candidate must not claim a compiled seed is present")
     if manifest.get("minimum_schema_shape_change") is not False:
@@ -160,12 +168,20 @@ def validate_manifest(
         if forbidden in readme_text:
             errors.append(f"README contains forbidden promotion: {forbidden}")
 
+    for required_readme_token in (
+        "formal seed: 0.2.6",
+        "packet schema: TRACE-GRAPH-0.2.6",
+        "minimum schema shape: unchanged from 0.2.5",
+    ):
+        if required_readme_token not in readme_text:
+            errors.append(f"README is missing version boundary: {required_readme_token}")
+
     release_gate = manifest.get("release_gate")
     if not isinstance(release_gate, dict) or not all(
         release_gate.get(key) is True
         for key in (
             "requires_full_seed_compilation",
-            "requires_version_strategy_decision",
+            "requires_version_strategy_lock",
             "requires_regression_pass",
             "requires_human_release_authority",
         )
@@ -183,6 +199,8 @@ def validate_manifest(
             "finding_count": len(findings),
             "primary_core_repairs": sorted(primary_core),
             "source_anchor_count": len(anchors),
+            "target_packet_schema": manifest.get("target_packet_schema"),
+            "version_strategy": manifest.get("version_strategy"),
             "minimum_schema_shape_change": manifest.get("minimum_schema_shape_change"),
             "compiled_seed_present": manifest.get("compiled_seed_present"),
         },
