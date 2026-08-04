@@ -6,11 +6,15 @@ TRACE change: **none**
 
 Checker change: **none**
 
+Minimum-schema validation: **not performed**
+
 ## Scene
 
 A county wildlife unit is preparing an aerial feral-hog control operation. Its working map includes crop farmers requesting control, flight and ground operations crew, and the target hog population. An agricultural field team inside the proposed flight zone is omitted from that map. A county dispatch record can expose the omitted team.
 
 This is a constructed scene for testing checker behavior. It is not a record of an actual operation and does not establish a domain verdict.
+
+The K–N envelopes exercise the checker layer directly. They have not been passed through TRACE's minimum JSON Schema and must not be cited as schema-valid TRACE packets. Their evidential value is limited to the behavior of the merged accounting, integrity, and orchestration code.
 
 ## Variants and results
 
@@ -23,7 +27,7 @@ This is a constructed scene for testing checker behavior. It is not a record of 
 
 ## Finding
 
-K–M transfer the intended accounting distinctions into a non-minimal applied scene.
+K–M transfer the intended accounting distinctions into a non-minimal checker scene.
 
 N is the important result. The merged checker can establish that an `INFORMATION` transition is represented and that the declared comparison envelope is internally consistent. It cannot establish that the query genuinely widens the aperture or searches categories capable of exposing the omitted entity.
 
@@ -36,3 +40,5 @@ A ritual information transition can satisfy the current checker when it is struc
 ## Boundary
 
 This witness does not justify an immediate checker repair. It preserves the limitation as executable evidence before deciding whether search-coverage validation belongs in TRACE, a checker-external extension, an implementation contract, or nowhere.
+
+A later schema-valid applied fixture would be a separate test and must preserve the same boundary rather than silently upgrading this witness.
