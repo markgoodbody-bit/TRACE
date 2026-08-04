@@ -34,6 +34,7 @@ jobs:
           python checker_external/td_tset_accounting_001/test_search_coverage_integrity.py
           python checker_external/td_tset_accounting_001/test_run_search_coverage.py
           python checker_external/td_tset_accounting_001/test_coverage_aperture_differential.py
+          python checker_external/td_tset_accounting_001/test_authority_handoff.py
       - name: Run fixture bundles
         run: |
           python checker_external/td_tset_accounting_001/checker.py checker_external/td_tset_accounting_001/fixtures.json --all
@@ -43,3 +44,4 @@ jobs:
           python checker_external/td_tset_accounting_001/search_coverage.py
           python checker_external/td_tset_accounting_001/run_search_coverage.py regress
           python checker_external/td_tset_accounting_001/coverage_aperture_differential_001.py
+          python checker_external/td_tset_accounting_001/authority_handoff.py
