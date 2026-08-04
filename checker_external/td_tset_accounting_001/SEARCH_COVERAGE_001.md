@@ -45,9 +45,9 @@ Assessment states:
 - `UNAVAILABLE`
 - `NOT_ASSESSABLE`
 
-## What the checker can detect
+## Base coverage pass
 
-For an `ASSESS` envelope, it verifies that:
+For an `ASSESS` envelope, the base pass verifies that:
 
 - the transition reference resolves to an `INFORMATION` `TRANSITION`;
 - the transition binds to a resolvable `APERTURE`;
@@ -55,6 +55,35 @@ For an `ASSESS` envelope, it verifies that:
 - each declared reachability path is contiguous, begins at the transition or aperture, and ends at the required target;
 - path edges use a narrow reachability vocabulary;
 - the selected aperture does not also declare the required target as a blindspot or bind a `CANNOT_ACCESS` edge to it.
+
+## Hostile comparison-envelope integrity pass
+
+`search_coverage_integrity.py` keeps additional assumptions separate and visible. It verifies that:
+
+- an `ASSESS` or `UNAVAILABLE` comparison has at least one basis claim;
+- basis and reason claim references resolve;
+- unavailability reasons bind the supplied basis;
+- declared path edges are directed;
+- declared path edges carry resolvable claim references;
+- each declared target path shares at least one claim with the comparison basis.
+
+The integrity pass does not turn those claims into truth.
+
+## One orchestration entry point
+
+Run both passes on one JSON envelope:
+
+```bash
+python checker_external/td_tset_accounting_001/run_search_coverage.py check envelope.json
+```
+
+Run bounded O–R regressions:
+
+```bash
+python checker_external/td_tset_accounting_001/run_search_coverage.py regress
+```
+
+The orchestrator keeps result objects, failure codes and epistemic ceilings separate. A combined failure means at least one pass failed; it is not a replacement semantic verdict.
 
 ## Failure codes
 
@@ -64,11 +93,11 @@ A required discovery target is explicitly named as a blindspot of the selected a
 
 ### `TD-TSET-SEARCH-COVERAGE-UNSUPPORTED-REACHABILITY`
 
-The supplied target has no contiguous declared reachability path, or the path uses relations that do not support the claimed access chain.
+The supplied target has no contiguous declared reachability path, the path uses relations that do not support the claimed access chain, or the comparison envelope lacks the basis needed for its claim.
 
 ### `TD-TSET-SEARCH-COVERAGE-REFERENCE-MISMATCH`
 
-A transition, aperture, target, comparison-basis claim, reason claim, or path edge does not resolve to the required object.
+A transition, aperture, target, comparison-basis claim, reason claim, path edge or edge-support claim does not resolve to the required object.
 
 ## Fixtures O–R
 
@@ -79,7 +108,16 @@ A transition, aperture, target, comparison-basis claim, reason claim, or path ed
 | Q — no coverage comparison envelope | PASS / `NOT_ASSESSABLE` |
 | R — INFORMATION explicitly unavailable under bound clocks | PASS / `NOT_APPLICABLE_INFORMATION_UNAVAILABLE` |
 
-Additional hostile tests cover a missing path, missing target and non-contiguous path.
+Hostile tests additionally cover:
+
+- missing declared path;
+- missing target;
+- non-contiguous path;
+- empty comparison basis;
+- undirected path edge;
+- unresolved path-edge claim;
+- unavailability reason unbound from its clock basis;
+- a weak base PASS caught by the separate integrity pass.
 
 ## Epistemic ceiling
 
@@ -93,4 +131,4 @@ A contiguous declared path is still a representation. It does not establish:
 - discovery of unseen entities;
 - world completeness.
 
-The checker can catch an explicit self-contradiction. It cannot stop an actor from choosing a conveniently narrow target set or fabricating internally consistent claims.
+The checker can catch an explicit self-contradiction or unsupported declaration. It cannot stop an actor from choosing a conveniently narrow target set or fabricating internally consistent claims.
