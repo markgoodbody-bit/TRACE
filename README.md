@@ -9,6 +9,7 @@ TRACE is not a moral authority, policy checklist, certification system, or finis
 Start here:
 
 - `TRACE.pdf`
-- `TRACE_FORMAL_SEED_v0_2_5.md` — the latest formal TRACE seed, plain-Markdown and machine-readable
+- `TRACE_FORMAL_SEED_v0_2_5.md` — current formal TRACE seed; still the active formal baseline
+- `02_CURRENT_SURFACE/TRACE_v0_2_6_TRANSITION_CANDIDATE/README.md` — working v0.2.6 disposition and narrow-patch candidate; not compiled, released, canon or validation
 - `PROJECT/PROJECT.md`
 - `PROJECT/MAP.md`
