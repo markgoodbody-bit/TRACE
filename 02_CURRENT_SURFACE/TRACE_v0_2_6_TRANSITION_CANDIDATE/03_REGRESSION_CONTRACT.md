@@ -165,12 +165,20 @@ no forced selection
 
 ## Versioning regression
 
-Full compilation must choose and test one explicit strategy:
+The version strategy is fixed and must be tested as one synchronized change:
 
-1. formal version `0.2.6` with separately declared unchanged packet schema `0.2.5`; or
-2. synchronized `TRACE-GRAPH-0.2.6` identifier bump with unchanged schema shape.
+```text
+formal seed version = 0.2.6
+packet schema const = TRACE-GRAPH-0.2.6
+trace_version const = 0.2.6
+schema $id = urn:trace:graph:0.2.6
+minimum-validator title = TRACE-GRAPH-0.2.6 minimum validator
+minimum-schema shape = identical to v0.2.5
+```
 
-The compiled seed must not leave formal and packet version semantics ambiguous.
+The compiler must reject a mixed state such as formal seed `0.2.6` with packet constants still at `0.2.5`, or a packet relabelled `0.2.6` without the revised semantic text.
+
+A v0.2.5 packet remains a v0.2.5 packet. Structural compatibility does not erase version identity.
 
 ## Failure conditions
 
@@ -182,4 +190,5 @@ The transition candidate fails review if it:
 - grants authority to an aperture result;
 - equates a route or brake declaration with correction;
 - changes the minimum schema shape without a demonstrated shape defect;
+- leaves formal and packet identifiers unsynchronised;
 - or claims validation, operational readiness, decision advantage or world validity.
