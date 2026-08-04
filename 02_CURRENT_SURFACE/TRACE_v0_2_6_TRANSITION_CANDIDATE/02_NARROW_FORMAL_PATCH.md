@@ -4,7 +4,7 @@ Status: **transition candidate for later compilation**
 
 Base text: `TRACE_FORMAL_SEED_v0_2_5.md`
 
-This document defines the exact semantic deltas proposed for a compiled `TRACE_FORMAL_SEED_v0_2_6.md`. Unmentioned v0.2.5 text remains unchanged.
+This document defines the exact semantic and identifier deltas proposed for a compiled `TRACE_FORMAL_SEED_v0_2_6.md`. Unmentioned v0.2.5 text remains unchanged.
 
 No patch below creates a new primitive, node type, edge type, port, selector, value rule or minimum-schema field.
 
@@ -136,6 +136,20 @@ Insert before `emit_available_transitions_without_selecting(R)`:
     state_transition_and_coverage_results_relative_to_declared_apertures(R)
 ```
 
+At full compilation, replace:
+
+```text
+initialise_TRACE_GRAPH_0_2_5()
+validate_schema(R, "TRACE-GRAPH-0.2.5")
+```
+
+with:
+
+```text
+initialise_TRACE_GRAPH_0_2_6()
+validate_schema(R, "TRACE-GRAPH-0.2.6")
+```
+
 ## Patch E — add to `[14.1] Binding rules`
 
 Add the following checker-external rules:
@@ -161,31 +175,36 @@ BRAKE_ACTIVATION_RECORDED != TRANSITION_INTERRUPTED
 TRANSITION_INTERRUPTED != HARM_PREVENTED
 ```
 
-## Minimum-schema disposition
+## Patch G — synchronized version identifiers
 
-The v0.2.6 candidate proposes no new required property and no vocabulary expansion in the embedded JSON Schema.
-
-For a later full-seed compilation, choose one of two explicit versioning strategies and do not blur them:
-
-### Strategy 1 — formal revision with unchanged wire schema
-
-```text
-formal_seed_version: 0.2.6
-packet_schema: TRACE-GRAPH-0.2.5
-```
-
-Use only if formal-seed and packet-schema versions are explicitly separated and the packet records both.
-
-### Strategy 2 — synchronized identifier bump
+The version strategy is fixed:
 
 ```text
 formal_seed_version: 0.2.6
 packet_schema: TRACE-GRAPH-0.2.6
+minimum_schema_shape_change: false
 ```
 
-The schema shape remains identical to v0.2.5; only version constants and identifiers advance.
+At full compilation, update all formal and packet identifiers consistently:
 
-The transition candidate does not silently choose between these strategies. Full compilation must make the separation explicit and regression-test compatibility.
+```text
+TRACE formal seed v0.2.5        -> TRACE formal seed v0.2.6
+TRACE-GRAPH-0.2.5               -> TRACE-GRAPH-0.2.6
+trace_version: "0.2.5"          -> trace_version: "0.2.6"
+urn:trace:graph:0.2.5            -> urn:trace:graph:0.2.6
+TRACE-GRAPH-0.2.5 minimum validator
+                                 -> TRACE-GRAPH-0.2.6 minimum validator
+```
+
+The minimum schema shape remains identical to v0.2.5. Only version constants, identifiers, pseudocode initialiser, and validator target advance.
+
+A v0.2.5 packet is not silently relabelled. Compatibility may be structurally demonstrable, but packet identity and formal contract remain explicit.
+
+## Minimum-schema disposition
+
+The v0.2.6 candidate proposes no new required property, no new controlled vocabulary, and no semantic enforcement inside the embedded JSON Schema.
+
+The synchronized identifier bump records that the packet is produced under the revised semantic contract. It is not a claim that the minimum validator can enforce the target-set-aperture or checker-external rules.
 
 ## Rejected patch directions
 
@@ -207,5 +226,6 @@ make target selection visible as aperture
 state accounting and coverage relative to supplied evidence
 preserve divergence without authority inheritance
 preserve contest routes without claiming correction
+advance identifiers without changing schema shape
 stop there
 ```
