@@ -1,0 +1,120 @@
+{
+  "candidate_id": "TRACE-V0.2.6-TRANSITION-CANDIDATE-001",
+  "status": "WORKING_CANDIDATE",
+  "base_commit": "983aeec18d41935ec59dd84c70bc6b0dcd49e287",
+  "base_seed": "TRACE_FORMAL_SEED_v0_2_5.md",
+  "target_formal_version": "0.2.6",
+  "compiled_seed_present": false,
+  "minimum_schema_shape_change": false,
+  "new_node_types": [],
+  "new_edge_types": [],
+  "new_ports": [],
+  "new_required_packet_fields": [],
+  "core_repair_family": [
+    "TARGET_SET_SELECTION_IS_APERTURE_BEARING",
+    "ACCOUNTING_AND_COVERAGE_ARE_APERTURE_RELATIVE"
+  ],
+  "source_anchors": [
+    "## [5.3] Aperture",
+    "## [6.1.1] Transition-set symmetry and uncertainty neutrality",
+    "## [10.4] Explicit layer handoff",
+    "## [13.2] Pseudocode",
+    "## [14.1] Binding rules",
+    "## [14.2] Packet-use boundary",
+    "## [14.4] Minimum validator contract"
+  ],
+  "allowed_destinations": [
+    "CORE_REPAIR",
+    "MINIMUM_SCHEMA_REPAIR",
+    "CHECKER_EXTERNAL_ONLY",
+    "IMPLEMENTATION_CONTRACT",
+    "HUMAN_FACING_GUIDANCE",
+    "NO_CHANGE"
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "primary": "CHECKER_EXTERNAL_ONLY",
+      "secondary": ["CORE_REPAIR"]
+    },
+    {
+      "id": "F02",
+      "primary": "CHECKER_EXTERNAL_ONLY",
+      "secondary": ["CORE_REPAIR"]
+    },
+    {
+      "id": "F03",
+      "primary": "CORE_REPAIR",
+      "secondary": ["CHECKER_EXTERNAL_ONLY"]
+    },
+    {
+      "id": "F04",
+      "primary": "CORE_REPAIR",
+      "secondary": ["HUMAN_FACING_GUIDANCE"]
+    },
+    {
+      "id": "F05",
+      "primary": "NO_CHANGE",
+      "secondary": ["CHECKER_EXTERNAL_ONLY"]
+    },
+    {
+      "id": "F06",
+      "primary": "NO_CHANGE",
+      "secondary": ["HUMAN_FACING_GUIDANCE"]
+    },
+    {
+      "id": "F07",
+      "primary": "NO_CHANGE",
+      "secondary": ["CHECKER_EXTERNAL_ONLY"]
+    },
+    {
+      "id": "F08",
+      "primary": "NO_CHANGE",
+      "secondary": ["IMPLEMENTATION_CONTRACT"]
+    },
+    {
+      "id": "F09",
+      "primary": "NO_CHANGE",
+      "secondary": ["CHECKER_EXTERNAL_ONLY"]
+    },
+    {
+      "id": "F10",
+      "primary": "NO_CHANGE",
+      "secondary": ["CHECKER_EXTERNAL_ONLY"]
+    },
+    {
+      "id": "F11",
+      "primary": "NO_CHANGE",
+      "secondary": ["HUMAN_FACING_GUIDANCE"]
+    },
+    {
+      "id": "F12",
+      "primary": "NO_CHANGE",
+      "secondary": ["HUMAN_FACING_GUIDANCE"]
+    }
+  ],
+  "patch_sections": [
+    "TARGET_SET_APERTURE",
+    "TRANSITION_SET_APERTURE_RELATIVITY",
+    "DIVERGENCE_AUTHORITY_HANDOFF_CEILING",
+    "OPERATOR_PSEUDOCODE_HOOKS",
+    "CHECKER_EXTERNAL_BINDING_RULES",
+    "PACKET_USE_ANTI_COMPRESSION"
+  ],
+  "rejected_promotions": [
+    "COMPLETE_TARGET_DISCOVERY",
+    "ACTUAL_SEARCH_COVERAGE",
+    "LEGITIMATE_AUTHORITY",
+    "GOOD_POLICY",
+    "ACTUAL_ROUTE_EXECUTABILITY",
+    "EFFECTIVE_BRAKE_OPERATION",
+    "HARM_PREVENTION",
+    "WORLD_VALIDITY"
+  ],
+  "release_gate": {
+    "requires_full_seed_compilation": true,
+    "requires_version_strategy_decision": true,
+    "requires_regression_pass": true,
+    "requires_human_release_authority": true
+  }
+}
