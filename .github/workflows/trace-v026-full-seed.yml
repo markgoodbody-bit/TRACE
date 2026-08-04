@@ -1,0 +1,63 @@
+name: TRACE v0.2.6 full-seed compilation
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-2-6-full-seed
+    paths:
+      - "TRACE_FORMAL_SEED_v0_2_5.md"
+      - "02_CURRENT_SURFACE/TRACE_v0_2_6_TRANSITION_CANDIDATE/**"
+      - "tools/compile_trace_v026.py"
+      - ".github/workflows/trace-v026-full-seed.yml"
+  pull_request:
+    paths:
+      - "TRACE_FORMAL_SEED_v0_2_5.md"
+      - "TRACE_FORMAL_SEED_v0_2_6.md"
+      - "02_CURRENT_SURFACE/TRACE_v0_2_6_TRANSITION_CANDIDATE/**"
+      - "tools/compile_trace_v026.py"
+      - ".github/workflows/trace-v026-full-seed.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compile-and-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile deterministic full seed
+        if: github.event_name != 'pull_request'
+        run: python tools/compile_trace_v026.py --write
+
+      - name: Verify committed full seed
+        if: github.event_name == 'pull_request'
+        run: python tools/compile_trace_v026.py --check
+
+      - name: Run hostile compiler tests
+        run: python tools/compile_trace_v026.py --self-test
+
+      - name: Check whitespace and diff integrity
+        run: git diff --check
+
+      - name: Commit generated full seed
+        if: github.event_name != 'pull_request'
+        run: |
+          if [ -z "$(git status --porcelain -- TRACE_FORMAL_SEED_v0_2_6.md)" ]; then
+            echo "Compiled seed already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add TRACE_FORMAL_SEED_v0_2_6.md
+          git commit -m "Compile TRACE formal seed v0.2.6"
+          git push origin HEAD:framework/trace-v0-2-6-full-seed
