@@ -13,4 +13,8 @@ Applied checker witnesses:
 
 - [`TD-TSET coverage-aperture differential 001`](td_tset_accounting_001/COVERAGE_APERTURE_DIFFERENTIAL_001.md) — freezes one ritual-search packet and shows how different supplied target-set apertures produce divergent checker results without resolving which aperture is authoritative.
 
+Integration:
+
+- [`TRACE decision-visibility integration 001`](td_tset_accounting_001/DECISION_VISIBILITY_INTEGRATION_001.md) — integrates the accounting, coverage, aperture, authority and contestability sequence; states the strongest supported claim, epistemic boundary and stop condition against automatic checker expansion.
+
 A checker pass is not world validity, clearance, diligence, legitimate authority, actual contestability, or proof that an unseen entity or transition does not exist.
