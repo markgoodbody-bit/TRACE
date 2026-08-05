@@ -39,10 +39,10 @@ prior title: TRACE After-Fall Interface Layer v0.5 CARRIER CANDIDATE
 
 ```text
 path: TRACE.pdf
-SHA-256: 95df4b1fbca840f7738117ea49e1be1c00f8e4a87c5ac954a856d9e4029f7e75
-Git blob: 7f6e2f8492b5df83da7fe9e50d7d19cf0d378fdf
-size: 313754 bytes
-pages: 76
+SHA-256: 8cf8233442f034d2495268fb33dfe741ad360260a61b84afab14301c675fbbc6
+Git blob: c74d2dafe7870eab1b6a039cecb93d24d5c26ead
+size: 313450 bytes
+pages: 75
 page geometry: all A4
 ```
 
@@ -55,11 +55,13 @@ The generated wrapper differs from the released source in exactly two body locat
 
 No symbol, predicate, relation, claim, identifier, schema field, invariant, example, or prose proposition is added or removed by those repairs.
 
+The carrier layout contains one table of contents after the title page. A duplicate Pandoc-generated pre-title table of contents exposed during exact-binary visual QA was removed before review.
+
 ## Automated verification
 
 ```text
 PDF openable: PASS
-page count: 76
+page count: 75
 all pages A4: PASS
 blank pages: 0
 fonts embedded: PASS
@@ -71,7 +73,7 @@ additional key tokens checked: 8
 missing key tokens: 0
 Unicode replacement characters: 0
 normalized extracted-text SHA-256:
-9345c6d8e73df9b71a3d0c2ee666f96f0f4a6ab5a3aec9489dd3492f66c35a33
+2135547767b1e14963ad9c286aeb647ad5cedc0762f9a6aa9513849aacd77442
 ```
 
 The exact committed binary must still be downloaded, rendered, and visually inspected before replacement approval. Until that check is integrated, this remains a carrier candidate.
