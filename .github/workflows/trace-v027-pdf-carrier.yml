@@ -5,6 +5,7 @@ on:
     branches:
       - framework/trace-v0-2-7-pdf-carrier
     paths:
+      - .gitattributes
       - TRACE_FORMAL_SEED_v0_2_7.md
       - TRACE.pdf
       - TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md
@@ -13,6 +14,7 @@ on:
       - .github/workflows/trace-v027-pdf-carrier.yml
   pull_request:
     paths:
+      - .gitattributes
       - TRACE_FORMAL_SEED_v0_2_7.md
       - TRACE.pdf
       - TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md
@@ -50,6 +52,30 @@ jobs:
             --check-source \
             --verify-committed \
             --report /tmp/trace-v027-carrier-committed.json
+
+      - name: Verify default-Windows checkout compatibility
+        run: |
+          test "$(git check-attr eol -- TRACE_FORMAL_SEED_v0_2_7.md | awk '{print $3}')" = "lf"
+          test "$(git check-attr eol -- carrier/TRACE_v0_2_7_RENDERED_CARRIER_SOURCE.md | awk '{print $3}')" = "lf"
+          rm -rf /tmp/trace-v027-windows-checkout
+          branch="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+          git -c core.autocrlf=true clone \
+            --no-local \
+            --branch "$branch" \
+            "file://$GITHUB_WORKSPACE" \
+            /tmp/trace-v027-windows-checkout
+          cd /tmp/trace-v027-windows-checkout
+          python - <<'PY'
+          from pathlib import Path
+          for path in (
+              Path('TRACE_FORMAL_SEED_v0_2_7.md'),
+              Path('carrier/TRACE_v0_2_7_RENDERED_CARRIER_SOURCE.md'),
+          ):
+              data = path.read_bytes()
+              if b'\r\n' in data:
+                  raise SystemExit(f'CRLF checkout detected in {path}')
+          PY
+          python tools/build_trace_v027_carrier.py --check-source
 
       - name: Rebuild and compare semantic render surface
         run: |
