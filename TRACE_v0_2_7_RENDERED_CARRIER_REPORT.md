@@ -39,10 +39,10 @@ prior title: TRACE After-Fall Interface Layer v0.5 CARRIER CANDIDATE
 
 ```text
 path: TRACE.pdf
-SHA-256: __PDF_SHA256__
-Git blob: __PDF_BLOB__
-size: __PDF_SIZE__ bytes
-pages: 75
+SHA-256: 95df4b1fbca840f7738117ea49e1be1c00f8e4a87c5ac954a856d9e4029f7e75
+Git blob: 7f6e2f8492b5df83da7fe9e50d7d19cf0d378fdf
+size: 313754 bytes
+pages: 76
 page geometry: all A4
 ```
 
@@ -59,7 +59,7 @@ No symbol, predicate, relation, claim, identifier, schema field, invariant, exam
 
 ```text
 PDF openable: PASS
-page count: 75
+page count: 76
 all pages A4: PASS
 blank pages: 0
 fonts embedded: PASS
@@ -71,7 +71,7 @@ additional key tokens checked: 8
 missing key tokens: 0
 Unicode replacement characters: 0
 normalized extracted-text SHA-256:
-53d9006456669e53a1b3d7775ac8c2e0002fa61b5a0c8d0f5a8bae616f8a9e4e
+9345c6d8e73df9b71a3d0c2ee666f96f0f4a6ab5a3aec9489dd3492f66c35a33
 ```
 
 The exact committed binary must still be downloaded, rendered, and visually inspected before replacement approval. Until that check is integrated, this remains a carrier candidate.

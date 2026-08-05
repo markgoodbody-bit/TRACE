@@ -29,8 +29,8 @@ COMMITTED_PDF = ROOT / "TRACE.pdf"
 
 FORMAL_SHA256 = "de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab"
 FORMAL_BLOB = "9238986ddc18c34709906b2fc4510d827c68d2b2"
-EXPECTED_PAGES = 75
-EXPECTED_NORMALIZED_TEXT_SHA256 = "53d9006456669e53a1b3d7775ac8c2e0002fa61b5a0c8d0f5a8bae616f8a9e4e"
+EXPECTED_PAGES = 76
+EXPECTED_NORMALIZED_TEXT_SHA256 = "9345c6d8e73df9b71a3d0c2ee666f96f0f4a6ab5a3aec9489dd3492f66c35a33"
 
 TABLE_OLD = r"| \(\mathbf T\) | clocks | detection/routing/correction/hardening times | `CLOCKS` |"
 TABLE_NEW = r"| \(\mathbf T\) | clocks | \makecell[l]{detection/routing/\\correction/hardening\\times} | `CLOCKS` |"
