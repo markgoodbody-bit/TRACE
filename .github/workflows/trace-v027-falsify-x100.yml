@@ -1,6 +1,6 @@
 name: TRACE v0.2.7 falsify x100
 
-# Exact-head rerun after mutation-detector repair.
+# Exact-head audit includes the human and machine evidence summaries.
 on:
   push:
     branches:
@@ -11,6 +11,8 @@ on:
       - README.md
       - tools/compile_trace_v027.py
       - falsification/run_trace_v027_falsify_x100.py
+      - falsification/TRACE_v0_2_7_FALSIFY_X100_REPORT.md
+      - falsification/trace_v027_falsify_x100_summary.json
       - .github/workflows/trace-v027-falsify-x100.yml
   pull_request:
     paths:
@@ -19,6 +21,8 @@ on:
       - README.md
       - tools/compile_trace_v027.py
       - falsification/run_trace_v027_falsify_x100.py
+      - falsification/TRACE_v0_2_7_FALSIFY_X100_REPORT.md
+      - falsification/trace_v027_falsify_x100_summary.json
       - .github/workflows/trace-v027-falsify-x100.yml
   workflow_dispatch:
 
