@@ -25,33 +25,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Normalize prior state and apply bounded repair
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          report = Path('TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md')
-          text = report.read_text(encoding='utf-8')
-          current = '**Status:** exact binary visually reviewed; bounded Windows-checkout repair applied; post-repair exact-head recheck pending  '
-          expected = '**Status:** exact binary visually reviewed; independent exact-head review pending  '
-          if text.count(current) != 1:
-              raise SystemExit(f'prior report status: expected 1 match, found {text.count(current)}')
-          report.write_text(text.replace(current, expected, 1), encoding='utf-8')
-
-          script = Path('tools/apply_trace_v027_crosslane_repair.py')
-          text = script.read_text(encoding='utf-8')
-          old = '''    workflow = replace_once(workflow, path_anchor, path_replacement, "push paths")
-    workflow = replace_once(workflow, path_anchor, path_replacement, "pull-request paths")
-'''
-          new = '''    if workflow.count(path_anchor) != 2:
-        raise SystemExit(f"workflow paths: expected 2 matches, found {workflow.count(path_anchor)}")
-    workflow = workflow.replace(path_anchor, path_replacement, 2)
-'''
-          if text.count(old) != 1:
-              raise SystemExit(f'repair-script path block: expected 1 match, found {text.count(old)}')
-          script.write_text(text.replace(old, new, 1), encoding='utf-8')
-          PY
-          python tools/apply_trace_v027_crosslane_repair.py
+      - name: Apply bounded cross-lane repair
+        run: python tools/apply_trace_v027_crosslane_repair.py
 
       - name: Run repaired v0.2.7 instrument
         run: |
