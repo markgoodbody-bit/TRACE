@@ -147,11 +147,18 @@ https://github.com/markgoodbody-bit/TRACE/issues/new?template=trace-review.md
 
 A reviewer may reasonably conclude that a component is redundant, incoherent, untestable, better handled by an existing method, or useful only in a narrower setting.
 
+## Citation
+
+GitHub-compatible citation metadata is provided in [`CITATION.cff`](CITATION.cff). Cite the exact TRACE version and formal source used; citation does not imply validation, endorsement, authority, or permission to reuse the material.
+
 ## Repository map
 
 - `TRACE_FORMAL_SEED_v0_2_7.md` — active formal source
 - `TRACE.pdf` — current human-readable rendered carrier
 - `REVIEW_GUIDE.md` — external review paths and finding format
+- `CITATION.cff` — machine-readable citation metadata
+- `CONTRIBUTING.md` — contribution, provenance and review guidance
+- `LICENSE_STATUS.md` — current no-general-reuse-licence boundary
 - `TRACE_v0_2_7_BASELINE_RELEASE.md` — release decision and exact provenance
 - `TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md` — render and source-binding evidence
 - `falsification/` — executable audits, reports, and residual limits
@@ -167,8 +174,8 @@ Released predecessors remain preserved as separate objects rather than silently 
 
 Mechanical Ethics is the human-facing ethical and philosophical side of the wider project. TRACE is the structure-facing language. They approach the same underlying problem from different directions, but this repository contains the TRACE formal lane.
 
-## Review and reuse
+## Review, contribution and reuse
 
-Review, criticism, and bounded testing are invited.
+Review, criticism and bounded testing are invited. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before proposing a patch.
 
-Reuse and licensing terms have not yet been specified. Public repository visibility alone should not be read as a reuse licence.
+No general reuse licence has been granted. Public repository visibility alone should not be read as permission to copy, adapt, redistribute or incorporate the material elsewhere. See [`LICENSE_STATUS.md`](LICENSE_STATUS.md).
