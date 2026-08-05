@@ -37,7 +37,7 @@ jobs:
 
       - name: Commit deterministic output when changed
         run: |
-          if ! git diff --quiet -- TRACE_FORMAL_SEED_v0_2_7.md; then
+          if [ -n "$(git status --porcelain -- TRACE_FORMAL_SEED_v0_2_7.md)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add TRACE_FORMAL_SEED_v0_2_7.md
