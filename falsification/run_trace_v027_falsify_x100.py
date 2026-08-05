@@ -101,11 +101,11 @@ def required_surface_errors(candidate: str, readme: str, manifest: str) -> list[
         if token in candidate:
             errors.append(f"stale-machine-id:{token}")
 
-    seed_pos = readme.find("TRACE_FORMAL_SEED_v0_2_6.md")
+    seed_pos = readme.find("TRACE_FORMAL_SEED_v0_2_7.md")
     pdf_pos = readme.find("TRACE.pdf")
     if seed_pos < 0 or pdf_pos < 0 or seed_pos > pdf_pos:
         errors.append("front-door-order")
-    if "TRACE.pdf` — older v0.5 human-facing carrier candidate; not the active formal baseline" not in readme:
+    if "TRACE.pdf` — current v0.2.7 rendered formal carrier; the Markdown seed remains the formal source" not in readme:
         errors.append("pdf-label")
     if (
         "NOT_RELEASED" not in manifest
@@ -175,8 +175,8 @@ def make_probes(base: str, candidate: str, readme: str, manifest: str) -> list[P
         token_probe("D16", "revision", "revision preserves non-growth boundary", revision, "No primitive family, node type, edge type, port"),
         token_probe("D17", "unresolved", "unresolved register states target-set incompleteness", unresolved, "A selected target set can omit materially affected scopes"),
         token_probe("D18", "unresolved", "unresolved register states target authority limit", unresolved, "without any aperture becoming authoritative by default"),
-        Probe("D19", "front-door", "active released baseline precedes TRACE.pdf", lambda: 0 <= readme.find("TRACE_FORMAL_SEED_v0_2_6.md") < readme.find("TRACE.pdf")),
-        token_probe("D20", "front-door", "TRACE.pdf is labelled as older carrier", readme, "older v0.5 human-facing carrier candidate; not the active formal baseline"),
+        Probe("D19", "front-door", "active released v0.2.7 baseline precedes TRACE.pdf", lambda: 0 <= readme.find("TRACE_FORMAL_SEED_v0_2_7.md") < readme.find("TRACE.pdf")),
+        token_probe("D20", "front-door", "TRACE.pdf is labelled as current rendered carrier with Markdown authority preserved", readme, "current v0.2.7 rendered formal carrier; the Markdown seed remains the formal source"),
     ])
 
     # S01-S15 — canonical existing-object serialization profile.
@@ -258,7 +258,7 @@ def make_probes(base: str, candidate: str, readme: str, manifest: str) -> list[P
         seed_line = next(
             line
             for line in readme.splitlines()
-            if line.startswith("- `TRACE_FORMAL_SEED_v0_2_6.md`")
+            if line.startswith("- `TRACE_FORMAL_SEED_v0_2_7.md`")
         )
         pdf_line = next(
             line for line in readme.splitlines() if line.startswith("- `TRACE.pdf`")
@@ -297,7 +297,7 @@ def make_probes(base: str, candidate: str, readme: str, manifest: str) -> list[P
             "README front-door reversal is detected",
             reversed_readme_detected,
         ),
-        ("M19", "removing stale-PDF label is detected", lambda: bool(required_surface_errors(candidate, readme.replace(" — older v0.5 human-facing carrier candidate; not the active formal baseline", ""), manifest))),
+        ("M19", "removing current-PDF authority label is detected", lambda: bool(required_surface_errors(candidate, readme.replace(" — current v0.2.7 rendered formal carrier; the Markdown seed remains the formal source", ""), manifest))),
         ("M20", "removing NOT_VALIDATED boundary is detected", lambda: bool(required_surface_errors(candidate, readme, manifest.replace("NOT_VALIDATED", "")))),
     ])
     probes.extend(Probe(pid, "mutation", desc, fn) for pid, desc, fn in mutations)
@@ -348,7 +348,7 @@ def main() -> int:
             "AUDIT_EXECUTION_NOT_VALIDATION",
             "MINIMUM_VALIDATOR_REMAINS_SHAPE_AND_VOCABULARY_ONLY",
             "TARGET_DISCOVERY_AND_AUTHORITY_REMAIN_CHECKER_EXTERNAL",
-            "TRACE_PDF_REMAINS_OLDER_CARRIER_BUT_IS_NOW_LABELLED",
+            "TRACE_PDF_IS_RENDERED_CARRIER_NOT_FORMAL_SOURCE",
             "CONSTRUCTED_TRANSFER_NOT_WORLD_EVIDENCE",
         ],
         "findings": failures,

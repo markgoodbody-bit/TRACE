@@ -1,7 +1,7 @@
 # TRACE v0.2.7 rendered formal carrier report
 
 **Carrier ID:** `TRACE-v0.2.7-RENDERED-FORMAL-CARRIER`  
-**Status:** exact binary visually reviewed; bounded Windows-checkout repair applied; post-repair exact-head recheck pending  
+**Status:** exact binary visually reviewed; independent NARROW findings integrated; final bounded re-anchor pending
 
 ```text
 NOT_CANON
@@ -139,3 +139,32 @@ This repair changes checkout normalization and verification reproducibility only
 ## Claim boundary
 
 This work does not establish TRACE's semantic adequacy, world validity, decision advantage, moral correctness, operational effectiveness, authority, permission, clearance, or canon.
+
+
+## Windows checkout compatibility
+
+Fresh clones now receive LF bytes for Markdown through:
+
+```text
+.gitattributes
+*.md text eol=lf
+```
+
+This prevents a correct default Git for Windows checkout (`core.autocrlf=true`) from producing a false formal-source hash mismatch. Existing working trees created before the attribute was added may retain CRLF bytes until they are freshly cloned or explicitly renormalised with:
+
+```text
+git add --renormalize .
+```
+
+That operational caveat is about checkout state, not a change to the released source object.
+
+## Falsification-instrument synchronization
+
+The carrier replacement changes the repository front-door fact previously tested by probes `D19` and `D20`. Those probes were re-pointed rather than retired:
+
+```text
+D19: active released v0.2.7 baseline precedes TRACE.pdf
+D20: TRACE.pdf is labelled as the current rendered carrier while Markdown remains the formal source
+```
+
+`A15` continues to require the complete declared surface to pass. Mutation probe `M19` continues to fail closed if the current-carrier authority label is removed. The original pre-carrier audit report and summary remain historical evidence of the earlier repository state; the executable instrument now tests the post-carrier state.
