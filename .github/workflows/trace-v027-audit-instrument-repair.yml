@@ -1,0 +1,86 @@
+name: Repair TRACE v0.2.7 audit instrument
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-2-7-narrow-repair
+    paths:
+      - .github/workflows/trace-v027-audit-instrument-repair.yml
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: framework/trace-v0-2-7-narrow-repair
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply bounded instrument repairs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("falsification/run_trace_v027_falsify_x100.py")
+          text = path.read_text(encoding="utf-8")
+
+          def replace_once(old: str, new: str, label: str) -> None:
+              global text
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"{label}: expected one anchor, observed {count}")
+              text = text.replace(old, new, 1)
+
+          replace_once(
+              "import argparse\nimport hashlib",
+              "import argparse\nimport copy\nimport hashlib",
+              "copy import",
+          )
+
+          replace_once(
+              'if "NOT_RELEASED" not in manifest or "minimum-schema shape change:      NO" not in manifest:',
+              'if (\n        "NOT_RELEASED" not in manifest\n        or "NOT_VALIDATED" not in manifest\n        or "minimum-schema shape change:      NO" not in manifest\n    ):',
+              "manifest boundary",
+          )
+
+          replace_once(
+              'token_probe("A09", "value", "normative claims remain external", candidate, "Normative claims remain external."),',
+              'token_probe(\n            "A09",\n            "value",\n            "normative claims remain external",\n            candidate,\n            "Harm, care, kindness, trust, and good require an exposed value layer.",\n        ),',
+              "value-layer token",
+          )
+
+          helper_anchor = '''    def removed(token: str) -> bool:\n        mutated = replace_first(candidate, token)\n        return token not in mutated and bool(required_surface_errors(mutated, readme, manifest))\n\n'''
+          helper_replacement = helper_anchor + '''    def required_growth_detected() -> bool:\n        mutated_schema = copy.deepcopy(candidate_schema)\n        mutated_schema["properties"]["trace_graph"]["required"].append(\n            "target_set_apertures"\n        )\n        return compiler.required_packet_properties(\n            base_schema\n        ) != compiler.required_packet_properties(mutated_schema)\n\n    def reversed_readme_detected() -> bool:\n        seed_line = next(\n            line\n            for line in readme.splitlines()\n            if line.startswith("- `TRACE_FORMAL_SEED_v0_2_6.md`")\n        )\n        pdf_line = next(\n            line for line in readme.splitlines() if line.startswith("- `TRACE.pdf`")\n        )\n        mutated_readme = (\n            readme.replace(seed_line, "__TRACE_SEED_LINE__", 1)\n            .replace(pdf_line, seed_line, 1)\n            .replace("__TRACE_SEED_LINE__", pdf_line, 1)\n        )\n        return bool(required_surface_errors(candidate, mutated_readme, manifest))\n\n'''
+          replace_once(helper_anchor, helper_replacement, "mutation helpers")
+
+          old_m16 = '''        ("M16", "required-property growth is detected", lambda: compiler.required_packet_properties(base_schema) != compiler.required_packet_properties(compiler.extract_minimum_schema(replace_first(candidate, '\"trace_graph\"\\n  ],', '\"trace_graph\",\\n    \"target_set_apertures\"\\n  ],')),)),'''
+          new_m16 = '''        (\n            "M16",\n            "required-property growth is detected",\n            required_growth_detected,\n        ),'''
+          replace_once(old_m16, new_m16, "M16 detector")
+
+          old_m18 = '''        ("M18", "README front-door reversal is detected", lambda: bool(required_surface_errors(candidate, readme.replace("- `TRACE_FORMAL_SEED_v0_2_6.md`", "- `TEMP`", 1).replace("- `TRACE.pdf`", "- `TRACE_FORMAL_SEED_v0_2_6.md`\\n- `TRACE.pdf`", 1), manifest))),'''
+          new_m18 = '''        (\n            "M18",\n            "README front-door reversal is detected",\n            reversed_readme_detected,\n        ),'''
+          replace_once(old_m18, new_m18, "M18 detector")
+
+          path.write_text(text, encoding="utf-8")
+          PY
+
+      - name: Compile-check repaired audit script
+        run: python -m py_compile falsification/run_trace_v027_falsify_x100.py
+
+      - name: Remove temporary repair workflow
+        run: rm .github/workflows/trace-v027-audit-instrument-repair.yml
+
+      - name: Commit repair
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add falsification/run_trace_v027_falsify_x100.py .github/workflows/trace-v027-audit-instrument-repair.yml
+          git commit -m "Harden TRACE v0.2.7 audit detectors"
+          git push origin HEAD:framework/trace-v0-2-7-narrow-repair
