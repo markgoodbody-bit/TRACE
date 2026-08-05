@@ -1,0 +1,116 @@
+name: TRACE v0.2.7 PDF carrier
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-2-7-pdf-carrier
+    paths:
+      - .gitattributes
+      - README.md
+      - TRACE_v0_2_7_BASELINE_RELEASE.md
+      - falsification/**
+      - TRACE_FORMAL_SEED_v0_2_7.md
+      - TRACE.pdf
+      - TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md
+      - carrier/**
+      - tools/build_trace_v027_carrier.py
+      - .github/workflows/trace-v027-pdf-carrier.yml
+  pull_request:
+    paths:
+      - .gitattributes
+      - README.md
+      - TRACE_v0_2_7_BASELINE_RELEASE.md
+      - falsification/**
+      - TRACE_FORMAL_SEED_v0_2_7.md
+      - TRACE.pdf
+      - TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md
+      - carrier/**
+      - tools/build_trace_v027_carrier.py
+      - .github/workflows/trace-v027-pdf-carrier.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install render and verification dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc texlive-xetex texlive-latex-extra \
+            texlive-fonts-recommended lmodern \
+            fonts-dejavu-core poppler-utils
+          python -m pip install --disable-pip-version-check PyMuPDF Pillow
+
+      - name: Verify committed wrapper and PDF
+        run: |
+          python tools/build_trace_v027_carrier.py \
+            --check-source \
+            --verify-committed \
+            --report /tmp/trace-v027-carrier-committed.json
+
+      - name: Verify default-Windows checkout compatibility
+        run: |
+          test "$(git check-attr eol -- TRACE_FORMAL_SEED_v0_2_7.md | awk '{print $3}')" = "lf"
+          test "$(git check-attr eol -- carrier/TRACE_v0_2_7_RENDERED_CARRIER_SOURCE.md | awk '{print $3}')" = "lf"
+          rm -rf /tmp/trace-v027-windows-checkout
+          git init /tmp/trace-v027-windows-checkout
+          git -C /tmp/trace-v027-windows-checkout config core.autocrlf true
+          git -C /tmp/trace-v027-windows-checkout fetch \
+            --depth=1 \
+            "file://$GITHUB_WORKSPACE" \
+            HEAD
+          git -C /tmp/trace-v027-windows-checkout checkout --detach FETCH_HEAD
+          cd /tmp/trace-v027-windows-checkout
+          python - <<'PY'
+          from pathlib import Path
+          for path in (
+              Path('TRACE_FORMAL_SEED_v0_2_7.md'),
+              Path('carrier/TRACE_v0_2_7_RENDERED_CARRIER_SOURCE.md'),
+          ):
+              data = path.read_bytes()
+              if b'\r\n' in data:
+                  raise SystemExit(f'CRLF checkout detected in {path}')
+          PY
+          python tools/build_trace_v027_carrier.py --check-source
+
+      - name: Run current v0.2.7 falsification instrument
+        run: |
+          python falsification/run_trace_v027_falsify_x100.py \
+            --strict \
+            --json-out /tmp/trace-v027-falsify-x100-current.json
+
+      - name: Rebuild and compare semantic render surface
+        run: |
+          python tools/build_trace_v027_carrier.py \
+            --build /tmp/TRACE-v0.2.7-rebuilt.pdf \
+            --report /tmp/trace-v027-carrier-rebuild.json
+
+      - name: Check repository diff integrity
+        run: git diff --check
+
+      - name: Upload verification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-v027-pdf-carrier-evidence
+          path: |
+            TRACE.pdf
+            /tmp/trace-v027-carrier-committed.json
+            /tmp/trace-v027-carrier-rebuild.json
+            /tmp/trace-v027-falsify-x100-current.json
+          if-no-files-found: error
+
+      - name: Claim boundary
+        run: |
+          echo "Green CI establishes declared source binding, render coverage and carrier integrity only."
+          echo "It does not establish canon, validation, world validity, authority, permission or clearance."
