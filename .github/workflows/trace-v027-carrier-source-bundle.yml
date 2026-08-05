@@ -1,4 +1,4 @@
-name: TRACE v0.2.7 carrier source bundle
+name: TRACE v0.2.7 carrier materializer
 
 on:
   push:
@@ -9,37 +9,122 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  bundle:
+  materialize:
     runs-on: ubuntu-24.04
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Record source identities
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install render and verification dependencies
         run: |
-          git rev-parse HEAD > carrier-source-commit.txt
-          git hash-object TRACE_FORMAL_SEED_v0_2_7.md > formal-source-blob.txt
-          git hash-object TRACE.pdf > prior-carrier-blob.txt
-          sha256sum TRACE_FORMAL_SEED_v0_2_7.md TRACE.pdf > source-sha256.txt
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc texlive-xetex texlive-latex-extra \
+            fonts-dejavu-core poppler-utils
+          python -m pip install --disable-pip-version-check PyMuPDF Pillow
 
-      - name: Upload carrier source bundle
+      - name: Generate deterministic wrapper and provisional manifest
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from tools.build_trace_v027_carrier import generate_wrapper, WRAPPER, MANIFEST
+
+          wrapper = generate_wrapper()
+          WRAPPER.parent.mkdir(parents=True, exist_ok=True)
+          WRAPPER.write_text(wrapper, encoding='utf-8')
+          MANIFEST.write_text(json.dumps({
+              'carrier_id': 'TRACE-v0.2.7-RENDERED-FORMAL-CARRIER',
+              'released_baseline_main': '084a8c2ad0f5b54212b079e1a7edd7630932f6eb',
+              'formal_source_path': 'TRACE_FORMAL_SEED_v0_2_7.md',
+              'formal_source_blob': '9238986ddc18c34709906b2fc4510d827c68d2b2',
+              'formal_source_sha256': 'de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab',
+              'wrapper_sha256': hashlib.sha256(wrapper.encode('utf-8')).hexdigest(),
+              'presentation_only_repair_count': 2,
+              'expected_pages': 75,
+              'expected_normalized_text_sha256': '53d9006456669e53a1b3d7775ac8c2e0002fa61b5a0c8d0f5a8bae616f8a9e4e',
+              'pdf_sha256': ''
+          }, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          PY
+
+      - name: Build rendered carrier
+        run: |
+          python tools/build_trace_v027_carrier.py \
+            --check-source \
+            --build TRACE.pdf \
+            --report /tmp/trace-v027-carrier-build.json
+
+      - name: Bind exact PDF and finalize report
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          pdf = Path('TRACE.pdf').read_bytes()
+          pdf_sha = hashlib.sha256(pdf).hexdigest()
+          pdf_blob = hashlib.sha1(f'blob {len(pdf)}\0'.encode() + pdf).hexdigest()
+
+          manifest_path = Path('carrier/trace_v027_carrier_manifest.json')
+          manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          manifest.update({
+              'pdf_path': 'TRACE.pdf',
+              'pdf_sha256': pdf_sha,
+              'pdf_git_blob': pdf_blob,
+              'pdf_size_bytes': len(pdf),
+              'page_count': 75,
+              'page_geometry': 'A4'
+          })
+          manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+
+          template = Path('TRACE_v0_2_7_RENDERED_CARRIER_REPORT_TEMPLATE.md').read_text(encoding='utf-8')
+          report = template.replace('__PDF_SHA256__', pdf_sha)
+          report = report.replace('__PDF_BLOB__', pdf_blob)
+          report = report.replace('__PDF_SIZE__', str(len(pdf)))
+          Path('TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md').write_text(report, encoding='utf-8')
+          PY
+
+      - name: Verify exact materialized binary
+        run: |
+          python tools/build_trace_v027_carrier.py \
+            --check-source \
+            --verify-committed \
+            --report /tmp/trace-v027-carrier-committed.json
+          git diff --check
+
+      - name: Remove one-shot inputs and commit exact carrier
+        run: |
+          rm TRACE_v0_2_7_RENDERED_CARRIER_REPORT_TEMPLATE.md
+          rm .github/workflows/trace-v027-carrier-source-bundle.yml
+          git config user.name "Framework carrier build"
+          git config user.email "framework-carrier@users.noreply.github.com"
+          git add -A
+          git commit -m "Materialize TRACE v0.2.7 rendered carrier candidate"
+          git push origin HEAD:framework/trace-v0-2-7-pdf-carrier
+
+      - name: Upload exact materialized carrier evidence
         uses: actions/upload-artifact@v4
         with:
-          name: trace-v027-carrier-source-bundle
+          name: trace-v027-materialized-carrier
           path: |
-            TRACE_FORMAL_SEED_v0_2_7.md
-            TRACE_v0_2_7_BASELINE_RELEASE.md
             TRACE.pdf
-            README.md
-            carrier-source-commit.txt
-            formal-source-blob.txt
-            prior-carrier-blob.txt
-            source-sha256.txt
+            carrier/TRACE_v0_2_7_RENDERED_CARRIER_SOURCE.md
+            carrier/trace_v027_carrier_manifest.json
+            TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md
+            /tmp/trace-v027-carrier-build.json
+            /tmp/trace-v027-carrier-committed.json
           if-no-files-found: error
 
       - name: Claim boundary
         run: |
-          echo "This workflow only packages source material for a separate rendered-carrier build."
-          echo "It does not alter or validate TRACE."
+          echo "Materialization binds an exact rendered carrier to the released v0.2.7 source."
+          echo "It does not establish canon, validation, world validity, authority, permission or clearance."
