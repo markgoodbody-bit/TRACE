@@ -1,0 +1,63 @@
+name: TRACE v0.2.7 narrow repair build
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-2-7-narrow-repair
+    paths:
+      - tools/compile_trace_v027.py
+      - TRACE_FORMAL_SEED_v0_2_7.md
+      - .github/workflows/trace-v027-build.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: framework/trace-v0-2-7-narrow-repair
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile and verify TRACE v0.2.7
+        run: |
+          python tools/compile_trace_v027.py \
+            --write \
+            --json-out /tmp/trace-v027-build-report.json
+
+      - name: Check whitespace integrity
+        run: git diff --check
+
+      - name: Commit deterministic output when changed
+        run: |
+          if ! git diff --quiet -- TRACE_FORMAL_SEED_v0_2_7.md; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add TRACE_FORMAL_SEED_v0_2_7.md
+            git commit -m "Compile TRACE formal seed v0.2.7"
+            git push origin HEAD:framework/trace-v0-2-7-narrow-repair
+          else
+            echo "Committed v0.2.7 output already matches compiler."
+          fi
+
+      - name: Verify committed output
+        run: python tools/compile_trace_v027.py --check
+
+      - name: Upload build report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-v027-build-report
+          path: /tmp/trace-v027-build-report.json
+          if-no-files-found: error
+
+      - name: Claim boundary
+        run: |
+          echo "Green build means deterministic compilation and declared-contract containment."
+          echo "It does not mean release, canon, validation, world validity, authority, permission or clearance."
