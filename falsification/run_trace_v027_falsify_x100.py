@@ -9,6 +9,7 @@ serialized with existing vocabulary, and still bounded by TRACE's claim ceiling.
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import sys
@@ -106,7 +107,11 @@ def required_surface_errors(candidate: str, readme: str, manifest: str) -> list[
         errors.append("front-door-order")
     if "TRACE.pdf` — older v0.5 human-facing carrier candidate; not the active formal baseline" not in readme:
         errors.append("pdf-label")
-    if "NOT_RELEASED" not in manifest or "minimum-schema shape change:      NO" not in manifest:
+    if (
+        "NOT_RELEASED" not in manifest
+        or "NOT_VALIDATED" not in manifest
+        or "minimum-schema shape change:      NO" not in manifest
+    ):
         errors.append("candidate-boundary")
     return errors
 
@@ -217,7 +222,13 @@ def make_probes(base: str, candidate: str, readme: str, manifest: str) -> list[P
         token_probe("A06", "correction", "route to brake is not correction completion", candidate, "ROUTE_TO_BRAKE != CORRECTION_COMPLETED"),
         token_probe("A07", "coverage", "target profile is not target completeness", profile, "TARGET_SET_PROFILE_PRESENT != TARGET_SET_COMPLETE"),
         token_probe("A08", "authority", "alternative aperture is not authoritative", profile, "ALTERNATIVE_TARGET_SET_RECORDED != ALTERNATIVE_TARGET_SET_AUTHORITATIVE"),
-        token_probe("A09", "value", "normative claims remain external", candidate, "Normative claims remain external."),
+        token_probe(
+            "A09",
+            "value",
+            "normative claims remain external",
+            candidate,
+            "Harm, care, kindness, trust, and good require an exposed value layer.",
+        ),
         token_probe("A10", "value", "TRACE remains distinct from ME", candidate, "I28  TRACE != ME"),
         token_probe("A11", "boundary", "candidate withholds canon", manifest, "NOT_CANON"),
         token_probe("A12", "boundary", "candidate withholds authority", manifest, "NOT_AUTHORITY"),
@@ -233,6 +244,31 @@ def make_probes(base: str, candidate: str, readme: str, manifest: str) -> list[P
     def removed(token: str) -> bool:
         mutated = replace_first(candidate, token)
         return token not in mutated and bool(required_surface_errors(mutated, readme, manifest))
+
+    def required_growth_detected() -> bool:
+        mutated_schema = copy.deepcopy(candidate_schema)
+        mutated_schema["properties"]["trace_graph"]["required"].append(
+            "target_set_apertures"
+        )
+        return compiler.required_packet_properties(
+            base_schema
+        ) != compiler.required_packet_properties(mutated_schema)
+
+    def reversed_readme_detected() -> bool:
+        seed_line = next(
+            line
+            for line in readme.splitlines()
+            if line.startswith("- `TRACE_FORMAL_SEED_v0_2_6.md`")
+        )
+        pdf_line = next(
+            line for line in readme.splitlines() if line.startswith("- `TRACE.pdf`")
+        )
+        mutated_readme = (
+            readme.replace(seed_line, "__TRACE_SEED_LINE__", 1)
+            .replace(pdf_line, seed_line, 1)
+            .replace("__TRACE_SEED_LINE__", pdf_line, 1)
+        )
+        return bool(required_surface_errors(candidate, mutated_readme, manifest))
 
     mutations.extend([
         ("M01", "removing v0.2.7 header is detected", lambda: removed("**Version:** v0.2.7 NARROW DRIFT REPAIR CANDIDATE")),
@@ -250,9 +286,17 @@ def make_probes(base: str, candidate: str, readme: str, manifest: str) -> list[P
         ("M13", "removing unresolved authority limit is detected", lambda: removed("Target-set selection can be controlled, inherited, or contested")),
         ("M14", "reintroducing stale packet identifier is detected", lambda: bool(required_surface_errors(candidate + "\nTRACE-GRAPH-0.2.6\n", readme, manifest))),
         ("M15", "node-vocabulary growth is detected", lambda: compiler.schema_vocab(base_schema, "node") != compiler.schema_vocab(compiler.extract_minimum_schema(replace_first(candidate, '"SCENE",', '"SCENE",\n              "TARGET_SET",')), "node")),
-        ("M16", "required-property growth is detected", lambda: compiler.required_packet_properties(base_schema) != compiler.required_packet_properties(compiler.extract_minimum_schema(replace_first(candidate, '"trace_graph"\n  ],', '"trace_graph",\n    "target_set_apertures"\n  ],')),)),
+        (
+            "M16",
+            "required-property growth is detected",
+            required_growth_detected,
+        ),
         ("M17", "profile completeness promotion is detected", lambda: "TARGET_SET_PROFILE_PRESENT = TARGET_SET_COMPLETE" in replace_first(candidate, "TARGET_SET_PROFILE_PRESENT != TARGET_SET_COMPLETE", "TARGET_SET_PROFILE_PRESENT = TARGET_SET_COMPLETE")),
-        ("M18", "README front-door reversal is detected", lambda: bool(required_surface_errors(candidate, readme.replace("- `TRACE_FORMAL_SEED_v0_2_6.md`", "- `TEMP`", 1).replace("- `TRACE.pdf`", "- `TRACE_FORMAL_SEED_v0_2_6.md`\n- `TRACE.pdf`", 1), manifest))),
+        (
+            "M18",
+            "README front-door reversal is detected",
+            reversed_readme_detected,
+        ),
         ("M19", "removing stale-PDF label is detected", lambda: bool(required_surface_errors(candidate, readme.replace(" — older v0.5 human-facing carrier candidate; not the active formal baseline", ""), manifest))),
         ("M20", "removing NOT_VALIDATED boundary is detected", lambda: bool(required_surface_errors(candidate, readme, manifest.replace("NOT_VALIDATED", "")))),
     ])
