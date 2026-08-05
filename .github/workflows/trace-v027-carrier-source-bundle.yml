@@ -28,7 +28,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            pandoc texlive-xetex texlive-latex-extra \
+            pandoc texlive-xetex texlive-latex-extra lmodern \
             fonts-dejavu-core poppler-utils
           python -m pip install --disable-pip-version-check PyMuPDF Pillow
 
