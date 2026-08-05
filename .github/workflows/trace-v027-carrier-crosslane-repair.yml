@@ -25,8 +25,19 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Apply bounded cross-lane repair
-        run: python tools/apply_trace_v027_crosslane_repair.py
+      - name: Normalize prior report status and apply bounded repair
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md')
+          text = path.read_text(encoding='utf-8')
+          current = '**Status:** exact binary visually reviewed; bounded Windows-checkout repair applied; post-repair exact-head recheck pending  '
+          expected = '**Status:** exact binary visually reviewed; independent exact-head review pending  '
+          if text.count(current) != 1:
+              raise SystemExit(f'prior report status: expected 1 match, found {text.count(current)}')
+          path.write_text(text.replace(current, expected, 1), encoding='utf-8')
+          PY
+          python tools/apply_trace_v027_crosslane_repair.py
 
       - name: Run repaired v0.2.7 instrument
         run: |
