@@ -42,13 +42,20 @@ jobs:
       - name: Check diff integrity
         run: git diff --check
 
-      - name: Commit bounded repair and remove one-shot inputs
+      - name: Commit only non-workflow repair files
         run: |
-          rm .github/workflows/trace-v027-carrier-crosslane-repair.yml
-          rm tools/apply_trace_v027_crosslane_repair.py
+          rm -rf falsification/__pycache__ tools/__pycache__
+          git restore --source=HEAD -- \
+            .github/workflows/trace-v027-pdf-carrier.yml \
+            .github/workflows/trace-v027-carrier-crosslane-repair.yml \
+            tools/apply_trace_v027_crosslane_repair.py
           git config user.name "Framework cross-lane repair"
           git config user.email "framework-repair@users.noreply.github.com"
-          git add -A
+          git add \
+            TRACE_v0_2_7_BASELINE_RELEASE.md \
+            TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md \
+            falsification/run_trace_v027_falsify_x100.py \
+            falsification/TRACE_v0_2_7_CARRIER_FRONT_DOOR_PROBE_UPDATE.md
           git commit -m "Synchronize v0.2.7 carrier and falsification front door"
           git push origin HEAD:framework/trace-v0-2-7-pdf-carrier
 
