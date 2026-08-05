@@ -1,7 +1,7 @@
 # TRACE v0.2.7 rendered formal carrier report
 
 **Carrier ID:** `TRACE-v0.2.7-RENDERED-FORMAL-CARRIER`  
-**Status:** exact binary visually reviewed; independent exact-head review pending  
+**Status:** exact binary visually reviewed; bounded Windows-checkout repair applied; post-repair exact-head recheck pending  
 
 ```text
 NOT_CANON
@@ -35,6 +35,8 @@ prior pages: 77
 prior page geometry: 48 US Letter + 29 A4
 prior title: TRACE After-Fall Interface Layer v0.5 CARRIER CANDIDATE
 ```
+
+This is a deliberate replacement decision rather than accidental deletion. The rendered lane keeps one current public `TRACE.pdf`; the superseded v0.5 carrier remains addressable through Git history. Formal predecessor seeds remain preserved as separate in-tree formal objects because they are authority-bearing versioned sources, unlike the replaceable front-door carrier.
 
 ## Candidate object
 
@@ -116,6 +118,23 @@ right-edge collision: none observed
 ```
 
 Visual inspection is evidence about this rendered binary only. It is not evidence that the underlying framework is valid in the world.
+
+## Independent exact-head review and bounded repair
+
+Claude Code returned `NARROW — one bounded repair, everything else clear` against pre-repair head `53dc34e52f0563e20e651a8489b2ab86c47c1079`.
+
+The review mechanically confirmed that both declared body changes preserve logical and table-cell content, planted source and wrapper drift in both directions to confirm fail-closed binding, and matched the exact PDF binary identity. It found one reproducibility defect outside the PDF itself: a default Git for Windows checkout with `core.autocrlf=true` converted Markdown files to CRLF, causing a false `formal source SHA-256 mismatch` on an otherwise correct tree.
+
+Bounded repair:
+
+```text
+.gitattributes:
+*.md text eol=lf
+```
+
+The persistent workflow now verifies the `eol=lf` attributes, creates a fresh checkout with `core.autocrlf=true`, confirms that the formal seed and generated wrapper contain no CRLF sequences, and reruns `--check-source` in that checkout.
+
+This repair changes checkout normalization and verification reproducibility only. It does not change the formal seed blob, wrapper content, PDF binary, formal vocabulary, schema, semantics, release status, authority, permission, or clearance.
 
 ## Claim boundary
 
