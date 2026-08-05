@@ -1,0 +1,71 @@
+name: TRACE v0.2.7 falsify x100
+
+# Exact-head audit includes the human and machine evidence summaries.
+on:
+  push:
+    branches:
+      - framework/trace-v0-2-7-narrow-repair
+    paths:
+      - TRACE_FORMAL_SEED_v0_2_7.md
+      - TRACE_v0_2_7_NARROW_REPAIR_CANDIDATE.md
+      - README.md
+      - tools/compile_trace_v027.py
+      - falsification/run_trace_v027_falsify_x100.py
+      - falsification/TRACE_v0_2_7_FALSIFY_X100_REPORT.md
+      - falsification/trace_v027_falsify_x100_summary.json
+      - .github/workflows/trace-v027-falsify-x100.yml
+  pull_request:
+    paths:
+      - TRACE_FORMAL_SEED_v0_2_7.md
+      - TRACE_v0_2_7_NARROW_REPAIR_CANDIDATE.md
+      - README.md
+      - tools/compile_trace_v027.py
+      - falsification/run_trace_v027_falsify_x100.py
+      - falsification/TRACE_v0_2_7_FALSIFY_X100_REPORT.md
+      - falsification/trace_v027_falsify_x100_summary.json
+      - .github/workflows/trace-v027-falsify-x100.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify deterministic v0.2.7 output
+        run: python tools/compile_trace_v027.py --check
+
+      - name: Run v0.2.7 100-probe audit
+        run: |
+          python falsification/run_trace_v027_falsify_x100.py \
+            --strict \
+            --json-out /tmp/trace-v027-falsify-x100.json
+
+      - name: Preserve v0.2.6 audit execution
+        run: python falsification/run_trace_v026_falsify_x100.py --json-out /tmp/trace-v026-falsify-x100.json
+
+      - name: Check whitespace integrity
+        run: git diff --check
+
+      - name: Upload audit reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-v027-falsify-x100-reports
+          path: |
+            /tmp/trace-v027-falsify-x100.json
+            /tmp/trace-v026-falsify-x100.json
+          if-no-files-found: error
+
+      - name: Claim boundary
+        run: |
+          echo "Green workflow means the declared 100-probe regression and mutation suite passed."
+          echo "It does not mean release, canon, validation, world validity, authority, permission or clearance."
