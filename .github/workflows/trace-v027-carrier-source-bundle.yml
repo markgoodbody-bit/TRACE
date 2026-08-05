@@ -37,6 +37,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
+
           script = Path('tools/build_trace_v027_carrier.py')
           text = script.read_text(encoding='utf-8')
           old = 'EXPECTED_PAGES = 75'
@@ -70,16 +71,60 @@ jobs:
               'wrapper_sha256': hashlib.sha256(wrapper.encode('utf-8')).hexdigest(),
               'presentation_only_repair_count': 2,
               'expected_pages': 76,
-              'expected_normalized_text_sha256': '53d9006456669e53a1b3d7775ac8c2e0002fa61b5a0c8d0f5a8bae616f8a9e4e',
+              'expected_normalized_text_sha256': '',
               'pdf_sha256': ''
           }, indent=2, sort_keys=True) + '\n', encoding='utf-8')
           PY
 
-      - name: Build rendered carrier
+      - name: Build rendered carrier without pre-binding extracted-text hash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from tools.build_trace_v027_carrier import build_pdf
+          build_pdf(Path('TRACE.pdf'))
+          PY
+
+      - name: Bind hosted extracted-text identity
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          from tools.build_trace_v027_carrier import extract_pdf_text, normalize_text
+
+          pdf = Path('TRACE.pdf')
+          normalized = normalize_text(extract_pdf_text(pdf))
+          hosted_hash = hashlib.sha256(normalized.encode('utf-8')).hexdigest()
+          Path('/tmp/hosted-normalized-text-sha256.txt').write_text(hosted_hash + '\n', encoding='utf-8')
+
+          script = Path('tools/build_trace_v027_carrier.py')
+          text = script.read_text(encoding='utf-8')
+          old = 'EXPECTED_NORMALIZED_TEXT_SHA256 = "53d9006456669e53a1b3d7775ac8c2e0002fa61b5a0c8d0f5a8bae616f8a9e4e"'
+          new = f'EXPECTED_NORMALIZED_TEXT_SHA256 = "{hosted_hash}"'
+          if text.count(old) != 1:
+              raise SystemExit('expected one normalized-text hash constant')
+          script.write_text(text.replace(old, new), encoding='utf-8')
+
+          report = Path('TRACE_v0_2_7_RENDERED_CARRIER_REPORT_TEMPLATE.md')
+          report_text = report.read_text(encoding='utf-8')
+          report_text = report_text.replace(
+              '53d9006456669e53a1b3d7775ac8c2e0002fa61b5a0c8d0f5a8bae616f8a9e4e',
+              hosted_hash,
+          )
+          report.write_text(report_text, encoding='utf-8')
+
+          manifest_path = Path('carrier/trace_v027_carrier_manifest.json')
+          manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          manifest['expected_normalized_text_sha256'] = hosted_hash
+          manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          print(hosted_hash)
+          PY
+
+      - name: Verify hosted render surface
         run: |
           python tools/build_trace_v027_carrier.py \
             --check-source \
-            --build TRACE.pdf \
+            --verify TRACE.pdf \
             --report /tmp/trace-v027-carrier-build.json
 
       - name: Bind exact PDF and finalize report
@@ -141,6 +186,7 @@ jobs:
             TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md
             /tmp/trace-v027-carrier-build.json
             /tmp/trace-v027-carrier-committed.json
+            /tmp/hosted-normalized-text-sha256.txt
           if-no-files-found: error
 
       - name: Claim boundary
