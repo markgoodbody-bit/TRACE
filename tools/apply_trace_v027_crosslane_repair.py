@@ -77,7 +77,7 @@ def main() -> int:
     report = report_path.read_text(encoding="utf-8")
     report = replace_once(
         report,
-        "**Status:** exact binary visually reviewed; independent exact-head review pending  ",
+        "**Status:** exact binary visually reviewed; bounded Windows-checkout repair applied; post-repair exact-head recheck pending  ",
         "**Status:** exact binary visually reviewed; independent NARROW findings integrated; final bounded re-anchor pending  ",
         "report status",
     )
@@ -125,8 +125,9 @@ D20: TRACE.pdf is labelled as the current rendered carrier while Markdown remain
         "      - falsification/**\n"
         "      - TRACE_FORMAL_SEED_v0_2_7.md\n"
     )
-    workflow = replace_once(workflow, path_anchor, path_replacement, "push paths")
-    workflow = replace_once(workflow, path_anchor, path_replacement, "pull-request paths")
+    if workflow.count(path_anchor) != 2:
+        raise SystemExit(f"workflow paths: expected 2 matches, found {workflow.count(path_anchor)}")
+    workflow = workflow.replace(path_anchor, path_replacement, 2)
     step_anchor = '''          python tools/build_trace_v027_carrier.py --check-source
 
       - name: Rebuild and compare semantic render surface
