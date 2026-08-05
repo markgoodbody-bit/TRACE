@@ -1,7 +1,7 @@
 # TRACE v0.2.7 rendered formal carrier report
 
 **Carrier ID:** `TRACE-v0.2.7-RENDERED-FORMAL-CARRIER`  
-**Status:** exact binary visually reviewed; independent NARROW findings integrated; final bounded re-anchor pending
+**Status:** integrated as the current repository carrier; both independent NARROW findings repaired and preserved
 
 ```text
 NOT_CANON
@@ -10,6 +10,21 @@ NOT_AUTHORITY
 NOT_PERMISSION
 NOT_CLEARANCE
 ```
+
+## Integration result
+
+```text
+TRACE PR: #26
+merged main: 3da57a0eb9c5c0da5482b69a7f4b47c606518693
+integrated head: ec68782fe473bc4168996fe3add33dd6a4d4ceeb
+exact-head workflow: 31047151734
+conclusion: SUCCESS
+artifact: 8946934710
+artifact ZIP SHA-256:
+713048745d4f5f1f7739148a3b50f2821c6b76ef5b2f0a1de949a43fc9503722
+```
+
+Mark instructed Framework: `COMS and proceed`. Framework integrated both independent CC NARROW findings before merge. Fresh CC clearance at the final head was not inferred.
 
 ## Purpose
 
@@ -38,7 +53,7 @@ prior title: TRACE After-Fall Interface Layer v0.5 CARRIER CANDIDATE
 
 This is a deliberate replacement decision rather than accidental deletion. The rendered lane keeps one current public `TRACE.pdf`; the superseded v0.5 carrier remains addressable through Git history. Formal predecessor seeds remain preserved as separate in-tree formal objects because they are authority-bearing versioned sources, unlike the replaceable front-door carrier.
 
-## Candidate object
+## Carrier object
 
 ```text
 path: TRACE.pdf
@@ -100,6 +115,17 @@ normalized extracted-text SHA-256:
 2135547767b1e14963ad9c286aeb647ad5cedc0762f9a6aa9513849aacd77442
 ```
 
+The final exact-head carrier workflow also ran the current v0.2.7 falsification instrument:
+
+```text
+probe count: 100
+resisted: 100
+findings: 0
+mutation probes: 20
+mutation detector failures: 0
+verdict: CLEAR_WITH_RESIDUAL_LIMITS
+```
+
 ## Exact-binary visual review
 
 The corrected workflow artifact was downloaded and the exact PDF was rendered at 160 dpi. All 75 pages were inspected across 19 contact sheets, with focused inspection of the title/contents order, the core-glyph table, the long hardening equation, schema pages, worked transformations, invariants, survival kernel, and closing document-control pages.
@@ -119,9 +145,9 @@ right-edge collision: none observed
 
 Visual inspection is evidence about this rendered binary only. It is not evidence that the underlying framework is valid in the world.
 
-## Independent exact-head review and bounded repair
+## Independent exact-head review and bounded repairs
 
-Claude Code returned `NARROW — one bounded repair, everything else clear` against pre-repair head `53dc34e52f0563e20e651a8489b2ab86c47c1079`.
+Claude Code first returned `NARROW — one bounded repair, everything else clear` against pre-repair head `53dc34e52f0563e20e651a8489b2ab86c47c1079`.
 
 The review mechanically confirmed that both declared body changes preserve logical and table-cell content, planted source and wrapper drift in both directions to confirm fail-closed binding, and matched the exact PDF binary identity. It found one reproducibility defect outside the PDF itself: a default Git for Windows checkout with `core.autocrlf=true` converted Markdown files to CRLF, causing a false `formal source SHA-256 mismatch` on an otherwise correct tree.
 
@@ -132,14 +158,9 @@ Bounded repair:
 *.md text eol=lf
 ```
 
-The persistent workflow now verifies the `eol=lf` attributes, creates a fresh checkout with `core.autocrlf=true`, confirms that the formal seed and generated wrapper contain no CRLF sequences, and reruns `--check-source` in that checkout.
+Claude Code then returned a second NARROW finding: the executable v0.2.7 falsification instrument still encoded the pre-carrier README state. D19 and D20 were re-pointed rather than retired; A15 and M19 remain live; and the current v0.2.7 x100 instrument was added to persistent carrier CI.
 
-This repair changes checkout normalization and verification reproducibility only. It does not change the formal seed blob, wrapper content, PDF binary, formal vocabulary, schema, semantics, release status, authority, permission, or clearance.
-
-## Claim boundary
-
-This work does not establish TRACE's semantic adequacy, world validity, decision advantage, moral correctness, operational effectiveness, authority, permission, clearance, or canon.
-
+These repairs change checkout normalization, verification reproducibility, and the live front-door test target only. They do not change the formal seed blob, wrapper content, PDF binary, formal vocabulary, schema, semantics, release status, authority, permission, or clearance.
 
 ## Windows checkout compatibility
 
@@ -168,3 +189,7 @@ D20: TRACE.pdf is labelled as the current rendered carrier while Markdown remain
 ```
 
 `A15` continues to require the complete declared surface to pass. Mutation probe `M19` continues to fail closed if the current-carrier authority label is removed. The original pre-carrier audit report and summary remain historical evidence of the earlier repository state; the executable instrument now tests the post-carrier state.
+
+## Claim boundary
+
+This work does not establish TRACE's semantic adequacy, world validity, decision advantage, moral correctness, operational effectiveness, authority, permission, clearance, or canon.
