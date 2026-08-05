@@ -6,6 +6,9 @@ on:
       - framework/trace-v0-2-7-pdf-carrier
     paths:
       - .gitattributes
+      - README.md
+      - TRACE_v0_2_7_BASELINE_RELEASE.md
+      - falsification/**
       - TRACE_FORMAL_SEED_v0_2_7.md
       - TRACE.pdf
       - TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md
@@ -15,6 +18,9 @@ on:
   pull_request:
     paths:
       - .gitattributes
+      - README.md
+      - TRACE_v0_2_7_BASELINE_RELEASE.md
+      - falsification/**
       - TRACE_FORMAL_SEED_v0_2_7.md
       - TRACE.pdf
       - TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md
@@ -78,6 +84,12 @@ jobs:
           PY
           python tools/build_trace_v027_carrier.py --check-source
 
+      - name: Run current v0.2.7 falsification instrument
+        run: |
+          python falsification/run_trace_v027_falsify_x100.py \
+            --strict \
+            --json-out /tmp/trace-v027-falsify-x100-current.json
+
       - name: Rebuild and compare semantic render surface
         run: |
           python tools/build_trace_v027_carrier.py \
@@ -95,6 +107,7 @@ jobs:
             TRACE.pdf
             /tmp/trace-v027-carrier-committed.json
             /tmp/trace-v027-carrier-rebuild.json
+            /tmp/trace-v027-falsify-x100-current.json
           if-no-files-found: error
 
       - name: Claim boundary
