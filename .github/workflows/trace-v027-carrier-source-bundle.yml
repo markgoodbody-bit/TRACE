@@ -1,0 +1,45 @@
+name: TRACE v0.2.7 carrier source bundle
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-2-7-pdf-carrier
+    paths:
+      - .github/workflows/trace-v027-carrier-source-bundle.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bundle:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Record source identities
+        run: |
+          git rev-parse HEAD > carrier-source-commit.txt
+          git hash-object TRACE_FORMAL_SEED_v0_2_7.md > formal-source-blob.txt
+          git hash-object TRACE.pdf > prior-carrier-blob.txt
+          sha256sum TRACE_FORMAL_SEED_v0_2_7.md TRACE.pdf > source-sha256.txt
+
+      - name: Upload carrier source bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-v027-carrier-source-bundle
+          path: |
+            TRACE_FORMAL_SEED_v0_2_7.md
+            TRACE_v0_2_7_BASELINE_RELEASE.md
+            TRACE.pdf
+            README.md
+            carrier-source-commit.txt
+            formal-source-blob.txt
+            prior-carrier-blob.txt
+            source-sha256.txt
+          if-no-files-found: error
+
+      - name: Claim boundary
+        run: |
+          echo "This workflow only packages source material for a separate rendered-carrier build."
+          echo "It does not alter or validate TRACE."
