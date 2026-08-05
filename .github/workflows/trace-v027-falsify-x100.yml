@@ -1,5 +1,6 @@
 name: TRACE v0.2.7 falsify x100
 
+# Exact-head rerun after mutation-detector repair.
 on:
   push:
     branches:
