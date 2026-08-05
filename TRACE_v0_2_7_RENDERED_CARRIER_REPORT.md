@@ -1,7 +1,7 @@
 # TRACE v0.2.7 rendered formal carrier report
 
 **Carrier ID:** `TRACE-v0.2.7-RENDERED-FORMAL-CARRIER`  
-**Status:** exact binary candidate; post-commit visual review pending  
+**Status:** exact binary visually reviewed; independent exact-head review pending  
 
 ```text
 NOT_CANON
@@ -23,6 +23,7 @@ The Markdown file remains the formal source. The PDF changes presentation, pagin
 released baseline main: 084a8c2ad0f5b54212b079e1a7edd7630932f6eb
 formal source blob: 9238986ddc18c34709906b2fc4510d827c68d2b2
 formal source SHA-256: de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab
+wrapper SHA-256: add8d15f435b42a0d3115f0b45a52ec111152067abb3a667aa4941ee0329fcd2
 ```
 
 Prior `TRACE.pdf` remains recoverable in Git history:
@@ -57,6 +58,22 @@ No symbol, predicate, relation, claim, identifier, schema field, invariant, exam
 
 The carrier layout contains one table of contents after the title page. A duplicate Pandoc-generated pre-title table of contents exposed during exact-binary visual QA was removed before review.
 
+## Hosted build and exact-object evidence
+
+```text
+initial materializer run: 30995111725
+initial artifact: 8925848342
+initial artifact ZIP SHA-256:
+44326621786b2f2b980de1c2d2c9606248316974a8bda887a0799dcf6f568d81
+
+corrected rematerializer run: 30995700552
+corrected artifact: 8926082081
+corrected artifact ZIP SHA-256:
+75123015e125ba88b2e5247d03c8e2e88464800123afb48e6fee76328a448a1c
+```
+
+The first exact hosted binary exposed a duplicate automatically generated table of contents before the title page. It was rejected, rematerialized, and replaced by the corrected exact object above. The rejected binary was not approved for merge.
+
 ## Automated verification
 
 ```text
@@ -65,6 +82,11 @@ page count: 75
 all pages A4: PASS
 blank pages: 0
 fonts embedded: PASS
+minimum ink margins at 100 dpi:
+  left: 70 px
+  right: 16 px
+  top: 32 px
+  bottom: 28 px
 source headings checked: 145
 missing headings: 0
 invariants I01-I60 checked: 60
@@ -76,7 +98,24 @@ normalized extracted-text SHA-256:
 2135547767b1e14963ad9c286aeb647ad5cedc0762f9a6aa9513849aacd77442
 ```
 
-The exact committed binary must still be downloaded, rendered, and visually inspected before replacement approval. Until that check is integrated, this remains a carrier candidate.
+## Exact-binary visual review
+
+The corrected workflow artifact was downloaded and the exact PDF was rendered at 160 dpi. All 75 pages were inspected across 19 contact sheets, with focused inspection of the title/contents order, the core-glyph table, the long hardening equation, schema pages, worked transformations, invariants, survival kernel, and closing document-control pages.
+
+```text
+title page first: PASS
+single contents sequence after title: PASS
+page order and numbering: PASS
+clipping: none observed
+overlap: none observed
+broken tables: none observed
+broken equations: none observed
+missing glyphs: none observed
+blank pages: none
+right-edge collision: none observed
+```
+
+Visual inspection is evidence about this rendered binary only. It is not evidence that the underlying framework is valid in the world.
 
 ## Claim boundary
 
