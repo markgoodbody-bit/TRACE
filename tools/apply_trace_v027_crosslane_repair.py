@@ -78,7 +78,7 @@ def main() -> int:
     report = replace_once(
         report,
         "**Status:** exact binary visually reviewed; bounded Windows-checkout repair applied; post-repair exact-head recheck pending  ",
-        "**Status:** exact binary visually reviewed; independent NARROW findings integrated; final bounded re-anchor pending  ",
+        "**Status:** exact binary visually reviewed; independent NARROW findings integrated; final bounded re-anchor pending",
         "report status",
     )
     addition = '''
