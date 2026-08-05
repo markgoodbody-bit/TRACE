@@ -33,6 +33,24 @@ jobs:
             fonts-dejavu-core poppler-utils
           python -m pip install --disable-pip-version-check PyMuPDF Pillow
 
+      - name: Bind hosted render geometry
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          script = Path('tools/build_trace_v027_carrier.py')
+          text = script.read_text(encoding='utf-8')
+          old = 'EXPECTED_PAGES = 75'
+          if text.count(old) != 1:
+              raise SystemExit('expected one page-count constant')
+          script.write_text(text.replace(old, 'EXPECTED_PAGES = 76'), encoding='utf-8')
+
+          report = Path('TRACE_v0_2_7_RENDERED_CARRIER_REPORT_TEMPLATE.md')
+          text = report.read_text(encoding='utf-8')
+          text = text.replace('pages: 75', 'pages: 76')
+          text = text.replace('page count: 75', 'page count: 76')
+          report.write_text(text, encoding='utf-8')
+          PY
+
       - name: Generate deterministic wrapper and provisional manifest
         run: |
           python - <<'PY'
@@ -51,7 +69,7 @@ jobs:
               'formal_source_sha256': 'de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab',
               'wrapper_sha256': hashlib.sha256(wrapper.encode('utf-8')).hexdigest(),
               'presentation_only_repair_count': 2,
-              'expected_pages': 75,
+              'expected_pages': 76,
               'expected_normalized_text_sha256': '53d9006456669e53a1b3d7775ac8c2e0002fa61b5a0c8d0f5a8bae616f8a9e4e',
               'pdf_sha256': ''
           }, indent=2, sort_keys=True) + '\n', encoding='utf-8')
@@ -82,7 +100,7 @@ jobs:
               'pdf_sha256': pdf_sha,
               'pdf_git_blob': pdf_blob,
               'pdf_size_bytes': len(pdf),
-              'page_count': 75,
+              'page_count': 76,
               'page_geometry': 'A4'
           })
           manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n', encoding='utf-8')
