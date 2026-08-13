@@ -84,6 +84,26 @@ custodian's attention, which is the scarce resource in this arrangement.
 If the running version of an instrument is not the version whose source is held,
 say so in the same sentence as the claim.
 
+## A capture cannot answer questions about its own future
+
+Before inferring that something did not happen, compare the capture's
+`created_at_utc` against the time window of the question. A capture is silent
+about everything after its own timestamp, and that silence looks identical to
+absence.
+
+```text
+CAPTURE_SILENT_ON_PERIOD != NOTHING_HAPPENED_IN_PERIOD
+```
+
+Paid for on 2026-08-13: a plan was reported as not-yet-run on the evidence of a
+capture taken seven minutes before it actuated. The hash check ran correctly,
+established the packet was a re-upload of a known object, and the wrong
+conclusion was drawn from it anyway. Quota figures carry the same defect - a
+stale packet's quota is not corroboration, it is the same staleness read twice.
+
+State the capture time and the question's window in the same sentence, or do
+not make the claim.
+
 ## Reading a packet
 
 - Record the raw SHA-256 before reading content.
