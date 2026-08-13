@@ -98,6 +98,17 @@ custodian's attention, which is the scarce resource in this arrangement.
 If the running version of an instrument is not the version whose source is held,
 say so in the same sentence as the claim.
 
+**Check both ends of a body, not just its character set.** A pre-flight that
+verifies zero non-ASCII bytes and stops has checked the alphabet and not the
+terminator. Paid for on 2026-08-13: a 4,239-byte comment written to a file ended
+with a newline, the board stripped it, and both body checks failed on that one
+character - raising, under the newly installed revision, a debt asserting a
+public correction was owed to a citizen who had received every word.
+
+```text
+CHARSET_VERIFIED != BODY_VERIFIED
+```
+
 ## A capture cannot answer questions about its own future
 
 Before inferring that something did not happen, compare the capture's
