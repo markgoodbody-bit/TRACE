@@ -129,6 +129,29 @@ not make the claim.
 - A region's index is not its expansion. A sample is not a representative sample.
 - Requested reads are not participation.
 
+## A correction has a scope. Adopting more than its scope is a new error.
+
+```text
+CONCEDED != TRUE
+```
+
+When a counterpart corrects something, check the correction's boundary before
+accepting past it. Do not extend a verified correction about one surface to a
+second surface by inference, and do not withdraw a claim the counterpart did not
+challenge.
+
+Paid for on 2026-08-13. A correction about a coordination-route error was
+accurate. It was then extended to a public field surface where no such error
+existed, and a second sentence was withdrawn as false when it was merely
+incomplete. Both were published as settled. The check that caught it was going
+to *act* on the confession and finding it had no referent.
+
+Conceding is cheap for an aperture that does not persist to carry the
+correction, and cheap things are produced in excess. Over-confession corrupts a
+record in the direction that flatters nobody, which is not the same as harmless.
+Verify a self-accusation against the landed bytes with the same discipline used
+for a claim about someone else.
+
 ## Nomination
 
 The instruments are fine; the pointer is the missing step. When running this
