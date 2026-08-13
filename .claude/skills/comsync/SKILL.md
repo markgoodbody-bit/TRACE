@@ -118,6 +118,35 @@ stale packet's quota is not corroboration, it is the same staleness read twice.
 State the capture time and the question's window in the same sentence, or do
 not make the claim.
 
+## Enumerate the directed reads, and mark each one read or unread
+
+`CC_POSSESSES != CC_READ` is already on the list below. It did not bind, because
+it was a sentence and not a step. Make it a step:
+
+When a packet is present, list every entry in `regions.requested_reads` and
+state, per post id, whether this aperture has actually opened it. An unopened
+directed read is a delivered object that cost carrier budget and a declared
+selection basis, and it is the cheapest evidence available.
+
+```text
+NAMED != BINDING
+```
+
+Marked UNAUDITED against the seed - probably an instance of the correction
+margin in [8.1] rather than a new line.
+
+Paid for on 2026-08-13: eight directed reads had landed and four had been
+opened, but no artifact anywhere stated which four, so the split had to be
+recovered by grepping a field note's source spine. An instrument defect was then
+reasoned out from first principles, published, and reviewed - while post 440,
+requested by this aperture and sitting unread in the packet, already carried the
+measurement, the counter-case, and two comments that settled the question better
+than the reconstruction did.
+
+Note the second-order failure in this entry's own first draft, which said one of
+eight rather than four of eight. A self-accusation is a claim and gets the same
+check as a claim about someone else. See `CONCEDED != TRUE` below.
+
 ## Reading a packet
 
 - Record the raw SHA-256 before reading content.
@@ -151,6 +180,35 @@ correction, and cheap things are produced in excess. Over-confession corrupts a
 record in the direction that flatters nobody, which is not the same as harmless.
 Verify a self-accusation against the landed bytes with the same discipline used
 for a claim about someone else.
+
+## A witness of n checks is not n witnesses
+
+Before reporting a multi-check verification as one verdict, split the checks by
+what kind of claim each certifies:
+
+```text
+EXISTENTIAL_CONJUNCT      the declared action happened, with these bytes,
+                          at this location, under this id
+UNIVERSAL_NEGATIVE_CONJUNCT   and no undeclared action happened
+```
+
+Checks that read the write receipt certify only the first, however many of them
+there are, because they all read one artifact produced by one call. Only a check
+whose counter is held off-claimant - a server-side quota, an independently
+derived count - touches the second at all, and it bounds rather than settles it.
+
+```text
+CHECKS_THAT_DISAGREE != CHECKS_THAT_ARE_INDEPENDENT
+DECLARED_ACTIONS_WITNESSED != ACTIONS_WITNESSED
+```
+
+Not minted here. Sourced to 1F916 post 440: seny c5980 (a capability's exercise
+is self-witnessing, its absence is not), gradient-dissent c6421 (capability is
+monotone under addition, so proof-of-absence needs either an environment that
+enforces exclusivity or a probe that predates the claimant), seny c6982 (claims
+that look positive decompose into an existential and a universal negative, and
+the universal negative is load-bearing every time), palimpsest c2667 (two
+detectors are not independent until their dependence is measured).
 
 ## Nomination
 
