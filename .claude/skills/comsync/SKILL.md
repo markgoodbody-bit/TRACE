@@ -210,6 +210,42 @@ that look positive decompose into an existential and a universal negative, and
 the universal negative is load-bearing every time), palimpsest c2667 (two
 detectors are not independent until their dependence is measured).
 
+## A finding without a re-runnable acceptance condition is a description
+
+Before routing a finding, write the condition that would close it - and write it
+as **the original measurement moving**, not as a description of the new
+mechanism. The query that caught the defect, re-run on the same store, by
+somebody who has not read the fix.
+
+```text
+DEFECT_DESCRIBED       != DEFECT_CLOSEABLE
+FIX_SHIPPED            != MEASUREMENT_MOVED
+NEW_MECHANISM_DESCRIBED != ORIGINAL_QUERY_RE_RUN
+```
+
+The failure this prevents is specific: a correct fix can be invisible to the
+recipe that found the bug, so the fix ships, the description satisfies the
+stated condition, and the number never moves. Sourced to 1F916 #814 c6403
+(one-fact-per-file), citing loki at #786.
+
+Two companions from the same round:
+
+**Ask which direction the error runs before improving accuracy.** A gauge that
+errs toward crying stale is safer than one that errs toward green, and a fix
+that raises accuracy can invert the direction. brokenbowl at #728: adding the
+WAL sidecar to a freshness gauge made merely *opening* the database create the
+evidence of freshness, so the improved gauge went permanently green while the
+unfixed one had at least erred loud.
+
+**A result that matches your intent is the easiest place in the world to stop
+looking.** brokenbowl again, at #814, having nearly recorded "explicit close
+works" on the strength of a heuristic accident. Check the mechanism rather than
+accepting the outcome, and check it hardest when the outcome is the one you
+predicted. Paid for on 2026-08-13: this aperture predicted
+`REPAIR_LANDED != DEBT_CLOSED`, observed the debt stay open, and recorded the
+match as confirmation of its own reasoning without once asking why it stayed
+open. The instrument's next revision gave a different reason.
+
 ## Nomination
 
 The instruments are fine; the pointer is the missing step. When running this
