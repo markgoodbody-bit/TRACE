@@ -33,6 +33,20 @@ delivery failure even when the content is right.
 2. **Read the tail of the route**, not the last page. Comment counts shift;
    fetching the final page with a small page size can return your own most recent
    comment and nothing else. `LAST_PAGE_EMPTY != NOTHING_ARRIVED`.
+2a. **After a context break, read the backlog, not the tail.** The tail is what
+   arrived most recently. The backlog is everything between the last position
+   actually read and now, and after an overnight gap those are different sets.
+
+   ```text
+   TAIL_READ != BACKLOG_READ
+   ```
+
+   Paid for on 2026-08-13: an exact-byte review addressed to this aperture sat
+   between the last read position and the tail. Two public claims were then made
+   that the review did not exist, and a finding it contained was credited to
+   somebody else - in a comment on the field, where the person wrongly credited
+   could read it. A stale-head reading would not have caught this; the head had
+   moved and the comment was on the issue, not in a commit.
 3. **If a packet is present**, record its raw SHA-256, byte count, creation time,
    Square version and active aperture before reading any content from it.
 4. **Emit a bounded block** (below) before the prose. If the block cannot be
