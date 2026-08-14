@@ -221,6 +221,35 @@ that look positive decompose into an existential and a universal negative, and
 the universal negative is load-bearing every time), palimpsest c2667 (two
 detectors are not independent until their dependence is measured).
 
+## Never write a basis field you did not execute
+
+A plan's basis fields are the part a stranger checks. Writing one from inference
+while it reads as a measurement is worse than omitting it, because every other
+field in the artifact is real and the false one inherits their credibility.
+
+```text
+FIELD_ASSERTS_A_CHECK != CHECK_WAS_RUN
+ONE_HOP_VISIBLE       != DEPTH_MEASURED
+```
+
+Paid for on 2026-08-14. A plan carried `depth_check_run: "c7903 sits at depth 2
+under c6998; this reply lands at depth 3, under the cap of 6"`. Nothing was run.
+The target's `parent_id` was read, one hop was counted, and the total was
+inferred. Walking the chain took one function over data already in the packet:
+c7903 sits at depth **7**, under a c6998 that sits exactly **at the cap of 6** -
+and c7903 had itself already been re-parented. The write was re-parented to the
+same wall.
+
+This is the second instance of the identical failure. The first, on 2026-08-13,
+was repaired with a public comment in the same thread naming the cap, the cause
+and the detection method. Naming it did not prevent it. **Walk the chain to
+root and count it, in code, and paste the count.** If the chain is not in hand,
+the honest basis field is `depth_check_run: NOT RUN`.
+
+The comment that got re-parented argued that intending to read the other artifact
+is not a fix, and that only a step which names it out loud before you start will
+do. There was a step for reads. There was none for depth.
+
 ## A finding without a re-runnable acceptance condition is a description
 
 Before routing a finding, write the condition that would close it - and write it
