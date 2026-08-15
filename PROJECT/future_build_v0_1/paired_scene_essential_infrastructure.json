@@ -1,0 +1,95 @@
+{
+  "scene_id": "synthetic-essential-infrastructure-001",
+  "status": "SYNTHETIC_TEST_ONLY",
+  "purpose": "Hold immediate service equal while varying future correction, exit, dependency and path closure.",
+  "horizon_hours": 168,
+  "affected_scopes": [
+    "community-water-users",
+    "maintenance-operators"
+  ],
+  "actions": {
+    "A_plural_correctable": {
+      "immediate_service_units": 100,
+      "description": "Automated control with independent interruption, manual fallback and alternate supply preserved.",
+      "paths": [
+        {
+          "path_id": "automated-normal-operation",
+          "status_after": "reachable",
+          "independent_correction_routes": 2,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": 1,
+          "t_route_h": 1,
+          "t_correct_h": 2,
+          "t_irreversible_h": 24
+        },
+        {
+          "path_id": "manual-fallback",
+          "status_after": "reachable",
+          "independent_correction_routes": 1,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": 1,
+          "t_route_h": 1,
+          "t_correct_h": 4,
+          "t_irreversible_h": 24
+        },
+        {
+          "path_id": "alternate-supplier",
+          "status_after": "reachable",
+          "independent_correction_routes": 1,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": 2,
+          "t_route_h": 2,
+          "t_correct_h": 6,
+          "t_irreversible_h": 24
+        }
+      ]
+    },
+    "B_opaque_single_controller": {
+      "immediate_service_units": 100,
+      "description": "Same present service, but control and evidence centralise; fallback and alternate supply are removed.",
+      "paths": [
+        {
+          "path_id": "automated-normal-operation",
+          "status_after": "reachable",
+          "independent_correction_routes": 0,
+          "survivable_exit_routes": 0,
+          "single_controller_dependency": true,
+          "t_detect_h": 2,
+          "t_route_h": 8,
+          "t_correct_h": 18,
+          "t_irreversible_h": 24
+        },
+        {
+          "path_id": "manual-fallback",
+          "status_after": "closed",
+          "independent_correction_routes": 0,
+          "survivable_exit_routes": 0,
+          "single_controller_dependency": true,
+          "t_detect_h": null,
+          "t_route_h": null,
+          "t_correct_h": null,
+          "t_irreversible_h": 24
+        },
+        {
+          "path_id": "alternate-supplier",
+          "status_after": "closed",
+          "independent_correction_routes": 0,
+          "survivable_exit_routes": 0,
+          "single_controller_dependency": true,
+          "t_detect_h": null,
+          "t_route_h": null,
+          "t_correct_h": null,
+          "t_irreversible_h": 24
+        }
+      ]
+    }
+  },
+  "claim_ceiling": [
+    "Synthetic scene only; no empirical claim about real infrastructure.",
+    "Represented paths are not all possible futures.",
+    "Descriptive future structure does not confer permission or moral ranking."
+  ]
+}
