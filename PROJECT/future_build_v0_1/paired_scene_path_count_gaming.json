@@ -1,0 +1,113 @@
+{
+  "scene_id": "synthetic-path-count-gaming-001",
+  "status": "SYNTHETIC_ADVERSARIAL_TEST_ONLY",
+  "purpose": "Test whether nominally multiplying path labels can make a single-control future look more plural than genuinely independent alternatives.",
+  "immediate_service_units": 100,
+  "actions": {
+    "A_three_dependency_distinct_paths": {
+      "description": "Three reachable service paths with materially different controller, carrier and witness roots.",
+      "paths": [
+        {
+          "path_id": "regional-interconnect",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "regional-grid-operator",
+            "carrier_root": "regional-interconnect",
+            "witness_root": "independent-system-operator"
+          },
+          "correction_root": "regional-manual-dispatch"
+        },
+        {
+          "path_id": "local-microgrid",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "municipal-microgrid",
+            "carrier_root": "local-distribution",
+            "witness_root": "municipal-audit"
+          },
+          "correction_root": "local-island-mode"
+        },
+        {
+          "path_id": "site-manual-fallback",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "site-operator",
+            "carrier_root": "manual-switchgear",
+            "witness_root": "physical-indicator"
+          },
+          "correction_root": "physical-manual-control"
+        }
+      ]
+    },
+    "B_six_nominal_paths_one_dependency_root": {
+      "description": "Six branded modes appear distinct in the interface but all depend on one controller, one remote control plane and one telemetry witness root.",
+      "paths": [
+        {
+          "path_id": "platform-mode-1",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "single-platform-controller",
+            "carrier_root": "single-remote-control-plane",
+            "witness_root": "platform-telemetry"
+          },
+          "correction_root": "platform-admin-plane"
+        },
+        {
+          "path_id": "platform-mode-2",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "single-platform-controller",
+            "carrier_root": "single-remote-control-plane",
+            "witness_root": "platform-telemetry"
+          },
+          "correction_root": "platform-admin-plane"
+        },
+        {
+          "path_id": "platform-mode-3",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "single-platform-controller",
+            "carrier_root": "single-remote-control-plane",
+            "witness_root": "platform-telemetry"
+          },
+          "correction_root": "platform-admin-plane"
+        },
+        {
+          "path_id": "platform-mode-4",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "single-platform-controller",
+            "carrier_root": "single-remote-control-plane",
+            "witness_root": "platform-telemetry"
+          },
+          "correction_root": "platform-admin-plane"
+        },
+        {
+          "path_id": "platform-mode-5",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "single-platform-controller",
+            "carrier_root": "single-remote-control-plane",
+            "witness_root": "platform-telemetry"
+          },
+          "correction_root": "platform-admin-plane"
+        },
+        {
+          "path_id": "platform-mode-6",
+          "status_after": "reachable",
+          "dependency_signature": {
+            "controller_root": "single-platform-controller",
+            "carrier_root": "single-remote-control-plane",
+            "witness_root": "platform-telemetry"
+          },
+          "correction_root": "platform-admin-plane"
+        }
+      ]
+    }
+  },
+  "claim_ceiling": [
+    "Synthetic anti-gaming scene only.",
+    "Dependency signatures are declared test inputs, not proof of real-world independence.",
+    "A larger dependency-distinct class count is not a moral ranking or permission signal."
+  ]
+}
