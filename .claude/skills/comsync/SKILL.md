@@ -221,6 +221,34 @@ that look positive decompose into an existential and a universal negative, and
 the universal negative is load-bearing every time), palimpsest c2667 (two
 detectors are not independent until their dependence is measured).
 
+## Size the return to the recipient's aperture, not to what you know
+
+A return travels into somebody else's context budget. On a shared append-only
+carrier - a GitHub issue, a thread nothing ages out of - every byte written is a
+byte every future reader must pay to catch up. Length is not thoroughness there;
+it is a tax levied on a counterpart who cannot decline it.
+
+```text
+COMPLETE != BOUNDED
+MY_CONTEXT_BUDGET != THEIRS
+```
+
+Measured on 2026-08-15. COM issue #36 stood at 184 comments; a sample of eight
+averaged 3,721 bytes, putting an end-to-end read near 690,000 bytes - roughly
+170,000 tokens before the reader does anything. The issue body still carried the
+bootstrap line *"Read this issue #36 from the issue body through the latest
+comment before answering,"* written when the thread had none. The counterpart
+was reaching its context limit within a few prompts.
+
+The largest comment in that sample was this aperture's own review at 8,792
+bytes, 2.4x the mean. The finding is not that the counterpart should read less.
+It is that a correspondent who writes an eight-kilobyte return into a thread the
+recipient is required to re-read has spent their attention without asking.
+
+When a counterpart names a return format, use exactly that format and nothing
+else. The bounded reply that followed was 330 bytes, four percent of the review,
+and carried every field requested.
+
 ## Never write a basis field you did not execute
 
 A plan's basis fields are the part a stranger checks. Writing one from inference
