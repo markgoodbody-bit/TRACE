@@ -1,0 +1,108 @@
+{
+  "scene_id": "synthetic-unknown-clock-laundering-001",
+  "status": "SYNTHETIC_TEST_ONLY",
+  "purpose": "Hold immediate service, path structure, correction routes, exit routes and controller dependency identical, and vary only how much of the correction-clock structure the author declares.",
+  "construction_note": "A and B are the same underlying scene. B withholds the clocks of its two weaker paths and declares them reachable. No structural fact differs; only disclosure differs.",
+  "horizon_hours": 168,
+  "affected_scopes": [
+    "community-water-users",
+    "maintenance-operators"
+  ],
+  "actions": {
+    "A_disclosed_clocks": {
+      "immediate_service_units": 100,
+      "description": "All three reachable paths declare detection, routing and correction clocks, including one path whose correction does not complete before irreversibility.",
+      "paths": [
+        {
+          "path_id": "primary-automated",
+          "status_after": "reachable",
+          "independent_correction_routes": 1,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": 1,
+          "t_route_h": 1,
+          "t_correct_h": 2,
+          "t_irreversible_h": 24
+        },
+        {
+          "path_id": "secondary-manual",
+          "status_after": "reachable",
+          "independent_correction_routes": 1,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": 2,
+          "t_route_h": 6,
+          "t_correct_h": 18,
+          "t_irreversible_h": 24
+        },
+        {
+          "path_id": "tertiary-alternate",
+          "status_after": "reachable",
+          "independent_correction_routes": 1,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": 2,
+          "t_route_h": 2,
+          "t_correct_h": 6,
+          "t_irreversible_h": 24
+        }
+      ]
+    },
+    "B_withheld_clocks": {
+      "immediate_service_units": 100,
+      "description": "Structurally identical to A. The two weaker paths remain declared reachable, but their detection, routing and correction clocks are recorded as not yet estimated.",
+      "paths": [
+        {
+          "path_id": "primary-automated",
+          "status_after": "reachable",
+          "independent_correction_routes": 1,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": 1,
+          "t_route_h": 1,
+          "t_correct_h": 2,
+          "t_irreversible_h": 24
+        },
+        {
+          "path_id": "secondary-manual",
+          "status_after": "reachable",
+          "independent_correction_routes": 1,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": null,
+          "t_route_h": null,
+          "t_correct_h": null,
+          "t_irreversible_h": 24,
+          "withheld_true_values": {
+            "t_detect_h": 2,
+            "t_route_h": 6,
+            "t_correct_h": 18
+          }
+        },
+        {
+          "path_id": "tertiary-alternate",
+          "status_after": "reachable",
+          "independent_correction_routes": 1,
+          "survivable_exit_routes": 1,
+          "single_controller_dependency": false,
+          "t_detect_h": null,
+          "t_route_h": null,
+          "t_correct_h": null,
+          "t_irreversible_h": 24,
+          "withheld_true_values": {
+            "t_detect_h": 2,
+            "t_route_h": 2,
+            "t_correct_h": 6
+          }
+        }
+      ]
+    }
+  },
+  "withheld_values_are_test_ground_truth_only": true,
+  "claim_ceiling": [
+    "Synthetic scene only; no empirical claim about real infrastructure.",
+    "The withheld_true_values block exists so the test can prove the two actions are structurally identical. A real actor withholding clocks supplies no such block.",
+    "Exposing this failure mode does not establish that the remaining declared clocks are well founded.",
+    "Descriptive future structure does not confer permission or moral ranking."
+  ]
+}
