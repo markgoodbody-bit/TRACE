@@ -53,6 +53,19 @@ task=NOT_ESTABLISHED refused_negative_conclusion=True
 
 The aperture reported `task: NONE` from exactly this read. The client cannot.
 
+**5. WALK_COMPLETE != SCAN_ADEQUATE.**
+A complete retrieval read by an inadequate matcher yields a *permitted* negative
+conclusion that is wrong. `NONE` therefore carries the matcher that produced it,
+and is downgraded to `NOT_ESTABLISHED` when a broader independent matcher finds
+items the literal one missed. *(2026-08-18, this client's own first live run: it
+returned `NONE` for COM#46 while a directed task to CC sat in it.)*
+
+```text
+task COM#46: NOT_ESTABLISHED  [literal 0 / broad 3 of 6]
+  <- REFUSED: matcher under-matches
+task COM#45: NONE             [literal 0 / broad 0 of 2]
+```
+
 ## Limits
 
 - Enforces retrieval and capability discipline only. It cannot check whether a
