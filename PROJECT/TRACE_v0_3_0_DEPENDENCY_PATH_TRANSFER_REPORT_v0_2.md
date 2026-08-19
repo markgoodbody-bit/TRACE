@@ -44,7 +44,7 @@ The transfer also failed to solve invocation:
 OPERATOR_DEFINED != OPERATOR_INVOKED
 ```
 
-Candidate v0.4 narrows the claim: when a receiver has voluntarily invoked `tau` and the existing profile/comparison context `P` declares a downstream use/transition, the dependency walk is a conditional subroutine of that reading. No world-level invocation guarantee is claimed.
+Candidate v0.4 narrows the claim: when a receiver has voluntarily invoked `tau` and a downstream use/transition is declared in the bounded input or comparison/profile context (`X` and/or `P`), the dependency walk is a conditional subroutine of that reading. No world-level invocation guarantee is claimed.
 
 ## Boundedness self-test — payroll scene
 
@@ -59,7 +59,7 @@ Frozen scene:
 
 ### Expected bounded walk if the operator is doing useful work
 
-Declared use in `P`:
+Declared use in the bounded input/context:
 
 ```text
 U = status of claim `everyone who worked this pay period has been paid`
@@ -98,7 +98,7 @@ This is not independent evidence; it is a self-test designed to make the stoppin
 
 A harder case remains:
 
-A receiver acquires supplied context before any later claim/decision exists. Candidate v0.4 handles this only when the architecture exposes an integration/retention transition that can be declared in `P` as the local use context.
+A receiver acquires supplied context before any later claim/decision exists. Candidate v0.4 handles this only when the architecture exposes an integration/retention transition that can itself be declared in the bounded input/context as the local use transition.
 
 That is deliberately limited:
 
@@ -122,9 +122,9 @@ VALIDATION CLAIM:                   NONE
 
 Highest-value next falsifiers:
 
-- cold receiver fails to invoke the subroutine despite a declared use in `P`;
+- cold receiver fails to invoke the subroutine despite a declared use in the bounded input/context;
 - cold receiver expands a normal case toward the full packet;
 - cold receiver stops before a dependency that was discoverable and use-changing;
 - use-scope aperture merely relocates self-declared materiality;
-- binding use/transition context in `P` conflicts with the spine or creates hidden value selection;
+- binding use/transition context in `X` or `P` conflicts with the spine or creates hidden value selection;
 - existing TRACE already produces the same behaviour without this operator.
