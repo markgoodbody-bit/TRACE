@@ -38,13 +38,13 @@ For the declared downstream use/transition bound in `X` and/or `P`:
 
 1. Walk backward through the represented dependencies and representation paths that supply it.
 2. Preserve an existing TRACE distinction only where collapsing it can change that use under the represented model.
-3. Preserve a specific unresolved omission or alternate-use fork when it would change the traversed dependency set; generic possible omission does not keep every branch open.
+3. Preserve a specific unresolved omission or alternate-use fork when it would change the traversed dependency set. Generic possible omission does not keep every ordinary branch open. **But if the downstream proposition itself requires coverage, absence or completeness, the target-set / coverage basis is directly load-bearing even when no omitted item has yet been named.**
 4. Where the use relies on a check, walk the check forward through exact proposition, evidence/target aperture, instrument resolution, dependency/control structure, timing, execution, result route and return to use.
 5. Stop branchwise when further traversal cannot change the declared use, when a declared access boundary is reached, or when further checking cannot change the status available before the relevant use/hardening boundary.
 
 No new semantic object is required.
 
-## 2. Use scope remains aperture-bound
+## 2. Use scope and coverage remain aperture-bound
 
 Binding a use in the declared input/context does not make that use exhaustive.
 
@@ -60,6 +60,38 @@ NOT_REPRESENTED_AS_USE != NO_DOWNSTREAM_EFFECT
 Keep a broader-use fork only when a specific alternate use/transition can be named that changes the dependency set.
 
 This does not require inspection of every imaginable future use.
+
+### Coverage / absence claims
+
+A different rule applies when the **declared proposition itself** depends on a bounded set being complete. Examples include claims using structures such as:
+
+```text
+all / every / none
+no counterexample / no alternative / no override
+complete / exhaustive / 100% coverage
+```
+
+In those cases the target-set aperture and comparison basis are already dependencies of the proposition. Traverse, where represented and material:
+
+```text
+target-set source
+selection basis
+declared denominator / comparison basis
+known omitted categories
+alternative target-set apertures
+coverage limits / disputes
+```
+
+Do not require a named missing item before preserving uncertainty about completeness.
+
+```text
+ALL_SELECTED_TARGETS_PASS != ALL_RELEVANT_TARGETS_PASS
+NO_COUNTEREXAMPLE_IN_SELECTED_SET != NO_COUNTEREXAMPLE
+NO_KNOWN_OMITTED_TARGET != TARGET_SET_COMPLETE
+100_PERCENT_OF_DECLARED_SET != COMPLETE_WORLD_COVERAGE
+```
+
+This is not generic skepticism. The coverage branch stays active because the proposition itself quantifies over the set.
 
 ## 3. Representation path is part of the dependency path
 
@@ -153,9 +185,12 @@ If the location does not change the repair, omit it.
 WALK_STOPPED != WORLD_COMPLETE
 BOUNDED_READING != COMPLETE_WORLD_MODEL
 NO_AVAILABLE_FURTHER_CHECK != CLAIM_TRUE
+NO_SPECIFIC_OMISSION_IDENTIFIED != TARGET_SET_COMPLETE
 ```
 
 Stopping is a use/resource boundary, not an epistemic upgrade.
+
+A branch supporting a completeness/absence proposition does not close merely because no missing item has been named. It closes only to the bounded status justified by the represented target-set/coverage evidence.
 
 ## 8. Remaining invocation ceiling
 
@@ -178,6 +213,8 @@ Hold or delete this candidate if hostile use shows:
 
 - binding a downstream use/transition in `X` or the declared comparison/profile context `P` is incompatible with the spine;
 - the receiver can game the declared use scope by making it artificially narrow without a recoverable specific fork;
+- completeness/absence handling expands ordinary non-coverage claims into universal search;
+- a completeness/absence claim closes merely because no specific omission is already known;
 - routine walks expand toward the full TRACE packet;
 - representation/check provenance creates unbounded recursion;
 - pre-claim integration becomes universal memory/learning bureaucracy;
