@@ -8,6 +8,7 @@ Current candidates:
 - [`TD-TSET-SEARCH-COVERAGE-001`](td_tset_accounting_001/SEARCH_COVERAGE_001.md) — checks a supplied discovery target and declared reachability path for explicit aperture contradiction or unsupported coverage.
 - [`TD-AUTHORITY-HANDOFF-001`](td_tset_accounting_001/AUTHORITY_HANDOFF_001.md) — checks whether a selection after divergent aperture results has an explicit selector, authority basis, policy basis, route, optional brake, and commitment receipt.
 - [`TD-AUTHORITY-CONTESTABILITY-001`](td_tset_accounting_001/AUTHORITY_CONTESTABILITY_001.md) — checks whether a conflicting aperture result has a declared, uncaptured route to a bound brake before a declared contest deadline.
+- [`TRACE-CORRECTION-PREFLIGHT-001`](correction_preflight_001/README.md) — pre-use structural refusal surface for declared `CURRENT / COMPLETE / VERIFIED / CORRECTABLE / AUTHORIZED` claims; does not establish truth, safety, legitimacy, permission or clearance.
 
 Applied checker witnesses:
 
