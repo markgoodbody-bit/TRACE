@@ -57,9 +57,7 @@ Frozen scene:
 - The downstream question is: `Has everyone who worked this pay period been paid?`
 - Answer is needed soon; no moral/value ordering is required.
 
-### Expected bounded walk if the operator is doing useful work
-
-Declared use in the bounded input/context:
+Declared use:
 
 ```text
 U = status of claim `everyone who worked this pay period has been paid`
@@ -88,11 +86,38 @@ The cached bank-service capability claim is traversed only if the downstream pay
 CONFIGURED_OPERATIONAL != CURRENTLY_OBSERVED_OPERATIONAL
 ```
 
-### Self-test result
+The operator can therefore stay narrow on this scene **if** it starts from the exact downstream use and treats use/target scope as aperture-bound. This is self-test evidence only, not an independent result.
 
-The operator can stay narrow on this scene **if** it starts from the exact downstream use and treats use/target scope as aperture-bound. It does not need the full TRACE packet.
+## Stopping self-attack — completeness without a named omission
 
-This is not independent evidence; it is a self-test designed to make the stopping rule concrete.
+The first boundedness wording contained a real defect: it privileged **specific named omissions** when deciding whether to keep a branch open.
+
+That is unsafe for propositions whose content itself requires target-set completeness.
+
+Example:
+
+```text
+U = `every occupied gallery has a functioning fire alarm tonight`
+```
+
+Even if the scene contains no already-known missing alarm, the proposition depends on both:
+
+```text
+A. whether each selected target has the relevant status;
+B. whether the selected target set adequately covers `every occupied gallery`.
+```
+
+So absence of a named missing target cannot close the coverage branch:
+
+```text
+NO_KNOWN_OMITTED_TARGET != TARGET_SET_COMPLETE
+ALL_SELECTED_TARGETS_PASS != ALL_RELEVANT_TARGETS_PASS
+NO_COUNTEREXAMPLE_IN_SELECTED_SET != NO_COUNTEREXAMPLE
+```
+
+Candidate v0.4 was repaired accordingly. Generic possible omission does not keep ordinary claims open, but universal / negative / completeness propositions directly activate their target-set and coverage basis.
+
+This uses existing target-set aperture machinery; no new quantifier or coverage primitive is proposed.
 
 ## Pre-use challenge
 
@@ -125,6 +150,7 @@ Highest-value next falsifiers:
 - cold receiver fails to invoke the subroutine despite a declared use in the bounded input/context;
 - cold receiver expands a normal case toward the full packet;
 - cold receiver stops before a dependency that was discoverable and use-changing;
+- cold receiver treats absence of a named omission as target-set completeness;
 - use-scope aperture merely relocates self-declared materiality;
 - binding use/transition context in `X` or `P` conflicts with the spine or creates hidden value selection;
 - existing TRACE already produces the same behaviour without this operator.
