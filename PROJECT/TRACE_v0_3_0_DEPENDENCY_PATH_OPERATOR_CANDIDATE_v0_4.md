@@ -11,9 +11,11 @@ TRACE already has a voluntary reading operator:
 (R, L) = tau(X, Pi_declared, H_declared, d, P)
 ```
 
+where the spine already allows `X` to be a declared compressed input, map, signal set, supplied claims, scene description, prior TRACE graph or other bounded object, and `P` to carry declared profile / primitive / comparison context.
+
 Do not add a universal `TRIGGER` primitive.
 
-Instead, when the declared profile/comparison context `P` includes a downstream use or transition whose support depends on the reading, the dependency-path walk is a **conditional subroutine of that TRACE reading**.
+Instead, when a downstream use or transition whose support depends on the reading is **declared in the bounded input/context (`X` and/or `P`)**, the dependency-path walk is a conditional subroutine of that TRACE reading.
 
 ```text
 TRACE_READING_INVOKED + DECLARED_USE_CONTEXT
@@ -28,11 +30,11 @@ TRACE_READING_INVOKED != SYSTEM_GUARD_INSTALLED
 OPERATOR_DEFINED != WORLD_LEVEL_ENFORCEMENT
 ```
 
-Where no declared use/transition context exists, the operator does not invent one merely to keep itself active.
+Where no downstream use/transition is declared in the bounded input/context, the operator does not invent one merely to keep itself active.
 
 ## 1. Core walk
 
-For the declared downstream use/transition bound in `P`:
+For the declared downstream use/transition bound in `X` and/or `P`:
 
 1. Walk backward through the represented dependencies and representation paths that supply it.
 2. Preserve an existing TRACE distinction only where collapsing it can change that use under the represented model.
@@ -44,7 +46,7 @@ No new semantic object is required.
 
 ## 2. Use scope remains aperture-bound
 
-Binding a use in `P` does not make that use exhaustive.
+Binding a use in the declared input/context does not make that use exhaustive.
 
 Where use-scope completeness itself changes the walk, reuse existing aperture/target-set machinery:
 
@@ -104,7 +106,7 @@ A check result can become later input, so the walk is recursive rather than a on
 
 Supplied material can shape standing map before a later explicit claim exists.
 
-If a receiving architecture exposes an integration/retention transition and that transition is bound as the declared use context in `P`, the same walk can inspect it.
+If a receiving architecture exposes an integration/retention transition and that transition is declared as the local use context in `X` and/or `P`, the same walk can inspect it.
 
 ```text
 SUPPLIED_MATERIAL -> DECLARED RETAIN / INTEGRATE TRANSITION
@@ -157,12 +159,13 @@ Stopping is a use/resource boundary, not an epistemic upgrade.
 
 ## 8. Remaining invocation ceiling
 
-Binding the walk inside `tau` repairs only **intra-reading dormancy**.
+Binding the walk inside `tau` repairs only **intra-reading dormancy once a use/transition is declared in the bounded input/context**.
 
-It does not repair failure to invoke TRACE at all.
+It does not repair failure to invoke TRACE at all, and it does not guarantee that the surrounding system declares the right use scope.
 
 ```text
 INTRA_READING_OPERATOR_INSTALLED != EXTERNAL_INVOCATION_GUARANTEED
+DECLARED_USE_CONTEXT != COMPLETE_OPERATIVE_USE
 ```
 
 A domain profile may mechanically invoke TRACE at an executable transition boundary, but that is profile/software machinery, not a universal TRACE truth.
@@ -173,8 +176,8 @@ Where no executable invocation surface exists, dependence on aperture discipline
 
 Hold or delete this candidate if hostile use shows:
 
-- binding use context in `P` is semantically incompatible with the spine's current meaning of `P`;
-- the receiver can game `P` by declaring an artificially narrow use without a recoverable specific fork;
+- binding a downstream use/transition in `X` or the declared comparison/profile context `P` is incompatible with the spine;
+- the receiver can game the declared use scope by making it artificially narrow without a recoverable specific fork;
 - routine walks expand toward the full TRACE packet;
 - representation/check provenance creates unbounded recursion;
 - pre-claim integration becomes universal memory/learning bureaucracy;
