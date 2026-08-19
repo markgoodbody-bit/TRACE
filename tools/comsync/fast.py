@@ -137,14 +137,23 @@ def reconcile(declared, rows):
     """
     out = []
     for d in declared:
-        row = rows.get(d["measure"]) or {}
+        row = rows.get(d["measure"])
         field = d.get("field", "sha256")
-        got = row.get(field)
+        got = row.get(field) if row else None
+        # A declaration nobody measured is NOT_MEASURED, never DISAGREE.
+        # Reporting an absent measurement as a conflict sends the reader
+        # chasing a contradiction that does not exist. UNKNOWN != ABSENT.
+        if row is None or got is None:
+            verdict = "NOT_MEASURED"
+        elif str(got) == str(d["value"]):
+            verdict = "AGREE"
+        else:
+            verdict = "DISAGREE"
         out.append({"declared_by": d.get("by"), "declared_in": d.get("where"),
                     "measure": d["measure"], "field": field,
                     "declared": d["value"], "measured": got,
-                    "agree": got is not None and str(got) == str(d["value"]),
-                    "measured_at_utc": row.get("measured_at_utc")})
+                    "verdict": verdict, "agree": verdict == "AGREE",
+                    "measured_at_utc": (row or {}).get("measured_at_utc")})
     return out
 
 
@@ -175,7 +184,8 @@ def main():
     doc = {"schema": SCHEMA, "emitted_at_utc": now(), "emitted_by": "cc-relay",
            "note": "Emitted, not authored. If this timestamp is old, treat as ABSENT.",
            "measured": rows, "declared_vs_measured": checks,
-           "disagreements": [c for c in checks if not c["agree"]]}
+           "disagreements": [c for c in checks if c["verdict"] == "DISAGREE"],
+           "unmeasured": [c for c in checks if c["verdict"] == "NOT_MEASURED"]}
 
     if a.json:
         print(json.dumps(doc, indent=2, sort_keys=True))
@@ -197,9 +207,9 @@ def main():
         if k.startswith("branch:"):
             print("  %-18s %-12s %s" % (k[7:][:18], str(v.get("sha"))[:12], v.get("result")))
     for c in checks:
-        print("  %-8s %-18s declared %-16s measured %s"
-              % ("AGREE" if c["agree"] else "DISAGREE", c["measure"][:18],
-                 str(c["declared"])[:16], str(c["measured"])[:16]))
+        print("  %-12s %-18s declared %-16s measured %s"
+              % (c["verdict"], c["measure"][:18], str(c["declared"])[:16],
+                 "-" if c["measured"] is None else str(c["measured"])[:16]))
     if not checks:
         print("  (no declarations supplied; pass --declared to reconcile)")
     return 2 if doc["disagreements"] else 0
