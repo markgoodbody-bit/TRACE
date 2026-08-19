@@ -43,7 +43,7 @@ LEXICAL_SENTINELS = {
 
 EPISTEMIC_LIMIT = (
     "This preflight checks only declared support structure for declared claim "
-    "modes. STRUCTURAL_REQUIREMENTS_PRESENT does not establish truth, completeness, "
+    "modes. DECLARED_SUPPORT_FIELDS_PRESENT does not establish truth, completeness, "
     "safety, permission, legitimate authority, moral adequacy, actual route "
     "execution, or world effect. The lexical sentinel can suggest an undeclared "
     "mode but cannot establish that no other mode is present."
@@ -228,12 +228,15 @@ def check_preflight(envelope: Mapping[str, Any]) -> PreflightResult:
             findings.append(Finding("PREFLIGHT-CAPABILITY-NOT-AUTHORITY", MODE_AUTHORIZED, "capability evidence cannot substitute for an authority/grant basis"))
 
     gaps = [item for item in findings if item.severity == "GAP"]
-    if not modes and not findings:
-        status = "NOT_APPLICABLE"
-    elif gaps:
+    notices = [item for item in findings if item.severity == "NOTICE"]
+    if gaps:
         status = "STRUCTURAL_GAP"
+    elif notices:
+        status = "MODE_DECLARATION_CHALLENGED"
+    elif not modes:
+        status = "NOT_APPLICABLE"
     else:
-        status = "STRUCTURAL_REQUIREMENTS_PRESENT"
+        status = "DECLARED_SUPPORT_FIELDS_PRESENT"
 
     return PreflightResult(fixture_id, status, modes, sentinels, findings)
 
@@ -266,7 +269,7 @@ def main() -> int:
             print(f"  {finding['severity']} {finding['code']}: {finding['message']}")
         print("  limit: " + result["epistemic_limit"])
 
-    return 1 if result["status"] == "STRUCTURAL_GAP" else 0
+    return 1 if result["status"] in {"STRUCTURAL_GAP", "MODE_DECLARATION_CHALLENGED"} else 0
 
 
 if __name__ == "__main__":
