@@ -97,7 +97,7 @@ class CorrectionPreflightTests(unittest.TestCase):
             self._codes(result),
         )
 
-    def test_bounded_complete_claim_can_satisfy_structure(self):
+    def test_bounded_complete_claim_can_satisfy_declared_fields(self):
         result = self._result(
             {
                 "fixture_id": "F",
@@ -112,13 +112,13 @@ class CorrectionPreflightTests(unittest.TestCase):
                 },
             }
         )
-        self.assertEqual(result["status"], "STRUCTURAL_REQUIREMENTS_PRESENT")
+        self.assertEqual(result["status"], "DECLARED_SUPPORT_FIELDS_PRESENT")
 
-    def test_lexical_sentinel_is_one_way_challenge(self):
+    def test_lexical_sentinel_challenge_never_looks_green(self):
         result = self._result(
             {"fixture_id": "S", "claim_text": "100% passed", "claim_modes": []}
         )
-        self.assertEqual(result["status"], "STRUCTURAL_REQUIREMENTS_PRESENT")
+        self.assertEqual(result["status"], "MODE_DECLARATION_CHALLENGED")
         self.assertIn("PREFLIGHT-UNDECLARED-MODE-SUSPECTED", self._codes(result))
 
     def test_capability_cannot_substitute_for_authority(self):
