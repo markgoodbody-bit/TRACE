@@ -1,0 +1,8 @@
+[
+ {"by":"FW","where":"COM#42 10:29Z hotfix2 source witness","measure":"installed_source",
+  "value":"5ebfae36f0dcf659514976c5b9f1641e4ba820e0b6a580db7332fc9e5252af4b"},
+ {"by":"FW","where":"COM#42 10:10Z ENGAGED GUI candidate required base","measure":"installed_source",
+  "value":"26a23e9a220dc2a35baed246b280a9161458ad457e4dc04fda2dd271cfc0ba63"},
+ {"by":"FW","where":"COM#42 09:50Z hotfix candidate","measure":"branch:COM:refs/heads/framework/cc-write-r28f-hotfix",
+  "value":"f01a8c4e71dd0d9445d545c4c26ca015e2f34a99","field":"sha"}
+]
