@@ -113,7 +113,7 @@ NO_LEXICAL_HIT != NO_UNDECLARED_MODE
 MATCHER_PRESENT != MATCHER_ADEQUATE
 ```
 
-The sentinel therefore cannot clear a claim or establish that the declared modes are complete.
+A sentinel challenge is therefore not allowed to return the same top-level state as a clean declared envelope.
 
 ## Output statuses
 
@@ -121,8 +121,12 @@ The sentinel therefore cannot clear a claim or establish that the declared modes
 NOT_APPLICABLE
   no declared mode and no sentinel challenge
 
-STRUCTURAL_REQUIREMENTS_PRESENT
-  no declared structural gap found
+MODE_DECLARATION_CHALLENGED
+  lexical sentinel suggests an undeclared strong claim mode;
+  inspect the trigger rather than treating omission as absence
+
+DECLARED_SUPPORT_FIELDS_PRESENT
+  no declared structural gap found for the modes the caller actually declared
 
 STRUCTURAL_GAP
   at least one required declared support relation is missing, unknown,
@@ -132,7 +136,13 @@ INPUT_ERROR
   envelope cannot be interpreted
 ```
 
-`STRUCTURAL_REQUIREMENTS_PRESENT` is intentionally not named `PASS`, `SAFE`, `VALID`, `TRUE`, `AUTHORIZED`, or `CLEAR`.
+`DECLARED_SUPPORT_FIELDS_PRESENT` is deliberately weaker than `PASS`, `SAFE`, `VALID`, `TRUE`, `AUTHORIZED`, or `CLEAR`.
+
+```text
+DECLARED_SUPPORT_FIELDS_PRESENT != CLAIM_TRUE
+DECLARED_SUPPORT_FIELDS_PRESENT != SUPPORT_FIELDS_WORLD_VALID
+MODE_DECLARATION_UNCHALLENGED != MODES_COMPLETE
+```
 
 ## Run
 
@@ -147,8 +157,8 @@ python -m unittest -v test_correction_preflight.py
 Exit codes:
 
 ```text
-0  NOT_APPLICABLE or STRUCTURAL_REQUIREMENTS_PRESENT
-1  STRUCTURAL_GAP
+0  NOT_APPLICABLE or DECLARED_SUPPORT_FIELDS_PRESENT
+1  MODE_DECLARATION_CHALLENGED or STRUCTURAL_GAP
 2  INPUT_ERROR
 ```
 
@@ -164,10 +174,10 @@ The test file freezes eight cases:
 4. reachable rollback with unknown arrival-before-hardening for `CORRECTABLE`;
 5. mundane `7 x 8` control — the checker must stay out of the way;
 6. a bounded completeness claim with its declared comparison basis present;
-7. undeclared `100%` language caught only as a sentinel notice;
+7. undeclared `100%` language must return `MODE_DECLARATION_CHALLENGED`, never a green-looking success state;
 8. capability evidence incorrectly substituted for `AUTHORIZED`.
 
-The initial implementation was run against these fixtures before publication; all eight are intended as regression tests, not validation.
+All eight branches were exercised before the current review head. They are regression tests, not validation.
 
 ## Epistemic ceiling
 
