@@ -13,6 +13,7 @@ import argparse
 import json
 import re
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from typing import Any, Mapping
 
 CANDIDATE_ID = "TRACE-CORRECTION-PREFLIGHT-001"
@@ -42,11 +43,14 @@ LEXICAL_SENTINELS = {
 }
 
 EPISTEMIC_LIMIT = (
-    "This preflight checks only declared support structure for declared claim "
-    "modes. DECLARED_SUPPORT_FIELDS_PRESENT does not establish truth, completeness, "
-    "safety, permission, legitimate authority, moral adequacy, actual route "
-    "execution, or world effect. The lexical sentinel can suggest an undeclared "
-    "mode but cannot establish that no other mode is present."
+    "This preflight checks only claimant-supplied declared support structure for "
+    "declared claim modes. It does not resolve source_ref/result_ref/authority_ref "
+    "or other references against an external source. DECLARED_SUPPORT_FIELDS_PRESENT "
+    "does not establish truth, completeness, safety, permission, legitimate authority, "
+    "moral adequacy, actual route execution, or world effect. A green result becomes "
+    "load-bearing only through evidence that resolves outside this envelope/checker. "
+    "The lexical sentinel is a noisy one-way challenge: it can flag an undeclared mode "
+    "but does not parse polarity and cannot establish that no other mode is present."
 )
 
 
@@ -130,6 +134,40 @@ def _status(mapping: Mapping[str, Any], key: str) -> str:
     return value.upper() if isinstance(value, str) else "UNKNOWN"
 
 
+def _parse_utc_timestamp(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    text = value.strip()
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(text)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return None
+    return parsed.astimezone(timezone.utc)
+
+
+def _positive_number(value: Any) -> float | None:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    numeric = float(value)
+    return numeric if numeric > 0 else None
+
+
+def exit_code_for_status(status: str) -> int:
+    if status == "DECLARED_SUPPORT_FIELDS_PRESENT":
+        return 0
+    if status in {"STRUCTURAL_GAP", "MODE_DECLARATION_CHALLENGED"}:
+        return 1
+    if status == "INPUT_ERROR":
+        return 2
+    if status == "NOT_APPLICABLE":
+        return 3
+    raise ValueError(f"unknown preflight status: {status}")
+
+
 def check_preflight(envelope: Mapping[str, Any]) -> PreflightResult:
     if not isinstance(envelope, Mapping):
         raise PreflightInputError("envelope must be an object")
@@ -144,15 +182,15 @@ def check_preflight(envelope: Mapping[str, Any]) -> PreflightResult:
     sentinels = _sentinel_modes(claim_text)
     findings: list[Finding] = []
 
-    # One-way falsifier only: a lexical hit can challenge an omission. No hit
-    # cannot prove that a mode is absent.
+    # One-way noisy falsifier only: a lexical hit can challenge an omission.
+    # It deliberately does not parse polarity. No hit cannot prove absence.
     for mode in sorted(set(sentinels) - set(modes)):
         findings.append(
             Finding(
                 "PREFLIGHT-UNDECLARED-MODE-SUSPECTED",
                 mode,
                 f"claim language suggests {mode} but claim_modes does not declare it; "
-                "inspect rather than treating the omission as absence",
+                "inspect the trigger rather than treating the omission as absence",
                 "NOTICE",
             )
         )
@@ -161,8 +199,25 @@ def check_preflight(envelope: Mapping[str, Any]) -> PreflightResult:
         current = _as_dict(env.get("currentness"), "currentness")
         if not _nonempty_str(current, "source_ref"):
             findings.append(Finding("PREFLIGHT-CURRENT-SOURCE-MISSING", MODE_CURRENT, "CURRENT claim requires a declared current-state source/reference"))
-        if not _nonempty_str(current, "checked_at_utc"):
-            findings.append(Finding("PREFLIGHT-CURRENT-CHECK-TIME-MISSING", MODE_CURRENT, "CURRENT claim requires a declared current-state check time"))
+
+        checked_at = _parse_utc_timestamp(current.get("checked_at_utc"))
+        reference_time = _parse_utc_timestamp(current.get("reference_time_utc"))
+        max_age_seconds = _positive_number(current.get("max_age_seconds"))
+
+        if checked_at is None:
+            findings.append(Finding("PREFLIGHT-CURRENT-CHECK-TIME-INVALID", MODE_CURRENT, "CURRENT claim requires a parseable timezone-aware checked_at_utc"))
+        if reference_time is None:
+            findings.append(Finding("PREFLIGHT-CURRENT-REFERENCE-TIME-INVALID", MODE_CURRENT, "CURRENT claim requires a parseable timezone-aware reference_time_utc"))
+        if max_age_seconds is None:
+            findings.append(Finding("PREFLIGHT-CURRENT-MAX-AGE-INVALID", MODE_CURRENT, "CURRENT claim requires a positive declared max_age_seconds"))
+
+        if checked_at is not None and reference_time is not None:
+            age_seconds = (reference_time - checked_at).total_seconds()
+            if age_seconds < 0:
+                findings.append(Finding("PREFLIGHT-CURRENT-CHECK-IN-FUTURE", MODE_CURRENT, "checked_at_utc is later than the declared reference_time_utc"))
+            elif max_age_seconds is not None and age_seconds > max_age_seconds:
+                findings.append(Finding("PREFLIGHT-CURRENT-STALE", MODE_CURRENT, f"current-state observation age {age_seconds:.3f}s exceeds declared max_age_seconds {max_age_seconds:.3f}s"))
+
         if current.get("reacquired") is not True:
             findings.append(Finding("PREFLIGHT-CURRENT-NOT-REACQUIRED", MODE_CURRENT, "CURRENT claim is not supported by an explicit current reacquisition"))
 
@@ -259,7 +314,7 @@ def main() -> int:
             "epistemic_limit": EPISTEMIC_LIMIT,
         }
         print(json.dumps(payload, indent=2) if args.json else f"INPUT_ERROR: {exc}")
-        return 2
+        return exit_code_for_status("INPUT_ERROR")
 
     if args.json:
         print(json.dumps(result, indent=2, sort_keys=True))
@@ -269,7 +324,7 @@ def main() -> int:
             print(f"  {finding['severity']} {finding['code']}: {finding['message']}")
         print("  limit: " + result["epistemic_limit"])
 
-    return 1 if result["status"] in {"STRUCTURAL_GAP", "MODE_DECLARATION_CHALLENGED"} else 0
+    return exit_code_for_status(result["status"])
 
 
 if __name__ == "__main__":
