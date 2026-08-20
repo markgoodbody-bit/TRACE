@@ -65,7 +65,28 @@ Only sections required by the declared modes are inspected.
 
 ### CURRENT
 
-Requires a declared current-state source, check time, and explicit current reacquisition.
+Requires:
+
+```text
+source_ref
+checked_at_utc
+reference_time_utc
+max_age_seconds
+reacquired = true
+```
+
+`checked_at_utc` and `reference_time_utc` must be parseable timezone-aware timestamps. `max_age_seconds` must be positive. The checker computes the observation age relative to the **declared** reference time and refuses a future-dated observation or one older than the **declared** maximum age.
+
+This is deliberately not a world clock:
+
+```text
+PARSEABLE_TIME != TRUE_TIME
+DECLARED_REFERENCE_TIME != TRUSTED_NOW
+DECLARED_MAX_AGE != ADEQUATE_FRESHNESS_POLICY
+REACQUIRED != CURRENT
+```
+
+The clock check prevents the old failure where an arbitrary non-empty timestamp such as `yesterday-ish`, or a seven-year-old timestamp paired with `reacquired:true`, could look structurally current. It still depends on externally justified time/freshness inputs if the result is to become load-bearing.
 
 ### COMPLETE
 
@@ -105,13 +126,16 @@ PREFLIGHT-UNDECLARED-MODE-SUSPECTED
 
 if the caller did not declare the matching claim mode.
 
-This is only a falsifier for an obvious omission.
+This is only a noisy falsifier for an obvious omission.
 
 ```text
 LEXICAL_HIT -> POSSIBLE_UNDECLARED_MODE
 NO_LEXICAL_HIT != NO_UNDECLARED_MODE
 MATCHER_PRESENT != MATCHER_ADEQUATE
+LEXICAL_MATCH != POLARITY_UNDERSTOOD
 ```
+
+The sentinel intentionally does **not** attempt semantic or polarity parsing. A true negative such as `not verified` can still trigger the `VERIFIED` notice. That false positive is accepted as a limitation of a cheap one-way challenge; it must not be promoted into a truth parser or relied on as a clearing mechanism.
 
 A sentinel challenge is therefore not allowed to return the same top-level state as a clean declared envelope.
 
@@ -144,6 +168,21 @@ DECLARED_SUPPORT_FIELDS_PRESENT != SUPPORT_FIELDS_WORLD_VALID
 MODE_DECLARATION_UNCHALLENGED != MODES_COMPLETE
 ```
 
+## Machine-consumption boundary
+
+`NOT_APPLICABLE` is now deliberately machine-distinct from substantive structural green.
+
+Exit codes:
+
+```text
+0  DECLARED_SUPPORT_FIELDS_PRESENT
+1  MODE_DECLARATION_CHALLENGED or STRUCTURAL_GAP
+2  INPUT_ERROR
+3  NOT_APPLICABLE
+```
+
+A caller must not interpret `3` as a failed substantive check or `0` as clearance. The separation exists only to prevent `nothing was declared / nothing was examined` from being machine-indistinguishable from the checker finding no structural gap in declared modes.
+
 ## Run
 
 From this directory:
@@ -154,32 +193,56 @@ python correction_preflight.py envelope.json --json
 python -m unittest -v test_correction_preflight.py
 ```
 
-Exit codes:
+## Hostile-run repair
+
+A hostile run against the prior head exposed three material limits:
+
+1. `CURRENT` accepted arbitrary/stale timestamp strings because it checked non-empty presence only.
+2. `NOT_APPLICABLE` shared exit `0` with substantive structural green.
+3. the lexical sentinel is polarity-blind.
+
+This repair:
+
+- adds a declared, parseable temporal comparison for `CURRENT`;
+- gives `NOT_APPLICABLE` its own machine exit code;
+- keeps the sentinel explicitly noisy/polarity-blind instead of growing an NLP subsystem;
+- moves the self-declaration/external-resolution ceiling into the normal output text.
+
+This is a repair/reprice of the application checker, not evidence for a TRACE-core change.
+
+## Regression fixtures
+
+The test file now freezes thirteen cases, including:
+
+- stale/reacquired `CURRENT`;
+- unparseable `CURRENT` time;
+- a bounded currentness declaration whose clock shape is internally coherent;
+- selected denominator with a known omitted target for `COMPLETE`;
+- repeated execution through an instrument with a known blind spot for `VERIFIED`;
+- reachable rollback with unknown arrival-before-hardening for `CORRECTABLE`;
+- mundane `7 x 8` control;
+- bounded completeness relative to a declared comparison basis;
+- undeclared `100%` sentinel challenge;
+- explicit polarity-blind sentinel behavior;
+- capability substituted for `AUTHORIZED`;
+- machine distinction between `NOT_APPLICABLE` and substantive structural green.
+
+They are regression tests, not validation.
+
+## Epistemic / consumption ceiling
+
+Every field in the envelope is supplied by the claimant/caller. This checker does not resolve `source_ref`, `result_ref`, `authority_ref`, or other references against an independent source.
+
+Therefore:
 
 ```text
-0  NOT_APPLICABLE or DECLARED_SUPPORT_FIELDS_PRESENT
-1  MODE_DECLARATION_CHALLENGED or STRUCTURAL_GAP
-2  INPUT_ERROR
+FIELD_PRESENT != EVIDENCE_VALID
+SELF_DECLARED_REFERENCE != EXTERNAL_WITNESS
+DECLARED_SUPPORT_FIELDS_PRESENT != INDEPENDENT_SUPPORT
+CHECKER_GREEN != CLAIM_TRUE
 ```
 
-Exit `0` is not clearance.
-
-## First hostile fixtures
-
-The test file freezes eight cases:
-
-1. stale record used for a `CURRENT` claim;
-2. selected denominator with a known omitted target for `COMPLETE`;
-3. repeated execution through an instrument with a known blind spot for `VERIFIED`;
-4. reachable rollback with unknown arrival-before-hardening for `CORRECTABLE`;
-5. mundane `7 x 8` control — the checker must stay out of the way;
-6. a bounded completeness claim with its declared comparison basis present;
-7. undeclared `100%` language must return `MODE_DECLARATION_CHALLENGED`, never a green-looking success state;
-8. capability evidence incorrectly substituted for `AUTHORIZED`.
-
-All eight branches were exercised before the current review head. They are regression tests, not validation.
-
-## Epistemic ceiling
+A green result can become load-bearing only through evidence that resolves **outside** the envelope/checker — for example a hash/pointer that a separate route actually resolves, or an independent aperture that verifies the relevant external object.
 
 This checker does **not** establish:
 
@@ -187,6 +250,7 @@ This checker does **not** establish:
 - completeness of the target set in the world;
 - adequacy of a caller-selected comparison basis;
 - actual current-world correspondence;
+- trustworthiness of the caller-declared reference time or freshness policy;
 - genuine instrument adequacy beyond the supplied declaration;
 - actual route reachability or correction;
 - legitimate authority;
