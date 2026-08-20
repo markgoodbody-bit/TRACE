@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 from typing import Any, Mapping
 
 CANDIDATE_ID = "TRACE-CORRECTION-PREFLIGHT-001"
+RUN_CLOCK_SKEW_SECONDS = 300.0
 
 MODE_CURRENT = "CURRENT"
 MODE_COMPLETE = "COMPLETE"
@@ -45,12 +46,15 @@ LEXICAL_SENTINELS = {
 EPISTEMIC_LIMIT = (
     "This preflight checks only claimant-supplied declared support structure for "
     "declared claim modes. It does not resolve source_ref/result_ref/authority_ref "
-    "or other references against an external source. DECLARED_SUPPORT_FIELDS_PRESENT "
-    "does not establish truth, completeness, safety, permission, legitimate authority, "
-    "moral adequacy, actual route execution, or world effect. A green result becomes "
-    "load-bearing only through evidence that resolves outside this envelope/checker. "
-    "The lexical sentinel is a noisy one-way challenge: it can flag an undeclared mode "
-    "but does not parse polarity and cannot establish that no other mode is present."
+    "or other references against an external source. For CURRENT, the declared "
+    "reference_time_utc must also be near the runner's execution clock; that moves "
+    "the temporal anchor outside the claimant envelope but does not establish true time. "
+    "DECLARED_SUPPORT_FIELDS_PRESENT does not establish truth, completeness, safety, "
+    "permission, legitimate authority, moral adequacy, actual route execution, or "
+    "world effect. A green result becomes load-bearing only through evidence that "
+    "resolves outside this envelope/checker. The lexical sentinel is a noisy one-way "
+    "challenge: it can flag an undeclared mode but does not parse polarity and cannot "
+    "establish that no other mode is present."
 )
 
 
@@ -156,6 +160,14 @@ def _positive_number(value: Any) -> float | None:
     return numeric if numeric > 0 else None
 
 
+def _runner_now(value: datetime | None) -> datetime:
+    if value is None:
+        return datetime.now(timezone.utc)
+    if not isinstance(value, datetime) or value.tzinfo is None:
+        raise PreflightInputError("run_now_utc must be a timezone-aware datetime")
+    return value.astimezone(timezone.utc)
+
+
 def exit_code_for_status(status: str) -> int:
     if status == "DECLARED_SUPPORT_FIELDS_PRESENT":
         return 0
@@ -168,7 +180,9 @@ def exit_code_for_status(status: str) -> int:
     raise ValueError(f"unknown preflight status: {status}")
 
 
-def check_preflight(envelope: Mapping[str, Any]) -> PreflightResult:
+def check_preflight(
+    envelope: Mapping[str, Any], *, run_now_utc: datetime | None = None
+) -> PreflightResult:
     if not isinstance(envelope, Mapping):
         raise PreflightInputError("envelope must be an object")
 
@@ -181,6 +195,7 @@ def check_preflight(envelope: Mapping[str, Any]) -> PreflightResult:
     modes = _as_modes(env.get("claim_modes", []))
     sentinels = _sentinel_modes(claim_text)
     findings: list[Finding] = []
+    runner_now = _runner_now(run_now_utc)
 
     # One-way noisy falsifier only: a lexical hit can challenge an omission.
     # It deliberately does not parse polarity. No hit cannot prove absence.
@@ -210,6 +225,17 @@ def check_preflight(envelope: Mapping[str, Any]) -> PreflightResult:
             findings.append(Finding("PREFLIGHT-CURRENT-REFERENCE-TIME-INVALID", MODE_CURRENT, "CURRENT claim requires a parseable timezone-aware reference_time_utc"))
         if max_age_seconds is None:
             findings.append(Finding("PREFLIGHT-CURRENT-MAX-AGE-INVALID", MODE_CURRENT, "CURRENT claim requires a positive declared max_age_seconds"))
+
+        if reference_time is not None:
+            run_clock_delta = (reference_time - runner_now).total_seconds()
+            if abs(run_clock_delta) > RUN_CLOCK_SKEW_SECONDS:
+                findings.append(
+                    Finding(
+                        "PREFLIGHT-CURRENT-REFERENCE-CLOCK-OUTSIDE-RUN-CONTEXT",
+                        MODE_CURRENT,
+                        f"declared reference_time_utc differs from the runner UTC clock by {run_clock_delta:.3f}s; CURRENT reference must be within {RUN_CLOCK_SKEW_SECONDS:.0f}s of execution context",
+                    )
+                )
 
         if checked_at is not None and reference_time is not None:
             age_seconds = (reference_time - checked_at).total_seconds()
