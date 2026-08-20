@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import unittest
 
-from correction_preflight import check_preflight
+from correction_preflight import check_preflight, exit_code_for_status
 
 
 class CorrectionPreflightTests(unittest.TestCase):
@@ -21,6 +21,7 @@ class CorrectionPreflightTests(unittest.TestCase):
         )
         self.assertEqual(result["status"], "NOT_APPLICABLE")
         self.assertEqual(result["findings"], [])
+        self.assertEqual(exit_code_for_status(result["status"]), 3)
 
     def test_current_claim_requires_reacquisition(self):
         result = self._result(
@@ -31,12 +32,70 @@ class CorrectionPreflightTests(unittest.TestCase):
                 "currentness": {
                     "source_ref": "yesterday-status-report",
                     "checked_at_utc": "2026-08-18T10:00:00Z",
+                    "reference_time_utc": "2026-08-20T10:00:00Z",
+                    "max_age_seconds": 3600,
                     "reacquired": False,
                 },
             }
         )
         self.assertEqual(result["status"], "STRUCTURAL_GAP")
-        self.assertIn("PREFLIGHT-CURRENT-NOT-REACQUIRED", self._codes(result))
+        codes = self._codes(result)
+        self.assertIn("PREFLIGHT-CURRENT-NOT-REACQUIRED", codes)
+        self.assertIn("PREFLIGHT-CURRENT-STALE", codes)
+
+    def test_current_claim_rejects_unparseable_time(self):
+        result = self._result(
+            {
+                "fixture_id": "K1",
+                "claim_text": "This is current.",
+                "claim_modes": ["CURRENT"],
+                "currentness": {
+                    "source_ref": "status-page",
+                    "checked_at_utc": "yesterday-ish",
+                    "reference_time_utc": "2026-08-20T10:00:00Z",
+                    "max_age_seconds": 3600,
+                    "reacquired": True,
+                },
+            }
+        )
+        self.assertEqual(result["status"], "STRUCTURAL_GAP")
+        self.assertIn("PREFLIGHT-CURRENT-CHECK-TIME-INVALID", self._codes(result))
+
+    def test_current_claim_rejects_stale_reacquired_time(self):
+        result = self._result(
+            {
+                "fixture_id": "K4",
+                "claim_text": "This is current.",
+                "claim_modes": ["CURRENT"],
+                "currentness": {
+                    "source_ref": "status-page",
+                    "checked_at_utc": "2019-01-01T00:00:00Z",
+                    "reference_time_utc": "2026-08-20T10:00:00Z",
+                    "max_age_seconds": 3600,
+                    "reacquired": True,
+                },
+            }
+        )
+        self.assertEqual(result["status"], "STRUCTURAL_GAP")
+        self.assertIn("PREFLIGHT-CURRENT-STALE", self._codes(result))
+
+    def test_current_claim_can_satisfy_declared_clock_shape(self):
+        result = self._result(
+            {
+                "fixture_id": "A2",
+                "claim_text": "This is current.",
+                "claim_modes": ["CURRENT"],
+                "currentness": {
+                    "source_ref": "status-page",
+                    "checked_at_utc": "2026-08-20T09:55:00Z",
+                    "reference_time_utc": "2026-08-20T10:00:00Z",
+                    "max_age_seconds": 600,
+                    "reacquired": True,
+                },
+            }
+        )
+        self.assertEqual(result["status"], "DECLARED_SUPPORT_FIELDS_PRESENT")
+        self.assertEqual(exit_code_for_status(result["status"]), 0)
 
     def test_complete_claim_fails_known_omission(self):
         result = self._result(
@@ -121,6 +180,17 @@ class CorrectionPreflightTests(unittest.TestCase):
         self.assertEqual(result["status"], "MODE_DECLARATION_CHALLENGED")
         self.assertIn("PREFLIGHT-UNDECLARED-MODE-SUSPECTED", self._codes(result))
 
+    def test_lexical_sentinel_is_deliberately_polarity_blind(self):
+        result = self._result(
+            {
+                "fixture_id": "K3",
+                "claim_text": "None of this was verified, and the list is not complete.",
+                "claim_modes": [],
+            }
+        )
+        self.assertEqual(result["status"], "MODE_DECLARATION_CHALLENGED")
+        self.assertIn("PREFLIGHT-UNDECLARED-MODE-SUSPECTED", self._codes(result))
+
     def test_capability_cannot_substitute_for_authority(self):
         result = self._result(
             {
@@ -139,6 +209,14 @@ class CorrectionPreflightTests(unittest.TestCase):
         codes = self._codes(result)
         self.assertIn("PREFLIGHT-AUTHORITY-REF-MISSING", codes)
         self.assertIn("PREFLIGHT-CAPABILITY-NOT-AUTHORITY", codes)
+
+    def test_not_applicable_is_machine_distinct_from_structural_green(self):
+        self.assertEqual(exit_code_for_status("DECLARED_SUPPORT_FIELDS_PRESENT"), 0)
+        self.assertEqual(exit_code_for_status("NOT_APPLICABLE"), 3)
+        self.assertNotEqual(
+            exit_code_for_status("DECLARED_SUPPORT_FIELDS_PRESENT"),
+            exit_code_for_status("NOT_APPLICABLE"),
+        )
 
 
 if __name__ == "__main__":
