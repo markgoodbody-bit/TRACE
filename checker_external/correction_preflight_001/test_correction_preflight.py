@@ -2,14 +2,18 @@
 from __future__ import annotations
 
 import unittest
+from datetime import datetime, timezone
 
 from correction_preflight import check_preflight, exit_code_for_status
+
+
+RUN_NOW = datetime(2026, 8, 20, 10, 0, 0, tzinfo=timezone.utc)
 
 
 class CorrectionPreflightTests(unittest.TestCase):
     @staticmethod
     def _result(envelope):
-        return check_preflight(envelope).to_dict()
+        return check_preflight(envelope, run_now_utc=RUN_NOW).to_dict()
 
     @staticmethod
     def _codes(result):
@@ -96,6 +100,48 @@ class CorrectionPreflightTests(unittest.TestCase):
         )
         self.assertEqual(result["status"], "DECLARED_SUPPORT_FIELDS_PRESENT")
         self.assertEqual(exit_code_for_status(result["status"]), 0)
+
+    def test_current_claim_cannot_choose_old_reference_clock(self):
+        result = self._result(
+            {
+                "fixture_id": "K4B",
+                "claim_text": "This 2019 observation is current.",
+                "claim_modes": ["CURRENT"],
+                "currentness": {
+                    "source_ref": "status-page",
+                    "checked_at_utc": "2019-01-01T00:00:00Z",
+                    "reference_time_utc": "2019-01-01T12:00:00Z",
+                    "max_age_seconds": 86400,
+                    "reacquired": True,
+                },
+            }
+        )
+        self.assertEqual(result["status"], "STRUCTURAL_GAP")
+        self.assertIn(
+            "PREFLIGHT-CURRENT-REFERENCE-CLOCK-OUTSIDE-RUN-CONTEXT",
+            self._codes(result),
+        )
+
+    def test_current_claim_cannot_choose_future_reference_clock(self):
+        result = self._result(
+            {
+                "fixture_id": "K5",
+                "claim_text": "This is current.",
+                "claim_modes": ["CURRENT"],
+                "currentness": {
+                    "source_ref": "status-page",
+                    "checked_at_utc": "2026-08-20T09:00:00Z",
+                    "reference_time_utc": "2030-01-01T00:00:00Z",
+                    "max_age_seconds": 200000000,
+                    "reacquired": True,
+                },
+            }
+        )
+        self.assertEqual(result["status"], "STRUCTURAL_GAP")
+        self.assertIn(
+            "PREFLIGHT-CURRENT-REFERENCE-CLOCK-OUTSIDE-RUN-CONTEXT",
+            self._codes(result),
+        )
 
     def test_complete_claim_fails_known_omission(self):
         result = self._result(
