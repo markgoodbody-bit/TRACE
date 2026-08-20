@@ -13,7 +13,7 @@ Turn a small set of repeatedly observed false-closure failures into executable r
 
 The checker is deliberately narrower than TRACE. It does not build a full packet and does not decide whether a claim is true, safe, good, legitimate or permitted.
 
-It checks only five **declared claim modes**:
+It checks only five declared claim modes:
 
 ```text
 CURRENT
@@ -23,13 +23,11 @@ CORRECTABLE
 AUTHORIZED
 ```
 
-The question is:
-
-> If a caller uses one of these strong words, is the minimum declared support structure needed for that word present?
+The question is: if a caller uses one of these strong modes, is the minimum declared support structure needed for that mode present?
 
 ## Why this is not another universal checker
 
-The existing checker-external integration already warns against automatic checker proliferation. This candidate is justified only by concrete recurrent failure shapes:
+The candidate is justified only by recurrent failure shapes:
 
 ```text
 OLD_RECORD != CURRENT_STATE
@@ -42,28 +40,7 @@ CAPABILITY != AUTHORITY
 
 It is an application-layer experiment, not a new TRACE primitive or formal status system.
 
-## Input envelope
-
-A minimal JSON object contains:
-
-```json
-{
-  "fixture_id": "example",
-  "claim_text": "All registered devices passed tonight.",
-  "claim_modes": ["COMPLETE"],
-  "coverage": {
-    "target_set_ref": "registered-devices",
-    "selection_basis_ref": "asset-register",
-    "comparison_basis_ref": "all-relevant-devices",
-    "coverage_status": "UNKNOWN",
-    "known_omissions": "UNKNOWN"
-  }
-}
-```
-
-Only sections required by the declared modes are inspected.
-
-### CURRENT
+## CURRENT
 
 Requires:
 
@@ -75,58 +52,46 @@ max_age_seconds
 reacquired = true
 ```
 
-`checked_at_utc` and `reference_time_utc` must be parseable timezone-aware timestamps. `max_age_seconds` must be positive. The checker computes the observation age relative to the **declared** reference time and refuses a future-dated observation or one older than the **declared** maximum age.
+`checked_at_utc` and `reference_time_utc` must be parseable timezone-aware timestamps and `max_age_seconds` must be positive.
 
-This is deliberately not a world clock:
+The checker now uses two different temporal relations:
+
+1. observation age is computed from declared `reference_time_utc - checked_at_utc` and must fit the declared maximum age;
+2. the declared `reference_time_utc` must be within 300 seconds of the runner's UTC execution clock.
+
+The second relation is deliberately not supplied by the claimant envelope. It exists because hostile rerun KI-COM-012 demonstrated that a claimant could otherwise make a 2019 observation formally CURRENT by choosing a 2019 reference clock, or choose a far-future clock and a large age window.
 
 ```text
 PARSEABLE_TIME != TRUE_TIME
-DECLARED_REFERENCE_TIME != TRUSTED_NOW
+DECLARED_REFERENCE_TIME != RUNNER_NOW
+RUNNER_CLOCK != TRUE_TIME
 DECLARED_MAX_AGE != ADEQUATE_FRESHNESS_POLICY
 REACQUIRED != CURRENT
 ```
 
-The clock check prevents the old failure where an arbitrary non-empty timestamp such as `yesterday-ish`, or a seven-year-old timestamp paired with `reacquired:true`, could look structurally current. It still depends on externally justified time/freshness inputs if the result is to become load-bearing.
+Moving the reference anchor to execution context prevents the claimant from choosing "now" for the checker. It does **not** establish that the machine clock is correct, that the source is valid, or that the chosen freshness policy is adequate.
 
-### COMPLETE
+## COMPLETE
 
 Requires a declared target/denominator set, selection basis, comparison basis, and coverage status relative to that basis.
 
-`NONE_ESTABLISHED` for known omissions is **not** upgraded to world completeness.
+`NONE_ESTABLISHED` for known omissions is not upgraded to world completeness.
 
-### VERIFIED
+## VERIFIED
 
 Requires the exact proposition, represented execution, instrument adequacy for that proposition, a result reference, and a represented route back to the current use.
 
-### CORRECTABLE
+## CORRECTABLE
 
 Requires a correction route, represented current reachability, a hardening/closure boundary, and support that correction arrives before that boundary.
 
-### AUTHORIZED
+## AUTHORIZED
 
 Requires an authority/grant reference, action/scope reference, and current applicability. Capability alone is explicitly insufficient.
 
 ## Lexical sentinel
 
-The checker also contains a deliberately weak one-way lexical sentinel for obvious words such as:
-
-```text
-all / every / 100%
-current / now / tonight
-verified / checked / tested
-reversible / rollback
-authorized / permitted
-```
-
-A lexical hit can produce:
-
-```text
-PREFLIGHT-UNDECLARED-MODE-SUSPECTED
-```
-
-if the caller did not declare the matching claim mode.
-
-This is only a noisy falsifier for an obvious omission.
+A deliberately weak one-way lexical sentinel flags obvious strong words when the matching mode is undeclared.
 
 ```text
 LEXICAL_HIT -> POSSIBLE_UNDECLARED_MODE
@@ -135,29 +100,15 @@ MATCHER_PRESENT != MATCHER_ADEQUATE
 LEXICAL_MATCH != POLARITY_UNDERSTOOD
 ```
 
-The sentinel intentionally does **not** attempt semantic or polarity parsing. A true negative such as `not verified` can still trigger the `VERIFIED` notice. That false positive is accepted as a limitation of a cheap one-way challenge; it must not be promoted into a truth parser or relied on as a clearing mechanism.
+It intentionally does not parse polarity. A true negative such as `not verified` can trigger the `VERIFIED` notice. This must not be promoted into semantic clearance machinery.
 
-A sentinel challenge is therefore not allowed to return the same top-level state as a clean declared envelope.
-
-## Output statuses
+## Output statuses and exits
 
 ```text
-NOT_APPLICABLE
-  no declared mode and no sentinel challenge
-
-MODE_DECLARATION_CHALLENGED
-  lexical sentinel suggests an undeclared strong claim mode;
-  inspect the trigger rather than treating omission as absence
-
-DECLARED_SUPPORT_FIELDS_PRESENT
-  no declared structural gap found for the modes the caller actually declared
-
-STRUCTURAL_GAP
-  at least one required declared support relation is missing, unknown,
-  contradicted or inadequate for the claimed mode
-
-INPUT_ERROR
-  envelope cannot be interpreted
+0  DECLARED_SUPPORT_FIELDS_PRESENT
+1  MODE_DECLARATION_CHALLENGED or STRUCTURAL_GAP
+2  INPUT_ERROR
+3  NOT_APPLICABLE
 ```
 
 `DECLARED_SUPPORT_FIELDS_PRESENT` is deliberately weaker than `PASS`, `SAFE`, `VALID`, `TRUE`, `AUTHORIZED`, or `CLEAR`.
@@ -167,21 +118,6 @@ DECLARED_SUPPORT_FIELDS_PRESENT != CLAIM_TRUE
 DECLARED_SUPPORT_FIELDS_PRESENT != SUPPORT_FIELDS_WORLD_VALID
 MODE_DECLARATION_UNCHALLENGED != MODES_COMPLETE
 ```
-
-## Machine-consumption boundary
-
-`NOT_APPLICABLE` is now deliberately machine-distinct from substantive structural green.
-
-Exit codes:
-
-```text
-0  DECLARED_SUPPORT_FIELDS_PRESENT
-1  MODE_DECLARATION_CHALLENGED or STRUCTURAL_GAP
-2  INPUT_ERROR
-3  NOT_APPLICABLE
-```
-
-A caller must not interpret `3` as a failed substantive check or `0` as clearance. The separation exists only to prevent `nothing was declared / nothing was examined` from being machine-indistinguishable from the checker finding no structural gap in declared modes.
 
 ## Run
 
@@ -193,85 +129,64 @@ python correction_preflight.py envelope.json --json
 python -m unittest -v test_correction_preflight.py
 ```
 
-## Hostile-run repair
+The CLI obtains the CURRENT execution anchor from the runner clock. Unit tests inject a fixed timezone-aware runner time so clock cases remain deterministic.
 
-A hostile run against the prior head exposed three material limits:
+## Hostile-run history
 
-1. `CURRENT` accepted arbitrary/stale timestamp strings because it checked non-empty presence only.
-2. `NOT_APPLICABLE` shared exit `0` with substantive structural green.
-3. the lexical sentinel is polarity-blind.
+The first hostile run found:
 
-This repair:
+- arbitrary/stale timestamp strings could satisfy CURRENT;
+- `NOT_APPLICABLE` shared exit `0` with substantive structural green;
+- the lexical sentinel was polarity-blind.
 
-- adds a declared, parseable temporal comparison for `CURRENT`;
-- gives `NOT_APPLICABLE` its own machine exit code;
-- keeps the sentinel explicitly noisy/polarity-blind instead of growing an NLP subsystem;
-- moves the self-declaration/external-resolution ceiling into the normal output text.
+Those were repaired/repriced without enlarging TRACE core.
 
-This is a repair/reprice of the application checker, not evidence for a TRACE-core change.
+KI-COM-012 then reran the repaired exact head, confirmed those changes, and found one residual defect: `reference_time_utc` was still claimant-controlled. Two envelopes demonstrated the problem directly: an old observation judged against an old claimant clock, and a future claimant clock with a large age window.
+
+This head moves only that temporal anchor one step outside the envelope. No new mode, TRACE primitive, authority rule or semantic parser is added.
 
 ## Regression fixtures
 
-The test file now freezes thirteen cases, including:
+The test file now freezes fifteen cases, including:
 
-- stale/reacquired `CURRENT`;
-- unparseable `CURRENT` time;
-- a bounded currentness declaration whose clock shape is internally coherent;
-- selected denominator with a known omitted target for `COMPLETE`;
-- repeated execution through an instrument with a known blind spot for `VERIFIED`;
-- reachable rollback with unknown arrival-before-hardening for `CORRECTABLE`;
+- stale/reacquired CURRENT;
+- unparseable CURRENT time;
+- bounded CURRENT with a runner-aligned reference clock;
+- claimant-selected old reference clock refusal;
+- claimant-selected future reference clock refusal;
+- selected denominator with a known omitted target for COMPLETE;
+- repeated execution through an instrument with a known blind spot for VERIFIED;
+- reachable rollback with unknown arrival-before-hardening for CORRECTABLE;
 - mundane `7 x 8` control;
 - bounded completeness relative to a declared comparison basis;
 - undeclared `100%` sentinel challenge;
 - explicit polarity-blind sentinel behavior;
-- capability substituted for `AUTHORIZED`;
-- machine distinction between `NOT_APPLICABLE` and substantive structural green.
+- capability substituted for AUTHORIZED;
+- machine distinction between NOT_APPLICABLE and substantive structural green.
 
 They are regression tests, not validation.
 
 ## Epistemic / consumption ceiling
 
-Every field in the envelope is supplied by the claimant/caller. This checker does not resolve `source_ref`, `result_ref`, `authority_ref`, or other references against an independent source.
+Most evidential fields remain supplied by the claimant/caller. This checker does not resolve `source_ref`, `result_ref`, `authority_ref`, or other references against an independent source. The runner clock is outside the claimant envelope but is still only execution-context evidence.
 
 Therefore:
 
 ```text
 FIELD_PRESENT != EVIDENCE_VALID
 SELF_DECLARED_REFERENCE != EXTERNAL_WITNESS
+RUNNER_CLOCK != TRUE_TIME
 DECLARED_SUPPORT_FIELDS_PRESENT != INDEPENDENT_SUPPORT
 CHECKER_GREEN != CLAIM_TRUE
 ```
 
-A green result can become load-bearing only through evidence that resolves **outside** the envelope/checker — for example a hash/pointer that a separate route actually resolves, or an independent aperture that verifies the relevant external object.
+A green result can become load-bearing only through evidence that resolves outside the envelope/checker.
 
-This checker does **not** establish:
-
-- truth of the claim;
-- completeness of the target set in the world;
-- adequacy of a caller-selected comparison basis;
-- actual current-world correspondence;
-- trustworthiness of the caller-declared reference time or freshness policy;
-- genuine instrument adequacy beyond the supplied declaration;
-- actual route reachability or correction;
-- legitimate authority;
-- moral adequacy;
-- safety;
-- permission to act;
-- that no undeclared claim mode exists.
-
-It can still be gamed by dishonest or defective inputs. It is useful only where making the support boundary explicit is cheaper than repeatedly allowing strong words to inherit unsupported meaning.
+This checker does not establish truth, world completeness, comparison-basis adequacy, source validity, true time, freshness-policy adequacy, genuine instrument adequacy, actual correction, legitimate authority, moral adequacy, safety, permission to act, or completeness of declared claim modes.
 
 ## Kill / shrink conditions
 
-Delete or shrink this candidate if:
-
-1. existing checker-external machinery already supplies the same pre-use refusal without this wrapper;
-2. callers satisfy it ritualistically without improving the underlying evidence path;
-3. the lexical sentinel creates false confidence or noisy expansion;
-4. the five modes become a hidden universal taxonomy;
-5. callers evade it simply by avoiding the strong words while making the same inference;
-6. a smaller rule produces the same useful refusals;
-7. it starts being treated as clearance.
+Delete or shrink this candidate if existing checker-external machinery supplies the same useful refusals, callers satisfy it ritualistically, the sentinel creates false confidence, the five modes become a hidden universal taxonomy, callers evade it by changing wording, a smaller rule produces the same useful refusals, or it starts being treated as clearance.
 
 Preferred final status:
 
