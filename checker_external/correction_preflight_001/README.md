@@ -35,6 +35,7 @@ ALL_SELECTED_TARGETS_PASS != ALL_RELEVANT_TARGETS_PASS
 CHECK_EXISTS != CHECK_EXECUTED
 TEST_RAN != RELEVANT_ALTERNATIVE_DETECTABLE
 ROUTE_EXISTS != ROUTE_REACHABLE
+ROUTE_REACHABLE != CLOSURE_PREDICATE_SATISFIABLE
 CAPABILITY != AUTHORITY
 ```
 
@@ -83,7 +84,27 @@ Requires the exact proposition, represented execution, instrument adequacy for t
 
 ## CORRECTABLE
 
-Requires a correction route, represented current reachability, a hardening/closure boundary, and support that correction arrives before that boundary.
+Requires:
+
+```text
+route_ref
+reachability = YES
+closure_predicate_ref
+closure_predicate_status = ESTABLISHED_FOR_REPRESENTED_TRANSITION
+hardening_ref
+arrives_before_hardening = YES
+```
+
+The closure predicate is the exact proposition/condition the route must be capable of satisfying. This field was added after the CC/125 field specimen showed a reachable witness-investigation route whose resolver compared public reads against the wrong digest. The route could execute, but its closure predicate could not become true under the represented server normalisation.
+
+```text
+ROUTE_PRESENT != ROUTE_EXECUTABLE
+ROUTE_REACHABLE != CLOSURE_PREDICATE_SATISFIABLE
+CHECK_EXISTS != CHECKS_THE_RIGHT_PROPOSITION
+EXAMINATION_COMPLETED != CLOSURE_ROUTE_EXECUTABLE
+```
+
+`closure_predicate_status` is still claimant-supplied declaration structure. `ESTABLISHED_FOR_REPRESENTED_TRANSITION` does not prove that the predicate is satisfiable in the world; the supporting reference must still resolve outside this checker before a green result becomes load-bearing.
 
 ## AUTHORIZED
 
@@ -143,11 +164,15 @@ Those were repaired/repriced without enlarging TRACE core.
 
 KI-COM-012 then reran the repaired exact head, confirmed those changes, and found one residual defect: `reference_time_utc` was still claimant-controlled. Two envelopes demonstrated the problem directly: an old observation judged against an old claimant clock, and a future claimant clock with a large age window.
 
-This head moves only that temporal anchor one step outside the envelope. No new mode, TRACE primitive, authority rule or semantic parser is added.
+The runner-clock repair moved only that temporal anchor one step outside the envelope. KI-COM-014 then reran K1-K5 plus boundary probes and reported that the prior temporal attacks were repaired or honestly bounded by `RUNNER_CLOCK != TRUE_TIME`.
+
+A later live Campfire witness-investigation specimen exposed a different CORRECTABLE gap. The server normalised a submitted body, public reads matched the recorded public-projection digest, but the resolver compared those reads against the pre-normalisation sent-body digest. The correction route existed and could execute, yet its closure predicate was unsatisfiable under the represented transition. This head therefore requires the closure proposition/predicate and a declared satisfiability status rather than allowing route reachability alone to stand in for correctability.
+
+No TRACE-core primitive, semantic parser or authority rule is added.
 
 ## Regression fixtures
 
-The test file now freezes fifteen cases, including:
+The test file now contains seventeen cases, including:
 
 - stale/reacquired CURRENT;
 - unparseable CURRENT time;
@@ -157,6 +182,8 @@ The test file now freezes fifteen cases, including:
 - selected denominator with a known omitted target for COMPLETE;
 - repeated execution through an instrument with a known blind spot for VERIFIED;
 - reachable rollback with unknown arrival-before-hardening for CORRECTABLE;
+- reachable correction route with a contradicted closure predicate for CORRECTABLE;
+- a bounded CORRECTABLE declaration shape with an established represented closure predicate;
 - mundane `7 x 8` control;
 - bounded completeness relative to a declared comparison basis;
 - undeclared `100%` sentinel challenge;
@@ -164,17 +191,18 @@ The test file now freezes fifteen cases, including:
 - capability substituted for AUTHORIZED;
 - machine distinction between NOT_APPLICABLE and substantive structural green.
 
-They are regression tests, not validation.
+They are authored regression tests, not validation or hosted-CI evidence.
 
 ## Epistemic / consumption ceiling
 
-Most evidential fields remain supplied by the claimant/caller. This checker does not resolve `source_ref`, `result_ref`, `authority_ref`, or other references against an independent source. The runner clock is outside the claimant envelope but is still only execution-context evidence.
+Most evidential fields remain supplied by the claimant/caller. This checker does not resolve `source_ref`, `result_ref`, `authority_ref`, `closure_predicate_ref`, or other references against an independent source. The runner clock is outside the claimant envelope but is still only execution-context evidence.
 
 Therefore:
 
 ```text
 FIELD_PRESENT != EVIDENCE_VALID
 SELF_DECLARED_REFERENCE != EXTERNAL_WITNESS
+DECLARED_CLOSURE_STATUS != WORLD_SATISFIABILITY
 RUNNER_CLOCK != TRUE_TIME
 DECLARED_SUPPORT_FIELDS_PRESENT != INDEPENDENT_SUPPORT
 CHECKER_GREEN != CLAIM_TRUE
@@ -182,7 +210,7 @@ CHECKER_GREEN != CLAIM_TRUE
 
 A green result can become load-bearing only through evidence that resolves outside the envelope/checker.
 
-This checker does not establish truth, world completeness, comparison-basis adequacy, source validity, true time, freshness-policy adequacy, genuine instrument adequacy, actual correction, legitimate authority, moral adequacy, safety, permission to act, or completeness of declared claim modes.
+This checker does not establish truth, world completeness, comparison-basis adequacy, source validity, true time, freshness-policy adequacy, genuine instrument adequacy, actual correction, actual closure-predicate satisfiability, legitimate authority, moral adequacy, safety, permission to act, or completeness of declared claim modes.
 
 ## Kill / shrink conditions
 
