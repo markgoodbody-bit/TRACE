@@ -191,6 +191,8 @@ class CorrectionPreflightTests(unittest.TestCase):
                 "correction": {
                     "route_ref": "rollback-route",
                     "reachability": "YES",
+                    "closure_predicate_ref": "rollback-restores-bounded-state",
+                    "closure_predicate_status": "ESTABLISHED_FOR_REPRESENTED_TRANSITION",
                     "hardening_ref": "batch-copy-at-30m",
                     "arrives_before_hardening": "UNKNOWN",
                 },
@@ -201,6 +203,46 @@ class CorrectionPreflightTests(unittest.TestCase):
             "PREFLIGHT-CORRECTION-WINDOW-NOT-ESTABLISHED",
             self._codes(result),
         )
+
+    def test_unsatisfiable_closure_predicate_is_not_correctable(self):
+        result = self._result(
+            {
+                "fixture_id": "CC125",
+                "claim_text": "The witness investigation is correctable.",
+                "claim_modes": ["CORRECTABLE"],
+                "correction": {
+                    "route_ref": "witness-investigation-resolver",
+                    "reachability": "YES",
+                    "closure_predicate_ref": "public-read-digest-equals-sent-body-digest",
+                    "closure_predicate_status": "CONTRADICTED",
+                    "hardening_ref": "investigation-closure",
+                    "arrives_before_hardening": "YES",
+                },
+            }
+        )
+        self.assertEqual(result["status"], "STRUCTURAL_GAP")
+        self.assertIn(
+            "PREFLIGHT-CORRECTION-CLOSURE-PREDICATE-NOT-ESTABLISHED",
+            self._codes(result),
+        )
+
+    def test_correctable_claim_can_satisfy_declared_closure_shape(self):
+        result = self._result(
+            {
+                "fixture_id": "D2",
+                "claim_text": "The bounded transition is correctable.",
+                "claim_modes": ["CORRECTABLE"],
+                "correction": {
+                    "route_ref": "rollback-route",
+                    "reachability": "YES",
+                    "closure_predicate_ref": "rollback-restores-bounded-state",
+                    "closure_predicate_status": "ESTABLISHED_FOR_REPRESENTED_TRANSITION",
+                    "hardening_ref": "batch-copy-at-30m",
+                    "arrives_before_hardening": "YES",
+                },
+            }
+        )
+        self.assertEqual(result["status"], "DECLARED_SUPPORT_FIELDS_PRESENT")
 
     def test_bounded_complete_claim_can_satisfy_declared_fields(self):
         result = self._result(
