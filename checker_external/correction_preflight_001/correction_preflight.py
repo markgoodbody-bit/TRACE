@@ -50,11 +50,11 @@ EPISTEMIC_LIMIT = (
     "reference_time_utc must also be near the runner's execution clock; that moves "
     "the temporal anchor outside the claimant envelope but does not establish true time. "
     "DECLARED_SUPPORT_FIELDS_PRESENT does not establish truth, completeness, safety, "
-    "permission, legitimate authority, moral adequacy, actual route execution, or "
-    "world effect. A green result becomes load-bearing only through evidence that "
-    "resolves outside this envelope/checker. The lexical sentinel is a noisy one-way "
-    "challenge: it can flag an undeclared mode but does not parse polarity and cannot "
-    "establish that no other mode is present."
+    "permission, legitimate authority, moral adequacy, actual route execution, closure-"
+    "predicate satisfiability in the world, or world effect. A green result becomes "
+    "load-bearing only through evidence that resolves outside this envelope/checker. "
+    "The lexical sentinel is a noisy one-way challenge: it can flag an undeclared mode "
+    "but does not parse polarity and cannot establish that no other mode is present."
 )
 
 
@@ -292,6 +292,14 @@ def check_preflight(
             findings.append(Finding("PREFLIGHT-CORRECTION-ROUTE-MISSING", MODE_CORRECTABLE, "CORRECTABLE claim requires a declared correction route"))
         if _status(correction, "reachability") != "YES":
             findings.append(Finding("PREFLIGHT-CORRECTION-ROUTE-NOT-REACHABLE", MODE_CORRECTABLE, f"correction route reachability is {_status(correction, 'reachability')}"))
+        if not _nonempty_str(correction, "closure_predicate_ref"):
+            findings.append(Finding("PREFLIGHT-CORRECTION-CLOSURE-PREDICATE-MISSING", MODE_CORRECTABLE, "CORRECTABLE claim requires the exact closure proposition/predicate the route must satisfy"))
+        closure_status = _status(correction, "closure_predicate_status")
+        allowed_closure = {"ESTABLISHED_FOR_REPRESENTED_TRANSITION", "CONTRADICTED", "UNKNOWN"}
+        if closure_status not in allowed_closure:
+            findings.append(Finding("PREFLIGHT-CORRECTION-CLOSURE-PREDICATE-STATUS-INVALID", MODE_CORRECTABLE, "closure_predicate_status must be ESTABLISHED_FOR_REPRESENTED_TRANSITION, CONTRADICTED, or UNKNOWN"))
+        elif closure_status != "ESTABLISHED_FOR_REPRESENTED_TRANSITION":
+            findings.append(Finding("PREFLIGHT-CORRECTION-CLOSURE-PREDICATE-NOT-ESTABLISHED", MODE_CORRECTABLE, f"closure predicate is {closure_status}; ROUTE_REACHABLE != CLOSURE_PREDICATE_SATISFIABLE"))
         if not _nonempty_str(correction, "hardening_ref"):
             findings.append(Finding("PREFLIGHT-HARDENING-BOUNDARY-MISSING", MODE_CORRECTABLE, "CORRECTABLE claim requires a declared hardening/closure boundary"))
         if _status(correction, "arrives_before_hardening") != "YES":
