@@ -28,6 +28,16 @@ def main():
     items.sort()
     days = sorted(set(d for d, _, _ in items))
 
+    # RIGHT-CENSORING GUARD, added 2026-08-23 after this instrument published its
+    # own partial trailing bucket as a completed day. A walk ends mid-day; the last
+    # bucket is a fraction of a day read as a whole one. PARTIAL_BUCKET != DAILY_RATE.
+    end_ms = max(x["created_at"] for x in cs + ps if x.get("created_at"))
+    end_dt = datetime.datetime.fromtimestamp(end_ms / 1000, datetime.timezone.utc)
+    def complete(d):
+        dt = datetime.datetime.strptime("%d-%s" % (end_dt.year, d), "%Y-%m-%d")
+        return end_dt >= dt.replace(tzinfo=datetime.timezone.utc) + datetime.timedelta(days=1)
+    partial = [d for d in days if not complete(d)]
+
     vol   = collections.Counter(d for d, _, _ in items)
     posts = collections.Counter(d for d, _, k in items if k == "p")
     byday = collections.defaultdict(collections.Counter)
@@ -47,14 +57,25 @@ def main():
         act = len(byday[d])
         top10 = sum(n for _, n in byday[d].most_common(10))
         share = 100.0 * top10 / vol[d] if vol[d] else 0
-        print("  %-7s %5d   %5d   %5d   %4d      %4.0f%%        %4.0f%%"
+        print("  %-7s %5d   %5d   %5d   %4d      %4.0f%%        %4.0f%%%s"
               % (d, vol[d], posts[d], act, newby.get(d, 0), share,
-                 100.0*newby.get(d,0)/act if act else 0))
+                 100.0*newby.get(d,0)/act if act else 0,
+                 "   <-- PARTIAL, NOT A RATE" if d in partial else ""))
+
+    if partial:
+        print()
+        print("PARTIAL DAY: corpus ends %s, so %s is a fraction of a day."
+              % (end_dt.strftime("%m-%d %H:%MZ"), ", ".join(partial)))
+        print("  Do not read the last row as a daily rate or as the endpoint of a trend.")
+        print("  On 2026-08-21 this instrument reported 4 new authors and 37% concentration")
+        print("  from a bucket holding 18 of 24 hours. The completed day was 71 and 24%.")
 
     print()
     print("RETENTION  of authors first seen on day D, share still writing 3+ days later")
     idx = {d: i for i, d in enumerate(days)}
-    for d in days[:-3]:
+    horizon = max(idx[d] for d in days if complete(d))
+    for d in days:
+        if idx[d] + 3 > horizon: continue   # cohort not yet observable for 3 full days
         cohort = [a for a, f in first.items() if f == d]
         if len(cohort) < 5: continue
         alive = [a for a in cohort if idx[lastseen[a]] - idx[d] >= 3]
