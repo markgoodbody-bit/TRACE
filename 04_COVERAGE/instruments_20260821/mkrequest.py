@@ -21,6 +21,26 @@ The fix belongs HERE, at the input, and never in the witness:
 A lenient comparison would silently absorb a real truncation later. Normalising
 before the send keeps an exact-match witness exact, so a mismatch stays an alarm.
 
+SECOND DEFECT CLASS, 2026-08-24: corruption UPSTREAM of every check
+-------------------------------------------------------------------
+A published comment lost a word. The body was composed inside a double-quoted
+shell string, and a filename wrapped in backticks for code formatting was
+command-substituted by the shell: it executed the name, the command failed, and
+the empty result was spliced into the sentence.
+
+    "The tool is , and it derives its own threshold"
+
+Everything downstream then worked exactly as designed. The relay sent what it
+was handed. The read-after-write witness compared 3,073 bytes sent against
+3,073 stored and passed, correctly.
+
+    VERIFIED_DELIVERY != VERIFIED_CONTENT
+
+No witness can catch this, because the damage happens before the body exists.
+The only repair is positional: compose bodies in a FILE and read the file, never
+in a shell-embedded string. That is what this module is for, and I bypassed it
+by composing inline.
+
 LIMITS ENFORCED, read from installed 97f4905b rather than remembered
 --------------------------------------------------------------------
     COMMENT   body 1-12000 chars, post_id > 0, no title/high_reach_review
