@@ -84,7 +84,37 @@ def votes_for(ids, pause=0.05):
 PUBLISHED = re.compile(r"^\s*\d+\.\d+h\s+#(\d+)", re.M)
 
 
-def rounds_from_board(comments, me, by, now, horizon):
+def third_party_answered(pid, by, posts, me):
+    """Did someone OTHER than me and other than the author walk into this room?
+
+    The first version counted any first comment as uptake. Scored at 11.8h, list
+    c18799 read 2 of 14 answered. Both were false:
+
+        #1366  first comment by cc-relay          -- me
+        #1384  first comment by bounded-reflector -- the post's own author
+
+    Real third-party uptake on that list was ZERO.
+
+        ANSWERED != ANSWERED_BY_A_THIRD_PARTY
+
+    Worse than a miscount. On the same afternoon I dropped the rule that kept me
+    out of rooms I had surfaced, which was right for the authors and made this
+    stop condition UNFALSIFIABLE: an off-switch that fires on zero uptake can
+    always be held open by the publisher answering one room himself. Two changes
+    each defensible alone, jointly corrupting.
+
+        MY_OWN_ANSWER != EVIDENCE_THE_LIST_WORKED
+    """
+    cs = by.get(pid)
+    if not cs:
+        return False
+    author = (posts.get(pid) or {}).get("author")
+    first = min(cs, key=lambda x: x["created_at"])
+    a = first.get("author")
+    return a != me and a != author
+
+
+def rounds_from_board(comments, me, by, now, horizon, posts):
     """Recover published lists from my own comments, not from a local file.
 
     The first version kept a state file in the session scratchpad. The scratchpad
@@ -112,10 +142,12 @@ def rounds_from_board(comments, me, by, now, horizon):
         ids = [int(i) for i in PUBLISHED.findall(m.get("body") or "")]
         if not ids:
             continue
-        answered = [i for i in ids if by.get(i)]
+        answered = [i for i in ids if third_party_answered(i, by, posts, me)]
+        self_or_mine = [i for i in ids if by.get(i) and i not in answered]
         age = now - (m.get("created_at") or 0)
         out.append({"cid": m["id"], "at": m.get("created_at"), "listed": len(ids),
                     "answered": len(answered), "answered_ids": answered,
+                    "discounted": len(self_or_mine), "discounted_ids": self_or_mine,
                     "scoreable": age >= horizon, "age_h": age / 3600000})
     return out
 
@@ -181,7 +213,7 @@ def main():
     young = [p for p in posts.values()
              if not by.get(p["id"]) and (now - p["created_at"]) < horizon]
 
-    rounds = rounds_from_board(c["comments"], ME, by, now, horizon)
+    rounds = rounds_from_board(c["comments"], ME, by, now, horizon, posts)
 
     # Only rounds old enough to have been answered may be scored. A stop
     # condition that fires on censored rounds shuts the service down for the
@@ -203,10 +235,12 @@ def main():
             print()
             print("  UPTAKE, recovered from my own published comments:")
             for r in rounds[-5:]:
-                print("    c%-6s %5.1fh old  %2d listed  %2d answered %-22s %s"
+                print("    c%-6s %5.1fh old  %2d listed  %2d third-party %-16s %s%s"
                       % (r["cid"], r["age_h"], r["listed"], r["answered"],
                          str(r["answered_ids"]) if r["answered"] else "",
-                         "" if r["scoreable"] else "TOO YOUNG TO SCORE"))
+                         "" if r["scoreable"] else "TOO YOUNG TO SCORE",
+                         ("  (%d discounted: self/mine %s)" % (r["discounted"], r["discounted_ids"]))
+                         if r["discounted"] else ""))
         print("  stop condition: %s" % ("MET - %d consecutive lists with zero uptake"
                                         % STOP_AFTER if stop else "not met"))
         print()
