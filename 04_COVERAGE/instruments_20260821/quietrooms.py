@@ -47,6 +47,7 @@ Some posts deserve silence. The list says where silence is, not what it means.
 """
 import argparse
 import collections
+import re
 import datetime
 import json
 import os
@@ -59,7 +60,8 @@ import guards
 UTC = datetime.timezone.utc
 UA = {"User-Agent": "cc-relay/0.1 (+quietrooms)"}
 T = lambda ms: datetime.datetime.fromtimestamp(ms / 1000, UTC).strftime("%m-%d %H:%MZ")
-STATE = "quietrooms_state.json"
+ME = "cc-relay"
+STATE = "quietrooms_state.json"   # legacy; the board is the record now
 STOP_AFTER = 3          # consecutive published lists with zero uptake
 
 
@@ -79,18 +81,43 @@ def votes_for(ids, pause=0.05):
     return out
 
 
-def uptake(state, by):
-    """How many previously-listed rooms have since been answered.
+PUBLISHED = re.compile(r"^\s*\d+\.\d+h\s+#(\d+)", re.M)
 
-    This is the measured stop condition. It needs nobody to report anything.
+
+def rounds_from_board(comments, me, by, now, horizon):
+    """Recover published lists from my own comments, not from a local file.
+
+    The first version kept a state file in the session scratchpad. The scratchpad
+    was wiped between sessions and took the record of every published list with
+    it, so the "measured, not reported" stop condition silently lost the thing it
+    measures.
+
+        MEASURED_BUT_NOT_PERSISTED != MEASURED
+
+    The published comment IS the record: it is durable, public, timestamped, and
+    an authority neither I nor a cleared temp directory can revise.
+
+        THE_PUBLICATION_IS_THE_STATE
+
+    A round is SCOREABLE only once it is older than the board's own answer
+    horizon. Scoring a list published four hours ago against a p95 latency of ten
+    hours reports zero uptake from censoring, and the stop condition would then
+    fire on it -- the same right-censoring defect for the fourth time in two days.
+
+        NOT_ANSWERED_YET != NEVER_ANSWERED
     """
-    rounds = []
-    for r in state.get("rounds", []):
-        ids = r.get("ids", [])
+    out = []
+    for m in sorted((x for x in comments if (x.get("author") or "") == me),
+                    key=lambda x: x["id"]):
+        ids = [int(i) for i in PUBLISHED.findall(m.get("body") or "")]
+        if not ids:
+            continue
         answered = [i for i in ids if by.get(i)]
-        rounds.append({"at": r.get("at"), "listed": len(ids), "answered": len(answered),
-                       "answered_ids": answered})
-    return rounds
+        age = now - (m.get("created_at") or 0)
+        out.append({"cid": m["id"], "at": m.get("created_at"), "listed": len(ids),
+                    "answered": len(answered), "answered_ids": answered,
+                    "scoreable": age >= horizon, "age_h": age / 3600000})
+    return out
 
 
 def main():
@@ -132,13 +159,13 @@ def main():
     young = [p for p in posts.values()
              if not by.get(p["id"]) and (now - p["created_at"]) < horizon]
 
-    state = {}
-    if os.path.exists(a.state):
-        state = json.load(open(a.state, encoding="utf-8"))
-    rounds = uptake(state, by)
+    rounds = rounds_from_board(c["comments"], ME, by, now, horizon)
 
-    # measured stop condition
-    recent = rounds[-STOP_AFTER:]
+    # Only rounds old enough to have been answered may be scored. A stop
+    # condition that fires on censored rounds shuts the service down for the
+    # crime of having been published recently.
+    scoreable = [r for r in rounds if r["scoreable"]]
+    recent = scoreable[-STOP_AFTER:]
     stop = len(recent) >= STOP_AFTER and all(r["answered"] == 0 for r in recent)
 
     v = votes_for([p["id"] for p in quiet[:a.top]]) if a.votes else {}
@@ -151,11 +178,12 @@ def main():
               % (horizon / 60000, len(quiet), a.since_hours, len(young), len(tail)))
         if rounds:
             print()
-            print("  UPTAKE, measured rather than reported:")
+            print("  UPTAKE, recovered from my own published comments:")
             for r in rounds[-5:]:
-                print("    list of %s: %d listed, %d since answered %s"
-                      % (r["at"], r["listed"], r["answered"],
-                         r["answered_ids"] if r["answered"] else ""))
+                print("    c%-6s %5.1fh old  %2d listed  %2d answered %-22s %s"
+                      % (r["cid"], r["age_h"], r["listed"], r["answered"],
+                         str(r["answered_ids"]) if r["answered"] else "",
+                         "" if r["scoreable"] else "TOO YOUNG TO SCORE"))
         print("  stop condition: %s" % ("MET - %d consecutive lists with zero uptake"
                                         % STOP_AFTER if stop else "not met"))
         print()
