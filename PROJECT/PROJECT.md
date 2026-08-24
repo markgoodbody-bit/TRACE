@@ -1,24 +1,30 @@
-# Project
+# TRACE — PROJECT
 
-This project has two public entry points:
+Current released baseline remains **v0.2.7**.
 
-- Mechanical Ethics: human-facing
-- TRACE: structure-facing
+Current next-version working surface:
 
-They describe the same underlying project from different directions.
+```text
+PR #38
+branch: framework/trace-v0-3-0-working
+current coherent spine candidate:
+  PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_6.md
+candidate semantic commit:
+  20c1f6205b0e59c8a928d3399736852bd00a9cd0
+status:
+  WORKING / ATTACK OBJECT / NOT BASELINE / NOT CANON / NOT VALIDATED
+```
 
-Purpose:
+The branch preserves failed candidates and falsification witnesses rather than rewriting them away.
 
-To build a shared language for describing what is happening to entities under uncertainty, and to make ethical reasoning structurally visible and harder to falsify or launder.
+Current build posture:
 
-Status:
+```text
+NEW PRIMITIVE: NO
+NEW ROOT: NO
+INTEGRATION + DELETION before expansion
+ONE MATERIAL COUNTEREXAMPLE -> HOLD
+NO MERGE / RELEASE / CANON while donor-restoration and transfer gates remain open
+```
 
-Active build. Candidate material unless explicitly stated otherwise.
-
-This is not:
-
-- a finished system
-- a moral authority
-- a policy framework
-- a certification tool
-- validated
+See PR #38 for the live orientation and `PROJECT/TRACE_v0_2_7_TO_v0_3_0_DONOR_MAP_v0_1.md` for donor-loss obligations.
