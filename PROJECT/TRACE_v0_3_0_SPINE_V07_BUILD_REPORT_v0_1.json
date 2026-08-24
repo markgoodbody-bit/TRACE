@@ -1,0 +1,13 @@
+{
+  "base_bytes": 21400,
+  "base_path": "PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_6.md",
+  "base_sha256": "209e6d3517f4c3af3f01c8761c63eb77d017555a681f7cf41db2e106f642119a",
+  "candidate_bytes": 22566,
+  "candidate_sha256": "9123213a6b0a9826cea094b1f25b44a3277262bc6cee142351a721fa56720aa2",
+  "claim_boundary": "ACYCLICITY_PROVENANCE_REPAIR_ONLY_NOT_VALIDATION_NOT_RELEASE_NOT_CANON",
+  "declared_replacement_surfaces": 3,
+  "errors": [],
+  "normalized_candidate_equals_base": true,
+  "output_path": "PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_7.md",
+  "status": "PASS"
+}
