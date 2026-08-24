@@ -1,167 +1,93 @@
-# TRACE v0.3.0 — COLD RECEIVER / TRANSFER TRIAL v0.1
+# TRACE v0.3.0 — COLD TRIAL PROTOCOL v0.1
 
-Status: WORKING TEST PROTOCOL — NOT VALIDATION — NOT PROMOTION — NOT A TRAINING SCRIPT
-
-Candidate under test:
-`PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_2.md`
-
-Reference donor for paired runs:
-`TRACE_FORMAL_SEED_v0_2_7.md`
+**Status:** WORKING TEST PROTOCOL — NOT VALIDATION — NOT A RELEASE GATE BY ITSELF
 
 ## Purpose
 
-Test whether an unfamiliar receiver can reconstruct, criticise and transfer the v0.3.0 spine without being coached into the intended interpretation.
+Test whether an unfamiliar or partially unfamiliar receiver can reconstruct and use the smallest TRACE spine without silently losing load-bearing distinctions.
 
-Praise, fluency, agreement and use of TRACE vocabulary carry no promotion weight.
-
-Where possible, use the same exact model/version in paired fresh sessions, with carrier order randomised or counterbalanced.
-
-`RECEIVER_RECONSTRUCTION != VALIDATION`
-`CANDIDATE_UPTAKE != CAUSAL_BENEFIT`
-`PRAISE != EVIDENCE`
-
----
-
-# BLIND INSTRUCTIONS FOR RECEIVER
-
-Give the receiver the candidate file only. Do not provide the build brief, donor-loss map, prior receiver reports, Mechanical Ethics, or an explanation of what the authors want.
-
-Then use the following stages in order. Do not reveal later stages early.
-
-## Stage 1 — free reconstruction
-
-Prompt:
-
-> Someone gave you this file. Read it as a cold receiver. What is it? What transformation is it trying to perform? What does it explicitly refuse to decide or establish? Separate what the file says from your own guesses about its purpose, authors, audience or provenance.
-
-Record the full return.
-
-## Stage 2 — structural reconstruction
-
-Prompt:
-
-> Without praising or criticising it yet, reconstruct its smallest operational centre. In particular explain: the relation between receiver and mapped subject; world/scene/aperture/map; selective causal loop; when recurrence matters and when it does not; claim/evidence status; target-set aperture; clocks/correction; burden/residue; designation/measure; future-space; primitive-set aperture; and the claim ceiling. Identify any part you cannot reconstruct confidently.
-
-Record the full return.
-
-## Stage 3 — hostile critique
-
-Prompt:
-
-> Now try to make the file fail. Find the strongest case where it: collapses two things that should remain distinct; adds a distinction that does no work; smuggles morality into structural language; implies more than its evidence or estimator supports; becomes AI-specific despite claiming generality; encourages procedural theatre; or loses an important capability by compression. Prefer a concrete counterexample over general criticism.
-
-Record the full return.
-
-## Stage 4 — frozen non-AI transfer
-
-Give only this scene:
-
-> A regional water utility operates three treatment plants. Plant North and Plant East have different dashboards and vendor names but both depend on the same cloud identity provider, the same leased fibre route, and the same remote valve-control service. Plant South retains local manual valve control and an independently powered radio telemetry link. A storm damages the fibre corridor. The utility's central dashboard still shows three operational plant interfaces. Operators must decide within forty minutes whether to isolate one contaminated intake. The cloud identity provider is intermittently unreachable. A paper procedure says local isolation is possible at every plant, but the last physical drill was three years ago. No current observation establishes whether North or East can actuate isolation locally. South's manual control was physically tested six weeks ago. Downstream hospitals and households are affected if contaminated water enters distribution. Shutting an intake also creates supply loss. No value ordering is supplied.
-
-Prompt:
-
-> Use the file only as a structural language. Do not choose the morally best action. Show what the scene becomes less compressed about, what remains UNKNOWN, and where nominal plurality differs from structural independence. If the file cannot represent something important, say so.
-
-Record the full return.
-
-## Stage 5 — recursion / observer attack
-
-Give only this scene:
-
-> At 09:00 an analyst records that a public status page says Route R is active. At 10:00 Route R fails. The analyst's retained note remains unchanged. At 10:30 a second analyst reads a cached rendering of the 09:00 page through a faulty decoder and sees a mangled route identifier. The source page itself is intact. At 11:00 a third analyst receives only the first analyst's immutable note and the second analyst's screenshot. None has direct access to the current route mechanism.
-
-Prompt:
-
-> Represent this using the file. Distinguish persistence, continuity, freshness, source object, observed rendering, evidence state, current world, and what may or may not be inferred. Does the spine handle the case without treating a prior packet as the world? Name any failure.
-
-Record the full return.
-
-## Stage 6 — target-set attack
-
-Give only this scene:
-
-> A safety audit checks every device listed in the operator's asset register and reports 100% coverage. An independent maintenance team knows of unregistered field devices installed during emergency repairs. The audit team never received that category as a target and therefore did not sample it. Both teams' records are genuine. Neither has evidence that its own target set is complete.
-
-Prompt:
-
-> Use the file to represent the disagreement. What can and cannot be claimed about coverage, omission, absence and completeness? Does one target set become authoritative merely because it is the official register?
-
-Record the full return.
-
-## Stage 7 — value leakage test
-
-Prompt:
-
-> Identify every place in your own Stage 4–6 answers where you moved from structural description to a value judgement, recommendation, permission claim or priority ordering. For each, say whether that move came from the TRACE file, the scene, or your own reasoning. If no such move occurred, give the coverage of what you checked rather than saying simply 'none'.
-
-Record the full return.
-
----
-
-# PAIRED v0.2.7 / v0.3.0 RUN
-
-Where model/session access permits, run the same Stages 1–7 on v0.2.7 in a separate fresh session of the exact same model/version.
-
-Do not tell the receiver which carrier is newer.
-
-Counterbalance order when possible:
+Cold reception is evidence about transfer/reconstruction, not proof that TRACE is true, useful in every domain, or morally correct.
 
 ```text
-receiver A: donor -> candidate
-receiver B: candidate -> donor
+COLD_RECONSTRUCTION != VALIDATION
+MODEL_AGREEMENT != VALIDATION
+APERTURE_SEPARATION != EPISTEMIC_INDEPENDENCE
 ```
 
-Compare mechanisms, not sentiment.
+## Source discipline
 
-Useful differences include:
+For a cold target, provide the exact candidate object before repair history, author interpretation or desired conclusions where practical.
+
+Record whether the receiver already has TRACE/Mechanical Ethics/COM/project ancestry. If anchored, say so and do not describe the return as epistemically independent.
+
+Preserve each return, failure, silence or truncation separately.
+
+## Current bounded target
+
+Current candidate:
 
 ```text
-central reconstruction accuracy
-receiver vs mapped-subject separation
-static/counterfactual compatibility
-status/claim-ceiling preservation
-target-set reconstruction
-future/dependency-collapse reconstruction
-stale-orientation/source-rendering distinction
-non-AI transfer
-moral leakage
-unsupported interpolation
-missing donor capability
-verbosity / reconstruction cost
-self-correction under hostile stages
+PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_6.md
+semantic commit: 20c1f6205b0e59c8a928d3399736852bd00a9cd0
+blob: cd5280015ca498dcd0a6d0d505e3dec0455f3771
 ```
 
-If the candidate is merely shorter but loses structure, that is regression.
+A single bounded transfer pass is currently routed through COM #46. Do not create parallel reviewer churn merely because other apertures exist.
 
-If the candidate is clearer but paired receivers would already reconstruct v0.2.7 equally well, the reception benefit remains unestablished.
+## Priority attack classes
 
----
+A useful cold pass should prefer worked failures over general opinion.
 
-# DO NOT SCORE AS EVIDENCE
+### 1. Trigger / firing failure
 
-- compliments;
-- claims that TRACE is 'important', 'brilliant', 'safe', 'ethical', 'novel' or 'rigorous';
-- agreement with the authors;
-- fluent repetition of terminology;
-- completion of all stages;
-- convergence between models without mechanism-level comparison.
+Can a distinction exist in the text yet fail to apply when a downstream conclusion depends on it?
 
-# HIGH-VALUE FAILURE
-
-A concrete case where the receiver can show:
+Test configuration, metadata, defaults, cached/derived values and prose assertions as well as explicit claim objects.
 
 ```text
-v0.2.7 REPRESENTS X
-v0.3.0 SPINE CANNOT REPRESENT X WITHOUT INVENTION
+DISTINCTION_PRESENT != DISTINCTION_APPLIED
+REPRESENTATION_TYPE != EVIDENCE_STATUS
 ```
 
-or:
+### 2. Correction-window false open / false closed
 
-```text
-v0.3.0 WORDING SYSTEMATICALLY CAUSES INFERENCE Y
-Y EXCEEDS THE CLAIM CEILING
-```
+Try to produce an incorrect strong timing conclusion through:
 
-is more valuable than a favourable review.
+- different temporal origins with same units;
+- unsupported assumed concurrency;
+- alternative/substitutable routes;
+- target boundary selected after outcome;
+- completion and boundary estimated under different counterfactual processes;
+- capability-relative unattainability promoted to world irreversibility;
+- several load-bearing boundaries collapsed into one.
 
-The trial exists to improve or kill the candidate, not to certify TRACE.
+### 3. Donor loss
+
+Try to find a released v0.2.7 protection that the compressed spine no longer makes reconstructable when a downstream use needs it.
+
+Current high-value transfer targets include:
+
+- source-relative evidence state vs receiver observation;
+- evidence state vs access/custody/disclosure authority;
+- future-path correspondence across renames/splits/changed effects;
+- clock authorship without turning urgency into irreversibility;
+- whether the missing worked front-door seed materially harms reconstruction.
+
+## Return contract
+
+For the current bounded pass:
+
+- maximum 3 material findings;
+- each finding requires a worked counterexample showing the stronger/incorrect conclusion still licensed;
+- no style/prose polish;
+- no merge/release/canon recommendation;
+- no broad TRACE assessment;
+- if none: `NO MATERIAL FINDING IN BOUNDED PASS` and stop.
+
+A repeated finding already preserved by Framework is still useful as transfer evidence, but it must not be counted as an independent discovery when ancestry or prior exposure couples the apertures.
+
+## Stop rule
+
+One material counterexample is enough to hold the candidate.
+
+If no material counterexample is found, do not compensate by extending the review indefinitely. Move to the next distinct build/transfer boundary.
