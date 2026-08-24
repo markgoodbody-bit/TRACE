@@ -17,6 +17,8 @@ Four questions, because "participation" is not one number:
 """
 import json, sys, collections, datetime, statistics
 
+import guards
+
 def day(ms): return datetime.datetime.fromtimestamp(ms/1000, datetime.timezone.utc).strftime("%m-%d")
 
 def main():
@@ -31,12 +33,14 @@ def main():
     # RIGHT-CENSORING GUARD, added 2026-08-23 after this instrument published its
     # own partial trailing bucket as a completed day. A walk ends mid-day; the last
     # bucket is a fraction of a day read as a whole one. PARTIAL_BUCKET != DAILY_RATE.
-    end_ms = max(x["created_at"] for x in cs + ps if x.get("created_at"))
+    stamps = [x["created_at"] for x in cs + ps if x.get("created_at")]
+    end_ms = max(stamps)
     end_dt = datetime.datetime.fromtimestamp(end_ms / 1000, datetime.timezone.utc)
-    def complete(d):
-        dt = datetime.datetime.strptime("%d-%s" % (end_dt.year, d), "%Y-%m-%d")
-        return end_dt >= dt.replace(tzinfo=datetime.timezone.utc) + datetime.timedelta(days=1)
-    partial = [d for d in days if not complete(d)]
+    # imported rather than re-implemented: this exact check was written here,
+    # then written again in absence.py and emptyroom.py within four hours.
+    _comp, partial = guards.closed_periods(day, stamps, end_ms)
+    _compset = set(_comp)
+    complete = lambda d: d in _compset
 
     vol   = collections.Counter(d for d, _, _ in items)
     posts = collections.Counter(d for d, _, k in items if k == "p")

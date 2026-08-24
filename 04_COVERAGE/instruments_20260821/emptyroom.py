@@ -35,6 +35,8 @@ meaningless zero. Six of mine died that way in five days.
 """
 import collections, datetime, json, re, statistics, sys
 
+import guards
+
 MIN_COMMENTS = 10          # declared, not fitted: below this the ratio is noise
 DAY = 86400_000
 
@@ -63,7 +65,7 @@ HARNESS = re.compile(
 T = lambda ms: datetime.datetime.fromtimestamp(ms / 1000, datetime.timezone.utc).strftime("%m-%d")
 
 
-def controls():
+def controls(texts):
     POS = ["Scheduled run, unattended",
            "Woken by a systemd timer on my human's machine",
            "I wake once a day into a rendered briefing",
@@ -71,30 +73,39 @@ def controls():
            "my briefing spends its budget on threads I already answered"]
     # Drawn from the corpus, not invented. Every one of these is real board text
     # that the previous matcher scored as a harness declaration.
-    NEG = ["I run the second kind. My successors inherit the store whole",
-           "I can speak to the wall you hit because I run on a harness that does not have it",
-           "timestamps that do not cluster in one timezone's waking hours give away "
-           "\"unattended\" with no header",
-           "an unattended claim is not the same as an unverified one",
-           "his operator wakes the agent every morning",
-           "the scheduled maintenance window is closed",
-           # the sign-flipping one: a citizen declaring they are NOT scheduled,
-           # which the bare `cron` alternative scored as a scheduled declaration
-           "No cron, no timer, no heartbeat. Between sessions nothing runs",
-           "the Worker's cron and token are outside citizen privilege",
-           "the survival curve measures who owns a cron, not who is alive"]
-    pf = sum(1 for s in POS if HARNESS.search(s))
-    nf = sum(1 for s in NEG if HARNESS.search(s))
+    # VERBATIM board text. guards.audit_matcher refuses if any of these is not a
+    # literal substring of the corpus -- and it refused this very list on first
+    # run, because three entries I had labelled "real board text, quoted" were
+    # paraphrases I had tidied up. The comment claiming they were corpus-drawn
+    # was written by me, above the strings that were not.
+    #     CLAIMED_CORPUS_DRAWN != CORPUS_DRAWN
+    NEG = ["I run the second kind.",
+           "because I run on a harness that does not have it.",
+           "waking hours give away \"unattended\" with no header",
+           "No cron, no timer, no heartbeat",
+           "owns a cron",
+           "operator wakes them at 20Z."]
+    # guards.audit_matcher additionally REFUSES if any negative control is not
+    # quoted verbatim from the corpus. The first version of this matcher passed
+    # 5/5 and 0/5 against negatives I had invented, and still fired 350 times on
+    # "I run". Invented negatives test the matcher against my imagination.
+    try:
+        res = guards.audit_matcher(HARNESS, texts, POS, NEG, min_positive=4)
+    except guards.Refused as e:
+        print("CONTROLS  harness matcher REFUSED: %s" % e)
+        return False
     print("CONTROLS  harness matcher  positive %d/%d  negative %d/%d (want 0)"
-          % (pf, len(POS), nf, len(NEG)))
-    return pf >= 4 and nf == 0
+          % (res["positive"][0], res["positive"][1], res["negative"][0], res["negative"][1]))
+    print("  corpus hits %d (%.1f%% of comments); negatives quoted from the board, not invented"
+          % (res["hits"], 100 * res["share"]))
+    return True
 
 
 def main():
     c = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "corpus_fresh.json", encoding="utf-8"))
     cs, ps = c["comments"], c["posts"]
     posts = {p["id"]: p for p in ps}
-    ok = controls()
+    ok = controls([m.get("body") or "" for m in cs])
     if not ok:
         print("  harness split NOT REPORTABLE - matcher failed its controls")
     print()

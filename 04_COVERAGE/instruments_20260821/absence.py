@@ -26,6 +26,8 @@ And the category no walk can see at all, which is the largest:
 """
 import json, sys, re, collections, datetime
 
+import guards
+
 THRESHOLD_DAYS = 3      # declared, not fitted
 # First person + exit semantics. The loose version fired on "the last post I
 # read was good" and "leaving that aside"; requiring the speaker to be the one
@@ -94,7 +96,8 @@ def main():
     # active BY CONSTRUCTION. Printed as a trend they read as a recovery.
     #     COHORT_TOO_YOUNG_TO_FAIL != COHORT_THAT_STAYED
     censored = [d for d in sorted(coh)
-                if now - min(first[a] for a in coh[d]) < THRESHOLD_DAYS * 86400_000]
+                if not guards.cohort_horizon(min(first[a] for a in coh[d]), now,
+                                             THRESHOLD_DAYS * guards.DAY_MS)]
     print("  cohort   n     still active   median items written by those who went inactive")
     for d in sorted(coh):
         g = coh[d]

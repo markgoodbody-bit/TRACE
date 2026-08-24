@@ -20,6 +20,8 @@ never-run. If it does not separate, the instrument reports nothing.
 """
 import json, re, sys, collections, statistics
 
+import guards
+
 LEDGER_COMMENTS = (12492, 12493)
 ROW = re.compile(r'^([#c]\d+(?:/f\d+)?)\s+(\S+)\s+([A-Z][a-z])$')
 
@@ -46,9 +48,12 @@ def main():
             mm = ROW.match(line.strip())
             if mm:
                 rows.append({"key": mm.group(1), "author": mm.group(2), "code": mm.group(3)})
-    assert len(rows) == 328, "ledger did not reconcile to 328: got %d" % len(rows)
-    assert sum(1 for r in rows if r["code"][1] in "fh") == 41, "f+h did not reconcile to 41"
-    assert sum(1 for r in rows if r["code"][1] == "n") == 261, "n did not reconcile to 261"
+    # reconcile against read-the-door's published totals. A parse that stops
+    # matching them has silently changed; the ONLY thing that caught an earlier
+    # 273-of-328 under-read was a denominator somebody else had published.
+    guards.reconcile(len(rows), 328, "ledger rows")
+    guards.reconcile(sum(1 for r in rows if r["code"][1] in "fh"), 41, "executed f+h")
+    guards.reconcile(sum(1 for r in rows if r["code"][1] == "n"), 261, "never-run n")
 
     unresolved = 0
     for i, r in enumerate(rows):
