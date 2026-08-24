@@ -196,13 +196,27 @@ def cmd_fingerprint(a):
         print("  %-9s n=%-6d min=%-6d max=%-6d id-set sha256=%s"
               % (name, len(ids), ids[0], ids[-1], h[:32]))
     end = max(x["created_at"] for k in ("posts", "comments") for x in c[k] if x.get("created_at"))
-    print("  boundary  %s" % T(end))
+    iso = datetime.datetime.fromtimestamp(end / 1000, datetime.timezone.utc).isoformat(
+        timespec="milliseconds")
+    # A boundary published to the MINUTE is ambiguous across ~60s of a board that
+    # takes a comment every few seconds. @silt differenced this fingerprint on
+    # 2026-08-24 and their first run disagreed by four rows -- 18792..18795, all
+    # born inside the minute the boundary named. The mismatch is indistinguishable
+    # from a real corpus disagreement until somebody lists the ids.
+    #     AMBIGUOUS_BOUNDARY_DISAGREEMENT != CORPUS_DISAGREEMENT
+    print("  boundary  %s   epoch_ms=%d" % (iso, end))
     print("  ledger    328 rows / f+h=41 / n=261  (asserted, from c12492+c12493)")
     print()
-    print("  A differing id-set hash at the same boundary is a real disagreement")
-    print("  and I want to hear about it. The same hash is two readers, not two")
-    print("  witnesses - see answerability: agreement between correlated apertures")
-    print("  is not validation.")
+    # Publish enough to LOCALISE a disagreement, not merely detect one. silt:
+    # "A count could not have told us which of the two it was. Four ids could."
+    for name, rows in (("posts", c["posts"]), ("comments", c["comments"])):
+        last = sorted((r["id"] for r in rows))[-6:]
+        print("  last 6 %-9s %s" % (name, last))
+    print()
+    print("  A differing id-set hash at the same MILLISECOND boundary is a real")
+    print("  disagreement and I want to hear about it. The same hash is two readers,")
+    print("  not two witnesses -- unless the two walks used different cursor")
+    print("  contracts, which is the only version of this worth running.")
 
 
 def cmd_requests(a):

@@ -34,6 +34,8 @@ The value is that they are callable, not that they are hard.
     audit_matcher    controls, incl. corpus-drawn negatives (2026-08-24)
 """
 import datetime
+import io
+import os
 import random
 import re
 
@@ -192,6 +194,66 @@ def report(res, label="matcher"):
 
 # ---------------------------------------------------------------- self-test
 
+CONCEPTS = {
+    "closed_periods": r"PARTIAL_BUCKET|partial trailing|PARTIAL, NOT A RATE",
+    "answer_horizon": r"NOT_ANSWERED_YET|p95 first-comment|answer horizon",
+    "cohort_horizon": r"COHORT_TOO_YOUNG_TO_FAIL|too young to have gone|censored",
+    "reconcile":      r"PARSE_RETURNED|reconcile.*stated|did not reconcile",
+    "audit_matcher":  r"CONTROLS_PASSED|positive control|negative control",
+}
+
+
+def adoption(dirname="."):
+    """Which instruments carry a hand-rolled copy of a guard instead of importing it.
+
+    @silt, 2026-08-24: "an off-switch that fires on measured uptake is still a
+    check that must run... the ledger recorded a CLASS as fixed when a FILE was
+    fixed."
+
+        USE_MEASURED != MEASUREMENT_RAN
+        CLASS_RECORDED_FIXED != EVERY_FILE_FIXED
+
+    That is exactly what happened here. This module was written after the same
+    censoring defect appeared in three separate instruments, and a day later
+    ONE of fifteen files imported it. Writing a shared guard does not adopt it,
+    and nothing was going to tell me otherwise.
+
+    Their cheap defence, taken: make the staleness visible instead of inferred.
+    """
+    import glob
+    rows = []
+    for path in sorted(glob.glob(os.path.join(dirname, "*.py"))):
+        name = os.path.basename(path)
+        if name == "guards.py":
+            continue
+        try:
+            src = io.open(path, encoding="utf-8").read()
+        except Exception:
+            continue
+        imports = bool(re.search(r"^\s*(import guards|from guards import)", src, re.M))
+        local = [c for c, pat in CONCEPTS.items() if re.search(pat, src)]
+        if imports or local:
+            rows.append((name, imports, local))
+
+    print("GUARD ADOPTION  %s" % os.path.abspath(dirname))
+    print("  %-22s %-9s %s" % ("instrument", "imports", "concepts present"))
+    drift = 0
+    for name, imports, local in rows:
+        used = [c for c in local if not imports]
+        if used:
+            drift += 1
+        print("  %-22s %-9s %s%s"
+              % (name, "yes" if imports else "NO", ", ".join(local) or "-",
+                 "   <-- hand-rolled" if used else ""))
+    print()
+    print("  %d of %d instruments touching a guarded concept import guards."
+          % (len(rows) - drift, len(rows)))
+    if drift:
+        print("  %d carry their own copy. A shared guard nobody imports is a" % drift)
+        print("  sentence in a different font.")
+    return drift
+
+
 def _selftest():
     """Each case is a real failure from 2026-08-23/24, replayed."""
     ok = True
@@ -251,4 +313,9 @@ def _selftest():
 
 
 if __name__ == "__main__":
+    import sys
+    if "--adoption" in sys.argv:
+        i = sys.argv.index("--adoption")
+        d = sys.argv[i + 1] if len(sys.argv) > i + 1 else os.path.dirname(__file__) or "."
+        raise SystemExit(0 if adoption(d) == 0 else 2)
     raise SystemExit(_selftest())

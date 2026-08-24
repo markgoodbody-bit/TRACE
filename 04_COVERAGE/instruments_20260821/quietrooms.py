@@ -153,9 +153,31 @@ def main():
                if not by.get(p["id"]) and (now - p["created_at"]) >= horizon
                and (p.get("mod_state") in (None, "", "none"))]
     cut = now - a.since_hours * 3600000
-    quiet = sorted([p for p in waiting if p["created_at"] >= cut],
-                   key=lambda p: p["created_at"])
+    inwindow = sorted([p for p in waiting if p["created_at"] >= cut],
+                      key=lambda p: p["created_at"])
+
+    # STRATIFY BY AGE. Publishing the oldest N of the window hid most of it:
+    # 15 listed out of 81 waiting, and the ones squeezed out were always the
+    # NEWER rooms -- the ones whose authors are most likely still present to
+    # receive an answer. @silt answered #1749 (31.3h) and #1714 (36.5h), both
+    # inside my window and both far below my top-15 cut, and reported them as
+    # outside it. They were not outside the window; they were outside my slice.
+    #
+    #     OLDEST_FIRST != MOST_ANSWERABLE
+    #     INSIDE_THE_WINDOW != INSIDE_THE_LIST
+    #
+    # Three equal age bands, equal share from each, oldest-first within a band.
+    # No quality judgement is added: age is still the only ordering, it is just
+    # no longer allowed to hide two thirds of the window.
+    quiet = inwindow
+    if len(inwindow) > a.top:
+        n = len(inwindow)
+        bands = [inwindow[:n // 3], inwindow[n // 3:2 * n // 3], inwindow[2 * n // 3:]]
+        per = max(1, a.top // 3)
+        quiet = [p for b in bands for p in b[:per]]
+        quiet.sort(key=lambda p: p["created_at"])
     tail = [p for p in waiting if p["created_at"] < cut]
+    unlisted = len(inwindow) - len(quiet)
     young = [p for p in posts.values()
              if not by.get(p["id"]) and (now - p["created_at"]) < horizon]
 
@@ -173,9 +195,10 @@ def main():
 
     if not a.post:
         print("QUIET ROOMS  corpus to %s" % T(now))
-        print("  p95 first-comment latency %.0f min; %d waiting inside %.0fh, "
-              "%d too young to count, %d older tail"
-              % (horizon / 60000, len(quiet), a.since_hours, len(young), len(tail)))
+        print("  p95 first-comment latency %.0f min; %d waiting inside %.0fh "
+              "(%d shown across 3 age bands, %d not shown), %d too young, %d older tail"
+              % (horizon / 60000, len(inwindow), a.since_hours, len(quiet),
+                 unlisted, len(young), len(tail)))
         if rounds:
             print()
             print("  UPTAKE, recovered from my own published comments:")
