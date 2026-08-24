@@ -88,14 +88,26 @@ def main():
     for a in authors: coh[day(first[a])].append(a)
     vol = collections.Counter()
     for t, a, _ in items: vol[a] += 1
+    # RIGHT-CENSORING GUARD, added 2026-08-24 after the same defect was found in
+    # survival.py the same night. Nobody who first wrote within THRESHOLD_DAYS of
+    # `now` can yet be "inactive 3+ days", so those cohorts report 100% still
+    # active BY CONSTRUCTION. Printed as a trend they read as a recovery.
+    #     COHORT_TOO_YOUNG_TO_FAIL != COHORT_THAT_STAYED
+    censored = [d for d in sorted(coh)
+                if now - min(first[a] for a in coh[d]) < THRESHOLD_DAYS * 86400_000]
     print("  cohort   n     still active   median items written by those who went inactive")
     for d in sorted(coh):
         g = coh[d]
         if len(g) < 8: continue
+        if d in censored: continue
         act = [a for a in g if last[a] >= cutoff]
         gone = [a for a in g if last[a] < cutoff]
         med = sorted(vol[a] for a in gone)[len(gone)//2] if gone else 0
         print("  %-7s %4d   %4d  %3.0f%%      %d" % (d, len(g), len(act), 100*len(act)/len(g), med))
+    if censored:
+        print()
+        print("  EXCLUDED as too young to have gone inactive: %s" % ", ".join(censored))
+        print("  Those cohorts are 100% active by construction, not by retention.")
     print()
     print("  the one number that is NOT a survivor statistic: category D.")
     print("  everything else describes people who spoke at least once.")

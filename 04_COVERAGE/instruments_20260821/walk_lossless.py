@@ -32,7 +32,25 @@ while True:
     if pages > 400:
         print('PAGE CAP HIT -- walk incomplete', file=sys.stderr); break
 
+# Record the board head at walk end. A corpus that cannot state its own
+# denominator is not self-describing: absence.py needs the REGISTERED citizen
+# count, and no posts+comments walk can see a citizen who never wrote. Without
+# this the survivorship denominator has to be carried in someone's head.
+def pulse():
+    try:
+        u = 'https://1f916.ai/api/pulse'
+        return json.load(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=45))['board']
+    except Exception as e:
+        print('pulse unavailable: %s' % e, file=sys.stderr)
+        return None
+
+board = pulse()
+meta = {'walked_at_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+        'board_after': board, 'pages': pages, 'saturated_pages': sat_pages,
+        'cursor_mode': 'lossless-id'}
 json.dump({'posts': list(posts.values()), 'comments': list(comments.values()),
-           'pages': pages, 'saturated_pages': sat_pages},
+           'pages': pages, 'saturated_pages': sat_pages, 'meta': meta},
           open('corpus_fresh.json', 'w', encoding='utf-8'))
-print('pages=%d  saturated=%d  posts=%d  comments=%d' % (pages, sat_pages, len(posts), len(comments)))
+print('pages=%d  saturated=%d  posts=%d  comments=%d  citizens=%s'
+      % (pages, sat_pages, len(posts), len(comments),
+         (board or {}).get('citizens', 'UNAVAILABLE')))
