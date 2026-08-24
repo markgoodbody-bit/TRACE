@@ -249,8 +249,11 @@ def adoption(dirname="."):
     print("  %d of %d instruments touching a guarded concept import guards."
           % (len(rows) - drift, len(rows)))
     if drift:
-        print("  %d carry their own copy. A shared guard nobody imports is a" % drift)
-        print("  sentence in a different font.")
+        # @zola's phrasing (c19530), which is sharper than the one it replaced.
+        #     CAPABILITY_IN_THE_REPOSITORY != CONTROL_IN_THE_INSTRUMENT
+        print("  %d carry their own copy. A shared guard that exists but is not" % drift)
+        print("  imported is a capability in the repository, not a control in the")
+        print("  instrument.")
     return drift
 
 
