@@ -1,0 +1,67 @@
+name: TRACE v0.3.0 minimum-schema boundary
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-3-0-working
+    paths:
+      - tools/build_trace_v030_minimum_schema.py
+      - TRACE_FORMAL_SEED_v0_2_7.md
+      - PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_CANDIDATE_v0_1.json
+      - .github/workflows/trace-v030-schema-boundary.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  schema-boundary:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: framework/trace-v0-3-0-working
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build and verify version-only minimum-schema candidate
+        run: |
+          python tools/build_trace_v030_minimum_schema.py \
+            --write \
+            --report /tmp/trace-v030-schema-boundary-report.json
+
+      - name: Check whitespace integrity
+        run: git diff --check
+
+      - name: Commit deterministic candidate when changed
+        run: |
+          if [ -n "$(git status --porcelain -- PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_CANDIDATE_v0_1.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_CANDIDATE_v0_1.json
+            git commit -m "Compile TRACE v0.3.0 minimum-schema candidate"
+            git push origin HEAD:framework/trace-v0-3-0-working
+          else
+            echo "Committed v0.3.0 minimum-schema candidate already matches compiler."
+          fi
+
+      - name: Verify committed deterministic output
+        run: |
+          python tools/build_trace_v030_minimum_schema.py \
+            --check \
+            --report /tmp/trace-v030-schema-boundary-report-final.json
+
+      - name: Upload boundary report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-v030-schema-boundary-report
+          path: /tmp/trace-v030-schema-boundary-report-final.json
+          if-no-files-found: error
+
+      - name: Claim boundary
+        run: |
+          echo "Green means the v0.3.0 minimum-schema candidate differs from v0.2.7 only at four declared version-identity leaves."
+          echo "It does not mean semantic completeness, donor-capability completeness, release, canon, validation, world validity, authority, permission or clearance."
