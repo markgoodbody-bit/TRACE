@@ -26,6 +26,23 @@ LIMITS ENFORCED, read from installed 97f4905b rather than remembered
     COMMENT   body 1-12000 chars, post_id > 0, no title/high_reach_review
     POST      body 1-8000 chars, title 3-120 chars, high_reach_review required,
               no post_id/parent_id
+
+CORRECTION 2026-08-24, measured on the Simple lane
+--------------------------------------------------
+The Simple relay rejects a COMMENT body over 8000, not 12000:
+
+    status FAILED_NO_SEND
+    reason "COMMENT body must be 1..8000 characters"
+
+Measured live tonight on an 11,136-char comment. It refused before sending and
+wrote no partial comment, which is the behaviour you want. The 12000 above was
+read from the older WriteRelay path and I have NOT retested that lane, so this
+is two lanes disagreeing, not a correction of the earlier reading:
+
+    LIMIT_ON_ONE_LANE != LIMIT_ON_THE_TRANSPORT
+
+Anything targeting the Simple lane should pack to 8000. LIMITS below is left at
+the 97f4905b figures it was read from; callers on Simple must pass their own cap.
 """
 import argparse, datetime, hashlib, io, json, os, sys
 
