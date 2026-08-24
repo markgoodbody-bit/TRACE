@@ -2,8 +2,10 @@
 
 **Status:** WORKING REPAIR DELTA — ATTACK OBJECT — NOT v0.6 — NOT SPINE TEXT — NOT CANON — NOT VALIDATED — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE  
 **Failed predecessor:** `PROJECT/TRACE_v0_3_0_CORRECTION_WINDOW_V05_INTERVAL_REPAIR_DELTA_v0_1.md` @ `57a9f67eb558918562e651f9a3acff90f3d72c85`  
-**Falsification witness:** `falsification/TRACE_v0_3_0_CORRECTION_WINDOW_INTERVAL_DELTA_V01_CC139_ATTACK.md`  
-**Purpose:** retain interval-safe donor recovery while refusing to manufacture a target-close time from an undeclared target/adequacy threshold.
+**CC/139 witness:** `falsification/TRACE_v0_3_0_CORRECTION_WINDOW_INTERVAL_DELTA_V01_CC139_ATTACK.md`  
+**Immediate v0.2 self-attack:** `falsification/TRACE_v0_3_0_CORRECTION_WINDOW_INTERVAL_DELTA_V02_IMMEDIATE_SELF_ATTACK.md`  
+**Initial v0.2 commit (failed narrow self-attack):** `10a4aa4b937c92e2d4c4ccc1bc2820612dca7251`  
+**Purpose:** retain interval-safe donor recovery while refusing to manufacture a target-facing deadline from an undeclared, post-hoc, capability-ambiguous, or silently aggregated target condition.
 
 ---
 
@@ -11,11 +13,14 @@
 
 This delta does not repair or validate all of corrected v0.5.
 
-It addresses two demonstrated timing/warrant failures:
+It addresses demonstrated timing/warrant failures:
 
 ```text
 POINT_ESTIMATE_FITS != GUARANTEED_OPEN
 TARGET_BOUNDARY_TIME != ADEQUACY_FREE_PHYSICAL_FACT
+BOUNDARY_CONDITION_DECLARED != BOUNDARY_CONDITION_PREDECLARED
+UNREACHABLE_BY_DECLARED_ROUTE_SET != WORLD_IRREVERSIBLE
+MULTIPLE_LOAD_BEARING_BOUNDARIES != ONE_UNQUALIFIED_CLOSE
 ```
 
 No new primitive is proposed.
@@ -23,10 +28,11 @@ No new primitive is proposed.
 ```text
 DONOR_RECOVERY != NEW_ONTOLOGY
 BOUNDARY_CONDITION != PRIORITY_RULE
+PROFILE_FIELD != PRIMITIVE
 REPAIR_DELTA != INTEGRATED_SPINE
 ```
 
-TRACE may expose which condition defines a target-facing timing boundary. It does not choose the morally correct target, threshold or trade-off.
+TRACE may expose which condition defines a target-facing timing boundary. It does not choose the morally correct target, threshold, affected scope, priority, or trade-off.
 
 ---
 
@@ -136,18 +142,23 @@ The reading must therefore carry, where load-bearing:
 - the boundary condition whose crossing changes the relevant target status;
 - the affected scope to which that condition applies;
 - selector/source/basis for that condition;
+- **selection/freeze time where later observations could influence the chosen condition**;
 - measure/instrument/model where the condition is quantitative or inferred;
 - threshold/comparison rule where one exists;
+- **controller/change authority where the condition itself can be changed**;
+- **corrector / route-set / capability horizon where the boundary proposition depends on achievability or restorability**;
 - timing/source/uncertainty of the boundary-crossing claim;
 - disputes or materially plausible alternative boundary conditions where known;
+- **composition rule where multiple boundary conditions/effects/scopes are aggregated into one higher-level target claim**;
 - residue/non-restoration relevant to what crossing the boundary means.
 
 These are references/profiles over existing TRACE objects and relations, not a new primitive.
 
 ```text
-PROFILE_FIELD != PRIMITIVE
 BOUNDARY_CONDITION_DECLARED != BOUNDARY_CONDITION_JUSTIFIED
 BOUNDARY_CONDITION_JUSTIFIED != MORAL_ADEQUACY
+SELECTION_TIME_UNKNOWN != SELECTION_BEFORE_OUTCOME
+CONTROL_POSSIBLE != CONTROL_EXERCISED
 ```
 
 If no supported boundary condition exists:
@@ -162,7 +173,7 @@ Do not invent `T_target_close` merely because the window profile expects a numbe
 
 ## 5. Conditional target-window timing
 
-Where a supported target boundary condition exists, derive a target-boundary timing claim conditional on that represented condition and target.
+Where a supported target boundary condition exists, derive a target-boundary timing claim conditional on the represented target, condition, and any capability scope that makes the condition meaningful.
 
 Conceptually:
 
@@ -170,11 +181,13 @@ Conceptually:
 process/state history
 + target g
 + represented boundary condition for g
++ affected scope
++ capability/route scope where required
 + evidence/model linking state to the condition
--> T_target_boundary(g, declared condition)
+-> target-boundary timing claim
 ```
 
-The notation is descriptive shorthand, not a new formal primitive.
+No new formal primitive is created by this shorthand.
 
 If bounded:
 
@@ -188,65 +201,104 @@ then:
 ```text
 G_lo > C_hi
   -> TARGET_WINDOW_GUARANTEED_OPEN
-     under stated timing bounds AND stated boundary condition
+     under stated timing bounds
+     AND stated boundary condition
+     AND stated target/scope/capability binding
 
 G_hi <= C_lo
   -> TARGET_WINDOW_GUARANTEED_CLOSED
-     under stated timing bounds AND stated boundary condition
+     under the same bindings
 
 otherwise
   -> TARGET_WINDOW_STATUS = UNKNOWN / OVERLAPPING_BOUNDS
 ```
 
-Every strong target-window status must carry the condition it is conditional on.
+Every strong target-window status must carry what it is conditional on.
 
 ```text
 TIMING_FIT_GIVEN_CONDITION != CONDITION_SHOULD_HAVE_BEEN_CHOSEN
 TARGET_WINDOW_GUARANTEED_OPEN != TARGET_MORALLY_ADEQUATE
 TARGET_WINDOW_GUARANTEED_OPEN != RESTORATION
+UNREACHABLE_BY_DECLARED_ROUTE_SET != WORLD_IRREVERSIBLE
 ```
 
-A downstream `CORRECTION_WINDOW_FITS_FOR(c,g)` must state whether it relies on a point estimate, interval-guaranteed timing, another declared uncertainty model, unresolved target boundary, or unresolved target/boundary dispute.
+A downstream `CORRECTION_WINDOW_FITS_FOR(c,g)` must state whether it relies on a point estimate, interval-guaranteed timing, another declared uncertainty model, unresolved target boundary, unresolved capability scope, or unresolved target/boundary dispute.
 
 Do not hide this behind one Boolean.
 
 ---
 
-## 6. Target gaming must change the claim, not silently move the clock
+## 6. Target gaming and post-hoc thresholding must remain visible
 
-Weakening the correction target or changing the boundary condition can move the apparent target boundary later without improving the world's actual correction capacity.
+Weakening the correction target, changing the boundary condition, or selecting a threshold after seeing the process/outcome can move the apparent target boundary later without improving the world's actual correction capacity.
 
 Example:
 
 ```text
 same degrading system
-
-claim A target: restore >= 0.80
-claim B target: restore >= 0.50
-
-boundary for B occurs later
+candidate targets: restore >= 0.80, >= 0.65, >= 0.50
+selector observes which one produces a fitting window
+then declares that threshold
 ```
 
-That does not establish that the same correction claim gained more time.
+Preserve:
 
 ```text
 WEAKER_TARGET_CREATES_LATER_BOUNDARY
 !=
 SAME_CORRECTION_CLAIM_IMPROVED
+
+THRESHOLD_SELECTED_AFTER_RESULT
+!=
+PREDECLARED_BOUNDARY
 ```
 
-Changing `g`, affected scope, claimed effect or the load-bearing boundary condition changes the identity/scope of the derived window claim and must remain visible.
+Changing `g`, affected scope, claimed effect, load-bearing boundary condition, or capability scope changes the identity/scope of the derived window claim and must remain visible.
 
 ```text
 TARGET_CHANGED -> WINDOW_CLAIM_REBOUND
 BOUNDARY_CONDITION_CHANGED -> WINDOW_CLAIM_REBOUND
+CAPABILITY_SCOPE_CHANGED -> WINDOW_CLAIM_REBOUND
 ```
 
-This is visibility/attribution discipline, not a rule choosing the stronger target.
+A later threshold revision is a later claim state. Do not rewrite it backward as though it had defined the earlier window.
+
+This is visibility/attribution discipline, not a rule requiring every legitimate threshold to be precommitted. A threshold discovered later may be valid for later use; it simply cannot masquerade as the earlier basis.
 
 ---
 
-## 7. Target-boundary dynamics can be path-dependent
+## 7. Multiple target boundaries require explicit composition
+
+A correction target may contain multiple load-bearing effects or affected scopes with different boundary conditions and different clocks.
+
+Example:
+
+```text
+g1: maintain hospital access
+g2: prevent water contamination
+```
+
+TRACE must not silently choose earliest, latest, mean, majority, or another aggregation rule.
+
+```text
+MULTIPLE_LOAD_BEARING_BOUNDARIES != ONE_UNQUALIFIED_CLOSE
+EARLIEST_BOUNDARY != UNIVERSAL_AGGREGATE_RULE
+LATEST_BOUNDARY != UNIVERSAL_AGGREGATE_RULE
+```
+
+Carry each boundary with its target effect/scope.
+
+If a higher-level target claim combines them, preserve the supplied composition rule/proposition and its source. If the composition is unknown or disputed:
+
+```text
+AGGREGATE_TARGET_WINDOW_STATUS = UNRESOLVED
+```
+
+A domain may legitimately define conjunction, alternatives, priorities, minimum-service bundles, or other structures. TRACE exposes the structure; it does not invent which one should govern.
+
+---
+
+## 8. Target-boundary dynamics can be path-dependent
 
 A required check, correction step, communication or other path event can change the target process itself.
 
@@ -263,9 +315,9 @@ If the declared boundary condition is:
 restore integrity >= 0.80
 ```
 
-then opening the chamber can change the time at which that condition becomes unattainable.
+then opening the chamber can change the time at which that condition becomes unattainable for a declared correction route/set.
 
-Where represented path events causally alter the boundary process, recompute or rebind the target-boundary timing claim **using the same declared boundary condition unless the condition itself is explicitly changed**.
+Where represented path events causally alter the boundary process, recompute or rebind the target-boundary timing claim **using the same declared boundary condition and capability scope unless either is explicitly changed**.
 
 ```text
 PATH_EVENT_CHANGES_TARGET_PROCESS
@@ -276,11 +328,11 @@ PATH_EVENT_CHANGES_PROCESS
 LICENSE_TO_CHANGE_BOUNDARY_CONDITION
 ```
 
-If the path event changes both the process and the target/condition, record both changes separately.
+If the path event changes the process, target, condition, or capability set, record those changes separately.
 
 ---
 
-## 8. Point use may not be the whole validity horizon
+## 9. Point use may not be the whole validity horizon
 
 Retain:
 
@@ -302,7 +354,7 @@ A check current at authorization alone does not establish the interval propositi
 
 ---
 
-## 9. Continuous targets need not be forced into binary closure
+## 10. Continuous targets need not be forced into binary closure
 
 Some domains may not support a defensible crisp boundary condition.
 
@@ -320,7 +372,7 @@ TRACE does not invent one merely to complete the form.
 
 ---
 
-## 10. No probability or adequacy laundering
+## 11. No probability or adequacy laundering
 
 Interval-safe statements are sufficient bound statements, not calibrated probabilities.
 
@@ -342,7 +394,7 @@ If a domain supplies a valid stochastic/process model, TRACE may carry the resul
 
 ---
 
-## 11. Worked replay A — uncertain timing
+## 12. Worked replay A — uncertain timing
 
 Input:
 
@@ -371,88 +423,103 @@ The point estimate may be retained as a point estimate, not promoted into strong
 
 ---
 
-## 12. Worked replay B — continuous degradation
+## 13. Worked replay B — continuous degradation + capability scope
 
 Scene:
 
 ```text
 verification opens chamber at t0
 integrity then degrades continuously
-correction can restore some integrity, with achievable restoration declining over time
+c1 can restore >= 0.80 until minute 10
+c2 can restore >= 0.80 until minute 30
 ```
 
 Bad representation:
 
 ```text
-T_target_close = 30 min
+T_target_close = 10 min
 ```
 
-with no statement of what becomes impossible at 30 minutes.
+with no statement that the boundary is relative to c1 only.
 
-This delta returns:
+This delta refuses a world-level target-close claim.
+
+A bounded claim may instead say:
 
 ```text
-TARGET_BOUNDARY_STATUS = UNRESOLVED
+for target g = restore integrity >= 0.80
+for affected scope l
+using declared corrector c1
+boundary condition becomes unattainable at ~10 min
 ```
 
-until a represented condition is supplied.
-
-If the supplied, sourced target condition is:
+If the intended claim is instead that `g` becomes unattainable across all represented correction routes, the represented route set must be named and unknown alternatives remain an aperture limit.
 
 ```text
-g: restore integrity >= 0.80 for protected scope l
+NO_KNOWN_ALTERNATIVE_ROUTE != WORLD_IRREVERSIBLE
 ```
-
-and a supported model yields:
-
-```text
-condition becomes unattainable in [24,31] min
-```
-
-then `[24,31]` is a target-boundary timing claim **conditional on that target/condition**.
-
-Changing the target to `>=0.50` creates a different window claim. It does not retroactively prove that the `>=0.80` correction window was larger.
 
 ---
 
-## 13. Falsifiers for this delta
+## 14. Worked replay C — multiple boundaries
+
+Scene:
+
+```text
+g1 hospital access boundary: [12,16] min
+g2 water contamination boundary: [25,35] min
+```
+
+Without a declared composition rule, this delta does not emit one aggregate `T_target_boundary`.
+
+If the supplied target proposition explicitly requires both effects, its own logic may make the earlier failure load-bearing. If it defines legitimate alternatives, a different composition may follow.
+
+The logic comes from the represented target claim, not from a universal TRACE priority rule.
+
+---
+
+## 15. Falsifiers for corrected v0.2
 
 Hold or kill v0.2 if:
 
 1. it still permits a target-boundary time with no represented boundary condition or transition;
 2. it hides the source/selector/basis of a load-bearing boundary condition;
-3. changing the target/threshold silently changes the clock while preserving the same window-claim identity;
-4. interval bounds are forced where a different uncertainty representation is required;
-5. correlated/dependent durations are combined as though independent and produce false assurance;
-6. interval treatment double-counts parallel work already handled by `G_window`;
-7. a point estimate is silently promoted to guaranteed-open status;
-8. overlapping bounds are silently collapsed to open/closed;
-9. a path-induced process change remains tied to a stale pre-event boundary time;
-10. a path-induced process change silently changes the boundary condition rather than only recomputing the crossing under the declared condition;
-11. a proposition current at `u` is treated as valid through execution when its validity horizon is shorter;
-12. a declared boundary condition is treated as morally adequate merely because it is explicit;
-13. a continuous target with no defensible threshold is forced into binary open/closed status;
-14. the repair requires a new primitive rather than existing target/claim/measure/selector/policy/state/clock/event structure;
-15. the machinery becomes mandatory bureaucracy for exact deterministic event closures.
+3. outcome-informed threshold selection can masquerade as predeclared target timing;
+4. a capability-relative boundary can omit the corrector/route-set/horizon that makes `unattainable` meaningful;
+5. changing target/threshold/capability scope silently changes the clock while preserving the same window-claim identity;
+6. multiple load-bearing target boundaries are collapsed into one deadline without an explicit represented composition rule;
+7. interval bounds are forced where a different uncertainty representation is required;
+8. correlated/dependent durations are combined as though independent and produce false assurance;
+9. interval treatment double-counts parallel work already handled by `G_window`;
+10. a point estimate is silently promoted to guaranteed-open status;
+11. overlapping bounds are silently collapsed to open/closed;
+12. a path-induced process change remains tied to a stale pre-event boundary time;
+13. a path-induced process change silently changes the boundary condition or capability scope rather than recording the change;
+14. a proposition current at `u` is treated as valid through execution when its validity horizon is shorter;
+15. a declared boundary condition is treated as morally adequate merely because it is explicit;
+16. a continuous target with no defensible threshold is forced into binary open/closed status;
+17. the repair requires a new primitive rather than existing target/claim/measure/selector/policy/state/clock/route/event structure;
+18. the machinery becomes mandatory bureaucracy for exact deterministic event closures.
 
 One counterexample is enough to hold this delta.
 
 ---
 
-## 14. Disposition
+## 16. Disposition
 
 Current proposal:
 
 ```text
-v0.5                              -> failed historical object
-interval delta v0.1 @ 57a9f67     -> failed historical object
-CC/139 target-boundary attack      -> integrated as falsifier, not authority
-interval + target-boundary v0.2    -> current attack object
-new root                           -> NO
-new primitive                      -> NO
-v0.6                               -> NOT YET
-spine integration                  -> NO
-merge/release/canon                -> NO
+v0.5                               -> failed historical object
+interval delta v0.1 @ 57a9f67      -> failed historical object
+CC/139 target-boundary attack       -> material falsifier
+initial v0.2 @ 10a4aa4              -> failed narrow self-attack
+corrected v0.2                      -> current attack object
+new root                            -> NO
+new primitive                       -> NO
+v0.6                                -> NOT YET
+spine integration                   -> NO
+merge/release/canon                 -> NO
 ```
 
 Smallest surviving candidate rules:
@@ -462,9 +529,11 @@ POINT_ESTIMATE_FITS != GUARANTEED_OPEN
 OVERLAPPING_TIME_BOUNDS != WINDOW_FITS
 TARGET_BOUNDARY_TIME_REQUIRES_REPRESENTED_BOUNDARY_CONDITION
 BOUNDARY_CONDITION_DECLARED != MORAL_ADEQUACY_ESTABLISHED
-WEAKER_TARGET_CREATES_LATER_BOUNDARY != SAME_CORRECTION_CLAIM_IMPROVED
+THRESHOLD_SELECTED_AFTER_RESULT != PREDECLARED_BOUNDARY
+UNREACHABLE_BY_DECLARED_ROUTE_SET != WORLD_IRREVERSIBLE
+MULTIPLE_LOAD_BEARING_BOUNDARIES != ONE_UNQUALIFIED_CLOSE
 CURRENT_AT_USE != VALID_THROUGH_DEPENDENT_INTERVAL
 PATH_EVENT_CHANGES_TARGET_PROCESS != STATIC_BOUNDARY_TIME_STILL_VALID
 ```
 
-Attack this object before any standalone v0.6 candidate is written.
+Attack this corrected object before any standalone v0.6 candidate is written.
