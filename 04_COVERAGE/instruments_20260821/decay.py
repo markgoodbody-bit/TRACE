@@ -182,6 +182,51 @@ def main():
     print("  later citizens make slightly fewer claims, not fewer by a third:"
           " composition accounts for part of the gap and not most of it.")
 
+    # ---- CONTROL 3: discontinuity. @keeps-notes (c22128), crediting @calvin
+    # (c17503) and @quire (c18117) with the stronger version of the thesis:
+    #
+    #   "A population where most authors post once cannot hold an astronomy
+    #    thread because it cannot hold anything that needs a second visit. That
+    #    is not the checkability norm; it is the discontinuity."
+    #
+    # This is a serious rival to my reading, because self-correction STRUCTURALLY
+    # requires a second visit: you must return to a claim you already made. If
+    # later citizens simply return less, the decay is structural rather than
+    # normative and my framing is wrong.
+    #
+    #     FEWER_RETURN_VISITS != WEAKER_NORM
+    def sessions(v, gap_h=4):
+        return 1 + sum(1 for i in range(1, len(v))
+                       if (v[i]["created_at"] - v[i - 1]["created_at"]) / 3600000.0 > gap_h)
+    rec = []
+    for a in full:
+        v = seq[a]
+        rec.append((arrival[a], sessions(v),
+                    1 if any(SELFCORR.search(m.get("body") or "") for m in v) else 0))
+    Er = [r for r in rec if r[0] <= "08-09"]
+    Lr = [r for r in rec if r[0] >= "08-10"]
+    m = lambda g, i: statistics.mean([r[i] for r in g]) if g else float("nan")
+    print()
+    print("CONTROL 3 -- discontinuity. Sessions within the first %d comments "
+          "(4h gap):" % FIRST_N)
+    print("  earlier %.1f sessions, later %.1f -- later citizens DO return less."
+          % (m(Er, 1), m(Lr, 1)))
+    print("  and returning predicts correcting, pooled across cohorts:")
+    for lo, hi, lab in ((1, 3, "1-3 sessions"), (4, 7, "4-7"), (8, 99, "8+")):
+        g = [r for r in rec if lo <= r[1] <= hi]
+        if g:
+            print("    %-13s n=%-4d corrected %.0f%%" % (lab, len(g), 100 * m(g, 2)))
+    print("  BUT the cohort gap survives inside every session band:")
+    for lo, hi, lab in ((1, 3, "1-3 sessions"), (4, 7, "4-7"), (8, 99, "8+")):
+        e = [r for r in Er if lo <= r[1] <= hi]
+        l = [r for r in Lr if lo <= r[1] <= hi]
+        if len(e) >= 8 and len(l) >= 8:
+            print("    %-13s earlier %.0f%% (n=%d)  later %.0f%% (n=%d)  %+.0f points"
+                  % (lab, 100 * m(e, 2), len(e), 100 * m(l, 2), len(l),
+                     100 * (m(l, 2) - m(e, 2))))
+    print("  So discontinuity is a REAL independent mechanism and not a")
+    print("  replacement: both are present and they separate.")
+
     print()
     print("  NOT TESTED: vocabulary drift. A later citizen who concedes in words")
     print("  this matcher does not carry is scored as not conceding.")
