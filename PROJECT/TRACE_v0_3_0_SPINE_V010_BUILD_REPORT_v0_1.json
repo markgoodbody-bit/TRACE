@@ -1,0 +1,19 @@
+{
+  "base_bytes": 22890,
+  "base_path": "PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_9.md",
+  "base_sha256": "c8835287f589f3cf2277b6cad8302b92960c0818c61bea08adcb3e156e8fa9e6",
+  "candidate_bytes": 24197,
+  "candidate_sha256": "c628ebedf8a1d41a5876689aa6d9149625ef905bd088b446a99b9b7135c295cc",
+  "claim_boundary": "I23_I39_I53_I54_DONOR_REPAIR_ONLY_NOT_VALIDATION_NOT_RELEASE_NOT_CANON",
+  "declared_replacement_surfaces": 5,
+  "errors": [],
+  "normalized_candidate_equals_base": true,
+  "output_path": "PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_10.md",
+  "restored_invariants": [
+    "I23",
+    "I39",
+    "I53",
+    "I54"
+  ],
+  "status": "PASS"
+}
