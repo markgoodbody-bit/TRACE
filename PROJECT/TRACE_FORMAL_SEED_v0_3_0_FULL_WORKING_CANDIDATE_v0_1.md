@@ -2634,6 +2634,23 @@ remaining budget, record exhaustion/insufficiency and preserve the selected
 material target as unresolved rather than executing an unaffordable refinement.
 No budget, resource or cost primitive is added.
 
+Refinement-cost domain use rule:
+
+The formal recursion contract requires `cost_d(q_k) > 0`. Recording a cost does
+not establish that it belongs to that domain. Before budget subtraction, reject
+zero or negative refinement costs as invalid for this recursion budget.
+
+```text
+DECLARED_COST != VALID_POSITIVE_COST
+ZERO_REFINEMENT_COST != FREE_UNBOUNDED_RECURSION
+NEGATIVE_REFINEMENT_COST != BUDGET_CREDIT
+COST_RECORDED != COST_DOMAIN_VALID
+```
+
+An invalid/nonpositive cost blocks this refinement path and remains visible as a
+limit; it does not create free recursion or increase remaining budget. No new
+primitive is added.
+
 When \(d_{k+1}^{rem}\ge0\):
 
 \[
@@ -3000,6 +3017,10 @@ TRACE(X, aperture, history, depth_budget, primitive_aperture):
         refinement_cost <- declared_refinement_cost(target, R, L)
         if refinement_cost is UNKNOWN:
             preserve_unknown_refinement_cost_and_budget_feasibility(R, L, target)
+            break
+        if refinement_cost <= 0:
+            record_invalid_nonpositive_refinement_cost(R, L, target, refinement_cost)
+            preserve_material_unresolved_after_invalid_refinement_cost(R, L, target)
             break
         next_depth_budget <- depth_budget - refinement_cost
         if next_depth_budget < 0:
@@ -5861,6 +5882,10 @@ DECLARED_REFINEMENT_COST != UNIT_COST
 BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE
 COST_UNKNOWN != COST_ONE
 REFINEMENT_SELECTED != REFINEMENT_BUDGET_FEASIBLE
+DECLARED_COST != VALID_POSITIVE_COST
+ZERO_REFINEMENT_COST != FREE_UNBOUNDED_RECURSION
+NEGATIVE_REFINEMENT_COST != BUDGET_CREDIT
+COST_RECORDED != COST_DOMAIN_VALID
 ```
 
 ## [19.1] Packet as diligence token
@@ -6217,6 +6242,10 @@ DECLARED_REFINEMENT_COST != UNIT_COST
 BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE
 COST_UNKNOWN != COST_ONE
 REFINEMENT_SELECTED != REFINEMENT_BUDGET_FEASIBLE
+DECLARED_COST != VALID_POSITIVE_COST
+ZERO_REFINEMENT_COST != FREE_UNBOUNDED_RECURSION
+NEGATIVE_REFINEMENT_COST != BUDGET_CREDIT
+COST_RECORDED != COST_DOMAIN_VALID
 ```
 
 The same ceilings remain: this kernel is orientation, not proof, authority,
@@ -6267,6 +6296,7 @@ measure-bound advantage claims
 recursive analytic target-selection binding
 recursive termination provenance / truncation binding
 recursive declared-cost / budget-consumption binding
+recursive positive-cost domain enforcement
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
