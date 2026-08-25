@@ -1,0 +1,312 @@
+{
+  "claim_boundary": "DETERMINISTIC_FULL_WORKING_CANDIDATE_BUILD_NOT_SEMANTIC_CORRECTNESS_NOT_VALIDATION_NOT_RELEASE_NOT_CANON_NOT_AUTHORITY_NOT_PERMISSION_NOT_CLEARANCE",
+  "donor_bytes": 150141,
+  "donor_invariant_count": 60,
+  "donor_invariants_preserved_exact_in_order": true,
+  "donor_lines": 5759,
+  "donor_path": "TRACE_FORMAL_SEED_v0_2_7.md",
+  "donor_sha256": "de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab",
+  "errors": [],
+  "minimum_schema_report_status": "PASS",
+  "mutation_count": 27,
+  "mutations": [
+    {
+      "after_sha256": "5539a2785dd85273abec5bde321682e7e5de67e4ad1c78b6ba67f6ba427f7373",
+      "anchor_sha256": "61939d1a65797745c4b518ae93ffd6db5a5df4d761d0f6472a9c9eab69f9230f",
+      "before_sha256": "de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_VERSION_IDENTITY"
+    },
+    {
+      "after_sha256": "6873eb180ec6da48ba889a2e9ebad46df80e37bcdd69677021aa463dcd05412a",
+      "anchor_sha256": "05c8e1f4d08acc8445d552b2d63619bd55b0f35ac28a225e87b5d95cbf150786",
+      "before_sha256": "5539a2785dd85273abec5bde321682e7e5de67e4ad1c78b6ba67f6ba427f7373",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_VERSION_IDENTITY"
+    },
+    {
+      "after_sha256": "fc2aa0e221141d864c4cdbbf98492793634eb24bc3241cecd24bb4ded51c52cf",
+      "anchor_sha256": "95067ce00ff57d18850903acc95a0cde57d45c1150cf73282bf62e8b555b9adc",
+      "before_sha256": "6873eb180ec6da48ba889a2e9ebad46df80e37bcdd69677021aa463dcd05412a",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_VERSION_IDENTITY"
+    },
+    {
+      "after_sha256": "4446060d408ccc5b55c387f4b4d94acb1ec38584fcb81b7ae55c7a67b0360bc9",
+      "anchor_sha256": "107fb0a048e2dd2e1775fca383183632b3e516cdf8718026639e7051791e4cdc",
+      "before_sha256": "fc2aa0e221141d864c4cdbbf98492793634eb24bc3241cecd24bb4ded51c52cf",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_HANDSHAKE_FIRING"
+    },
+    {
+      "after_sha256": "088076ddc1dda2d9a72ef7e77ede7595236c1fecd594b8d1a9f5fecc9fdbac4d",
+      "anchor_sha256": "a00483d23ae242b403e7225d325682cb8c876d432cbc7be0a8871a1068b14da3",
+      "before_sha256": "4446060d408ccc5b55c387f4b4d94acb1ec38584fcb81b7ae55c7a67b0360bc9",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_HANDSHAKE_FIRING"
+    },
+    {
+      "after_sha256": "3685fc920e03b4aa22f057839ccf5319224e05d50f1d71e7c71f41573d324d13",
+      "anchor_sha256": "fd2930fe9f50b99937dba3b9885cc6941343c2a89b4d77f409585078210fe960",
+      "before_sha256": "088076ddc1dda2d9a72ef7e77ede7595236c1fecd594b8d1a9f5fecc9fdbac4d",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_CLAIM_EVIDENCE"
+    },
+    {
+      "after_sha256": "f61d55e977ef6684d40e12e7a5fa3ff08e6a3207607d0002447e83dc8715df46",
+      "anchor_sha256": "9b564ae3f869eea975d2e7c68771e8038a6092e04fc437609a3812a28f4aee81",
+      "before_sha256": "3685fc920e03b4aa22f057839ccf5319224e05d50f1d71e7c71f41573d324d13",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_CLAIM_EVIDENCE"
+    },
+    {
+      "after_sha256": "97c9f1da14211d1198fab6779e8a32649c6544913609922041ac0baa8b49b55f",
+      "anchor_sha256": "6a77fc7807f632745a23cd632667574e1042162eeec3f9164aae51b1821dfda8",
+      "before_sha256": "f61d55e977ef6684d40e12e7a5fa3ff08e6a3207607d0002447e83dc8715df46",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_INGRESS_ADMISSION"
+    },
+    {
+      "after_sha256": "b3b5cc92f02ff3027300e87e46f0314302c842445668a084d8198f5f13233e81",
+      "anchor_sha256": "001c17acec2c7832f3350b8b3d64ec67066baf54a57d03fbd20e38b87bf62afa",
+      "before_sha256": "97c9f1da14211d1198fab6779e8a32649c6544913609922041ac0baa8b49b55f",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_SCOPE_AGGREGATION"
+    },
+    {
+      "after_sha256": "d9e9524a0b148e41e115cd5d85673bf481dbd75fb1da52470158a85de65acc13",
+      "anchor_sha256": "c46e358167672e35375ff488077d296d86ba9d61343a41ece52e577120812354",
+      "before_sha256": "b3b5cc92f02ff3027300e87e46f0314302c842445668a084d8198f5f13233e81",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_SELECTION_ATTRIBUTION/T_ROUTE_REFUSABILITY"
+    },
+    {
+      "after_sha256": "b3e641af94a316f7ae4329f5ab9392719ba08ce9ab797689ca8a23c18dc8aecc",
+      "anchor_sha256": "2a3751e4b0dd9cfff0b14058c663c7f72a76a5f8106f9ef36c82839d1d3cf901",
+      "before_sha256": "d9e9524a0b148e41e115cd5d85673bf481dbd75fb1da52470158a85de65acc13",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_FUTURE_CORRESPONDENCE"
+    },
+    {
+      "after_sha256": "416893eb32dd855cda41009e68544e2cb1e52bb2aa1dc96e0e020e35ce30f5af",
+      "before_sha256": "b3e641af94a316f7ae4329f5ab9392719ba08ce9ab797689ca8a23c18dc8aecc",
+      "from_heading": "[8.1]",
+      "mutation": "REPLACE_SECTION_RANGE",
+      "old_block_sha256": "3c8c98a5ed3b8464a44ef7773e0985ff0cb5c3e0a1a696d185a19d6eafb1d3fe",
+      "to_before_heading": "[8.4]",
+      "transform": "T_CLOCK_ROUTE"
+    },
+    {
+      "after_sha256": "791ff7a0f5114b58ff3c655a658c19c121986ae7167b4f47f2e16a31cafedaba",
+      "anchor_sha256": "d2b1704023c4b6a13f345c6ddfa7f81a6bbc1983e5f0be843125432811b2e896",
+      "before_sha256": "416893eb32dd855cda41009e68544e2cb1e52bb2aa1dc96e0e020e35ce30f5af",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_RECORD_RESIDUE"
+    },
+    {
+      "after_sha256": "d7e691cce901fc81a20059233ea7f13ec6b3fcfc2beaf827153853d74c44f7ef",
+      "anchor_sha256": "000a3c4ac6bc7c82a8ba94f9b0f31c34c384a777b05da744ecbf2cec673cdd46",
+      "before_sha256": "791ff7a0f5114b58ff3c655a658c19c121986ae7167b4f47f2e16a31cafedaba",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_MEASURE_ADVANTAGE"
+    },
+    {
+      "after_sha256": "6607365412da47b8b97a6daf4a4ba4566d02f008638e567fe99f8481acf08019",
+      "before_sha256": "d7e691cce901fc81a20059233ea7f13ec6b3fcfc2beaf827153853d74c44f7ef",
+      "mutation": "REPLACE_PSEUDOCODE_BODY",
+      "old_body_sha256": "018c0b801d5fe6fe1cf3f0d91ce1c14f9213b6e5334ba085bb8863d6b8f7511c",
+      "transform": "T_OPERATOR_CHECKER"
+    },
+    {
+      "after_sha256": "8d404b74225955f8037aa383deb4760a336eb3deb759d029efb5bb24700e9ed2",
+      "anchor_sha256": "f606185fd8704f020041400c1b8a9c3d54efd8bcc8451dab48de51af8ddc23fb",
+      "before_sha256": "6607365412da47b8b97a6daf4a4ba4566d02f008638e567fe99f8481acf08019",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_PACKET_BINDING"
+    },
+    {
+      "after_sha256": "1b6a18f9ba5d0880107c0c5db582858a48f99baf01900fa2f21518c40fb31025",
+      "anchor": "TRACE-GRAPH-0.2.7",
+      "before_sha256": "8d404b74225955f8037aa383deb4760a336eb3deb759d029efb5bb24700e9ed2",
+      "count": 5,
+      "mutation": "REPLACE_ALL_EXACT",
+      "transform": "T_VERSION_IDENTITY"
+    },
+    {
+      "after_sha256": "6a2117d6c4e7081d01f06b5e36f1ffa04fb9305c5bb7daf1949417eb59b541a8",
+      "anchor": "trace_version: \"0.2.7\"",
+      "before_sha256": "1b6a18f9ba5d0880107c0c5db582858a48f99baf01900fa2f21518c40fb31025",
+      "count": 2,
+      "mutation": "REPLACE_ALL_EXACT",
+      "transform": "T_VERSION_IDENTITY"
+    },
+    {
+      "after_sha256": "2c50cdda25cab7e9d1a801414555dd244ae09b3e47c102a7b708ef2810123b17",
+      "anchor_sha256": "f2cef65e9bae49c21e7699c779a03be65fe5c16498fa30356217980cd5e587b3",
+      "before_sha256": "6a2117d6c4e7081d01f06b5e36f1ffa04fb9305c5bb7daf1949417eb59b541a8",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_VERSION_IDENTITY"
+    },
+    {
+      "after_sha256": "8f6a708146af48e11f36da73922a6bfb68930378be0295bbef4d5f66be76f6ee",
+      "anchor_sha256": "50af60137a0ba8aaebc80a2c7864a0babe1769cf231facde9fa730415e9f84a3",
+      "before_sha256": "2c50cdda25cab7e9d1a801414555dd244ae09b3e47c102a7b708ef2810123b17",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_VERSION_IDENTITY"
+    },
+    {
+      "after_sha256": "1fd786139f3d56be77f81830ad6522d408acb14aa429dbdd1eaf7f8eb97e473e",
+      "anchor_sha256": "32a38ecbd041986e73cd3a26bf139cd3bd7279f1e510c8ad91f5a129ae091fa0",
+      "before_sha256": "8f6a708146af48e11f36da73922a6bfb68930378be0295bbef4d5f66be76f6ee",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_WORKED_CASES"
+    },
+    {
+      "after_sha256": "8e47d1398dda8e3e7ab6d64fd392aafc7bb2ff06ea3b9d124a5cd1245f826096",
+      "anchor_sha256": "fa3bcf31dfe8613849b593847b09adb2d1e4b64c642dab69054c8536501e8451",
+      "before_sha256": "1fd786139f3d56be77f81830ad6522d408acb14aa429dbdd1eaf7f8eb97e473e",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_RECEIVER_PROFILE"
+    },
+    {
+      "after_sha256": "b27585a282aa823042e8236fe1a4cccbd00483cb8efb96c528a702c4940dbe12",
+      "anchor_sha256": "d6c37686d88990b8d0b3584f62661d015f743055c24eeeb6de0f72c7346f861a",
+      "before_sha256": "8e47d1398dda8e3e7ab6d64fd392aafc7bb2ff06ea3b9d124a5cd1245f826096",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_CONNECTED_BRAKE"
+    },
+    {
+      "after_sha256": "06409c43ac5ed1429613ab305cdb9a18bdbfeb20907249db5fbd90ec7916710b",
+      "anchor_sha256": "b24d0bbc00dca8fc2920ab4c27b03e52a9091be4d6fa179423b51e9e87942812",
+      "before_sha256": "b27585a282aa823042e8236fe1a4cccbd00483cb8efb96c528a702c4940dbe12",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_INVARIANT_MISUSE"
+    },
+    {
+      "after_sha256": "4c6b69b428684106f7fd4f577be4ec32d907ca9e9ae6cfe811f8e03bfdb4ba7c",
+      "anchor_sha256": "d38a1bce77d6a3153034a430828800e497eacdf866c48119b61fa79f3c2ecbdb",
+      "before_sha256": "06409c43ac5ed1429613ab305cdb9a18bdbfeb20907249db5fbd90ec7916710b",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_SURVIVAL_KERNEL"
+    },
+    {
+      "after_sha256": "10d1aee2580c2cf717fc4ebe698cb6b447757d7759f4b813c834e33409126fb1",
+      "anchor_sha256": "c496714c4a8077ab91dc7507ba7e55e6e187066c8d2095edbba8a8051264e370",
+      "before_sha256": "4c6b69b428684106f7fd4f577be4ec32d907ca9e9ae6cfe811f8e03bfdb4ba7c",
+      "mutation": "REPLACE_EXACT",
+      "transform": "T_VERSION_IDENTITY"
+    },
+    {
+      "after_sha256": "0da980f51c16508c3420ed05eec7b9f767d73856516cab46b65b4bb6a7719b17",
+      "before_sha256": "10d1aee2580c2cf717fc4ebe698cb6b447757d7759f4b813c834e33409126fb1",
+      "mutation": "REBUILD_SECTION_TO_EOF",
+      "old_section_sha256": "dfe56cb26d52ee2f96ec35052999b666dc6c9e7c75f31f26220287a6843ceba0",
+      "transform": "T_DOCUMENT_CONTROL"
+    }
+  ],
+  "output_bytes": 163017,
+  "output_lines": 6147,
+  "output_path": "PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md",
+  "output_sha256": "0da980f51c16508c3420ed05eec7b9f767d73856516cab46b65b4bb6a7719b17",
+  "status": "PASS",
+  "supplemental_guard_count": 17,
+  "survival_required_count": 16,
+  "verified_donor_sections": [
+    {
+      "end_line": 36,
+      "sha256": "ad06097282fafbc791e75727cb0229adf5f6c8aa6bb22199b86d1eb921b39471",
+      "start_line": 14,
+      "title": "[0] HANDSHAKE / CLAIM CEILING"
+    },
+    {
+      "end_line": 862,
+      "sha256": "1618cae9cba53a3221cada4fbb9f42c08fc1e03aaacb67dc1dbe7226a825239a",
+      "start_line": 675,
+      "title": "[4] CLAIM AND EVIDENCE ALGEBRA"
+    },
+    {
+      "end_line": 1107,
+      "sha256": "667aad4edcb618cad56b9c51423d1b1d0770b38acb42ea9018b48a3a3d277b84",
+      "start_line": 863,
+      "title": "[5] ENTITY / BOUNDARY / APERTURE / STATE"
+    },
+    {
+      "end_line": 1289,
+      "sha256": "9cc9dd1492b6a0001ac681afa9bd2695f7d3f2040f96656d1ffcb8050d3ceec6",
+      "start_line": 1108,
+      "title": "[6] TRANSITIONS AND COUPLINGS"
+    },
+    {
+      "end_line": 1490,
+      "sha256": "a247a5b95d6c3e852ab3f7e06acd16afb62dc393fb0782dc4f6fd85ea9eab449",
+      "start_line": 1290,
+      "title": "[7] FUTURE-SPACE"
+    },
+    {
+      "end_line": 1811,
+      "sha256": "1759eaa4a54643392bbcd2fdb2daf019dffe015ebbdc15a886732fdd9b764bef",
+      "start_line": 1491,
+      "title": "[8] CLOCKS / ROUTES / HARDENING"
+    },
+    {
+      "end_line": 2000,
+      "sha256": "e4dccdc4fd7c141341a31814a819918cb368a26d036889f16f799ea2de2d1204",
+      "start_line": 1812,
+      "title": "[9] BURDEN / RESIDUE / MEMORY"
+    },
+    {
+      "end_line": 2202,
+      "sha256": "21f6134273454d5bb9ad6e2d062106f5a0ec4fc624c999026d20df1bb0b19e6d",
+      "start_line": 2001,
+      "title": "[10] DESIGNATION / MEASURE / VALUE PORTS"
+    },
+    {
+      "end_line": 2631,
+      "sha256": "650cd8f0be0d0325e8c1f428277134cc33b830094a3c6c5640f493b5e72f5918",
+      "start_line": 2518,
+      "title": "[13] TRACE OPERATOR"
+    },
+    {
+      "end_line": 3830,
+      "sha256": "cd7f63a2e9721725a79a12a690d6f10b791700411e77297304a8a2aa35b8c357",
+      "start_line": 2632,
+      "title": "[14] CANONICAL TRACE GRAPH PACKET"
+    },
+    {
+      "end_line": 4912,
+      "sha256": "9aebff01b02f9a6dadd01b25d59ceb0d4b3d12f3cba72d78c0c160fb7f7248bb",
+      "start_line": 3831,
+      "title": "[15] WORKED TRANSFORMATIONS"
+    },
+    {
+      "end_line": 5011,
+      "sha256": "064fc7979c2d0d33d127c39f9d8a903e3c10127777961e499cc7d67efced7e11",
+      "start_line": 4913,
+      "title": "[16] ARTIFICIAL-ENTITY UNCERTAINTY / RECEIVER PROTECTION"
+    },
+    {
+      "end_line": 5218,
+      "sha256": "c3e6bbaa03012a9102064b2e5a0781bc3d4cdcf7df8889a7c761972ffbc7cf56",
+      "start_line": 5012,
+      "title": "[17] LIVE INTERPRETER / VALUE LAYER / SELECTOR / CONNECTED BRAKE"
+    },
+    {
+      "end_line": 5438,
+      "sha256": "2f6d24c9157fa54bce4163f19a54ca95ef3acb33d610399bf3e04464cc0a47da",
+      "start_line": 5272,
+      "title": "[19] INVARIANTS / MISUSE GUARDS"
+    },
+    {
+      "end_line": 5656,
+      "sha256": "9df73ab13cf62b0ac37b56ad4870c3bf222051f465c7d4bfda7cb77ccf4a79e5",
+      "start_line": 5439,
+      "title": "[20] COMPRESSION / SURVIVAL KERNEL"
+    },
+    {
+      "end_line": 5759,
+      "sha256": "dfe56cb26d52ee2f96ec35052999b666dc6c9e7c75f31f26220287a6843ceba0",
+      "start_line": 5657,
+      "title": "[21] DOCUMENT CONTROL / OPEN FRONTIER"
+    }
+  ]
+}
