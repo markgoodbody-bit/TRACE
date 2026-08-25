@@ -1,0 +1,67 @@
+name: TRACE v0.3.0 full working candidate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/compile_trace_v030_full_candidate.py'
+      - 'tools/build_trace_v027_section_manifest.py'
+      - 'tools/build_trace_v030_minimum_schema.py'
+      - 'TRACE_FORMAL_SEED_v0_2_7.md'
+      - 'PROJECT/TRACE_v0_2_7_SECTION_MANIFEST_v0_1.json'
+      - 'PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_CANDIDATE_v0_1.json'
+      - 'PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_BUILD_REPORT_v0_1.json'
+      - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_TRANSFORMATION_MANIFEST_v0_2.md'
+      - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_INGRESS_ADMISSION_REPAIR_v0_1.md'
+      - 'PROJECT/TRACE_v0_3_0_REMAINING_TRANSFORM_CLASSES_v0_1.md'
+      - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_T_CLOCK_ROUTE_v0_1.md'
+      - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_T_CLAIM_EVIDENCE_v0_1.md'
+      - '.github/workflows/trace-v030-full-candidate.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-full-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact branch head
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify released-donor section manifest
+        run: |
+          python tools/build_trace_v027_section_manifest.py --check --report /tmp/trace-v027-section-manifest-check.json
+
+      - name: Verify version-only minimum schema
+        run: |
+          python tools/build_trace_v030_minimum_schema.py --check --report /tmp/trace-v030-minimum-schema-check.json
+
+      - name: Build full working candidate deterministically
+        run: |
+          python tools/compile_trace_v030_full_candidate.py --write --report /tmp/trace-v030-full-build.json
+
+      - name: Re-run deterministic check against generated files
+        run: |
+          python tools/compile_trace_v030_full_candidate.py --check --report /tmp/trace-v030-full-check.json
+
+      - name: Commit generated full candidate and build report if changed
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md \
+            PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_BUILD_REPORT_v0_1.json
+          if git diff --cached --quiet; then
+            echo 'Generated candidate already matches deterministic output.'
+            exit 0
+          fi
+          git commit -m 'Build TRACE v0.3.0 full working candidate v0.1'
+          git push
