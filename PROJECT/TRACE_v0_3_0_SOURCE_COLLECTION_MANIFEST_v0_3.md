@@ -27,10 +27,27 @@ No source family, date window, quota or start position changes as a consequence 
 
 A declared source-native ordering field may be used only when the official source supplies a value that is sufficiently unambiguous for the selection operation.
 
-Where multiple official surfaces for the same item provide conflicting values for the frozen ordering field, preserve all values and apply the following fail-closed rule:
+Multiple official surfaces are first checked for semantic and interval compatibility.
+
+A coarse value and a more precise value are compatible when they refer to the same frozen ordering concept and the precise value falls wholly inside the coarse interval. Example:
+
+```text
+March 2022
+16 March 2022
+```
+
+Those values do not conflict merely because their precision differs. Use the most precise compatible official value available.
+
+```text
+COARSE_DATE + CONSISTENT_PRECISE_DATE != SOURCE_CONFLICT
+MORE_PRECISE_COMPATIBLE_VALUE != POST_HOC_DATE_CHOICE
+```
+
+Where multiple official surfaces for the same item provide genuinely incompatible values for the frozen ordering field, preserve all values and apply the following fail-closed rule:
 
 ```text
 ONE_UNAMBIGUOUS_OFFICIAL_ORDER_VALUE -> USE_DECLARED_VALUE
+MULTIPLE_COMPATIBLE_OFFICIAL_VALUES -> USE_MOST_PRECISE_COMPATIBLE_VALUE
 MULTIPLE_CONFLICTING_OFFICIAL_VALUES -> ORDER_VALUE_DISPUTED
 ```
 
@@ -42,11 +59,19 @@ SOURCE_CONFLICT != OPERATOR_PERMISSION_TO_CHOOSE
 DETERMINISTIC_RULE + AMBIGUOUS_INPUT != DETERMINISTIC_SELECTION
 ```
 
+Different source fields that measure different concepts do not become a conflict merely because their dates differ; only values claiming the frozen ordering concept are compared.
+
+```text
+OCCURRENCE_DATE != REPORT_PUBLICATION_DATE
+DOCUMENT_DATE != INCIDENT_DATE
+DIFFERENT_CLOCKS != CONFLICTING_VALUES_OF_ONE_CLOCK
+```
+
 ## 2. Temporal eligibility
 
 For a primary intake window `[2022-01-01, 2022-12-31]`:
 
-- if every materially plausible official value places the item inside 2022 but the values would change scan order, mark `ORDER_DATE_DISPUTED` and do not let the item determine primary pool order until resolved;
+- if every materially plausible official value places the item inside 2022 but incompatible values would change scan order, mark `ORDER_DATE_DISPUTED` and do not let the item determine primary pool order until resolved;
 - if conflicting official values straddle the 2022 window boundary, mark `TEMPORAL_ELIGIBILITY_DISPUTED`;
 - a disputed item does **not** count toward the five-item primary quota while the dispute remains;
 - it is preserved in a separate source-conflict ledger with all official values/pointers and remains eligible for later expansion/source-quality analysis;
@@ -66,7 +91,7 @@ A future source-family profile may establish a stable precedence rule if indepen
 
 ## 4. Enumeration rule under dirty metadata
 
-Collection enumeration may use collection pages/search indexes to discover candidate item identities, but primary ordering uses only the frozen source-native field after conflict checking.
+Collection enumeration may use collection pages/search indexes to discover candidate item identities, but primary ordering uses only the frozen source-native field after compatibility/conflict checking.
 
 If the collection cannot expose a complete enough candidate identity set for the 2022 aperture without relying on the disputed values themselves, set `COLLECTION_ENUMERATION_HOLD` rather than silently omitting possible items.
 
