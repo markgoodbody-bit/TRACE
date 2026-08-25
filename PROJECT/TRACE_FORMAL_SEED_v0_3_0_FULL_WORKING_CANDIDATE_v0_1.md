@@ -2564,6 +2564,47 @@ q_k=
 )
 \]
 
+Refinement target-selection use rule:
+
+`target(R_k,L_k)` allocates analytic attention. Under a finite tracing budget,
+that choice can change which unresolved structures enter the later map. Where
+the choice can materially affect a downstream claim, comparison, coverage
+statement, correction-window result or proposed transition, expose where
+available:
+
+```text
+candidate_refinement_target_refs
+refinement_target_set_aperture_ref
+selection_basis_claim_refs
+designation_ref
+measure_ref
+selected_refinement_target_ref
+unselected_material_alternative_refs
+budget_omission_refs
+```
+
+Comparative language such as `highest relevance` requires a declared comparison
+basis. If no supported ordering is available, preserve the selection basis as
+`UNKNOWN`; do not silently convert an implementation heuristic into a neutral
+importance claim. Targets left unexplored because budget is exhausted remain
+visible as omissions where they could still change a load-bearing result.
+
+```text
+ANALYTIC_TARGET_SELECTION != WORLD_ACTION_SELECTION
+ANALYTIC_TARGET_SELECTION != NEUTRAL
+HIGHEST_RELEVANCE != MEASURE_FREE
+TARGET_SELECTED_FOR_REFINEMENT != TARGET_MOST_IMPORTANT_IN_WORLD
+TARGETED_REFINEMENT != COMPLETE_COVERAGE
+OMITTED_BY_BUDGET != IRRELEVANT
+FINITE_TRACING_BUDGET != COMPLETE_REPRESENTATION
+REFINEMENT_TARGET_SET != WORLD_SCOPE
+```
+
+This uses existing APERTURE / target-set aperture / CLAIM / LIMIT /
+designation / measure / selector machinery. It does not add an attention,
+refinement, priority or relevance primitive and does not grant world-action
+authority.
+
 Let \(d_k^{rem}\ge0\) be remaining tracing budget and \(\operatorname{cost}_d(q_k)>0\) the declared cost of the next refinement.
 
 \[
@@ -2880,7 +2921,15 @@ TRACE(X, aperture, history, depth_budget, primitive_aperture):
     record_reader_limits(L)
 
     while depth_budget remains:
-        target <- highest_relevance_unresolved_node_or_edge(R)
+        candidates <- unresolved_refinement_targets(R)
+        record_refinement_target_set_aperture(R, candidates)
+        target, refinement_basis <- select_refinement_target(
+            candidates, declared_designation(R), declared_measure(R), depth_budget)
+        record_refinement_selection_basis_and_budget_omissions(
+            R, L, candidates, target, refinement_basis, depth_budget)
+        if refinement_basis is UNKNOWN and
+           unselected_candidate_could_materially_change_load_bearing_output(R, candidates, target):
+            preserve_refinement_selection_uncertainty(R, L)
         if stop_condition(target, R, L): break
         R <- merge_graphs(R, TRACE(target, aperture, history,
                                    depth_budget - 1, primitive_aperture))
@@ -5724,6 +5773,10 @@ BRAKE_POINT_ESTIMATE_BEFORE_COMMIT != GUARANTEED_PRECOMMIT
 ROLLBACK_POINT_ESTIMATE_BEFORE_BOUNDARY != GUARANTEED_RESTORATION
 FAST_ENOUGH_CLAIM_REQUIRES_COMMON_TEMPORAL_BASIS
 ROLLBACK_COMPLETED_BEFORE_BOUNDARY != RESTORED_STATE
+ANALYTIC_TARGET_SELECTION != NEUTRAL
+HIGHEST_RELEVANCE != MEASURE_FREE
+TARGETED_REFINEMENT != COMPLETE_COVERAGE
+OMITTED_BY_BUDGET != IRRELEVANT
 ```
 
 ## [19.1] Packet as diligence token
@@ -6070,6 +6123,8 @@ POPULATION_RECOVERY != REPAIR_OF_INDIVIDUAL_LOSS
 LOCAL_CORRECTION + STREAM_PERSISTENCE != MECHANISM_CHANGE
 BRAKE_POINT_ESTIMATE_BEFORE_COMMIT != GUARANTEED_PRECOMMIT
 ROLLBACK_COMPLETED_BEFORE_BOUNDARY != RESTORED_STATE
+HIGHEST_RELEVANCE != MEASURE_FREE
+OMITTED_BY_BUDGET != IRRELEVANT
 ```
 
 The same ceilings remain: this kernel is orientation, not proof, authority,
@@ -6117,6 +6172,7 @@ future-path correspondence use guards
 correction-window target/binding/precedence/feasibility/interval discipline
 record/event and residue use guards
 measure-bound advantage claims
+recursive analytic target-selection binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
