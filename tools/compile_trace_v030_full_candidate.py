@@ -772,7 +772,7 @@ These are semantic use rules. They do not add required minimum-schema fields.
     b.insert_before_once("T_PACKET_BINDING", "## [14.2] Packet-use boundary\n", binding_add)
 
     b.replace_all_exact("T_VERSION_IDENTITY", "TRACE-GRAPH-0.2.7", "TRACE-GRAPH-0.3.0", expected=5)
-    b.replace_once("T_VERSION_IDENTITY", '"trace_version": "0.2.7"', '"trace_version": "0.3.0"')
+    b.replace_once("T_VERSION_IDENTITY", 'trace_version: "0.2.7"', 'trace_version: "0.3.0"')
     b.replace_once("T_VERSION_IDENTITY", '"const": "0.2.7"', '"const": "0.3.0"')
     b.replace_once("T_VERSION_IDENTITY", '"$id": "urn:trace:graph:0.2.7"', '"$id": "urn:trace:graph:0.3.0"')
 
@@ -1018,7 +1018,7 @@ def verify_output(
     required_tokens = (
         "**Version:** v0.3.0 FULL WORKING CANDIDATE v0.1",
         "TRACE-GRAPH-0.3.0",
-        '"trace_version": "0.3.0"',
+        'trace_version: "0.3.0"',
         "TRACE // FORMAL SEED v0.3.0 // SURVIVAL KERNEL",
         "This generated object is **TRACE v0.3.0 FULL WORKING CANDIDATE v0.1**.",
     )
