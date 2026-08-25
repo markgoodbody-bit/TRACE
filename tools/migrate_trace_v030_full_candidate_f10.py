@@ -124,18 +124,18 @@ and not a required minimum-schema expansion.
 """
     b.insert_before_once("T_PACKET_BINDING", "## [14.2] Packet-use boundary\\n", binding_add)
 
-    packet_limits_old = """limits:
-  receiver_limits: []
-  unavailable_evidence: []
-  unresolved_claim_refs: []
-  omitted_primitive_effects: []
+    packet_limits_old = """  limits:
+    receiver_limits: []
+    unavailable_evidence: []
+    unresolved_claim_refs: []
+    omitted_primitive_effects: []
 """
-    packet_limits_new = """limits:
-  receiver_limits: []
-  unavailable_evidence: []
-  unresolved_claim_refs: []
-  omitted_primitive_effects: []
-  limit_refs: []
+    packet_limits_new = """  limits:
+    receiver_limits: []
+    unavailable_evidence: []
+    unresolved_claim_refs: []
+    omitted_primitive_effects: []
+    limit_refs: []
 """
     b.replace_once("T_LIMIT_CARRIER_SURVIVAL", packet_limits_old, packet_limits_new)
 '''
@@ -151,7 +151,7 @@ and not a required minimum-schema expansion.
         "serialize_load_bearing_limits_with_provenance",
         "bind_packet_limit_refs",
         "emit_confidence_and_limits(R, L, material_limit_refs)",
-        "  limit_refs: []",
+        "    limit_refs: []",
         "recursive_parent_target_ref",
         "source_limit_refs",
     )
