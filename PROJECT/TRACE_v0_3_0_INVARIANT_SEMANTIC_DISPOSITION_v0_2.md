@@ -15,7 +15,7 @@ The prior semantic map v0.1 classified:
 
 That zero-loss judgment failed under hostile cases.
 
-Subsequent attacks found and repaired nine donor regressions:
+Subsequent attacks found and repaired 11 donor invariant rows across 10 defect surfaces:
 
 ```text
 I11 ROUTE_EXISTS != ROUTE_USABLE
@@ -101,7 +101,7 @@ NO_KNOWN_MATERIAL_LOSS != COMPLETE_EQUIVALENCE_PROOF
 | I03 | `REPORTED != ESTABLISHED` | EXACT | claim/evidence operative rule |
 | I04 | `INFERRED != OBSERVED` | EXACT | claim/evidence |
 | I05 | `UNKNOWN != ABSENT` | EXACT | handshake |
-| I06 | `UNAVAILABLE != UNIVERSALLY UNKNOWN` | EQUIVALENT | stronger source-relative access rule |
+| I06 | `UNAVAILABLE != UNIVERSALLY_UNKNOWN` | EQUIVALENT | stronger source-relative access rule |
 | I07 | `CONFIDENCE != TRUTH` | EXACT | claim/evidence |
 | I08 | `CONFIDENCE != AUTHORITY` | EXACT | claim/evidence |
 | I09 | `ENTITY != SENTIENT` | EQUIVALENT | entity inclusion/handshake sentience ceiling |
@@ -201,3 +201,4 @@ Residuals:
 ```text
 CLEAR_WITH_RESIDUAL_LIMITS != VALIDATED
 NO_KNOWN_MATERIAL_LOSS != NO_POSSIBLE_MATERIAL_LOSS
+```
