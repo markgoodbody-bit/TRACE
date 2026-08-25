@@ -3362,9 +3362,9 @@ The receipt prevents later compression of “selected under unresolved condition
 The embedded schema validates packet shape and controlled vocabularies. It cannot validate truth, completeness, independence, value choice, world correspondence, or operational connection.
 
 
-The v0.2.7 identifier records a narrow documentary, serialization-profile, and worked-transfer repair while the embedded minimum-schema shape remains identical to v0.2.6 after version normalization. The identifier does not imply that the minimum validator can enforce target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.
+The v0.3.0 identifier marks this generated full working candidate. Its embedded minimum-schema shape remains identical to released v0.2.7 after version normalization. That compatibility does not imply that the minimum validator can enforce the v0.3 checker-external semantic bindings, target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.
 
-A v0.2.6 packet is not silently relabelled as v0.2.7. Structural compatibility does not erase packet identity or the semantic contract under which the packet was produced.
+A v0.2.7 packet is not silently relabelled as v0.3.0. Structural compatibility does not erase packet identity or the semantic contract under which the packet was produced.
 
 ```json
 {
