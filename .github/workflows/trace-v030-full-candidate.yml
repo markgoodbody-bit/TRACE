@@ -17,6 +17,19 @@ on:
       - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_T_CLOCK_ROUTE_v0_1.md'
       - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_T_CLAIM_EVIDENCE_v0_1.md'
       - '.github/workflows/trace-v030-full-candidate.yml'
+  pull_request:
+    paths:
+      - 'tools/compile_trace_v030_full_candidate.py'
+      - 'TRACE_FORMAL_SEED_v0_2_7.md'
+      - 'PROJECT/TRACE_v0_2_7_SECTION_MANIFEST_v0_1.json'
+      - 'PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_CANDIDATE_v0_1.json'
+      - 'PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_BUILD_REPORT_v0_1.json'
+      - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_TRANSFORMATION_MANIFEST_v0_2.md'
+      - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_INGRESS_ADMISSION_REPAIR_v0_1.md'
+      - 'PROJECT/TRACE_v0_3_0_REMAINING_TRANSFORM_CLASSES_v0_1.md'
+      - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_T_CLOCK_ROUTE_v0_1.md'
+      - 'PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_T_CLAIM_EVIDENCE_v0_1.md'
+      - '.github/workflows/trace-v030-full-candidate.yml'
 
 permissions:
   contents: write
@@ -52,6 +65,7 @@ jobs:
           python tools/compile_trace_v030_full_candidate.py --check --report /tmp/trace-v030-full-check.json
 
       - name: Commit generated full candidate and build report if changed
+        if: github.event_name == 'push'
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
