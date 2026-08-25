@@ -95,6 +95,11 @@ SUPPLEMENTAL_INVARIANTS = (
     "BUDGET_EXHAUSTED_AT_ENTRY != BOUNDED_SUFFICIENCY",
     "NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET",
     "RECURSION_SKIPPED != COMPLETE_COVERAGE",
+    "RECURSIVE_GRAPH_MERGE != RECURSIVE_LIMIT_MERGE",
+    "CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE",
+    "DEEPER_UNCERTAINTY != DISPENSABLE",
+    "GRAPH_CONTRIBUTION_SURVIVED != QUALIFYING_LIMIT_SURVIVED",
+    "CHILD_GRAPH_MERGED + CHILD_LIMIT_DROPPED != RECURSIVE_INTEGRATION",
 )
 
 SURVIVAL_REQUIRED = (
@@ -137,6 +142,10 @@ SURVIVAL_REQUIRED = (
     "INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED",
     "NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET",
     "RECURSION_SKIPPED != COMPLETE_COVERAGE",
+    "RECURSIVE_GRAPH_MERGE != RECURSIVE_LIMIT_MERGE",
+    "CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE",
+    "DEEPER_UNCERTAINTY != DISPENSABLE",
+    "GRAPH_CONTRIBUTION_SURVIVED != QUALIFYING_LIMIT_SURVIVED",
 )
 
 
@@ -1006,6 +1015,49 @@ measure machinery. No stop, termination or sufficiency primitive is added.
         recursion_stop_guard,
     )
 
+    b.replace_once(
+        "T_RECURSION_LIMIT_PROPAGATION",
+        r"""\[
+\mathcal R_{k+1}
+=
+\operatorname{merge}(
+\mathcal R_k,
+\mathcal R_{q_k}
+)
+\]
+""",
+        r"""\[
+\mathcal R_{k+1}
+=
+\operatorname{merge}(
+\mathcal R_k,
+\mathcal R_{q_k}
+)
+\]
+
+\[
+\mathcal L_{k+1}
+=
+\operatorname{mergeLimits}(
+\mathcal L_k,
+\mathcal L_{q_k}
+)
+\]
+
+Recursive integration carries qualifying limits with the graph contribution.
+Where materially distinct child limits would collapse under deduplication,
+preserve target/scope/provenance association.
+
+```text
+RECURSIVE_GRAPH_MERGE != RECURSIVE_LIMIT_MERGE
+CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE
+DEEPER_UNCERTAINTY != DISPENSABLE
+GRAPH_CONTRIBUTION_SURVIVED != QUALIFYING_LIMIT_SURVIVED
+CHILD_GRAPH_MERGED + CHILD_LIMIT_DROPPED != RECURSIVE_INTEGRATION
+```
+""",
+    )
+
     record_guard = """
 Additional v0.3 record/residue use guards:
 
@@ -1142,8 +1194,10 @@ required. Measured advantage does not establish entitlement or moral rank.
                 R, L, target, depth_budget, refinement_cost)
             preserve_material_unresolved_after_budget_exhaustion(R, L, target)
             break
-        R <- merge_graphs(R, TRACE(target, aperture, history,
-                                   next_depth_budget, primitive_aperture))
+        child_R, child_L <- TRACE(target, aperture, history,
+                                  next_depth_budget, primitive_aperture)
+        R <- merge_graphs(R, child_R)
+        L <- merge_limits_with_recursive_provenance(L, child_L, target)
 
     state_transition_and_coverage_results_relative_to_declared_apertures(R)
     emit_available_transitions_without_selecting(R)
@@ -1329,6 +1383,7 @@ recursive declared-cost / budget-consumption binding
 recursive positive-cost domain enforcement
 recursive empty-target termination / coverage binding
 recursive entry-budget termination / domain binding
+recursive child-limit propagation
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
@@ -1478,6 +1533,9 @@ def verify_output(
         "record_budget_exhausted_at_recursion_entry",
         "record_invalid_negative_tracing_budget",
         "preserve_recursive_coverage_limit_due_to_budget",
+        "RECURSIVE_GRAPH_MERGE != RECURSIVE_LIMIT_MERGE",
+        "CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE",
+        "merge_limits_with_recursive_provenance",
     )
     for token in required_tokens:
         if token not in output_text:
@@ -1539,6 +1597,7 @@ def verify_output(
         "target <- highest_relevance_unresolved_node_or_edge(R)",
         "if stop_condition(target, R, L): break",
         "depth_budget - 1",
+        "R <- merge_graphs(R, TRACE(target, aperture, history,",
     )
     lower = output_text.lower()
     for phrase in bad_control:

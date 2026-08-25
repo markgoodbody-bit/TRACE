@@ -2714,6 +2714,27 @@ d_{k+1}^{rem},
 )
 \]
 
+\[
+\mathcal L_{k+1}
+=
+\operatorname{mergeLimits}(
+\mathcal L_k,
+\mathcal L_{q_k}
+)
+\]
+
+Recursive integration carries qualifying limits with the graph contribution.
+Where materially distinct child limits would collapse under deduplication,
+preserve target/scope/provenance association.
+
+```text
+RECURSIVE_GRAPH_MERGE != RECURSIVE_LIMIT_MERGE
+CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE
+DEEPER_UNCERTAINTY != DISPENSABLE
+GRAPH_CONTRIBUTION_SURVIVED != QUALIFYING_LIMIT_SURVIVED
+CHILD_GRAPH_MERGED + CHILD_LIMIT_DROPPED != RECURSIVE_INTEGRATION
+```
+
 The notation \(\tau^k\) should not be used as ordinary function composition unless output and input types have been explicitly aligned. Recursion here means targeted refinement plus merge, not treating the previous packet as the world.
 
 ## [11.1] Scale invariants
@@ -3080,8 +3101,10 @@ TRACE(X, aperture, history, depth_budget, primitive_aperture):
                 R, L, target, depth_budget, refinement_cost)
             preserve_material_unresolved_after_budget_exhaustion(R, L, target)
             break
-        R <- merge_graphs(R, TRACE(target, aperture, history,
-                                   next_depth_budget, primitive_aperture))
+        child_R, child_L <- TRACE(target, aperture, history,
+                                  next_depth_budget, primitive_aperture)
+        R <- merge_graphs(R, child_R)
+        L <- merge_limits_with_recursive_provenance(L, child_L, target)
 
     state_transition_and_coverage_results_relative_to_declared_apertures(R)
     emit_available_transitions_without_selecting(R)
@@ -5948,6 +5971,11 @@ INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED
 BUDGET_EXHAUSTED_AT_ENTRY != BOUNDED_SUFFICIENCY
 NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET
 RECURSION_SKIPPED != COMPLETE_COVERAGE
+RECURSIVE_GRAPH_MERGE != RECURSIVE_LIMIT_MERGE
+CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE
+DEEPER_UNCERTAINTY != DISPENSABLE
+GRAPH_CONTRIBUTION_SURVIVED != QUALIFYING_LIMIT_SURVIVED
+CHILD_GRAPH_MERGED + CHILD_LIMIT_DROPPED != RECURSIVE_INTEGRATION
 ```
 
 ## [19.1] Packet as diligence token
@@ -6315,6 +6343,10 @@ LOOP_NOT_ENTERED != RECURSION_COMPLETED
 INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED
 NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET
 RECURSION_SKIPPED != COMPLETE_COVERAGE
+RECURSIVE_GRAPH_MERGE != RECURSIVE_LIMIT_MERGE
+CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE
+DEEPER_UNCERTAINTY != DISPENSABLE
+GRAPH_CONTRIBUTION_SURVIVED != QUALIFYING_LIMIT_SURVIVED
 ```
 
 The same ceilings remain: this kernel is orientation, not proof, authority,
@@ -6368,6 +6400,7 @@ recursive declared-cost / budget-consumption binding
 recursive positive-cost domain enforcement
 recursive empty-target termination / coverage binding
 recursive entry-budget termination / domain binding
+recursive child-limit propagation
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
