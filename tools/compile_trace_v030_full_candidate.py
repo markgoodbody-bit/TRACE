@@ -85,6 +85,11 @@ SUPPLEMENTAL_INVARIANTS = (
     "ZERO_REFINEMENT_COST != FREE_UNBOUNDED_RECURSION",
     "NEGATIVE_REFINEMENT_COST != BUDGET_CREDIT",
     "COST_RECORDED != COST_DOMAIN_VALID",
+    "EMPTY_REFINEMENT_TARGET_SET != SELECTABLE_TARGET",
+    "NO_UNRESOLVED_TARGET_IN_DECLARED_SET != COMPLETE_WORLD_COVERAGE",
+    "LOCAL_REFINEMENT_EXHAUSTED != REPRESENTATION_COMPLETE",
+    "NO_TARGET_SELECTED != SELECTOR_FAILURE",
+    "EMPTY_TARGET_SET != BOUNDED_SUFFICIENCY_WITHOUT_BASIS",
 )
 
 SURVIVAL_REQUIRED = (
@@ -120,6 +125,9 @@ SURVIVAL_REQUIRED = (
     "ZERO_REFINEMENT_COST != FREE_UNBOUNDED_RECURSION",
     "NEGATIVE_REFINEMENT_COST != BUDGET_CREDIT",
     "COST_RECORDED != COST_DOMAIN_VALID",
+    "EMPTY_REFINEMENT_TARGET_SET != SELECTABLE_TARGET",
+    "NO_UNRESOLVED_TARGET_IN_DECLARED_SET != COMPLETE_WORLD_COVERAGE",
+    "LOCAL_REFINEMENT_EXHAUSTED != REPRESENTATION_COMPLETE",
 )
 
 
@@ -838,6 +846,33 @@ authority.
         recursion_target_guard,
     )
 
+    recursion_empty_target_guard = r"""Empty refinement-target use rule:
+
+After constructing and recording the unresolved refinement target set, handle an
+empty set before calling the target selector. Empty discovery means only that no
+unresolved target is present inside the represented target-set aperture under
+the current construction. It does not establish complete world coverage,
+representation completeness, or bounded sufficiency without the required basis.
+
+```text
+EMPTY_REFINEMENT_TARGET_SET != SELECTABLE_TARGET
+NO_UNRESOLVED_TARGET_IN_DECLARED_SET != COMPLETE_WORLD_COVERAGE
+LOCAL_REFINEMENT_EXHAUSTED != REPRESENTATION_COMPLETE
+NO_TARGET_SELECTED != SELECTOR_FAILURE
+EMPTY_TARGET_SET != BOUNDED_SUFFICIENCY_WITHOUT_BASIS
+```
+
+Record local target-set exhaustion as a termination state relative to the
+represented refinement target-set aperture and preserve material aperture /
+representation limits. No target, completion or coverage primitive is added.
+
+"""
+    b.insert_before_once(
+        "T_RECURSION_EMPTY_TARGET_SET",
+        "Let \\(d_k^{rem}\\ge0\\) be remaining tracing budget",
+        recursion_empty_target_guard,
+    )
+
     recursion_budget_guard = r"""Refinement-budget use rule:
 
 The declared tracing cost of a selected refinement is load-bearing. The
@@ -1030,6 +1065,10 @@ required. Measured advantage does not establish entitlement or moral rank.
     while depth_budget remains:
         candidates <- unresolved_refinement_targets(R)
         record_refinement_target_set_aperture(R, candidates)
+        if candidates is empty:
+            record_empty_refinement_target_set_termination(R, L, candidates)
+            preserve_coverage_relative_to_refinement_target_set_aperture(R, L, candidates)
+            break
         target, refinement_basis <- select_refinement_target(
             candidates, declared_designation(R), declared_measure(R), depth_budget)
         record_refinement_selection_basis_and_budget_omissions(
@@ -1244,6 +1283,7 @@ recursive analytic target-selection binding
 recursive termination provenance / truncation binding
 recursive declared-cost / budget-consumption binding
 recursive positive-cost domain enforcement
+recursive empty-target termination / coverage binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
@@ -1384,6 +1424,10 @@ def verify_output(
         "DECLARED_COST != VALID_POSITIVE_COST",
         "record_invalid_nonpositive_refinement_cost",
         "preserve_material_unresolved_after_invalid_refinement_cost",
+        "EMPTY_REFINEMENT_TARGET_SET != SELECTABLE_TARGET",
+        "NO_UNRESOLVED_TARGET_IN_DECLARED_SET != COMPLETE_WORLD_COVERAGE",
+        "record_empty_refinement_target_set_termination",
+        "preserve_coverage_relative_to_refinement_target_set_aperture",
     )
     for token in required_tokens:
         if token not in output_text:
