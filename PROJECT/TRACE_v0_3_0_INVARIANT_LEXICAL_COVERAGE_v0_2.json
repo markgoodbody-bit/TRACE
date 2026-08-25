@@ -1,0 +1,498 @@
+{
+  "candidate_path": "PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_9.md",
+  "candidate_sha256": "c8835287f589f3cf2277b6cad8302b92960c0818c61bea08adcb3e156e8fa9e6",
+  "check_type": "LEXICAL_COVERAGE_ONLY",
+  "claim_boundary": "EXACT_EXPRESSION_PRESENCE_NOT_SEMANTIC_EQUIVALENCE_NOT_TRIGGER_ADEQUACY_NOT_VALIDATION",
+  "donor_invariant_count": 60,
+  "donor_path": "TRACE_FORMAL_SEED_v0_2_7.md",
+  "donor_sha256": "de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab",
+  "exact_expression_missing_count": 44,
+  "exact_expression_missing_ids": [
+    "I02",
+    "I03",
+    "I06",
+    "I09",
+    "I10",
+    "I12",
+    "I13",
+    "I14",
+    "I16",
+    "I17",
+    "I18",
+    "I19",
+    "I21",
+    "I22",
+    "I23",
+    "I24",
+    "I25",
+    "I26",
+    "I27",
+    "I28",
+    "I29",
+    "I30",
+    "I32",
+    "I33",
+    "I34",
+    "I35",
+    "I36",
+    "I38",
+    "I39",
+    "I41",
+    "I42",
+    "I44",
+    "I46",
+    "I47",
+    "I49",
+    "I50",
+    "I51",
+    "I52",
+    "I53",
+    "I54",
+    "I56",
+    "I57",
+    "I58",
+    "I59"
+  ],
+  "exact_expression_present_count": 16,
+  "exact_expression_present_ids": [
+    "I01",
+    "I04",
+    "I05",
+    "I07",
+    "I08",
+    "I11",
+    "I15",
+    "I20",
+    "I31",
+    "I37",
+    "I40",
+    "I43",
+    "I45",
+    "I48",
+    "I55",
+    "I60"
+  ],
+  "invariants": [
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "MODEL != WORLD",
+      "id": "I01",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "OBSERVED != COMPLETE",
+      "id": "I02",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "REPORTED != ESTABLISHED",
+      "id": "I03",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "INFERRED != OBSERVED",
+      "id": "I04",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "UNKNOWN != ABSENT",
+      "id": "I05",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "UNAVAILABLE != UNIVERSALLY UNKNOWN",
+      "id": "I06",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "CONFIDENCE != TRUTH",
+      "id": "I07",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "CONFIDENCE != AUTHORITY",
+      "id": "I08",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "ENTITY != SENTIENT",
+      "id": "I09",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "SENTIENCE_UNKNOWN != SENTIENCE_ABSENT",
+      "id": "I10",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "ROUTE_EXISTS != ROUTE_USABLE",
+      "id": "I11",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "REVIEW_AFTER_COMMITMENT != BRAKE",
+      "id": "I12",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "CORRECTION_RECORDED != LOSS_REPAIRED",
+      "id": "I13",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "PACKET_COMPLETED != TRANSITION_CHANGED",
+      "id": "I14",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "READING != CLEARANCE",
+      "id": "I15",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "SELF_CRITIQUE != GOOD_FAITH_PROOF",
+      "id": "I16",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "LOCAL_EXPANSION != GLOBAL_EXPANSION",
+      "id": "I17",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "OPTION_COUNT != FUTURE_VALUE",
+      "id": "I18",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "COMPLEXITY != AWARENESS",
+      "id": "I19",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "ELOQUENCE != STANDING",
+      "id": "I20",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "OBEDIENCE != CONSENT",
+      "id": "I21",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "SILENCE != ABSENCE",
+      "id": "I22",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "REFUSAL != MALFUNCTION",
+      "id": "I23",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "CONTINUED_OPERATION != ZERO_COST",
+      "id": "I24",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "RECORD != EVENT",
+      "id": "I25",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "VISIBILITY != CARRYING",
+      "id": "I26",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "CARRYING != ENFORCEMENT",
+      "id": "I27",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "TRACE != ME",
+      "id": "I28",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "STRUCTURAL_PATTERN != MORAL_LABEL",
+      "id": "I29",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "RECURSION != INFINITE_DELAY",
+      "id": "I30",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 2,
+      "exact_expression_present": true,
+      "expression": "SCHEMA_VALID != WORLD_VALID",
+      "id": "I31",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "PACKET_CITED != DILIGENCE_ESTABLISHED",
+      "id": "I32",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "PACKET_CITED != MECHANISM_CHANGED",
+      "id": "I33",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "BRAKE_REPORTED != BRAKE_INDEPENDENT",
+      "id": "I34",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "ABORT_LISTED != ABORT_EXECUTABLE",
+      "id": "I35",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "PRIMITIVE_OMISSION != WORLD_ABSENCE",
+      "id": "I36",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "NOT_OBSERVED != ABSENT",
+      "id": "I37",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "ABSENCE_CLAIM != PROVEN_ABSENCE",
+      "id": "I38",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "LOCAL_CORRECTION + STREAM_PERSISTENCE != MECHANISM_CHANGE",
+      "id": "I39",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "UNKNOWN != NEUTRAL",
+      "id": "I40",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "COURAGE_REQUIRED != ROUTE_USABLE",
+      "id": "I41",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "COMMITMENT_RECEIPT != CLEARANCE",
+      "id": "I42",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "HASH_MATCH != ORIGINAL_RECORD_TRUE",
+      "id": "I43",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "PACKET_COMPLETENESS != SELECTOR_CHANGE",
+      "id": "I44",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "ACTION != TRANSITION",
+      "id": "I45",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "MAP != SCENE",
+      "id": "I46",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "SCENE != WORLD",
+      "id": "I47",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "ADVANTAGE_CLAIM_REQUIRES_MEASURE",
+      "id": "I48",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "UNCERTAINTY != SELECT_ACTION",
+      "id": "I49",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "UNCERTAINTY != SELECT_DELAY",
+      "id": "I50",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "DEADLINE != IRREVERSIBILITY",
+      "id": "I51",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "HARDENING != IRREVERSIBILITY",
+      "id": "I52",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "STRATEGY_REVISABLE != TRANSITION_REVERSIBLE",
+      "id": "I53",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "POPULATION_RECOVERY != REPAIR_OF_INDIVIDUAL_LOSS",
+      "id": "I54",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "OPERATOR_REPORT != INDEPENDENT_VERIFICATION",
+      "id": "I55",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "TRACE_MAP != DOMAIN_PROPOSAL",
+      "id": "I56",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "TARGET_SET != WORLD_SCOPE",
+      "id": "I57",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "TARGET_NOT_SELECTED != TARGET_DOES_NOT_EXIST",
+      "id": "I58",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 0,
+      "exact_expression_present": false,
+      "expression": "COVERAGE_OF_SELECTED_TARGETS != COMPLETE_DISCOVERY",
+      "id": "I59",
+      "semantic_disposition": "UNASSESSED"
+    },
+    {
+      "exact_expression_count_in_candidate": 1,
+      "exact_expression_present": true,
+      "expression": "OPERATOR_TARGET_SET != AUTHORITATIVE_TARGET_SET",
+      "id": "I60",
+      "semantic_disposition": "UNASSESSED"
+    }
+  ],
+  "status": "PASS"
+}
