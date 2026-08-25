@@ -100,6 +100,12 @@ SUPPLEMENTAL_INVARIANTS = (
     "DEEPER_UNCERTAINTY != DISPENSABLE",
     "GRAPH_CONTRIBUTION_SURVIVED != QUALIFYING_LIMIT_SURVIVED",
     "CHILD_GRAPH_MERGED + CHILD_LIMIT_DROPPED != RECURSIVE_INTEGRATION",
+    "CAN_SERIALIZE_LIMIT_DETAIL != LIMIT_DETAIL_SURVIVED",
+    "LIMIT_VISIBLE_IN_ANALYSIS != LIMIT_CARRIED_IN_PACKET",
+    "UNRESOLVED_CLAIM_RECORDED != LIMIT_CAUSE_RECORDED",
+    "LIMIT_TEXT_PRESENT != LIMIT_PROVENANCE_PRESERVED",
+    "SCHEMA_VALID_LIMITS != SEMANTIC_LIMIT_SURVIVAL",
+    "INTERNAL_L_MERGED != CANONICAL_PACKET_L_CARRIED",
 )
 
 SURVIVAL_REQUIRED = (
@@ -146,6 +152,12 @@ SURVIVAL_REQUIRED = (
     "CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE",
     "DEEPER_UNCERTAINTY != DISPENSABLE",
     "GRAPH_CONTRIBUTION_SURVIVED != QUALIFYING_LIMIT_SURVIVED",
+    "CAN_SERIALIZE_LIMIT_DETAIL != LIMIT_DETAIL_SURVIVED",
+    "LIMIT_VISIBLE_IN_ANALYSIS != LIMIT_CARRIED_IN_PACKET",
+    "UNRESOLVED_CLAIM_RECORDED != LIMIT_CAUSE_RECORDED",
+    "LIMIT_TEXT_PRESENT != LIMIT_PROVENANCE_PRESERVED",
+    "SCHEMA_VALID_LIMITS != SEMANTIC_LIMIT_SURVIVAL",
+    "INTERNAL_L_MERGED != CANONICAL_PACKET_L_CARRIED",
 )
 
 
@@ -1203,7 +1215,9 @@ required. Measured advantage does not establish entitlement or moral rank.
     emit_available_transitions_without_selecting(R)
     emit_commitment_receipt_if_external_selector_proceeds(R)
     emit_packet_use_state(R)
-    emit_confidence_and_limits(R, L)
+    material_limit_refs <- serialize_load_bearing_limits_with_provenance(R, L)
+    bind_packet_limit_refs(R, material_limit_refs)
+    emit_confidence_and_limits(R, L, material_limit_refs)
     validate_schema(R, "TRACE-GRAPH-0.3.0")
 
     return R, L"""
@@ -1233,8 +1247,68 @@ discrimination, route-usability and measure/boundary rules.
 
 These are semantic use rules. They do not add required minimum-schema fields.
 
+### [14.1.1] Load-bearing limit carrier survival
+
+If an item in `L` is load-bearing because losing its kind, target/scope, basis
+or provenance could change a downstream claim, coverage/window/transition view,
+confidence statement or correction/repair route, canonical packet emission must
+carry that distinction rather than summarize it away.
+
+Use the existing `LIMIT` node type and stable node identity. Its existing open
+attributes may carry, where available:
+
+```text
+limit_kind
+description
+target_refs
+scope_refs
+basis_claim_refs
+aperture_refs
+clock_refs
+route_or_handoff_refs
+recursive_parent_target_ref
+source_limit_refs
+```
+
+The packet `limits` object may expose optional `limit_refs` pointing to those
+carried `LIMIT` node ids. Derived confidence, coverage, correction-window and
+transition views may reference the same carried limit ids. Missing or unsupported
+fields remain unresolved; do not invent provenance merely to fill the profile.
+
+Do not deduplicate materially distinct limits merely because their prose summary
+or unresolved-claim set is identical. If limit kind/provenance changes the next
+repair route, that distinction is load-bearing and must survive the carrier.
+
+```text
+CAN_SERIALIZE_LIMIT_DETAIL != LIMIT_DETAIL_SURVIVED
+LIMIT_VISIBLE_IN_ANALYSIS != LIMIT_CARRIED_IN_PACKET
+UNRESOLVED_CLAIM_RECORDED != LIMIT_CAUSE_RECORDED
+LIMIT_TEXT_PRESENT != LIMIT_PROVENANCE_PRESERVED
+SCHEMA_VALID_LIMITS != SEMANTIC_LIMIT_SURVIVAL
+INTERNAL_L_MERGED != CANONICAL_PACKET_L_CARRIED
+MINIMUM_SCHEMA_PASS != SEMANTIC_LIMIT_SURVIVAL
+```
+
+This is an existing-object serialization/binding profile, not a new primitive
+and not a required minimum-schema expansion.
+
 """
     b.insert_before_once("T_PACKET_BINDING", "## [14.2] Packet-use boundary\n", binding_add)
+
+    packet_limits_old = """  limits:
+    receiver_limits: []
+    unavailable_evidence: []
+    unresolved_claim_refs: []
+    omitted_primitive_effects: []
+"""
+    packet_limits_new = """  limits:
+    receiver_limits: []
+    unavailable_evidence: []
+    unresolved_claim_refs: []
+    omitted_primitive_effects: []
+    limit_refs: []
+"""
+    b.replace_once("T_LIMIT_CARRIER_SURVIVAL", packet_limits_old, packet_limits_new)
 
     validator_identity_old = (
         "The v0.2.7 identifier records a narrow documentary, serialization-profile, and worked-transfer repair while the embedded minimum-schema shape remains identical to v0.2.6 after version normalization. The identifier does not imply that the minimum validator can enforce target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.\n\n"
@@ -1385,7 +1459,7 @@ recursive empty-target termination / coverage binding
 recursive entry-budget termination / domain binding
 recursive child-limit propagation
 operator/checker discrimination
-packet binding without shape expansion
+packet binding + load-bearing limit carrier survival without minimum-shape expansion
 worked-case regression tightening
 receiver-profile consistency
 carrier/enforcement/brake ceilings and brake/rollback timing propagation
@@ -1536,6 +1610,15 @@ def verify_output(
         "RECURSIVE_GRAPH_MERGE != RECURSIVE_LIMIT_MERGE",
         "CHILD_GRAPH_VISIBLE != CHILD_LIMIT_VISIBLE",
         "merge_limits_with_recursive_provenance",
+        "CAN_SERIALIZE_LIMIT_DETAIL != LIMIT_DETAIL_SURVIVED",
+        "SCHEMA_VALID_LIMITS != SEMANTIC_LIMIT_SURVIVAL",
+        "INTERNAL_L_MERGED != CANONICAL_PACKET_L_CARRIED",
+        "serialize_load_bearing_limits_with_provenance",
+        "bind_packet_limit_refs",
+        "emit_confidence_and_limits(R, L, material_limit_refs)",
+        "    limit_refs: []",
+        "recursive_parent_target_ref",
+        "source_limit_refs",
     )
     for token in required_tokens:
         if token not in output_text:
@@ -1598,6 +1681,7 @@ def verify_output(
         "if stop_condition(target, R, L): break",
         "depth_budget - 1",
         "R <- merge_graphs(R, TRACE(target, aperture, history,",
+        "    emit_confidence_and_limits(R, L)\n",
     )
     lower = output_text.lower()
     for phrase in bad_control:
