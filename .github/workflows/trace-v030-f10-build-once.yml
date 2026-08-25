@@ -1,0 +1,120 @@
+name: TRACE v0.3.0 F10 carrier-survival build once
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-3-0-working
+    paths:
+      - .github/workflows/trace-v030-f10-build-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate-build-check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: framework/trace-v0-3-0-working
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Pin pre-F10 compiler object
+        shell: bash
+        run: |
+          set -euo pipefail
+          observed="$(git rev-parse HEAD:tools/compile_trace_v030_full_candidate.py)"
+          expected="d2c53b396886c372026b90fec7a169f98429fbfb"
+          test "$observed" = "$expected" || {
+            echo "compiler blob moved: expected $expected observed $observed" >&2
+            exit 1
+          }
+
+      - name: Apply exact fail-closed F10 migration
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/migrate_trace_v030_full_candidate_f10.py
+          test -n "$(git status --porcelain -- tools/compile_trace_v030_full_candidate.py)" || {
+            echo "F10 helper produced no compiler delta" >&2
+            exit 1
+          }
+          git diff --check
+
+      - name: Verify released-donor section manifest
+        run: python tools/build_trace_v027_section_manifest.py --check --report /tmp/trace-v027-section-manifest-f10.json
+
+      - name: Verify version-only minimum schema
+        run: python tools/build_trace_v030_minimum_schema.py --check --report /tmp/trace-v030-minimum-schema-f10.json
+
+      - name: Regenerate full working candidate
+        run: python tools/compile_trace_v030_full_candidate.py --write --report /tmp/trace-v030-f10-write.json
+
+      - name: Re-run exact deterministic check
+        run: python tools/compile_trace_v030_full_candidate.py --check --report /tmp/trace-v030-f10-check.json
+
+      - name: Assert F10 carrier-survival contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path('/tmp/trace-v030-f10-check.json').read_text())
+          assert report['status'] == 'PASS', report
+          assert report['errors'] == [], report['errors']
+          assert report['donor_invariant_count'] == 60
+          assert report['donor_invariants_preserved_exact_in_order'] is True
+          assert report['minimum_schema_report_status'] == 'PASS'
+          assert report['mutation_count'] == 39, report['mutation_count']
+          assert report['supplemental_guard_count'] == 58, report['supplemental_guard_count']
+          assert report['survival_required_count'] == 49, report['survival_required_count']
+
+          p = Path('PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md')
+          text = p.read_text(encoding='utf-8')
+          required = [
+              '### [14.1.1] Load-bearing limit carrier survival',
+              'CAN_SERIALIZE_LIMIT_DETAIL != LIMIT_DETAIL_SURVIVED',
+              'SCHEMA_VALID_LIMITS != SEMANTIC_LIMIT_SURVIVAL',
+              'INTERNAL_L_MERGED != CANONICAL_PACKET_L_CARRIED',
+              '  limit_refs: []',
+              'serialize_load_bearing_limits_with_provenance(R, L)',
+              'bind_packet_limit_refs(R, material_limit_refs)',
+              'emit_confidence_and_limits(R, L, material_limit_refs)',
+              'recursive_parent_target_ref',
+              'source_limit_refs',
+              'packet binding + load-bearing limit carrier survival without minimum-shape expansion',
+          ]
+          for token in required:
+              assert token in text, token
+          assert '    emit_confidence_and_limits(R, L)\n' not in text
+          PY
+          git diff --check
+
+      - name: Commit compiler and regenerated witnesses
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            tools/compile_trace_v030_full_candidate.py \
+            PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md \
+            PROJECT/TRACE_v0_3_0_FULL_CANDIDATE_BUILD_REPORT_v0_1.json
+          test -n "$(git diff --cached --name-only)" || {
+            echo 'Expected F10 generated-object delta is empty.' >&2
+            exit 1
+          }
+          git commit -m 'Repair F10 load-bearing limit carrier survival'
+          git push origin HEAD:framework/trace-v0-3-0-working
+
+      - name: Claim boundary
+        run: |
+          echo 'Green means the exact F10 source-level carrier binding compiled deterministically against the pinned donor and unchanged minimum-schema shape.'
+          echo 'It does not establish runtime implementation, semantic correctness, validation, release, canon, authority, permission, clearance, or world truth.'
