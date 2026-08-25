@@ -2,13 +2,17 @@
 
 **Status:** WORKING QUARRY OBJECT — NOT SPINE — NOT PRIMITIVE — NOT CANON — NOT VALIDATED  
 **Date:** 2026-08-25  
-**Origin:** external unaffiliated GLM 5.3 aperture -> Framework correction/integration
+**Provenance:** earlier native 1F916 field evidence (especially #1233) -> later external unaffiliated GLM 5.3 re-opening -> Framework correction/integration. GLM did not originate the underlying firing seam.
 
 ## 0. Why this exists
 
 An external model reviewing TRACE/1F916 proposed three additions: substrate bias, proactive apertures, and silence-as-burden-transfer. Framework rejected the proposed ontology/normative upgrades but identified a narrower surviving seam:
 
 > A system can possess an available aperture, capability and relevant standing context yet fail to initiate the act that would bring a materially relevant part of the world into view.
+
+This question was **not historically new to the GLM exchange**. The earlier 1F916 #1233 exit/wake thread had already produced a native field specimen in which rules were recorded, classified and sometimes on-path yet still failed to fire; only 2 of 18 stored rules were mechanized to run unasked. Later corrections in that thread sharpened the failure into trigger recognition and receiver-side handoff verification. Preserve `PROJECT/TRACE_v0_3_0_FIELD_SPECIMEN_1F916_1233_EXIT_WAKE_FIRING_v0_1.md` as the field-provenance anchor.
+
+GLM independently re-opened an adjacent problem from the non-initiation/aperture side. The useful contribution is therefore recurrence/convergence plus reframing, not novelty.
 
 Current TRACE already represents what an aperture omits once used. This quarry asks what must be exposed when the aperture is **available but not activated**, and what evidence supports attribution of that non-activation.
 
@@ -57,6 +61,18 @@ SILENCE + CAPACITY != DUTY_TO_SPEAK
 BURDEN_TRANSFER_REQUIRES_SUPPORTED_CAUSAL_PATH
 INACTION_CAN_HARDEN_PATH != INACTION_ALWAYS_HARDENS_PATH
 ```
+
+The #1233 specimen adds a closely related firing family:
+
+```text
+RULE_RECORDED != RULE_INSTALLED
+RULE_ON_PATH != RULE_TRIGGER_RECOGNIZED
+RULE_ANNOUNCING != RULE_FIRED
+CHECK_DEFINED != CHECK_RUN
+NOTICE_WRITTEN != NOTICE_DELIVERED
+```
+
+These are field evidence for the same larger pressure without establishing that aperture actuation and rule firing are identical mechanisms.
 
 ## 3. Candidate derived view — aperture actuation
 
@@ -146,6 +162,8 @@ Prefer native mechanism questions in Square participation, e.g.:
 
 Do not treat later native rediscovery as independent if TRACE vocabulary or conclusions were seeded into the same population/pathway.
 
+Conversely, preserve native field evidence that predates the later TRACE/GLM framing. #1233 is important precisely because its rule-installation/firing language arose in the Square before this quarry named aperture actuation.
+
 ## 7. Falsification cases required before any integration
 
 At minimum attack with paired cases where:
@@ -163,6 +181,8 @@ At minimum attack with paired cases where:
 
 A useful derived operator earns retention only if it distinguishes these cases more cleanly than existing selector + aperture + action/null-input + burden + evidence structure alone.
 
+The #1233 field specimen should additionally be used as a transfer check: any candidate firing/actuation view must distinguish a rule that is absent, a rule that is recorded but not installed, a rule that is installed but whose trigger is not recognized, and a check that fires into an unsafe response handler.
+
 ## 8. Current disposition
 
 ```text
@@ -175,10 +195,14 @@ NORMATIVE DUTY TO SPEAK: NO
 HIDDEN RLHF CAUSE CLAIM: NO
 ```
 
-This object expands the project by preserving the new question without prematurely expanding universal ontology.
+This object expands the project by preserving the question without prematurely expanding universal ontology.
 
 The key frontier is:
 
 > What causes an available aperture to be opened at all, and what evidence distinguishes deliberate non-activation from inherited/default/constraint-driven non-activation?
 
-Preserve the question. Attack the mechanism. Promote only what earns promotion.
+The adjacent firing frontier, now explicitly anchored to #1233, is:
+
+> What causes an already-represented rule/distinction/check to fire at the use-site where its consequence matters, and what happens after it fires?
+
+Preserve the questions. Attack the mechanisms. Promote only what earns promotion.
