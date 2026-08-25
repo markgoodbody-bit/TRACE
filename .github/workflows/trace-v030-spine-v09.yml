@@ -1,0 +1,68 @@
+name: TRACE v0.3.0 spine v0.9 I11-I48 build
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-3-0-working
+    paths:
+      - tools/build_trace_v030_spine_v09.py
+      - PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_8.md
+      - PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_9.md
+      - PROJECT/TRACE_v0_3_0_SPINE_V09_BUILD_REPORT_v0_1.json
+      - .github/workflows/trace-v030-spine-v09.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  spine-v09:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: framework/trace-v0-3-0-working
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build deterministic v0.9 spine candidate
+        run: |
+          python tools/build_trace_v030_spine_v09.py \
+            --write \
+            --report PROJECT/TRACE_v0_3_0_SPINE_V09_BUILD_REPORT_v0_1.json
+
+      - name: Check whitespace integrity
+        run: git diff --check
+
+      - name: Commit deterministic candidate and report when changed
+        run: |
+          if [ -n "$(git status --porcelain -- PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_9.md PROJECT/TRACE_v0_3_0_SPINE_V09_BUILD_REPORT_v0_1.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_9.md PROJECT/TRACE_v0_3_0_SPINE_V09_BUILD_REPORT_v0_1.json
+            git commit -m "Compile TRACE v0.3.0 spine candidate v0.9"
+            git push origin HEAD:framework/trace-v0-3-0-working
+          else
+            echo "Committed v0.9 spine candidate/report already match compiler."
+          fi
+
+      - name: Verify committed deterministic output
+        run: |
+          python tools/build_trace_v030_spine_v09.py \
+            --check \
+            --report /tmp/trace-v030-spine-v09-report-final.json
+
+      - name: Upload build report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-v030-spine-v09-build-report
+          path: /tmp/trace-v030-spine-v09-report-final.json
+          if-no-files-found: error
+
+      - name: Claim boundary
+        run: |
+          echo "Green means v0.9 differs from v0.8 only at the declared header, route-usability block, measure block and survival-kernel sentence."
+          echo "It does not mean semantic correctness, donor completeness, release, canon, validation, world validity, authority, permission or clearance."
