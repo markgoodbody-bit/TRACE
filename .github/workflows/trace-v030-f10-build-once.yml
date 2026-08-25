@@ -6,6 +6,7 @@ on:
       - framework/trace-v0-3-0-working
     paths:
       - .github/workflows/trace-v030-f10-build-once.yml
+      - tools/migrate_trace_v030_full_candidate_f10.py
   workflow_dispatch:
 
 permissions:
@@ -83,7 +84,7 @@ jobs:
               'CAN_SERIALIZE_LIMIT_DETAIL != LIMIT_DETAIL_SURVIVED',
               'SCHEMA_VALID_LIMITS != SEMANTIC_LIMIT_SURVIVAL',
               'INTERNAL_L_MERGED != CANONICAL_PACKET_L_CARRIED',
-              '  limit_refs: []',
+              '    limit_refs: []',
               'serialize_load_bearing_limits_with_provenance(R, L)',
               'bind_packet_limit_refs(R, material_limit_refs)',
               'emit_confidence_and_limits(R, L, material_limit_refs)',
