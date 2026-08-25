@@ -111,7 +111,7 @@ def make_report(text: str) -> dict[str, object]:
         "[15] WORKED TRANSFORMATIONS",
         "[17] LIVE INTERPRETER / VALUE LAYER / SELECTOR / CONNECTED BRAKE",
         "[19] INVARIANTS / MISUSE GUARDS",
-        "[20] SURVIVAL KERNEL",
+        "[20] COMPRESSION / SURVIVAL KERNEL",
     }
     observed_titles = {str(row["title"]) for row in headings}
     missing = sorted(required_titles - observed_titles)
