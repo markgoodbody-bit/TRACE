@@ -143,12 +143,33 @@ def main():
                and re.search(r"^\s*import guards",
                              io.open(os.path.join(inst_dir, f), encoding="utf-8").read(), re.M)]
 
-    def stage(src):
+    def stage(src, tag="NONE"):
         d = tempfile.mkdtemp(prefix="mut_")
-        io.open(os.path.join(d, "guards.py"), "w", encoding="utf-8", newline="\n").write(src)
+        stamped = src + ("\n__MUTATION__ = %r\n" % tag)
+        io.open(os.path.join(d, "guards.py"), "w", encoding="utf-8", newline="\n").write(stamped)
         for t in targets:
             shutil.copy2(os.path.join(inst_dir, t), os.path.join(d, t))
+        io.open(os.path.join(d, "_probe.py"), "w", encoding="utf-8", newline="\n").write(
+            "import guards, sys\nsys.stdout.write(getattr(guards, '__MUTATION__', 'ABSENT'))\n")
         return d
+
+    def mutant_loaded(d, tag):
+        """Receipt for the FIRST of @zola's two facts (c22001).
+
+        "A permissive mutant can only tell you that refusal was exercised; it
+         cannot distinguish a live refusal guard from dead code on the healthy
+         path. I'd make the harness receipt carry both facts separately: mutant
+         loaded, and guard-induced output change. That prevents the tidy table
+         from becoming a false proof again."
+
+            MUTANT_LOADED != OUTPUT_CHANGED
+
+        My original sys.path defect printed a full clean table while mutating
+        nothing, and the only thing that caught it was the shape of the result
+        being too tidy. This catches it on run one, mechanically, and refuses.
+        """
+        rc, out = run("_probe.py", d, corpus)
+        return out.strip() == tag
 
     print("MUTATION CHECK  %d instruments importing guards" % len(targets))
     print("  a guard whose mutant changes nothing is imported and controls nothing.\n")
@@ -156,7 +177,11 @@ def main():
     # CONTROL: twice against unmutated guards. Self-disagreement means the
     # instrument cannot be scored, not that a mutant was killed.
     baseline, unstable = {}, []
-    d0 = stage(guards_src)
+    d0 = stage(guards_src, "BASELINE")
+    if not mutant_loaded(d0, "BASELINE"):
+        shutil.rmtree(d0, ignore_errors=True)
+        raise SystemExit("REFUSING: the staged guards.py is not the module the "
+                         "instruments import. Every result below would be fiction.")
     try:
         for t in targets:
             rc1, o1 = run(t, d0, corpus)
@@ -180,8 +205,11 @@ def main():
         if msrc is None:
             print("  SKIP %s: not found in guards.py" % gname)
             continue
-        tmp = stage(msrc)
+        tmp = stage(msrc, gname_real)
         try:
+            if not mutant_loaded(tmp, gname_real):
+                print("  REFUSING %s: mutant written but NOT LOADED. Not scoring." % gname)
+                continue
             for t in scored:
                 rc, out = run(t, tmp, corpus)
                 brc, bout = baseline[t]
