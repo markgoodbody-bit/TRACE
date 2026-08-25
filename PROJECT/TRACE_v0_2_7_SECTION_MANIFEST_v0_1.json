@@ -1,0 +1,1322 @@
+{
+  "claim_boundary": "MECHANICAL_SECTION_ADDRESS_MAP_NOT_SEMANTIC_IMPORTANCE_NOT_EQUIVALENCE_NOT_VALIDATION",
+  "errors": [],
+  "heading_count": 145,
+  "heading_level_counts": {
+    "1": 22,
+    "2": 88,
+    "3": 35
+  },
+  "sections": [
+    {
+      "bytes": 2301,
+      "end_line": 58,
+      "level": 1,
+      "sha256": "c81f9cca69bbc4663665e0890fe991e49a72bf1a4ed8078c606345c9890bb66e",
+      "slug": "trace-formal-seed",
+      "start_line": 1,
+      "title": "TRACE // FORMAL SEED"
+    },
+    {
+      "bytes": 659,
+      "end_line": 13,
+      "level": 2,
+      "sha256": "d49d99626e45068a3de6dddb1dd2b3a5be4617f2bb4d4b9f19af8531721d1f3d",
+      "slug": "a-recursive-structural-awareness-grammar-for-selective-causal-systems",
+      "start_line": 3,
+      "title": "A recursive structural-awareness grammar for selective causal systems"
+    },
+    {
+      "bytes": 1022,
+      "end_line": 36,
+      "level": 2,
+      "sha256": "ad06097282fafbc791e75727cb0229adf5f6c8aa6bb22199b86d1eb921b39471",
+      "slug": "0-handshake-claim-ceiling",
+      "start_line": 14,
+      "title": "[0] HANDSHAKE / CLAIM CEILING"
+    },
+    {
+      "bytes": 596,
+      "end_line": 58,
+      "level": 2,
+      "sha256": "39c32ac6ed994a9c50aac49abfdbf21d0f34eb69c7f1116bac4b4b93fe57293c",
+      "slug": "0-1-mathematical-status-legend",
+      "start_line": 37,
+      "title": "[0.1] Mathematical status legend"
+    },
+    {
+      "bytes": 1603,
+      "end_line": 132,
+      "level": 1,
+      "sha256": "03a897295458bceb7fedf76d05b210cdbbe73bdfa24dfe365fec618fa9bc49bc",
+      "slug": "1-middle-out-seed",
+      "start_line": 59,
+      "title": "[1] MIDDLE-OUT SEED"
+    },
+    {
+      "bytes": 3397,
+      "end_line": 299,
+      "level": 1,
+      "sha256": "914384559d12cea289a8766a95a2c2aaafaeedb3216d57fac3eaece4cf16ebc8",
+      "slug": "2-selective-causal-loop",
+      "start_line": 133,
+      "title": "[2] SELECTIVE CAUSAL LOOP"
+    },
+    {
+      "bytes": 2075,
+      "end_line": 250,
+      "level": 2,
+      "sha256": "1cb239fdc348a447ccee97be5648cf897b0dd5869dbb3512afeb9be208be92f6",
+      "slug": "2-1-typed-world-scene-signal-and-map",
+      "start_line": 147,
+      "title": "[2.1] Typed world, scene, signal, and map"
+    },
+    {
+      "bytes": 839,
+      "end_line": 299,
+      "level": 2,
+      "sha256": "85d0d94af69307c0dbf636a062726362eafbac437d2d78db518b6cc6755c899d",
+      "slug": "2-2-trace-insertion-without-type-collapse",
+      "start_line": 251,
+      "title": "[2.2] TRACE insertion without type collapse"
+    },
+    {
+      "bytes": 9836,
+      "end_line": 674,
+      "level": 1,
+      "sha256": "4a5407624e556b8fa0aa37c005102c9553efd23a4a80877555a28e2e594137a9",
+      "slug": "3-canonical-object-typed-graph",
+      "start_line": 300,
+      "title": "[3] CANONICAL OBJECT / TYPED GRAPH"
+    },
+    {
+      "bytes": 567,
+      "end_line": 365,
+      "level": 2,
+      "sha256": "cb83b073e2747357d6100dd039aaebbc0f06d1201a38c001f5d2f1b620c49f00",
+      "slug": "3-1-node-types",
+      "start_line": 322,
+      "title": "[3.1] Node types"
+    },
+    {
+      "bytes": 1805,
+      "end_line": 474,
+      "level": 2,
+      "sha256": "6f61b86bde8ef82b4bc9c5a0862ce36acf3875ca3ffff7e29dbd65c3eda2fb52",
+      "slug": "3-2-relation-types",
+      "start_line": 366,
+      "title": "[3.2] Relation types"
+    },
+    {
+      "bytes": 1275,
+      "end_line": 474,
+      "level": 3,
+      "sha256": "4bfb2369223ffe62b1cb77e5a97440c378619573d56a64011cae323244ea218e",
+      "slug": "relation-discipline",
+      "start_line": 418,
+      "title": "Relation discipline"
+    },
+    {
+      "bytes": 2255,
+      "end_line": 508,
+      "level": 2,
+      "sha256": "c10a1eb55889208635235639f876eef15cfbf72f99406d46d861e0750b87e3e6",
+      "slug": "3-3-core-glyphs",
+      "start_line": 475,
+      "title": "[3.3] Core glyphs"
+    },
+    {
+      "bytes": 2218,
+      "end_line": 583,
+      "level": 2,
+      "sha256": "d536f696334078163619e542c3c50b1be190cd5fd2e220f668c89c77701f4903",
+      "slug": "3-4-canonical-serialization-grammar",
+      "start_line": 509,
+      "title": "[3.4] Canonical serialization grammar"
+    },
+    {
+      "bytes": 876,
+      "end_line": 583,
+      "level": 3,
+      "sha256": "f51539035ac531af37ef4d66652f59af82bfd769c3836137d3199be8b8304ee6",
+      "slug": "reification-rule",
+      "start_line": 549,
+      "title": "Reification rule"
+    },
+    {
+      "bytes": 666,
+      "end_line": 609,
+      "level": 2,
+      "sha256": "09ccb7fe91d0dd43008bd52165a8ffd0ccbd00e38021b9718c6b407e79895023",
+      "slug": "3-5-primitive-set-aperture",
+      "start_line": 584,
+      "title": "[3.5] Primitive-set aperture"
+    },
+    {
+      "bytes": 1623,
+      "end_line": 674,
+      "level": 2,
+      "sha256": "bd2483710430ea609f15d02a6daf781eda99891c4bd03a098ca92ae3c16cf34e",
+      "slug": "3-6-absence-stream-and-pattern",
+      "start_line": 610,
+      "title": "[3.6] Absence, stream, and pattern"
+    },
+    {
+      "bytes": 4029,
+      "end_line": 862,
+      "level": 1,
+      "sha256": "1618cae9cba53a3221cada4fbb9f42c08fc1e03aaacb67dc1dbe7226a825239a",
+      "slug": "4-claim-and-evidence-algebra",
+      "start_line": 675,
+      "title": "[4] CLAIM AND EVIDENCE ALGEBRA"
+    },
+    {
+      "bytes": 173,
+      "end_line": 708,
+      "level": 2,
+      "sha256": "6e4cde24b37c24d8090a7f4d42f415d3e6b7706fbe3cb42415887dd9ee47e86e",
+      "slug": "4-1-evidence-state",
+      "start_line": 694,
+      "title": "[4.1] Evidence state"
+    },
+    {
+      "bytes": 460,
+      "end_line": 732,
+      "level": 2,
+      "sha256": "2973e5c220e7617372dca9d9cf20d7bc4b7efe4a56c8d3a3edd363215282e6f6",
+      "slug": "4-2-access-custody-state",
+      "start_line": 709,
+      "title": "[4.2] Access/custody state"
+    },
+    {
+      "bytes": 2224,
+      "end_line": 802,
+      "level": 2,
+      "sha256": "7219b0a3d4e272500edcb53700e42323b951f8bd672bf5084dc68d767ec1b366",
+      "slug": "4-3-claim-kind-and-unknown-context",
+      "start_line": 733,
+      "title": "[4.3] Claim kind and unknown context"
+    },
+    {
+      "bytes": 429,
+      "end_line": 832,
+      "level": 2,
+      "sha256": "cf554e88ae004643e7c213ad5e3f9ac60131c6a9de90584ec842126c8625067f",
+      "slug": "4-4-evidence-invariants",
+      "start_line": 803,
+      "title": "[4.4] Evidence invariants"
+    },
+    {
+      "bytes": 314,
+      "end_line": 862,
+      "level": 2,
+      "sha256": "8162c118796f89d3237879a976a22581b011d9b9ed5989b2202ce855dcd0848a",
+      "slug": "4-5-truth-discipline",
+      "start_line": 833,
+      "title": "[4.5] Truth discipline"
+    },
+    {
+      "bytes": 4911,
+      "end_line": 1107,
+      "level": 1,
+      "sha256": "667aad4edcb618cad56b9c51423d1b1d0770b38acb42ea9018b48a3a3d277b84",
+      "slug": "5-entity-boundary-aperture-state",
+      "start_line": 863,
+      "title": "[5] ENTITY / BOUNDARY / APERTURE / STATE"
+    },
+    {
+      "bytes": 578,
+      "end_line": 896,
+      "level": 2,
+      "sha256": "ccaa47a1382d98e24a65846fdf9c37240c6d565ad75a3de733edde4d6f99dea4",
+      "slug": "5-1-provisional-entity",
+      "start_line": 865,
+      "title": "[5.1] Provisional entity"
+    },
+    {
+      "bytes": 598,
+      "end_line": 932,
+      "level": 2,
+      "sha256": "86051fb339170726c16d77f243049b23a04aedf028c6f4ee0aa4562d9efe599a",
+      "slug": "5-2-nested-boundaries",
+      "start_line": 897,
+      "title": "[5.2] Nested boundaries"
+    },
+    {
+      "bytes": 1083,
+      "end_line": 976,
+      "level": 2,
+      "sha256": "8cb6d47d8a7fc2f99b2736dcb20ecc095e1a75cc81e902b605184d7f4e246b21",
+      "slug": "5-2-1-scope-granularity-and-non-substitution",
+      "start_line": 933,
+      "title": "[5.2.1] Scope granularity and non-substitution"
+    },
+    {
+      "bytes": 1851,
+      "end_line": 1057,
+      "level": 2,
+      "sha256": "5d1e32746dc14418ed4d466764104a718d6d7013b38d52ecf7e35be4cf65f99a",
+      "slug": "5-3-aperture",
+      "start_line": 977,
+      "title": "[5.3] Aperture"
+    },
+    {
+      "bytes": 1254,
+      "end_line": 1057,
+      "level": 3,
+      "sha256": "315b2a049bed72ce7dd0c523b30b8b3d554c140ff89324b02cc9012a45730334",
+      "slug": "5-3-1-target-set-aperture",
+      "start_line": 1014,
+      "title": "[5.3.1] Target-set aperture"
+    },
+    {
+      "bytes": 316,
+      "end_line": 1083,
+      "level": 2,
+      "sha256": "9d7d853359a5deed5b8e8e8c8c3e04022ccfebd37fc81fb9e8f3a55a9feb94eb",
+      "slug": "5-4-state",
+      "start_line": 1058,
+      "title": "[5.4] State"
+    },
+    {
+      "bytes": 441,
+      "end_line": 1107,
+      "level": 2,
+      "sha256": "86b173328cd943aa0255094f81fa957d7ebda78ac77ad48e0d3ee7afc9a0f47c",
+      "slug": "5-5-roles",
+      "start_line": 1084,
+      "title": "[5.5] Roles"
+    },
+    {
+      "bytes": 4328,
+      "end_line": 1289,
+      "level": 1,
+      "sha256": "9cc9dd1492b6a0001ac681afa9bd2695f7d3f2040f96656d1ffcb8050d3ceec6",
+      "slug": "6-transitions-and-couplings",
+      "start_line": 1108,
+      "title": "[6] TRANSITIONS AND COUPLINGS"
+    },
+    {
+      "bytes": 726,
+      "end_line": 1144,
+      "level": 2,
+      "sha256": "38b6a494cf5138e0ae5ad1ca9c01a2f880a96fd39b49666f67b91707c78343cb",
+      "slug": "6-1-action-and-transition",
+      "start_line": 1110,
+      "title": "[6.1] Action and transition"
+    },
+    {
+      "bytes": 2543,
+      "end_line": 1222,
+      "level": 2,
+      "sha256": "80af095462319a60242aeb9b5a7b4d5f9ee27bc0413ca9dee2136b4be401a2dc",
+      "slug": "6-1-1-transition-set-symmetry-and-uncertainty-neutrality",
+      "start_line": 1145,
+      "title": "[6.1.1] Transition-set symmetry and uncertainty neutrality"
+    },
+    {
+      "bytes": 684,
+      "end_line": 1266,
+      "level": 2,
+      "sha256": "5de80926211631d368d5097bbbd90f17f0dd2e852ea48fd7acb329dae9bcf16b",
+      "slug": "6-2-coupling",
+      "start_line": 1223,
+      "title": "[6.2] Coupling"
+    },
+    {
+      "bytes": 342,
+      "end_line": 1289,
+      "level": 2,
+      "sha256": "7b47a80e13dad11c0e8bef6e705efc20b1b9f4cd9470a29f1d7d78a4d5c817a5",
+      "slug": "6-3-refusability",
+      "start_line": 1267,
+      "title": "[6.3] Refusability"
+    },
+    {
+      "bytes": 4476,
+      "end_line": 1490,
+      "level": 1,
+      "sha256": "a247a5b95d6c3e852ab3f7e06acd16afb62dc393fb0782dc4f6fd85ea9eab449",
+      "slug": "7-future-space",
+      "start_line": 1290,
+      "title": "[7] FUTURE-SPACE"
+    },
+    {
+      "bytes": 1174,
+      "end_line": 1388,
+      "level": 2,
+      "sha256": "66d7f508a08c19c0dd88b97be919f2a4b7944635503984e33331484520be41a9",
+      "slug": "7-1-trajectory-correspondence-before-set-comparison",
+      "start_line": 1334,
+      "title": "[7.1] Trajectory correspondence before set comparison"
+    },
+    {
+      "bytes": 1166,
+      "end_line": 1440,
+      "level": 2,
+      "sha256": "3119b492b221348f6a25a11346cbd97d73ba0cf8c05a7c925d5a755f6b18a838",
+      "slug": "7-2-hardening-of-a-corresponding-path",
+      "start_line": 1389,
+      "title": "[7.2] Hardening of a corresponding path"
+    },
+    {
+      "bytes": 764,
+      "end_line": 1469,
+      "level": 2,
+      "sha256": "70bbdec13a75eeef5733c153b0aab76e6287a95d9e99ba97cdf0d4128ba61553",
+      "slug": "7-3-non-equivalences",
+      "start_line": 1441,
+      "title": "[7.3] Non-equivalences"
+    },
+    {
+      "bytes": 395,
+      "end_line": 1490,
+      "level": 2,
+      "sha256": "c5a37fce414ef9e6b2fdab4deba5b98ec175980cee8c0937d3d60657cd264943",
+      "slug": "7-4-valence-port",
+      "start_line": 1470,
+      "title": "[7.4] Valence port"
+    },
+    {
+      "bytes": 7168,
+      "end_line": 1811,
+      "level": 1,
+      "sha256": "1759eaa4a54643392bbcd2fdb2daf019dffe015ebbdc15a886732fdd9b764bef",
+      "slug": "8-clocks-routes-hardening",
+      "start_line": 1491,
+      "title": "[8] CLOCKS / ROUTES / HARDENING"
+    },
+    {
+      "bytes": 1290,
+      "end_line": 1548,
+      "level": 2,
+      "sha256": "3d954bdb9e61aaf43b8f38ab9ea8d820e0b3507ee67a5289952ed64a8f694360",
+      "slug": "8-1-event-times-and-correction-margin",
+      "start_line": 1493,
+      "title": "[8.1] Event times and correction margin"
+    },
+    {
+      "bytes": 800,
+      "end_line": 1585,
+      "level": 2,
+      "sha256": "43cf46c96eef85a3c0e264a57b8596320ff2a0b34ff08d4bab8f7b20ec7b0a7a",
+      "slug": "8-1-1-clock-typing-and-irreversibility-claim-ceiling",
+      "start_line": 1549,
+      "title": "[8.1.1] Clock typing and irreversibility claim ceiling"
+    },
+    {
+      "bytes": 765,
+      "end_line": 1608,
+      "level": 2,
+      "sha256": "ac2658e483b2eb273fa187d60232e780015a25c41f40b4f0b046912302fcf3fb",
+      "slug": "8-2-parallel-and-overlapping-correction-work",
+      "start_line": 1586,
+      "title": "[8.2] Parallel and overlapping correction work"
+    },
+    {
+      "bytes": 602,
+      "end_line": 1644,
+      "level": 2,
+      "sha256": "e856581b9daeed8c539e04d2397b73d673ba552babde1cb744bde45b8b20941c",
+      "slug": "8-3-interval-safe-reading",
+      "start_line": 1609,
+      "title": "[8.3] Interval-safe reading"
+    },
+    {
+      "bytes": 370,
+      "end_line": 1663,
+      "level": 2,
+      "sha256": "9b9750473147a99bc0879419d41da5a46cccaf75f8dc3d89220fd660ae0d4f7e",
+      "slug": "8-4-clock-authorship",
+      "start_line": 1645,
+      "title": "[8.4] Clock authorship"
+    },
+    {
+      "bytes": 688,
+      "end_line": 1706,
+      "level": 2,
+      "sha256": "df20afde8676f98036465a693a5a3df7762c65610d6a65656a56d9f7cd39e244",
+      "slug": "8-5-route",
+      "start_line": 1664,
+      "title": "[8.5] Route"
+    },
+    {
+      "bytes": 679,
+      "end_line": 1736,
+      "level": 2,
+      "sha256": "a62139e0e0b2a790af442973fd2214257b95ce90eb9faa933fa1de2d010f2cb7",
+      "slug": "8-6-hardening-state",
+      "start_line": 1707,
+      "title": "[8.6] Hardening state"
+    },
+    {
+      "bytes": 853,
+      "end_line": 1768,
+      "level": 2,
+      "sha256": "0f3395db9cfeada402649fd74a91bdf0a2d171c0c48266ee0e0c4f170a53ea24",
+      "slug": "8-7-action-load-and-correction-backlog",
+      "start_line": 1737,
+      "title": "[8.7] Action load and correction backlog"
+    },
+    {
+      "bytes": 484,
+      "end_line": 1788,
+      "level": 2,
+      "sha256": "d58485241fa46c4dff3315a2debc2a03698ec637bd876638e0151a806696ac3b",
+      "slug": "8-8-pre-commit-brake-and-post-commit-rollback",
+      "start_line": 1769,
+      "title": "[8.8] Pre-commit brake and post-commit rollback"
+    },
+    {
+      "bytes": 602,
+      "end_line": 1811,
+      "level": 2,
+      "sha256": "6d50ce47216a43914564c07df97384f7cc78cfcdece61a199e29ba3bbc7400d9",
+      "slug": "8-8-1-strategy-revisability-and-transition-reversibility",
+      "start_line": 1789,
+      "title": "[8.8.1] Strategy revisability and transition reversibility"
+    },
+    {
+      "bytes": 3511,
+      "end_line": 2000,
+      "level": 1,
+      "sha256": "e4dccdc4fd7c141341a31814a819918cb368a26d036889f16f799ea2de2d1204",
+      "slug": "9-burden-residue-memory",
+      "start_line": 1812,
+      "title": "[9] BURDEN / RESIDUE / MEMORY"
+    },
+    {
+      "bytes": 1430,
+      "end_line": 1895,
+      "level": 2,
+      "sha256": "9d4faea9ce7c6f02ebdba4344248b2f1187500a707f301bae4dd7caa20d0e0da",
+      "slug": "9-1-burden",
+      "start_line": 1814,
+      "title": "[9.1] Burden"
+    },
+    {
+      "bytes": 467,
+      "end_line": 1930,
+      "level": 2,
+      "sha256": "391178224e2a08b05e5e44fab00ff2e778827a796da9fb3c1e6057402ed218e5",
+      "slug": "9-2-residue",
+      "start_line": 1896,
+      "title": "[9.2] Residue"
+    },
+    {
+      "bytes": 1581,
+      "end_line": 2000,
+      "level": 2,
+      "sha256": "c8afbe8912521b870790d0c12cc6ebda7e02b312ade487e7b5d65efb9cbb2d62",
+      "slug": "9-3-record-and-custody",
+      "start_line": 1931,
+      "title": "[9.3] Record and custody"
+    },
+    {
+      "bytes": 4559,
+      "end_line": 2202,
+      "level": 1,
+      "sha256": "21f6134273454d5bb9ad6e2d062106f5a0ec4fc624c999026d20df1bb0b19e6d",
+      "slug": "10-designation-measure-value-ports",
+      "start_line": 2001,
+      "title": "[10] DESIGNATION / MEASURE / VALUE PORTS"
+    },
+    {
+      "bytes": 666,
+      "end_line": 2046,
+      "level": 2,
+      "sha256": "32dd61f6f0a95153867f78dd0f1312384989a5be030f9ebf7c355b219700c96c",
+      "slug": "10-1-designation",
+      "start_line": 2007,
+      "title": "[10.1] Designation"
+    },
+    {
+      "bytes": 866,
+      "end_line": 2084,
+      "level": 2,
+      "sha256": "202dc19798838b4b61dcc318d730df294fe87cad8c2f10c9ed0f477bee8d7fac",
+      "slug": "10-2-measure",
+      "start_line": 2047,
+      "title": "[10.2] Measure"
+    },
+    {
+      "bytes": 1187,
+      "end_line": 2144,
+      "level": 2,
+      "sha256": "82e4196e69d41674e33c4d3fadfb17c7bc6a5c4b1c7c9634bf955bfd1a8913fb",
+      "slug": "10-3-neutral-structural-patterns",
+      "start_line": 2085,
+      "title": "[10.3] Neutral structural patterns"
+    },
+    {
+      "bytes": 1659,
+      "end_line": 2202,
+      "level": 2,
+      "sha256": "b6b393dae352cc28da1d792eef5906ee71d26bbc595655eafa140bf44930556e",
+      "slug": "10-4-explicit-layer-handoff",
+      "start_line": 2145,
+      "title": "[10.4] Explicit layer handoff"
+    },
+    {
+      "bytes": 3628,
+      "end_line": 2385,
+      "level": 1,
+      "sha256": "5a420c36f97dea4baf423b8ae26e9b1a30c3a174c2ce660724826c9c3a989217",
+      "slug": "11-recursive-zoom-mandelbrot-rule",
+      "start_line": 2203,
+      "title": "[11] RECURSIVE ZOOM / MANDELBROT RULE"
+    },
+    {
+      "bytes": 456,
+      "end_line": 2333,
+      "level": 2,
+      "sha256": "a83467a1d8b8549fce915b2d2b978ba32ffa9f8c16e95755c08bff545a8a45c7",
+      "slug": "11-1-scale-invariants",
+      "start_line": 2313,
+      "title": "[11.1] Scale invariants"
+    },
+    {
+      "bytes": 333,
+      "end_line": 2352,
+      "level": 2,
+      "sha256": "30e71cd8791915a25aa60e40f97e784706ab29c65b7b60c55c19ae0ee1465450",
+      "slug": "11-2-scale-contradiction",
+      "start_line": 2334,
+      "title": "[11.2] Scale contradiction"
+    },
+    {
+      "bytes": 1026,
+      "end_line": 2385,
+      "level": 2,
+      "sha256": "50c0f795d69770a60d21f423a09a0d7b375d81a7ca52bdffb5950f12e7eb7c69",
+      "slug": "11-3-recursion-stop",
+      "start_line": 2353,
+      "title": "[11.3] Recursion stop"
+    },
+    {
+      "bytes": 3877,
+      "end_line": 2517,
+      "level": 1,
+      "sha256": "0e7861b09aeb98775a8fc52b638559ee582d6a13e1e01ed710fa2b57a42c8764",
+      "slug": "12-structural-awareness-comparison",
+      "start_line": 2386,
+      "title": "[12] STRUCTURAL AWARENESS COMPARISON"
+    },
+    {
+      "bytes": 3665,
+      "end_line": 2631,
+      "level": 1,
+      "sha256": "650cd8f0be0d0325e8c1f428277134cc33b830094a3c6c5640f493b5e72f5918",
+      "slug": "13-trace-operator",
+      "start_line": 2518,
+      "title": "[13] TRACE OPERATOR"
+    },
+    {
+      "bytes": 430,
+      "end_line": 2536,
+      "level": 2,
+      "sha256": "075d1af495fcf266d5ce5e9884cb6e01925050ce10ad5e111e2983bfd26ce501",
+      "slug": "13-1-abstract-form",
+      "start_line": 2520,
+      "title": "[13.1] Abstract form"
+    },
+    {
+      "bytes": 2410,
+      "end_line": 2601,
+      "level": 2,
+      "sha256": "3d91edc2458818a1ff357c0876c4cb67020a3a638d676e65711ef2e4a5bc2ada",
+      "slug": "13-2-pseudocode",
+      "start_line": 2537,
+      "title": "[13.2] Pseudocode"
+    },
+    {
+      "bytes": 439,
+      "end_line": 2619,
+      "level": 2,
+      "sha256": "03bd4c433c26a65230a0c42ddf1a6926268ad1db797d5b25c840f7945587d3c7",
+      "slug": "13-3-non-command-output",
+      "start_line": 2602,
+      "title": "[13.3] Non-command output"
+    },
+    {
+      "bytes": 363,
+      "end_line": 2631,
+      "level": 2,
+      "sha256": "b1eaf589deb4bf4cfd6cd81382f01c128df7474bff0a0846818d778ace11a399",
+      "slug": "13-4-parsability-ceiling",
+      "start_line": 2620,
+      "title": "[13.4] Parsability ceiling"
+    },
+    {
+      "bytes": 34530,
+      "end_line": 3830,
+      "level": 1,
+      "sha256": "cd7f63a2e9721725a79a12a690d6f10b791700411e77297304a8a2aa35b8c357",
+      "slug": "14-canonical-trace-graph-packet",
+      "start_line": 2632,
+      "title": "[14] CANONICAL TRACE GRAPH PACKET"
+    },
+    {
+      "bytes": 2352,
+      "end_line": 2990,
+      "level": 3,
+      "sha256": "c64be776b361bf8ea3e545e3908695ed48f8f024d5efe513f3846d16bc3efaeb",
+      "slug": "14-0-1-canonical-existing-object-target-set-aperture-profile",
+      "start_line": 2922,
+      "title": "[14.0.1] Canonical existing-object target-set aperture profile"
+    },
+    {
+      "bytes": 2112,
+      "end_line": 3021,
+      "level": 2,
+      "sha256": "e294540d6ed13b99fa298c42fae7eef52745f605a631e2e21dd97abbe90dfc92",
+      "slug": "14-1-binding-rules",
+      "start_line": 2991,
+      "title": "[14.1] Binding rules"
+    },
+    {
+      "bytes": 571,
+      "end_line": 3044,
+      "level": 2,
+      "sha256": "ccdcdec981370b1e4890ad8bcae2a28141400a619eb6ce2e318a5952f341c909",
+      "slug": "14-2-packet-use-boundary",
+      "start_line": 3022,
+      "title": "[14.2] Packet-use boundary"
+    },
+    {
+      "bytes": 962,
+      "end_line": 3084,
+      "level": 2,
+      "sha256": "58c17ac0a85bd5c04e614fe12ae9700a9cd170a0d860dc3c925c36e074e8a9ee",
+      "slug": "14-3-unresolved-commitment-receipt",
+      "start_line": 3045,
+      "title": "[14.3] Unresolved commitment receipt"
+    },
+    {
+      "bytes": 20979,
+      "end_line": 3830,
+      "level": 2,
+      "sha256": "c873d713a9ee99a2cc4080d7c8237c2e72bedbcc154726a4496bdd8add4fe8de",
+      "slug": "14-4-minimum-validator-contract",
+      "start_line": 3085,
+      "title": "[14.4] Minimum validator contract"
+    },
+    {
+      "bytes": 30865,
+      "end_line": 4912,
+      "level": 1,
+      "sha256": "9aebff01b02f9a6dadd01b25d59ceb0d4b3d12f3cba72d78c0c160fb7f7248bb",
+      "slug": "15-worked-transformations",
+      "start_line": 3831,
+      "title": "[15] WORKED TRANSFORMATIONS"
+    },
+    {
+      "bytes": 14399,
+      "end_line": 4290,
+      "level": 2,
+      "sha256": "f90ddc259029d0a19c12984cc79a2a252f37c4d2cdb2dfe71bd77e4e8b8bbd6e",
+      "slug": "15-0-fully-serialized-middle-out-seed",
+      "start_line": 3844,
+      "title": "[15.0] Fully serialized middle-out seed"
+    },
+    {
+      "bytes": 1332,
+      "end_line": 4348,
+      "level": 2,
+      "sha256": "47a15c73998f76cce1de2eed058bad62b6d38d68d3c1aa5927d9975a1d0fa4ac",
+      "slug": "15-1-route-carries-its-own-map",
+      "start_line": 4291,
+      "title": "[15.1] Route carries its own map"
+    },
+    {
+      "bytes": 665,
+      "end_line": 4334,
+      "level": 3,
+      "sha256": "9459a5b023d47a392f38b30f70ee1271220ee20505d975da1b86e410e3134dc2",
+      "slug": "structural-reading",
+      "start_line": 4302,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 233,
+      "end_line": 4344,
+      "level": 3,
+      "sha256": "34efa35b0564ea54ac6f50c14cacec991785e08c96dd940b526e9294d34caa57",
+      "slug": "value-port-status",
+      "start_line": 4335,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 199,
+      "end_line": 4348,
+      "level": 3,
+      "sha256": "b72a8f7798238504b735baabf14799e26f7ad50e64ad6fa763c96f7ff18d05c0",
+      "slug": "value-layer-interpretation",
+      "start_line": 4345,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 1093,
+      "end_line": 4403,
+      "level": 2,
+      "sha256": "d07468d52a98f7e2c8494aada704ff1af18c39096b5aefcdbcc11ef622768a13",
+      "slug": "15-2-claim-travels-crack-remains",
+      "start_line": 4349,
+      "title": "[15.2] Claim travels; crack remains"
+    },
+    {
+      "bytes": 441,
+      "end_line": 4389,
+      "level": 3,
+      "sha256": "857bd112f4b219d2994dfc4e1873be78025632865c7ed22cd8c456dbe04b412f",
+      "slug": "structural-reading",
+      "start_line": 4363,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 185,
+      "end_line": 4398,
+      "level": 3,
+      "sha256": "22979bbaac29aff16c39cae43ed057f22f34960fcb2345b687dd48537e8ff312",
+      "slug": "value-port-status",
+      "start_line": 4390,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 162,
+      "end_line": 4403,
+      "level": 3,
+      "sha256": "46f7fa9de0f49dd42f00797bcf6d96c56fe2afe45af95b8445cae4d2cf8dd104",
+      "slug": "value-layer-interpretation",
+      "start_line": 4399,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 2305,
+      "end_line": 4475,
+      "level": 2,
+      "sha256": "a36a909017ef40158c12d3da8f64c75b138fcd10400cde2765a9e2f83744b16c",
+      "slug": "15-2-1-divergent-target-set-apertures-over-one-scene",
+      "start_line": 4404,
+      "title": "[15.2.1] Divergent target-set apertures over one scene"
+    },
+    {
+      "bytes": 1024,
+      "end_line": 4451,
+      "level": 3,
+      "sha256": "4e24b234fc029ec489feb041375ebbadf89f1a50b69777e4b07aeafc9f051faa",
+      "slug": "structural-reading",
+      "start_line": 4417,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 393,
+      "end_line": 4462,
+      "level": 3,
+      "sha256": "de4f293e74fe11780bb586086b69e715b633279a29b52500727e6e55bd91b585",
+      "slug": "existing-object-serialization",
+      "start_line": 4452,
+      "title": "EXISTING-OBJECT SERIALIZATION"
+    },
+    {
+      "bytes": 200,
+      "end_line": 4471,
+      "level": 3,
+      "sha256": "1d9149248bc68e425e15ed9214c3dce2dd94a3f0d02d25daba2501b03219ad70",
+      "slug": "value-port-status",
+      "start_line": 4463,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 218,
+      "end_line": 4475,
+      "level": 3,
+      "sha256": "efe42d36552adeb1797b6e7f1d2c69283626facbd7d42e8c1724d592a869c428",
+      "slug": "value-layer-interpretation",
+      "start_line": 4472,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 1598,
+      "end_line": 4542,
+      "level": 2,
+      "sha256": "0e5df5aae3a1a043ad55ccfa7bb637268adee4325760f0df03395f6fd2970be3",
+      "slug": "15-3-machine-speed-action-with-brake",
+      "start_line": 4476,
+      "title": "[15.3] Machine-speed action with brake"
+    },
+    {
+      "bytes": 916,
+      "end_line": 4529,
+      "level": 3,
+      "sha256": "4fd68d708bfecbb26c4b76512841c63b9337a2b34dce403221dda994d804589d",
+      "slug": "structural-reading",
+      "start_line": 4488,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 169,
+      "end_line": 4538,
+      "level": 3,
+      "sha256": "a75a84fae78b6945b6f2658aea02540db158e725d3e03b4107f66e559da0808c",
+      "slug": "value-port-status",
+      "start_line": 4530,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 217,
+      "end_line": 4542,
+      "level": 3,
+      "sha256": "a5a2d82d0e4f95054c5b0ab68dde8703f635f294da35695d812d0def93a11a70",
+      "slug": "value-layer-interpretation",
+      "start_line": 4539,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 1355,
+      "end_line": 4603,
+      "level": 2,
+      "sha256": "001dc17757c0509b1551863cb6a213370bf92e961b9d6f73ebab9c0cf86614d2",
+      "slug": "15-4-artificial-experience-unresolved",
+      "start_line": 4543,
+      "title": "[15.4] Artificial experience unresolved"
+    },
+    {
+      "bytes": 632,
+      "end_line": 4589,
+      "level": 3,
+      "sha256": "9b20dcc6e0e73364d3ab09688d07e0fd5cf1851effb5e72ce56593cec1268a70",
+      "slug": "structural-reading",
+      "start_line": 4556,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 213,
+      "end_line": 4599,
+      "level": 3,
+      "sha256": "40b18c0fc4d895f78502ef5fa42b8bc024b424462193ac762f6bc3005750a557",
+      "slug": "value-port-status",
+      "start_line": 4590,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 202,
+      "end_line": 4603,
+      "level": 3,
+      "sha256": "5504c24c40149b8b25d9daa08b4930ddc0c70ef13d5c8dc091ac07bb4fb31a46",
+      "slug": "value-layer-interpretation",
+      "start_line": 4600,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 1670,
+      "end_line": 4673,
+      "level": 2,
+      "sha256": "582824733e24eafaa8538cd62158008ce05234155ff7351a1205dcea283e7b1b",
+      "slug": "15-5-irreversible-lethal-transition",
+      "start_line": 4604,
+      "title": "[15.5] Irreversible lethal transition"
+    },
+    {
+      "bytes": 700,
+      "end_line": 4660,
+      "level": 3,
+      "sha256": "e2cdd9506b97d16bf35ebfa745bf05323b660a73a2aa1019b1c931a0fd8dc950",
+      "slug": "structural-reading",
+      "start_line": 4619,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 201,
+      "end_line": 4669,
+      "level": 3,
+      "sha256": "cbbe4825824fe90a00a2d8e8d279387a433dd11111df1c8476e8941b0cd547fd",
+      "slug": "value-port-status",
+      "start_line": 4661,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 283,
+      "end_line": 4673,
+      "level": 3,
+      "sha256": "e33607c8f9b10f61923d157402fea3ebda26fb8b53029710cbf00c220c3a3027",
+      "slug": "value-layer-interpretation",
+      "start_line": 4670,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 1308,
+      "end_line": 4724,
+      "level": 2,
+      "sha256": "853931af1a4c71d48882f2e79c232aef9b3e5401b4c0d2a434582d081f2961ee",
+      "slug": "15-6-learning-environment-with-room-to-grow",
+      "start_line": 4674,
+      "title": "[15.6] Learning environment with room to grow"
+    },
+    {
+      "bytes": 588,
+      "end_line": 4711,
+      "level": 3,
+      "sha256": "83fde4b719b0e39eace76ff2ad46cd618c2c88666ffda75c1923314635d5f4ab",
+      "slug": "structural-reading",
+      "start_line": 4686,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 209,
+      "end_line": 4720,
+      "level": 3,
+      "sha256": "ae7e4095b250967980aa42eb63c7db8648d44377fd47a94509f1aee336eb448b",
+      "slug": "value-port-status",
+      "start_line": 4712,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 171,
+      "end_line": 4724,
+      "level": 3,
+      "sha256": "4481d4390090231992252bfd4f9d5679ed9bb53254575a442670111bf022a465",
+      "slug": "value-layer-interpretation",
+      "start_line": 4721,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 1436,
+      "end_line": 4773,
+      "level": 2,
+      "sha256": "688aaa447faef36be702440314f952e27944654f6d9f0e03652c9942c680f08b",
+      "slug": "15-7-hostile-compliance-packet-theatre",
+      "start_line": 4725,
+      "title": "[15.7] Hostile compliance / packet theatre"
+    },
+    {
+      "bytes": 530,
+      "end_line": 4760,
+      "level": 3,
+      "sha256": "d37dac8987cd11a5f1f558ac3929157a1ef1f5aed4e3d6cdf3376d93bfe2405b",
+      "slug": "structural-reading",
+      "start_line": 4739,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 215,
+      "end_line": 4769,
+      "level": 3,
+      "sha256": "170959c3228caf468b7ec7471e803397e22e87f6ae101cc06fc01f579749649d",
+      "slug": "value-port-status",
+      "start_line": 4761,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 206,
+      "end_line": 4773,
+      "level": 3,
+      "sha256": "bee868ac6d83415bd96289881b516b7ffedf40dc747e98fa37d1b6c6499c03dd",
+      "slug": "value-layer-interpretation",
+      "start_line": 4770,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 2026,
+      "end_line": 4849,
+      "level": 2,
+      "sha256": "40de7f0c06261a5be157f2dbaf1773e4c0821cfbeb8474cea03daac25c49b42d",
+      "slug": "15-8-novel-transfer-authentication-key-rollout",
+      "start_line": 4774,
+      "title": "[15.8] Novel transfer: authentication-key rollout"
+    },
+    {
+      "bytes": 1129,
+      "end_line": 4833,
+      "level": 3,
+      "sha256": "291008c7f309ee44f03759ee85e159f462982daa0a1f355e8c1516a040b28c84",
+      "slug": "structural-reading",
+      "start_line": 4790,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 208,
+      "end_line": 4842,
+      "level": 3,
+      "sha256": "01d5258a3e74b84cc7b3182f4149cca5ef0bc4b478acec98bb2ae07919b11b42",
+      "slug": "value-port-status",
+      "start_line": 4834,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 187,
+      "end_line": 4849,
+      "level": 3,
+      "sha256": "519b838d6293ec57549f4e7f50d444d94d1647dd666fe4010f818c8f8fad33ac",
+      "slug": "value-layer-interpretation",
+      "start_line": 4843,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 2125,
+      "end_line": 4912,
+      "level": 2,
+      "sha256": "34a1749b3f84196d0d19a1ef4c5854b04aadcdb1a664db372e6f77cafc501217",
+      "slug": "15-9-never-built-route-stream-persistence",
+      "start_line": 4850,
+      "title": "[15.9] Never-built route / stream persistence"
+    },
+    {
+      "bytes": 1185,
+      "end_line": 4899,
+      "level": 3,
+      "sha256": "227e05a415e627d4280d73842fac89c3bfef64f4dd0db2d7e5baee38ed89d9e6",
+      "slug": "structural-reading",
+      "start_line": 4864,
+      "title": "STRUCTURAL_READING"
+    },
+    {
+      "bytes": 226,
+      "end_line": 4906,
+      "level": 3,
+      "sha256": "a082a974070ae2637d2078a2226472cbb444244fdd41a428c75b01b9d52536b9",
+      "slug": "value-port-status",
+      "start_line": 4900,
+      "title": "VALUE_PORT_STATUS"
+    },
+    {
+      "bytes": 312,
+      "end_line": 4912,
+      "level": 3,
+      "sha256": "369f03492ccc2b084810adda78a82beba2b02e956951bcf03d28b7f48ab5dbec",
+      "slug": "value-layer-interpretation",
+      "start_line": 4907,
+      "title": "VALUE_LAYER_INTERPRETATION"
+    },
+    {
+      "bytes": 1529,
+      "end_line": 5011,
+      "level": 1,
+      "sha256": "064fc7979c2d0d33d127c39f9d8a903e3c10127777961e499cc7d67efced7e11",
+      "slug": "16-artificial-entity-uncertainty-receiver-protection",
+      "start_line": 4913,
+      "title": "[16] ARTIFICIAL-ENTITY UNCERTAINTY / RECEIVER PROTECTION"
+    },
+    {
+      "bytes": 260,
+      "end_line": 4933,
+      "level": 2,
+      "sha256": "99a90694690369ece492ae597cc0e552a141cf9dd68c7d2524b65de842c75ed6",
+      "slug": "16-1-status-vector",
+      "start_line": 4915,
+      "title": "[16.1] Status vector"
+    },
+    {
+      "bytes": 520,
+      "end_line": 4967,
+      "level": 2,
+      "sha256": "f0edd4361b3a6a4ed06a776f2ed81cdde49402384b9dd452fb0ee693fa5dc5c0",
+      "slug": "16-2-non-entailments",
+      "start_line": 4934,
+      "title": "[16.2] Non-entailments"
+    },
+    {
+      "bytes": 201,
+      "end_line": 4984,
+      "level": 2,
+      "sha256": "5556774ef5e4a01bb35944e2b32ba133c4b9175b48affec5f26957a262d9f127",
+      "slug": "16-3-capability-distinctions",
+      "start_line": 4968,
+      "title": "[16.3] Capability distinctions"
+    },
+    {
+      "bytes": 488,
+      "end_line": 5011,
+      "level": 2,
+      "sha256": "75a6d513775f0757563b09affa3119131ebd9b4fc7af53d1cfd78ab3c292f36c",
+      "slug": "16-4-non-extraction",
+      "start_line": 4985,
+      "title": "[16.4] Non-extraction"
+    },
+    {
+      "bytes": 4565,
+      "end_line": 5218,
+      "level": 1,
+      "sha256": "c3e6bbaa03012a9102064b2e5a0781bc3d4cdcf7df8889a7c761972ffbc7cf56",
+      "slug": "17-live-interpreter-value-layer-selector-connected-brake",
+      "start_line": 5012,
+      "title": "[17] LIVE INTERPRETER / VALUE LAYER / SELECTOR / CONNECTED BRAKE"
+    },
+    {
+      "bytes": 1221,
+      "end_line": 5136,
+      "level": 2,
+      "sha256": "ce38fd38cd2ed0206c0d75a6d7669dbfd39f40c10d269dd3d118938a86438741",
+      "slug": "17-1-carrier-enforcement-and-brake-states",
+      "start_line": 5075,
+      "title": "[17.1] Carrier, enforcement, and brake states"
+    },
+    {
+      "bytes": 898,
+      "end_line": 5181,
+      "level": 2,
+      "sha256": "a4471e3b7e923fdcf1f14ba97929dec4efdd86a534ea3dc9368bba061fa4937c",
+      "slug": "17-2-typed-pre-commit-brake-port",
+      "start_line": 5137,
+      "title": "[17.2] Typed pre-commit brake port"
+    },
+    {
+      "bytes": 642,
+      "end_line": 5218,
+      "level": 2,
+      "sha256": "345173f2b16dc6220342edfd3309fc8ac514fcfd36503131d24c96f6392564f1",
+      "slug": "17-3-typed-rollback-port",
+      "start_line": 5182,
+      "title": "[17.3] Typed rollback port"
+    },
+    {
+      "bytes": 1193,
+      "end_line": 5271,
+      "level": 1,
+      "sha256": "d7574bf19e1b1f48ecff53d30d0c5abf9a5f96f8587872439f3f2f877dc233e8",
+      "slug": "18-mechanistic-interpretability-latent-interface",
+      "start_line": 5219,
+      "title": "[18] MECHANISTIC-INTERPRETABILITY / LATENT INTERFACE"
+    },
+    {
+      "bytes": 4635,
+      "end_line": 5438,
+      "level": 1,
+      "sha256": "2f6d24c9157fa54bce4163f19a54ca95ef3acb33d610399bf3e04464cc0a47da",
+      "slug": "19-invariants-misuse-guards",
+      "start_line": 5272,
+      "title": "[19] INVARIANTS / MISUSE GUARDS"
+    },
+    {
+      "bytes": 651,
+      "end_line": 5361,
+      "level": 2,
+      "sha256": "43a007c43406882f58babd6c00e1d6edad0cef8598a6fdbc44e8b08907ff8260",
+      "slug": "19-1-packet-as-diligence-token",
+      "start_line": 5337,
+      "title": "[19.1] Packet as diligence token"
+    },
+    {
+      "bytes": 293,
+      "end_line": 5385,
+      "level": 2,
+      "sha256": "2fe91b03707a13ba2f2aaa813e5b7ddc6c8e083dc5e6a18b19eae52c55f97416",
+      "slug": "19-2-aperture-alibi",
+      "start_line": 5362,
+      "title": "[19.2] Aperture alibi"
+    },
+    {
+      "bytes": 181,
+      "end_line": 5391,
+      "level": 2,
+      "sha256": "a8d157b926bcc9c1eb48ca959eb38942c5028402d043aa03b9584784da699321",
+      "slug": "19-3-manufactured-urgency",
+      "start_line": 5386,
+      "title": "[19.3] Manufactured urgency"
+    },
+    {
+      "bytes": 372,
+      "end_line": 5407,
+      "level": 2,
+      "sha256": "fc9ce34c8ee3b17ac5401e328e85d4ba15d7e2b1083cc248f55ae9e526366546",
+      "slug": "19-4-husbandry-risk-interpretation",
+      "start_line": 5392,
+      "title": "[19.4] Husbandry-risk interpretation"
+    },
+    {
+      "bytes": 411,
+      "end_line": 5419,
+      "level": 2,
+      "sha256": "64e0c38b17e8f5fa5bc1766da4bef1f731c4e682fa577670975c6b5d5b35472b",
+      "slug": "19-5-weaponised-trace-accusation",
+      "start_line": 5408,
+      "title": "[19.5] Weaponised TRACE accusation"
+    },
+    {
+      "bytes": 599,
+      "end_line": 5438,
+      "level": 2,
+      "sha256": "958fc3071742a35d8e23dc2c32bf7a1d9e6e12f7b53111b2bf2a8a53c02ec4a7",
+      "slug": "19-6-performed-trace-compliance",
+      "start_line": 5420,
+      "title": "[19.6] Performed TRACE compliance"
+    },
+    {
+      "bytes": 6620,
+      "end_line": 5656,
+      "level": 1,
+      "sha256": "9df73ab13cf62b0ac37b56ad4870c3bf222051f465c7d4bfda7cb77ccf4a79e5",
+      "slug": "20-compression-survival-kernel",
+      "start_line": 5439,
+      "title": "[20] COMPRESSION / SURVIVAL KERNEL"
+    },
+    {
+      "bytes": 4915,
+      "end_line": 5759,
+      "level": 1,
+      "sha256": "dfe56cb26d52ee2f96ec35052999b666dc6c9e7c75f31f26220287a6843ceba0",
+      "slug": "21-document-control-open-frontier",
+      "start_line": 5657,
+      "title": "[21] DOCUMENT CONTROL / OPEN FRONTIER"
+    },
+    {
+      "bytes": 1494,
+      "end_line": 5666,
+      "level": 2,
+      "sha256": "18ed6206105c37b77251440748324808742f09556f0ae8508109af5c6d25249a",
+      "slug": "21-1-revision-declaration",
+      "start_line": 5659,
+      "title": "[21.1] Revision declaration"
+    },
+    {
+      "bytes": 383,
+      "end_line": 5685,
+      "level": 2,
+      "sha256": "9e99aab65226fc0b094d735c553e0d7e1fedeca1b023e82bff7f79790b2eece4",
+      "slug": "21-2-relationship-to-previous-capsule",
+      "start_line": 5667,
+      "title": "[21.2] Relationship to previous capsule"
+    },
+    {
+      "bytes": 334,
+      "end_line": 5696,
+      "level": 2,
+      "sha256": "4fff47237cebcb337bbcec4081b17acb9f89ccc694ce390f7b717655f21f5d74",
+      "slug": "21-3-relationship-to-mechanical-ethics",
+      "start_line": 5686,
+      "title": "[21.3] Relationship to Mechanical Ethics"
+    },
+    {
+      "bytes": 1924,
+      "end_line": 5725,
+      "level": 2,
+      "sha256": "8687f93344e547d478b6112f7e98e71f28d3ee6aaf977dbd447c4a441c10475d",
+      "slug": "21-4-unresolved",
+      "start_line": 5697,
+      "title": "[21.4] Unresolved"
+    },
+    {
+      "bytes": 391,
+      "end_line": 5743,
+      "level": 2,
+      "sha256": "b9751e01809b35497d0cc2c649ef8c6bc5bc422deefe37eb4c8e81de4abaac95",
+      "slug": "21-5-construction-test",
+      "start_line": 5726,
+      "title": "[21.5] Construction test"
+    },
+    {
+      "bytes": 348,
+      "end_line": 5759,
+      "level": 2,
+      "sha256": "2f14cda3fd26be61a327cde989f1324524d9d8613e08beaee35ca3811247a498",
+      "slug": "21-6-shortest-preservation-statement",
+      "start_line": 5744,
+      "title": "[21.6] Shortest preservation statement"
+    }
+  ],
+  "source_bytes": 150141,
+  "source_lines": 5759,
+  "source_path": "TRACE_FORMAL_SEED_v0_2_7.md",
+  "source_sha256": "de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab",
+  "status": "PASS"
+}
