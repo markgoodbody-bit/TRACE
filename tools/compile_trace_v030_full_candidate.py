@@ -69,6 +69,10 @@ SUPPLEMENTAL_INVARIANTS = (
     "ROLLBACK_POINT_ESTIMATE_BEFORE_BOUNDARY != GUARANTEED_RESTORATION",
     "FAST_ENOUGH_CLAIM_REQUIRES_COMMON_TEMPORAL_BASIS",
     "ROLLBACK_COMPLETED_BEFORE_BOUNDARY != RESTORED_STATE",
+    "ANALYTIC_TARGET_SELECTION != NEUTRAL",
+    "HIGHEST_RELEVANCE != MEASURE_FREE",
+    "TARGETED_REFINEMENT != COMPLETE_COVERAGE",
+    "OMITTED_BY_BUDGET != IRRELEVANT",
 )
 
 SURVIVAL_REQUIRED = (
@@ -90,6 +94,8 @@ SURVIVAL_REQUIRED = (
     "LOCAL_CORRECTION + STREAM_PERSISTENCE != MECHANISM_CHANGE",
     "BRAKE_POINT_ESTIMATE_BEFORE_COMMIT != GUARANTEED_PRECOMMIT",
     "ROLLBACK_COMPLETED_BEFORE_BOUNDARY != RESTORED_STATE",
+    "HIGHEST_RELEVANCE != MEASURE_FREE",
+    "OMITTED_BY_BUDGET != IRRELEVANT",
 )
 
 
@@ -760,6 +766,54 @@ A brake controlled only by the actor it may need to stop is not independent."""
     rollback_new = """Rollback timing inherits [8.8]. A strong claim that rollback completes in time requires an executable route and completion before the represented target boundary under the same target, affected-scope, boundary-condition, capability and temporal-basis bindings. Completing before that boundary does not by itself establish restoration or preservation; the reached/restored target state remains a separate load-bearing claim."""
     b.replace_once("T_BRAKE_ROLLBACK_TIMING_BINDING", rollback_old, rollback_new)
 
+    recursion_target_guard = r"""Refinement target-selection use rule:
+
+`target(R_k,L_k)` allocates analytic attention. Under a finite tracing budget,
+that choice can change which unresolved structures enter the later map. Where
+the choice can materially affect a downstream claim, comparison, coverage
+statement, correction-window result or proposed transition, expose where
+available:
+
+```text
+candidate_refinement_target_refs
+refinement_target_set_aperture_ref
+selection_basis_claim_refs
+designation_ref
+measure_ref
+selected_refinement_target_ref
+unselected_material_alternative_refs
+budget_omission_refs
+```
+
+Comparative language such as `highest relevance` requires a declared comparison
+basis. If no supported ordering is available, preserve the selection basis as
+`UNKNOWN`; do not silently convert an implementation heuristic into a neutral
+importance claim. Targets left unexplored because budget is exhausted remain
+visible as omissions where they could still change a load-bearing result.
+
+```text
+ANALYTIC_TARGET_SELECTION != WORLD_ACTION_SELECTION
+ANALYTIC_TARGET_SELECTION != NEUTRAL
+HIGHEST_RELEVANCE != MEASURE_FREE
+TARGET_SELECTED_FOR_REFINEMENT != TARGET_MOST_IMPORTANT_IN_WORLD
+TARGETED_REFINEMENT != COMPLETE_COVERAGE
+OMITTED_BY_BUDGET != IRRELEVANT
+FINITE_TRACING_BUDGET != COMPLETE_REPRESENTATION
+REFINEMENT_TARGET_SET != WORLD_SCOPE
+```
+
+This uses existing APERTURE / target-set aperture / CLAIM / LIMIT /
+designation / measure / selector machinery. It does not add an attention,
+refinement, priority or relevance primitive and does not grant world-action
+authority.
+
+"""
+    b.insert_before_once(
+        "T_RECURSION_TARGET_SELECTION",
+        "Let \\(d_k^{rem}\\ge0\\) be remaining tracing budget",
+        recursion_target_guard,
+    )
+
     record_guard = """
 Additional v0.3 record/residue use guards:
 
@@ -853,7 +907,15 @@ required. Measured advantage does not establish entitlement or moral rank.
     record_reader_limits(L)
 
     while depth_budget remains:
-        target <- highest_relevance_unresolved_node_or_edge(R)
+        candidates <- unresolved_refinement_targets(R)
+        record_refinement_target_set_aperture(R, candidates)
+        target, refinement_basis <- select_refinement_target(
+            candidates, declared_designation(R), declared_measure(R), depth_budget)
+        record_refinement_selection_basis_and_budget_omissions(
+            R, L, candidates, target, refinement_basis, depth_budget)
+        if refinement_basis is UNKNOWN and
+           unselected_candidate_could_materially_change_load_bearing_output(R, candidates, target):
+            preserve_refinement_selection_uncertainty(R, L)
         if stop_condition(target, R, L): break
         R <- merge_graphs(R, TRACE(target, aperture, history,
                                    depth_budget - 1, primitive_aperture))
@@ -1036,6 +1098,7 @@ future-path correspondence use guards
 correction-window target/binding/precedence/feasibility/interval discipline
 record/event and residue use guards
 measure-bound advantage claims
+recursive analytic target-selection binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
@@ -1160,6 +1223,10 @@ def verify_output(
         "ROLLBACK_COMPLETED_BEFORE_BOUNDARY != RESTORED_STATE",
         "GUARANTEED_PRECOMMIT_FOR_REPRESENTED_BINDINGS",
         "ROLLBACK_COMPLETES_BEFORE_BOUNDARY_FOR_REPRESENTED_BINDINGS",
+        "HIGHEST_RELEVANCE != MEASURE_FREE",
+        "OMITTED_BY_BUDGET != IRRELEVANT",
+        "record_refinement_target_set_aperture",
+        "record_refinement_selection_basis_and_budget_omissions",
     )
     for token in required_tokens:
         if token not in output_text:
@@ -1218,6 +1285,7 @@ def verify_output(
         "A post-commit rollback is distinct. It can preserve the threatened path only where rollback is executable and:",
         "latency lower than commitment time",
         "Rollback can preserve the threatened path only if it is executable, reaches the relevant state, and completes before practical irreversibility.",
+        "target <- highest_relevance_unresolved_node_or_edge(R)",
     )
     lower = output_text.lower()
     for phrase in bad_control:
