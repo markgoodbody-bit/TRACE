@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compare released TRACE v0.2.7 numbered invariants with v0.3 spine v0.10.
+"""Compare released TRACE v0.2.7 numbered invariants with v0.3 spine v0.11.
 
 This is intentionally a lexical coverage check. An invariant expression being
 absent verbatim does not prove semantic loss, and being present does not prove
@@ -17,8 +17,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DONOR_PATH = REPO_ROOT / "TRACE_FORMAL_SEED_v0_2_7.md"
-CANDIDATE_PATH = REPO_ROOT / "PROJECT" / "TRACE_v0_3_0_SPINE_CANDIDATE_v0_10.md"
-OUTPUT_PATH = REPO_ROOT / "PROJECT" / "TRACE_v0_3_0_INVARIANT_LEXICAL_COVERAGE_v0_3.json"
+CANDIDATE_PATH = REPO_ROOT / "PROJECT" / "TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md"
+OUTPUT_PATH = REPO_ROOT / "PROJECT" / "TRACE_v0_3_0_INVARIANT_LEXICAL_COVERAGE_v0_4.json"
 
 SECTION_START = "# [19] INVARIANTS / MISUSE GUARDS"
 SECTION_END = "## [19.1] Packet as diligence token"
