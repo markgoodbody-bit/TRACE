@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'tools/compile_trace_v030_full_candidate.py'
+      - 'tools/migrate_trace_v030_full_candidate_f01.py'
       - 'tools/build_trace_v027_section_manifest.py'
       - 'tools/build_trace_v030_minimum_schema.py'
       - 'TRACE_FORMAL_SEED_v0_2_7.md'
@@ -20,6 +21,7 @@ on:
   pull_request:
     paths:
       - 'tools/compile_trace_v030_full_candidate.py'
+      - 'tools/migrate_trace_v030_full_candidate_f01.py'
       - 'TRACE_FORMAL_SEED_v0_2_7.md'
       - 'PROJECT/TRACE_v0_2_7_SECTION_MANIFEST_v0_1.json'
       - 'PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_CANDIDATE_v0_1.json'
@@ -48,24 +50,49 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Apply exact F01 compiler migration
+        if: github.event_name == 'push'
+        run: |
+          python tools/migrate_trace_v030_full_candidate_f01.py
+
+      - name: Commit F01 compiler repair if needed
+        id: compiler_repair
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          if git diff --quiet -- tools/compile_trace_v030_full_candidate.py; then
+            echo 'committed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/compile_trace_v030_full_candidate.py
+          git commit -m 'Repair v0.3 local validator identity boundary'
+          git push
+          echo 'committed=true' >> "$GITHUB_OUTPUT"
+
       - name: Verify released-donor section manifest
+        if: steps.compiler_repair.outputs.committed != 'true'
         run: |
           python tools/build_trace_v027_section_manifest.py --check --report /tmp/trace-v027-section-manifest-check.json
 
       - name: Verify version-only minimum schema
+        if: steps.compiler_repair.outputs.committed != 'true'
         run: |
           python tools/build_trace_v030_minimum_schema.py --check --report /tmp/trace-v030-minimum-schema-check.json
 
       - name: Build full working candidate deterministically
+        if: steps.compiler_repair.outputs.committed != 'true'
         run: |
           python tools/compile_trace_v030_full_candidate.py --write --report /tmp/trace-v030-full-build.json
 
       - name: Re-run deterministic check against generated files
+        if: steps.compiler_repair.outputs.committed != 'true'
         run: |
           python tools/compile_trace_v030_full_candidate.py --check --report /tmp/trace-v030-full-check.json
 
       - name: Commit generated full candidate and build report if changed
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && steps.compiler_repair.outputs.committed != 'true'
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
