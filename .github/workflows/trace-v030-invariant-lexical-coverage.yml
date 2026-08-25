@@ -7,8 +7,8 @@ on:
     paths:
       - tools/check_trace_v030_invariant_lexical_coverage.py
       - TRACE_FORMAL_SEED_v0_2_7.md
-      - PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_10.md
-      - PROJECT/TRACE_v0_3_0_INVARIANT_LEXICAL_COVERAGE_v0_3.json
+      - PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md
+      - PROJECT/TRACE_v0_3_0_INVARIANT_LEXICAL_COVERAGE_v0_4.json
       - .github/workflows/trace-v030-invariant-lexical-coverage.yml
   workflow_dispatch:
 
@@ -39,14 +39,14 @@ jobs:
 
       - name: Commit deterministic coverage report when changed
         run: |
-          if [ -n "$(git status --porcelain -- PROJECT/TRACE_v0_3_0_INVARIANT_LEXICAL_COVERAGE_v0_3.json)" ]; then
+          if [ -n "$(git status --porcelain -- PROJECT/TRACE_v0_3_0_INVARIANT_LEXICAL_COVERAGE_v0_4.json)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add PROJECT/TRACE_v0_3_0_INVARIANT_LEXICAL_COVERAGE_v0_3.json
-            git commit -m "Compile TRACE v0.3.0 invariant lexical coverage v0.3"
+            git add PROJECT/TRACE_v0_3_0_INVARIANT_LEXICAL_COVERAGE_v0_4.json
+            git commit -m "Compile TRACE v0.3.0 invariant lexical coverage v0.4"
             git push origin HEAD:framework/trace-v0-3-0-working
           else
-            echo "Committed invariant lexical coverage v0.3 already matches checker."
+            echo "Committed invariant lexical coverage v0.4 already matches checker."
           fi
 
       - name: Verify committed deterministic report
@@ -58,11 +58,11 @@ jobs:
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         with:
-          name: trace-v030-invariant-lexical-coverage-v03
+          name: trace-v030-invariant-lexical-coverage-v04
           path: /tmp/trace-v030-invariant-lexical-final.json
           if-no-files-found: error
 
       - name: Claim boundary
         run: |
-          echo "Green means I01-I60 were extracted deterministically and exact expression presence was counted against spine v0.10."
+          echo "Green means I01-I60 were extracted deterministically and exact expression presence was counted against spine v0.11."
           echo "Missing exact text does not prove semantic loss; present exact text does not prove firing or validity."
