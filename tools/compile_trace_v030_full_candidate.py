@@ -73,6 +73,10 @@ SUPPLEMENTAL_INVARIANTS = (
     "HIGHEST_RELEVANCE != MEASURE_FREE",
     "TARGETED_REFINEMENT != COMPLETE_COVERAGE",
     "OMITTED_BY_BUDGET != IRRELEVANT",
+    "STOPPED != COMPLETED",
+    "TERMINATION != COMPLETE_COVERAGE",
+    "BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET",
+    "AUTHORITY_REACHED != ANALYSIS_COMPLETE",
 )
 
 SURVIVAL_REQUIRED = (
@@ -96,6 +100,10 @@ SURVIVAL_REQUIRED = (
     "ROLLBACK_COMPLETED_BEFORE_BOUNDARY != RESTORED_STATE",
     "HIGHEST_RELEVANCE != MEASURE_FREE",
     "OMITTED_BY_BUDGET != IRRELEVANT",
+    "STOPPED != COMPLETED",
+    "TERMINATION != COMPLETE_COVERAGE",
+    "BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET",
+    "AUTHORITY_REACHED != ANALYSIS_COMPLETE",
 )
 
 
@@ -814,6 +822,50 @@ authority.
         recursion_target_guard,
     )
 
+    recursion_stop_guard = r"""Recursion termination use rule:
+
+Stopping recursive differentiation is itself load-bearing when the termination
+basis can change a downstream claim, coverage statement, correction-window
+status, proposed transition or confidence/limits statement. A stop event must
+therefore preserve, where available:
+
+```text
+refinement_stop_basis_claim_refs
+refinement_stop_kind
+refinement_stop_measure_ref
+refinement_stop_limit_refs
+refinement_stop_clock_refs
+refinement_stop_route_or_handoff_refs
+material_unresolved_at_stop_refs
+```
+
+Distinguish bounded sufficiency from truncation, exhaustion and handoff. If the
+stopping basis is unsupported or the stop occurs because budget, access,
+authority or time prevents further material refinement, preserve the remaining
+material uncertainty/omissions rather than presenting termination as analytic
+completion.
+
+```text
+STOPPED != COMPLETED
+STOP_REASON_DECLARED != STOP_REASON_SUPPORTED
+STOP_FOR_BOUNDED_SUFFICIENCY != STOP_FOR_RESOURCE_EXHAUSTION
+STOP_FOR_HANDOFF != STOP_FOR_SUFFICIENCY
+TERMINATION != COMPLETE_COVERAGE
+BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET
+ACCESS_EXHAUSTED != QUESTION_RESOLVED
+AUTHORITY_REACHED != ANALYSIS_COMPLETE
+```
+
+This uses existing CLAIM / LIMIT / APERTURE / CLOCK / ROUTE / designation /
+measure machinery. No stop, termination or sufficiency primitive is added.
+
+"""
+    b.insert_before_once(
+        "T_RECURSION_STOP_PROVENANCE",
+        "## [11.3] Recursion stop\n",
+        recursion_stop_guard,
+    )
+
     record_guard = """
 Additional v0.3 record/residue use guards:
 
@@ -916,7 +968,14 @@ required. Measured advantage does not establish entitlement or moral rank.
         if refinement_basis is UNKNOWN and
            unselected_candidate_could_materially_change_load_bearing_output(R, candidates, target):
             preserve_refinement_selection_uncertainty(R, L)
-        if stop_condition(target, R, L): break
+        stop, stop_basis <- evaluate_refinement_stop_condition(
+            target, R, L, declared_designation(R), declared_measure(R))
+        if stop:
+            record_refinement_stop_basis_and_limits(R, L, target, stop_basis)
+            if not supported_bounded_sufficiency(stop_basis):
+                preserve_material_unresolved_after_truncation_or_handoff(
+                    R, L, candidates, target, stop_basis)
+            break
         R <- merge_graphs(R, TRACE(target, aperture, history,
                                    depth_budget - 1, primitive_aperture))
 
@@ -1099,6 +1158,7 @@ correction-window target/binding/precedence/feasibility/interval discipline
 record/event and residue use guards
 measure-bound advantage claims
 recursive analytic target-selection binding
+recursive termination provenance / truncation binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
@@ -1227,6 +1287,10 @@ def verify_output(
         "OMITTED_BY_BUDGET != IRRELEVANT",
         "record_refinement_target_set_aperture",
         "record_refinement_selection_basis_and_budget_omissions",
+        "STOPPED != COMPLETED",
+        "TERMINATION != COMPLETE_COVERAGE",
+        "record_refinement_stop_basis_and_limits",
+        "preserve_material_unresolved_after_truncation_or_handoff",
     )
     for token in required_tokens:
         if token not in output_text:
@@ -1286,6 +1350,7 @@ def verify_output(
         "latency lower than commitment time",
         "Rollback can preserve the threatened path only if it is executable, reaches the relevant state, and completes before practical irreversibility.",
         "target <- highest_relevance_unresolved_node_or_edge(R)",
+        "if stop_condition(target, R, L): break",
     )
     lower = output_text.lower()
     for phrase in bad_control:

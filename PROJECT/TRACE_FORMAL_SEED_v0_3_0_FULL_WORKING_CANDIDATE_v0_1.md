@@ -2677,6 +2677,43 @@ Therefore:
 \operatorname{Result}^{(n+1)}
 \]
 
+Recursion termination use rule:
+
+Stopping recursive differentiation is itself load-bearing when the termination
+basis can change a downstream claim, coverage statement, correction-window
+status, proposed transition or confidence/limits statement. A stop event must
+therefore preserve, where available:
+
+```text
+refinement_stop_basis_claim_refs
+refinement_stop_kind
+refinement_stop_measure_ref
+refinement_stop_limit_refs
+refinement_stop_clock_refs
+refinement_stop_route_or_handoff_refs
+material_unresolved_at_stop_refs
+```
+
+Distinguish bounded sufficiency from truncation, exhaustion and handoff. If the
+stopping basis is unsupported or the stop occurs because budget, access,
+authority or time prevents further material refinement, preserve the remaining
+material uncertainty/omissions rather than presenting termination as analytic
+completion.
+
+```text
+STOPPED != COMPLETED
+STOP_REASON_DECLARED != STOP_REASON_SUPPORTED
+STOP_FOR_BOUNDED_SUFFICIENCY != STOP_FOR_RESOURCE_EXHAUSTION
+STOP_FOR_HANDOFF != STOP_FOR_SUFFICIENCY
+TERMINATION != COMPLETE_COVERAGE
+BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET
+ACCESS_EXHAUSTED != QUESTION_RESOLVED
+AUTHORITY_REACHED != ANALYSIS_COMPLETE
+```
+
+This uses existing CLAIM / LIMIT / APERTURE / CLOCK / ROUTE / designation /
+measure machinery. No stop, termination or sufficiency primitive is added.
+
 ## [11.3] Recursion stop
 
 TRACE is not infinite analysis.
@@ -2930,7 +2967,14 @@ TRACE(X, aperture, history, depth_budget, primitive_aperture):
         if refinement_basis is UNKNOWN and
            unselected_candidate_could_materially_change_load_bearing_output(R, candidates, target):
             preserve_refinement_selection_uncertainty(R, L)
-        if stop_condition(target, R, L): break
+        stop, stop_basis <- evaluate_refinement_stop_condition(
+            target, R, L, declared_designation(R), declared_measure(R))
+        if stop:
+            record_refinement_stop_basis_and_limits(R, L, target, stop_basis)
+            if not supported_bounded_sufficiency(stop_basis):
+                preserve_material_unresolved_after_truncation_or_handoff(
+                    R, L, candidates, target, stop_basis)
+            break
         R <- merge_graphs(R, TRACE(target, aperture, history,
                                    depth_budget - 1, primitive_aperture))
 
@@ -5777,6 +5821,10 @@ ANALYTIC_TARGET_SELECTION != NEUTRAL
 HIGHEST_RELEVANCE != MEASURE_FREE
 TARGETED_REFINEMENT != COMPLETE_COVERAGE
 OMITTED_BY_BUDGET != IRRELEVANT
+STOPPED != COMPLETED
+TERMINATION != COMPLETE_COVERAGE
+BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET
+AUTHORITY_REACHED != ANALYSIS_COMPLETE
 ```
 
 ## [19.1] Packet as diligence token
@@ -6125,6 +6173,10 @@ BRAKE_POINT_ESTIMATE_BEFORE_COMMIT != GUARANTEED_PRECOMMIT
 ROLLBACK_COMPLETED_BEFORE_BOUNDARY != RESTORED_STATE
 HIGHEST_RELEVANCE != MEASURE_FREE
 OMITTED_BY_BUDGET != IRRELEVANT
+STOPPED != COMPLETED
+TERMINATION != COMPLETE_COVERAGE
+BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET
+AUTHORITY_REACHED != ANALYSIS_COMPLETE
 ```
 
 The same ceilings remain: this kernel is orientation, not proof, authority,
@@ -6173,6 +6225,7 @@ correction-window target/binding/precedence/feasibility/interval discipline
 record/event and residue use guards
 measure-bound advantage claims
 recursive analytic target-selection binding
+recursive termination provenance / truncation binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
