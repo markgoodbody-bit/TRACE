@@ -2625,6 +2625,26 @@ Record local target-set exhaustion as a termination state relative to the
 represented refinement target-set aperture and preserve material aperture /
 representation limits. No target, completion or coverage primitive is added.
 
+Recursion-entry budget use rule:
+
+The declared recursion budget is non-negative. Before target discovery, expose
+whether recursive refinement is prevented at entry by exhausted budget or by an
+invalid negative budget. Skipping the loop is not evidence that no refinement
+was needed.
+
+```text
+LOOP_NOT_ENTERED != RECURSION_COMPLETED
+INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED
+BUDGET_EXHAUSTED_AT_ENTRY != BOUNDED_SUFFICIENCY
+NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET
+RECURSION_SKIPPED != COMPLETE_COVERAGE
+```
+
+A zero remaining budget records budget-exhausted termination and the resulting
+recursive coverage limit. A negative remaining budget is outside the declared
+domain and is preserved as an invalid limit state rather than treated as usable
+budget. No new budget or termination primitive is added.
+
 Let \(d_k^{rem}\ge0\) be remaining tracing budget and \(\operatorname{cost}_d(q_k)>0\) the declared cost of the next refinement.
 
 \[
@@ -3015,6 +3035,14 @@ TRACE(X, aperture, history, depth_budget, primitive_aperture):
     generate_live_alternative_readings(R)
     test_internal_contradictions(R)
     record_reader_limits(L)
+
+    if depth_budget < 0:
+        record_invalid_negative_tracing_budget(R, L, depth_budget)
+        preserve_recursive_coverage_limit_due_to_invalid_budget(R, L)
+        depth_budget <- 0
+    elif depth_budget == 0:
+        record_budget_exhausted_at_recursion_entry(R, L, depth_budget)
+        preserve_recursive_coverage_limit_due_to_budget(R, L)
 
     while depth_budget remains:
         candidates <- unresolved_refinement_targets(R)
@@ -5915,6 +5943,11 @@ NO_UNRESOLVED_TARGET_IN_DECLARED_SET != COMPLETE_WORLD_COVERAGE
 LOCAL_REFINEMENT_EXHAUSTED != REPRESENTATION_COMPLETE
 NO_TARGET_SELECTED != SELECTOR_FAILURE
 EMPTY_TARGET_SET != BOUNDED_SUFFICIENCY_WITHOUT_BASIS
+LOOP_NOT_ENTERED != RECURSION_COMPLETED
+INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED
+BUDGET_EXHAUSTED_AT_ENTRY != BOUNDED_SUFFICIENCY
+NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET
+RECURSION_SKIPPED != COMPLETE_COVERAGE
 ```
 
 ## [19.1] Packet as diligence token
@@ -6278,6 +6311,10 @@ COST_RECORDED != COST_DOMAIN_VALID
 EMPTY_REFINEMENT_TARGET_SET != SELECTABLE_TARGET
 NO_UNRESOLVED_TARGET_IN_DECLARED_SET != COMPLETE_WORLD_COVERAGE
 LOCAL_REFINEMENT_EXHAUSTED != REPRESENTATION_COMPLETE
+LOOP_NOT_ENTERED != RECURSION_COMPLETED
+INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED
+NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET
+RECURSION_SKIPPED != COMPLETE_COVERAGE
 ```
 
 The same ceilings remain: this kernel is orientation, not proof, authority,
@@ -6330,6 +6367,7 @@ recursive termination provenance / truncation binding
 recursive declared-cost / budget-consumption binding
 recursive positive-cost domain enforcement
 recursive empty-target termination / coverage binding
+recursive entry-budget termination / domain binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening

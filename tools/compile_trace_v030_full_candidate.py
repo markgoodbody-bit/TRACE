@@ -90,6 +90,11 @@ SUPPLEMENTAL_INVARIANTS = (
     "LOCAL_REFINEMENT_EXHAUSTED != REPRESENTATION_COMPLETE",
     "NO_TARGET_SELECTED != SELECTOR_FAILURE",
     "EMPTY_TARGET_SET != BOUNDED_SUFFICIENCY_WITHOUT_BASIS",
+    "LOOP_NOT_ENTERED != RECURSION_COMPLETED",
+    "INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED",
+    "BUDGET_EXHAUSTED_AT_ENTRY != BOUNDED_SUFFICIENCY",
+    "NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET",
+    "RECURSION_SKIPPED != COMPLETE_COVERAGE",
 )
 
 SURVIVAL_REQUIRED = (
@@ -128,6 +133,10 @@ SURVIVAL_REQUIRED = (
     "EMPTY_REFINEMENT_TARGET_SET != SELECTABLE_TARGET",
     "NO_UNRESOLVED_TARGET_IN_DECLARED_SET != COMPLETE_WORLD_COVERAGE",
     "LOCAL_REFINEMENT_EXHAUSTED != REPRESENTATION_COMPLETE",
+    "LOOP_NOT_ENTERED != RECURSION_COMPLETED",
+    "INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED",
+    "NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET",
+    "RECURSION_SKIPPED != COMPLETE_COVERAGE",
 )
 
 
@@ -873,6 +882,33 @@ representation limits. No target, completion or coverage primitive is added.
         recursion_empty_target_guard,
     )
 
+    recursion_entry_budget_guard = r"""Recursion-entry budget use rule:
+
+The declared recursion budget is non-negative. Before target discovery, expose
+whether recursive refinement is prevented at entry by exhausted budget or by an
+invalid negative budget. Skipping the loop is not evidence that no refinement
+was needed.
+
+```text
+LOOP_NOT_ENTERED != RECURSION_COMPLETED
+INITIAL_BUDGET_ZERO != NO_REFINEMENT_NEEDED
+BUDGET_EXHAUSTED_AT_ENTRY != BOUNDED_SUFFICIENCY
+NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET
+RECURSION_SKIPPED != COMPLETE_COVERAGE
+```
+
+A zero remaining budget records budget-exhausted termination and the resulting
+recursive coverage limit. A negative remaining budget is outside the declared
+domain and is preserved as an invalid limit state rather than treated as usable
+budget. No new budget or termination primitive is added.
+
+"""
+    b.insert_before_once(
+        "T_RECURSION_ENTRY_BUDGET",
+        "Let \\(d_k^{rem}\\ge0\\) be remaining tracing budget",
+        recursion_entry_budget_guard,
+    )
+
     recursion_budget_guard = r"""Refinement-budget use rule:
 
 The declared tracing cost of a selected refinement is load-bearing. The
@@ -1061,6 +1097,14 @@ required. Measured advantage does not establish entitlement or moral rank.
     generate_live_alternative_readings(R)
     test_internal_contradictions(R)
     record_reader_limits(L)
+
+    if depth_budget < 0:
+        record_invalid_negative_tracing_budget(R, L, depth_budget)
+        preserve_recursive_coverage_limit_due_to_invalid_budget(R, L)
+        depth_budget <- 0
+    elif depth_budget == 0:
+        record_budget_exhausted_at_recursion_entry(R, L, depth_budget)
+        preserve_recursive_coverage_limit_due_to_budget(R, L)
 
     while depth_budget remains:
         candidates <- unresolved_refinement_targets(R)
@@ -1284,6 +1328,7 @@ recursive termination provenance / truncation binding
 recursive declared-cost / budget-consumption binding
 recursive positive-cost domain enforcement
 recursive empty-target termination / coverage binding
+recursive entry-budget termination / domain binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
@@ -1428,6 +1473,11 @@ def verify_output(
         "NO_UNRESOLVED_TARGET_IN_DECLARED_SET != COMPLETE_WORLD_COVERAGE",
         "record_empty_refinement_target_set_termination",
         "preserve_coverage_relative_to_refinement_target_set_aperture",
+        "LOOP_NOT_ENTERED != RECURSION_COMPLETED",
+        "NEGATIVE_TRACING_BUDGET != VALID_REMAINING_BUDGET",
+        "record_budget_exhausted_at_recursion_entry",
+        "record_invalid_negative_tracing_budget",
+        "preserve_recursive_coverage_limit_due_to_budget",
     )
     for token in required_tokens:
         if token not in output_text:
