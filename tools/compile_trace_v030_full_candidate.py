@@ -771,6 +771,16 @@ These are semantic use rules. They do not add required minimum-schema fields.
 """
     b.insert_before_once("T_PACKET_BINDING", "## [14.2] Packet-use boundary\n", binding_add)
 
+    validator_identity_old = (
+        "The v0.2.7 identifier records a narrow documentary, serialization-profile, and worked-transfer repair while the embedded minimum-schema shape remains identical to v0.2.6 after version normalization. The identifier does not imply that the minimum validator can enforce target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.\n\n"
+        "A v0.2.6 packet is not silently relabelled as v0.2.7. Structural compatibility does not erase packet identity or the semantic contract under which the packet was produced."
+    )
+    validator_identity_new = (
+        "The v0.3.0 identifier marks this generated full working candidate. Its embedded minimum-schema shape remains identical to released v0.2.7 after version normalization. That compatibility does not imply that the minimum validator can enforce the v0.3 checker-external semantic bindings, target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.\n\n"
+        "A v0.2.7 packet is not silently relabelled as v0.3.0. Structural compatibility does not erase packet identity or the semantic contract under which the packet was produced."
+    )
+    b.replace_once("T_VALIDATOR_IDENTITY_BOUNDARY", validator_identity_old, validator_identity_new)
+
     b.replace_all_exact("T_VERSION_IDENTITY", "TRACE-GRAPH-0.2.7", "TRACE-GRAPH-0.3.0", expected=5)
     b.replace_all_exact("T_VERSION_IDENTITY", 'trace_version: "0.2.7"', 'trace_version: "0.3.0"', expected=2)
     b.replace_once("T_VERSION_IDENTITY", '"const": "0.2.7"', '"const": "0.3.0"')
@@ -1021,6 +1031,7 @@ def verify_output(
         'trace_version: "0.3.0"',
         "TRACE // FORMAL SEED v0.3.0 // SURVIVAL KERNEL",
         "This generated object is **TRACE v0.3.0 FULL WORKING CANDIDATE v0.1**.",
+        "A v0.2.7 packet is not silently relabelled as v0.3.0.",
     )
     for token in required_tokens:
         if token not in output_text:
@@ -1073,6 +1084,8 @@ def verify_output(
         "v0.3.0 released baseline",
         "v0.3.0 is released",
         "v0.3.0 canonical baseline",
+        "The v0.2.7 identifier records a narrow documentary",
+        "A v0.2.6 packet is not silently relabelled as v0.2.7.",
     )
     lower = output_text.lower()
     for phrase in bad_control:
