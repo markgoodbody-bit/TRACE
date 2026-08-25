@@ -1,0 +1,68 @@
+name: TRACE v0.3.0 spine v0.11 build
+
+on:
+  push:
+    branches:
+      - framework/trace-v0-3-0-working
+    paths:
+      - tools/build_trace_v030_spine_v011.py
+      - PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_10.md
+      - PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md
+      - PROJECT/TRACE_v0_3_0_SPINE_V011_BUILD_REPORT_v0_1.json
+      - .github/workflows/trace-v030-spine-v011-build.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: framework/trace-v0-3-0-working
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build and verify v0.11 donor repair
+        run: |
+          python tools/build_trace_v030_spine_v011.py \
+            --write \
+            --report /tmp/trace-v030-spine-v011-first.json
+
+      - name: Check whitespace integrity
+        run: git diff --check
+
+      - name: Commit deterministic v0.11 when changed
+        run: |
+          if [ -n "$(git status --porcelain -- PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md PROJECT/TRACE_v0_3_0_SPINE_V011_BUILD_REPORT_v0_1.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md PROJECT/TRACE_v0_3_0_SPINE_V011_BUILD_REPORT_v0_1.json
+            git commit -m "Compile TRACE v0.3.0 spine candidate v0.11"
+            git push origin HEAD:framework/trace-v0-3-0-working
+          else
+            echo "Committed v0.11 already matches builder."
+          fi
+
+      - name: Verify committed deterministic output
+        run: |
+          python tools/build_trace_v030_spine_v011.py \
+            --check \
+            --report /tmp/trace-v030-spine-v011-final.json
+
+      - name: Upload build report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-v030-spine-v011-build
+          path: /tmp/trace-v030-spine-v011-final.json
+          if-no-files-found: error
+
+      - name: Claim boundary
+        run: |
+          echo "Green means v0.11 differs from v0.10 only at seven declared donor-repair surfaces and restores I03/I25/I49/I50/I52 exactly."
+          echo "It does not mean semantic completeness, release, canon, validation, world validity, authority, permission or clearance."
