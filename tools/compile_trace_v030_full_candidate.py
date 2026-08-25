@@ -77,6 +77,10 @@ SUPPLEMENTAL_INVARIANTS = (
     "TERMINATION != COMPLETE_COVERAGE",
     "BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET",
     "AUTHORITY_REACHED != ANALYSIS_COMPLETE",
+    "DECLARED_REFINEMENT_COST != UNIT_COST",
+    "BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE",
+    "COST_UNKNOWN != COST_ONE",
+    "REFINEMENT_SELECTED != REFINEMENT_BUDGET_FEASIBLE",
 )
 
 SURVIVAL_REQUIRED = (
@@ -104,6 +108,10 @@ SURVIVAL_REQUIRED = (
     "TERMINATION != COMPLETE_COVERAGE",
     "BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET",
     "AUTHORITY_REACHED != ANALYSIS_COMPLETE",
+    "DECLARED_REFINEMENT_COST != UNIT_COST",
+    "BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE",
+    "COST_UNKNOWN != COST_ONE",
+    "REFINEMENT_SELECTED != REFINEMENT_BUDGET_FEASIBLE",
 )
 
 
@@ -822,6 +830,35 @@ authority.
         recursion_target_guard,
     )
 
+    recursion_budget_guard = r"""Refinement-budget use rule:
+
+The declared tracing cost of a selected refinement is load-bearing. The
+operator must not silently replace `cost_d(q_k)` with a unit decrement.
+Before recursion, bind the selected target to a supported refinement-cost claim,
+compute the next remaining budget on the same declared budget basis, and recurse
+only if the next budget is non-negative.
+
+```text
+DECLARED_REFINEMENT_COST != UNIT_COST
+BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE
+BUDGET_DECREMENT != RECURSION_DEPTH_DECREMENT
+COST_UNKNOWN != COST_ONE
+REFINEMENT_SELECTED != REFINEMENT_BUDGET_FEASIBLE
+```
+
+If the load-bearing refinement cost is `UNKNOWN`, do not default it to one.
+Preserve budget feasibility as unresolved. If the declared cost exceeds the
+remaining budget, record exhaustion/insufficiency and preserve the selected
+material target as unresolved rather than executing an unaffordable refinement.
+No budget, resource or cost primitive is added.
+
+"""
+    b.insert_before_once(
+        "T_RECURSION_BUDGET_COST",
+        "When \\(d_{k+1}^{rem}\\ge0\\):",
+        recursion_budget_guard,
+    )
+
     recursion_stop_guard = r"""Recursion termination use rule:
 
 Stopping recursive differentiation is itself load-bearing when the termination
@@ -976,8 +1013,18 @@ required. Measured advantage does not establish entitlement or moral rank.
                 preserve_material_unresolved_after_truncation_or_handoff(
                     R, L, candidates, target, stop_basis)
             break
+        refinement_cost <- declared_refinement_cost(target, R, L)
+        if refinement_cost is UNKNOWN:
+            preserve_unknown_refinement_cost_and_budget_feasibility(R, L, target)
+            break
+        next_depth_budget <- depth_budget - refinement_cost
+        if next_depth_budget < 0:
+            record_budget_exhaustion_before_refinement(
+                R, L, target, depth_budget, refinement_cost)
+            preserve_material_unresolved_after_budget_exhaustion(R, L, target)
+            break
         R <- merge_graphs(R, TRACE(target, aperture, history,
-                                   depth_budget - 1, primitive_aperture))
+                                   next_depth_budget, primitive_aperture))
 
     state_transition_and_coverage_results_relative_to_declared_apertures(R)
     emit_available_transitions_without_selecting(R)
@@ -1159,6 +1206,7 @@ record/event and residue use guards
 measure-bound advantage claims
 recursive analytic target-selection binding
 recursive termination provenance / truncation binding
+recursive declared-cost / budget-consumption binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
@@ -1291,6 +1339,11 @@ def verify_output(
         "TERMINATION != COMPLETE_COVERAGE",
         "record_refinement_stop_basis_and_limits",
         "preserve_material_unresolved_after_truncation_or_handoff",
+        "DECLARED_REFINEMENT_COST != UNIT_COST",
+        "BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE",
+        "declared_refinement_cost",
+        "record_budget_exhaustion_before_refinement",
+        "preserve_unknown_refinement_cost_and_budget_feasibility",
     )
     for token in required_tokens:
         if token not in output_text:
@@ -1351,6 +1404,7 @@ def verify_output(
         "Rollback can preserve the threatened path only if it is executable, reaches the relevant state, and completes before practical irreversibility.",
         "target <- highest_relevance_unresolved_node_or_edge(R)",
         "if stop_condition(target, R, L): break",
+        "depth_budget - 1",
     )
     lower = output_text.lower()
     for phrase in bad_control:

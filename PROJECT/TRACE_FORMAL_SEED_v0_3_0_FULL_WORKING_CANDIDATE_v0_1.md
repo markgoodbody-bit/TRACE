@@ -2612,6 +2612,28 @@ d_{k+1}^{rem}=
 d_k^{rem}-\operatorname{cost}_d(q_k)
 \]
 
+Refinement-budget use rule:
+
+The declared tracing cost of a selected refinement is load-bearing. The
+operator must not silently replace `cost_d(q_k)` with a unit decrement.
+Before recursion, bind the selected target to a supported refinement-cost claim,
+compute the next remaining budget on the same declared budget basis, and recurse
+only if the next budget is non-negative.
+
+```text
+DECLARED_REFINEMENT_COST != UNIT_COST
+BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE
+BUDGET_DECREMENT != RECURSION_DEPTH_DECREMENT
+COST_UNKNOWN != COST_ONE
+REFINEMENT_SELECTED != REFINEMENT_BUDGET_FEASIBLE
+```
+
+If the load-bearing refinement cost is `UNKNOWN`, do not default it to one.
+Preserve budget feasibility as unresolved. If the declared cost exceeds the
+remaining budget, record exhaustion/insufficiency and preserve the selected
+material target as unresolved rather than executing an unaffordable refinement.
+No budget, resource or cost primitive is added.
+
 When \(d_{k+1}^{rem}\ge0\):
 
 \[
@@ -2975,8 +2997,18 @@ TRACE(X, aperture, history, depth_budget, primitive_aperture):
                 preserve_material_unresolved_after_truncation_or_handoff(
                     R, L, candidates, target, stop_basis)
             break
+        refinement_cost <- declared_refinement_cost(target, R, L)
+        if refinement_cost is UNKNOWN:
+            preserve_unknown_refinement_cost_and_budget_feasibility(R, L, target)
+            break
+        next_depth_budget <- depth_budget - refinement_cost
+        if next_depth_budget < 0:
+            record_budget_exhaustion_before_refinement(
+                R, L, target, depth_budget, refinement_cost)
+            preserve_material_unresolved_after_budget_exhaustion(R, L, target)
+            break
         R <- merge_graphs(R, TRACE(target, aperture, history,
-                                   depth_budget - 1, primitive_aperture))
+                                   next_depth_budget, primitive_aperture))
 
     state_transition_and_coverage_results_relative_to_declared_apertures(R)
     emit_available_transitions_without_selecting(R)
@@ -5825,6 +5857,10 @@ STOPPED != COMPLETED
 TERMINATION != COMPLETE_COVERAGE
 BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET
 AUTHORITY_REACHED != ANALYSIS_COMPLETE
+DECLARED_REFINEMENT_COST != UNIT_COST
+BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE
+COST_UNKNOWN != COST_ONE
+REFINEMENT_SELECTED != REFINEMENT_BUDGET_FEASIBLE
 ```
 
 ## [19.1] Packet as diligence token
@@ -6177,6 +6213,10 @@ STOPPED != COMPLETED
 TERMINATION != COMPLETE_COVERAGE
 BUDGET_EXHAUSTED != NO_MATERIAL_UNRESOLVED_TARGET
 AUTHORITY_REACHED != ANALYSIS_COMPLETE
+DECLARED_REFINEMENT_COST != UNIT_COST
+BUDGET_REMAINS != NEXT_REFINEMENT_AFFORDABLE
+COST_UNKNOWN != COST_ONE
+REFINEMENT_SELECTED != REFINEMENT_BUDGET_FEASIBLE
 ```
 
 The same ceilings remain: this kernel is orientation, not proof, authority,
@@ -6226,6 +6266,7 @@ record/event and residue use guards
 measure-bound advantage claims
 recursive analytic target-selection binding
 recursive termination provenance / truncation binding
+recursive declared-cost / budget-consumption binding
 operator/checker discrimination
 packet binding without shape expansion
 worked-case regression tightening
