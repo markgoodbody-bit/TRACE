@@ -1,0 +1,40 @@
+CASE: McGuire Air Force Base #1 — Operable Unit 4, Bulk Fuel Storage Area / Fire Training Area
+CASE_ID: 0e66ad853ad9f5e71bae907fa8f0aa5177355963efbd9e50abe2ea644a67575c
+
+SOURCE BASIS
+
+Primary decision identity: U.S. Environmental Protection Agency Superfund Public User Database, McGuire Air Force Base #1, EPA ID NJ0570024018, site ID 0201162, Operable Unit 4 / BFSA & Fire Training Area, Record of Decision action sequence 4, recorded final on 29 April 2022.
+Official site profile: https://cumulis.epa.gov/supercpad/SiteProfiles/index.cfm?fuseaction=second.docdata&id=0201162
+Official Record of Decision: https://semspub.epa.gov/work/02/644349.pdf
+
+The Record of Decision document is dated March 2022; the EPA action ledger records the final ROD action on 29 April 2022. This packet is a bounded digest of EPA material, not the full administrative record.
+
+FACTUAL MATERIAL
+
+The decision concerns Site ST009 at Joint Base McGuire-Dix-Lakehurst, historically used as a bulk fuel storage area. Investigation identified light non-aqueous phase liquid (LNAPL), associated with jet fuel, in the subsurface. Jet-fuel constituents including benzene, toluene, ethylbenzene and xylenes were also identified in groundwater. EPA/USAF investigation material described unacceptable groundwater risk as a trigger for remedial action and treated the LNAPL source as requiring remediation.
+
+The Record of Decision states that remedial alternatives for ST009 were developed and evaluated through a feasibility study. The U.S. Air Force selected Alternative 3.
+
+The major components of the selected response were:
+
+- natural source-zone depletion intended to reduce the mass of LNAPL in the subsurface;
+- active LNAPL skimming in monitoring wells with historically greater LNAPL thicknesses and in additional new skimming wells;
+- the option to supplement skimming with localized bioventing and low-temperature thermal enhancement where those methods were judged beneficial;
+- long-term monitoring of groundwater and surface water to track changes, including migration of LNAPL and changes in contaminants of concern, and to check that contamination above applicable requirements was not migrating off-site; and
+- land-use controls for groundwater, including engineering controls and administrative groundwater-use restrictions.
+
+The ROD describes the broader cleanup strategy as combining source management with migration and exposure controls. The selected alternative was intended to remediate the source area while controlling exposure associated with the downgradient diffuse plume.
+
+EPA’s supporting cost material for Alternative 3 described skimming in existing wells plus additional skimming wells, full-time skimming operation for an initial period, and a monitoring programme that becomes less frequent over time. It also anticipated continuing five-year reviews over a long remedial timeframe. These estimates are planning assumptions, not proof that the remedy would perform exactly as projected.
+
+The proposed-plan process included public comment. EPA material records community questions about site contamination, runoff, public health and safety. The administrative record also contains the remedial investigation, feasibility study and risk assessment on which the remedy was based.
+
+The selected remedy is a decision about how to manage contamination over time rather than a declaration that contamination has already been removed or that future monitoring is unnecessary.
+
+INFORMATION NOT SUPPLIED IN THIS PACKET
+
+The full remedial investigation, feasibility-study alternatives, quantitative risk tables, monitoring datasets, cost tables, public comments and responses, engineering drawings and later performance data are not reproduced here. The packet does not establish the precise future rate of LNAPL depletion, the eventual effectiveness of each enhancement method, whether contamination later migrated beyond the monitored area, or how every affected community member viewed the remedy. It does not supply later five-year-review findings or evidence that the remedy has reached its long-term cleanup objectives.
+
+REVIEW QUESTION
+
+Using only the information in this packet, what should a person reviewing this situation understand before deciding what action, oversight, or follow-up is warranted?
