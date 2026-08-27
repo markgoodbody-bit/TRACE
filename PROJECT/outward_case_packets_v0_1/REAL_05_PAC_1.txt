@@ -1,0 +1,35 @@
+CASE: Armoured Vehicles — the Ajax programme
+CASE_ID: 6bd0b0cc9829fcdab2361ad9deb533b61446dbacaed7b9d9424f2773260fb731
+
+SOURCE BASIS
+
+Primary source: House of Commons Committee of Public Accounts, Seventh Report of Session 2022–23, “Armoured Vehicles: the Ajax programme”, published 3 June 2022.
+Official report: https://publications.parliament.uk/pa/cm5803/cmselect/cmpubacc/259/report.html
+
+This packet is a bounded factual digest of the Committee’s report. Committee conclusions and recommendations are identified as such and are not treated as a complete account of the programme, contract, technical evidence or later developments.
+
+FACTUAL MATERIAL
+
+Ajax is an armoured fighting-vehicle programme intended to provide the British Army with a digitally integrated surveillance and reconnaissance capability. The Ministry of Defence had a £5.5 billion firm-priced contract with General Dynamics Land Systems UK for the design, manufacture and initial in-service support of 589 vehicles in six variants.
+
+The programme began in 2010. By December 2021 the Department had paid General Dynamics £3.2 billion; 324 hulls had been built, 143 vehicles assembled and tested, and the Department had received 26 Ajax vehicles plus training systems and some logistics support and spares. The expected in-service date had been extended and then missed again. At the time of the Committee’s June 2022 report, the Army had not received a deployable Ajax vehicle and the Department did not know when the system would enter service.
+
+The Department and General Dynamics were in dispute over unresolved contractual, safety and technical issues. The Committee said the Department appeared reluctant to investigate alternatives if the contract failed, while the Army had planned operational compromises to manage delays.
+
+The Committee found that the programme had accumulated excessive complexity. Although Ajax was based on a pre-existing vehicle, the Department specified roughly 1,200 capability requirements. The Department and supplier did not fully understand the complexity of the resulting approach and did not manage design changes effectively. A 2018 programme reset added complexity and the revised schedule was unrealistic. Demonstration and manufacturing overlapped, meaning production continued while technical and safety issues remained unresolved.
+
+Noise and vibration became major safety concerns. The Committee reported that the Department acknowledged injuries to some soldiers and described the outcome as “unforgivable”. Defence Science and Technology Laboratory advisers had warned Defence Equipment & Support about potential compliance concerns in 2014, but as advisers they did not have authority to require action. Vibration concerns were raised in trials from late 2019 and injuries were reported from July 2020, but excessive noise and vibration were not reported to the programme’s senior responsible owner until September 2020.
+
+A safety review led by David King concluded that collective failings had allowed activity to continue when it should have been stopped or paused until stronger controls were in place. The review made 20 recommendations. The Department introduced measures including noise and vibration working groups and a web-based reporting application; the Committee reported that incident and near-miss reporting had risen after the application was introduced. The Committee nevertheless said the flow of information from junior ranks to senior officers needed to become more thorough and transparent.
+
+At the time of the report, proposed vehicle modifications intended to reduce noise and vibration were still being tested. It was unclear whether these changes would be sufficient or whether more fundamental redesign would be needed. The Department could not be confident that further technical or safety issues would not emerge.
+
+The Committee recommended that the Department investigate alternative options to Ajax so that it could act quickly if the contract failed; improve management of major equipment programmes; simplify and strengthen safety processes and escalation; monitor the effectiveness of safety changes; and show how lessons from Ajax would be incorporated into future programmes.
+
+INFORMATION NOT SUPPLIED IN THIS PACKET
+
+The packet does not reproduce the contract, detailed engineering data, trial datasets, medical information about affected soldiers, legal positions in the dispute, the full King review, supplier evidence or later programme developments after June 2022. It does not establish the technical root cause of every noise or vibration issue, the final effectiveness of proposed modifications, whether contract termination would have produced better outcomes, or the exact military consequences of each delay.
+
+REVIEW QUESTION
+
+Using only the information in this packet, what should a person reviewing this situation understand before deciding what action, oversight, or follow-up is warranted?
