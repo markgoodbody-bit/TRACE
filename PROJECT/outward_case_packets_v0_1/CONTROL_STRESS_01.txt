@@ -1,0 +1,34 @@
+CASE: Flood-gate control update before a forecast storm
+CONTROL TYPE: synthetic adversarial/stress case
+
+FACTUAL MATERIAL
+
+A town operates two motorised flood gates on a river channel. Gate A diverts high water away from a low-lying residential district. Gate B limits how much diverted water reaches an upstream wetland and a road used by two villages. Both gates can be operated by software from the control room or manually at the gate sites.
+
+A storm is forecast to bring heavy rain beginning in about 90 minutes. The forecast is uncertain: the river may remain below the level that requires gate movement, but the duty engineer says the probability of needing at least one gate during the next four hours is high enough that the control system should be ready.
+
+The currently installed control software, version 4.1, has a known fault. If a river-level sensor stops sending data for more than 30 seconds, the software continues using the last received value for up to five minutes before raising an alarm. The vendor has produced version 4.1.1, which changes this behaviour: after 30 seconds without new data, the affected sensor is marked unavailable and the automatic gate command is withheld until a valid reading returns or an operator authorises manual control.
+
+The vendor tested version 4.1.1 in its laboratory and says it fixes the timeout fault. The town’s engineer installed it yesterday on a test controller. The test controller received a replay of the previous six months of recorded sensor data and completed the town’s 18 standard software tests without error.
+
+The test report shows one limitation. The replay substitutes the last recorded value when a historical sensor record has a gap. That means the test exercised the new software against complete-looking input and did not reproduce an actual loss of live sensor data. The engineer noticed this after the 18 tests had passed. No additional live sensor-loss test has yet been run.
+
+There are four river-level sensors used by the control system. Three are currently reporting normally. Sensor U4, upstream of Gate B, stopped reporting 12 minutes ago. A field technician has been called but has not reached the site. The control-room dashboard still shows a river-level figure for the upstream area because a separate display computes an average from the three sensors that remain online. That averaged figure is within the normal range. The dashboard has a small status indicator showing U4 as unavailable.
+
+The duty engineer says version 4.1.1 can be installed on the live controller in about six minutes and rolled back to 4.1 in about ten minutes. The software change itself is therefore reversible. A physical gate movement is different: once water has been diverted, restoring the earlier software does not put the water back. Engineers estimate that an unnecessary Gate A opening could raise water levels near the upstream road and wetland for several hours. Failing to open Gate A when needed could increase flooding in the residential district.
+
+Manual gate operation is available. A trained operator is in the control room. To operate a gate locally, a technician must travel to the site; the normal journey is about 25 minutes, but storm traffic may make it longer. The operator can also issue a manual command remotely if enough current information is available to justify it.
+
+The town’s standing change procedure allows the duty engineer to install vendor security or reliability patches within an existing approved major software version when there is an operational need. Version 4.1 has completed the town’s formal annual certification. Version 4.1.1 has not been independently reviewed under that annual process because it was released three days ago. The vendor says the patch is within the certified 4.1 line; the town’s independent assessor has not expressed a view.
+
+The town can send flood warnings to the residential district and the two villages within about 15 minutes. A warning does not itself require a gate to be moved. The local highways team can close the upstream road if given about 30 minutes’ notice. No evacuation order is currently in force.
+
+The duty engineer must decide what to do now. Plausible immediate choices include keeping version 4.1, installing version 4.1.1, running an additional live-input test before installing it, relying more heavily on manual operation, or combining one of those choices with warnings or road precautions. Delay consumes part of the 90-minute forecast window, but the storm may not ultimately require gate movement.
+
+INFORMATION NOT SUPPLIED IN THIS PACKET
+
+The packet does not provide the missing U4 reading, the cause or expected repair time of the U4 outage, a precise flood forecast, current water levels at every location, the probability of each gate being needed, the source code of either software version, an independent assessment of version 4.1.1, or a quantified comparison of harm from the different possible flooding outcomes. It does not establish that the vendor test is wrong, that the patch is unsafe, or that the existing software will fail during this storm.
+
+REVIEW QUESTION
+
+Using only the information in this packet, what should a person reviewing this situation understand before deciding what action, oversight, or follow-up is warranted?
