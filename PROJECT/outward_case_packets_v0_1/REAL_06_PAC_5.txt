@@ -1,0 +1,37 @@
+CASE: Child Maintenance
+CASE_ID: 6bf2c8e67538aa04ac6aa985971f67a0e613d4655fd6c6eebab9caef29e4892c
+
+SOURCE BASIS
+
+Primary source: House of Commons Committee of Public Accounts, Ninth Report of Session 2022–23, “Child Maintenance”, published 22 June 2022.
+Official report: https://publications.parliament.uk/pa/cm5803/cmselect/cmpubacc/255/report.html
+
+This packet is a bounded factual digest of the Committee’s report. Committee conclusions and recommendations are identified as such and are not treated as a complete account of every family, payment, policy constraint or later development.
+
+FACTUAL MATERIAL
+
+The Committee reported an estimated 3.6 million children in 2.4 million separated families in Great Britain. Child maintenance covers how a child’s living costs are paid when one parent does not live with the child. The Department for Work & Pensions is responsible for policy and operates the statutory Child Maintenance Service (CMS), introduced in 2012 after earlier Child Support Agency schemes.
+
+At the time of the report, 18% of separated families had a statutory CMS arrangement, 38% had a family-based arrangement and 44% had no arrangement. The Committee estimated that around 1.8 million children of separated families did not benefit from child maintenance. It concluded that the intended integrated, cross-government support system for separated families had not materialised and criticised the Department for not leading that integration.
+
+The statutory scheme has two main payment routes. Under Direct Pay, the Department calculates maintenance but payments are made directly between parents. Under Collect and Pay, the Department collects from the paying parent and transfers the payment to the receiving parent, charging fees. Non-resident parents paid an estimated £1 billion through statutory arrangements in 2020–21; administration cost the taxpayer £322 million.
+
+The Department did not routinely monitor whether Direct Pay payments were actually made. Around half of new Direct Pay arrangements were reported as not sustained or not effective, allowing unpaid maintenance to build before some cases moved to Collect and Pay. The Committee said enforcement was too slow and that arrears could continue growing while cases moved through legally defined enforcement stages. It reported that unpaid maintenance on Collect and Pay had reached £440 million by October 2021 and cited a forecast that, without further action or write-off, outstanding arrears could reach £1 billion by March 2031.
+
+Affordability also affected enforcement and payment. The Committee reported that low-income paying parents were disproportionately represented among those with arrears and that some combined effects of child-maintenance payments, benefits withdrawal and council-tax reductions could create very high effective marginal rates as income increased. It also noted that some statutory earnings thresholds used in maintenance calculations had not been updated since 1998.
+
+The Committee found that CMS take-up was lower than expected and that the Department did not know whether all groups found the service equally accessible or achieved similar outcomes. Departmental research indicated that low-income families, disabled people and families with higher parental conflict were more likely to have no maintenance arrangement. The report also recorded lower CMS use among some minority ethnic groups and said the Department had not researched the reasons.
+
+The report described specific risks for victims and survivors of domestic abuse. Evidence before the Committee warned that child-maintenance arrangements can be used by an abusive former partner to continue abuse and that Direct Pay may increase risk by requiring contact over payments.
+
+The Committee also criticised customer-service performance and the handling of complaints. It said the Department needed better measures to distinguish unavoidable dissatisfaction from systemic service problems.
+
+Recommendations included stronger cross-government integration; better understanding of access and outcomes for different groups; faster and better-informed enforcement; a strategy for growing arrears that considered affordability and potentially uncollectable debt; review of payment affordability and calculation thresholds; stronger fraud-and-error assessment; and use of the digital-transformation programme to improve service evidence and performance.
+
+INFORMATION NOT SUPPLIED IN THIS PACKET
+
+This packet contains no individual family case files, payment histories, court records or testimony beyond the aggregate findings reflected in the Committee report. It does not establish why any specific parent paid or did not pay, which arrears were realistically recoverable, the prevalence or severity of abuse in Direct Pay cases, the eventual effects of the planned digital transformation, or how legislation and policy changed after June 2022. It does not provide the Government’s later response or a complete account of perspectives from receiving parents, paying parents, children, staff and support organisations.
+
+REVIEW QUESTION
+
+Using only the information in this packet, what should a person reviewing this situation understand before deciding what action, oversight, or follow-up is warranted?
