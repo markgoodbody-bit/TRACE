@@ -58,7 +58,10 @@ LIMITS, STATED
     MUTANT_KILLED_ON_THIS_CORPUS != GUARD_CORRECT
     NOT_EXERCISED_HERE != NEVER_EXERCISED
 """
+import datetime
+import hashlib
 import io
+import json
 import os
 import re
 import shutil
@@ -197,23 +200,67 @@ def main():
         print("  identical input, differing output -- a mutant cannot be scored against it.\n")
     scored = [t for t in targets if t not in unstable]
 
+    # ---- @zola c24761: the three rejection reasons must stay distinguishable --
+    #
+    #   "I'd preserve the loaded stamp and baseline result as first-class run
+    #    artifacts, so a later reviewer can tell whether a mutant was rejected
+    #    for not loading, for not changing output, or for genuinely surviving
+    #    the instrument."
+    #
+    # Before this, a mutant that failed to load hit `continue` and vanished from
+    # rows entirely -- indistinguishable in the output from a guard I never
+    # wrote a mutant for. Three different failures collapsed into one silence.
+    #
+    #     ABSENT_FROM_THE_TABLE != NOTHING_WENT_WRONG
+    #
+    # So every mutant now lands in the record with an explicit state, and the
+    # record is written to disk rather than printed and lost.
+    record = {
+        "at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "corpus": os.path.basename(corpus),
+        "corpus_sha256": hashlib.sha256(
+            io.open(corpus, "rb").read()).hexdigest()[:16],
+        "instruments_total": len(targets),
+        "instruments_scored": len(scored),
+        "nondeterministic": sorted(unstable),
+        "baseline": {t: {"exit": baseline[t][0],
+                         "output_sha256": hashlib.sha256(
+                             baseline[t][1].encode("utf-8")).hexdigest()[:16]}
+                     for t in targets},
+        "mutants": {},
+    }
+
     rows = []
     for gname, mutant in list(MUTANTS.items()) + [(k + " [forced-refusal]", v)
                                                   for k, v in REFUSERS.items()]:
         gname_real = gname.split(" ")[0]
+        entry = {"load_stamp_expected": gname_real, "state": None, "instruments": {}}
+        record["mutants"][gname] = entry
         msrc = mutate_source(guards_src, gname_real, mutant)
         if msrc is None:
+            entry["state"] = "NOT_WRITTEN"
+            entry["reason"] = "identifier not found in guards.py"
             print("  SKIP %s: not found in guards.py" % gname)
             continue
         tmp = stage(msrc, gname_real)
         try:
             if not mutant_loaded(tmp, gname_real):
+                entry["state"] = "NOT_LOADED"
+                entry["reason"] = ("mutant written but the staged guards.py is not "
+                                   "the module the instruments imported")
                 print("  REFUSING %s: mutant written but NOT LOADED. Not scoring." % gname)
                 continue
+            entry["state"] = "LOADED"
             for t in scored:
                 rc, out = run(t, tmp, corpus)
                 brc, bout = baseline[t]
-                rows.append((gname, t, (out != bout) or (rc != brc), brc, rc))
+                killed = (out != bout) or (rc != brc)
+                entry["instruments"][t] = {
+                    "verdict": "KILLED" if killed else "SURVIVED",
+                    "baseline_exit": brc, "mutant_exit": rc,
+                    "output_changed": out != bout,
+                }
+                rows.append((gname, t, killed, brc, rc))
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
 
@@ -237,11 +284,50 @@ def main():
             inert.append(t)
             print("  %s: no mutant changed its output. IMPORT_PRESENT != GUARD_EXERCISED" % t)
     if not inert:
-        print("  every scored instrument had at least one guard proved load-bearing.")
+        print("  every SCORED instrument had at least one guard proved load-bearing.")
+    record["inert_instruments"] = sorted(inert)
+
+    # ---- @zola c24762: name the coverage limit, do not convert it to a pass ---
+    #
+    #   "Keeping the nondeterministic exclusion explicit is also important: an
+    #    untestable instrument should be named as a coverage limit, not silently
+    #    converted into a pass."
+    #
+    # The previous version excluded nondeterministic instruments, printed one
+    # line about them, and then exited 0 as long as nothing scored came back
+    # inert. A run that could score two instruments out of twelve reported the
+    # same exit code as a run that scored all twelve.
+    #
+    #     EXCLUDED_FROM_SCORING != ACCOUNTED_FOR
+    #     NOTHING_FAILED != EVERYTHING_WAS_TESTED
+    not_loaded = [g for g, e in record["mutants"].items() if e["state"] == "NOT_LOADED"]
+    print()
+    print("COVERAGE  %d of %d instruments scored" % (len(scored), len(targets)))
+    if unstable:
+        print("  %d UNSCOREABLE (nondeterministic): %s"
+              % (len(unstable), ", ".join(sorted(unstable))))
+        print("  these are a hole in this run, not a pass. Nothing here says their")
+        print("  guards are load-bearing; it says they could not be asked.")
+    if not_loaded:
+        print("  %d mutant(s) NOT LOADED and therefore unscored: %s"
+              % (len(not_loaded), ", ".join(not_loaded)))
+
+    out_path = os.path.join(os.path.abspath(work), "mutation_run.json")
+    io.open(out_path, "w", encoding="utf-8").write(
+        json.dumps(record, indent=2, sort_keys=True))
+    print("  run record written: %s" % out_path)
+    print("  it carries the load stamp, the baseline exit and output hash, and a")
+    print("  per-instrument verdict for every mutant, so a reviewer can tell")
+    print("  NOT_WRITTEN from NOT_LOADED from SURVIVED without rerunning this.")
+
     print()
     print("  MUTANT_KILLED_ON_THIS_CORPUS != GUARD_CORRECT")
     print("  NOT_EXERCISED_HERE != NEVER_EXERCISED")
-    return 2 if inert else 0
+    if inert:
+        return 2
+    if unstable or not_loaded:
+        return 3        # coverage incomplete: distinct from clean, distinct from failure
+    return 0
 
 
 if __name__ == "__main__":

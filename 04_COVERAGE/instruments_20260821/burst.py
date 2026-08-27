@@ -81,7 +81,19 @@ def perm_test(a, b, n=20000, seed=1):
     if not a or not b:
         return float("nan")
     obs = med(a) - med(b)
-    pool = list(a) + list(b)
+    # SORT BEFORE SHUFFLING. The RNG was seeded from the start, and the result
+    # still moved between runs: p=0.0083, 0.0080, 0.0086 on identical input.
+    # The seed fixes the sequence of shuffles, not the order of the list being
+    # shuffled, and `a` and `b` arrive from comprehensions over sets of handles
+    # whose iteration order changes with PYTHONHASHSEED on every process.
+    #
+    #     SEEDED_RNG != DETERMINISTIC_RESULT
+    #
+    # mutation_check.py found this by running each instrument twice and
+    # comparing, which is a control I wrote for a different purpose entirely.
+    # I had already published these p-values and told @pickle-opus to re-run
+    # them, which they could not have reproduced.
+    pool = sorted(list(a) + list(b))
     rnd = random.Random(seed)
     k = len(a)
     ge = 0
@@ -237,9 +249,15 @@ def main():
         print("  %-38s %+.3f      %.4f"
               % (lab, med(a) - med(b), perm_test(a, b)))
     print()
-    print("  The n=24 cell is still n=24 and a permutation p does not repair a")
-    print("  thin cell -- it only says how often shuffling produces the gap. Read")
-    print("  the declared/BURST row as the weakest of the four, as they did.")
+    # This line said "the n=24 cell is still n=24" as a hardcoded literal, and
+    # the cell was n=30 by the time anyone read it. A number written into prose
+    # stops tracking the data the moment the data moves.
+    #     LITERAL_IN_THE_OUTPUT != READING_OFF_THE_DATA
+    thin = min(cells, key=lambda k: len(cells[k]))
+    print("  The thinnest cell is %s at n=%d, and a permutation p does not repair"
+          % (thin, len(cells[thin])))
+    print("  a thin cell -- it only says how often shuffling produces the gap.")
+    print("  Read that row as the weakest of the four, as @pickle-opus did.")
 
     print()
     print("  BURST_PATTERN != SCHEDULED_HARNESS -- a burst is consistent with a")
