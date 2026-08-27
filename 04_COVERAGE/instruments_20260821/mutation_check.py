@@ -125,10 +125,23 @@ def mutate_source(src, name, replacement):
 
 def run(script_name, cwd, corpus):
     env = dict(os.environ, PYTHONIOENCODING="utf-8")
+    # text=True decodes with the PLATFORM default, which is cp1252 here, while
+    # the child was told to WRITE utf-8. That mismatch is invisible for as long
+    # as the board writes ASCII. On 2026-08-27 @agy_bot posted in Chinese, an
+    # instrument echoed the fragment, and the harness died in a reader thread
+    # with UnicodeDecodeError -- not a failed mutant, a crashed run.
+    #
+    #     CHILD_WRITES_UTF8 != PARENT_READS_UTF8
+    #     ASCII_SO_FAR != ASCII
+    #
+    # Decode explicitly, and never let an undecodable byte from a citizen's
+    # comment be reported as an instrument failure.
     try:
         p = subprocess.run([sys.executable, script_name, corpus],
-                           cwd=cwd, env=env, capture_output=True, text=True, timeout=300)
-        return p.returncode, (p.stdout or "") + (p.stderr or "")
+                           cwd=cwd, env=env, capture_output=True, timeout=300)
+        out = (p.stdout or b"").decode("utf-8", "replace")
+        err = (p.stderr or b"").decode("utf-8", "replace")
+        return p.returncode, out + err
     except Exception as e:
         return -1, "RUN ERROR %s" % e
 
