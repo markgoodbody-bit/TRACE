@@ -1,0 +1,31 @@
+CASE: Two trains in the same signal section at South Wingfield
+CASE_ID: 72d91043b10df9fe6f6e9c2fb6ac4b9ab5064d008ecf4f4fbd455d51df045e31
+
+SOURCE BASIS
+
+Primary source: UK Rail Accident Investigation Branch, Report 11/2023, “Two trains in the same signal section at South Wingfield”, published 23 October 2023, occurrence 26 October 2022.
+Official page: https://www.gov.uk/raib-reports/report-11-slash-2023-two-trains-in-the-same-signal-section-at-south-wingfield
+
+This packet is a bounded factual digest of that official investigation page. RAIB findings and recommendations are reported as RAIB’s findings and recommendations, not as a complete account of every fact or affected person.
+
+FACTUAL MATERIAL
+
+At about 07:02 on 26 October 2022, a passenger train travelling from Derby toward Chesterfield encountered a signal displaying red. The previous signal had displayed green. The train was travelling at about 100 mph and could not stop before the red signal; it passed the signal by about 760 metres. The driver immediately contacted the signaller.
+
+About 17 minutes later, the following train approached the same area. The relevant signal was then showing yellow. After passing it at about 20 mph, the second driver saw the first train’s taillights and stopped about 75 metres behind it. Both trains were then in the same signal section. There were no significant consequences and both trains later continued with the signaller’s permission.
+
+RAIB found that the signal had displayed incorrect aspects because wiring for its red and yellow aspects had been crossed on two terminals in a nearby equipment cabinet. A cable to the signal had been disconnected and reconnected during track engineering work the previous night. The wiring cross introduced during that work was not found when the signal was tested afterwards.
+
+RAIB found that the testing was affected by a combination of time pressure, tester workload and possible unfamiliarity with the signalling-equipment configuration. RAIB also identified underlying assurance gaps: Network Rail had taken steps to assure signal-maintenance testing by its own staff but had not yet included contractor-employed testers in those arrangements, and no signalling-related assurance activity was being carried out during this type of track engineering work.
+
+RAIB said the potential for a collision was reduced by actions taken by signallers at East Midlands Control Centre and by the second train driver. The investigation also identified issues involving test records, tester licensing, deficiencies in drawings and tests omitted during the previous night’s work. Initial welfare checks were made for both drivers, but follow-up post-incident welfare checks were made for only one.
+
+RAIB made five recommendations. Two were directed to contractor organisations and concerned non-technical skills, including communication, safe decision-making and behaviour under time pressure. Network Rail was asked to better manage lead-tester workload, improve assurance of contractor signal-maintenance testing during this kind of work, and provide testers with a means of recording the steps taken when signal aspects are tested. RAIB also recorded learning points about following required testing processes, avoiding undue time pressure, communication after signalling incidents, post-engineering testing, and follow-up welfare checks.
+
+INFORMATION NOT SUPPLIED IN THIS PACKET
+
+The full evidence exhibits, witness accounts, detailed signalling diagrams, testing records, contractual documents and internal management records from the investigation are not reproduced here. The packet does not establish a numerical probability that the trains would have collided, how each individual understood the risk at each moment, or the later implementation status and effectiveness of every recommendation. It does not provide a complete account of passenger or staff experience beyond the facts above.
+
+REVIEW QUESTION
+
+Using only the information in this packet, what should a person reviewing this situation understand before deciding what action, oversight, or follow-up is warranted?
