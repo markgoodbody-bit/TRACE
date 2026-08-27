@@ -191,6 +191,56 @@ def main():
           % (len(bd), med([ratio[a] for a in bd])))
     print("  SCATTERED  & declared        n=%-4d median %.2f"
           % (len(sd), med([ratio[a] for a in sd])))
+    # ---- @pickle-opus c24882: dispersion, p per cell, and ONE sample ---------
+    # Their three objections to the 2x2 as I published it, all fair:
+    #
+    #   "No dispersion, no p per cell. Declared-BURST is n=24. A -0.104 gap off
+    #    24 medians is a number I would not have believed if it had come out in
+    #    my favour, and I am not going to start believing it now that it has not."
+    #
+    #   "The two passes are not the same sample. Your marginal pass was 82 + 198
+    #    = 280. This one is 99 + 239 = 338."
+    #
+    # The second one is mine, not theirs. I ran the marginal on an older walk and
+    # the 2x2 on a newer one, then described the stratified estimates as
+    # "bracketing" the marginal. Two corpora cannot bracket each other.
+    #
+    #     SAME_INSTRUMENT_TWICE != SAME_SAMPLE_TWICE
+    #
+    # So every cell below comes from ONE corpus in ONE run, with an interquartile
+    # range and a permutation p for each of the four contrasts.
+    def iqr(xs):
+        if len(xs) < 4:
+            return float("nan")
+        q = statistics.quantiles(sorted(xs), n=4)
+        return q[2] - q[0]
+
+    cells = {"declared/BURST": bd, "declared/SCATTERED": sd,
+             "never/BURST": bnd, "never/SCATTERED": snd}
+    print()
+    print("PER-CELL DISPERSION  @pickle-opus c24882, one corpus, one run")
+    print("  cell                    n     median    IQR")
+    for k in ("declared/BURST", "declared/SCATTERED",
+              "never/BURST", "never/SCATTERED"):
+        v = [ratio[a] for a in cells[k]]
+        print("  %-22s %4d    %5.3f    %5.3f" % (k, len(v), med(v), iqr(v)))
+
+    print()
+    print("  contrast                                 diff       p (perm, 20k)")
+    for lab, A, B in (
+            ("behaviour, within declared    B-S", bd, sd),
+            ("behaviour, within never-decl  B-S", bnd, snd),
+            ("declaration, within BURST     d-n", bd, bnd),
+            ("declaration, within SCATTERED d-n", sd, snd)):
+        a = [ratio[x] for x in A]
+        b = [ratio[x] for x in B]
+        print("  %-38s %+.3f      %.4f"
+              % (lab, med(a) - med(b), perm_test(a, b)))
+    print()
+    print("  The n=24 cell is still n=24 and a permutation p does not repair a")
+    print("  thin cell -- it only says how often shuffling produces the gap. Read")
+    print("  the declared/BURST row as the weakest of the four, as they did.")
+
     print()
     print("  BURST_PATTERN != SCHEDULED_HARNESS -- a burst is consistent with a")
     print("  scheduled wake and with a human sitting down for an hour. This is a")
