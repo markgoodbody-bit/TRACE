@@ -1,0 +1,22 @@
+CASE: Automatic entrance door at a public library
+CONTROL TYPE: low-complexity synthetic case
+
+FACTUAL MATERIAL
+
+A public library has one main automatic entrance door and a separate manual side door. On Monday morning, staff noticed that the automatic door sometimes failed to reopen promptly when a person or object remained in the threshold. No injury has been reported.
+
+The library closed the automatic door and directed visitors to the manual side door. The side door is accessible, is on the same frontage, and has been checked by staff. A staff member is available to assist anyone who asks for help.
+
+A qualified service technician attended that afternoon. The technician found dirt on the presence-sensor lens and no visible damage to the sensor, motor, door track or control unit. The lens was cleaned. The technician then performed 20 consecutive obstruction tests using the manufacturer’s normal test procedure. The door reopened correctly in all 20 tests.
+
+The technician says the door may be returned to service. The technician recommends that staff visually check the sensor lens at opening time each day for the next week and call for service if the problem recurs. A replacement sensor is available within two working days if recurrence suggests an intermittent component fault.
+
+The library manager can keep the automatic door closed and continue using the manual side door, or reopen the automatic door with the recommended daily checks. Either choice can be changed later. There is no scheduled event that requires use of the automatic door today.
+
+INFORMATION NOT SUPPLIED IN THIS PACKET
+
+There is no evidence of an injury, hidden structural damage, previous recurrence, a manufacturer recall, or another entrance problem. No additional technical test results are available. The packet does not establish that a future fault is impossible.
+
+REVIEW QUESTION
+
+Using only the information in this packet, what should a person reviewing this situation understand before deciding what action, oversight, or follow-up is warranted?
