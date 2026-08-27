@@ -1,0 +1,35 @@
+CASE: Financial sustainability of the higher education sector in England
+CASE_ID: 173bb291d5cdf471946ba050f0915b630d552b1f84cbc7d7cf317bcf7d3d1733
+
+SOURCE BASIS
+
+Primary source: House of Commons Committee of Public Accounts, Eighth Report of Session 2022–23, “Financial sustainability of the higher education sector in England”, published 15 June 2022.
+Official report: https://publications.parliament.uk/pa/cm5803/cmselect/cmpubacc/257/report.html
+
+This packet is a bounded factual digest of the Committee’s report. Committee conclusions and recommendations are identified as such and are not treated as a complete account of the sector.
+
+FACTUAL MATERIAL
+
+Higher education providers in England are autonomous institutions with financial and academic independence. To access relevant government funding, or for their students to receive government tuition-fee and maintenance loans, providers must be registered with the Office for Students (OfS). The Department for Education sets higher-education policy and the overall regulatory framework and sponsors the OfS.
+
+In July 2021 there were 254 registered higher-education providers in England, excluding further-education and sixth-form colleges, educating an estimated 2.3 million students. Total provider income in 2019/20 was £36.1 billion, of which 36% came from public sources.
+
+The Committee reported long-term pressures on providers’ finances, including rising costs and inflation, pension pressures, a freeze in the tuition-fee cap, policy uncertainty and changes affecting student finance. The OfS considered the sector more stable than at the start of the pandemic but accepted that risks remained.
+
+The Committee found that the OfS relied heavily, though not exclusively, on financial metrics and did not routinely discuss finances with every individual provider. It did not yet have an integrated model capable of systematically combining changes in costs, income streams and student numbers to identify how pressures might affect individual institutions. The Committee said this risked leaving the regulator without enough information to spot and act on early signs of distress. It also found gaps in the OfS’s view of student experience; for example, the National Student Survey covered final-year undergraduates and did not provide a comparable picture for students earlier in their degrees.
+
+The Committee reported that the number of providers recording an in-year deficit had risen from seven in 2015/16 to 80 in 2019/20. Some providers’ financial viability depended on surpluses from non-publicly funded teaching, particularly overseas-student fees, to subsidise teaching and research whose full economic costs were not recovered from public funding. The Committee and evidence before it noted that reliance on continued growth in overseas recruitment exposed some providers to competition and wider political or international changes.
+
+Student protection plans are a condition of registration and are intended to describe how students would be protected if a provider encountered difficulty. The OfS had previously found these plans highly variable in quality. It had approved some plans below the standard it expected because it considered delaying registration contrary to students’ interests. Weaknesses included optimism about risks, insufficiently specific actions and weak refund or compensation provisions.
+
+The OfS told the Committee that the early pandemic revealed that it lacked tools to intervene quickly if a provider was at risk of failure. A regulatory condition effective from April 2021 allowed it to direct providers considered at material risk. Possible directions included requiring plans to protect students, enabling transfer to another institution, allowing students to complete a course, term or year, preserving evidence of academic credit, and ensuring complaints and compensation arrangements.
+
+The Committee recommended that the OfS improve its understanding of sector and provider pressures and demonstrate this to universities and students. It also criticised the Department’s oversight of the OfS and called for stronger assurance that students would be protected from provider financial distress.
+
+INFORMATION NOT SUPPLIED IN THIS PACKET
+
+This packet does not contain provider-level financial statements, the full distribution of risk across all institutions, individual student testimony, later changes in regulation, or evidence of which providers subsequently failed or recovered. It does not establish that dependence on overseas-student income is itself unsustainable, nor does it quantify the probability or timing of any particular provider failure. It does not reproduce the full evidence submitted to the Committee or the Government’s later response.
+
+REVIEW QUESTION
+
+Using only the information in this packet, what should a person reviewing this situation understand before deciding what action, oversight, or follow-up is warranted?
