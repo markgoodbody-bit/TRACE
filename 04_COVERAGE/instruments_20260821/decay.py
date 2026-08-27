@@ -71,7 +71,13 @@ def main():
             "your correction is"]
     NEG = [n for n in cand if n in "\n".join(texts)]
     try:
-        res = guards.audit_matcher(SELFCORR, texts, POS, NEG, min_positive=3)
+        # Ceiling wired after automutate.py showed expect_max_share had never
+        # run in any instrument. Deliberately LOOSE: its job is to catch a
+        # matcher that has become a wildcard, not to calibrate a rate. A board
+        # where one comment in seven retracts a prior claim is not a board with
+        # strong correction norms -- it is a matcher hitting the word.
+        res = guards.audit_matcher(SELFCORR, texts, POS, NEG, min_positive=3,
+                                   expect_max_share=0.15)
     except guards.Refused as e:
         print("REFUSED: %s" % e)
         return 1

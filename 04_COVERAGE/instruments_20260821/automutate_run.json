@@ -1,0 +1,666 @@
+{
+  "at_utc": "2026-08-27T19:11:29.903093+00:00",
+  "corpus_sha256": "79ca1a34503612da",
+  "sites": 83,
+  "scored": [
+    "absence.py",
+    "burst.py",
+    "census_depth.py",
+    "decay.py",
+    "emptyroom.py",
+    "owed.py",
+    "quietrooms.py",
+    "standing.py",
+    "survival.py"
+  ],
+  "unscoreable": [],
+  "mutants": [
+    {
+      "kind": "compare",
+      "index": 0,
+      "site": "line 67: Is -> IsNot",
+      "function": "closed_periods",
+      "state": "KILLED",
+      "killed_by": [
+        "survival.py"
+      ]
+    },
+    {
+      "kind": "compare",
+      "index": 1,
+      "site": "line 67: Lt -> LtE",
+      "function": "closed_periods",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 2,
+      "site": "line 73: GtE -> Gt",
+      "function": "closed_periods",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 3,
+      "site": "line 104: GtE -> Gt",
+      "function": "cohort_horizon",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 4,
+      "site": "line 122: Is -> IsNot",
+      "function": "reconcile",
+      "state": "KILLED",
+      "killed_by": [
+        "census_depth.py"
+      ]
+    },
+    {
+      "kind": "compare",
+      "index": 5,
+      "site": "line 125: NotEq -> Eq",
+      "function": "reconcile",
+      "state": "KILLED",
+      "killed_by": [
+        "census_depth.py"
+      ]
+    },
+    {
+      "kind": "compare",
+      "index": 6,
+      "site": "line 154: NotIn -> In",
+      "function": "audit_matcher",
+      "state": "KILLED",
+      "killed_by": [
+        "decay.py",
+        "emptyroom.py",
+        "owed.py",
+        "standing.py"
+      ]
+    },
+    {
+      "kind": "compare",
+      "index": 7,
+      "site": "line 160: Is -> IsNot",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 8,
+      "site": "line 166: Lt -> LtE",
+      "function": "audit_matcher",
+      "state": "KILLED",
+      "killed_by": [
+        "standing.py"
+      ]
+    },
+    {
+      "kind": "compare",
+      "index": 9,
+      "site": "line 173: IsNot -> Is",
+      "function": "audit_matcher",
+      "state": "KILLED",
+      "killed_by": [
+        "decay.py",
+        "emptyroom.py",
+        "owed.py",
+        "standing.py"
+      ]
+    },
+    {
+      "kind": "compare",
+      "index": 10,
+      "site": "line 173: Gt -> GtE",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 11,
+      "site": "line 192: Gt -> GtE",
+      "function": "report",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 12,
+      "site": "line 227: Eq -> NotEq",
+      "function": "adoption",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 13,
+      "site": "line 270: Eq -> NotEq",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 14,
+      "site": "line 270: Eq -> NotEq",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 15,
+      "site": "line 298: NotIn -> In",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 16,
+      "site": "line 305: NotIn -> In",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 17,
+      "site": "line 311: NotEq -> Eq",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 18,
+      "site": "line 318: Eq -> NotEq",
+      "function": "<module>",
+      "state": "NOT_LOADED"
+    },
+    {
+      "kind": "compare",
+      "index": 19,
+      "site": "line 320: In -> NotIn",
+      "function": "<module>",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "compare",
+      "index": 20,
+      "site": "line 322: Gt -> GtE",
+      "function": "<module>",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "boolop",
+      "index": 0,
+      "site": "line 67: Or -> And",
+      "function": "closed_periods",
+      "state": "KILLED",
+      "killed_by": [
+        "survival.py"
+      ]
+    },
+    {
+      "kind": "boolop",
+      "index": 1,
+      "site": "line 173: And -> Or",
+      "function": "audit_matcher",
+      "state": "KILLED",
+      "killed_by": [
+        "decay.py",
+        "emptyroom.py",
+        "owed.py",
+        "standing.py"
+      ]
+    },
+    {
+      "kind": "boolop",
+      "index": 2,
+      "site": "line 235: Or -> And",
+      "function": "adoption",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "boolop",
+      "index": 3,
+      "site": "line 246: Or -> And",
+      "function": "adoption",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "boolop",
+      "index": 4,
+      "site": "line 270: And -> Or",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "boolop",
+      "index": 5,
+      "site": "line 322: Or -> And",
+      "function": "<module>",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 0,
+      "site": "line 42: 86400000 -> 0",
+      "function": "<module>",
+      "state": "KILLED",
+      "killed_by": [
+        "absence.py",
+        "owed.py",
+        "survival.py"
+      ]
+    },
+    {
+      "kind": "number",
+      "index": 1,
+      "site": "line 77: 0.95 -> 0",
+      "function": "answer_horizon",
+      "state": "KILLED",
+      "killed_by": [
+        "owed.py",
+        "quietrooms.py",
+        "standing.py"
+      ]
+    },
+    {
+      "kind": "number",
+      "index": 2,
+      "site": "line 92: 1 -> 0",
+      "function": "answer_horizon",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 3,
+      "site": "line 135: 6 -> 0",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 4,
+      "site": "line 135: 0 -> 1",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 5,
+      "site": "line 161: 1 -> 0",
+      "function": "audit_matcher",
+      "state": "KILLED",
+      "killed_by": [
+        "decay.py",
+        "emptyroom.py",
+        "owed.py",
+        "standing.py"
+      ]
+    },
+    {
+      "kind": "number",
+      "index": 6,
+      "site": "line 162: 1 -> 0",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 7,
+      "site": "line 164: 0.0 -> 1",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 8,
+      "site": "line 186: 0 -> 1",
+      "function": "report",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 9,
+      "site": "line 186: 1 -> 0",
+      "function": "report",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 10,
+      "site": "line 187: 0 -> 1",
+      "function": "report",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 11,
+      "site": "line 187: 1 -> 0",
+      "function": "report",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 12,
+      "site": "line 187: 100 -> 0",
+      "function": "report",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 13,
+      "site": "line 192: 120 -> 0",
+      "function": "report",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 14,
+      "site": "line 192: 120 -> 0",
+      "function": "report",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 15,
+      "site": "line 240: 0 -> 1",
+      "function": "adoption",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 16,
+      "site": "line 244: 1 -> 0",
+      "function": "adoption",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 17,
+      "site": "line 265: 1000 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 18,
+      "site": "line 266: 2026 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 19,
+      "site": "line 266: 8 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 20,
+      "site": "line 266: 21 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 21,
+      "site": "line 266: 1000 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 22,
+      "site": "line 267: 3600000 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 23,
+      "site": "line 267: 8 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 24,
+      "site": "line 267: 3600000 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 25,
+      "site": "line 267: 3600000 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 26,
+      "site": "line 268: 18 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 27,
+      "site": "line 268: 3600000 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 28,
+      "site": "line 273: 2 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 29,
+      "site": "line 273: 3 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 30,
+      "site": "line 275: 5 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 31,
+      "site": "line 275: 3 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 32,
+      "site": "line 279: 273 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 33,
+      "site": "line 279: 328 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 34,
+      "site": "line 284: 328 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 35,
+      "site": "line 311: 1 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 36,
+      "site": "line 315: 0 -> 1",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 37,
+      "site": "line 315: 1 -> 0",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 38,
+      "site": "line 322: 1 -> 0",
+      "function": "<module>",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "number",
+      "index": 39,
+      "site": "line 322: 1 -> 0",
+      "function": "<module>",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "return",
+      "index": 0,
+      "site": "line 74: return <expr> -> return None",
+      "function": "closed_periods",
+      "state": "KILLED",
+      "killed_by": [
+        "survival.py"
+      ]
+    },
+    {
+      "kind": "return",
+      "index": 1,
+      "site": "line 92: return <expr> -> return None",
+      "function": "answer_horizon",
+      "state": "KILLED",
+      "killed_by": [
+        "owed.py",
+        "quietrooms.py",
+        "standing.py"
+      ]
+    },
+    {
+      "kind": "return",
+      "index": 2,
+      "site": "line 104: return <expr> -> return None",
+      "function": "cohort_horizon",
+      "state": "KILLED",
+      "killed_by": [
+        "absence.py"
+      ]
+    },
+    {
+      "kind": "return",
+      "index": 3,
+      "site": "line 129: return <expr> -> return None",
+      "function": "reconcile",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "return",
+      "index": 4,
+      "site": "line 179: return <expr> -> return None",
+      "function": "audit_matcher",
+      "state": "KILLED",
+      "killed_by": [
+        "decay.py",
+        "emptyroom.py",
+        "owed.py",
+        "standing.py"
+      ]
+    },
+    {
+      "kind": "return",
+      "index": 5,
+      "site": "line 257: return <expr> -> return None",
+      "function": "adoption",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "return",
+      "index": 6,
+      "site": "line 315: return <expr> -> return None",
+      "function": "_selftest",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 0,
+      "site": "line 90: raise -> pass (refusal removed)",
+      "function": "answer_horizon",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 1,
+      "site": "line 123: raise -> pass (refusal removed)",
+      "function": "reconcile",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 2,
+      "site": "line 126: raise -> pass (refusal removed)",
+      "function": "reconcile",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 3,
+      "site": "line 156: raise -> pass (refusal removed)",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 4,
+      "site": "line 167: raise -> pass (refusal removed)",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 5,
+      "site": "line 171: raise -> pass (refusal removed)",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 6,
+      "site": "line 174: raise -> pass (refusal removed)",
+      "function": "audit_matcher",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 7,
+      "site": "line 323: raise -> pass (refusal removed)",
+      "function": "<module>",
+      "state": "SURVIVED"
+    },
+    {
+      "kind": "raise",
+      "index": 8,
+      "site": "line 324: raise -> pass (refusal removed)",
+      "function": "<module>",
+      "state": "SURVIVED"
+    }
+  ]
+}

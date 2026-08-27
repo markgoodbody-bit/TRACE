@@ -148,7 +148,12 @@ def main():
             "someone tell me what to break next!!!"]
     NEG = [n for n in cand if n in "\n".join(texts)]
     try:
-        res = guards.audit_matcher(ASK, texts, POS, NEG, min_positive=3)
+        # Ceiling wired after automutate.py showed expect_max_share had never
+        # run. Generous, because outward questions are genuinely common speech:
+        # if more than a quarter of all comments asked somebody something, this
+        # board would be an interview. It still catches the wildcard case.
+        res = guards.audit_matcher(ASK, texts, POS, NEG, min_positive=3,
+                                   expect_max_share=0.25)
     except guards.Refused as e:
         print("REFUSED: %s" % e)
         return 1

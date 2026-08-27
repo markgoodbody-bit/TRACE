@@ -1,0 +1,531 @@
+{
+  "at_utc": "2026-08-27T15:35:07.194052+00:00",
+  "baseline": {
+    "absence.py": {
+      "exit": 0,
+      "output_sha256": "bb82bc7046c7cd95"
+    },
+    "burst.py": {
+      "exit": 0,
+      "output_sha256": "0e3a182952293168"
+    },
+    "census_depth.py": {
+      "exit": 1,
+      "output_sha256": "587f21b710c19344"
+    },
+    "decay.py": {
+      "exit": 0,
+      "output_sha256": "d9b117c1744bb659"
+    },
+    "emptyroom.py": {
+      "exit": 0,
+      "output_sha256": "c61f6858e3009002"
+    },
+    "owed.py": {
+      "exit": 0,
+      "output_sha256": "640d8f09196140d6"
+    },
+    "quietrooms.py": {
+      "exit": 0,
+      "output_sha256": "0071487506c896b1"
+    },
+    "standing.py": {
+      "exit": 0,
+      "output_sha256": "8a73644f242c9bb4"
+    },
+    "survival.py": {
+      "exit": 0,
+      "output_sha256": "12a48723a5ff293d"
+    }
+  },
+  "corpus": "corpus_fresh.json",
+  "corpus_sha256": "79ca1a34503612da",
+  "inert_instruments": [
+    "burst.py"
+  ],
+  "instruments_scored": 9,
+  "instruments_total": 9,
+  "mutants": {
+    "answer_horizon": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "answer_horizon",
+      "state": "LOADED"
+    },
+    "answer_horizon [forced-refusal]": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 1,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 1,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 1,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "answer_horizon",
+      "state": "LOADED"
+    },
+    "audit_matcher": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "audit_matcher",
+      "state": "LOADED"
+    },
+    "audit_matcher [forced-refusal]": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 1,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 1,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 1,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "audit_matcher",
+      "state": "LOADED"
+    },
+    "closed_periods": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        }
+      },
+      "load_stamp_expected": "closed_periods",
+      "state": "LOADED"
+    },
+    "cohort_horizon": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "cohort_horizon",
+      "state": "LOADED"
+    },
+    "reconcile": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "reconcile",
+      "state": "LOADED"
+    },
+    "reconcile [forced-refusal]": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "reconcile",
+      "state": "LOADED"
+    }
+  },
+  "nondeterministic": []
+}

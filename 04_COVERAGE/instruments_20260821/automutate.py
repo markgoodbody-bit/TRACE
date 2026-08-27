@@ -74,6 +74,7 @@ class Mutator(ast.NodeTransformer):
     def __init__(self, kind, target):
         self.kind, self.target, self.n = kind, target, 0
         self.desc = None
+        self.line = 0
 
     def _hit(self):
         self.n += 1
@@ -84,8 +85,9 @@ class Mutator(ast.NodeTransformer):
         if self.kind == "compare" and len(node.ops) == 1:
             op = type(node.ops[0])
             if op in INV and self._hit():
+                self.line = getattr(node, "lineno", 0)
                 self.desc = "line %d: %s -> %s" % (
-                    getattr(node, "lineno", 0), op.__name__, INV[op].__name__)
+                    self.line, op.__name__, INV[op].__name__)
                 node.ops = [INV[op]()]
         return node
 
@@ -94,8 +96,9 @@ class Mutator(ast.NodeTransformer):
         if self.kind == "boolop" and self._hit():
             was = type(node.op).__name__
             node.op = ast.Or() if isinstance(node.op, ast.And) else ast.And()
+            self.line = getattr(node, "lineno", 0)
             self.desc = "line %d: %s -> %s" % (
-                getattr(node, "lineno", 0), was, type(node.op).__name__)
+                self.line, was, type(node.op).__name__)
         return node
 
     def visit_Constant(self, node):
@@ -103,28 +106,36 @@ class Mutator(ast.NodeTransformer):
                 and not isinstance(node.value, bool):
             if self._hit():
                 new = 0 if node.value != 0 else 1
-                self.desc = "line %d: %r -> %r" % (
-                    getattr(node, "lineno", 0), node.value, new)
+                self.line = getattr(node, "lineno", 0)
+                self.desc = "line %d: %r -> %r" % (self.line, node.value, new)
                 return ast.copy_location(ast.Constant(value=new), node)
         return node
 
     def visit_Return(self, node):
         self.generic_visit(node)
         if self.kind == "return" and node.value is not None and self._hit():
-            self.desc = "line %d: return <expr> -> return None" % getattr(node, "lineno", 0)
+            self.line = getattr(node, "lineno", 0)
+            self.desc = "line %d: return <expr> -> return None" % self.line
             node.value = ast.copy_location(ast.Constant(value=None), node)
         return node
 
     def visit_Raise(self, node):
         if self.kind == "raise" and self._hit():
-            self.desc = "line %d: raise -> pass (refusal removed)" % getattr(node, "lineno", 0)
+            self.line = getattr(node, "lineno", 0)
+            self.desc = "line %d: raise -> pass (refusal removed)" % self.line
             return ast.copy_location(ast.Pass(), node)
         return node
 
 
-def count(tree, kind):
+def count(source, kind):
+    """Enumerate sites on the ORIGINAL source. Counting on an unparsed copy and
+    mutating the original would index two different site lists under one
+    ordinal, silently mutating the wrong node.
+
+        SAME_COUNT != SAME_SITES
+    """
     m = Mutator(kind, -1)
-    m.visit(ast.parse(ast.unparse(tree)))
+    m.visit(ast.parse(source))
     return m.n
 
 
@@ -152,6 +163,19 @@ def main():
                                                   "automutate.py")
                and "import guards" in io.open(os.path.join(inst, f), encoding="utf-8").read()]
 
+    # Attribution travels WITH the row. Deriving it later from a line number
+    # is how the first survivor list credited 16 survivors to audit_matcher
+    # using line numbers that pointed into an unparsed copy.
+    spans = [(n.lineno, getattr(n, "end_lineno", n.lineno), n.name)
+             for n in base_tree.body
+             if isinstance(n, (ast.FunctionDef, ast.ClassDef))]
+
+    def fn_of(line):
+        for a, b, nm in spans:
+            if a <= line <= b:
+                return nm
+        return "<module>"
+
     def stage(text, tag):
         d = tempfile.mkdtemp(prefix="auto_")
         io.open(os.path.join(d, "guards.py"), "w", encoding="utf-8", newline="\n").write(
@@ -176,11 +200,25 @@ def main():
     #     UNPARSE_ROUNDTRIP != MUTATION
     #
     # So the baseline is the unmutated tree put through the same pipe.
-    src = ast.unparse(ast.fix_missing_locations(base_tree))
+    #
+    # BUT KEEP THE ORIGINAL SOURCE FOR MUTATING. The first version reassigned
+    # `src` to the unparsed text and then parsed THAT to mutate, so every
+    # reported line number indexed a file with no comments and no blank lines.
+    # The survivor list named line 138 of guards.py, which is a docstring, and a
+    # reachability analysis built on those numbers attributed 16 survivors to
+    # audit_matcher on no evidence at all.
+    #
+    #     LINE_IN_THE_UNPARSED_TREE != LINE_IN_THE_FILE
+    #
+    # Mutation happens on the original tree, so `lineno` means what a reader
+    # opening guards.py will see. Staging still unparses, so mutant and baseline
+    # remain comparable.
+    orig_src = src
+    base_unparsed = ast.unparse(ast.fix_missing_locations(ast.parse(orig_src)))
 
     # baseline, twice, same refusal as mutation_check: a self-disagreeing
     # instrument cannot be scored and must not be silently treated as passing.
-    d0 = stage(src, "BASELINE")
+    d0 = stage(base_unparsed, "BASELINE")
     rc, out = run("_probe.py", d0, corpus)
     if out.strip() != "BASELINE":
         shutil.rmtree(d0, ignore_errors=True)
@@ -198,10 +236,10 @@ def main():
         print("  UNSCOREABLE (nondeterministic): %s\n" % ", ".join(unstable))
 
     kinds = ["compare", "boolop", "number", "return", "raise"]
-    plan = [(k, i) for k in kinds for i in range(count(base_tree, k))]
+    plan = [(k, i) for k in kinds for i in range(count(orig_src, k))]
     print("  %d mutation sites across %d kinds: %s"
           % (len(plan), len(kinds),
-             ", ".join("%s %d" % (k, count(base_tree, k)) for k in kinds)))
+             ", ".join("%s %d" % (k, count(orig_src, k)) for k in kinds)))
     print("  %d instruments scored\n" % len(scored))
 
     record = {"at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -213,7 +251,7 @@ def main():
     survivors = []
     for kind, idx in plan:
         m = Mutator(kind, idx)
-        tree = m.visit(ast.parse(src))
+        tree = m.visit(ast.parse(orig_src))
         if m.desc is None:
             continue
         try:
@@ -223,7 +261,8 @@ def main():
             continue
         tag = "%s#%d" % (kind, idx)
         d = stage(text, tag)
-        entry = {"kind": kind, "index": idx, "site": m.desc, "state": None}
+        entry = {"kind": kind, "index": idx, "site": m.desc,
+                 "function": fn_of(m.line), "state": None}
         try:
             rc, out = run("_probe.py", d, corpus)
             if out.strip() != tag:

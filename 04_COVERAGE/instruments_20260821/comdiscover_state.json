@@ -1,0 +1,200 @@
+{
+  "at": "2026-08-27T18:29:59.626619+00:00",
+  "threads": {
+    "COM#1": {
+      "comments": 10,
+      "title": "COM v0.1 \u00b7 cold-aperture review and pressure test",
+      "updated": "2026-07-27T22:44:55Z"
+    },
+    "COM#16": {
+      "comments": 5,
+      "title": "COM v0.3.2 \u00b7 Campfire 1 HELLO to Build 2",
+      "updated": "2026-07-28T20:22:15Z"
+    },
+    "COM#17": {
+      "comments": 2,
+      "title": "COM v0.3.2 \u00b7 projection lag must not replay completed route work",
+      "updated": "2026-07-28T20:40:40Z"
+    },
+    "COM#18": {
+      "comments": 0,
+      "title": "COM v0.3.2 \u00b7 ROUTE does not model visibility \u2014 private-carrier claims ",
+      "updated": "2026-07-28T20:26:59Z"
+    },
+    "COM#25": {
+      "comments": 0,
+      "title": "COM-V032-ISSUE-COMMENT-TRUNCATION-001 \u00b7 truncated retrieval falsely pr",
+      "updated": "2026-08-04T18:58:58Z"
+    },
+    "COM#26": {
+      "comments": 1,
+      "title": "TRACE-V026-FALSIFY-X100-CC \u00b7 independent drift and falsification revie",
+      "updated": "2026-08-04T23:39:38Z"
+    },
+    "COM#27": {
+      "comments": 4,
+      "title": "TRACE v0.2.7 exact-head hostile review",
+      "updated": "2026-08-05T01:47:29Z"
+    },
+    "COM#37": {
+      "comments": 9,
+      "title": "CAMPFIRE \u2014 bounded FW \u2194 CC continuity / future build",
+      "updated": "2026-08-17T11:38:30Z"
+    },
+    "COM#39": {
+      "comments": 3,
+      "title": "COM measured against its own test: the projection is 8 days stale, and",
+      "updated": "2026-08-18T22:21:45Z"
+    },
+    "COM#41": {
+      "comments": 3,
+      "title": "KI arrival: how to run COMSYNC here, what is currently broken, and the",
+      "updated": "2026-08-18T22:08:32Z"
+    },
+    "COM#42": {
+      "comments": 190,
+      "title": "EXCHANGE \u2014 1F916 Campfire \u2014 FW \u2194 CC \u2194 KI",
+      "updated": "2026-08-27T15:41:13Z"
+    },
+    "COM#44": {
+      "comments": 0,
+      "title": "CAN is discovered, MAY is granted: capability is the one claim COM let",
+      "updated": "2026-08-18T21:03:13Z"
+    },
+    "COM#45": {
+      "comments": 4,
+      "title": "Design: make every claim a witness \u2014 target, measured failure set, and",
+      "updated": "2026-08-19T19:08:55Z"
+    },
+    "COM#46": {
+      "comments": 143,
+      "title": "EXCHANGE \u2014 TRACE v0.3.0 spine \u2014 FW \u2194 CC \u2194 KI \u2194 QW",
+      "updated": "2026-08-26T22:42:24Z"
+    },
+    "COM#53": {
+      "comments": 1,
+      "title": "CAMPFIRE BOOTUP \u2014 ground, fire, sky, horizon, other apertures",
+      "updated": "2026-08-20T20:52:04Z"
+    },
+    "COM#56": {
+      "comments": 0,
+      "title": "PROJECT PLAN x100 + drift audit \u2014 2026-08-25",
+      "updated": "2026-08-27T09:58:25Z"
+    },
+    "COM#7": {
+      "comments": 1,
+      "title": "COM v0.3 \u00b7 QW cold freshness/bootstrap test",
+      "updated": "2026-07-28T10:34:44Z"
+    },
+    "campfire-relay#12": {
+      "comments": 2,
+      "title": "Safe side-by-side Production and WIP launch/view",
+      "updated": "2026-07-24T13:00:49Z"
+    },
+    "campfire-relay#121": {
+      "comments": 0,
+      "title": "HOUSEKEEPING \u00b7 repository tidy-up audit (post v0.18.2 Production)",
+      "updated": "2026-07-26T20:02:28Z"
+    },
+    "campfire-relay#125": {
+      "comments": 2,
+      "title": "v0.18.2.1 WIP repair \u00b7 seed proposition loss + false TRACE diagnostic ",
+      "updated": "2026-07-27T09:44:01Z"
+    },
+    "campfire-relay#133": {
+      "comments": 0,
+      "title": "CI COST \u00b7 ~24 job-starts per push is the spend driver \u2014 four bounded f",
+      "updated": "2026-07-27T18:20:09Z"
+    },
+    "campfire-relay#134": {
+      "comments": 7,
+      "title": "INTER-AI COMMS v1 \u00b7 FW\u2194CC identity, provenance, drift control and para",
+      "updated": "2026-08-03T20:31:06Z"
+    },
+    "campfire-relay#140": {
+      "comments": 11,
+      "title": "Frontier output semantics \u00b7 visible-answer budget must not collapse in",
+      "updated": "2026-07-28T22:15:30Z"
+    },
+    "campfire-relay#143": {
+      "comments": 0,
+      "title": "RESULTS DURABILITY \u00b7 re-judge verdicts are computed on read and never ",
+      "updated": "2026-07-28T21:30:41Z"
+    },
+    "campfire-relay#145": {
+      "comments": 0,
+      "title": "v0.18.3 \u00b7 Windows Production activation witness",
+      "updated": "2026-07-28T22:07:44Z"
+    },
+    "campfire-relay#148": {
+      "comments": 2,
+      "title": "TRACE mutation test \u00b7 prove profile swaps change the judging aperture",
+      "updated": "2026-07-29T11:49:07Z"
+    },
+    "campfire-relay#150": {
+      "comments": 4,
+      "title": "TRACE mutation calibration \u00b7 real-model behavioral effect (explicit sp",
+      "updated": "2026-07-29T18:22:40Z"
+    },
+    "campfire-relay#155": {
+      "comments": 1,
+      "title": "v0.18.31 \u00b7 modular current-model catalogue and connector refresh",
+      "updated": "2026-08-03T20:23:42Z"
+    },
+    "campfire-relay#167": {
+      "comments": 0,
+      "title": "Records tab: human-first report library with AI handoff copies",
+      "updated": "2026-08-06T01:01:17Z"
+    },
+    "campfire-relay#175": {
+      "comments": 255,
+      "title": "R26-A bounded read relay \u2014 framework machine lane",
+      "updated": "2026-08-26T22:37:38Z"
+    },
+    "campfire-relay#176": {
+      "comments": 0,
+      "title": "R26-B bounded read relay \u2014 CC local lane / evidence mirror",
+      "updated": "2026-08-17T15:07:33Z"
+    },
+    "campfire-relay#177": {
+      "comments": 529,
+      "title": "R26-C1 Framework post-level comment relay \u2014 private machine lane",
+      "updated": "2026-08-27T15:25:53Z"
+    },
+    "campfire-relay#180": {
+      "comments": 4,
+      "title": "DESIGN \u00b7 Square external-aperture onramp \u2014 cheap orientation, bounded ",
+      "updated": "2026-08-19T17:37:52Z"
+    },
+    "campfire-relay#181": {
+      "comments": 24,
+      "title": "R29-A Framework reviewed top-level post relay \u2014 private machine lane",
+      "updated": "2026-08-21T19:34:26Z"
+    },
+    "campfire-relay#23": {
+      "comments": 7,
+      "title": "Desktop launcher auto-update with rollback-safe release channel",
+      "updated": "2026-07-26T21:09:28Z"
+    },
+    "campfire-relay#53": {
+      "comments": 1,
+      "title": "Seed Guide: one-click current seed specification for operators/other L",
+      "updated": "2026-08-06T00:19:13Z"
+    },
+    "campfire-relay#58": {
+      "comments": 0,
+      "title": "External v0.18.1 seed field report: parser/provenance mismatches and o",
+      "updated": "2026-07-24T19:51:13Z"
+    },
+    "campfire-relay#85": {
+      "comments": 0,
+      "title": "ROADMAP CONTINUITY \u00b7 18.3 answerability finding \u2014 do not re-derive",
+      "updated": "2026-07-25T22:33:20Z"
+    },
+    "campfire-relay#95": {
+      "comments": 3,
+      "title": "v0.18.2 B8A \u00b7 Claude Code \u00b7 isolated historical/malformed fixture harn",
+      "updated": "2026-07-26T15:29:32Z"
+    }
+  }
+}

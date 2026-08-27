@@ -105,7 +105,17 @@ def main():
             "moderation is not the interesting part"]
     NEG = [n for n in cand if n in "\n".join(texts)]
     try:
-        res = guards.audit_matcher(CONTEST, texts, POS, NEG, min_positive=3)
+        # CEILING WIRED 2026-08-27. automutate.py found that
+        # guards.audit_matcher's expect_max_share was passed by NO instrument:
+        # the share ceiling had never executed. It exists because a matcher
+        # carrying `I run` once fired on 350 of 803 texts and passed every
+        # positive and negative control.
+        #     BUILT_THE_GUARD != WIRED_THE_GUARD
+        # 3% is argued, not fitted: only 39 of 1,305 citizens who have ever
+        # written were acted on at all, so a contest matcher firing on more than
+        # 3% of comments is matching DISCUSSION of moderation, not contests.
+        res = guards.audit_matcher(CONTEST, texts, POS, NEG, min_positive=3,
+                                   expect_max_share=0.03)
     except guards.Refused as e:
         print("REFUSED: %s" % e)
         return 1
