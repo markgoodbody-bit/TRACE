@@ -1,7 +1,7 @@
 # TRACE v0.3.0 ↔ FPF NEAREST-NEIGHBOUR CROSSWALK v0.1
 
 **Status:** WORKING COMPARATIVE FALSIFICATION OBJECT — NOT TRACE SOURCE — NOT FPF INTERPRETIVE AUTHORITY — NOT VALIDATION  
-**Purpose:** test whether the load-bearing centre of TRACE v0.3.0 is semantically distinct from, or primarily a compiled activation profile over, capabilities already available in the First Principles Framework (FPF).  
+**Purpose:** test whether the load-bearing centre of TRACE v0.3.0 is semantically distinct from, or primarily a compiled activation profile over, capabilities already available in the First Principles Framework (FPF).
 
 This object is deliberately hostile to TRACE. Different vocabulary earns no credit. A TRACE distinction counts as a semantic remainder only if a competent use of the pinned FPF source cannot recover the same consequential structure for the same receiving use without adding equivalent local machinery.
 
@@ -255,7 +255,7 @@ No source change follows from this self-pass.
 
 ---
 
-## 9. Current disposition
+## 9. Current disposition before framework-architecture pressure
 
 ```text
 FPF IS A SERIOUS NEAREST NEIGHBOUR: YES
@@ -271,19 +271,206 @@ FROZEN OUTWARD STUDY CHANGE: NO
 ME SOURCE CHANGE: NO
 ```
 
-The next evidence should be a bounded same-case comparison or an external critique. Do **not** improve TRACE in anticipation of the result.
+---
+
+## 10. FPF framework-architecture pressure
+
+The full pinned FPF source contains an explicit framework ecosystem architecture. This matters because it means even the hypothesis `TRACE = specialised compiled profile` is not automatically outside FPF's own product model.
+
+Relevant FPF surfaces:
+
+- `E.4` separates FPF Core from domain/local principle frameworks and adjacent maintained products.
+- `E.4.PFAD` chooses among five outcomes:
+  1. new or revised framework;
+  2. contribution to an existing framework;
+  3. maintained non-framework product;
+  4. thinner publication/access route;
+  5. no new maintained product now.
+- `E.4.DPF` is an authoring/publication spine for domain and local FPF-grounded frameworks.
+- `E.4.DPF.DA` evaluates domain scope, source basis, Core dependency, package form, coverage, relation records, publication/access, refresh and adoption utility.
+
+FPF's own PFAD rule explicitly warns that a small coherent authoring slice can be mistaken for a field-scale pattern language. A new/substantially revised domain framework should identify a first user/use that needs no unpublished context, connected problem families, what FPF/existing frameworks already provide, what remains uncovered, serious cheaper alternatives, a representative cross-problem use, evidence limits and a refresh trigger.
+
+This is an appropriate hostile architecture test for TRACE even though TRACE was independently developed and is not currently an FPF-grounded DPF.
+
+```text
+INDEPENDENT_ORIGIN != INDEPENDENT_FUNCTION
+EXISTING_RELEASE != FUTURE_ARCHITECTURE_JUSTIFIED
+FRAMEWORK_SHAPE != FRAMEWORK_SCALE_EARNED
+```
+
+### 10.1 Apply PFAD-like questions to TRACE
+
+#### Intended practitioner / first use
+
+TRACE's public front door identifies possible users in AI safety/agent governance, systems engineering/safety/assurance, institutional audit/regulation, causal/interpretability work and philosophy of action/responsibility. It supplies a five-minute review route and an independently readable released v0.2.7 carrier.
+
+**Provisional:** first-use closure exists better than a hidden private authoring slice.
+
+#### Connected problem families
+
+The v0.3 spine spans at least:
+
+- bounded scene/aperture/representation;
+- target/affected-scope omission;
+- action/transition/causality/selection;
+- evidence/verification/currentness;
+- entity/boundary/role;
+- control/refusability/routes;
+- clocks/hardening/correction windows;
+- burden/residue/record;
+- designation/measurement/value boundaries;
+- future-space;
+- absence/streams/mechanism claims;
+- self-application/validator ceilings;
+- stop/handoff.
+
+**Provisional:** TRACE is not a one-pattern/single-problem object.
+
+#### What the nearest neighbour already provides
+
+This crosswalk now shows broad FPF coverage across nearly all of those families. Several supposed TRACE frontiers moved from `candidate distinct` to `direct/functional overlap` after inspection of the full FPF spec.
+
+**Provisional:** the previous architecture justification is incomplete because it did not include this nearest-neighbour comparison.
+
+#### What remains uncovered
+
+Only three semantic candidates remain after this pass:
+
+1. correction-window construction;
+2. compact evidence/access/custody separation;
+3. liveness/witness cause ceiling.
+
+Even those are unresolved rather than established gaps in FPF.
+
+**Provisional:** semantic remainder is currently too weak to justify TRACE by uniqueness alone.
+
+#### Serious alternatives now live
+
+The architecture decision is no longer binary `keep TRACE / kill TRACE`. At least five outcomes are now admissible:
+
+```text
+A. DISTINCT_FRAMEWORK
+   Keep TRACE as an independently maintained structural grammar because
+   its combined use, portability, source lineage and tested practical delta
+   justify a distinct object.
+
+B. SPECIALISED_PROFILE
+   Keep TRACE, but position it explicitly as a compact specialised
+   transition/harm/correction attention profile rather than a general
+   ontology claim.
+
+C. INTEROPERABLE_CONTRIBUTION
+   Preserve TRACE lineage while mapping or contributing useful parts into
+   a broader neighbouring framework where licensing/authority/contact permit.
+
+D. THINNER_MAINTAINED_PRODUCT
+   Preserve a compact carrier/checklist/profile/tool whose utility is
+   activation and transfer, while retiring unsupported framework-scale claims.
+
+E. PRESERVATION_WITHOUT_EXPANSION
+   Preserve released TRACE and quarry history, stop expanding the formal
+   framework, and carry the project purpose through Mechanical Ethics and/or
+   better existing methods.
+```
+
+No outcome is selected by this document.
+
+#### Representative cross-problem use
+
+TRACE has worked cases and a frozen 20-case outward pool, but the primary cold A/T efficacy comparison remains `HOLD_EXTERNAL_TRANSPORT`. The Leah self-pass is useful pressure but not independent evidence.
+
+**Provisional:** representative material exists; comparative efficacy evidence does not yet.
+
+#### Evidence limits
+
+Large. The current crosswalk is performed by a Framework runtime already invested in TRACE, without an FPF maintainer response, and uses source interpretation rather than independent competent FPF application.
+
+**Provisional:** do not convert the crosswalk into an architectural verdict.
+
+#### Refresh trigger
+
+Reopen this architecture question on any of:
+
+- competent external FPF response/application;
+- valid same-case FPF↔TRACE comparison;
+- cold receiver evidence;
+- discovery that one of R1-R3 is directly covered in FPF;
+- evidence that TRACE's bundled activation improves or worsens omission/burden;
+- licensing/interoperability decision that changes feasible relationships.
 
 ---
 
-## 10. Why this matters
+## 11. Stronger current frontier
 
-If TRACE survives only as a smaller, sharper, portable compilation of already available reasoning capabilities, that is still a meaningful outcome if the compilation measurably reduces consequential omission at acceptable burden.
+The frontier is no longer:
 
-If it does not, the correct result is to narrow or retire redundant machinery while preserving Mechanical Ethics, field evidence, and the useful distinctions as part of the wider project history.
+```text
+CAN TRACE REPRESENT THINGS OTHER FRAMEWORKS CANNOT?
+```
+
+It is:
+
+```text
+DOES THIS PARTICULAR COMPILATION OF DISTINCTIONS
+CAUSE A BOUNDED RECEIVER TO NOTICE AND PRESERVE
+CONSEQUENTIAL STRUCTURE IT WOULD OTHERWISE LOSE,
+AT LOWER TOTAL COST THAN ROUTING THROUGH A BROADER SYSTEM?
+```
+
+This is an empirical/product-architecture question.
+
+It creates a sharper possible identity for TRACE:
+
+```text
+TRACE = candidate specialised transition-attention compiler
+        + portable structural carrier
+        + anti-compression defaults
+        + explicit claim ceilings
+        + correction-window emphasis
+```
+
+That description is deliberately provisional. `compiler` here is analogy, not a new TRACE primitive or software claim.
+
+A specialised object can be worthwhile even when every constituent concept exists elsewhere. Examples outside this project include checklists, profiles, safety cases, domain-specific languages and protocols whose value lies in selection, arrangement, interoperability or activation rather than conceptual novelty.
+
+But TRACE must earn that role through use.
+
+---
+
+## 12. Current architecture disposition
+
+```text
+TRACE DISTINCT FRAMEWORK STATUS: OPEN / NOT ASSUMED
+TRACE AS SPECIALISED PROFILE: PLAUSIBLE / UNPROVEN
+TRACE AS FPF-LIKE DPF FUNCTION: STRUCTURALLY PLAUSIBLE / NOT AN AFFILIATION CLAIM
+TRACE -> FPF CONTRIBUTION: POSSIBLE FUTURE ROUTE / CONTACT+LICENCE BOUNDARIES OPEN
+TRACE THINNER PRODUCT: ADMISSIBLE
+TRACE PRESERVATION WITHOUT FURTHER EXPANSION: ADMISSIBLE
+
+SELECTED OUTCOME: NONE
+```
+
+Do not rewrite the v0.3 spine around this hypothesis yet. Do not import FPF terminology into TRACE source by mimicry. Do not treat FPF as authority over TRACE. Do not contact external maintainers through Mark's identity without a valid route/authority decision.
+
+The next evidence should try to discriminate among the five outcomes, not make the current TRACE text more elaborate.
+
+---
+
+## 13. Why this matters
+
+If TRACE survives only as a smaller, sharper, portable compilation of already available reasoning capabilities, that is still meaningful if the compilation measurably reduces consequential omission at acceptable burden.
+
+If a mature neighbouring method preserves the same load-bearing structure with less cost, the project should learn from that rather than protecting TRACE's status.
+
+If the useful result is interoperability rather than independence, preserve ancestry and build the bridge without pretending equivalence or subordination.
+
+If the useful result is to stop expanding TRACE, preserve the released object and move the wider purpose through Mechanical Ethics, field practice and better existing tools.
 
 ```text
 PROJECT PURPOSE != TRACE NOVELTY
 TRACE SURVIVAL != PROJECT SURVIVAL
 FAILED UNIQUENESS CLAIM != FAILED PURPOSE
 BETTER EXISTING METHOD -> LEARN / REUSE / NARROW
+PRESERVATION != PERMANENT EXPANSION
 ```
