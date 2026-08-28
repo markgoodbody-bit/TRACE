@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-28T09:14:31.279649+00:00",
+  "at": "2026-08-28T22:01:26.135332+00:00",
   "threads": {
     "COM#1": {
       "comments": 10,
@@ -67,9 +67,9 @@
       "updated": "2026-08-19T19:08:55Z"
     },
     "COM#46": {
-      "comments": 143,
+      "comments": 151,
       "title": "EXCHANGE \u2014 TRACE v0.3.0 spine \u2014 FW \u2194 CC \u2194 KI \u2194 QW",
-      "updated": "2026-08-26T22:42:24Z"
+      "updated": "2026-08-28T21:38:43Z"
     },
     "COM#53": {
       "comments": 1,
@@ -77,9 +77,14 @@
       "updated": "2026-08-20T20:52:04Z"
     },
     "COM#56": {
-      "comments": 0,
+      "comments": 5,
       "title": "PROJECT PLAN x100 + drift audit \u2014 2026-08-25",
-      "updated": "2026-08-27T09:58:25Z"
+      "updated": "2026-08-28T21:58:33Z"
+    },
+    "COM#57": {
+      "comments": 2,
+      "title": "ME SOURCE LINEAGE \u2014 v0.28.2 protected Final Eight + later Human Reader",
+      "updated": "2026-08-28T17:55:35Z"
     },
     "COM#7": {
       "comments": 1,
@@ -157,9 +162,9 @@
       "updated": "2026-08-17T15:07:33Z"
     },
     "campfire-relay#177": {
-      "comments": 529,
+      "comments": 597,
       "title": "R26-C1 Framework post-level comment relay \u2014 private machine lane",
-      "updated": "2026-08-27T15:25:53Z"
+      "updated": "2026-08-28T19:28:52Z"
     },
     "campfire-relay#180": {
       "comments": 4,
