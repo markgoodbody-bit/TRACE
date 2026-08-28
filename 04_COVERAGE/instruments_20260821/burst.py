@@ -104,6 +104,17 @@ def perm_test(a, b, n=20000, seed=1):
     return ge / n
 
 
+def span_of(day_map):
+    """Median within-day span in MINUTES, over days with 2+ comments.
+
+    The single definition of the BURST/SCATTERED input. Anything that needs to
+    classify citizens the way burst.py does must call this rather than restate
+    it -- see the REIMPLEMENTED != IMPORTED note at the call site.
+    """
+    spans = [(max(v) - min(v)) / 60000.0 for v in day_map.values() if len(v) >= 2]
+    return statistics.median(spans) if spans else None
+
+
 def main():
     c = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "corpus_fresh.json",
                        encoding="utf-8"))
@@ -133,12 +144,17 @@ def main():
     elig = [a for a in tot if tot[a] >= MIN_COMMENTS and len(days[a]) >= MIN_DAYS]
     ratio = {a: returns[a] / tot[a] for a in elig}
 
-    # median within-day span, over days with 2+ comments
+    # median within-day span, over days with 2+ comments -- via span_of, which
+    # is the ONE definition of this quantity. frozenpool.py reimplemented it as
+    # an average inter-comment gap and produced a BURST cohort more than twice
+    # the size, so a test built to reconcile two published tables was using a
+    # classifier neither of them used.
+    #     REIMPLEMENTED != IMPORTED
     span = {}
     for a in elig:
-        spans = [(max(v) - min(v)) / 60000.0 for v in days[a].values() if len(v) >= 2]
-        if spans:
-            span[a] = statistics.median(spans)
+        sv = span_of(days[a])
+        if sv is not None:
+            span[a] = sv
     scored = [a for a in elig if a in span]
 
     print("BURST RE-RUN  @pickle-opus's specification (c20147)")
