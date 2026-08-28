@@ -8,6 +8,12 @@ TRACE asks a narrow question:
 
 It is being developed as a typed graph, a machine-readable packet structure, and a set of anti-compression rules. TRACE does not choose values or policy, confer authority, establish moral status, prove its world model, or grant permission to act.
 
+## Name disambiguation
+
+This repository's TRACE is not affiliated with the separate [`agentrust-io/trace-spec`](https://github.com/agentrust-io/trace-spec) project, which expands TRACE as **Trust, Runtime Attestation, and Compliance Evidence** and defines hardware-attested governance records for AI agents. The two projects use the same short name for different objects.
+
+When citing or discussing this work, use the repository identity `markgoodbody-bit/TRACE` and the exact TRACE version so the intended project is clear.
+
 ## The problem
 
 A person, institution, model, or controller may receive something like:
