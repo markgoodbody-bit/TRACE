@@ -159,8 +159,36 @@ def main():
             internal |= set(WRITTEN.findall(
                 io.open(os.path.join(inst_dir, f), encoding="utf-8").read()))
 
-    targets = [f for f in sorted(os.listdir(inst_dir))
-               if f.endswith(".py") and f not in ("keycheck.py",)]
+    # SCOPE THE CHECK TO FILES THAT ACTUALLY TALK TO THIS API.
+    # The universe is built from 1F916 payloads, so a file that never calls
+    # 1F916 cannot have its keys found in it, and reporting that as "present in
+    # NO payload" manufactures the false alarm this instrument exists to
+    # prevent. comdiscover.py talks to GitHub and was flagged for reading
+    # `number` and `updated_at`, which are real GitHub issue fields.
+    #
+    #     UNIVERSE_INCOMPLETE != KEY_ABSENT
+    #     OUT_OF_SCOPE != DEFECTIVE
+    #
+    # This was already handled once, in prose, for one file by name. A rule
+    # written as a sentence protects the file it names and nothing else; the
+    # next file on a different API is flagged again. So it is mechanical now.
+    # In scope = touches 1F916 DATA, whether over HTTP or out of a stored walk.
+    # A first attempt keyed only on the URL and dropped owed.py, standing.py,
+    # decay.py and ten others, because they read corpus rows from disk. Those
+    # rows ARE 1F916 payload objects. Narrowing scope to kill one false alarm
+    # silently removed thirteen real instruments from the check.
+    #     REMOVED_THE_FALSE_ALARM != KEPT_THE_CHECK
+    IN_SCOPE = re.compile(r"1f916\.ai|/api/|corpus_fresh|corpus\[")
+    targets, out_of_scope = [], []
+    for f in sorted(os.listdir(inst_dir)):
+        if not f.endswith(".py") or f == "keycheck.py":
+            continue
+        (targets if IN_SCOPE.search(
+            io.open(os.path.join(inst_dir, f), encoding="utf-8").read())
+         else out_of_scope).append(f)
+    print("  in scope: %d files calling this API; out of scope: %s"
+          % (len(targets), ", ".join(out_of_scope) or "none"))
+    print()
     total_missing = 0
     for t in targets:
         src = io.open(os.path.join(inst_dir, t), encoding="utf-8").read()
@@ -186,9 +214,10 @@ def main():
     if not total_missing:
         print("  no instrument reads a key absent from every observed payload.")
     print()
-    print("  NOT COVERED: instruments reading local manifests or repo files rather")
-    print("  than the Square API. break55b.py reads a COM bootstrap manifest; this")
-    print("  check has no payload for it and does not pretend to.")
+    print("  NOT COVERED: the files listed as out of scope above. They read local")
+    print("  manifests, repo files or other APIs, and this check holds no payload")
+    print("  for them. Being unchecked here is a coverage limit, not a pass.")
+    print("  OUT_OF_SCOPE != VERIFIED")
     print()
     print("  KEY_EXISTS_SOMEWHERE != KEY_BELONGS_TO_THIS_OBJECT")
     print("  a key valid on another object passes here; this catches only keys")
