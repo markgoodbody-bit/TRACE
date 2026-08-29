@@ -28,7 +28,7 @@ EXPECTED_PREFLIGHT_SHA256 = "0b5dfd21d799c8268f3bb5ddea2a6dbdebc6de7eeabdcd1edd2
 AUTHORIZED_PROVIDERS = {"gemini": "gemini-3.6-flash", "kimi": "kimi-k3"}
 EMPTY_SHA256 = hashlib.sha256(b"").hexdigest()
 PRIOR_AUTHORIZATION_ID = "CODEX-THREAD-20260829-USD4-GEMINI-KIMI-001"
-AUTHORIZATION_ID = "PENDING_NEW_AUTHORIZATION"
+AUTHORIZATION_ID = "CODEX-THREAD-20260829-USD4-GEMINI-KIMI-002"
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -285,14 +285,15 @@ def main() -> int:
     parser.add_argument("--cap-usd", type=float, required=True)
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--execute", action="store_true")
+    parser.add_argument("--authorization-id")
     args = parser.parse_args()
 
     if args.cap_usd <= 0 or args.cap_usd > 4.0:
         raise ValueError("cap must be positive and cannot exceed the runner safety maximum of 4.00 USD")
-    if args.execute:
+    if args.execute and args.authorization_id != AUTHORIZATION_ID:
         raise ValueError(
-            f"execution disabled: prior authorization {PRIOR_AUTHORIZATION_ID} stopped at its "
-            "connection gate; record and bind a new explicit authorization before enabling dispatch"
+            "execution requires the exact newly recorded authorization id; the prior stopped "
+            f"authorization {PRIOR_AUTHORIZATION_ID} cannot be reused"
         )
     base_url = local_base_url(args.base_url)
     manifest_path = args.manifest.resolve()
