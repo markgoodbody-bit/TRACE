@@ -47,6 +47,20 @@ These questions can be answered in ordinary prose. TRACE is useful when the
 relationships between them need to remain explicit across people, documents,
 tools or time.
 
+## Use boundary
+
+Use TRACE when several of those relationships must remain connected for a
+consequential decision and an ordinary account or established specialist method
+is losing them. The smallest useful result may be a short prose account naming
+the decision, affected entities, material route or transition, decisive clock or
+dependency, and the exact unsupported claim or blocker. A schema is not required.
+
+Do not use TRACE when ordinary analysis already preserves the material
+distinctions with less effort, or when no current decision depends on making the
+relationships explicit. Stop when the needed structure is inspectable enough to
+challenge or change that decision. Reopen the analysis when affected scope,
+evidence, dependencies, clocks, authority or intended use materially changes.
+
 ## Start here
 
 1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) for the compact specification and
