@@ -1,0 +1,34 @@
+{
+  "candidate_schema_sha256": "3374a5a7cc6eb15d0a6cd77aa51173de2e5561b9d896901e0be0284c6195eb19",
+  "claim_boundary": "DETERMINISTIC_VERSION_ONLY_MINIMUM_SCHEMA_CARRY_FORWARD_NOT_SEMANTIC_COMPLETENESS_NOT_RELEASE_NOT_CANON_NOT_VALIDATION",
+  "donor_path": "TRACE_FORMAL_SEED_v0_2_7.md",
+  "donor_schema_sha256": "d1b0705d0c5c199532d591f99b6cc7fd86476488b5eb134f7a10d32794afe142",
+  "errors": [],
+  "expected_version_diff_paths": [
+    "$id",
+    "properties.trace_graph.properties.schema.const",
+    "properties.trace_graph.properties.trace_version.const",
+    "title"
+  ],
+  "normalized_candidate_sha256": "d1b0705d0c5c199532d591f99b6cc7fd86476488b5eb134f7a10d32794afe142",
+  "normalized_equal_to_donor": true,
+  "output_path": "PROJECT/TRACE_v0_3_0_MINIMUM_SCHEMA_CANDIDATE_v0_1.json",
+  "required_discipline_blocks_equal": true,
+  "required_packet_properties_equal": true,
+  "required_port_roles_equal": true,
+  "status": "PASS",
+  "version_diff_paths": [
+    "$id",
+    "properties.trace_graph.properties.schema.const",
+    "properties.trace_graph.properties.trace_version.const",
+    "title"
+  ],
+  "vocabulary_counts": {
+    "access_states": 4,
+    "claim_kinds": 7,
+    "evidence_states": 5,
+    "node_types": 27,
+    "relation_types": 46
+  },
+  "vocabulary_equal": true
+}

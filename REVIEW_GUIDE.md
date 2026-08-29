@@ -16,6 +16,17 @@ For exact wording, identifiers, schema material, and formal review, use [`TRACE_
 
 The formal source retains the wording of the reviewed compiled candidate. Its active release status is recorded separately in [`TRACE_v0_2_7_BASELINE_RELEASE.md`](TRACE_v0_2_7_BASELINE_RELEASE.md), so promotion did not rewrite the reviewed object.
 
+## Reviewing the v0.3.0 working candidate
+
+Begin at [`work/v0_3_0/README.md`](work/v0_3_0/README.md). Read the compact
+spine before the full candidate, and consult the readiness audit before making
+claims about current evidence.
+
+The package deliberately excludes most intermediate build and experiment
+history from the review path. That history remains available through its
+immutable quarry pointer. The package verifier establishes copied byte identity
+and selected status markers only; it is not a semantic or efficacy validator.
+
 ## Choose a review lane
 
 ### 1. Conceptual and semantic
