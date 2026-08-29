@@ -34,5 +34,6 @@ result.
 ## Readiness
 
 - [`TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md`](TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md)
+- [`TRACE_v0_3_0_REPOSITORY_IDENTITY_CORRECTION_20260829_v0_1.md`](TRACE_v0_3_0_REPOSITORY_IDENTITY_CORRECTION_20260829_v0_1.md)
 
 This record is the current claim ceiling for external criticism.
