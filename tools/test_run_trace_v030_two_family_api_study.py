@@ -15,6 +15,7 @@ class TraceRunnerTests(unittest.TestCase):
     def test_route_allowlist_excludes_qwen_retry_manual_and_external_shapes(self):
         self.assertTrue(runner.admitted_route("/api/connections/gemini/test", "POST"))
         self.assertTrue(runner.admitted_route("/api/connections/kimi/test", "POST"))
+        self.assertTrue(runner.admitted_route("/api/diagnostics/preflight", "GET"))
         self.assertTrue(
             runner.admitted_route(
                 "/api/sessions/session_1/rounds/round_1/call/gemini", "POST"
@@ -77,39 +78,41 @@ class TraceRunnerTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             runner.validate_estimate(job, response)
 
-    def test_connection_ceilings_are_bounded_under_exact_candidate_prices(self):
-        models = {
-            "models": [
+    def test_connection_ceilings_use_effective_server_preflight_not_catalogue_presets(self):
+        diagnostic_preflight = {
+            "items": [
                 {
-                    "id": "gemini",
-                    "setupPresets": [
-                        {
-                            "id": "gemini-3.6-flash",
-                            "inputPricePerMillion": 1.5,
-                            "outputPricePerMillion": 7.5,
-                            "priceCurrency": "USD",
-                        }
-                    ],
+                    "modelId": "gemini",
+                    "configuredModel": "gemini-3.6-flash",
+                    "visibleAnswerTokens": 128,
+                    "transportMaxOutputTokens": 384,
+                    "billingOutputCeilingTokens": 384,
+                    "maximumEstimatedCost": {
+                        "priceKnown": True,
+                        "currency": "USD",
+                        "maximumEstimatedCost": 0.003471,
+                    },
                 },
                 {
-                    "id": "kimi",
-                    "setupPresets": [
-                        {
-                            "id": "kimi-k3",
-                            "inputPricePerMillion": 3,
-                            "outputPricePerMillion": 15,
-                            "priceCurrency": "USD",
-                        }
-                    ],
+                    "modelId": "kimi",
+                    "configuredModel": "kimi-k3",
+                    "visibleAnswerTokens": 128,
+                    "transportMaxOutputTokens": 768,
+                    "billingOutputCeilingTokens": 768,
+                    "maximumEstimatedCost": {
+                        "priceKnown": True,
+                        "currency": "USD",
+                        "maximumEstimatedCost": 0.01155,
+                    },
                 },
             ]
         }
-        self.assertEqual(runner.connection_ceiling(models, "gemini"), 0.000975)
-        self.assertEqual(runner.connection_ceiling(models, "kimi"), 0.01155)
+        self.assertEqual(runner.connection_ceiling(diagnostic_preflight, "gemini"), 0.003471)
+        self.assertEqual(runner.connection_ceiling(diagnostic_preflight, "kimi"), 0.01155)
         self.assertLess(
-            runner.connection_ceiling(models, "gemini")
-            + runner.connection_ceiling(models, "kimi"),
-            0.013,
+            runner.connection_ceiling(diagnostic_preflight, "gemini")
+            + runner.connection_ceiling(diagnostic_preflight, "kimi"),
+            0.016,
         )
 
     def test_actual_usage_replaces_estimate_only_when_currency_is_exact_usd(self):

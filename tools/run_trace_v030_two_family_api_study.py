@@ -21,14 +21,14 @@ from urllib.parse import quote, urlparse
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 
-EXPECTED_SERVER_VERSION = "0.18.33"
+EXPECTED_SERVER_VERSION = "0.18.34"
 EXPECTED_STUDY_ID = "TRACE-V0.3.0-PRIMARY-API-PREFLIGHT-CANDIDATE-V0.2-TWO-FAMILY"
 EXPECTED_MANIFEST_SHA256 = "5b2ea0e916409d9283991bee4e55d2ca5be5af7bea99c5801562aa5889ae1eab"
 EXPECTED_PREFLIGHT_SHA256 = "0b5dfd21d799c8268f3bb5ddea2a6dbdebc6de7eeabdcd1edd248c858afeada1"
 AUTHORIZED_PROVIDERS = {"gemini": "gemini-3.6-flash", "kimi": "kimi-k3"}
 EMPTY_SHA256 = hashlib.sha256(b"").hexdigest()
-CONNECTION_PROMPT = "Return exactly: CAMPFIRE_CONNECTION_OK"
-AUTHORIZATION_ID = "CODEX-THREAD-20260829-USD4-GEMINI-KIMI-001"
+PRIOR_AUTHORIZATION_ID = "CODEX-THREAD-20260829-USD4-GEMINI-KIMI-001"
+AUTHORIZATION_ID = "PENDING_NEW_AUTHORIZATION"
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -57,6 +57,7 @@ def admitted_route(route: str, method: str) -> bool:
     static = {
         ("/api/health", "GET"),
         ("/api/models", "GET"),
+        ("/api/diagnostics/preflight", "GET"),
         ("/api/estimate", "POST"),
         ("/api/connections/gemini", "POST"),
         ("/api/connections/gemini/test", "POST"),
@@ -192,19 +193,34 @@ def public_model(models_response: dict[str, object], provider_id: str) -> dict[s
     return matches[0]
 
 
-def connection_ceiling(models_response: dict[str, object], provider_id: str) -> float:
-    model = public_model(models_response, provider_id)
-    preset_id = AUTHORIZED_PROVIDERS[provider_id]
-    preset = next((item for item in model.get("setupPresets", []) if item.get("id") == preset_id), None)
-    if not preset:
-        raise ValueError(f"missing connection preset {provider_id}/{preset_id}")
-    input_rate = float(preset.get("inputPricePerMillion", 0))
-    output_rate = float(preset.get("outputPricePerMillion", 0))
-    if input_rate <= 0 or output_rate <= 0 or str(preset.get("priceCurrency", "")) != "USD":
-        raise ValueError(f"unknown/non-USD connection pricing for {provider_id}")
-    input_tokens = max(1, math.ceil(len(CONNECTION_PROMPT) / 4))
-    output_tokens = 768 if provider_id == "kimi" else 128
-    return (input_tokens * input_rate + output_tokens * output_rate) / 1_000_000
+def connection_ceiling(diagnostic_preflight: dict[str, object], provider_id: str) -> float:
+    matches = [
+        item for item in diagnostic_preflight.get("items", [])
+        if item.get("modelId") == provider_id
+    ]
+    if len(matches) != 1:
+        raise ValueError(f"diagnostic preflight cardinality for {provider_id}")
+    item = matches[0]
+    if item.get("configuredModel") != AUTHORIZED_PROVIDERS[provider_id]:
+        raise ValueError(f"diagnostic configured model differs for {provider_id}")
+    estimate = item.get("maximumEstimatedCost", {})
+    amount = estimate.get("maximumEstimatedCost")
+    if (
+        estimate.get("priceKnown") is not True
+        or estimate.get("currency") != "USD"
+        or not isinstance(amount, (int, float))
+        or not math.isfinite(float(amount))
+        or float(amount) <= 0
+    ):
+        raise ValueError(f"unknown/non-USD diagnostic ceiling for {provider_id}")
+    visible = item.get("visibleAnswerTokens")
+    transport = item.get("transportMaxOutputTokens")
+    billing = item.get("billingOutputCeilingTokens")
+    if not all(isinstance(value, int) and value > 0 for value in (visible, transport, billing)):
+        raise ValueError(f"invalid diagnostic token ceilings for {provider_id}")
+    if transport < visible or billing < transport:
+        raise ValueError(f"non-conservative diagnostic token ceilings for {provider_id}")
+    return float(amount)
 
 
 def safe_call_record(response: dict[str, object]) -> dict[str, object]:
@@ -272,7 +288,12 @@ def main() -> int:
     args = parser.parse_args()
 
     if args.cap_usd <= 0 or args.cap_usd > 4.0:
-        raise ValueError("cap must be positive and cannot exceed the authorized 4.00 USD")
+        raise ValueError("cap must be positive and cannot exceed the runner safety maximum of 4.00 USD")
+    if args.execute:
+        raise ValueError(
+            f"execution disabled: prior authorization {PRIOR_AUTHORIZATION_ID} stopped at its "
+            "connection gate; record and bind a new explicit authorization before enabling dispatch"
+        )
     base_url = local_base_url(args.base_url)
     manifest_path = args.manifest.resolve()
     preflight_path = args.preflight_report.resolve()
@@ -298,6 +319,9 @@ def main() -> int:
     models_status, models_response = request_json(base_url, "/api/models")
     if models_status != 200:
         raise ValueError("Campfire public model snapshot unavailable")
+    diagnostics_status, diagnostic_preflight = request_json(base_url, "/api/diagnostics/preflight")
+    if diagnostics_status != 200 or diagnostic_preflight.get("ok") is not True:
+        raise ValueError("Campfire diagnostic preflight unavailable")
 
     planned_costs: dict[str, float] = {}
     for job in jobs:
@@ -308,7 +332,7 @@ def main() -> int:
         planned_costs[job["jobId"]], _ = validate_estimate(job, response)
 
     connection_costs = {
-        provider: connection_ceiling(models_response, provider)
+        provider: connection_ceiling(diagnostic_preflight, provider)
         for provider in ("gemini", "kimi")
     }
     connection_reserve = sum(connection_costs.values())
