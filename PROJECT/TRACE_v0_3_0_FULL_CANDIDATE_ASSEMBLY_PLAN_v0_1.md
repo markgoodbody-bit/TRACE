@@ -1,8 +1,20 @@
 # TRACE v0.3.0 — FULL-CANDIDATE ASSEMBLY PLAN v0.1
 
-**Status:** WORKING BUILD PLAN — NOT FULL CANDIDATE — NOT RELEASE — NOT CANON — NOT VALIDATED  
+**Historical status at creation:** WORKING BUILD PLAN — NOT FULL CANDIDATE — NOT RELEASE — NOT CANON — NOT VALIDATED
+**Current disposition (2026-08-29):** EXECUTED / SUPERSEDED AS A NEXT-WORK PLAN — RETAINED AS BUILD ANCESTRY
 **Assembly direction:** released v0.2.7 full object -> declared v0.3 repairs  
 **Do not assemble from the short spine as replacement source.**
+
+> Current-state note: the deterministic compiler and full working candidate
+> proposed here now exist. The compiler emitted
+> `PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md`; its build
+> report records `PASS`, 60 donor invariants preserved exactly in order,
+> minimum-schema `PASS`, 39 declared mutations, 6,539 output lines and SHA-256
+> `32409ee8d91e9c4bc67ecbb2359cc7d1c68249cab457511a50e586733ee7598a`.
+> Source-level F01-F10 closure remains bounded and unvalidated. Read
+> `TRACE_v0_3_0_BUILD_BRIEF.md` for the live gate. The original plan below is
+> preserved to show what was proposed before assembly; its “not yet” statements
+> are historical, not current telemetry.
 
 ---
 

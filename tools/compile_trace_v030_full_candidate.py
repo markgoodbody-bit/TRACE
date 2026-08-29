@@ -1690,9 +1690,9 @@ def verify_output(
 
     return {
         "status": "PASS" if not errors else "FAIL",
-        "donor_path": str(DONOR_PATH.relative_to(REPO_ROOT)),
+        "donor_path": DONOR_PATH.relative_to(REPO_ROOT).as_posix(),
         "donor_sha256": sha256_text(donor_text),
-        "output_path": str(OUTPUT_PATH.relative_to(REPO_ROOT)),
+        "output_path": OUTPUT_PATH.relative_to(REPO_ROOT).as_posix(),
         "output_sha256": sha256_text(output_text),
         "donor_bytes": len(donor_text.encode("utf-8")),
         "output_bytes": len(output_text.encode("utf-8")),

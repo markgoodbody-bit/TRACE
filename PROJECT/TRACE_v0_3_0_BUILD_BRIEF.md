@@ -17,19 +17,34 @@ INTEGRATED != COMPRESSED
 FIELD_CASE != CANON
 ```
 
-## Current coherent spine candidate
+## Current controlled objects
 
 ```text
-PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_6.md
+compact semantic attack object:
+PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md
 candidate semantic commit:
-20c1f6205b0e59c8a928d3399736852bd00a9cd0
+41fafe81a681cdc6514efc13524bae6ea6d6af8d
 blob:
-cd5280015ca498dcd0a6d0d505e3dec0455f3771
+1ae5e8b8640b9506db585599a6cae5192087d870
 size:
-21,400 bytes
+25,355 bytes
+
+donor-preserving full working candidate:
+PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md
+compiler/build commit:
+f317410f1b0f56beb023d972d321a9bb429615f0
+blob:
+10c26eac75e9bda5be00734fb3322afcd6ddaa17
+SHA-256:
+32409ee8d91e9c4bc67ecbb2359cc7d1c68249cab457511a50e586733ee7598a
+size:
+179,731 bytes / 6,539 lines
 ```
 
-Status: **ATTACK OBJECT**. It does not supersede v0.2.7.
+Both objects are **WORKING / NON-CANON / UNVALIDATED**. Neither supersedes
+released v0.2.7. The compact spine is the semantic comparison surface; the
+full candidate is the deterministic donor-preserving assembly. They are not
+interchangeable.
 
 For comparison:
 
@@ -38,7 +53,9 @@ spine v0.2 = 22,924 bytes
 integrated spine v0.3 = 31,714 bytes -> held for accretion
 compressed spine v0.4 = 18,701 bytes -> held for trigger regression
 spine v0.5 = 19,837 bytes -> held for targeted donor loss
-spine v0.6 = 21,400 bytes -> current
+spine v0.6 = 21,400 bytes -> historical attack object
+spine v0.11 = 25,355 bytes -> current compact semantic attack object
+full candidate v0.1 = 179,731 bytes -> current donor-preserving attack object
 ```
 
 ## Current surviving repairs
@@ -138,22 +155,47 @@ A spine may omit implementation detail. A full candidate may not silently delete
 
 ## Current falsification gate
 
-v0.6 passed a narrow immediate self-attack on:
+The source-level F01-F10 sequence is bounded-closed for this pass. The
+deterministic build passes donor identity, donor invariant order, minimum-schema
+and declared-transform checks. This is mechanical/source-contract evidence, not
+runtime validation or evidence that TRACE improves decisions.
 
-- evidence exists but receiver cannot inspect;
-- technical access without disclosure authority;
-- actor-controlled custody without independence upgrade;
-- same label / different future continuation;
-- different label / corresponding continuation;
-- unresolved correspondence;
-- single-time future view without unnecessary correspondence bureaucracy.
+The nearest-neighbour pass against FPF, STPA and ISO 26262 established no
+TRACE-unique semantic primitive. The legacy casebook also failed to establish
+superior main-decision discovery and recorded profile overfire and burden.
 
-This is `CLEAR_WITH_RESIDUAL_LIMITS`, not validation.
+The current frontier is therefore practical and comparative:
 
-One bounded transfer pass is routed through COM #46. Prior anchoring must be disclosed. Maximum three material findings. Do not turn this into serial reviewer polishing.
+```text
+CONSEQUENTIAL OMISSIONS AVOIDED
+versus
+TOTAL ACTIVATION / READING / POPULATION / OVERFIRE BURDEN
+```
+
+The frozen primary A/T protocol uses eight packets and three genuinely cold
+receiver families, with 48 maximum returns / 24 possible pairs. Framework and
+Claude Code are excluded as primary cold receivers because of material prior
+construction exposure. No primary arm has yet been dispatched; no efficacy
+result exists.
+
+Historical architecture evidence currently orders the live hypotheses as:
+
+```text
+DISTINCT FRAMEWORK          weak / not established
+SPECIALISED PROFILE        plausible / unvalidated
+INTEROPERABLE CONTRIBUTION plausible / untested
+THINNER MAINTAINED PRODUCT strongest historical support / untested
+PRESERVATION               admissible if comparative value fails
+```
+
+This ordering is an evidence summary, not a release decision.
 
 ## Stop / build rule
 
-One material counterexample is enough to hold the candidate.
+One material counterexample is enough to hold a candidate.
 
-Do not merge, release or canonise while the current transfer and donor-restoration gates remain open.
+Do not select a release architecture, merge, release or canonise while the
+primary comparative transfer/burden gate remains open. Do not add semantics to
+repair a product-evidence deficit. If the thinner/profile hypotheses do not
+outperform competent review or broader methods at acceptable burden, preserve
+the research lineage and stop expansion.

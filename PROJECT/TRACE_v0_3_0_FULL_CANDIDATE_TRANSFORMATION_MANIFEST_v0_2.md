@@ -1,8 +1,17 @@
 # TRACE v0.3.0 — FULL-CANDIDATE TRANSFORMATION MANIFEST v0.2
 
-**Status:** COMPILER-READY WORKING MANIFEST — NOT GENERATED FULL CANDIDATE — NOT VALIDATION — NOT RELEASE/CANON  
+**Historical status at creation:** COMPILER-READY WORKING MANIFEST — NOT GENERATED FULL CANDIDATE — NOT VALIDATION — NOT RELEASE/CANON
+**Current disposition (2026-08-29):** EXECUTED / SUPERSEDED AS CURRENT READINESS TELEMETRY — RETAINED AS TRANSFORM ANCESTRY
 **Supersedes for current assembly:** `TRACE_v0_3_0_FULL_CANDIDATE_TRANSFORMATION_MANIFEST_v0_1.md`  
 **Preserves:** v0.1 as historical compiler blueprint and evidence of the pre-ingress omission.
+
+> Current-state note: the compiler and generated full working candidate now
+> exist. The current build report is
+> `TRACE_v0_3_0_FULL_CANDIDATE_BUILD_REPORT_v0_1.json` with status `PASS` and
+> output SHA-256
+> `32409ee8d91e9c4bc67ecbb2359cc7d1c68249cab457511a50e586733ee7598a`.
+> The original readiness section below is preserved as a historical pre-build
+> record and must not be read as live branch state.
 
 ## Current inputs
 
