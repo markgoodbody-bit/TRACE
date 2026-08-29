@@ -228,6 +228,7 @@ def accounted_exposure(response: dict[str, object], estimate: float) -> float:
 
 
 def write_summary(path: Path, *, status: str, cap: float, connection_reserve: float,
+                  planned_connection_reserve: float,
                   completed_exposure: float, jobs: list[dict[str, object]],
                   events: list[dict[str, object]], failure: object | None = None) -> None:
     pair_models: dict[str, list[str]] = {}
@@ -245,6 +246,7 @@ def write_summary(path: Path, *, status: str, cap: float, connection_reserve: fl
         "authorizationId": AUTHORIZATION_ID,
         "authorizedCap": {"amount": cap, "currency": "USD"},
         "connectionReserveUsd": connection_reserve,
+        "plannedConnectionReserveUsd": planned_connection_reserve,
         "completedOrReservedExposureUsd": round(connection_reserve + completed_exposure, 12),
         "remainingAuthorizedUsd": round(cap - connection_reserve - completed_exposure, 12),
         "plannedPrimaryCalls": len(jobs),
@@ -368,7 +370,11 @@ def main() -> int:
         })
 
     # Exactly two connection diagnostics; stop before primary calls on any failure.
+    # Only an attempted probe belongs in the stopped-run exposure account. The full two-probe
+    # reserve remains in the immutable pre-dispatch plan.
+    attempted_connection_reserve = 0.0
     for provider in ("gemini", "kimi"):
+        attempted_connection_reserve += connection_costs[provider]
         status, result = request_json(base_url, f"/api/connections/{provider}/test", "POST", {})
         safe = {
             key: result.get(key)
@@ -390,7 +396,8 @@ def main() -> int:
         if status != 200 or not result.get("ok"):
             write_summary(
                 output_dir / "run-summary.json", status="STOPPED_CONNECTION_FAILURE",
-                cap=args.cap_usd, connection_reserve=connection_reserve,
+                cap=args.cap_usd, connection_reserve=attempted_connection_reserve,
+                planned_connection_reserve=connection_reserve,
                 completed_exposure=0.0, jobs=jobs, events=events, failure=safe,
             )
             return 2
@@ -466,6 +473,7 @@ def main() -> int:
             write_summary(
                 output_dir / "run-summary.json", status="STOPPED_PRIMARY_FAILURE",
                 cap=args.cap_usd, connection_reserve=connection_reserve,
+                planned_connection_reserve=connection_reserve,
                 completed_exposure=completed_exposure, jobs=jobs, events=events, failure=failure,
             )
             return 3
@@ -473,6 +481,7 @@ def main() -> int:
     write_summary(
         output_dir / "run-summary.json", status="COMPLETE_UNADJUDICATED",
         cap=args.cap_usd, connection_reserve=connection_reserve,
+        planned_connection_reserve=connection_reserve,
         completed_exposure=completed_exposure, jobs=jobs, events=events,
     )
     print(canonical_json({

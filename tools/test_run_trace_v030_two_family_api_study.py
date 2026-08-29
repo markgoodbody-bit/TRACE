@@ -1,5 +1,7 @@
 import importlib.util
+import json
 from pathlib import Path
+import tempfile
 import unittest
 
 
@@ -130,6 +132,26 @@ class TraceRunnerTests(unittest.TestCase):
             ),
             0.08,
         )
+
+    def test_stopped_summary_distinguishes_attempted_from_planned_probe_reserve(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "summary.json"
+            runner.write_summary(
+                path,
+                status="STOPPED_CONNECTION_FAILURE",
+                cap=4.0,
+                connection_reserve=0.000975,
+                planned_connection_reserve=0.012525,
+                completed_exposure=0.0,
+                jobs=[{"jobId": "one"}] * 32,
+                events=[],
+                failure={"code": "DIAGNOSTIC_MARKER_MISMATCH"},
+            )
+            summary = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(summary["connectionReserveUsd"], 0.000975)
+            self.assertEqual(summary["plannedConnectionReserveUsd"], 0.012525)
+            self.assertEqual(summary["completedOrReservedExposureUsd"], 0.000975)
+            self.assertEqual(summary["remainingAuthorizedUsd"], 3.999025)
 
 
 if __name__ == "__main__":
