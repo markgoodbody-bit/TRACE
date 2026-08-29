@@ -34,6 +34,12 @@ def main() -> int:
         "--study-id",
         default="TRACE-v0.3.0-BLIND-ADJUDICATION-GEMINI-API-PLUS-GROK-WEB-20260829-v0.4",
     )
+    parser.add_argument("--provider-family", default="XAI_GROK")
+    parser.add_argument("--service", default="grok.com")
+    parser.add_argument("--base-url", default="https://grok.com/")
+    parser.add_argument("--visible-mode-label", default="Fast")
+    parser.add_argument("--job-family-slug", default="GROK_WEB_GUEST_FAST")
+    parser.add_argument("--manifest-name", default="browser-grok-adjudication-manifest.json")
     args = parser.parse_args()
 
     public_dir = args.public_dir.resolve()
@@ -72,17 +78,18 @@ def main() -> int:
         jobs.append(
             {
                 "order": order,
-                "jobId": f"{packet_id}__ADJUDICATOR_GROK_WEB_GUEST_FAST__ATTEMPT_1",
+                "jobId": f"{packet_id}__ADJUDICATOR_{args.job_family_slug}__ATTEMPT_1",
                 "packetId": packet_id,
                 "caseLabel": packet["caseId"],
                 "promptPath": f"prompts/{prompt_name}",
                 "promptBytes": len(prompt_bytes),
                 "promptSha256": sha256(prompt_bytes),
-                "providerFamily": "XAI_GROK",
-                "service": "grok.com",
+                "providerFamily": args.provider_family,
+                "service": args.service,
+                "baseUrl": args.base_url,
                 "transport": "browser",
                 "accountMode": "SIGNED_OUT_GUEST",
-                "visibleModeLabel": "Fast",
+                "visibleModeLabel": args.visible_mode_label,
                 "backendModelIdentity": "UNKNOWN_NOT_DISCLOSED_BY_UI",
                 "freshChatRequired": True,
                 "externalSearchAllowed": False,
@@ -102,12 +109,12 @@ def main() -> int:
         "sealedArmKeySha256": public_manifest["sealedArmKeySha256"],
         "armKeyIncluded": False,
         "deltaNotesIncluded": False,
-        "dispatchPolicy": "GROK_WEB_FIRST_FAIL_FAST_THEN_GEMINI_API",
+        "dispatchPolicy": "WEB_FIRST_FAIL_FAST_THEN_GEMINI_API",
         "capturePolicy": "PRESERVE_VISIBLE_PAGE_EXPORT_AND_SESSION_URL_BEFORE_NEXT_PACKET",
         "identityLimit": "SERVICE_AND_VISIBLE_MODE_ONLY_BACKEND_MODEL_UNDISCLOSED",
         "jobs": jobs,
     }
-    manifest_path = output_dir / "browser-grok-adjudication-manifest.json"
+    manifest_path = output_dir / args.manifest_name
     exclusive_text(manifest_path, json.dumps(manifest, indent=2, ensure_ascii=False, sort_keys=True) + "\n")
     print(
         json.dumps(
@@ -115,8 +122,8 @@ def main() -> int:
                 "manifest": str(manifest_path),
                 "manifestSha256": sha256(manifest_path.read_bytes()),
                 "jobs": len(jobs),
-                "service": "grok.com",
-                "visibleModeLabel": "Fast",
+                "service": args.service,
+                "visibleModeLabel": args.visible_mode_label,
                 "backendModelIdentity": "UNKNOWN_NOT_DISCLOSED_BY_UI",
             },
             indent=2,
