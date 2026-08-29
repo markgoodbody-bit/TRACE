@@ -1,139 +1,83 @@
 # TRACE — PROJECT
 
+## Purpose
+
+TRACE is a voluntary structural language for differentiating what a bounded representation may otherwise compress: world, scene, aperture, map, claims, evidence, transitions, routes, clocks, burden, residue, designation, measure and unresolved limits.
+
+It does not choose values, establish moral standing, confer authority, prove its world model, or grant permission to act.
+
 ## Currentness
 
 ```text
 CURRENTNESS_MODE: SNAPSHOT
-DERIVED_AT_COMMIT: 491f8558efe532101ce94a2c172f77b1e0305a81
-LAST_VERIFIED: 2026-08-27
-DEPENDS_ON:
-  - OUTWARD_EVALUATION_PROTOCOL_v0_5 blob 249318a2ee6a38d2095e4153567556e173488f48
-  - OUTWARD_EXECUTION_ADAPTER v0_1 blob e5aa031e9a41086f305234578b23861e13f45b49
-  - OUTWARD_POOL_FREEZE_20 v0_1 blob 7ccfe2a1226a17b30a6692ff94d975288f87dd7c
-  - DERIVED_CURRENTNESS_CONTRACT v0_1 blob d3e3ba057553f1cc8e75acd7c0555aececdbf441
+DERIVED_AT_COMMIT: d5c8a282db0acc4408e9548a42a2482245ec6be2
+LAST_VERIFIED: 2026-08-29
 REACQUIRE:
   - mutable branch / PR state -> live TRACE PR #38
   - released baseline -> live TRACE releases/main before release-sensitive action
 ```
 
-This is a bounded orientation snapshot, not live branch telemetry. Mutable answers must be reacquired through the routes above.
+This is a bounded orientation snapshot, not live branch telemetry.
 
-## Working project state at this snapshot
+## Controlled state
 
-Released baseline observed at this snapshot: **v0.2.7**.
+Released baseline: **TRACE v0.2.7**.
 
-Next-version working surface:
+Next-version working objects:
+
+- [`TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md`](TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md) — compact semantic comparison surface;
+- [`TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md`](TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md) — deterministic donor-preserving full candidate;
+- [`TRACE_v0_3_0_BUILD_BRIEF.md`](TRACE_v0_3_0_BUILD_BRIEF.md) — current build and stop rules;
+- [`MAP.md`](MAP.md) — bounded object and evidence map;
+- [`TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md`](TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md) — pre-external-contact claim and readiness ledger.
+
+Both candidates are working, non-canonical, unreleased and unvalidated. Neither supersedes v0.2.7.
+
+## What the current build earned
+
+- No new primitive, root, node type, relation type, evidence state, access state or claim kind was required.
+- Representation-independent firing and dependency-relative currentness were tightened.
+- Verification existence, execution and discrimination were separated.
+- Correction-window claims now require explicit target boundaries, common temporal bases and supported feasible bounds.
+- Future-path correspondence, route usability, burden, residue and carrier/enforcement ceilings were tightened.
+- F01-F10 source-contract attacks are bounded-closed for this pass; failed ancestry remains preserved.
+
+These are semantic and source-contract results. They are not evidence that TRACE improves decisions in practice.
+
+## Outward evidence state
+
+The frozen two-family primary run completed:
 
 ```text
-PR #38
-branch: framework/trace-v0-3-0-working
-compact semantic object:
-  PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md
-semantic commit:
-  41fafe81a681cdc6514efc13524bae6ea6d6af8d
-full working candidate:
-  PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md
-status:
-  WORKING / ATTACK OBJECT / NOT BASELINE / NOT CANON / NOT VALIDATED
+primary calls:       32 / 32
+paired A/T units:    16 / 16 technically complete
+status:              COMPLETE_UNADJUDICATED
+actual primary cost: USD 1.2351765
 ```
 
-The full candidate exists. Recursion and F10 load-bearing-limit carrier survival remain bounded-closed at source-contract level for this pass. F01-F10 ancestry remains preserved rather than rewritten away.
+The run also established a material carrier-burden pressure: median T/A total byte burden was 2.798448, and nine Kimi outputs exceeded the common 1,200-word envelope.
 
-## Project-direction rule
+Blind two-family adjudication has not completed. The sealed arm key remains unopened. Kimi, Grok and signed-out Meta routes produced transport or access failures, not an efficacy result and not a TRACE failure result.
 
-Standing expansion/preservation object:
+Primary result:
+[`TRACE_v0_3_0_OUTWARD_API_EXECUTION_RESULT_20260829_v0_2.md`](TRACE_v0_3_0_OUTWARD_API_EXECUTION_RESULT_20260829_v0_2.md)
 
-`PROJECT/TRACE_v0_3_0_EXPANSION_PRESERVATION_RULE_v0_1.md`
+Latest stopped adjudication record:
+[`TRACE_v0_3_0_BLIND_ADJUDICATION_API_RESULT_20260829_v0_4.md`](TRACE_v0_3_0_BLIND_ADJUDICATION_API_RESULT_20260829_v0_4.md)
 
-```text
-CORE_COMPRESSION != PROJECT_NARROWING
-RELOCATION != ERASURE
-FAILED_OBJECT != LOST_OBJECT
-NOT_UNIVERSAL != DELETE
-EXPANSION != CORE_BLOAT
-HORIZON_COMPLETENESS != COMPULSORY_COGNITION
-```
+Public key-free packet archive:
+[`TRACE-v0.3.0-blind-adjudication-public-20260829-v0.1.zip`](artifacts/TRACE-v0.3.0-blind-adjudication-public-20260829-v0.1.zip)
 
-The total project should expand its ability to represent materially different worlds, failures, scopes, burdens, routes and correction structures. Receiver-facing cores may be compressed or layered only with preserved pointers/structure so compression does not become loss.
-
-## Build posture
+## Build rule
 
 ```text
-KEEP BUILDING OUTWARD
-NEW PRIMITIVE: ONLY IF MATERIALLY EARNED
-NEW ROOT: ONLY IF MATERIALLY EARNED
-F11-BY-MOMENTUM: NO
-REOPEN BOUNDED-CLOSED SURFACE: ONLY WITH MATERIALLY DISTINCT FAILURE
-BROAD REVIEWER TREADMILL: NO
+LESS ONTOLOGY -> MORE CAUSAL DISCIPLINE
+FAILED_OBJECT != ERASED_OBJECT
+DONOR_RECOVERY != NEW_PRIMITIVE
+SOURCE_LEVEL_PASS != PRACTICAL_ADVANTAGE
+EXECUTED != ADJUDICATED
+TRANSPORT_FAILURE != TRACE_FAILURE
 NO MERGE / RELEASE / CANON BY MOMENTUM
 ```
 
-`KEEP BUILDING` is not indiscriminate universal-core accretion. Prefer existing core -> derived view/operator -> domain profile -> checker/tooling/runtime binding -> human translation/ME -> new universal structure only when existing layers cannot faithfully carry a materially different case.
-
-## Outward evaluation execution
-
-The successor outward protocol is frozen:
-
-`PROJECT/TRACE_v0_3_0_OUTWARD_EVALUATION_PROTOCOL_v0_5_EXPANSION.md`
-
-The successor source-family adapter is active:
-
-`PROJECT/TRACE_v0_3_0_OUTWARD_EXECUTION_ADAPTER_MANIFEST_v0_1.md`
-
-Executed real-world pool:
-
-```text
-SC-RAIB       5
-SC-PAC        5
-SC-EPA-FOIA2  5
-SC-NHTSA-SGO  5
-TOTAL        20 / 20
-```
-
-Frozen pool object:
-
-`PROJECT/TRACE_v0_3_0_OUTWARD_POOL_FREEZE_20_v0_1.md`
-
-The NHTSA five were selected mechanically from exact uploaded official archive carrier bytes after byte/SHA-256 verification. No substantive crash-narrative reading was used to choose them.
-
-```text
-POOL_FREEZE != EFFICACY_SELECTION
-POOL_MEMBERSHIP != TRACE_SUCCESS
-```
-
-## Narrow currentness repair
-
-Recurring currentness failures earned one project/orientation-layer repair:
-
-`PROJECT/TRACE_v0_3_0_DERIVED_CURRENTNESS_CONTRACT_v0_1.md`
-
-Static project front doors now expose snapshot basis and live reacquisition routes rather than presenting a carried branch-head answer as enduring current state.
-
-```text
-CONTINUITY_OF_ROUTE != CONTINUITY_OF_CONCLUSION
-SNAPSHOT != LIVE
-UNKNOWN != LAST_KNOWN
-```
-
-This repair is not a new TRACE primitive. Its later hostile test is whether route-first successor orientation reduces wrong-current action without losing material state or imposing excessive reconstruction burden.
-
-## Next execution boundary
-
-The source-family intake phase and bounded currentness front-door repair are complete enough to unblock deterministic efficacy-case selection.
-
-Before selection itself, reacquire live PR #38 state and verify that the frozen protocol, adapter and 20-case pool dependencies above have not been superseded or corrected.
-
-Then:
-
-```text
-20/20 POOL FROZEN
--> deterministic efficacy-case selection
--> frozen case packets
--> cold paired Arm A / Arm T comparison
--> blind adjudication
--> expansion / placement / redesign / containment map
-```
-
-No TRACE-assisted NHTSA interpretation occurred before case identities were frozen. No F11, merge, release, canon, validation, authority, permission or clearance follows from reaching this boundary.
-
-See live PR #38 for mutable branch state, `PROJECT/MAP.md` for the bounded object map, and COM #56 for the preserved x100/drift evidence.
+Continue document cleanup, clean assembly and external criticism without making the unresolved adjudication a project bottleneck. Keep efficacy claims blocked until evidence exists.

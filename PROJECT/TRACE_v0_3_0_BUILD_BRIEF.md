@@ -190,7 +190,7 @@ unchanged pending comparative population burden; schema acceptance does not
 establish understanding or world application. See
 `PROJECT/TRACE_v0_3_0_FIXED_VALUE_DISCIPLINE_TEST_RECORD_20260829_v0_1.md`.
 
-The current frontier is therefore practical and comparative:
+The current frontier remains practical and comparative:
 
 ```text
 CONSEQUENTIAL OMISSIONS AVOIDED
@@ -198,11 +198,18 @@ versus
 TOTAL ACTIVATION / READING / POPULATION / OVERFIRE BURDEN
 ```
 
-The frozen primary A/T protocol uses eight packets and three genuinely cold
-receiver families, with 48 maximum returns / 24 possible pairs. Framework and
-Claude Code are excluded as primary cold receivers because of material prior
-construction exposure. No primary arm has yet been dispatched; no efficacy
-result exists.
+The frozen primary A/T protocol originally targeted three genuinely cold
+receiver families. The executed bounded run used Gemini and Kimi and completed
+32 / 32 calls across 16 paired A/T units. It is preserved as
+`COMPLETE_UNADJUDICATED`, not as an efficacy result. The recorded median T/A
+total byte burden was 2.798448, and nine Kimi outputs exceeded the requested
+1,200-word envelope. See
+`PROJECT/TRACE_v0_3_0_OUTWARD_API_EXECUTION_RESULT_20260829_v0_2.md`.
+
+Blind two-family adjudication has not completed. Preserved attempts exposed
+Kimi watchdog/return problems, a Grok guest route with no assistant return, and
+a signed-out Meta login gate. The arm key remains sealed. These are transport
+and access findings, not a positive or negative result about TRACE.
 
 Historical architecture evidence currently orders the live hypotheses as:
 
@@ -220,8 +227,9 @@ This ordering is an evidence summary, not a release decision.
 
 One material counterexample is enough to hold a candidate.
 
-Do not select a release architecture, merge, release or canonise while the
-primary comparative transfer/burden gate remains open. Do not add semantics to
-repair a product-evidence deficit. If the thinner/profile hypotheses do not
-outperform competent review or broader methods at acceptable burden, preserve
-the research lineage and stop expansion.
+Do not select a release architecture, merge, release or canonise from technical
+completion or unresolved adjudication. Do not add semantics to repair a
+product-evidence deficit. Document cleanup, clean assembly and criticism may
+continue without treating adjudication transport as the project centre. If the
+thinner/profile hypotheses do not outperform competent review or broader
+methods at acceptable burden, preserve the research lineage and stop expansion.

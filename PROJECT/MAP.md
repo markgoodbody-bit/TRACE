@@ -4,71 +4,84 @@
 
 ```text
 CURRENTNESS_MODE: SNAPSHOT
-DERIVED_AT_COMMIT: fcce7a0c8ce20448780b9f8b5fc10e961ad18d4c
-LAST_VERIFIED: 2026-08-27
+DERIVED_AT_COMMIT: d5c8a282db0acc4408e9548a42a2482245ec6be2
+LAST_VERIFIED: 2026-08-29
 DEPENDS_ON:
-  - OUTWARD_EVALUATION_PROTOCOL_v0_5 blob 249318a2ee6a38d2095e4153567556e173488f48
-  - OUTWARD_EXECUTION_ADAPTER v0_1 blob e5aa031e9a41086f305234578b23861e13f45b49
-  - OUTWARD_POOL_FREEZE_20 v0_1 blob 7ccfe2a1226a17b30a6692ff94d975288f87dd7c
-  - DERIVED_CURRENTNESS_CONTRACT v0_1 blob d3e3ba057553f1cc8e75acd7c0555aececdbf441
+  - OUTWARD_API_EXECUTION_RESULT v0.2 blob cb74678b6e31a1b82fd6b4d762566fd04aba123e
+  - BLIND_ADJUDICATION_API_RESULT v0.4 blob feb8c7a7f9aefc0613b8b670ec1c0833b181f062
+  - PUBLIC_BLIND_PACKET_ARCHIVE blob d467b3ad7d686868f99fbad1c40c7aa2d0c56a85
 REACQUIRE:
   - mutable branch / PR state -> live TRACE PR #38
   - released baseline -> live TRACE releases/main before release-sensitive action
 ```
 
-This file does not carry a `CURRENT_BRANCH_HEAD`. Committing a branch-head value here would move the branch and make the claim self-invalidating.
+This file does not carry a `CURRENT_BRANCH_HEAD`. Committing a branch-head value here would move the branch and make the claim self-invalidating. The commit above identifies the state from which this snapshot was derived.
 
-`MAP != WORLD`.
+`MAP != WORLD` and `SNAPSHOT != LIVE`.
 
-## Bounded object map at this snapshot
+## Controlled objects at this snapshot
 
 ```text
-released baseline at snapshot
+released baseline
   -> TRACE v0.2.7
 
-next-version working surface
-  -> PR #38 / framework/trace-v0-3-0-working
+next-version semantic comparison surface
   -> PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md
-       [compact semantic attack object]
-  -> PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md
-       [donor-outward full working candidate]
-  -> PROJECT/TRACE_v0_2_7_TO_v0_3_0_DONOR_MAP_v0_1.md
-       [donor-loss obligations]
-  -> PROJECT/TRACE_v0_3_0_EXPANSION_PRESERVATION_RULE_v0_1.md
-       [project-direction gate]
-  -> PROJECT/TRACE_v0_3_0_OUTWARD_EVALUATION_PROTOCOL_v0_5_EXPANSION.md
-       [frozen outward protocol]
-  -> PROJECT/TRACE_v0_3_0_OUTWARD_EXECUTION_ADAPTER_MANIFEST_v0_1.md
-       [successor-study source-family adapter]
-  -> source-family intakes
-       RAIB       5
-       PAC        5
-       EPA-FOIA2  5
-       NHTSA-SGO  5
-  -> PROJECT/TRACE_v0_3_0_OUTWARD_POOL_FREEZE_20_v0_1.md
-       [20/20 real-world pool frozen; not efficacy selection]
-  -> PROJECT/TRACE_v0_3_0_DERIVED_CURRENTNESS_CONTRACT_v0_1.md
-       [narrow project/orientation repair]
-  -> falsification/
-       [failed objects remain visible]
+       [25,355-byte compact spine; working / non-canon / unvalidated]
 
-derived / outside universal spine
-  -> dependency-path operator
-  -> cold-entry surface
-  -> external correction preflight
-  -> field instruments
+donor-preserving assembly
+  -> PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md
+       [179,731-byte deterministic full candidate; working / non-canon / unvalidated]
+
+lineage and build controls
+  -> PROJECT/TRACE_v0_2_7_TO_v0_3_0_DONOR_MAP_v0_1.md
+  -> PROJECT/TRACE_v0_3_0_EXPANSION_PRESERVATION_RULE_v0_1.md
+  -> PROJECT/TRACE_v0_3_0_BUILD_BRIEF.md
+
+outward evidence controls
+  -> PROJECT/TRACE_v0_3_0_OUTWARD_EVALUATION_PROTOCOL_v0_5_EXPANSION.md
+  -> PROJECT/TRACE_v0_3_0_OUTWARD_API_EXECUTION_RESULT_20260829_v0_2.md
+  -> PROJECT/TRACE_v0_3_0_BLIND_ADJUDICATION_API_RESULT_20260829_v0_1.md ... v0_4.md
+  -> PROJECT/artifacts/TRACE-v0.3.0-blind-adjudication-public-20260829-v0.1.zip
 ```
 
-## Execution posture at this snapshot
+The compact spine and full candidate are not interchangeable. The spine is the bounded receiver-facing comparison object. The full candidate preserves donor capability and implementation detail.
+
+## Evidence state at this snapshot
 
 ```text
-recursion: bounded-closed for current source-level pass
-F10 carrier survival: bounded-closed for current source-level pass
-real-world source pool: 20 / 20 FROZEN
-currentness repair: narrow contract applied to project front doors in progress
-next after repair: deterministic efficacy-case selection
+source-contract F01-F10 pass: BOUNDED-CLOSED FOR THIS PASS
+primary two-family calls:      32 / 32 COMPLETE
+paired A/T units:              16 / 16 TECHNICALLY COMPLETE
+primary status:                COMPLETE_UNADJUDICATED
+blind two-family adjudication: NOT COMPLETED
+arm key:                       SEALED
+efficacy result:               NONE
+failure result about TRACE:    NONE
 ```
 
-No F11 is earned by pool completion. No working object here supersedes released v0.2.7. No merge, release or canon follows from this map.
+The primary run established execution and burden evidence. It did not establish a TRACE-only gain. Blind adjudication attempts exposed transport and access failures across Kimi, Grok and signed-out Meta routes. Those failures do not adjudicate the paired outputs.
 
-Before acting on mutable state, use the `REACQUIRE` routes above rather than treating this snapshot as live telemetry.
+## Current interpretation
+
+Earned:
+
+- the v0.11 spine and v0.1 full candidate reproduce deterministically under declared checks;
+- the primary two-family study completed without call failure, truncation or retry;
+- the compact carrier imposed substantial input/reading-volume burden;
+- nine Kimi outputs exceeded the requested word envelope;
+- public blind packets can be inspected without the arm key or expected-result notes.
+
+Not earned:
+
+- practical advantage over competent ordinary analysis or an established domain method;
+- a positive or negative efficacy disposition;
+- a new TRACE primitive or root;
+- replacement of v0.2.7;
+- release, canon, validation, authority, permission or clearance.
+
+## Next boundary
+
+Document cleanup, candidate assembly review and external criticism may continue without waiting for adjudication. Any efficacy claim remains blocked until the frozen pairs receive valid blinded assessment. Do not convert transport difficulty into evidence for or against TRACE.
+
+Before acting on mutable state, use the `REACQUIRE` routes above.

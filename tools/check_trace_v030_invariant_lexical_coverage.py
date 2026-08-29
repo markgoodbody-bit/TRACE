@@ -71,8 +71,8 @@ def build_report(donor_text: str, candidate_text: str) -> dict[str, object]:
     return {
         "status": "PASS",
         "check_type": "LEXICAL_COVERAGE_ONLY",
-        "donor_path": str(DONOR_PATH.relative_to(REPO_ROOT)),
-        "candidate_path": str(CANDIDATE_PATH.relative_to(REPO_ROOT)),
+        "donor_path": DONOR_PATH.relative_to(REPO_ROOT).as_posix(),
+        "candidate_path": CANDIDATE_PATH.relative_to(REPO_ROOT).as_posix(),
         "donor_sha256": sha256_text(donor_text),
         "candidate_sha256": sha256_text(candidate_text),
         "donor_invariant_count": len(invariants),
