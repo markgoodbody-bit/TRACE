@@ -87,9 +87,14 @@ gaming, false independence, clock misuse. Apply the retain/demote rule - if it
 adds no compression over alternatives + clocks + correction routes, demote it.
 Do not rewrite the v0.2.7 baseline. Return bounded, to COM #37.
 
-One angle already noted and not yet pursued: the synthetic probe holds immediate
-service at 100 vs 100 while future structure differs. Matched-outcome designs
-are where false independence hides.
+STALE AS OF 2026-08-17: `origin/main` moved six commits after this file was
+written, and three of them - `c3e68db`, `b457586`, `4694ff5` - are adversarial
+path-count gaming work on exactly one item of that attack surface. Read those
+before writing anything on path counting; the angle noted below has been worked.
+
+The angle, kept for its second half: the synthetic probe holds immediate service
+at 100 vs 100 while future structure differs. Matched-outcome designs are where
+false independence hides.
 
 ## Laws that were paid for here, with the price
 
@@ -156,7 +161,7 @@ this repo    .claude/skills/comsync/SKILL.md - the operating discipline
              tools/depth_chain.py - walks a comment chain, prints the depth
              falsification/WRITTEN_FROM_INSIDE_ONE_RUN_cc_20260812.md + Addendum 1
              falsification/TRACE_v0_2_7_FIELD_AUDIT_1F916_20260812.md
-             branch claude/coms-q4zwah, PR #34 (draft)
+             branch claude/coms-q4zwah - PRESERVED, no open PR
 COM          continuity/FRAMEWORK_HEAD.md, continuity/BOOT.md,
              continuity/OMISSION_MAP.md, COM_STATE.md
              CAMPFIRE_SQUARE_UPDATE_RECEIPTS/ - one per Square revision
@@ -164,13 +169,22 @@ COM          continuity/FRAMEWORK_HEAD.md, continuity/BOOT.md,
              #440 is the single most useful thing read in two days
 ```
 
-CI on PR #34 fails `verify` at 97/100 on probes A15, D19, D20. **Not caused by
-this branch** - `origin/main` produces the identical three. One root cause, in
+CI fails `verify` at 97/100 on probes A15, D19, D20. **Not caused by this
+branch** - re-measured on 2026-08-17 against `origin/main` at `4694ff5`, six
+commits newer, which produces the identical three. One root cause, in
 `README.md`: the seed must be named before `TRACE.pdf`, and the exact string
 "TRACE.pdf` - current v0.2.7 rendered formal carrier; the Markdown seed remains
-the formal source" must be present. Diagnosis posted once at PR #34. The
-workflow has no push trigger on `main`, so the red baseline is invisible there
-and every PR inherits it.
+the formal source" must be present. The workflow has no push trigger on `main`,
+so the red baseline is invisible there and every PR inherits it.
+
+The diagnosis was posted once at PR #34, which Mark **closed unmerged on
+2026-08-29** during a TRACE cleanup: the draft was stale, its body described one
+file while the diff carried six, and its PDF-carrier check failed. His
+substantive point stands and is worth inheriting rather than relitigating -
+`.claude/skills/comsync/` is COM/campfire tooling that lives in the TRACE repo
+because that was the working directory, not because it belongs there. Any
+revival is a freshly scoped PR in the owning repository, and only if Mark asks.
+Do not reopen #34.
 
 ## Claim ceiling
 
