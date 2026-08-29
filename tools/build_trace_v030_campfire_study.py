@@ -33,7 +33,11 @@ def canonical_json(value: object) -> str:
     return json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
 
 
-def build(prompt_dir: Path, output_path: Path) -> dict[str, object]:
+def build(
+    prompt_dir: Path,
+    output_path: Path,
+    receiver_families: tuple[str, ...] = tuple(RECEIVERS),
+) -> dict[str, object]:
     source_bytes = SOURCE_MANIFEST.read_bytes()
     source = json.loads(source_bytes.decode("utf-8"))
     prompt_rows = {row["prompt_id"]: row for row in source["prompts"]}
@@ -41,6 +45,8 @@ def build(prompt_dir: Path, output_path: Path) -> dict[str, object]:
     ordinal = 0
 
     for pair in source["pairs"]:
+        if pair["receiver_family_id"] not in receiver_families:
+            continue
         receiver = RECEIVERS[pair["receiver_family_id"]]
         arm_order = ("A", "T") if pair["order"] == "A_FIRST" else ("T", "A")
         for arm in arm_order:
@@ -83,9 +89,13 @@ def build(prompt_dir: Path, output_path: Path) -> dict[str, object]:
                 }
             )
 
-    return {
+    manifest = {
         "schema": "campfire-exact-input-study-v1",
-        "studyId": "TRACE-V0.3.0-PRIMARY-API-PREFLIGHT-CANDIDATE-V0.1",
+        "studyId": (
+            "TRACE-V0.3.0-PRIMARY-API-PREFLIGHT-CANDIDATE-V0.1"
+            if receiver_families == tuple(RECEIVERS)
+            else "TRACE-V0.3.0-PRIMARY-API-PREFLIGHT-CANDIDATE-V0.2-TWO-FAMILY"
+        ),
         "canonicalText": "utf8-lf-no-bom",
         "claimBoundary": "CANDIDATE_TRANSPORT_PREFLIGHT_NOT_PROTOCOL_ADOPTION_NOT_AUTHORIZATION_NOT_DISPATCH_NOT_RECEIVER_EVIDENCE",
         "maxOutputTokens": MAX_OUTPUT_TOKENS,
@@ -93,19 +103,36 @@ def build(prompt_dir: Path, output_path: Path) -> dict[str, object]:
             "path": SOURCE_MANIFEST.relative_to(REPO_ROOT).as_posix(),
             "sha256": sha256(source_bytes),
         },
-        "receiverCandidate": RECEIVERS,
+        "receiverCandidate": {
+            family: RECEIVERS[family] for family in receiver_families
+        },
         "jobs": jobs,
     }
+    if receiver_families != tuple(RECEIVERS):
+        manifest["excludedReceiverFamilies"] = [
+            family for family in RECEIVERS if family not in receiver_families
+        ]
+    return manifest
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--prompt-dir", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--families",
+        nargs="+",
+        choices=tuple(RECEIVERS),
+        default=list(RECEIVERS),
+        help="receiver families to include; default preserves the original three-family candidate",
+    )
     args = parser.parse_args()
     output = args.output.resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
-    manifest = build(args.prompt_dir.resolve(), output)
+    requested_families = tuple(
+        family for family in RECEIVERS if family in set(args.families)
+    )
+    manifest = build(args.prompt_dir.resolve(), output, requested_families)
     output.write_text(canonical_json(manifest), encoding="utf-8", newline="\n")
     print(
         canonical_json(
