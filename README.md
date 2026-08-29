@@ -122,14 +122,13 @@ The current audits and build checks establish declared source binding, determini
 
 ## Current development candidate
 
-TRACE v0.3.0 is under review in [draft PR
-#38](https://github.com/markgoodbody-bit/TRACE/pull/38). It exposes two
-different working objects:
+TRACE v0.3.0 remains working material. Its [bounded candidate
+package](work/v0_3_0/README.md) exposes two different review objects:
 
-- the [compact v0.11 spine](https://github.com/markgoodbody-bit/TRACE/blob/framework/trace-v0-3-0-working/PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md) for semantic review;
-- the [full v0.1 candidate](https://github.com/markgoodbody-bit/TRACE/blob/framework/trace-v0-3-0-working/PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md) for donor-survival, schema, operator and worked-transformation review.
+- the [compact v0.11 spine](work/v0_3_0/candidate/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md) for semantic review;
+- the [full v0.1 candidate](work/v0_3_0/candidate/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md) for donor-survival, schema, operator and worked-transformation review.
 
-Read the [current readiness audit](https://github.com/markgoodbody-bit/TRACE/blob/framework/trace-v0-3-0-working/PROJECT/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md) before treating either as a finished object. Neither supersedes v0.2.7.
+Read the [current readiness audit](work/v0_3_0/evidence/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md) before treating either as a finished object. Neither supersedes v0.2.7. The complete build and experiment quarry remains preserved by [immutable pointer](work/v0_3_0/QUARRY_POINTER.md); it is not the expected first-reading path.
 
 The current comparison found no TRACE-unique semantic primitive. A 32-call
 primary run established execution and material carrier burden, but no efficacy
@@ -189,6 +188,7 @@ GitHub-compatible citation metadata is provided in [`CITATION.cff`](CITATION.cff
 - `carrier/` — generated carrier source and build inputs
 - `checker_external/` — checks that cannot be established by the embedded minimum validator
 - `02_CURRENT_SURFACE/` — preserved transition and repair material
+- `work/v0_3_0/` — bounded next-version candidate and selected evidence package
 - `PROJECT/PROJECT.md` and `PROJECT/MAP.md` — project purpose and layer map
 
 Released predecessors remain preserved as separate objects rather than silently rewritten.
