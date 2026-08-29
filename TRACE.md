@@ -6429,10 +6429,10 @@ Released v0.2.7 remains the released baseline. This file is not released,
 canonical, validated, authoritative, permissive, clearance-bearing, or a claim
 of world correctness.
 
-The semantic repair source is the pinned v0.11 spine attack object:
+The semantic repair source is the pinned v0.11 spine attack object preserved at
+the named semantic commit:
 
 ```text
-PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md
 semantic commit 41fafe81a681cdc6514efc13524bae6ea6d6af8d
 ```
 
@@ -6483,8 +6483,9 @@ FAILED_OBJECT != ERASED_OBJECT
 ## [21.3] Preserved failed ancestry
 
 Intermediate v0.3 spine, correction-window, acyclicity, route-binding,
-invariant and transform failures remain evidence in `PROJECT/` and
-`falsification/`. A later candidate does not rewrite those failures as passes.
+invariant and transform failures remain evidence in Git history and the dated
+branch-archive tag. A later candidate does not rewrite those failures as
+passes.
 
 ## [21.4] Open frontier / unresolved
 
