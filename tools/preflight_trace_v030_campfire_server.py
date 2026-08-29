@@ -92,7 +92,7 @@ def build_report(manifest_path: Path, base_url: str) -> dict[str, object]:
             "prompt": prompt_text,
             "maxOutputTokens": declared["maxOutputTokens"],
             "executionProfile": "standard",
-            "mode": "independent",
+            "mode": declared.get("mode", "independent"),
             "identityRequired": declared["identityRequired"],
             "contextMode": declared["contextMode"],
             "targets": [

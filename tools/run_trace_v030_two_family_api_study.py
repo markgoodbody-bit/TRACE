@@ -75,7 +75,8 @@ def admitted_route(route: str, method: str) -> bool:
     )
 
 
-def request_json(base_url: str, route: str, method: str = "GET", body: object | None = None) -> tuple[int, dict[str, object]]:
+def request_json(base_url: str, route: str, method: str = "GET", body: object | None = None,
+                 timeout_seconds: int = 180) -> tuple[int, dict[str, object]]:
     method = method.upper()
     if not admitted_route(route, method):
         raise ValueError(f"route not admitted: {method} {route}")
@@ -88,7 +89,7 @@ def request_json(base_url: str, route: str, method: str = "GET", body: object | 
     )
     opener = build_opener(NoRedirect)
     try:
-        response = opener.open(request, timeout=180)
+        response = opener.open(request, timeout=timeout_seconds)
     except HTTPError as error:
         raw = error.read()
         try:

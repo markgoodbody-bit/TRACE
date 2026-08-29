@@ -23,21 +23,21 @@ import run_trace_v030_two_family_api_study as base
 
 
 EXPECTED_SERVER_VERSION = "0.18.34"
-EXPECTED_STUDY_ID = "TRACE-v0.3.0-BLIND-ADJUDICATION-TWO-FAMILY-20260829-v0.1"
-EXPECTED_MANIFEST_SHA256 = "7539d764fa98ebfda675b2e6c0ef30878bf4793ac8af343336c2a22571515e6d"
-EXPECTED_PREFLIGHT_SHA256 = "9b5ed1dc06dbb514941b1aade54541b392569abea3092031ff8bca32a04bc8b6"
+EXPECTED_STUDY_ID = "TRACE-v0.3.0-BLIND-ADJUDICATION-TWO-FAMILY-20260829-v0.3"
+EXPECTED_MANIFEST_SHA256 = "ebff790ea5b717ec372138c4c7d07c0afdfef899bf4a671947040f212d18b8bf"
+EXPECTED_PREFLIGHT_SHA256 = "a697f29313f9b170d7135c08342fe6854d6e344476ca6ef0d8d197eb83e63524"
 EXPECTED_PACKET_SET_SHA256 = "9df5a362ca7a132ca2ceebcde12a53d0746e6a088f91b5f544613a5a6a4b4856"
 EXPECTED_SEALED_KEY_SHA256 = "4c2da969d4ebb006c48964e644172244718254fe9b9b253d49d70de148075b0c"
-AUTHORIZED_CAP_USD = 2.5648875
-AUTHORIZATION_ID = "CODEX-THREAD-20260829-USD2_5648875-BLIND-ADJUDICATION-001"
-AUTHORIZED_PROVIDERS = {"gemini": "gemini-3.6-flash", "kimi": "kimi-k3"}
+AUTHORIZED_CAP_USD = 0.95643875
+AUTHORIZATION_ID = "CODEX-THREAD-20260829-USD0_95643875-BLIND-ADJUDICATION-002"
+AUTHORIZED_PROVIDERS = {"gemini": "gemini-3.6-flash", "kimi": "kimi-k2.6"}
 
 
 def round_draft(job: dict[str, object], prompt: str) -> dict[str, object]:
     return {
         "title": f'Blind paired-analysis adjudication {job["jobId"]}',
         "prompt": prompt,
-        "mode": "independent",
+        "mode": job.get("mode", "debate-judging"),
         "executionProfile": "standard",
         "maxOutputTokens": job["maxOutputTokens"],
         "identityRequired": False,
@@ -79,6 +79,8 @@ def validate_manifest(manifest: dict[str, object]) -> list[dict[str, object]]:
         raise ValueError("adjudicator model differs from authority")
     if any(job.get("arm") != "JUDGE" for job in jobs):
         raise ValueError("non-judge job present")
+    if any(job.get("mode") != "debate-judging" for job in jobs):
+        raise ValueError("adjudication job is not in explicit judging mode")
     if len({job.get("pairId") for job in jobs}) != 16:
         raise ValueError("expected exactly 16 blind packet identities")
     return jobs
@@ -251,7 +253,45 @@ def main() -> int:
             f"/api/sessions/{quote(session_id, safe='')}/rounds/{quote(round_id, safe='')}"
             f"/call/{job['providerId']}"
         )
-        call_status, call = base.request_json(base_url, route, "POST", {})
+        try:
+            call_status, call = base.request_json(base_url, route, "POST", {}, timeout_seconds=195)
+        except TimeoutError:
+            failure = {
+                "jobId": job["jobId"],
+                "packetId": job["promptId"],
+                "caseLabel": job["caseLabel"],
+                "order": job["order"],
+                "providerId": job["providerId"],
+                "presetId": job["presetId"],
+                "sessionId": session_id,
+                "roundId": round_id,
+                "httpStatus": None,
+                "maximumEstimatedCostUsd": fresh_estimate,
+                "accountedExposureUsd": fresh_estimate,
+                "providerReportedModel": None,
+                "providerFinishReason": None,
+                "truncated": False,
+                "rawResponseSha256": None,
+                "rawResponseBytes": 0,
+                "outputWords": 0,
+                "strictJsonParsed": False,
+                "reportedPacketId": None,
+                "reportedPacketIdMatches": False,
+                "code": "CLIENT_TIMEOUT_AFTER_SERVER_WATCHDOG_MARGIN",
+                "error": "No Campfire response within 195 seconds.",
+            }
+            completed_exposure += fresh_estimate
+            remaining.pop(str(job["jobId"]), None)
+            record({"type": "adjudication.failed", **failure})
+            write_summary(
+                output_dir / "run-summary.json",
+                status="STOPPED_ADJUDICATION_TRANSPORT_FAILURE",
+                completed_exposure=completed_exposure,
+                jobs=jobs,
+                events=events,
+                failure=failure,
+            )
+            return 3
         raw = str(call.get("rawResponse", ""))
         safe_record = base.safe_call_record(call)
         base.exclusive_json(response_dir / f'{int(job["order"]):02d}_{job["jobId"]}.json', safe_record)

@@ -11,8 +11,8 @@ from typing import Any
 
 
 PROVIDERS = (
+    ("kimi", "kimi-k2.6", "KIMI_MOONSHOT"),
     ("gemini", "gemini-3.6-flash", "GEMINI_GOOGLE"),
-    ("kimi", "kimi-k3", "KIMI_MOONSHOT"),
 )
 
 
@@ -36,7 +36,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--public-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
-    parser.add_argument("--max-output-tokens", type=int, default=6000)
+    parser.add_argument("--max-output-tokens", type=int, default=4000)
     args = parser.parse_args()
 
     public_dir = args.public_dir.resolve()
@@ -93,12 +93,13 @@ def main() -> int:
                     "identityRequired": False,
                     "contextMode": "none",
                     "roleInstruction": "",
+                    "mode": "debate-judging",
                 }
             )
 
     manifest = {
         "schema": "campfire-exact-input-study-v1",
-        "studyId": "TRACE-v0.3.0-BLIND-ADJUDICATION-TWO-FAMILY-20260829-v0.1",
+        "studyId": "TRACE-v0.3.0-BLIND-ADJUDICATION-TWO-FAMILY-20260829-v0.3",
         "canonicalText": "utf8-no-leading-or-trailing-whitespace",
         "claimBoundary": "ADJUDICATION_PREFLIGHT_CANDIDATE_NOT_AUTHORIZATION_NOT_DISPATCH_NOT_RESULT",
         "sourceBlindPacketManifestSha256": sha256(public_manifest_bytes),
@@ -107,6 +108,7 @@ def main() -> int:
         "armKeyIncluded": False,
         "deltaNotesIncluded": False,
         "adjudicatorFamilies": [family for _, _, family in PROVIDERS],
+        "executionMode": "debate-judging",
         "jobs": jobs,
     }
     manifest_path = output_dir / "campfire-adjudication-manifest.json"
