@@ -1,0 +1,37 @@
+name: TRACE v0.3.0 candidate package
+
+on:
+  pull_request:
+    paths:
+      - "work/v0_3_0/**"
+      - "tools/verify_trace_v030_candidate_package.py"
+      - ".github/workflows/trace-v030-candidate-package.yml"
+  push:
+    branches:
+      - main
+      - framework/trace-v0-3-0-candidate-package-20260829
+    paths:
+      - "work/v0_3_0/**"
+      - "tools/verify_trace_v030_candidate_package.py"
+      - ".github/workflows/trace-v030-candidate-package.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify curated candidate package
+        run: python tools/verify_trace_v030_candidate_package.py
+      - name: Check whitespace integrity
+        run: git diff --check
+      - name: Claim boundary
+        run: |
+          echo "Green verifies frozen package identity and declared status markers."
+          echo "It does not mean release, validation, semantic correctness, practical advantage, authority, permission or clearance."

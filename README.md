@@ -1,160 +1,66 @@
-# TRACE / Mechanical Ethics
+# TRACE
 
-Status: working memory repository. Not validation. Not proof. Not governance certification.
+TRACE is a structural language for examining decisions and transitions under
+uncertainty. It is intended to keep evidence, scope, causation, timing,
+correction routes, burdens and residue visible without turning a representation
+into moral authority or operational permission.
 
-TRACE / Mechanical Ethics is currently best framed as a portable middle-out reasoning language for making harm, hardening, correction, witness integrity, and answerability visible in messy situations.
+This repository is distinct from
+[`agentrust-io/trace-spec`](https://github.com/agentrust-io/trace-spec).
 
-```trace
-ME_TRACE :=
-  portable_middle_out_reasoning_language
-  + harm_visibility
-  + correction_before_hardening
-  + witness_integrity
-  + answerability
-  - validation
-  - proof
-```
+## Read this
 
-## Open first
+1. [`TRACE-SPINE.md`](TRACE-SPINE.md) — the compact semantic review surface.
+2. [Current readiness audit](repository/work/v0_3_0/evidence/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md) — what is earned, provisional and unresolved.
+3. [`TRACE.md`](TRACE.md) — the full donor-preserving candidate when the spine
+   is insufficient for the review question.
 
-If you want to use TRACE rather than audit the whole repo, start here:
+Both root documents are exact objects from the **v0.3.0 working candidate**:
 
-1. `00_START_HERE/START_HERE_NOW_v0_1.md`
-2. `02_CURRENT_SURFACE/LIVE_USE_CARD_v0_2_1/TRACE_LIVE_USE_CARD_v0_2_1.md`
-3. `02_CURRENT_SURFACE/PUBLIC_ONE_SHEET_v0_3/TRACE_ME_PUBLIC_ONE_SHEET_v0_3.md`
-4. `00_CONTROL/TRACE_Current_Control_Index_v0_1.md`
-5. `00_START_HERE/READ_ORDER.md`
-
-For repo-shape and current-work visibility, see `00_START_HERE/TRACE_REPO_MAP_v0_1.md`.
-
-## What TRACE is now
-
-TRACE is a diagnostic and design grammar for asking whether correction can reach affected subjects before harm hardens.
-
-```trace
-TRACE_core :=
-  correction_before_hardening
-  + K_gate
-  + exit_when_correction_channel_is_harm_carrier
-  + wrongability
-```
-
-Wording note: `exit_when_correction_channel_is_harm_carrier` is the current provisional front-door wording. The unresolved spine wording drift against `exit_when_correction_channel_is_predatory` remains live; do not harmonise silently.
-
-Current use: orientation, live reasoning, mapping, case comparison, claims discipline, and pressure testing.
-
-Not current use: proof, validation, governance certification, a complete ethics theory, a complete alignment solution, or replacement for domain expertise.
-
-## Current correction to project framing
-
-The wrong centre of gravity is:
-
-```trace
-wrong_question := does_TRACE_beat_domain_experts_in_one_narrow_case?
-```
-
-The useful centre of gravity is:
-
-```trace
-right_question :=
-  can_TRACE_make_relevant_structure_available
-  in_context
-  for_real_time_reasoning_and_correction?
-```
-
-Expert comparisons and worked deltas are probes. They test overclaim and operational advantage. They are not the whole project.
-
-## Current conservative status
-
-```trace
-current_status :=
-  cross_domain_translation_scaffold := strengthened
-  correction_before_hardening_portability := visible
-  clock_carrier_compression := support_check_only
-  live_use_surface := added
-  decision_advantage := not_shown
-  validation := false
-  proof := false
-  operator_promotion := false
-```
-
-Worked-delta and review loops have demoted overclaims. They have not killed the core language-building project.
-
-```trace
-worked_delta_result :=
-  no_demonstrated_decision_advantage_yet
-  + useful_compression_in_parts
-  - validation
-  - expert_replacement
-```
-
-## Current surfaces
-
-```trace
-START_HERE_NOW := current_navigation_patch + front_door_correction
-Live_Use_Card := current_use_instrument + live_reasoning_surface
-Public_One_Sheet := public_orientation_surface
-Control_Index := current_status_and_drift_control
-Read_Order := deeper_repo_navigation
-Repo_Map := current_work_visibility + archive_boundary
-CLAUDE_md := Claude_Code_operating_frame
-```
-
-## Must-not-claim rules
-
-```trace
-case_legibility != validation
-AI_review_agreement != validation
-diagnostic_checklist != governance_certification
-worked_delta != validation
-support_note != operator
-translation_bridge != field_solution
-operator_registry != source_replacement
-summary != preservation
-clean_description != decision_advantage
-```
-
-## Repository structure
+| Object | Bytes | SHA-256 |
+|---|---:|---|
+| compact spine v0.11 | 25,355 | `de35637f1a6db1648f725db0e533c4b4f8e2eb1f40c817ed24de9039e1525084` |
+| full working candidate v0.1 | 179,731 | `32409ee8d91e9c4bc67ecbb2359cc7d1c68249cab457511a50e586733ee7598a` |
 
 ```text
-00_START_HERE/          orientation, start-here surfaces, import manifest, vault continuity addenda
-00_CONTROL/             anti-self-deception, control index, spine drift note
-00_CORE/                current core deltas / integration-map material not yet fully folded into the reader path
-01_CANONICAL_MEMORY/    operator registry, primitive registry, domain translation registry, claims ledger, demotion protocol
-02_CURRENT_SURFACE/     live use card, public one-sheet, current Rosetta front door, current-state packet candidates
-03_BOOTSTRAPS/          Bootstrap V2 live relay surface plus deprecated/preserved source history
-03_TESTS/               comparator / test material not yet fully consolidated
-04_COVERAGE/            comparator queues, worked delta cases, bounded support notes
-04_KERNEL_AND_TESTS/    diagnostic kernel, preregistered test template, method notes
-05_MAPS_AND_ATLASES/    concordance, scope/applicability map, AI/MI bridge, case atlas, support lenses
-05_OPERATORS/           operator-support material and schema patches
-06_AI_PIPELINE/         AI pipeline notes and branch index material
-06_REVIEWS_AND_AUDITS/  review digests and falsification/drift audits
-07_HANDOFFS/            relay pack and external-agent handoff notes
-08_ORCHESTRATION/       relay workflow and orchestration support
-90_ORIGINAL_ZIPS/       selected archived source ZIPs and handoff ZIPs
-99_ARCHIVE/             preserved superseded material moved out of the live reader path
-99_ARCHIVE_INDEXES/     file indexes and manifests
-core/ schemas/ cases/ tests/ prompts/ reviews/  recent flat technical work; current-unindexed, not archive-only by default
+WORKING / NOT RELEASED / NOT CANON / NOT VALIDATED / NO EFFICACY RESULT
 ```
 
-Repo map: `00_START_HERE/TRACE_REPO_MAP_v0_1.md`.
+TRACE v0.2.7 remains the released formal baseline. Its exact source, PDF and
+release record are preserved under [`repository/`](repository/). Moving them
+away from the public root did not change their bytes or status.
 
-## Working discipline
+## Current evidence boundary
 
-```trace
-working_discipline :=
-  use_live_card_first
-  + preserve_claim_status
-  + demote_overclaim
-  + avoid_review_theatre
-  + avoid_repo_growth_as_truth
+Earned:
+
+- the current candidate and selected evidence objects have exact identities;
+- the v0.3 minimum schema does not add semantic primitives over v0.2.7;
+- the FPF comparison established zero TRACE-unique semantic primitives in that
+  pass;
+- a 32-call primary comparison completed and established material carrier
+  burden.
+
+Not earned:
+
+- practical advantage over competent ordinary analysis or established methods;
+- an efficacy result from the still-unadjudicated paired outputs;
+- release, validation, conformance, authority, permission or clearance;
+- standing, value ranking, legitimate authority or enforcement rules.
+
+## Evidence and history
+
+- [bounded v0.3 package](repository/work/v0_3_0/README.md)
+- [selected evidence index](repository/work/v0_3_0/evidence/README.md)
+- [v0.2.7 preservation baseline](repository/TRACE_v0_2_7_BASELINE_RELEASE.md)
+- [external review guide](repository/REVIEW_GUIDE.md)
+- [repository map and historical material](repository/README.md)
+- [licensing status](repository/LICENSE_STATUS.md)
+
+```text
+REPRESENTATION != WORLD
+SCHEMA_VALID != CLAIM_TRUE
+ROUTE_EXISTS != CORRECTION_COMPLETES
+EXECUTED != ADJUDICATED
+NO_UNIQUE_PRIMITIVE != USELESS
 ```
-
-New cases should not be added as bootstraps unless they reveal, pressure-test, or break a named operator or live-use pattern.
-
-Claims must be demotable. If TRACE cannot lose claims, it becomes a belief system rather than a tool.
-
-No new operators. No Kernel v0.3. The current work is live use, subtraction, preregistration, comparator runs, bounded support notes, and real pressure testing.
-
-End.
