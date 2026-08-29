@@ -15,16 +15,132 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify declared current identities
         run: |
-          printf '%s  %s\n' 'de35637f1a6db1648f725db0e533c4b4f8e2eb1f40c817ed24de9039e1525084' TRACE-SPINE.md | sha256sum -c -
-          printf '%s  %s\n' '0955e02670bf5c1623dc20d05d22f071f4dc43388c5d8d241848b197d4bdf47d' TRACE.md | sha256sum -c -
+          printf '%s  %s\n' '9ee106e98a34643929f82fa3296adffac46e650e4e8d0b775016269f0fe50999' TRACE-SPINE.md | sha256sum -c -
+          printf '%s  %s\n' '1dfc668d3e3dc5d85dcfc8bed5a025672025aff3ce157205b55bbc5f54160a1f' TRACE.md | sha256sum -c -
       - name: Verify status and claim ceilings
         run: |
-          grep -F 'WORKING / NOT RELEASED / NOT CANON / NOT VALIDATED / NO EFFICACY RESULT' README.md
+          grep -F 'RELEASE CANDIDATE / NOT RELEASED / NOT CANON / NOT VALIDATED / NO EFFICACY RESULT' README.md
           grep -F 'SCHEMA_VALID != CLAIM_TRUE' README.md
           grep -F 'PUBLIC_VISIBILITY != REUSE_PERMISSION' README.md
+      - name: Verify RC1 coherence and embedded minimum schema
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import re
+          from pathlib import Path
+
+          spine = Path("TRACE-SPINE.md").read_text(encoding="utf-8")
+          full = Path("TRACE.md").read_text(encoding="utf-8")
+          fence = "`" * 3
+
+          required = {
+              "TRACE-SPINE.md": (
+                  "# TRACE // v0.3.0 SPECIFICATION RC1 // COMPACT SPINE",
+                  "SOURCE_CONTRACT_CLEAR != COMPLETE_CORRECTNESS",
+                  "EXECUTED != ADJUDICATED",
+              ),
+              "TRACE.md": (
+                  "**Version:** v0.3.0 SPECIFICATION RC1",
+                  "## [4.0] Representation-independent firing and current use",
+                  "## [6.4] Selection attribution and measurement reactivity",
+                  "## [6.5] Route / refusal use-site guards",
+                  "### [14.0] Canonical existing-object target-set aperture profile",
+                  "SOURCE_CONTRACT_CLEAR != COMPLETE_CORRECTNESS",
+              ),
+          }
+          for name, markers in required.items():
+              text = spine if name == "TRACE-SPINE.md" else full
+              for marker in markers:
+                  if marker not in text:
+                      raise SystemExit(f"{name}: missing required marker: {marker}")
+              if text.count(fence) % 2:
+                  raise SystemExit(f"{name}: unbalanced fenced blocks")
+
+              ids = re.findall(r"(?m)^#{1,6} \[([0-9]+(?:\.[0-9]+)*)\]", text)
+              duplicates = sorted({item for item in ids if ids.count(item) > 1})
+              if duplicates:
+                  raise SystemExit(f"{name}: duplicate numbered headings: {duplicates}")
+
+          stale = (
+              "The full generated object still requires hostile coherence attack.",
+              "The next test is whether an unfamiliar receiver can reconstruct",
+          )
+          for marker in stale:
+              if marker in spine or marker in full:
+                  raise SystemExit(f"stale project-state marker remains: {marker}")
+
+          disallowed_paths = (
+              "PROJECT/",
+              "work/v0_3_0/",
+              "repository/",
+              "falsification/",
+              "checker_external/",
+          )
+          for marker in disallowed_paths:
+              if marker in spine or marker in full:
+                  raise SystemExit(f"removed public-surface path remains: {marker}")
+
+          schema_start = full.index("## [14.4] Minimum validator contract")
+          schema_match = re.search(
+              re.escape(fence) + r"json\s*(\{.*?\})\s*" + re.escape(fence),
+              full[schema_start:],
+              re.S,
+          )
+          if not schema_match:
+              raise SystemExit("embedded minimum schema not found")
+          schema = json.loads(schema_match.group(1))
+
+          def normalize_version(value):
+              if isinstance(value, dict):
+                  return {key: normalize_version(item) for key, item in value.items()}
+              if isinstance(value, list):
+                  return [normalize_version(item) for item in value]
+              if isinstance(value, str):
+                  return value.replace("0.3.0", "0.2.7")
+              return value
+
+          normalized = json.dumps(
+              normalize_version(schema),
+              sort_keys=True,
+              separators=(",", ":"),
+              ensure_ascii=False,
+          ).encode("utf-8")
+          observed_schema_hash = hashlib.sha256(normalized).hexdigest()
+          donor_normalized_schema_hash = (
+              "d1b0705d0c5c199532d591f99b6cc7fd86476488b5eb134f7a10d32794afe142"
+          )
+          if observed_schema_hash != donor_normalized_schema_hash:
+              raise SystemExit(
+                  "embedded schema no longer matches the pinned normalized v0.2.7 shape: "
+                  + observed_schema_hash
+              )
+
+          def first_text_block_after(heading):
+              start = full.index(heading)
+              match = re.search(
+                  re.escape(fence) + r"text\s*(.*?)" + re.escape(fence),
+                  full[start:],
+                  re.S,
+              )
+              if not match:
+                  raise SystemExit(f"controlled vocabulary block missing after {heading}")
+              return [line.strip() for line in match.group(1).splitlines() if line.strip()]
+
+          declared_nodes = first_text_block_after("## [3.1] Node types")
+          declared_edges = first_text_block_after("## [3.2] Relation types")
+          schema_nodes = schema["$defs"]["node"]["properties"]["type"]["enum"]
+          schema_edges = schema["$defs"]["edge"]["properties"]["type"]["enum"]
+          if declared_nodes != schema_nodes:
+              raise SystemExit("declared node vocabulary differs from embedded schema")
+          if declared_edges != schema_edges:
+              raise SystemExit("declared relation vocabulary differs from embedded schema")
+
+          print("RC1 coherence and embedded schema checks passed")
+          PY
       - name: Check whitespace integrity
         run: git diff --check
       - name: Claim boundary
         run: |
-          echo "Green verifies controlled repository objects and declared status markers."
+          echo "Green verifies controlled repository objects, declared status markers, heading coherence, and the pinned normalized minimum-schema shape."
           echo "It does not establish semantic correctness, efficacy, validation, authority, permission or clearance."

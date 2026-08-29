@@ -1,8 +1,9 @@
-# TRACE // v0.3.0 SPINE CANDIDATE v0.11
+# TRACE // v0.3.0 SPECIFICATION RC1 // COMPACT SPINE
 
-**Status:** WORKING SPINE — NOT FORMAL BASELINE — NOT CANON — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE  
-**Purpose:** smallest coherent centre currently surviving TRACE v0.3 work  
-**Donor:** released TRACE v0.2.7; this object does not supersede it  
+- **Status:** RELEASE CANDIDATE — NOT RELEASED — NOT FORMAL BASELINE — NOT CANON — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
+- **Purpose:** primary semantic review and use surface for TRACE v0.3.0
+- **Lineage:** controlled successor to spine candidate v0.11; no semantic expansion is claimed
+- **Donor:** released TRACE v0.2.7; this object does not supersede it
 
 ---
 
@@ -633,4 +634,10 @@ CORRECTION PREFLIGHT     -> CHECKER-EXTERNAL / HOLD
 FIELD INSTRUMENTS        -> TOOLING / EVIDENCE
 ```
 
-The next test is whether an unfamiliar receiver can reconstruct, transfer and break this object more cleanly than v0.2.7 without moral leakage, authority leakage, false currentness, false timing confidence or silent donor loss.
+The bounded ten-stage source-contract attack (F01-F10) is closed for this pass, and a 32-call two-family transfer run completed. The transfer outputs remain unadjudicated, while the compact carrier imposed material input and reading burden. The next evidence question is therefore whether blinded assessment finds any consequential omission avoided by this surface that is worth its added activation and population cost.
+
+```text
+SOURCE_CONTRACT_CLEAR != COMPLETE_CORRECTNESS
+EXECUTED != ADJUDICATED
+MORE_STRUCTURE != PRACTICAL_ADVANTAGE
+```

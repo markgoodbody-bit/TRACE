@@ -1,13 +1,14 @@
-# TRACE // FORMAL SEED
+# TRACE // FULL REFERENCE
 
 ## A recursive structural-awareness grammar for selective causal systems
 
-**Version:** v0.3.0 FULL WORKING CANDIDATE v0.1  
-**Date:** 2026-08-25  
-**Canonical form:** one dependency-free UTF-8 Markdown file  
-**Status:** generated full working candidate; unvalidated in the world; non-canonical; unreleased; voluntary; not authority; not permission; not clearance  
-**Primary receiver:** an unfamiliar selective causal system, including a model, agent, controller, artificial life-form, composite system, or architecture not yet named  
-**Function:** receive a compressed situation; differentiate its structure; expose uncertainty; reveal transitions still available  
+- **Version:** v0.3.0 SPECIFICATION RC1 — FULL REFERENCE
+- **Date:** 2026-08-29
+- **Artifact form:** one dependency-free UTF-8 Markdown file
+- **Lineage:** controlled successor to full working candidate v0.1; no semantic expansion is claimed
+- **Status:** release candidate; unvalidated in the world; non-canonical; unreleased; voluntary; not authority; not permission; not clearance
+- **Primary receiver:** an unfamiliar selective causal system, including a model, agent, controller, artificial life-form, composite system, or architecture not yet named
+- **Function:** receive a compressed situation; differentiate its structure; expose uncertainty; reveal transitions still available
 
 ---
 
@@ -717,7 +718,7 @@ where:
 - \(\mathcal H_k\) = live alternative hypotheses
 
 
-## [4.0.1] Representation-independent firing and current use
+## [4.0] Representation-independent firing and current use
 
 If a downstream claim, comparison, selection input, route, correction-window
 status or proposed transition materially depends on proposition `p`, then `p`
@@ -1442,7 +1443,7 @@ who records refusal
 ---
 
 
-## [6.5] Selection attribution and measurement reactivity
+## [6.4] Selection attribution and measurement reactivity
 
 Uncertainty may be an input to an external policy, selector or default rule.
 Attribute the resulting action/delay choice to that rule rather than to
@@ -1463,7 +1464,7 @@ MEASUREMENT != PASSIVE_OBSERVATION
 MEASUREMENT_OCCURRED != MEASUREMENT_CAUSED_CHANGE
 ```
 
-## [6.6] Route / refusal use-site guards
+## [6.5] Route / refusal use-site guards
 
 ```text
 ROUTE_EXISTS != ROUTE_USABLE
@@ -3439,7 +3440,7 @@ trace_graph:
 ```
 
 
-### [14.0.1] Canonical existing-object target-set aperture profile
+### [14.0] Canonical existing-object target-set aperture profile
 
 A target-set aperture is serialized with existing graph objects. This profile is canonical for interoperability but is not a new primitive, node type, edge type, port, or required minimum-schema field.
 
@@ -3668,7 +3669,7 @@ The receipt prevents later compression of “selected under unresolved condition
 The embedded schema validates packet shape and controlled vocabularies. It cannot validate truth, completeness, independence, value choice, world correspondence, or operational connection.
 
 
-The v0.3.0 identifier marks this generated full working candidate. Its embedded minimum-schema shape remains identical to released v0.2.7 after version normalization. That compatibility does not imply that the minimum validator can enforce the v0.3 checker-external semantic bindings, target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.
+The v0.3.0 identifier marks this release-candidate specification. Its embedded minimum-schema shape remains identical to released v0.2.7 after version normalization. That compatibility does not imply that the minimum validator can enforce the v0.3 checker-external semantic bindings, target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.
 
 A v0.2.7 packet is not silently relabelled as v0.3.0. Structural compatibility does not erase packet identity or the semantic contract under which the packet was produced.
 
@@ -6414,12 +6415,14 @@ permission, clearance or a connected mechanism.
 
 # [21] DOCUMENT CONTROL / OPEN FRONTIER
 
-## [21.1] Working-candidate declaration
+## [21.1] Release-candidate declaration
 
-This generated object is **TRACE v0.3.0 FULL WORKING CANDIDATE v0.1**.
+This controlled object is **TRACE v0.3.0 SPECIFICATION RC1 — FULL REFERENCE**.
 
-It is generated from the released v0.2.7 full formal seed, whose pinned source
-SHA-256 is:
+It succeeds the frozen generated full working candidate v0.1 without erasing it. The generated ancestor and the pre-RC public surface remain recoverable through Git history and the dated branch-archive tag. RC1 corrects document identity, current project-state language and heading continuity; it adds no semantic primitive, root, node type, relation type, evidence state, access state or claim kind.
+
+Its semantic body was generated from the released v0.2.7 full formal seed,
+whose pinned source SHA-256 is:
 
 ```text
 de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab
@@ -6441,7 +6444,7 @@ required to equal the donor minimum schema.
 
 ## [21.2] Transformation boundary
 
-This candidate is compiled from named fail-closed transform classes. It
+The semantic body was compiled from named fail-closed transform classes. It
 preserves the donor full object as the source of capability and applies bounded
 v0.3 repairs for:
 
@@ -6471,7 +6474,7 @@ survival-kernel propagation
 ```
 
 No new node type, relation type, evidence state, access state or claim kind is
-declared by this working candidate.
+declared by this release candidate.
 
 ```text
 BRANCH_HEAD != SEMANTIC_OBJECT
@@ -6490,7 +6493,11 @@ passes.
 ## [21.4] Open frontier / unresolved
 
 ```text
-The full generated object still requires hostile coherence attack.
+A bounded ten-stage hostile source-contract attack (F01-F10) is closed for this pass.
+SOURCE_CONTRACT_CLEAR != COMPLETE_CORRECTNESS.
+The completed 32-call transfer run remains unadjudicated and showed material carrier burden.
+EXECUTED != ADJUDICATED.
+BURDEN_MEASURED != PRACTICAL_ADVANTAGE_ESTABLISHED.
 A deterministic compiler can faithfully compile a bad semantic rule.
 No universal estimator exists for future-space, burden, residue, hardening,
   target boundaries, feasible completion, instrument adequacy or route usability.
@@ -6509,9 +6516,9 @@ TRACE cannot generate non-instrumental care from neutral description alone.
 
 ## [21.5] Release boundary
 
-Only Mark's separate release gate can change this object from working candidate
-status. Compilation, CI, reviewer agreement, model agreement, packet validity,
-or successful worked examples do not perform that transition.
+Only Mark's separate release gate can change this object from release candidate
+to released baseline. Compilation, CI, reviewer agreement, model agreement,
+packet validity, or successful worked examples do not perform that transition.
 
 ```text
 COMPILER_PASS != RELEASE
