@@ -70,6 +70,12 @@ TRANSITION_INTERRUPTED != HARM_PREVENTED
 
 Read [`REVIEW_GUIDE.md`](REVIEW_GUIDE.md). It explains what TRACE claims, what it does not claim, and how to submit a useful finding.
 
+### Exact formal source
+
+Use [`TRACE_FORMAL_SEED_v0_2_7.md`](TRACE_FORMAL_SEED_v0_2_7.md) for exact wording, identifiers, equations, schema material, invariants, and formal review.
+
+The Markdown file is the formal source. The PDF changes presentation, pagination, typography, and line wrapping only.
+
 ### Human-readable formal carrier
 
 Read [`TRACE.pdf`](TRACE.pdf). It is the current rendered carrier of TRACE v0.2.7.
@@ -81,12 +87,6 @@ A useful first pass is:
 3. **Canonical Object / Typed Graph**
 4. the worked transformations
 5. **Packet Construction** and the unresolved limits
-
-### Exact formal source
-
-Use [`TRACE_FORMAL_SEED_v0_2_7.md`](TRACE_FORMAL_SEED_v0_2_7.md) for exact wording, identifiers, equations, schema material, invariants, and formal review.
-
-The Markdown file is the formal source. The PDF changes presentation, pagination, typography, and line wrapping only.
 
 ### Release and provenance
 
@@ -154,7 +154,7 @@ GitHub-compatible citation metadata is provided in [`CITATION.cff`](CITATION.cff
 ## Repository map
 
 - `TRACE_FORMAL_SEED_v0_2_7.md` — active formal source
-- `TRACE.pdf` — current human-readable rendered carrier
+- `TRACE.pdf` — current v0.2.7 rendered formal carrier; the Markdown seed remains the formal source
 - `REVIEW_GUIDE.md` — external review paths and finding format
 - `CITATION.cff` — machine-readable citation metadata
 - `CONTRIBUTING.md` — contribution, provenance and review guidance
