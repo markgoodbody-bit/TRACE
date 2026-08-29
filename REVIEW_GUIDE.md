@@ -16,6 +16,18 @@ For exact wording, identifiers, schema material, and formal review, use [`TRACE_
 
 The formal source retains the wording of the reviewed compiled candidate. Its active release status is recorded separately in [`TRACE_v0_2_7_BASELINE_RELEASE.md`](TRACE_v0_2_7_BASELINE_RELEASE.md), so promotion did not rewrite the reviewed object.
 
+## Reviewing the v0.3.0 working candidate
+
+TRACE v0.2.7 remains the released baseline. Review of the next-version work should keep two candidate roles separate:
+
+1. Read [`PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md`](PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md) first for the compact semantic proposal.
+2. Consult [`PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md`](PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md) only when testing donor survival, full vocabulary, serialization, operator/checker material, packet construction or worked transformations.
+3. Read [`PROJECT/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md`](PROJECT/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md) for the current earned, provisional and unresolved claims.
+
+The compact spine is not a complete replacement object. The full candidate is not the intended cold-reader carrier. Confusing their roles creates a false burden or false completeness conclusion.
+
+The completed primary run is still unadjudicated. It establishes execution and carrier-burden evidence, not practical advantage. A useful v0.3 review may therefore conclude that the work is redundant, better located as a profile or contribution, or too burdensome relative to its marginal gain.
+
 ## Choose a review lane
 
 ### 1. Conceptual and semantic

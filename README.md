@@ -114,6 +114,17 @@ The embedded minimum validator checks packet shape and controlled vocabulary. It
 
 The current audits and build checks establish declared source binding, deterministic construction, surface propagation, mutation detection, and stated containment. They do not establish operational effectiveness or decision advantage.
 
+### Next-version work on this branch
+
+The released baseline remains v0.2.7. The current v0.3.0 working branch exposes two different candidate objects:
+
+- [`PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md`](PROJECT/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md) — compact semantic comparison surface;
+- [`PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md`](PROJECT/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md) — deterministic donor-preserving assembly.
+
+Read the spine first when reviewing the proposed semantic changes. Use the full candidate to inspect donor survival, schema, packet construction, operator material and worked transformations. They are working, non-canonical and unvalidated, and neither supersedes v0.2.7.
+
+The current state and unresolved evidence boundary are recorded in [`PROJECT/PROJECT.md`](PROJECT/PROJECT.md) and the [`v0.3.0 readiness audit`](PROJECT/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md).
+
 ## Who may find it relevant
 
 TRACE may be worth examining for people working on:
