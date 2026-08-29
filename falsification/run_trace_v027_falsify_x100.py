@@ -255,18 +255,12 @@ def make_probes(base: str, candidate: str, readme: str, manifest: str) -> list[P
         ) != compiler.required_packet_properties(mutated_schema)
 
     def reversed_readme_detected() -> bool:
-        seed_line = next(
-            line
-            for line in readme.splitlines()
-            if line.startswith("- `TRACE_FORMAL_SEED_v0_2_7.md`")
-        )
-        pdf_line = next(
-            line for line in readme.splitlines() if line.startswith("- `TRACE.pdf`")
-        )
+        seed_token = "TRACE_FORMAL_SEED_v0_2_7.md"
+        pdf_token = "TRACE.pdf"
         mutated_readme = (
-            readme.replace(seed_line, "__TRACE_SEED_LINE__", 1)
-            .replace(pdf_line, seed_line, 1)
-            .replace("__TRACE_SEED_LINE__", pdf_line, 1)
+            readme.replace(seed_token, "__TRACE_SEED_TOKEN__", 1)
+            .replace(pdf_token, seed_token, 1)
+            .replace("__TRACE_SEED_TOKEN__", pdf_token, 1)
         )
         return bool(required_surface_errors(candidate, mutated_readme, manifest))
 
