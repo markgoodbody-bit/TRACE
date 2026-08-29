@@ -1,21 +1,81 @@
 # TRACE
 
-TRACE is a structural language for examining decisions and transitions under
-uncertainty. It is intended to keep evidence, scope, causation, timing,
-correction routes, burdens and residue visible without turning a representation
-into moral authority or operational permission.
+TRACE helps examine decisions where time, uncertainty and unequal ability to
+act can make an option exist on paper but unusable in practice.
+
+It provides a structured way to describe what is changing, who or what may be
+affected, which routes remain usable, what evidence supports a causal claim,
+when correction must occur, who carries the work and delay, and what cannot be
+restored afterwards.
+
+TRACE does not decide what is right, identify every affected party or grant
+permission to act. It makes the structure of a decision easier to inspect and
+challenge.
+
+## A small example
+
+An appeal may formally exist, but the decision being appealed could take effect
+before the appeal can be heard. The route exists in the rules while remaining
+too slow, expensive or inaccessible to protect what is at stake.
+
+TRACE distinguishes between:
+
+- a route existing and a route being practically usable;
+- a correction being possible and arriving in time;
+- a record being repaired and the original loss being restored;
+- evidence supporting a claim and a document merely containing that claim;
+- work being required and who is made to carry it.
+
+The resulting description does not settle the dispute. It shows which claims,
+dependencies, deadlines, burdens and remaining paths need to be tested.
+
+## What TRACE helps you ask
+
+A TRACE analysis can help a reader ask:
+
+- What decision or transition is being examined?
+- Which entities and interests have been included, and which may be missing?
+- What evidence supports each important claim?
+- Which causal steps are asserted rather than established?
+- What changes if a deadline, dependency or source changes?
+- Which routes are genuinely reachable, understandable, affordable and timely?
+- Who controls the relevant clocks, information and correction mechanisms?
+- Who bears the cost of delay, proof, coordination or repeated explanation?
+- What can still be corrected, and what loss would remain?
+
+These questions can be answered in ordinary prose. TRACE is useful when the
+relationships between them need to remain explicit across people, documents,
+tools or time.
+
+## Start here
+
+1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) for the compact specification and
+   primary review surface.
+2. Use [`TRACE.md`](TRACE.md) when you need the full technical reference,
+   serialization details or the complete inherited schema contract.
+
+The compact spine is the normal entry point. The full reference is not required
+for an initial reading.
 
 This repository is distinct from
 [`agentrust-io/trace-spec`](https://github.com/agentrust-io/trace-spec).
 
-## Read this
+## What TRACE does not establish
 
-1. [`TRACE-SPINE.md`](TRACE-SPINE.md) — the primary compact semantic review and
-   use surface.
-2. [`TRACE.md`](TRACE.md) — the full donor-preserving technical reference when
-   serialization, implementation detail or donor-loss review requires it.
+Completing a TRACE representation does not prove that its contents are true or
+that a proposed action is justified. TRACE does not supply moral standing,
+value rankings, legitimate authority, enforcement powers or operational
+clearance. Those remain external and contestable.
 
-Together they form the **v0.3.0 specification release candidate 1 (RC1)**:
+It also does not establish that TRACE is better than careful ordinary analysis
+or an existing specialist method. If another method preserves the relevant
+structure with less effort, that is a reason to use the other method or narrow
+TRACE further.
+
+## Current status
+
+The two current documents form the **v0.3.0 specification release candidate 1
+(RC1)**:
 
 | Object | Bytes | SHA-256 |
 |---|---:|---|
@@ -26,48 +86,41 @@ Together they form the **v0.3.0 specification release candidate 1 (RC1)**:
 RELEASE CANDIDATE / NOT RELEASED / NOT CANON / NOT VALIDATED / NO EFFICACY RESULT
 ```
 
-TRACE v0.2.7 remains the released formal baseline. Earlier versions, evidence
-records, failed intermediate objects and build history remain recoverable
-through Git history and the dated
-`branch-archive-20260829-pre-minimal-surface` tag; they are not part of the
-current reading surface.
+TRACE v0.2.7 remains the released formal baseline.
 
-## Current evidence boundary
+### What has been established
 
-Earned:
+- The current candidate documents have exact identities.
+- The v0.3 minimum schema adds no semantic primitives to v0.2.7.
+- A bounded ten-stage source-contract challenge was completed for this pass.
+- A comparison with FPF found no TRACE-unique semantic primitives in the
+  examined material.
+- A 32-call comparison was completed and showed material representation burden.
 
-- the current candidate and selected evidence objects have exact identities;
-- the v0.3 minimum schema does not add semantic primitives over v0.2.7;
-- the bounded ten-stage hostile source-contract attack (F01-F10) is closed for
-  this pass;
-- the FPF comparison established zero TRACE-unique semantic primitives in that
-  pass;
-- a 32-call primary comparison completed and established material carrier
-  burden.
-
-Not earned:
+### What remains unearned
 
 - practical advantage over competent ordinary analysis or established methods;
-- an efficacy result from the still-unadjudicated paired outputs;
-- release, validation, conformance, authority, permission or clearance;
-- standing, value ranking, legitimate authority or enforcement rules.
+- an efficacy result from the unadjudicated paired outputs;
+- validation, conformance, authority, permission or clearance;
+- a general solution to standing, value conflict or legitimate enforcement.
 
-## Current positioning
-
-The current contribution hypothesis under test is a specialised compilation
-and transfer surface: one bounded representation that keeps affected scope,
+The current working hypothesis is therefore narrow: TRACE may be useful as a
+specialised representation and transfer surface that keeps affected scope,
 causal transitions, clocks, correction routes, burden, residue and uncertainty
-together. This is a provisional product-positioning hypothesis, not a novelty,
-superiority or efficacy claim. If competent use of FPF or established domain
-methods preserves the same consequential structure with less burden, TRACE
-should narrow further.
+together. This is a provisional use hypothesis, not a claim of novelty or
+superiority.
 
 ## Review, history and licence
 
 The standing [external criticism issue](https://github.com/markgoodbody-bit/TRACE/issues/45)
-asks what TRACE adds - or fails to add - over existing methods. Redundancy,
-false precision, excessive burden and no-material-difference findings are valid
+asks what TRACE adds, or fails to add, over existing methods. Redundancy, false
+precision, excessive burden and no-material-difference findings are valid
 results.
+
+Earlier versions, evidence records, unsuccessful intermediate objects and build
+history remain recoverable through Git history and the dated
+`branch-archive-20260829-pre-minimal-surface` tag. They are not part of the
+current reading surface.
 
 No general reuse licence has been granted for this repository or its contents.
 Public visibility permits inspection, linking, discussion and review; it does
