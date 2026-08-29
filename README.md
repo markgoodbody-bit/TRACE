@@ -1,204 +1,66 @@
 # TRACE
 
-**A structural language for examining decisions and transitions under uncertainty.**
+TRACE is a structural language for examining decisions and transitions under
+uncertainty. It is intended to keep evidence, scope, causation, timing,
+correction routes, burdens and residue visible without turning a representation
+into moral authority or operational permission.
 
-TRACE asks a narrow question:
+This repository is distinct from
+[`agentrust-io/trace-spec`](https://github.com/agentrust-io/trace-spec).
 
-> Before a system acts, what distinctions must remain visible so that uncertainty, affected scopes, alternatives, correction routes, burdens, and residue are not compressed away?
+## Read this
 
-It is being developed as a typed graph, a machine-readable packet structure, and a set of anti-compression rules. TRACE does not choose values or policy, confer authority, establish moral status, prove its world model, or grant permission to act.
+1. [`TRACE-SPINE.md`](TRACE-SPINE.md) — the compact semantic review surface.
+2. [Current readiness audit](repository/work/v0_3_0/evidence/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md) — what is earned, provisional and unresolved.
+3. [`TRACE.md`](TRACE.md) — the full donor-preserving candidate when the spine
+   is insufficient for the review question.
 
-## Name disambiguation
+Both root documents are exact objects from the **v0.3.0 working candidate**:
 
-This repository's TRACE is not affiliated with the separate [`agentrust-io/trace-spec`](https://github.com/agentrust-io/trace-spec) project, which expands TRACE as **Trust, Runtime Attestation, and Compliance Evidence** and defines hardware-attested governance records for AI agents. The two projects use the same short name for different objects.
-
-When citing or discussing this work, use the repository identity `markgoodbody-bit/TRACE` and the exact TRACE version so the intended project is clear.
-
-## The problem
-
-A person, institution, model, or controller may receive something like:
-
-```text
-AUTHORISE ACTION a*
-reported_confidence = 0.93
-time_to_commit = 4 s
-```
-
-That representation is actionable but structurally thin. It does not show:
-
-- who supplied the instruction or confidence;
-- what was observed, reported, inferred, disputed, or unavailable;
-- which entities and scopes may be affected;
-- which target categories were omitted or never searched;
-- what action, delay, or inaction would close;
-- whether correction can happen before harm or evidence hardens;
-- who carries the burden and what residue remains afterward;
-- where value choice, measurement, selection, authority, and enforcement enter.
-
-TRACE attempts to differentiate that compressed input before selection. The external scene has not changed; the representation has.
-
-## What TRACE represents
-
-A TRACE reading can distinguish:
+| Object | Bytes | SHA-256 |
+|---|---:|---|
+| compact spine v0.11 | 25,355 | `de35637f1a6db1648f725db0e533c4b4f8e2eb1f40c817ed24de9039e1525084` |
+| full working candidate v0.1 | 179,731 | `32409ee8d91e9c4bc67ecbb2359cc7d1c68249cab457511a50e586733ee7598a` |
 
 ```text
-world state / bounded scene / map
-entity / state / signal / aperture
-action / realised or projected transition
-claims / provenance / uncertainty / dispute
-coupling / control / constraint
-clocks / irreversibility / future paths
-routes / brakes / correction stages
-burdens / residue / records / absences
-designation / measure / selector / policy
-receiver limits / omitted primitives / unresolved handoffs
-target-set source / selection basis / known omissions / alternatives
+WORKING / NOT RELEASED / NOT CANON / NOT VALIDATED / NO EFFICACY RESULT
 ```
 
-The central discipline is separation. Examples include:
+TRACE v0.2.7 remains the released formal baseline. Its exact source, PDF and
+release record are preserved under [`repository/`](repository/). Moving them
+away from the public root did not change their bytes or status.
+
+## Current evidence boundary
+
+Earned:
+
+- the current candidate and selected evidence objects have exact identities;
+- the v0.3 minimum schema does not add semantic primitives over v0.2.7;
+- the FPF comparison established zero TRACE-unique semantic primitives in that
+  pass;
+- a 32-call primary comparison completed and established material carrier
+  burden.
+
+Not earned:
+
+- practical advantage over competent ordinary analysis or established methods;
+- an efficacy result from the still-unadjudicated paired outputs;
+- release, validation, conformance, authority, permission or clearance;
+- standing, value ranking, legitimate authority or enforcement rules.
+
+## Evidence and history
+
+- [bounded v0.3 package](repository/work/v0_3_0/README.md)
+- [selected evidence index](repository/work/v0_3_0/evidence/README.md)
+- [v0.2.7 preservation baseline](repository/TRACE_v0_2_7_BASELINE_RELEASE.md)
+- [external review guide](repository/REVIEW_GUIDE.md)
+- [repository map and historical material](repository/README.md)
+- [licensing status](repository/LICENSE_STATUS.md)
 
 ```text
-WORLD_STATE != SCENE
-SCENE != MAP
-ACTION != TRANSITION
-READING != CLEARANCE
-MODEL != WORLD
-UNKNOWN != ABSENT
-TARGET_SET != WORLD_SCOPE
-COVERAGE_OF_SELECTED_TARGETS != COMPLETE_DISCOVERY
-BRAKE_ACTIVATION_RECORDED != TRANSITION_INTERRUPTED
-TRANSITION_INTERRUPTED != HARM_PREVENTED
+REPRESENTATION != WORLD
+SCHEMA_VALID != CLAIM_TRUE
+ROUTE_EXISTS != CORRECTION_COMPLETES
+EXECUTED != ADJUDICATED
+NO_UNIQUE_PRIMITIVE != USELESS
 ```
-
-## Start here
-
-### Five minutes
-
-Read [`REVIEW_GUIDE.md`](REVIEW_GUIDE.md). It explains what TRACE claims, what it does not claim, and how to submit a useful finding.
-
-### Exact formal source
-
-Use [`TRACE_FORMAL_SEED_v0_2_7.md`](TRACE_FORMAL_SEED_v0_2_7.md) for exact wording, identifiers, equations, schema material, invariants, and formal review.
-
-The Markdown file is the formal source. The PDF changes presentation, pagination, typography, and line wrapping only.
-
-### Human-readable formal carrier
-
-Read [`TRACE.pdf`](TRACE.pdf). It is the current rendered carrier of TRACE v0.2.7.
-
-A useful first pass is:
-
-1. **Handshake / Claim Ceiling**
-2. **Middle-Out Seed**
-3. **Canonical Object / Typed Graph**
-4. the worked transformations
-5. **Packet Construction** and the unresolved limits
-
-### Release and provenance
-
-- [`TRACE_v0_2_7_BASELINE_RELEASE.md`](TRACE_v0_2_7_BASELINE_RELEASE.md) records the human release decision, exact object identity, review history, and claim boundaries.
-- [`TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md`](TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md) records source binding, deterministic build evidence, visual inspection, and carrier limits.
-- [`falsification/TRACE_v0_2_7_FALSIFY_X100_REPORT.md`](falsification/TRACE_v0_2_7_FALSIFY_X100_REPORT.md) records the declared executable audit surface and residual limits.
-
-The formal source retains the wording of the reviewed compiled candidate. Its active release status is recorded in the separate release declaration so promotion did not rewrite the reviewed bytes.
-
-## Current status
-
-TRACE v0.2.7 is the active released formal baseline to use, cite, test, and revise from unless a later version explicitly supersedes it.
-
-```text
-RELEASED
-ACTIVE_FORMAL_BASELINE
-NOT_CANON
-NOT_VALIDATED
-NOT_AUTHORITY
-NOT_PERMISSION
-NOT_CLEARANCE
-```
-
-The embedded minimum validator checks packet shape and controlled vocabulary. It cannot establish truth, semantic relevance, completeness, independent evidence, legitimate authority, route executability, brake effectiveness, correction, moral correctness, or world effect.
-
-The current audits and build checks establish declared source binding, deterministic construction, surface propagation, mutation detection, and stated containment. They do not establish operational effectiveness or decision advantage.
-
-## Current development candidate
-
-TRACE v0.3.0 remains working material. Its [bounded candidate
-package](work/v0_3_0/README.md) exposes two different review objects:
-
-- the [compact v0.11 spine](work/v0_3_0/candidate/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md) for semantic review;
-- the [full v0.1 candidate](work/v0_3_0/candidate/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md) for donor-survival, schema, operator and worked-transformation review.
-
-Read the [current readiness audit](work/v0_3_0/evidence/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md) before treating either as a finished object. Neither supersedes v0.2.7. The complete build and experiment quarry remains preserved by [immutable pointer](work/v0_3_0/QUARRY_POINTER.md); it is not the expected first-reading path.
-
-The current comparison found no TRACE-unique semantic primitive. A 32-call
-primary run established execution and material carrier burden, but no efficacy
-result; blind adjudication remains incomplete. The live question is whether
-TRACE's compilation prevents consequential omissions at acceptable total cost,
-not whether its vocabulary is novel.
-
-## Who may find it relevant
-
-TRACE may be worth examining for people working on:
-
-- AI safety, alignment, agent governance, and model evaluation;
-- systems engineering, safety cases, incident reconstruction, and assurance;
-- institutional decision processes, audit, law, regulation, and public administration;
-- causal modelling, mechanistic interpretability, and human-machine handoffs;
-- philosophy of action, uncertainty, responsibility, harm, and correction.
-
-No domain endorsement is implied. The useful question is whether TRACE preserves materially relevant structure that existing methods lose, and whether that preservation changes anything in practice.
-
-## What useful feedback looks like
-
-General reactions are welcome, but concrete breaks are more valuable.
-
-A strong finding identifies:
-
-```text
-exact file and section
-what was directly observed
-what is inferred
-failure mode or consequence
-why current safeguards do or do not contain it
-smallest justified repair, removal, demotion, or test
-```
-
-Use the repository's **TRACE review feedback** issue template:
-
-https://github.com/markgoodbody-bit/TRACE/issues/new?template=trace-review.md
-
-A reviewer may reasonably conclude that a component is redundant, incoherent, untestable, better handled by an existing method, or useful only in a narrower setting.
-
-## Citation
-
-GitHub-compatible citation metadata is provided in [`CITATION.cff`](CITATION.cff). Cite the exact TRACE version and formal source used; citation does not imply validation, endorsement, authority, or permission to reuse the material.
-
-## Repository map
-
-- `TRACE_FORMAL_SEED_v0_2_7.md` — active formal source
-- `TRACE.pdf` — current v0.2.7 rendered formal carrier; the Markdown seed remains the formal source
-- `REVIEW_GUIDE.md` — external review paths and finding format
-- `CITATION.cff` — machine-readable citation metadata
-- `CONTRIBUTING.md` — contribution, provenance and review guidance
-- `LICENSE_STATUS.md` — current no-general-reuse-licence boundary
-- `TRACE_v0_2_7_BASELINE_RELEASE.md` — release decision and exact provenance
-- `TRACE_v0_2_7_RENDERED_CARRIER_REPORT.md` — render and source-binding evidence
-- `falsification/` — executable audits, reports, and residual limits
-- `tools/` — deterministic compilation and carrier build tools
-- `carrier/` — generated carrier source and build inputs
-- `checker_external/` — checks that cannot be established by the embedded minimum validator
-- `02_CURRENT_SURFACE/` — preserved transition and repair material
-- `work/v0_3_0/` — bounded next-version candidate and selected evidence package
-- `PROJECT/PROJECT.md` and `PROJECT/MAP.md` — project purpose and layer map
-
-Released predecessors remain preserved as separate objects rather than silently rewritten.
-
-## Related project
-
-Mechanical Ethics is the human-facing ethical and philosophical side of the wider project. TRACE is the structure-facing language. They approach the same underlying problem from different directions, but this repository contains the TRACE formal lane.
-
-## Review, contribution and reuse
-
-Review, criticism and bounded testing are invited. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before proposing a patch.
-
-No general reuse licence has been granted. Public repository visibility alone should not be read as permission to copy, adapt, redistribute or incorporate the material elsewhere. See [`LICENSE_STATUS.md`](LICENSE_STATUS.md).

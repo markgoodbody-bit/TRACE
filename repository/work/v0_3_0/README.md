@@ -7,11 +7,11 @@ reviewer may need from the much larger development quarry that produced them.
 
 ## Read in this order
 
-1. [`candidate/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md`](candidate/TRACE_v0_3_0_SPINE_CANDIDATE_v0_11.md)
+1. [`TRACE-SPINE.md`](../../../TRACE-SPINE.md)
    — compact semantic comparison surface.
 2. [`evidence/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md`](evidence/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md)
    — earned, provisional and unresolved state.
-3. [`candidate/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md`](candidate/TRACE_FORMAL_SEED_v0_3_0_FULL_WORKING_CANDIDATE_v0_1.md)
+3. [`TRACE.md`](../../../TRACE.md)
    — full donor-preserving candidate, only when the compact spine is
    insufficient for the review question.
 
@@ -52,6 +52,6 @@ Use [`evidence/README.md`](evidence/README.md) for the selected evidence map and
 The repository-object identity correction for four JSON files is recorded in
 [`evidence/TRACE_v0_3_0_REPOSITORY_IDENTITY_CORRECTION_20260829_v0_1.md`](evidence/TRACE_v0_3_0_REPOSITORY_IDENTITY_CORRECTION_20260829_v0_1.md).
 
-Run `python tools/verify_trace_v030_candidate_package.py` to verify package
+Run `python repository/tools/verify_trace_v030_candidate_package.py` to verify package
 identity and claim-boundary markers. That check does not reproduce the full
 historical assembly or establish semantic correctness or efficacy.

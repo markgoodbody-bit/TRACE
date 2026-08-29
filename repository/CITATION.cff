@@ -8,7 +8,7 @@ authors:
 version: 0.2.7
 date-released: 2026-08-05
 repository-code: "https://github.com/markgoodbody-bit/TRACE"
-url: "https://github.com/markgoodbody-bit/TRACE/blob/main/TRACE_FORMAL_SEED_v0_2_7.md"
+url: "https://github.com/markgoodbody-bit/TRACE/blob/main/repository/TRACE_FORMAL_SEED_v0_2_7.md"
 abstract: >-
   TRACE is a typed structural-awareness grammar for examining decisions and
   transitions under uncertainty. It separates world, scene, map, action,
