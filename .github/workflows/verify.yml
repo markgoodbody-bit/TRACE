@@ -13,11 +13,15 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Verify current candidates, package and baseline identities
-        run: python repository/tools/verify_trace_v030_candidate_package.py
+      - name: Verify declared current identities
+        run: |
+          printf '%s  %s\n' 'de35637f1a6db1648f725db0e533c4b4f8e2eb1f40c817ed24de9039e1525084' TRACE-SPINE.md | sha256sum -c -
+          printf '%s  %s\n' '0955e02670bf5c1623dc20d05d22f071f4dc43388c5d8d241848b197d4bdf47d' TRACE.md | sha256sum -c -
+      - name: Verify status and claim ceilings
+        run: |
+          grep -F 'WORKING / NOT RELEASED / NOT CANON / NOT VALIDATED / NO EFFICACY RESULT' README.md
+          grep -F 'SCHEMA_VALID != CLAIM_TRUE' README.md
+          grep -F 'PUBLIC_VISIBILITY != REUSE_PERMISSION' README.md
       - name: Check whitespace integrity
         run: git diff --check
       - name: Claim boundary

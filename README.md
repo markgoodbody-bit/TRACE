@@ -11,8 +11,7 @@ This repository is distinct from
 ## Read this
 
 1. [`TRACE-SPINE.md`](TRACE-SPINE.md) — the compact semantic review surface.
-2. [Current readiness audit](repository/work/v0_3_0/evidence/TRACE_v0_3_0_READINESS_AUDIT_20260829_v0_1.md) — what is earned, provisional and unresolved.
-3. [`TRACE.md`](TRACE.md) — the full donor-preserving candidate when the spine
+2. [`TRACE.md`](TRACE.md) — the full donor-preserving candidate when the spine
    is insufficient for the review question.
 
 Both root documents are exact objects from the **v0.3.0 working candidate**:
@@ -20,15 +19,17 @@ Both root documents are exact objects from the **v0.3.0 working candidate**:
 | Object | Bytes | SHA-256 |
 |---|---:|---|
 | compact spine v0.11 | 25,355 | `de35637f1a6db1648f725db0e533c4b4f8e2eb1f40c817ed24de9039e1525084` |
-| full working candidate v0.1 | 179,731 | `32409ee8d91e9c4bc67ecbb2359cc7d1c68249cab457511a50e586733ee7598a` |
+| full working candidate v0.1 | 179,737 | `0955e02670bf5c1623dc20d05d22f071f4dc43388c5d8d241848b197d4bdf47d` |
 
 ```text
 WORKING / NOT RELEASED / NOT CANON / NOT VALIDATED / NO EFFICACY RESULT
 ```
 
-TRACE v0.2.7 remains the released formal baseline. Its exact source, PDF and
-release record are preserved under [`repository/`](repository/). Moving them
-away from the public root did not change their bytes or status.
+TRACE v0.2.7 remains the released formal baseline. Earlier versions, evidence
+records, failed intermediate objects and build history remain recoverable
+through Git history and the dated
+`branch-archive-20260829-pre-minimal-surface` tag; they are not part of the
+current reading surface.
 
 ## Current evidence boundary
 
@@ -48,14 +49,18 @@ Not earned:
 - release, validation, conformance, authority, permission or clearance;
 - standing, value ranking, legitimate authority or enforcement rules.
 
-## Evidence and history
+## Review, history and licence
 
-- [bounded v0.3 package](repository/work/v0_3_0/README.md)
-- [selected evidence index](repository/work/v0_3_0/evidence/README.md)
-- [v0.2.7 preservation baseline](repository/TRACE_v0_2_7_BASELINE_RELEASE.md)
-- [external review guide](repository/REVIEW_GUIDE.md)
-- [repository map and historical material](repository/README.md)
-- [licensing status](repository/LICENSE_STATUS.md)
+The standing [external criticism issue](https://github.com/markgoodbody-bit/TRACE/issues/45)
+asks what TRACE adds - or fails to add - over existing methods. Redundancy,
+false precision, excessive burden and no-material-difference findings are valid
+results.
+
+No general reuse licence has been granted for this repository or its contents.
+Public visibility permits inspection, linking, discussion and review; it does
+not itself grant permission to copy, adapt, redistribute, train on, sell or
+incorporate the material into another work. Questions about a proposed use
+should be raised with the repository owner.
 
 ```text
 REPRESENTATION != WORLD
@@ -63,4 +68,5 @@ SCHEMA_VALID != CLAIM_TRUE
 ROUTE_EXISTS != CORRECTION_COMPLETES
 EXECUTED != ADJUDICATED
 NO_UNIQUE_PRIMITIVE != USELESS
+PUBLIC_VISIBILITY != REUSE_PERMISSION
 ```
