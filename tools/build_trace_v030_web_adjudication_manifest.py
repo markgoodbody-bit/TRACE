@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a no-authority Campfire estimate manifest for frozen blind packets."""
+"""Build a no-dispatch browser manifest for frozen TRACE blind packets."""
 
 from __future__ import annotations
 
@@ -8,13 +8,6 @@ import hashlib
 import json
 from pathlib import Path
 from typing import Any
-
-
-PROVIDERS = (
-    ("kimi", "kimi-k2.6", "KIMI_MOONSHOT"),
-    ("gemini", "gemini-3.6-flash", "GEMINI_GOOGLE"),
-)
-PROVIDER_BY_ID = {row[0]: row for row in PROVIDERS}
 
 
 def sha256(data: bytes) -> str:
@@ -37,17 +30,9 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--public-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
-    parser.add_argument("--max-output-tokens", type=int, default=4000)
-    parser.add_argument(
-        "--providers",
-        nargs="+",
-        choices=tuple(PROVIDER_BY_ID),
-        default=[provider_id for provider_id, _, _ in PROVIDERS],
-        help="ordered provider subset; defaults to the frozen two-family order",
-    )
     parser.add_argument(
         "--study-id",
-        default="TRACE-v0.3.0-BLIND-ADJUDICATION-TWO-FAMILY-20260829-v0.3",
+        default="TRACE-v0.3.0-BLIND-ADJUDICATION-GEMINI-API-PLUS-GROK-WEB-20260829-v0.4",
     )
     args = parser.parse_args()
 
@@ -55,8 +40,6 @@ def main() -> int:
     output_dir = args.output_dir.resolve()
     if output_dir.exists():
         raise FileExistsError(f"output directory exists: {output_dir}")
-    if args.max_output_tokens < 1000 or args.max_output_tokens > 8000:
-        raise ValueError("max output tokens must be between 1000 and 8000")
 
     public_manifest_path = public_dir / "public-manifest.json"
     public_manifest_bytes = public_manifest_path.read_bytes()
@@ -65,17 +48,16 @@ def main() -> int:
         raise ValueError("unsupported blind-packet manifest")
     if public_manifest.get("armKeyIncluded") is not False:
         raise ValueError("public packet set claims to include an arm key")
+    if public_manifest.get("deltaNotesIncluded") is not False:
+        raise ValueError("public packet set claims to include provenance notes")
 
     output_dir.mkdir(parents=True)
     prompts_dir = output_dir / "prompts"
     prompts_dir.mkdir()
     jobs: list[dict[str, Any]] = []
-    order = 0
-    selected_providers = [PROVIDER_BY_ID[provider_id] for provider_id in args.providers]
-    if len({provider_id for provider_id, _, _ in selected_providers}) != len(selected_providers):
-        raise ValueError("provider selection contains duplicates")
-
-    for packet in sorted(public_manifest.get("packets", []), key=lambda item: item["packetId"]):
+    for order, packet in enumerate(
+        sorted(public_manifest.get("packets", []), key=lambda item: item["packetId"]), start=1
+    ):
         packet_id = str(packet["packetId"])
         packet_path = public_dir / str(packet["file"])
         packet_bytes = packet_path.read_bytes()
@@ -87,47 +69,45 @@ def main() -> int:
         prompt_bytes = prompt_text.encode("utf-8")
         prompt_name = f"{packet_id}.txt"
         exclusive_text(prompts_dir / prompt_name, prompt_text)
-        for provider_id, preset_id, family_id in selected_providers:
-            order += 1
-            jobs.append(
-                {
-                    "order": order,
-                    "jobId": f"{packet_id}__ADJUDICATOR_{family_id}__ATTEMPT_1",
-                    "pairId": f"{packet_id}__ADJUDICATION",
-                    "arm": "JUDGE",
-                    "caseLabel": packet["caseId"],
-                    "pairAttempt": 1,
-                    "promptId": packet_id,
-                    "promptPath": f"prompts/{prompt_name}",
-                    "promptBytes": len(prompt_bytes),
-                    "promptSha256": sha256(prompt_bytes),
-                    "providerId": provider_id,
-                    "presetId": preset_id,
-                    "receiverFamilyId": family_id,
-                    "visibleAnswerTokens": args.max_output_tokens,
-                    "maxOutputTokens": args.max_output_tokens,
-                    "identityRequired": False,
-                    "contextMode": "none",
-                    "roleInstruction": "",
-                    "mode": "debate-judging",
-                }
-            )
+        jobs.append(
+            {
+                "order": order,
+                "jobId": f"{packet_id}__ADJUDICATOR_GROK_WEB_GUEST_FAST__ATTEMPT_1",
+                "packetId": packet_id,
+                "caseLabel": packet["caseId"],
+                "promptPath": f"prompts/{prompt_name}",
+                "promptBytes": len(prompt_bytes),
+                "promptSha256": sha256(prompt_bytes),
+                "providerFamily": "XAI_GROK",
+                "service": "grok.com",
+                "transport": "browser",
+                "accountMode": "SIGNED_OUT_GUEST",
+                "visibleModeLabel": "Fast",
+                "backendModelIdentity": "UNKNOWN_NOT_DISCLOSED_BY_UI",
+                "freshChatRequired": True,
+                "externalSearchAllowed": False,
+                "retryCount": 0,
+            }
+        )
+
+    if len(jobs) != 16:
+        raise ValueError(f"expected 16 packets, observed {len(jobs)}")
 
     manifest = {
-        "schema": "campfire-exact-input-study-v1",
+        "schema": "trace-v030-browser-adjudication-manifest-v1",
         "studyId": args.study_id,
-        "canonicalText": "utf8-no-leading-or-trailing-whitespace",
-        "claimBoundary": "ADJUDICATION_PREFLIGHT_CANDIDATE_NOT_AUTHORIZATION_NOT_DISPATCH_NOT_RESULT",
+        "claimBoundary": "BROWSER_ROUTE_FROZEN_NOT_DISPATCH_NOT_RETURN_NOT_EFFICACY_RESULT",
         "sourceBlindPacketManifestSha256": sha256(public_manifest_bytes),
         "sourceBlindPacketSetIdSha256": public_manifest["packetSetIdSha256"],
         "sealedArmKeySha256": public_manifest["sealedArmKeySha256"],
         "armKeyIncluded": False,
         "deltaNotesIncluded": False,
-        "adjudicatorFamilies": [family for _, _, family in selected_providers],
-        "executionMode": "debate-judging",
+        "dispatchPolicy": "GROK_WEB_FIRST_FAIL_FAST_THEN_GEMINI_API",
+        "capturePolicy": "PRESERVE_VISIBLE_PAGE_EXPORT_AND_SESSION_URL_BEFORE_NEXT_PACKET",
+        "identityLimit": "SERVICE_AND_VISIBLE_MODE_ONLY_BACKEND_MODEL_UNDISCLOSED",
         "jobs": jobs,
     }
-    manifest_path = output_dir / "campfire-adjudication-manifest.json"
+    manifest_path = output_dir / "browser-grok-adjudication-manifest.json"
     exclusive_text(manifest_path, json.dumps(manifest, indent=2, ensure_ascii=False, sort_keys=True) + "\n")
     print(
         json.dumps(
@@ -135,7 +115,9 @@ def main() -> int:
                 "manifest": str(manifest_path),
                 "manifestSha256": sha256(manifest_path.read_bytes()),
                 "jobs": len(jobs),
-                "maxOutputTokens": args.max_output_tokens,
+                "service": "grok.com",
+                "visibleModeLabel": "Fast",
+                "backendModelIdentity": "UNKNOWN_NOT_DISCLOSED_BY_UI",
             },
             indent=2,
         )
