@@ -8,19 +8,23 @@ TRACE is an attempt to make the structure of decisions and transitions more visi
 
 For a quick orientation:
 
-1. Read the root [`README.md`](README.md).
-2. Read **[0] Handshake / Claim Ceiling** and **[1] Middle-Out Seed** in [`TRACE.pdf`](TRACE.pdf) or the formal Markdown source.
-3. Use the PDF table of contents to inspect **Canonical Object / Typed Graph**, **Packet Construction**, the worked transformations, and the unresolved limits.
+1. Read the root [`README.md`](../README.md).
+2. Read the compact current [`TRACE-SPINE.md`](../TRACE-SPINE.md).
+3. Use the full current [`TRACE.md`](../TRACE.md) when the spine is
+   insufficient for the review question.
 
-For exact wording, identifiers, schema material, and formal review, use [`TRACE_FORMAL_SEED_v0_2_7.md`](TRACE_FORMAL_SEED_v0_2_7.md). The PDF is the current human-readable carrier; the Markdown file remains the formal source.
+For the released v0.2.7 baseline, use
+[`TRACE_FORMAL_SEED_v0_2_7.md`](TRACE_FORMAL_SEED_v0_2_7.md). Its
+[`TRACE.pdf`](TRACE.pdf) is the rendered carrier; the Markdown file remains the
+formal source.
 
 The formal source retains the wording of the reviewed compiled candidate. Its active release status is recorded separately in [`TRACE_v0_2_7_BASELINE_RELEASE.md`](TRACE_v0_2_7_BASELINE_RELEASE.md), so promotion did not rewrite the reviewed object.
 
 ## Reviewing the v0.3.0 working candidate
 
-Begin at [`work/v0_3_0/README.md`](work/v0_3_0/README.md). Read the compact
-spine before the full candidate, and consult the readiness audit before making
-claims about current evidence.
+Begin at the root [`TRACE-SPINE.md`](../TRACE-SPINE.md), then consult the
+[`work/v0_3_0/README.md`](work/v0_3_0/README.md) package and readiness audit
+before making claims about current evidence.
 
 The package deliberately excludes most intermediate build and experiment
 history from the review path. That history remains available through its

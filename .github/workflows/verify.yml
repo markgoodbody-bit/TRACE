@@ -1,0 +1,26 @@
+name: TRACE current surface integrity
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify current candidates, package and baseline identities
+        run: python repository/tools/verify_trace_v030_candidate_package.py
+      - name: Check whitespace integrity
+        run: git diff --check
+      - name: Claim boundary
+        run: |
+          echo "Green verifies controlled repository objects and declared status markers."
+          echo "It does not establish semantic correctness, efficacy, validation, authority, permission or clearance."
