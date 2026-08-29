@@ -153,6 +153,24 @@ Do not pull these into core merely because they are useful.
 
 A spine may omit implementation detail. A full candidate may not silently delete capability.
 
+## Recovered v0.2.8 receiver-repair lineage
+
+The earlier v0.2.8 candidate delta map is now preserved and dispositioned in:
+
+```text
+PROJECT/TRACE_v0_2_8_CANDIDATE_DELTA_MAP_v0_1.md
+PROJECT/TRACE_v0_2_8_TO_v0_3_0_LINEAGE_RECONCILIATION_20260829_v0_1.md
+```
+
+Its matched baseline/A/B retrieval experiment is `NOT OBSERVED`. D1, D2 and
+D4 were partially absorbed into later orientation/separation work; D5 was
+absorbed semantically as a profile boundary; D3 and D6 were not absorbed. None
+of those dispositions establishes receiver improvement.
+
+The current primary A/T study asks a different question about v0.11 practical
+transfer and burden. It does not retrospectively complete the v0.2.8 test or
+isolate which carrier/semantic feature caused any later difference.
+
 ## Current falsification gate
 
 The source-level F01-F10 sequence is bounded-closed for this pass. The
@@ -163,6 +181,14 @@ runtime validation or evidence that TRACE improves decisions.
 The nearest-neighbour pass against FPF, STPA and ISO 26262 established no
 TRACE-unique semantic primitive. The legacy casebook also failed to establish
 superior main-decision discovery and recorded profile overfire and burden.
+
+A bounded executable test of the five required `const: false` discipline
+declarations now establishes packet-level shape/value discrimination: all five
+reject omission and `true`. The same mechanically minimal positive packet
+passes with every discipline reference array empty. Therefore the fields remain
+unchanged pending comparative population burden; schema acceptance does not
+establish understanding or world application. See
+`PROJECT/TRACE_v0_3_0_FIXED_VALUE_DISCIPLINE_TEST_RECORD_20260829_v0_1.md`.
 
 The current frontier is therefore practical and comparative:
 

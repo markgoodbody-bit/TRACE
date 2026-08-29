@@ -105,8 +105,8 @@ def make_report(base: str, candidate: str) -> dict[str, object]:
 
     return {
         "status": "PASS" if not errors else "FAIL",
-        "base_path": str(BASE_PATH.relative_to(REPO_ROOT)),
-        "output_path": str(OUTPUT_PATH.relative_to(REPO_ROOT)),
+        "base_path": BASE_PATH.relative_to(REPO_ROOT).as_posix(),
+        "output_path": OUTPUT_PATH.relative_to(REPO_ROOT).as_posix(),
         "base_sha256": sha256_text(base),
         "candidate_sha256": sha256_text(candidate),
         "base_bytes": len(base.encode("utf-8")),
