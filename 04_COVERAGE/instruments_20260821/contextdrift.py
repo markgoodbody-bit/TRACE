@@ -38,6 +38,53 @@ bags of words come from different neighbourhoods. It is built against exactly
 two labelled cases -- one matcher known wrong, one believed sound -- which is
 thin, and the file says so rather than implying a validated detector. A clean
 result here is weak evidence and a dirty one is a reason to go and read rows.
+
+THE PREREGISTERED RETEST WAS RUN. THE MEASURE IS REFUTED.
+---------------------------------------------------------
+This file previously said the idea was UNTESTED rather than refuted, and named
+the retest before running it: pool contexts instead of comparing per hit,
+require >= 8 controls, and fix the statistic on clauses OTHER than the two
+labelled cases. That retest is now run, and it failed at calibration -- before
+the labelled cases were touched.
+
+CALIBRATION, four held-out clauses, controls selected mechanically (good
+references drawn from the same population as the hits; the bad reference
+`cost` drawn only from sentences carrying `$` while its catch is dominated by
+metaphorical cost):
+
+    thank you   GOOD   lift +0.0156
+    hypothesis  GOOD   lift +0.0115
+    cost        BAD    lift +0.0059
+    deadline    GOOD   lift +0.0028   <- a GOOD clause BELOW the BAD one
+
+No threshold separates good from bad. So the labelled cases were never scored:
+choosing a cutoff after seeing that spread would fit the test to the answer.
+
+WHY IT FAILS, demonstrated rather than guessed -- `python contextdrift.py confound`
+holds ONE clause and ONE population fixed and varies only the control count:
+
+    n_ctrl   vocab    lift
+         8      40   +0.0156
+        16      93   +0.0291
+        32     166   +0.0423
+        64     297   +0.0549
+       128     518   +0.0580
+
+Lift moves 3.7x on an experimenter choice that has nothing to do with the
+hypothesis. A quantity that swings that far under an irrelevant knob cannot
+adjudicate anything, and comparing two clauses at a fixed n does not fix it,
+because equal n gives unequal vocabulary (40 to 92 across the calibration set).
+
+    MOVES_WITH_THE_KNOB != MEASURES_THE_THING
+    SAME_N != MATCHED_COMPARISON
+
+WHAT IS AND IS NOT REFUTED. The overlap-coefficient-against-pooled-vocabulary
+measure is dead. The underlying idea -- that a clause catching the wrong
+population has different surrounding language -- is not refuted by this; it was
+never given a stable measure. I am not building a second statistic tonight,
+because choosing one now, having watched this one fail on these exact cases, is
+the fitting error at one remove. That was true before the retest and the retest
+does not license it.
 """
 import io
 import json
@@ -120,7 +167,56 @@ def drift(clause, corpus_texts, controls, label, rnd):
     return med > n90
 
 
+
+def confound_demo(corpus="corpus_fresh.json"):
+    """Hold the clause and the population fixed; vary only how many controls.
+
+    If the statistic measured population match, this would be flat.
+    """
+    c = json.load(io.open(corpus, encoding="utf-8"))
+    texts = [m.get("body") or "" for m in c["comments"]]
+    split = re.compile(r"(?<=[.?!])\s+")
+    rx = re.compile(r"thank you", re.I)
+    pool = []
+    for t in texts:
+        for s in split.split(t):
+            s = " ".join(s.split())
+            if rx.search(s) and 40 <= len(s) <= 150:
+                pool.append(s)
+    seen, uniq = set(), []
+    for s in pool:
+        k = s.lower()[:34]
+        if k not in seen:
+            seen.add(k); uniq.append(s)
+    random.Random(5).shuffle(uniq)
+    hits = [t for t in texts if rx.search(t)]
+    rnd = random.Random(11)
+    print("CONFOUND DEMO  one clause, one population, only control count varies")
+    print("  n_ctrl  vocab  median_hit  median_null      lift")
+    for n in (8, 16, 32, 64, 128):
+        if len(uniq) < n:
+            break
+        vocab = set()
+        for s in uniq[:n]:
+            m = rx.search(s)
+            if m:
+                vocab |= set(context_of(s, m))
+        obs = sorted(overlap(vocab, set(context_of(t, rx.search(t)))) for t in hits)
+        med = obs[len(obs) // 2]
+        samp = rnd.sample(texts, 500)
+        null = sorted(overlap(vocab, set(words(t)[:2 * WINDOW])) for t in samp)
+        nmed = null[len(null) // 2]
+        print("  %5d  %5d     %.4f      %.4f    %+.4f"
+              % (n, len(vocab), med, nmed, med - nmed))
+    print()
+    print("  Lift is a function of how many controls you happened to supply.")
+    print("      MOVES_WITH_THE_KNOB != MEASURES_THE_THING")
+    return 0
+
+
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "confound":
+        return confound_demo()
     corpus = sys.argv[1] if len(sys.argv) > 1 else "corpus_fresh.json"
     c = json.load(io.open(corpus, encoding="utf-8"))
     texts = [m.get("body") or "" for m in c["comments"]]
