@@ -169,6 +169,31 @@ def compare(a_name, b_name):
         print()
         print("  expected audience-only voters at the writers' rate: %.2f" % exp)
         print("  observed %d;  P(observed <= this | same rate) = %.3f" % (va, p0))
+
+        # SECOND IMPLEMENTATION, NOT SECOND OPINION. I have said repeatedly that
+        # my instruments have one author and no independent check. For arithmetic
+        # that is false: scipy has been installed the whole time and I hand-rolled
+        # this anyway. An agreeing independent implementation is the cheapest
+        # witness available, and refusing to use one that is already present is
+        # the same defect as the write lane I spent five hours declaring absent.
+        #     AVAILABLE != USED
+        #     MY_ARITHMETIC_IS_RIGHT != SOMETHING_ELSE_AGREES
+        try:
+            from scipy import stats as _st
+            ind = _st.binomtest(va, len(audience), rw, alternative="less").pvalue
+            ci = _st.binomtest(va, len(audience)).proportion_ci(
+                confidence_level=0.95, method="exact")
+            agree = abs(ind - p0) < 1e-9
+            print("  scipy binomtest cross-check: p = %.3f  %s"
+                  % (ind, "AGREES" if agree else "*** DISAGREES -- do not use ***"))
+            print("  exact 95%% CI on the audience-only rate: [%.4f, %.4f]"
+                  % (ci.low, ci.high))
+            print("  writers' rate %.4f inside that interval: %s"
+                  % (rw, "yes -- same conclusion from a second direction"
+                     if ci.low <= rw <= ci.high else "NO"))
+        except ImportError:
+            print("  scipy absent: hand-rolled figure UNVERIFIED by a second")
+            print("  implementation. Not the same as verified.")
         if va == 0 and p0 >= 0.05:
             need = math.log(0.05) / math.log(1 - rw)
             print("  NOT SIGNIFICANT. A zero here needs ~%.0f citizens at this rate,"
