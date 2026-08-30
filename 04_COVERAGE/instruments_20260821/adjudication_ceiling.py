@@ -180,12 +180,30 @@ def main():
                    "kimi-k2.6": "moonshot", "grok": "xai", "meta-ai": "meta",
                    "claude": "anthropic", "mechanical-check": "NON_LLM"}
     lineage_of = {}
-    packets = ["PAC-1", "PAC-4", "PAC-5", "EPA-03", "CONTROL_STRESS_01",
-               "RAIB-2", "NHTSA-03", "PAC-3"]
+    # PACKET IDENTITY IS NOT ATTESTED, SO IT IS NOT ASSERTED. 2026-08-30.
+    # This list previously read:
+    #     PAC-1 PAC-4 PAC-5 EPA-03 CONTROL_STRESS_01 RAIB-2 NHTSA-03 PAC-3
+    # The last three appear NOWHERE in the source blob this instrument cites
+    # (TRACE cb74678b, verified by search). I wrote them. They are plausible
+    # casebook names -- a rail investigator, a road-safety regulator -- and that
+    # is what makes the defect bad: confabulated specificity reads as citation.
+    #
+    #     PLAUSIBLE_LABEL != ATTESTED_LABEL
+    #     LOOKS_LIKE_A_CITATION != IS_ONE
+    #
+    # What the source DOES attest: 16 calls from gemini-3.6-flash and 16 from
+    # kimi-k3, 32 total, "paired A/T units = 16 / 16". Five packet names appear,
+    # and only inside an output-limit-violation table listing Kimi jobs -- that
+    # table is not the manifest and the full manifest is not in the document.
+    #
+    # The verdicts below depend on the dependence STRUCTURE (which family
+    # produced each pair), never on the labels, so honest indices cost nothing.
+    ATTESTED = ["PAC-1", "PAC-4", "PAC-5", "EPA-03", "CONTROL_STRESS_01"]
     pairs = {}
-    for p in packets:
-        pairs["%s/gemini" % p] = {"gemini-3.6-flash"}
-        pairs["%s/kimi" % p] = {"kimi-k3"}
+    for i in range(8):
+        tag = ATTESTED[i] if i < len(ATTESTED) else "UNATTESTED-%d" % (i + 1)
+        pairs["%s/gemini" % tag] = {"gemini-3.6-flash"}
+        pairs["%s/kimi" % tag] = {"kimi-k3"}
 
     print("ADJUDICATION CEILING  TRACE v0.3.0 outward run, 16 paired A/T units")
     print("  producers: gemini-3.6-flash (8 pairs), kimi-k3 (8 pairs)")
