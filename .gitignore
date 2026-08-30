@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+gate_out/
+walk_*.json
