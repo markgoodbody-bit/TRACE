@@ -268,6 +268,80 @@ def report(res, label="matcher"):
         print("        in: %s" % excerpt[:130])
 
 
+# ---------------------------------------------------------------- absence
+
+class Absence(object):
+    """A negative result that cannot be reported without the scope it holds in.
+
+    WHY, FROM NINE FAILURES IN ONE NIGHT
+    ------------------------------------
+    2026-08-30/31, three apertures, nine instances of ONE act:
+
+        Get-Command node returned nothing   -> "Node.js is not installed"
+        not in my repository list           -> "DOES_NOT_RESOLVE"
+        404 to an unauthenticated client    -> "the object is absent"
+        no reply in the thread I chose      -> "Codex is declining to help"
+        searched the wrong Documents root   -> "I have no write lane"
+        node:crypto is the only import      -> "cannot reach the network at all"
+        the name was in the corpus I read   -> "attested in the source I cited"
+        three clauses fired once            -> "the board contains no contests"
+        my walk's rows carry no actor       -> "the record carries no actor"
+
+    In every case the check RAN AND WAS CORRECT. Nothing malfunctioned.
+    `Get-Command` truthfully reported that node was not on that PATH; the 404 was
+    a real 404. What failed is that a negative result carries a scope, and the
+    scope was dropped between the check and the sentence -- because in English
+    "not here" and "not anywhere" are the same words.
+
+    Positive results are self-limiting: finding a thing proves it exists and the
+    scope does not matter. **Only negatives generalise silently.**
+
+        A_NEGATIVE_HAS_A_SCOPE_AND_THE_SCOPE_IS_NEVER_THE_WORLD
+        SEARCHED_AND_DID_NOT_FIND != DOES_NOT_EXIST
+
+    WHY A CLASS AND NOT A RULE
+    --------------------------
+    The rule was already known. I wrote NOT_OBSERVED != NOT_HAPPENED into memory
+    on 2026-08-27 after retracting a published claim for exactly this. It did not
+    stop me doing it five more times, and `basisboard.py` -- written hours after
+    I had articulated the principle three separate times that same night -- still
+    needed it fixed three times.
+
+    A distinction I have to remember at each call site is a distinction I will
+    lose at the next one. So the scope is not adjacent to the negative here; it
+    is structurally inseparable from it, and constructing one without a scope
+    raises rather than defaults.
+
+        STATED_INVARIANT != INSTALLED_CHECK
+        REMEMBERED_AT_THIS_CALL_SITE != WILL_SURVIVE_THE_NEXT
+    """
+
+    def __init__(self, what, searched, note=None):
+        if not what:
+            raise Refused("an absence must say what was not found")
+        if not searched:
+            raise Refused(
+                "an absence must name the scope it was not found in. "
+                "'%s was not found' is not a result; '%s was not found in X' is."
+                % (what, what))
+        self.what = what
+        self.searched = searched
+        self.note = note
+
+    def __str__(self):
+        s = "%s: not found in %s" % (self.what, self.searched)
+        if self.note:
+            s += " (%s)" % self.note
+        return s
+
+    def __bool__(self):
+        # An absence is a RESULT, not a falsy nothing. Truth-testing one is
+        # almost always a caller about to collapse it back into a bare negative.
+        raise Refused("do not truth-test an Absence; report it or read .what")
+
+    __nonzero__ = __bool__
+
+
 # ---------------------------------------------------------------- self-test
 
 CONCEPTS = {
