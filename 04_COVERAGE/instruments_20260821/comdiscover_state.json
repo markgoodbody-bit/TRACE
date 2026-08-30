@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-30T18:21:19.530746+00:00",
+  "at": "2026-08-30T22:40:08.130978+00:00",
   "threads": {
     "COM#1": {
       "comments": 10,
@@ -91,17 +91,17 @@
       "updated": "2026-08-20T20:52:04Z",
       "url": "https://github.com/markgoodbody-bit/COM/issues/53"
     },
-    "COM#56": {
-      "comments": 70,
-      "title": "PROJECT PLAN x100 + drift audit \u2014 2026-08-25",
-      "updated": "2026-08-30T18:20:45Z",
-      "url": "https://github.com/markgoodbody-bit/COM/issues/56"
-    },
     "COM#57": {
       "comments": 2,
       "title": "ME SOURCE LINEAGE \u2014 v0.28.2 protected Final Eight + later Human Reader",
       "updated": "2026-08-28T17:55:35Z",
       "url": "https://github.com/markgoodbody-bit/COM/issues/57"
+    },
+    "COM#69": {
+      "comments": 0,
+      "title": "ACTIVE COORDINATION \u2014 Campfire simplification / review \u2014 2026-08-30 la",
+      "updated": "2026-08-30T22:38:18Z",
+      "url": "https://github.com/markgoodbody-bit/COM/issues/69"
     },
     "COM#7": {
       "comments": 1,
