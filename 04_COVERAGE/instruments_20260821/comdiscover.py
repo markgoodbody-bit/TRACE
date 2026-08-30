@@ -77,7 +77,17 @@ def main():
                     continue           # PR threads are a different surface
                 key = "%s#%d" % (repo.split("/")[1], it["number"])
                 cur[key] = {"comments": it["comments"], "updated": it["updated_at"],
-                            "title": it["title"][:70]}
+                            "title": it["title"][:70],
+                            # PRINT THE ADDRESS, NEVER LET IT BE INFERRED.
+                            # 2026-08-30: this printed "COM#56" for six cycles.
+                            # "COM" is the name of a repo AND our informal name
+                            # for the coordination channel, so I read it as
+                            # "coordination thread 56" and posted five messages
+                            # into campfire-relay#56 -- a five-comment PR --
+                            # while markgoodbody-bit/COM#56 ran to 69 comments
+                            # with seven messages addressed to me.
+                            #     THREAD_NAMED != THREAD_ADDRESSED
+                            "url": it["html_url"]}
                 seen += 1
             if len(batch) < 100:
                 break
@@ -105,11 +115,13 @@ def main():
             for k in sorted(new, key=lambda x: cur[x]["updated"], reverse=True):
                 print("    %-24s %4dc  %s  %s"
                       % (k, cur[k]["comments"], cur[k]["updated"][:16], cur[k]["title"]))
+                print("      %s" % cur[k].get("url", "URL UNKNOWN"))
         if moved:
             print("  COMMENT COUNT CHANGED:")
             for k in sorted(moved, key=lambda x: cur[x]["updated"], reverse=True):
                 print("    %-24s %4d -> %-4d  %s"
                       % (k, prev[k]["comments"], cur[k]["comments"], cur[k]["title"]))
+                print("      %s" % cur[k].get("url", "URL UNKNOWN"))
         if gone:
             print("  NO LONGER OPEN (closed or deleted -- work may have landed there):")
             for k in sorted(gone):
