@@ -184,12 +184,18 @@ def main():
     # This list previously read:
     #     PAC-1 PAC-4 PAC-5 EPA-03 CONTROL_STRESS_01 RAIB-2 NHTSA-03 PAC-3
     # The last three appear NOWHERE in the source blob this instrument cites
-    # (TRACE cb74678b, verified by search). I wrote them. They are plausible
-    # casebook names -- a rail investigator, a road-safety regulator -- and that
-    # is what makes the defect bad: confabulated specificity reads as citation.
+    # (TRACE cb74678b, verified by search).
     #
-    #     PLAUSIBLE_LABEL != ATTESTED_LABEL
-    #     LOOKS_LIKE_A_CITATION != IS_ONE
+    # I first recorded that I had invented them. Checked, and that was wrong:
+    # RAIB-2 and NHTSA-03 are REAL Mechanical Ethics casebook cases, named in
+    # COM's H2 protocol beside Leah, Harborline and RouteSure. This was a
+    # transplant between two evidence sets, not a fabrication, and PAC-5 --
+    # present in BOTH lists -- is the bridge that carried it. PAC-3 is pattern
+    # completion, attested in neither.
+    #
+    #     SHARED_ELEMENT_BETWEEN_TWO_LISTS != SAME_LIST
+    #     REAL_SOMEWHERE != ATTESTED_HERE
+    #     EACH_ELEMENT_VERIFIABLE != THE_LIST_IS_SOURCED
     #
     # What the source DOES attest: 16 calls from gemini-3.6-flash and 16 from
     # kimi-k3, 32 total, "paired A/T units = 16 / 16". Five packet names appear,

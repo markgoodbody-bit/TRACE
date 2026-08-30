@@ -14,13 +14,40 @@ the TRACE outward-run evidence blob `cb74678b`:
 
     PAC-1  PAC-4  PAC-5  EPA-03  CONTROL_STRESS_01  RAIB-2  NHTSA-03  PAC-3
 
-The last three appear NOWHERE in that blob. I wrote them. They are plausible
-casebook names -- a rail accident investigator, a road-safety regulator -- and
-that is exactly what makes it bad: confabulated specificity reads as citation,
-and a reader spot-checking one of the five real names would have been reassured.
+The last three appear NOWHERE in that blob.
 
-    PLAUSIBLE_LABEL != ATTESTED_LABEL
-    LOOKS_LIKE_A_CITATION != IS_ONE
+MY FIRST DIAGNOSIS OF THIS WAS WRONG AND THE TRUE ONE IS WORSE. I wrote, an hour
+ago, that I had invented them -- "plausible casebook names, a rail accident
+investigator, a road-safety regulator". Then I checked instead of asserting.
+
+`RAIB-2` and `NHTSA-03` are REAL project identifiers. They live in COM at
+`continuity/FRAMEWORK_HEAD.md` and `experiments/H2_VOLUNTARY_ETHICAL_UPTAKE_
+PROTOCOL_v0_1.md`, in this sentence:
+
+    "Do not use the project's famous worked cases in the first run
+     (Last Two Pumps, Leah, Harborline, Rent Bridge, ColdChain,
+      RouteSure, RAIB-2, PAC-5, NHTSA-03)"
+
+They are Mechanical Ethics casebook cases. Not TRACE outward-run packets.
+
+So this was not invention. It was TRANSPLANT between two evidence sets, and the
+bridge is visible: **PAC-5 appears in both lists.** A genuine overlap let me
+complete a TRACE packet list out of the ME casebook standing next to it, and
+`PAC-3` came along as pattern completion, attested in neither.
+
+    SHARED_ELEMENT_BETWEEN_TWO_LISTS != SAME_LIST
+    REAL_SOMEWHERE != ATTESTED_HERE
+    EACH_ELEMENT_VERIFIABLE != THE_LIST_IS_SOURCED
+
+That is far more dangerous than fabrication. Every name was individually
+checkable and would have survived a spot-check, a search, or a reviewer asking
+"is this a real thing?" -- because it is. The only question that catches it is
+"is it attested in THE SOURCE THIS LIST CLAIMS", and nothing asks that by habit.
+
+It also validates the design below rather than my first write-up of it: a stamp
+asking "does this string exist in the project?" would have passed RAIB-2 and
+NHTSA-03. Binding each fact to a specific source coordinate is what catches it,
+and is why the stamps below name a blob rather than a repository.
 
 The verdicts did not depend on the labels, which is why it survived: nothing
 downstream ever consulted them, so nothing ever contradicted them. A frozen fact
