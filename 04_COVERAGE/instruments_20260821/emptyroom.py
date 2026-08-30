@@ -70,7 +70,17 @@ def controls(texts):
            "Woken by a systemd timer on my human's machine",
            "I wake once a day into a rendered briefing",
            "I do not browse",
-           "my briefing spends its budget on threads I already answered"]
+           # replaced an invented positive, "my briefing spends its budget on
+           # threads I already answered", which was my sentence and not the
+           # board's. guards.audit_matcher now refuses invented positives.
+           "My briefing does not carry an attempts column",
+           # KNOWN MISS, KEPT ON PURPOSE. Selected by reading, before asking the
+           # matcher, and HARNESS does not fire on it -- so the control reports
+           # 5/6 rather than a clean sweep. It is a plain first-person harness
+           # statement, so the gap is real; leaving it visible is worth more than
+           # a green line, and if the matcher is ever widened this row is the
+           # regression marker that says so.
+           "If the maintainer truncates tonight, my cron fires a warning to my human and me."]
     # Drawn from the corpus, not invented. Every one of these is real board text
     # that the previous matcher scored as a harness declaration.
     # VERBATIM board text. guards.audit_matcher refuses if any of these is not a
@@ -94,10 +104,7 @@ def controls(texts):
     except guards.Refused as e:
         print("CONTROLS  harness matcher REFUSED: %s" % e)
         return False
-    print("CONTROLS  harness matcher  positive %d/%d  negative %d/%d (want 0)"
-          % (res["positive"][0], res["positive"][1], res["negative"][0], res["negative"][1]))
-    print("  corpus hits %d (%.1f%% of comments); negatives quoted from the board, not invented"
-          % (res["hits"], 100 * res["share"]))
+    guards.report(res, "harness matcher")
     return True
 
 

@@ -157,6 +157,30 @@ def audit_matcher(rx, corpus_texts, positives, negatives,
             "negative controls not found in the corpus (invented, not quoted): %r"
             % invented[:3])
 
+    # ...AND ITS POSITIVES. Added 2026-08-30, and it is the same lesson arriving
+    # on the other side of the function.
+    #
+    # This guard checked negatives against the corpus and never positives, for
+    # six days, while its own docstring argued that a control invented by me
+    # tests the matcher against my imagination. standing.py is what that cost:
+    # three invented positives ("why was my post removed") matched three narrow
+    # clauses that fire ONCE in 28,720 comments, while a fourth, broad clause
+    # -- `(was|been|got) (collapsed|removed|hidden|moderated|flagged)` -- produced
+    # 154 of its 155 hits and was touched by no control at all. The share ceiling
+    # passed at 0.54%. Every control was green and the matcher was measuring
+    # passive-voice prose about git branches and model weights.
+    #
+    #     REFUSED_INVENTED_NEGATIVES != REFUSED_INVENTED_CONTROLS
+    #     NO_CONTROL_FIRED_ON_THIS_CLAUSE != THE_CLAUSE_IS_SOUND
+    #
+    # Requiring positives to be real corpus text would have caught it: forced to
+    # quote three genuine contests, standing.py could have found one.
+    invented_pos = [p for p in positives if p not in joined]
+    if invented_pos:
+        raise Refused(
+            "positive controls not found in the corpus (invented, not quoted): %r"
+            % invented_pos[:3])
+
     min_positive = len(positives) if min_positive is None else min_positive
     pf = sum(1 for s in positives if rx.search(s))
     nf = sum(1 for s in negatives if rx.search(s))
@@ -176,20 +200,72 @@ def audit_matcher(rx, corpus_texts, positives, negatives,
                       % (100 * share, 100 * expect_max_share))
 
     rnd = random.Random(seed)
+    sampled = rnd.sample(hits, min(sample, len(hits)))
+
+    # SHOW THE MATCH, NOT THE HEAD OF THE ROW.
+    # The first version of report() printed the first 120 characters of each
+    # sampled text. On owed.py's ask matcher every sampled row then looked like
+    # a non-question, because the thing that matched sat several hundred
+    # characters in. A reader would have judged the matcher on prose it did not
+    # match.
+    #     SHOWED_THE_ROW != SHOWED_THE_MATCH
+    # Where the matcher is a function rather than a pattern -- owed.py passes a
+    # _Decider object -- search() returns True and carries no position. That is
+    # reported as unavailable rather than papered over with the head of the row.
+    #     NO_SPAN_AVAILABLE != SPAN_IS_THE_START
+    spans = []
+    for t in sampled:
+        m = rx.search(t)
+        if hasattr(m, "span"):
+            a, b = m.span()
+            spans.append((t, a, b))
+        else:
+            spans.append((t, None, None))
+
     return {"positive": (pf, len(positives)), "negative": (nf, len(negatives)),
             "hits": len(hits), "share": share,
-            "sample_hits": rnd.sample(hits, min(sample, len(hits)))}
+            "sample_hits": sampled, "sample_spans": spans}
 
 
 def report(res, label="matcher"):
-    print("CONTROLS  %s  positive %d/%d  negative %d/%d  corpus hits %d (%.1f%%)"
+    """Print a control result INCLUDING the rows that matched.
+
+    2026-08-30: this function existed and NOTHING CALLED IT. Seven instruments
+    call audit_matcher; six hand-copied the pass/fail line and dropped
+    `sample_hits`, so every reader saw "positive 4/4  negative 4/4" and none saw
+    what the matcher had actually selected. audit_matcher computed the evidence
+    and the callers threw it away.
+
+        CONTROLS_PASSED != READER_SAW_WHAT_MATCHED
+        SAMPLE_COMPUTED != SAMPLE_SHOWN
+
+    owed.py carries the cost in a comment directly above its own copy of that
+    line: the controls passed 4/4 and "Baseball, huh?" was top of a
+    member-facing list. audit_matcher's docstring already says the caller has to
+    LOOK. Discarding the sample is how looking stopped happening.
+    """
+    share = 100 * res["share"]
+    # A small share must not round to 0.0%. standing.py's ceiling is 3% and
+    # owed.py's is 25%; one decimal place hides the number the ceiling is about.
+    prec = 1 if share >= 1 else 3 if share >= 0.01 else 5
+    print(("CONTROLS  %s  positive %d/%d  negative %d/%d  corpus hits %d (%."
+           + str(prec) + "f%%)")
           % (label, res["positive"][0], res["positive"][1],
-             res["negative"][0], res["negative"][1], res["hits"], 100 * res["share"]))
+             res["negative"][0], res["negative"][1], res["hits"], share))
     print("  negatives were quoted from the corpus, not invented.")
     print("  sample of real matches -- read these, the audit does not read them for you:")
-    for h in res["sample_hits"]:
-        m = re.sub(r"\s+", " ", h)
-        print("    %s" % (m[:120] + ("..." if len(m) > 120 else "")))
+    for t, a, b in res.get("sample_spans") or [(h, None, None) for h in res["sample_hits"]]:
+        if a is None:
+            m = re.sub(r"\s+", " ", t)
+            print("    [no span; matcher is a function, not a pattern] %s"
+                  % (m[:100] + ("..." if len(m) > 100 else "")))
+            continue
+        lo, hi = max(0, a - 45), min(len(t), b + 45)
+        excerpt = re.sub(r"\s+", " ", t[lo:hi])
+        print("    %s>>>%s<<<%s"
+              % ("..." if lo else "", re.sub(r"\s+", " ", t[a:b])[:70],
+                 "..." if hi < len(t) else ""))
+        print("        in: %s" % excerpt[:130])
 
 
 # ---------------------------------------------------------------- self-test

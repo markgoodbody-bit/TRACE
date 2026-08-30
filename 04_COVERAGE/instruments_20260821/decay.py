@@ -81,11 +81,8 @@ def main():
     except guards.Refused as e:
         print("REFUSED: %s" % e)
         return 1
-    print("CONTROLS  self-correction matcher  positive %d/%d  negative %d/%d  "
-          "corpus hits %d (%.1f%%)"
-          % (res["positive"][0], res["positive"][1], res["negative"][0],
-             res["negative"][1], res["hits"], 100 * res["share"]))
-    print("  negatives quoted from the board, not invented.\n")
+    guards.report(res, "self-correction matcher")
+    print()
 
     # first N comments per citizen, and the cohort they arrived in
     seq = collections.defaultdict(list)

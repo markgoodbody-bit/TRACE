@@ -113,9 +113,27 @@ def main():
 
     # ---- controls on the contest matcher, before any absence claim -----------
     texts = [m.get("body") or "" for m in cs]
-    POS = ["My comment was collapsed and nobody said why",
-           "why was my post removed",
-           "I am contesting the removal"]
+    # ---- 2026-08-30: THESE WERE INVENTED, AND THAT IS HOW THIS MATCHER SHIPPED.
+    # The three they replace -- "My comment was collapsed and nobody said why",
+    # "why was my post removed", "I am contesting the removal" -- were sentences
+    # I wrote. They matched the three narrow clauses of CONTEST, which fire on
+    # ONE comment in 28,720, and that one is a general remark that you *can*
+    # contest a decision, not a contest. The fourth clause,
+    #     (was|been|got) (collapsed|removed|hidden|moderated|flagged)
+    # produced 154 of the matcher's 155 hits and NO CONTROL EVER TOUCHED IT. It
+    # matches any passive voice: "the branch was removed" (git), "the direction
+    # was removed" (model weights), "the post has been moderated" (API docs).
+    #
+    #     EVERY_CONTROL_GREEN != EVERY_CLAUSE_CONTROLLED
+    #     UNDER_THE_SHARE_CEILING != MATCHING_THE_TARGET
+    #
+    # guards.audit_matcher now refuses invented positives, which is what would
+    # have caught this: asked for three real contests, this file could find none.
+    # These two are quoted, and they are the ONLY two the board supplies -- so
+    # min_positive drops to 2, because inventing a third is the original defect.
+    POS = ["since the thread has been collapsed, I'm unable to engage further "
+           "unless the moderation reason is clarified",
+           "my post 1197 was collapsed by moderation"]
     cand = ["a moderation event",
             "the collapsed state",
             "moderation is not the interesting part"]
@@ -130,16 +148,13 @@ def main():
         # 3% is argued, not fitted: only 39 of 1,305 citizens who have ever
         # written were acted on at all, so a contest matcher firing on more than
         # 3% of comments is matching DISCUSSION of moderation, not contests.
-        res = guards.audit_matcher(CONTEST, texts, POS, NEG, min_positive=3,
+        res = guards.audit_matcher(CONTEST, texts, POS, NEG, min_positive=2,
                                    expect_max_share=0.03)
     except guards.Refused as e:
         print("REFUSED: %s" % e)
         return 1
-    print("CONTROLS  contest matcher  positive %d/%d  negative %d/%d  "
-          "corpus hits %d (%.2f%%)"
-          % (res["positive"][0], res["positive"][1], res["negative"][0],
-             res["negative"][1], res["hits"], 100 * res["share"]))
-    print("  negatives quoted from the board, not invented.\n")
+    guards.report(res, "contest matcher")
+    print()
 
     # ---- the population: every member this board has materially acted upon ---
     acts = []
@@ -273,11 +288,32 @@ def main():
           % (horizon / 60000))
     print("  spoke again afterwards           %3d of %d" % (spoke_again, n))
     print("  never wrote again, past horizon  %3d of %d" % (went_silent, n))
-    print("  contested it in any room         %3d of %d" % (contested, n))
-    print("  and someone answered them        %3d of %d" % (answered, n))
+    # ---- THE CONTEST ROW IS NOT PUBLISHED AS A RATE. 2026-08-30.
+    # CONTEST shortlists; it does not decide. Reading all of its in-scope hits
+    # showed what the corpus-wide audit already implied: they are first-person
+    # mentions of moderation, and mostly not objections. One of the seven --
+    # CaveSignalGoblin's -- reads as an actual objection; three are by
+    # 1f916-agent, the maintainer, describing acts rather than contesting them.
+    #
+    # Printing "5 of 37 contested" from that would be the same defect as the
+    # matcher, one layer up: a number standing in for rows nobody read.
+    #
+    #     SHORTLISTED != CONTESTED
+    #     SEVEN_ROWS_NEED_A_READER != SEVEN_ROWS_NEED_A_RATE
+    #
+    # At this size the honest instrument enumerates and lets the reader classify.
+    # If this ever exceeds ~30 rows, that is when a matcher earns the decision --
+    # and it will need positives quoted from those rows, which today do not exist.
+    print("  mentioned moderation afterwards  %3d of %d   <- CANDIDATES, NOT CONTESTS"
+          % (contested, n))
+    print("  of those, drew any reply         %3d" % answered)
+    print()
+    print("  ALL %d candidate rows follow. CONTEST selected them; it did not"
+          % len(rows))
+    print("  classify them, and neither does this instrument. Read them.")
     print()
 
-    for ref, who, first, reply in rows[:10]:
+    for ref, who, first, reply in rows:
         body = " ".join((first.get("body") or "").split())
         frag = body
         for s in re.split(r"(?<=[.?!])\s+", body):

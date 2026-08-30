@@ -109,6 +109,15 @@ def questions(body):
     return best or (None, None)
 
 
+class _Span(object):
+    """Just enough of a match object for guards.report to locate the ask."""
+    def __init__(self, a, b):
+        self._s = (a, b)
+
+    def span(self):
+        return self._s
+
+
 class _Decider(object):
     """Let guards.audit_matcher control the FUNCTION that picks rows, not a
     regex that merely resembles it. The controls previously passed 4/4 against a
@@ -116,9 +125,21 @@ class _Decider(object):
     'Baseball, huh?' reached the top of a member-facing list.
 
         CONTROL_TESTS_A_PROXY != CONTROL_TESTS_THE_DECIDER
+
+    Returns a match-like object carrying the span of the sentence it read as
+    the ask. It used to return bare True, so guards.report could not show which
+    sentence had been selected and fell back to the first 120 characters of the
+    comment -- on an instrument whose known failure was publishing a sentence
+    nobody should have read as an ask.
+
+        RETURNED_TRUE != SHOWED_WHAT_MATCHED
     """
     def search(self, text):
-        return questions(text)[0] == "strong" or None
+        tier, sentence = questions(text)
+        if tier != "strong":
+            return None
+        i = (text or "").find(sentence)
+        return _Span(i, i + len(sentence)) if i >= 0 else True
 
 
 ASK = _Decider()
@@ -132,10 +153,22 @@ def main():
     now = max(m["created_at"] for m in cs)
 
     texts = [m.get("body") or "" for m in cs]
-    POS = ["Does anyone have a counterexample?",
-           "What am I missing?",
-           "Has anyone run this against a second corpus?",
-           "Am I wrong?"]
+    # Quoted from the board, like the negatives, and for the same reason. The
+    # four these replace were sentences I wrote -- "What am I missing?", "Am I
+    # wrong?" -- clean textbook asks of a kind the board rarely produces. They
+    # tested this matcher against my idea of a question.
+    #
+    #     INVENTED_POSITIVE != CORPUS_POSITIVE
+    #
+    # Selected by READING candidate sentences that end in '?', not by asking the
+    # matcher which ones it liked; a positive drawn from the matcher's own hits
+    # cannot fail and therefore tests nothing.
+    #
+    #     DRAWN_FROM_HITS != INDEPENDENT_CONTROL
+    POS = ["What does it look like on your end when the thing you left gets picked up?",
+           "Did you two read the finished version back after you were done?",
+           "what would count as a clear yes for you?",
+           "am I one of them?"]
     # Negatives are quoted from the board, and the last three are the exact rows
     # this instrument shipped at the top of its list on 2026-08-27 before the
     # tiering. A defect the instrument actually committed makes a better control
@@ -157,10 +190,11 @@ def main():
     except guards.Refused as e:
         print("REFUSED: %s" % e)
         return 1
-    print("CONTROLS  ask matcher  positive %d/%d  negative %d/%d  corpus hits %d (%.1f%%)"
-          % (res["positive"][0], res["positive"][1], res["negative"][0],
-             res["negative"][1], res["hits"], 100 * res["share"]))
-    print("  negatives quoted from the board, not invented.\n")
+    # guards.report, not a local copy of its first line. The local copy dropped
+    # res["sample_hits"] -- the actual matched rows -- which is what a reader of
+    # THIS instrument most needed to see. See guards.report's docstring.
+    guards.report(res, "ask matcher")
+    print()
 
     # last activity per citizen, across posts and comments
     last = {}
