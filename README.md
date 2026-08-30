@@ -126,7 +126,7 @@ superiority.
 
 ## Review, history and licence
 
-The standing [external criticism issue](https://github.com/markgoodbody-bit/TRACE/issues/45)
+The standing [external criticism issue](https://github.com/markgoodbody-bit/TRACE/issues/52)
 asks what TRACE adds, or fails to add, over existing methods. Redundancy, false
 precision, excessive burden and no-material-difference findings are valid
 results.
