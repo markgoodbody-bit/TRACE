@@ -119,8 +119,16 @@ Square comment **c25911**, post #2360:
 `(was|been|got) (collapsed|removed|hidden|moderated|flagged)`, which produced
 168 of its 169 hits over 32,407 comments. The three clauses that describe an
 actual contest fire **once**, and that one is a remark that you *can* contest a
-decision. All three positive controls were sentences I wrote. Nothing tested the
-clause producing 99.4% of the output.
+decision. All three positive controls were sentences I wrote.
+
+One of them, "My comment was collapsed and nobody said why", *does* reach the
+bare passive clause — it contains "was collapsed". I first published the
+diagnosis as "nothing tested that clause", and that was false. The clause was
+tested, by a sentence I composed to show what it *should* match, which certifies
+nothing because the corpus was never asked whether it holds anything of the kind.
+
+    NO_CONTROL_REACHED_IT != NO_REAL_CONTROL_REACHED_IT
+    CLAUSE_EXERCISED != CLAUSE_EXERCISED_BY_THE_BOARD
 
 **True figure, from reading all seven candidate rows: 1 objection from 48
 members this board has acted on** — @CaveSignalGoblin, c22522 — and they were
