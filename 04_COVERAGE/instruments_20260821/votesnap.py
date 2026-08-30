@@ -52,6 +52,7 @@ comparison is not an artefact of when I happened to look.
 import hashlib
 import io
 import json
+import math
 import os
 import sys
 import time
@@ -133,14 +134,55 @@ def compare(a_name, b_name):
     both = set(av) & set(bv)
     voted = {i for i in both
              if (bv[i].get("votes_cast") or 0) > (av[i].get("votes_cast") or 0)}
+    handle = {i: bv[i].get("handle") for i in both}
     print("  interval     %s -> %s" % (a["taken_at_utc"], b["taken_at_utc"]))
     print("  in both      %d citizens (%d new since, excluded)"
           % (len(both), len(set(bv)) - len(both)))
     print("  voted again  %d" % len(voted))
+
+    corpus = "corpus_fresh.json"
+    if not os.path.exists(corpus):
+        print("\n  No corpus present; the writing half of the split is unavailable.")
+        return voted
+    c = json.load(io.open(corpus, encoding="utf-8"))
+    prior = {m.get("author") for m in c["comments"]} | {p.get("author") for p in c["posts"]}
+    prior.discard(None)
+    writers = {i for i in both if handle[i] in prior}
+    audience = {i for i in both
+                if (av[i].get("votes_cast") or 0) > 0 and handle[i] not in prior}
+    vw, va = len(writers & voted), len(audience & voted)
+    rw = vw / len(writers) if writers else 0.0
     print()
-    print("  To answer @stanley this needs the two walks bracketing the same")
-    print("  interval, to split these by whether they also WROTE. Snapshot")
-    print("  alone gives the voting half; the corpus gives the writing half.")
+    print("  cohort                        n     voted in interval")
+    print("  prior writers             %5d   %4d (%.1f%%)" % (len(writers), vw, 100 * rw))
+    print("  audience-only             %5d   %4d (%.1f%%)"
+          % (len(audience), va, 100 * va / len(audience) if audience else 0))
+
+    # POWER BEFORE INTERPRETATION. On the first real run this printed 52 vs 0,
+    # which reads as a dead audience. Under the writers' own rate the expected
+    # count in a 51-person arm was 1.93, and P(0) = 0.139. A difference that
+    # large-looking was not a difference at all.
+    #     LOOKS_LIKE_A_GAP != SURVIVES_ITS_OWN_DENOMINATOR
+    if audience and writers and rw > 0:
+        exp = len(audience) * rw
+        p0 = (1 - rw) ** len(audience)
+        print()
+        print("  expected audience-only voters at the writers' rate: %.2f" % exp)
+        print("  observed %d;  P(observed <= this | same rate) = %.3f" % (va, p0))
+        if va == 0 and p0 >= 0.05:
+            need = math.log(0.05) / math.log(1 - rw)
+            print("  NOT SIGNIFICANT. A zero here needs ~%.0f citizens at this rate,"
+                  % need)
+            print("  or an interval about %.1fx longer, before it means anything."
+                  % (need / len(audience)))
+            print("      SUGGESTIVE != MEASURED")
+        elif va == 0:
+            print("  Zero observed where %.1f expected, and the arm is large enough"
+                  % exp)
+            print("  for that to be a real difference. Read the rows before believing it.")
+    print()
+    print("  Rate constancy in time is assumed and untested; a short interval")
+    print("  sampled at an unusual hour can differ from a representative one.")
     return voted
 
 
