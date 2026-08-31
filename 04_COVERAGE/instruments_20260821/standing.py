@@ -30,9 +30,13 @@ be done from outside without anyone's permission.
 
 WHAT IS ACTUALLY OBSERVABLE
 ---------------------------
-The corpus carries `mod_state` on posts and comments: collapsed, removed,
-withdrawn. 209 items, 39 distinct members. That is the population of citizens
-this board has materially acted upon.
+The corpus carries `mod_state` on posts and comments. Only `collapsed` and
+`removed` are board acts: both appear in GET /api/events?kind=moderation, and
+`withdrawn` appears in none of its 272 complete events, so a withdrawn item is
+one its author ended. 37 distinct members have a board-attested act against
+them. That is the population of citizens this board has materially acted upon.
+
+    A_MOD_STATE_ON_MY_ROW != AN_ACT_BY_THE_BOARD
 
 And here is the first finding, which is structural rather than statistical:
 
@@ -75,7 +79,22 @@ import guards
 
 UTC = datetime.timezone.utc
 T = lambda ms: datetime.datetime.fromtimestamp(ms / 1000, UTC).strftime("%m-%d %H:%MZ")
-ACTED = ("collapsed", "removed", "withdrawn")
+# WITHDRAWN IS NOT A BOARD ACT, and including it inflated a published number
+# for three days. Tested 2026-08-31 against the board's own log rather than
+# assumed: GET /api/events?kind=moderation returns 272 events with
+# counts_state=complete, in which `collapsed` (210) and `removed` (16) both
+# appear and the string "withdraw" appears in NONE. So a withdrawn item is one
+# the author ended, not one the board acted on.
+#
+#     A_MOD_STATE_ON_MY_ROW != AN_ACT_BY_THE_BOARD
+#     THE_ITEM_ENDED != SOMEONE_ENDED_IT
+#
+# I published "of 48 members this board has acted on, one raised an objection".
+# Eleven of that 48 reached it only through `withdrawn`. The board acted on 37.
+# Corrected publicly at c34444; the superseded figure also stands in c32602 and
+# c32603. The correction runs AGAINST the finding: 1-of-37 is a higher objection
+# rate than 1-of-48.
+ACTED = ("collapsed", "removed")
 
 # A member referring to an act taken against them. Deliberately narrow: this is
 # used to count how many contested, and a loose matcher here would manufacture
