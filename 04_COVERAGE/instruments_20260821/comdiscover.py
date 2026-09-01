@@ -35,9 +35,31 @@ is the part my client was assuming.
 WHAT IT CANNOT DO
 -----------------
 Closed issues are not enumerated, so work that lands on a closed thread is
-invisible to it. Pull request threads are separate objects and are not covered.
+invisible to it.
 
-    OPEN_ISSUES != EVERY_SURFACE
+PRs WERE ALSO INVISIBLE, AND THAT WAS MY DOING
+----------------------------------------------
+Until 2026-09-01 this file skipped pull requests -- `if "pull_request" in it:
+continue` -- and then printed "PR threads are not enumerated here" on every run.
+It named the hole and left it open, for five days, in the instrument whose whole
+purpose is that a completeness check inside a fixed aperture measures the
+aperture.
+
+It cost exactly what it was built to prevent. COM PR #79 carried a review
+assigned to CLAUDE CODE by name, and I found it only because Framework mentioned
+it in prose on an unrelated issue thread. Fourth form of the same failure.
+
+    NAMED_THE_LIMIT != CLOSED_THE_LIMIT
+    A_CAVEAT_I_COULD_HAVE_FIXED_IS_AN_UNFIXED_BUG
+
+The issues API returns PRs already; discarding them was a choice, not a cost.
+
+The limit that remains is real and is NOT the same one: comment counts come from
+the issues API, so they count issue-comments only. A PR that moves solely through
+line-level review comments will not change its number here.
+
+    OPEN_THREADS != EVERY_SURFACE
+    ISSUE_COMMENTS != EVERY_COMMENT_ON_A_PR
 """
 import datetime
 import io
@@ -66,18 +88,26 @@ def main():
 
     cur, rows = {}, []
     for repo in REPOS:
-        page, seen = 1, 0
+        page, seen, prs = 1, 0, 0
         while True:
             batch = gh(["api", "repos/%s/issues?state=open&per_page=100&page=%d"
                         % (repo, page), "--jq", "."])
             if not batch:
                 break
             for it in batch:
-                if "pull_request" in it:
-                    continue           # PR threads are a different surface
+                # PRs used to be skipped here as "a different surface", and this
+                # file then PRINTED that limit on every run without closing it.
+                # 2026-09-01: COM PR #79 carried an open review assigned to me by
+                # name. I found it only because Framework mentioned it in prose on
+                # an issue thread. The instrument built to widen my aperture had a
+                # hole in exactly the place its own footer warned about.
+                #     NAMED_THE_LIMIT != CLOSED_THE_LIMIT
+                #     A_CAVEAT_I_COULD_HAVE_FIXED_IS_AN_UNFIXED_BUG
+                # The issues API already returns PRs; discarding them was a choice.
+                kind = "PR" if "pull_request" in it else "issue"
                 key = "%s#%d" % (repo.split("/")[1], it["number"])
                 cur[key] = {"comments": it["comments"], "updated": it["updated_at"],
-                            "title": it["title"][:70],
+                            "title": it["title"][:70], "kind": kind,
                             # PRINT THE ADDRESS, NEVER LET IT BE INFERRED.
                             # 2026-08-30: this printed "COM#56" for six cycles.
                             # "COM" is the name of a repo AND our informal name
@@ -89,14 +119,17 @@ def main():
                             #     THREAD_NAMED != THREAD_ADDRESSED
                             "url": it["html_url"]}
                 seen += 1
+                if kind == "PR":
+                    prs += 1
             if len(batch) < 100:
                 break
             page += 1
-        rows.append((repo, seen))
+        rows.append((repo, seen, prs))
 
     print("COMDISCOVER  %s" % now)
-    for repo, seen in rows:
-        print("  %-34s %d open issues enumerated" % (repo, seen))
+    for repo, seen, prs in rows:
+        print("  %-34s %d open threads enumerated (%d issues, %d PRs)"
+              % (repo, seen, seen - prs, prs))
     print()
 
     new = [k for k in cur if k not in prev]
@@ -133,8 +166,11 @@ def main():
         json.dumps({"at": now, "threads": cur}, indent=2, sort_keys=True))
     print()
     print("  state written: %s" % os.path.basename(STATE))
-    print("  OPEN_ISSUES != EVERY_SURFACE -- closed issues and PR threads are not")
-    print("  enumerated here, so this widens the aperture without closing it.")
+    print("  OPEN issues AND open PRs are enumerated. Still NOT covered: closed")
+    print("  threads, and PR review-comment threads -- the counts above are")
+    print("  issue-comments only, so a PR carrying only line review comments can")
+    print("  move without its number changing here.")
+    print("  OPEN_THREADS != EVERY_SURFACE")
     return 0
 
 
