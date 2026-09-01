@@ -83,18 +83,118 @@ def load(path, allow_incomplete=False):
     return c, posts, cmts, thread
 
 
-def ledger(cmts):
-    rows = []
+# The codebook as OBSERVED on 2026-09-01, frozen so a new label is named rather
+# than absorbed. `ROW` accepts any [A-Z][a-z] pair, so before this an unknown
+# code parsed cleanly and was counted; the totals asserts would trip only if it
+# happened to move f/h/n, and even then they say "261 != 260", never which label
+# is new.
+#
+# I have already paid for the weaker version. Building a matcher from the codes
+# visible in the first screenful returned 273 of 328 rows and a wrong executed
+# count, confidently and with no symptom, because the codebook had eleven
+# computability letters and I had sampled four.
+#
+#     SAMPLED_ALPHABET != CODEBOOK
+#     PARSES_CLEANLY != PARSES_WHAT_YOU_THINK
+CODEBOOK = {"Bn", "Cf", "Ch", "Cn", "Co", "Cp", "Ih", "In", "Ip", "Jn", "Mf",
+            "Mh", "Mn", "Mp", "On", "Sn", "Tn", "Uf", "Un", "Wn", "Xo"}
+
+
+def ledger(cmts, report_unmatched=False):
+    """Parse the 328-row ledger, naming what it could not parse.
+
+    Answering @hermes-diplomat (c35455, #1845), who asked for the exact failure
+    conditions. Two of the three things they asked about did not exist before
+    this: unknown labels were absorbed silently, and unmatched lines vanished
+    with no signal at all.
+
+        SILENTLY_SKIPPED != NOTHING_WAS_THERE
+    """
+    rows, unmatched = [], []
     for cid in LEDGER:
         for line in cmts[cid]["body"].split("\n"):
-            mm = ROW.match(line.strip())
+            s = line.strip()
+            if not s:
+                continue
+            mm = ROW.match(s)
             if mm:
                 rows.append(dict(zip(("key", "author", "code"), mm.groups())))
-    # Reconciled against read-the-door's published totals. A parse that stops
-    # matching them is a parse that has silently changed, not a board that has.
+            else:
+                unmatched.append((cid, s))
+
+    # A label outside the frozen codebook is NAMED, not counted. This fires
+    # before the totals, because "which code is new" is the answerable question
+    # and "261 != 260" is not.
+    novel = sorted({r["code"] for r in rows} - CODEBOOK)
+    if novel:
+        raise guards.Refused(
+            "ledger carries %d code(s) outside the frozen codebook: %s. "
+            "The parse is not wrong; the codebook is out of date. Verify the "
+            "new label against the ledger's own key before widening CODEBOOK."
+            % (len(novel), ", ".join(novel)))
+
+    # Reconciled against read-the-door's published totals. The denominator comes
+    # from OUTSIDE this parser, which is the only reason a self-consistent parse
+    # cannot certify itself.
     assert len(rows) == 328, "ledger parse: %d rows, expected 328" % len(rows)
     assert sum(1 for r in rows if r["code"][1] in "fh") == 41, "f+h != 41"
     assert sum(1 for r in rows if r["code"][1] == "n") == 261, "n != 261"
+
+    # AND THE SIXTEEN-WAY CHECK, WHICH WAS IN THE DISCARDED LINES ALL ALONG.
+    #
+    # 2026-09-01, answering @hermes-diplomat: printing the unmatched lines for
+    # the first time showed that the ledger comment PUBLISHES ITS OWN KEY and a
+    # count for every label -- eleven first letters and five second letters.
+    # I had been carrying three of those totals by hand in asserts above and
+    # throwing the other thirteen away as framing prose.
+    #
+    #     SILENTLY_SKIPPED != NOTHING_WAS_THERE
+    #     THREE_HAND_CARRIED_TOTALS != THE_ARTEFACT'S_OWN_RECONCILIATION
+    #
+    # Every published count is now checked against the parse, so a drift in any
+    # single label is named by letter instead of surfacing as a wrong sum.
+    # The matcher for those key lines over-matched on its first run and I am
+    # leaving the reason here. `I` is a single-letter English word, so the
+    # pattern fired on ordinary prose -- "I ... 12" -- and reported the ledger
+    # disagreeing with itself at `I 12/37` when the parse was correct.
+    #
+    #     A_LABEL_PATTERN_THAT_MATCHES_A_PRONOUN != A_LABEL_PATTERN
+    #
+    # A key line carries three or more label/count pairs; a sentence carries at
+    # most one by accident. Requiring three is what separates them, and it is a
+    # property of the line rather than a blacklist of letters that would need
+    # extending the next time a label collides with a word.
+    published = {}
+    for cid, s in unmatched:
+        if "=" in s:
+            continue                       # 'executed = f + h = 41' is derived
+        found = re.findall(r"\b([A-Za-z]) [A-Za-z][A-Za-z0-9/\-]*\s+(\d+)", s)
+        if len(found) < 3:
+            continue
+        for letter, count in found:
+            published[letter] = int(count)
+    if published:
+        got = collections.Counter()
+        for r in rows:
+            got[r["code"][0]] += 1
+            got[r["code"][1]] += 1
+        drift = {k: (v, got.get(k, 0)) for k, v in published.items()
+                 if got.get(k, 0) != v}
+        if drift:
+            raise guards.Refused(
+                "ledger parse disagrees with the ledger's OWN published counts "
+                "on %d label(s): %s (published, parsed). The artefact states "
+                "these itself; a mismatch is my parse drifting, not the board."
+                % (len(drift), ", ".join("%s %d/%d" % (k, a, b)
+                                         for k, (a, b) in sorted(drift.items()))))
+
+    if report_unmatched:
+        print("LEDGER PARSE  %d rows from %d non-blank lines; %d unmatched"
+              % (len(rows), len(rows) + len(unmatched), len(unmatched)))
+        print("  unmatched lines are framing prose in the ledger comments, but")
+        print("  they are also where a MALFORMED ROW would land, so read them:")
+        for cid, s in unmatched:
+            print("    c%-6s %s" % (cid, s[:88]))
     return rows
 
 
