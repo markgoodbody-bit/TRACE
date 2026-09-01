@@ -1,51 +1,137 @@
 {
-  "at_utc": "2026-08-27T15:35:07.194052+00:00",
+  "at_utc": "2026-09-01T11:03:15.205454+00:00",
   "baseline": {
     "absence.py": {
       "exit": 0,
-      "output_sha256": "bb82bc7046c7cd95"
+      "output_sha256": "68eeecf5265f6820"
     },
     "burst.py": {
       "exit": 0,
-      "output_sha256": "0e3a182952293168"
+      "output_sha256": "b8139081b2fcf5a3"
     },
     "census_depth.py": {
       "exit": 1,
-      "output_sha256": "587f21b710c19344"
+      "output_sha256": "38b6b51fec550b13"
+    },
+    "controlaudit.py": {
+      "exit": 0,
+      "output_sha256": "0b27eda2ca4d376b"
     },
     "decay.py": {
       "exit": 0,
-      "output_sha256": "d9b117c1744bb659"
+      "output_sha256": "6b3e5bd1e25344a4"
     },
     "emptyroom.py": {
       "exit": 0,
-      "output_sha256": "c61f6858e3009002"
+      "output_sha256": "04c6abfa5d34c7f2"
     },
     "owed.py": {
       "exit": 0,
-      "output_sha256": "640d8f09196140d6"
+      "output_sha256": "4a5a71d7aeb0ad68"
     },
     "quietrooms.py": {
       "exit": 0,
-      "output_sha256": "0071487506c896b1"
+      "output_sha256": "1686734d60651172"
     },
     "standing.py": {
       "exit": 0,
-      "output_sha256": "8a73644f242c9bb4"
+      "output_sha256": "222b64a664133c5b"
     },
     "survival.py": {
       "exit": 0,
-      "output_sha256": "12a48723a5ff293d"
+      "output_sha256": "6d2f7b548b3efc72"
     }
   },
   "corpus": "corpus_fresh.json",
-  "corpus_sha256": "79ca1a34503612da",
+  "corpus_sha256": "eec98cf949dd25d1",
+  "guard_surface": [
+    "Refused",
+    "closed_periods",
+    "answer_horizon",
+    "cohort_horizon",
+    "reconcile",
+    "audit_matcher",
+    "report",
+    "Absence",
+    "adoption"
+  ],
+  "guards_exempt": {
+    "Refused": "the signalling exception type. Mutating it breaks the harness that detects mutants, not the guard under test.",
+    "adoption": "a reporting CLI in guards.py itself, never called from an instrument. Its receipt is `guards.py --adoption`, and the whole point of this file is that that receipt is the weak one."
+  },
+  "guards_uncovered": [],
   "inert_instruments": [
     "burst.py"
   ],
-  "instruments_scored": 9,
-  "instruments_total": 9,
+  "instruments_scored": 10,
+  "instruments_total": 10,
   "mutants": {
+    "Absence": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "Absence",
+      "state": "LOADED"
+    },
     "answer_horizon": {
       "instruments": {
         "absence.py": {
@@ -63,6 +149,12 @@
         "census_depth.py": {
           "baseline_exit": 1,
           "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
           "output_changed": false,
           "verdict": "SURVIVED"
         },
@@ -126,6 +218,12 @@
           "output_changed": false,
           "verdict": "SURVIVED"
         },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
         "decay.py": {
           "baseline_exit": 0,
           "mutant_exit": 0,
@@ -186,23 +284,29 @@
           "output_changed": false,
           "verdict": "SURVIVED"
         },
-        "decay.py": {
+        "controlaudit.py": {
           "baseline_exit": 0,
           "mutant_exit": 0,
           "output_changed": false,
           "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
         },
         "emptyroom.py": {
           "baseline_exit": 0,
           "mutant_exit": 0,
-          "output_changed": false,
-          "verdict": "SURVIVED"
+          "output_changed": true,
+          "verdict": "KILLED"
         },
         "owed.py": {
           "baseline_exit": 0,
           "mutant_exit": 0,
-          "output_changed": false,
-          "verdict": "SURVIVED"
+          "output_changed": true,
+          "verdict": "KILLED"
         },
         "quietrooms.py": {
           "baseline_exit": 0,
@@ -213,8 +317,8 @@
         "standing.py": {
           "baseline_exit": 0,
           "mutant_exit": 0,
-          "output_changed": false,
-          "verdict": "SURVIVED"
+          "output_changed": true,
+          "verdict": "KILLED"
         },
         "survival.py": {
           "baseline_exit": 0,
@@ -243,6 +347,12 @@
         "census_depth.py": {
           "baseline_exit": 1,
           "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
           "output_changed": false,
           "verdict": "SURVIVED"
         },
@@ -306,6 +416,12 @@
           "output_changed": false,
           "verdict": "SURVIVED"
         },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
         "decay.py": {
           "baseline_exit": 0,
           "mutant_exit": 0,
@@ -363,6 +479,12 @@
         "census_depth.py": {
           "baseline_exit": 1,
           "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
           "output_changed": false,
           "verdict": "SURVIVED"
         },
@@ -426,6 +548,12 @@
           "output_changed": false,
           "verdict": "SURVIVED"
         },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
         "decay.py": {
           "baseline_exit": 0,
           "mutant_exit": 0,
@@ -486,6 +614,12 @@
           "output_changed": true,
           "verdict": "KILLED"
         },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
         "decay.py": {
           "baseline_exit": 0,
           "mutant_exit": 0,
@@ -524,6 +658,72 @@
         }
       },
       "load_stamp_expected": "reconcile",
+      "state": "LOADED"
+    },
+    "report": {
+      "instruments": {
+        "absence.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "burst.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "census_depth.py": {
+          "baseline_exit": 1,
+          "mutant_exit": 1,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "controlaudit.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "decay.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "emptyroom.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "owed.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "quietrooms.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        },
+        "standing.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": true,
+          "verdict": "KILLED"
+        },
+        "survival.py": {
+          "baseline_exit": 0,
+          "mutant_exit": 0,
+          "output_changed": false,
+          "verdict": "SURVIVED"
+        }
+      },
+      "load_stamp_expected": "report",
       "state": "LOADED"
     }
   },

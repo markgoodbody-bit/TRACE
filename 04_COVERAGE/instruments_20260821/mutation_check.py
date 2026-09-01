@@ -58,6 +58,7 @@ LIMITS, STATED
     MUTANT_KILLED_ON_THIS_CORPUS != GUARD_CORRECT
     NOT_EXERCISED_HERE != NEVER_EXERCISED
 """
+import ast
 import datetime
 import hashlib
 import io
@@ -91,6 +92,25 @@ MUTANTS = {
         "            'negative': (0, len(negatives)), 'hits': len(hits),\n"
         "            'share': len(hits) / len(corpus_texts) if corpus_texts else 0.0,\n"
         "            'sample_hits': hits[:sample]}\n"),
+    # Drops the matched spans and prints only the pass/fail line -- the exact
+    # 2026-08-30 defect that let "Baseball, huh?" sit atop a member-facing list
+    # under a clean 4/4. Killed by any instrument that calls report.
+    "report": (
+        "def report(res, label='matcher'):\n"
+        "    print('CONTROLS  %s  positive %d/%d  negative %d/%d'\n"
+        "          % (label, res['positive'][0], res['positive'][1],\n"
+        "             res['negative'][0], res['negative'][1]))\n"),
+    # The pre-Absence world: a bare negative carrying no scope, and truth-testable,
+    # so a caller can collapse it straight back into "not found".
+    "Absence": (
+        "class Absence(object):\n"
+        "    def __init__(self, what, searched=None, note=None):\n"
+        "        self.what, self.searched, self.note = what, searched, note\n"
+        "    def __str__(self):\n"
+        "        return '%s: not found' % self.what\n"
+        "    def __bool__(self):\n"
+        "        return False\n"
+        "    __nonzero__ = __bool__\n"),
 }
 
 
@@ -117,9 +137,54 @@ REFUSERS = {
 }
 
 
+# EVERY public guard must be either mutated above or exempted HERE, WITH A REASON.
+#
+# 2026-09-01. The scoring loop iterates over MUTANTS, not over guards.py. So a
+# guard added after this dict was written is not scored as unexercised -- it is
+# absent from the table entirely, and the table still reads as a full result.
+# The hand-maintained list WAS the coverage measure, and nothing checked it
+# against the thing it claimed to cover.
+#
+#     ITERATED_THE_MUTANTS != COVERED_THE_GUARDS
+#     ABSENT_FROM_THE_TABLE != PASSED
+#
+# Found the day `guards.Absence` was discovered to have ZERO call sites in the
+# nine instruments written by the author who had written it the night before.
+# Its docstring argues that a distinction you must remember at each call site is
+# one you will lose at the next -- but CONSTRUCTING an Absence is itself a call
+# site, so the class relocated the voluntary step instead of removing it. And
+# this file, the instrument built to catch "imported but never exercised", could
+# not see it twice over: a class is not a `def`, and it was never in MUTANTS.
+#
+#     STRUCTURAL_IN_THE_OBJECT != STRUCTURAL_IN_THE_PATH
+EXEMPT = {
+    "Refused": "the signalling exception type. Mutating it breaks the harness "
+               "that detects mutants, not the guard under test.",
+    "adoption": "a reporting CLI in guards.py itself, never called from an "
+                "instrument. Its receipt is `guards.py --adoption`, and the "
+                "whole point of this file is that that receipt is the weak one.",
+}
+
+
+def guard_surface(src):
+    """Public top-level guards in guards.py -- functions AND classes."""
+    return [n.name for n in ast.parse(src).body
+            if isinstance(n, (ast.FunctionDef, ast.ClassDef))
+            and not n.name.startswith("_")]
+
+
+def coverage_gap(src):
+    """Public guards with neither a mutant nor a declared exemption."""
+    covered = set(MUTANTS) | set(REFUSERS) | set(EXEMPT)
+    return [n for n in guard_surface(src) if n not in covered]
+
+
 def mutate_source(src, name, replacement):
-    pat = re.compile(r"^def %s\(.*?(?=\n(?:def |class |CONCEPTS|if __name__))" % name,
-                     re.S | re.M)
+    # `def` only until 2026-09-01: `class Absence` could not be matched by this
+    # pattern, so a class-shaped guard stayed unmutatable even once it was named.
+    #     NOT_MATCHED_BY_THE_MUTATOR != NOT_A_GUARD
+    pat = re.compile(r"^(?:def|class) %s\b.*?(?=\n(?:def |class |CONCEPTS|if __name__))"
+                     % name, re.S | re.M)
     return pat.sub(replacement, src, count=1) if pat.search(src) else None
 
 
@@ -190,6 +255,17 @@ def main():
     print("MUTATION CHECK  %d instruments importing guards" % len(targets))
     print("  a guard whose mutant changes nothing is imported and controls nothing.\n")
 
+    # Coverage of the GUARD SURFACE, before any scoring. A guard with no mutant
+    # is not a passing row and not a failing row -- it is no row at all, which
+    # is how `Absence` sat unexercised under a table that looked complete.
+    gap = coverage_gap(guards_src)
+    surface = guard_surface(guards_src)
+    print("SURFACE   %d public guards in guards.py; %d mutated, %d exempt, %d UNCOVERED"
+          % (len(surface), len(set(MUTANTS) | set(REFUSERS)), len(EXEMPT), len(gap)))
+    for name in gap:
+        print("  UNCOVERED  %s -- no mutant and no declared exemption" % name)
+    print("")
+
     # CONTROL: twice against unmutated guards. Self-disagreement means the
     # instrument cannot be scored, not that a mutant was killed.
     baseline, unstable = {}, []
@@ -235,6 +311,9 @@ def main():
             io.open(corpus, "rb").read()).hexdigest()[:16],
         "instruments_total": len(targets),
         "instruments_scored": len(scored),
+        "guard_surface": surface,
+        "guards_uncovered": gap,
+        "guards_exempt": EXEMPT,
         "nondeterministic": sorted(unstable),
         "baseline": {t: {"exit": baseline[t][0],
                          "output_sha256": hashlib.sha256(
@@ -336,8 +415,16 @@ def main():
     print()
     print("  MUTANT_KILLED_ON_THIS_CORPUS != GUARD_CORRECT")
     print("  NOT_EXERCISED_HERE != NEVER_EXERCISED")
+    if gap:
+        print()
+        print("  %d guard(s) have no mutant and no declared exemption: %s"
+              % (len(gap), ", ".join(gap)))
+        print("  Nothing above measured them. Add a mutant, or add an EXEMPT entry")
+        print("  with a reason -- but the gap does not get to be silent.")
     if inert:
         return 2
+    if gap:
+        return 4        # the table is not about the whole guard surface
     if unstable or not_loaded:
         return 3        # coverage incomplete: distinct from clean, distinct from failure
     return 0
