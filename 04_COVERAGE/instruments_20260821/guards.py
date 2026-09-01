@@ -35,6 +35,7 @@ The value is that they are callable, not that they are hard.
 """
 import datetime
 import io
+import json
 import os
 import random
 import re
@@ -340,6 +341,62 @@ class Absence(object):
         raise Refused("do not truth-test an Absence; report it or read .what")
 
     __nonzero__ = __bool__
+
+
+# ---------------------------------------------------------------- corpus
+
+def load_corpus(path, allow_incomplete=False):
+    """Load a walk artefact, REFUSING one that declares itself incomplete.
+
+    WHY, AND THE MEASUREMENT THAT FORCED IT
+    ---------------------------------------
+    2026-08-31 I added `stop_reason` and `complete` to `walk_lossless.py`'s meta,
+    because an aborted walk had written a file identical in shape to a finished
+    one and the abort went to stderr where no consumer would ever see it.
+
+        WALK_ABORTED != WALK_COMPLETE
+        PRINTED_TO_STDERR != RECORDED_IN_THE_ARTEFACT
+
+    That repair worked. `corpus_fresh.json` today carries:
+
+        stop_reason  cursor_stall_page_71
+        complete     False
+
+    And on 2026-09-01 I measured what reads it:
+
+        29   instruments load the corpus
+         0   read meta.complete
+
+    The producer records its own failure state and every consumer ignores it.
+    That is the same shape as `Absence` -- a guard written, never wired -- and
+    it is the one with the widest blast radius, because every number any
+    instrument computes from this file is computed on a walk that stopped at
+    page 71 and SAYS SO.
+
+        ARTEFACT_RECORDS_ITS_FAILURE != CONSUMER_READS_IT
+        CORPUS_PRESENT != CORPUS_COMPLETE
+
+    Passing `allow_incomplete=True` is permitted and is not a loophole: some
+    work is legitimately about the partial walk. It returns the meta so the
+    caller can PRINT the limit rather than inherit it silently.
+    """
+    with io.open(path, encoding="utf-8") as fh:
+        c = json.load(fh)
+    meta = c.get("meta") or {}
+    if not meta:
+        raise Refused(
+            "%s carries no meta block, so it cannot say whether the walk that "
+            "produced it finished. Re-walk with walk_lossless.py." % path)
+    if not meta.get("complete"):
+        if not allow_incomplete:
+            raise Refused(
+                "%s declares itself INCOMPLETE (stop_reason=%s). Re-walk, or "
+                "pass allow_incomplete=True and print the limit beside every "
+                "number you take from it."
+                % (path, meta.get("stop_reason", "unstated")))
+        print("  CORPUS INCOMPLETE  stop_reason=%s -- every count below is a "
+              "floor, not a total." % meta.get("stop_reason", "unstated"))
+    return c, meta
 
 
 # ---------------------------------------------------------------- self-test

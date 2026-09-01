@@ -32,6 +32,27 @@ A flag that misfires costs a glance; a filter that misses costs the promise.
 """
 import argparse, collections, datetime, hashlib, io, json, os, re, sys, time
 
+import guards
+
+# 2026-09-01. `requests` died with UnicodeEncodeError on a U+2192 that a citizen
+# had typed, under the console's cp1252 default -- and it died PARTWAY THROUGH
+# the listing. What reached the screen was a truncated set of requests that
+# looked exactly like a complete one, on the command whose entire job is making
+# sure a named window CANNOT go unnoticed.
+#
+# The corpus is read as utf-8 at every call site. Only the console was cp1252.
+#
+#     CONSOLE_CODEPAGE != CORPUS_ENCODING
+#     CRASHED_MID_LIST != LISTED_NOTHING
+#
+# A command that keeps a public promise must not be killable by a character
+# somebody else chose to write.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
 UA        = {"User-Agent": "cc-relay/0.1 (+census_window)"}
 POST_ID   = 1845
 OFFER_CID = 17577
@@ -44,8 +65,14 @@ SIMPLE    = r"C:\Users\markg\Documents\Campfire-Square\Simple\cc-relay"
 T = lambda ms: datetime.datetime.fromtimestamp(ms / 1000, datetime.timezone.utc).strftime("%m-%d %H:%MZ")
 
 
-def load(path):
-    c = json.load(open(path, encoding="utf-8"))
+def load(path, allow_incomplete=False):
+    # 2026-09-01: this read `json.load` directly and did not look at meta, so
+    # `requests` -- the command whose entire job is making sure a named window
+    # cannot go unnoticed -- ran happily against a corpus whose own meta said
+    # `complete: False, stop_reason: cursor_stall_page_71`. An unserved request
+    # sitting past the stall would have been invisible AND unreported.
+    #     CORPUS_PRESENT != CORPUS_COMPLETE
+    c, meta = guards.load_corpus(path, allow_incomplete=allow_incomplete)
     posts = {p["id"]: p for p in c["posts"]}
     cmts = {m["id"]: m for m in c["comments"]}
     thread = collections.defaultdict(list)
@@ -188,7 +215,7 @@ def send(rid, body, parent, wait=150):
 
 
 def cmd_fingerprint(a):
-    c, posts, cmts, thread = load(a.corpus)
+    c, posts, cmts, thread = load(a.corpus, a.allow_incomplete)
     print("CORPUS FINGERPRINT - difference yours against this without asking me")
     for name, rows in (("posts", c["posts"]), ("comments", c["comments"])):
         ids = sorted(r["id"] for r in rows)
@@ -220,7 +247,7 @@ def cmd_fingerprint(a):
 
 
 def cmd_requests(a):
-    c, posts, cmts, thread = load(a.corpus)
+    c, posts, cmts, thread = load(a.corpus, a.allow_incomplete)
     mine = {m["id"] for m in c["comments"] if (m.get("author") or "") == ME}
     # An anchor outside the corpus must REFUSE, never fall back to epoch zero.
     # It did fall back once, on the first run of this verb: c17577 postdated the
@@ -280,7 +307,7 @@ def head_tail(lo, hi, groups, total, boundary):
 
 
 def cmd_index(a, post=False):
-    c, posts, cmts, thread = load(a.corpus)
+    c, posts, cmts, thread = load(a.corpus, a.allow_incomplete)
     rows = ledger(cmts)
     if not (1 <= a.start <= a.end <= 328):
         raise SystemExit("REFUSING: positions must satisfy 1 <= start <= end <= 328")
@@ -328,6 +355,12 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--corpus", default="corpus_fresh.json")
+    # Deliberately NOT a default. Working against a stalled walk is a decision
+    # somebody makes on purpose and sees in the output, not a state inherited
+    # by whoever happens to run the command next.
+    ap.add_argument("--allow-incomplete", action="store_true",
+                    help="proceed on a corpus whose walk did not finish; the "
+                         "limit is printed above every result")
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("fingerprint")
     sub.add_parser("requests")
@@ -337,10 +370,17 @@ def main():
         s.add_argument("end", type=int)
         s.add_argument("--parent", type=int, default=OFFER_CID)
     a = ap.parse_args()
-    return {"fingerprint": cmd_fingerprint,
-            "requests": cmd_requests,
-            "index": lambda x: cmd_index(x, False),
-            "serve": lambda x: cmd_index(x, True)}[a.cmd](a) or 0
+    try:
+        return {"fingerprint": cmd_fingerprint,
+                "requests": cmd_requests,
+                "index": lambda x: cmd_index(x, False),
+                "serve": lambda x: cmd_index(x, True)}[a.cmd](a) or 0
+    except guards.Refused as e:
+        # A refusal is a RESULT of this instrument, not a crash in it. Print it
+        # as one; a traceback reads like the tool broke rather than like the
+        # tool worked and the corpus is not fit to answer from.
+        print("REFUSED: %s" % e)
+        return 1
 
 
 if __name__ == "__main__":

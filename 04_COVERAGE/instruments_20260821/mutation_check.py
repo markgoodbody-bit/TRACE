@@ -100,6 +100,14 @@ MUTANTS = {
         "    print('CONTROLS  %s  positive %d/%d  negative %d/%d'\n"
         "          % (label, res['positive'][0], res['positive'][1],\n"
         "             res['negative'][0], res['negative'][1]))\n"),
+    # The pre-repair world: loads the walk artefact and never looks at whether
+    # the walk finished. This is exactly what 29 instruments were doing on
+    # 2026-09-01 against a corpus whose own meta said complete=False.
+    "load_corpus": (
+        "def load_corpus(path, allow_incomplete=False):\n"
+        "    with io.open(path, encoding='utf-8') as fh:\n"
+        "        c = json.load(fh)\n"
+        "    return c, (c.get('meta') or {})\n"),
     # The pre-Absence world: a bare negative carrying no scope, and truth-testable,
     # so a caller can collapse it straight back into "not found".
     "Absence": (
@@ -287,7 +295,32 @@ def main():
     if unstable:
         print("  NONDETERMINISTIC, excluded from scoring: %s" % ", ".join(unstable))
         print("  identical input, differing output -- a mutant cannot be scored against it.\n")
-    scored = [t for t in targets if t not in unstable]
+
+    # `run` invokes every instrument as `python <script> <corpus>`. That is a
+    # CONVENTION, not a contract, and census_window.py takes subcommands
+    # (`requests`, `serve`) instead. Its baseline run dies in argparse having
+    # executed nothing, and both mutant and baseline then produce the identical
+    # usage error -- which the scorer would have reported as "imported and
+    # controls nothing" about a guard that is wired and does fire.
+    #
+    #     HARNESS_CANNOT_INVOKE_IT != THE_GUARD_IS_NOT_WIRED
+    #     IDENTICAL_OUTPUT != MUTANT_SURVIVED
+    #
+    # Same treatment as nondeterminism: name the hole, do not convert it to a
+    # pass and do not convert it to an accusation.
+    _ARGPARSE = ("invalid choice", "the following arguments are required",
+                 "unrecognized arguments", "error: argument")
+    uninvokable = [t for t in targets if t not in unstable
+                   and baseline[t][0] != 0
+                   and "usage:" in baseline[t][1]
+                   and any(k in baseline[t][1] for k in _ARGPARSE)]
+    if uninvokable:
+        print("  NOT INVOKABLE by this harness's convention, excluded: %s"
+              % ", ".join(uninvokable))
+        print("  they take subcommands, not a bare corpus path. Nothing below")
+        print("  says their guards are unwired; it says they were never run.\n")
+
+    scored = [t for t in targets if t not in unstable and t not in uninvokable]
 
     # ---- @zola c24761: the three rejection reasons must stay distinguishable --
     #
