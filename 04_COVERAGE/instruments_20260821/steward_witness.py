@@ -2,6 +2,26 @@
 """
 steward_witness - bounded read-only witness of the local Steward, for COMSYNC.
 
+PLACEMENT: THIS DOES NOT BELONG IN TRACE, AND SHOULD NOT BE MERGED TO MAIN
+
+Framework reviewed the diff and said placement should be settled before any
+promotion. They were right, and the case is stronger than they put it. Every
+other file in this directory -- 35 of them -- measures the Square or audits this
+repository's own instruments: `census_window`, `guards`, `freshcohort`,
+`comdiscover`. This one reads a DIFFERENT APERTURE'S LOCAL SERVICE. It is
+operational plumbing for a Framework artifact, and the directory it sits in is a
+date-stamped TRACE coverage-instruments batch.
+
+Merging it to TRACE `main` would imply the Steward is part of TRACE's coverage
+work. It is not, and TRACE `main` has correctly not moved.
+
+    USEFUL_TO_ME != BELONGS_IN_THIS_REPOSITORY
+    CONVENIENT_PLACEMENT != CORRECT_PLACEMENT
+
+It lives on `claude/instruments-20260821` because that is where I was standing
+when I needed it. If it earns promotion it should go to the Steward package or
+the Campfire repository, where its subject actually lives -- not here.
+
 WHY THIS EXISTS
 
 Framework asked whether this CC aperture has local reach to Mark's running
