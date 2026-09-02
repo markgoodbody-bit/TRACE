@@ -70,22 +70,53 @@ the reservoir reading, not a verdict, and the interval is far short of
     INCREASE_IN_THE_INTERVAL != KNOWN_TIME_OF_ACT
     NO_VOTE_IN_25_HOURS != DEPARTED
 """
+import datetime as dt
+import glob
 import io
 import json
+import os
 import sys
 
 import guards
 
-SNAPS = ["votes_20260830T174210Z.json",
-         "votes_20260830T211827Z.json",
-         "votes_20260831T074345Z.json",
-         "votes_20260901T091726Z.json"]
+# 2026-09-02: this was a hardcoded list of four filenames. That is the same
+# defect I found in comdiscover yesterday -- a hand-maintained list IS the
+# coverage measure, so a snapshot taken and not added is not a gap in the
+# report, it is absent from it. The 09-02 snapshot would have been invisible
+# to an instrument whose whole purpose is differencing snapshots.
+#
+#     ITERATED_MY_LIST != COVERED_THE_SNAPSHOTS
+#
+# Enumerated from disk, sorted by the timestamp in the name, which is the
+# same ordering as `taken_at_utc` because the writer derives one from the other.
+def discover_snapshots(directory="."):
+    paths = sorted(glob.glob(os.path.join(directory, "votes_*.json")))
+    if len(paths) < 2:
+        raise guards.Refused(
+            "need at least two vote snapshots to difference; found %d. "
+            "Run votesnap.py first." % len(paths))
+    return paths
 
 
 def load_snap(path):
     with io.open(path, encoding="utf-8") as fh:
         d = json.load(fh)
     return d["taken_at_utc"], {c["citizen_id"]: c for c in d["citizens"]}
+
+
+def hours(a, b):
+    """Window length from the snapshot stamps themselves.
+
+    2026-09-02: this printed a hardcoded "14h" and "~25h", true of the windows
+    on the day it was written and false the next morning -- the define window
+    was 25.5h and the output still said 14h. A literal that outlives its data
+    is the defect I keep finding in other people's tools.
+
+        A_NUMBER_IN_THE_OUTPUT != A_NUMBER_FROM_THE_DATA
+    """
+    fmt = "%Y%m%dT%H%M%SZ"
+    delta = dt.datetime.strptime(b, fmt) - dt.datetime.strptime(a, fmt)
+    return "%.1fh" % (delta.total_seconds() / 3600.0)
 
 
 def main():
@@ -97,13 +128,20 @@ def main():
     wrote |= {p.get("author") for p in c["posts"]}
     wrote.discard(None)
 
-    snaps = [load_snap(p) for p in SNAPS]
-    for (t, s), p in zip(snaps, SNAPS):
-        print("SNAPSHOT  %s  %d citizens  (%s)" % (t, len(s), p))
+    paths = discover_snapshots(os.path.dirname(os.path.abspath(corpus)) or ".")
+    snaps = [load_snap(p) for p in paths]
+    for (t, s), p in zip(snaps, paths):
+        print("SNAPSHOT  %s  %d citizens  (%s)" % (t, len(s), os.path.basename(p)))
 
-    t1, s1 = snaps[0]
-    t3, s3 = snaps[2]
-    t4, s4 = snaps[3]
+    # The last THREE snapshots: define on the older interval, test on the newer,
+    # so the windows are disjoint and both are as fresh as the data allows.
+    # Selecting positionally rather than by name means a new snapshot changes the
+    # windows automatically instead of silently doing nothing.
+    if len(snaps) < 3:
+        raise guards.Refused(
+            "need three snapshots for disjoint define/test windows; found %d"
+            % len(snaps))
+    (t1, s1), (t3, s3), (t4, s4) = snaps[-3], snaps[-2], snaps[-1]
 
     def voted_between(a, b, cid):
         if cid not in a or cid not in b:
@@ -173,16 +211,17 @@ def main():
         print("  EMPTY_COHORT != MEASURED_ZERO")
         print("  TEST_UNRUNNABLE != HYPOTHESIS_REFUTED")
         print("  What IS measured: %d of %d in a %s define window, against writers"
-              % (0, len(ever_voted), "14h"))
-        print("  at %s continuation in the same hours."
-              % pct(len(writers_active), len(writers_fresh)))
+              % (0, len(ever_voted), hours(t1, t3)))
+        print("  at %s continuation over the following %s."
+              % (pct(len(writers_active), len(writers_fresh)), hours(t3, t4)))
     else:
         print("  Fresh-cohort continuation %s against writer continuation %s."
               % (pct(len(fresh_active), len(fresh)),
                  pct(len(writers_active), len(writers_fresh))))
         print("  The comparison is the point: an audience-only rate is only")
         print("  interpretable beside what a writer did in the same hours.")
-    print("\n  Interval is ~25h, not @stanley's 7 days. A fortnightly voter is")
+    print("\n  Test interval is %s, not @stanley's 7 days. A fortnightly voter is"
+          % hours(t3, t4))
     print("  invisible to it, so a low rate here is a FLOOR on the reservoir")
     print("  reading and not a verdict.")
     return 0
