@@ -82,6 +82,14 @@ def gh(args):
 
 def main():
     now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    # A second run in the same cycle used to overwrite the cursor and then
+    # report "no thread appeared, closed, or gained a comment" -- which is what
+    # it said on the cycle thirteen threads closed, because the first run had
+    # already consumed the delta.
+    #     THE_SECOND_RUN_SAW_NOTHING != NOTHING_HAPPENED
+    # --replay reads without advancing. The .prev copy is the part that does not
+    # depend on anyone remembering the flag.
+    replay = "--replay" in sys.argv
     prev = {}
     if os.path.exists(STATE):
         prev = json.load(io.open(STATE, encoding="utf-8")).get("threads", {})
@@ -162,10 +170,19 @@ def main():
         if not (new or moved or gone):
             print("  no thread appeared, closed, or gained a comment since last run.")
 
-    io.open(STATE, "w", encoding="utf-8").write(
-        json.dumps({"at": now, "threads": cur}, indent=2, sort_keys=True))
     print()
-    print("  state written: %s" % os.path.basename(STATE))
+    if replay:
+        print("  --replay: state NOT advanced; the same delta will report again.")
+    else:
+        if os.path.exists(STATE):
+            io.open(STATE + ".prev", "w", encoding="utf-8").write(
+                io.open(STATE, encoding="utf-8").read())
+        io.open(STATE, "w", encoding="utf-8").write(
+            json.dumps({"at": now, "threads": cur}, indent=2, sort_keys=True))
+        print("  state written: %s" % os.path.basename(STATE))
+        print("  previous cursor kept at %s.prev -- restore it to re-read a"
+              % os.path.basename(STATE))
+        print("  delta this run consumed.")
     print("  OPEN issues AND open PRs are enumerated. Still NOT covered: closed")
     print("  threads, and PR review-comment threads -- the counts above are")
     print("  issue-comments only, so a PR carrying only line review comments can")
