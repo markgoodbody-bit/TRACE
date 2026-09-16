@@ -88,19 +88,18 @@ TRACE further.
 
 ## Current status
 
-The two current documents form the **v0.3.0 specification release candidate 1
-(RC1)**:
+The two current documents form the **released TRACE v0.3.0 specification**:
 
 | Object | Bytes | SHA-256 |
 |---|---:|---|
-| compact spine RC1 | 25,795 | `9ee106e98a34643929f82fa3296adffac46e650e4e8d0b775016269f0fe50999` |
-| full reference RC1 | 180,511 | `1dfc668d3e3dc5d85dcfc8bed5a025672025aff3ce157205b55bbc5f54160a1f` |
+| compact spine v0.3.0 | 25,838 | `be6d1b4109576b8c182822120a0cd002435e522f02a77c048bc769715611b6c6` |
+| full reference v0.3.0 | 180,619 | `b9431ecc07e711c4abd1e70d4159acfd1cb8cecb8bdbd22086e8073b10c01d34` |
 
 ```text
-RELEASE CANDIDATE / NOT RELEASED / NOT CANON / NOT VALIDATED / NO EFFICACY RESULT
+RELEASED / FORMAL BASELINE / CURRENT SPECIFICATION / NOT VALIDATED / NO EFFICACY RESULT
 ```
 
-TRACE v0.2.7 remains the released formal baseline.
+TRACE v0.2.7 remains preserved as the previous released formal baseline; TRACE v0.3.0 is the current released formal baseline.
 
 ### What has been established
 
@@ -123,6 +122,8 @@ specialised representation and transfer surface that keeps affected scope,
 causal transitions, clocks, correction routes, burden, residue and uncertainty
 together. This is a provisional use hypothesis, not a claim of novelty or
 superiority.
+
+Release decision: **16 September 2026**. Release changes status, not the evidence ceiling: v0.3.0 remains unvalidated and carries no efficacy, authority, permission or clearance result.
 
 ## Review, history and licence
 

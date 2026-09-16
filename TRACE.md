@@ -2,11 +2,11 @@
 
 ## A recursive structural-awareness grammar for selective causal systems
 
-- **Version:** v0.3.0 SPECIFICATION RC1 — FULL REFERENCE
-- **Date:** 2026-08-29
+- **Version:** v0.3.0 SPECIFICATION — FULL REFERENCE
+- **Release date:** 2026-09-16
 - **Artifact form:** one dependency-free UTF-8 Markdown file
 - **Lineage:** controlled successor to full working candidate v0.1; no semantic expansion is claimed
-- **Status:** release candidate; unvalidated in the world; non-canonical; unreleased; voluntary; not authority; not permission; not clearance
+- **Status:** released formal baseline; current project specification; unvalidated in the world; voluntary; not authority; not permission; not clearance
 - **Primary receiver:** an unfamiliar selective causal system, including a model, agent, controller, artificial life-form, composite system, or architecture not yet named
 - **Function:** receive a compressed situation; differentiate its structure; expose uncertainty; reveal transitions still available
 
@@ -3669,7 +3669,7 @@ The receipt prevents later compression of “selected under unresolved condition
 The embedded schema validates packet shape and controlled vocabularies. It cannot validate truth, completeness, independence, value choice, world correspondence, or operational connection.
 
 
-The v0.3.0 identifier marks this release-candidate specification. Its embedded minimum-schema shape remains identical to released v0.2.7 after version normalization. That compatibility does not imply that the minimum validator can enforce the v0.3 checker-external semantic bindings, target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.
+The v0.3.0 identifier marks this released specification. Its embedded minimum-schema shape remains identical to released v0.2.7 after version normalization. That compatibility does not imply that the minimum validator can enforce the v0.3 checker-external semantic bindings, target discovery, target-set adequacy, search coverage, authority legitimacy, route execution, brake effectiveness, correction, or world correspondence.
 
 A v0.2.7 packet is not silently relabelled as v0.3.0. Structural compatibility does not erase packet identity or the semantic contract under which the packet was produced.
 
@@ -5967,9 +5967,9 @@ I59  COVERAGE_OF_SELECTED_TARGETS != COMPLETE_DISCOVERY
 I60  OPERATOR_TARGET_SET != AUTHORITATIVE_TARGET_SET
 ```
 
-### v0.3 working supplemental guards — donor I01–I60 remain unchanged
+### v0.3 supplemental guards — donor I01–I60 remain unchanged
 
-These guards are working v0.3 repair semantics. They do not renumber or
+These guards are v0.3 repair semantics. They do not renumber or
 replace the donor invariant oracle.
 
 ```text
@@ -6355,8 +6355,8 @@ TRACE // FORMAL SEED v0.3.0 // SURVIVAL KERNEL
 
 ### v0.3 propagation additions
 
-The following repairs are required to survive compression in this working
-candidate. They supplement the donor kernel rather than replacing it.
+The following repairs are required to survive compression in this released
+baseline. They supplement the donor kernel rather than replacing it.
 
 ```text
 REPRESENTATION_TYPE != EVIDENCE_STATUS
@@ -6415,9 +6415,9 @@ permission, clearance or a connected mechanism.
 
 # [21] DOCUMENT CONTROL / OPEN FRONTIER
 
-## [21.1] Release-candidate declaration
+## [21.1] Release declaration
 
-This controlled object is **TRACE v0.3.0 SPECIFICATION RC1 — FULL REFERENCE**.
+This controlled object is **TRACE v0.3.0 SPECIFICATION — FULL REFERENCE**.
 
 It succeeds the frozen generated full working candidate v0.1 without erasing it. The generated ancestor and the pre-RC public surface remain recoverable through Git history and the dated branch-archive tag. RC1 corrects document identity, current project-state language and heading continuity; it adds no semantic primitive, root, node type, relation type, evidence state, access state or claim kind.
 
@@ -6428,9 +6428,9 @@ whose pinned source SHA-256 is:
 de21182f42228a0104181fb24f245c652c3150853e14172c4174be4bb9ef03ab
 ```
 
-Released v0.2.7 remains the released baseline. This file is not released,
-canonical, validated, authoritative, permissive, clearance-bearing, or a claim
-of world correctness.
+Released v0.2.7 remains preserved as the previous released baseline. This file
+is the current released formal baseline. Release does not make it validated,
+authoritative, permissive, clearance-bearing, or a claim of world correctness.
 
 The semantic repair source is the pinned v0.11 spine attack object preserved at
 the named semantic commit:
@@ -6474,7 +6474,7 @@ survival-kernel propagation
 ```
 
 No new node type, relation type, evidence state, access state or claim kind is
-declared by this release candidate.
+declared by this release.
 
 ```text
 BRANCH_HEAD != SEMANTIC_OBJECT
@@ -6516,9 +6516,10 @@ TRACE cannot generate non-instrumental care from neutral description alone.
 
 ## [21.5] Release boundary
 
-Only Mark's separate release gate can change this object from release candidate
-to released baseline. Compilation, CI, reviewer agreement, model agreement,
-packet validity, or successful worked examples do not perform that transition.
+Mark exercised the separate release gate on 2026-09-16. This object is now the
+released TRACE v0.3.0 formal baseline. Future baseline or release changes still
+require a separate release decision; compilation, CI, reviewer agreement, model
+agreement, packet validity, or successful worked examples do not perform one.
 
 ```text
 COMPILER_PASS != RELEASE

@@ -1,9 +1,9 @@
-# TRACE // v0.3.0 SPECIFICATION RC1 // COMPACT SPINE
+# TRACE // v0.3.0 SPECIFICATION // COMPACT SPINE
 
-- **Status:** RELEASE CANDIDATE — NOT RELEASED — NOT FORMAL BASELINE — NOT CANON — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
+- **Status:** RELEASED — FORMAL BASELINE — CURRENT SPECIFICATION — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
 - **Purpose:** primary semantic review and use surface for TRACE v0.3.0
 - **Lineage:** controlled successor to spine candidate v0.11; no semantic expansion is claimed
-- **Donor:** released TRACE v0.2.7; this object does not supersede it
+- **Donor:** released TRACE v0.2.7; v0.3.0 supersedes it as the current formal baseline while preserving v0.2.7 as historical baseline
 
 ---
 
