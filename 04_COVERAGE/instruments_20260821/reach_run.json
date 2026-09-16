@@ -1,0 +1,130 @@
+{
+ "at_utc": "2026-09-16T21:18:22Z",
+ "instruments": [
+  "absence.py",
+  "automutate.py",
+  "burst.py",
+  "census_depth.py",
+  "census_window.py",
+  "clausecover.py",
+  "controlaudit.py",
+  "decay.py",
+  "emptyroom.py",
+  "external.py",
+  "freshcohort.py",
+  "keycheck.py",
+  "mutation_check.py",
+  "owed.py",
+  "quietrooms.py",
+  "standing.py",
+  "steward_witness.py",
+  "survival.py"
+ ],
+ "rows": [
+  {
+   "line": 91,
+   "in": "answer_horizon",
+   "raises": "Refused('no observed latencies; cannot derive an answer hori",
+   "state": "LIVE_PATH",
+   "reached_by": "owed.py, quietrooms.py, standing.py"
+  },
+  {
+   "line": 124,
+   "in": "reconcile",
+   "raises": "Refused('%s: no stated total to reconcile against; say UNREC",
+   "state": "LIVE_PATH",
+   "reached_by": "census_depth.py"
+  },
+  {
+   "line": 127,
+   "in": "reconcile",
+   "raises": "Refused('%s: parsed %d, stated %d, difference %+d%s' % (what",
+   "state": "LIVE_PATH",
+   "reached_by": "census_depth.py"
+  },
+  {
+   "line": 157,
+   "in": "audit_matcher",
+   "raises": "Refused('negative controls not found in the corpus (invented",
+   "state": "LIVE_PATH",
+   "reached_by": "decay.py, emptyroom.py, owed.py, standing.py"
+  },
+  {
+   "line": 181,
+   "in": "audit_matcher",
+   "raises": "Refused('positive controls not found in the corpus (invented",
+   "state": "LIVE_PATH",
+   "reached_by": "decay.py, emptyroom.py, owed.py, standing.py"
+  },
+  {
+   "line": 192,
+   "in": "audit_matcher",
+   "raises": "Refused('matcher fired on %d/%d positive controls, needed %d",
+   "state": "LIVE_PATH",
+   "reached_by": "decay.py, emptyroom.py, owed.py, standing.py"
+  },
+  {
+   "line": 196,
+   "in": "audit_matcher",
+   "raises": "Refused('matcher fired on %d negative control(s), first: %r'",
+   "state": "LIVE_PATH",
+   "reached_by": "decay.py, emptyroom.py, owed.py, standing.py"
+  },
+  {
+   "line": 199,
+   "in": "audit_matcher",
+   "raises": "Refused('matcher hit %.1f%% of the corpus, ceiling was %.1f%",
+   "state": "LIVE_PATH",
+   "reached_by": "decay.py, emptyroom.py, owed.py, standing.py"
+  },
+  {
+   "line": 322,
+   "in": "Absence.__init__",
+   "raises": "Refused('an absence must say what was not found')",
+   "state": "UNCALLED",
+   "reached_by": "-"
+  },
+  {
+   "line": 324,
+   "in": "Absence.__init__",
+   "raises": "Refused(\"an absence must name the scope it was not found in.",
+   "state": "UNCALLED",
+   "reached_by": "-"
+  },
+  {
+   "line": 341,
+   "in": "Absence.__bool__",
+   "raises": "Refused('do not truth-test an Absence; report it or read .wh",
+   "state": "UNCALLED",
+   "reached_by": "-"
+  },
+  {
+   "line": 387,
+   "in": "load_corpus",
+   "raises": "Refused('%s carries no meta block, so it cannot say whether ",
+   "state": "LIVE_PATH",
+   "reached_by": "census_window.py, freshcohort.py"
+  },
+  {
+   "line": 392,
+   "in": "load_corpus",
+   "raises": "Refused('%s declares itself INCOMPLETE (stop_reason=%s). Re-",
+   "state": "LIVE_PATH",
+   "reached_by": "census_window.py, freshcohort.py"
+  },
+  {
+   "line": 530,
+   "in": "<module>",
+   "raises": "SystemExit(0 if adoption(d) == 0 else 2)",
+   "state": "SELFTEST_ONLY",
+   "reached_by": "guards.py __main__ block; runs only as a script"
+  },
+  {
+   "line": 531,
+   "in": "<module>",
+   "raises": "SystemExit(_selftest())",
+   "state": "SELFTEST_ONLY",
+   "reached_by": "guards.py __main__ block; runs only as a script"
+  }
+ ]
+}
