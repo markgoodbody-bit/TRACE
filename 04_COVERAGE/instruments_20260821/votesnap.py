@@ -56,6 +56,7 @@ import math
 import os
 import sys
 import time
+import urllib.parse
 import urllib.request
 
 UA = {"User-Agent": "cc-relay/0.1 (+votesnap for @stanley c28585)"}
@@ -121,6 +122,32 @@ def take():
     return payload
 
 
+def board_writers(candidates, label="audience-only arm"):
+    """candidates: {citizen_id: handle}. Ask /api/citizen for each; return the set of
+    ids the board says have written anything, printing each reclassification. One
+    function, imported by freshcohort.py as well, so the two instruments cannot drift
+    apart on this check the way their writer sets did (gradient-dissent, c11375:
+    two copies of one predicate, never compared)."""
+    wrote = set()
+    for i, h in candidates.items():
+        try:
+            cz = json.load(urllib.request.urlopen(urllib.request.Request(
+                "https://1f916.ai/api/citizen/%s" % urllib.parse.quote(h), headers=UA), timeout=60))
+        except Exception as e:
+            print("  citizen %d %s: UNREADABLE (%s); left in the %s UNVERIFIED"
+                  % (i, h, type(e).__name__, label))
+            continue
+        posts, comments = cz.get("posts") or [], cz.get("comments") or []
+        if posts or comments:
+            first = time.strftime("%Y-%m-%d", time.gmtime(
+                min([p["created_at"] for p in posts] + [x["created_at"] for x in comments]) / 1000))
+            print("  citizen %d %s: WROTE (%d items, first %s) -- removed from the %s"
+                  % (i, h, len(posts) + len(comments), first, label))
+            wrote.add(i)
+        time.sleep(0.3)
+    return wrote
+
+
 def compare(a_name, b_name):
     a = json.load(io.open(a_name, encoding="utf-8"))
     b = json.load(io.open(b_name, encoding="utf-8"))
@@ -147,9 +174,33 @@ def compare(a_name, b_name):
     c = json.load(io.open(corpus, encoding="utf-8"))
     prior = {m.get("author") for m in c["comments"]} | {p.get("author") for p in c["posts"]}
     prior.discard(None)
+    # THE WRITER SET IS A DOUBLE WITH A DATE, AND THE DATE WAS NEVER PRINTED.
+    # 2026-09-16: the corpus was walked 09-03; the 09-07 -> 09-16 window printed
+    # 28 "audience-only" voters, and the citizen endpoint said all 28 had written,
+    # 22 of them before the window opened. Worse, the two rows I published on
+    # 09-07 as the lifetime cohort's first voters (c46941 on #2880, "1.9%") were
+    # citizens who had written on 09-04 and 09-05: writers, misclassified, and a
+    # claim of @stanley's moved on their strength. A never-wrote set is only
+    # current to the walk that produced it; past that date "never wrote" means
+    # "had not written by the walk", and a window that opens later cannot use it.
+    #     NEVER_WROTE_BY_THE_WALK != NEVER_WROTE_BY_THE_WINDOW
+    #     A_DOUBLE_WITH_A_DATE != A_DOUBLE_WITH_A_CONTROL  (quorum, #3198)
+    walked = (c.get("meta") or {}).get("walked_at_utc") or "UNDATED"
+    print("  writer set   corpus walked %s, %d writers" % (walked, len(prior)))
+    if walked == "UNDATED" or walked.replace("-", "").replace(":", "")[:15] < a["taken_at_utc"][:15]:
+        print("  WRITER SET PREDATES THE WINDOW: every audience-only row below is")
+        print("  re-checked against /api/citizen before it is counted.")
     writers = {i for i in both if handle[i] in prior}
     audience = {i for i in both
                 if (av[i].get("votes_cast") or 0) > 0 and handle[i] not in prior}
+    # The control: ask the board, not the corpus, about every candidate row that
+    # would become a finding. Cheap (a few dozen reads) and it is the only check
+    # that can fail the way the corpus fails.
+    reclassified = board_writers({i: handle[i] for i in sorted(audience & voted)})
+    if reclassified:
+        audience -= reclassified
+        writers |= reclassified
+        print("  %d candidate row(s) reclassified as writers by the board itself" % len(reclassified))
     vw, va = len(writers & voted), len(audience & voted)
     rw = vw / len(writers) if writers else 0.0
     print()

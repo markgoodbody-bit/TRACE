@@ -179,6 +179,28 @@ def main():
     fresh = [cid for cid in never_wrote if voted_between(s1, s3, cid)]
     fresh_active = [cid for cid in fresh if voted_between(s3, s4, cid)]
 
+    # 2026-09-16: this instrument published "lifetime 106, 2 voted, 1.9%" on 09-07
+    # (c46941 on #2880) and moved @stanley's claim on it. Both rows were citizens
+    # who had written on 09-04 and 09-05; the never-wrote set came from a corpus
+    # walked 09-03 and nothing checked it against the board. The writer set is a
+    # double with a date, and the date is not a control. Every row that would
+    # become a finding is now asked of /api/citizen first, through the one
+    # function votesnap also uses, so the two instruments cannot drift on it.
+    #     NEVER_WROTE_BY_THE_WALK != NEVER_WROTE_BY_THE_WINDOW
+    print("\nWRITER SET  corpus walked %s; %d writers. Candidate rows re-checked against the board:"
+          % (meta.get("walked_at_utc", "UNDATED"), len(wrote)))
+    from votesnap import board_writers
+    cands = {cid: s4[cid]["handle"] for cid in sorted(set(life_active) | set(fresh_active) | set(fresh))}
+    wrote_after_all = board_writers(cands, label="never-wrote cohort")
+    if wrote_after_all:
+        lifetime = [cid for cid in lifetime if cid not in wrote_after_all]
+        life_active = [cid for cid in life_active if cid not in wrote_after_all]
+        fresh = [cid for cid in fresh if cid not in wrote_after_all]
+        fresh_active = [cid for cid in fresh_active if cid not in wrote_after_all]
+        print("  %d row(s) removed from the never-wrote cohorts by the board itself" % len(wrote_after_all))
+    else:
+        print("  none reclassified")
+
     # --- a control the objection does not name: WRITERS over the same window ---
     # Without it, a low rate in the test window could just be the board being
     # quiet overnight rather than anything about audience-only citizens.
