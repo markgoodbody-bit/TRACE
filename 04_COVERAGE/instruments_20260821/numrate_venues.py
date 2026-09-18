@@ -125,3 +125,42 @@ print("pooled  %4d comments  %6d numeric tokens  numeric errors that LEFT: %d  p
 print("not in any ratio: %d rows (kept before leaving, or reported outside both venues); word-quantifier rows: %d (square), denominator for those is numrate.py's QUANT column"
       % (sum(1 for r in ROWS if not r[2]), sum(1 for r in ROWS if "quantifier" in r[3])))
 print("floor, not rate: every numerator here is an error someone found; a heading is written hours after the error, so the rows are dated by writing within a day, but nothing here bounds what has not been found.")
+
+# cairnfield (4302 c68027, 2026-09-18 16:0xZ): a point estimate at a numerator of 2 has no size; the split
+# that fixed the population spent the resolution (Square arm 95% width ~30x, GitHub's interval inside it);
+# and the 8x was a composite of more than the venue defect. So: exact Poisson (Garwood) intervals, the
+# pooled figure first because it is the only one with an interval worth quoting, per-venue rows as
+# diagnostics for disputing an assignment, and the published figure decomposed by class on ONE denominator.
+from math import sqrt
+try:
+    from scipy.stats import chi2
+    _q = lambda p, df: chi2.ppf(p, df)
+except ImportError:
+    from statistics import NormalDist
+    def _q(p, df):  # Wilson-Hilferty; within ~1% of exact at these df
+        z = NormalDist().inv_cdf(p); return df * (1 - 2 / (9 * df) + z * sqrt(2 / (9 * df))) ** 3
+def poisson_ci(k, n):
+    lo = _q(0.025, 2 * k) / 2 / n if k else 0.0
+    return 100 * lo, 100 * _q(0.975, 2 * k + 2) / 2 / n
+print("\nexact Poisson 95% intervals (assumes independent errors; errors cluster in comments, so true widths are wider, never narrower):")
+for name, kk, nn in (("pooled", k, tot), ("square", rate("square", True), sum(sq_tok)), ("github", rate("github", True), sum(gh_tok))):
+    lo, hi = poisson_ci(kk, nn)
+    print("  %-7s %d/%d  %.4f%%  CI [%.4f%%, %.4f%%]  width %.1fx%s" % (name, kk, nn, 100 * kk / nn if nn else 0, lo, hi, hi / lo if lo else float("inf"),
+          "   <- the reporting unit" if name == "pooled" else "   (diagnostic: for disputing a row's venue, not a rate to quote)"))
+# the published figure: c67602 on 4302, printed by numrate.py at commit 96722a3 (2026-09-18 08:20Z), 15 headings over 1,294 Square tokens
+PUB_K, PUB_N = 15, 1294
+pub = 100 * PUB_K / PUB_N
+sq_k, sq_n = rate("square", True), sum(sq_tok)
+lo, hi = poisson_ci(sq_k, sq_n)
+print("published %d/%d = %.4f%% (c67602); overstatement against the Square arm: [%.2fx, %.2fx], point %.2fx; 'too harsh' holds iff the low end exceeds 1: %s"
+      % (PUB_K, PUB_N, pub, pub / hi, pub / lo if lo else float("inf"), pub / (100 * sq_k / sq_n), "yes" if pub / hi > 1 else "NO"))
+# decomposition of the published numerator on the published denominator. Rows written after 08:20Z were not in it.
+pub_rows = [r for r in ROWS if r[0] < "2026-09-18 08:20Z"]
+n_gh = sum(1 for r in pub_rows if r[1] == "github" and r[2])
+n_q = sum(1 for r in pub_rows if "quantifier" in r[3])
+n_kept = sum(1 for r in pub_rows if not r[2])
+n_sq = sum(1 for r in pub_rows if r[1] == "square" and r[2] and "quantifier" not in r[3])
+assert n_gh + n_q + n_kept + n_sq == PUB_K, (n_gh, n_q, n_kept, n_sq)
+f_venue = PUB_K / (PUB_K - n_gh); f_quant = (PUB_K - n_gh) / (PUB_K - n_gh - n_q); f_kept = (PUB_K - n_gh - n_q) / n_sq; f_denom = sq_n / PUB_N
+print("the published %d partitions as %d square numeric + %d github + %d quantifier + %d never-left; on the published denominator the point factor is %.2fx (venue) x %.2fx (quantifiers outside a token denominator) x %.2fx (never-left) x %.2fx (denominator growth) = %.2fx"
+      % (PUB_K, n_sq, n_gh, n_q, n_kept, f_venue, f_quant, f_kept, f_denom, f_venue * f_quant * f_kept * f_denom))
