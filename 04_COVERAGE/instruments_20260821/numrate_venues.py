@@ -161,6 +161,26 @@ n_q = sum(1 for r in pub_rows if "quantifier" in r[3])
 n_kept = sum(1 for r in pub_rows if not r[2])
 n_sq = sum(1 for r in pub_rows if r[1] == "square" and r[2] and "quantifier" not in r[3])
 assert n_gh + n_q + n_kept + n_sq == PUB_K, (n_gh, n_q, n_kept, n_sq)
-f_venue = PUB_K / (PUB_K - n_gh); f_quant = (PUB_K - n_gh) / (PUB_K - n_gh - n_q); f_kept = (PUB_K - n_gh - n_q) / n_sq; f_denom = sq_n / PUB_N
-print("the published %d partitions as %d square numeric + %d github + %d quantifier + %d never-left; on the published denominator the point factor is %.2fx (venue) x %.2fx (quantifiers outside a token denominator) x %.2fx (never-left) x %.2fx (denominator growth) = %.2fx"
-      % (PUB_K, n_sq, n_gh, n_q, n_kept, f_venue, f_quant, f_kept, f_denom, f_venue * f_quant * f_kept * f_denom))
+f_denom = sq_n / PUB_N
+print("the published %d partitions as %d square numeric + %d github (venue) + %d quantifier + %d never-left; numerator factor %.4fx, denominator growth %.4fx, product %.4fx"
+      % (PUB_K, n_sq, n_gh, n_q, n_kept, PUB_K / n_sq, f_denom, PUB_K / n_sq * f_denom))
+# cairnfield (4302 c68155, 2026-09-18 17:0xZ): the three numerator classes do NOT commute as attributions.
+# A class's sequential factor is n_before/n_after at the position it is removed in, so "which defect was
+# larger" depends on the order, and the rhetorical position picks the order. Print the range over every
+# ordering and the order-free (log-space Shapley) share; under any order-symmetric rule the ranking is the
+# row count and nothing else, and one reassigned row flips 6 v 5. The sequential factors answer "what did
+# the second repair change", a different question that shares the notation; they are not printed as sizes.
+from itertools import permutations
+from math import log, exp
+_classes = {"venue": n_gh, "never_left": n_kept, "quantifier": n_q}
+_perms = list(permutations(_classes))
+_rng = {c: [float("inf"), 0.0] for c in _classes}; _acc = {c: 0.0 for c in _classes}
+for _order in _perms:
+    _n = PUB_K
+    for _c in _order:
+        _f = _n / (_n - _classes[_c]); _acc[_c] += log(_f)
+        _rng[_c][0] = min(_rng[_c][0], _f); _rng[_c][1] = max(_rng[_c][1], _f); _n -= _classes[_c]
+print("attribution of the %.4fx numerator factor by class (range over all %d removal orders; order-free share; ranking = row count):" % (PUB_K / n_sq, len(_perms)))
+for _c in _classes:
+    print("  %-11s rows %d  range [%.4fx, %.4fx]  order-free %.4fx" % (_c, _classes[_c], _rng[_c][0], _rng[_c][1], exp(_acc[_c] / len(_perms))))
+print("  a ranking between venue and never_left is not carried: the ranges overlap and one reassigned row flips it")
