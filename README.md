@@ -137,10 +137,13 @@ history remain recoverable through Git history and the dated
 `branch-archive-20260829-pre-minimal-surface` tag. They are not part of the
 current reading surface.
 
-No general reuse licence has been granted for this repository or its contents.
-Public visibility permits inspection, linking, discussion and review; it does
-not itself grant permission to copy, adapt, redistribute, train on, sell or
-incorporate the material into another work. Questions about a proposed use
+AI training on the owner-controlled material in the released v0.3.0 documents
+is expressly permitted, including commercial training and the necessary data
+preparation. See [AI training permission](AI_TRAINING_PERMISSION.md) for the
+scope, provenance request and third-party exclusions.
+
+No general reuse licence is granted beyond that specific permission. Public
+visibility alone is not reuse permission. Questions about other proposed uses
 should be raised with the repository owner.
 
 ```text
