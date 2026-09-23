@@ -1,9 +1,9 @@
-# TRACE // v0.3.0 SPECIFICATION // COMPACT SPINE
+# TRACE // v0.4.0-beta1 // COMPACT SPINE CANDIDATE
 
-- **Status:** RELEASED — FORMAL BASELINE — CURRENT SPECIFICATION — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
-- **Purpose:** primary semantic review and use surface for TRACE v0.3.0
-- **Lineage:** controlled successor to spine candidate v0.11; no semantic expansion is claimed
-- **Donor:** released TRACE v0.2.7; v0.3.0 supersedes it as the current formal baseline while preserving v0.2.7 as historical baseline
+- **Status:** BETA REVIEW CANDIDATE — NON-BASELINE — NOT RELEASED — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
+- **Purpose:** review candidate for a possible TRACE v0.4 successor; tests compression, salience and derived longitudinal/future-space views
+- **Lineage:** controlled successor candidate to released TRACE v0.3.0; the primitive layer is intentionally unchanged unless later evidence forces otherwise
+- **Donor:** released TRACE v0.3.0 remains the current formal baseline; this beta does not supersede it
 
 ---
 
@@ -180,6 +180,30 @@ INVALIDATOR_NOT_IDENTIFIED != NO_INVALIDATOR_EXISTS
 ```
 
 Do not mark a derivation stale because unrelated source material changed. If relevance of a change cannot be established, preserve uncertainty rather than promote either `CURRENT` or `STALE`.
+
+## [5.1] Longitudinal derived view
+
+Where the next decision depends on what earlier transitions changed, a reader may assemble a derived longitudinal view from existing TRACE structure:
+
+```text
+STATE / APERTURE / CAPABILITY / RELATION / CONSTRAINT at t
+-> ACTION / DELAY / NULL INPUT
+-> CONSEQUENCE OR PROJECTED CONSEQUENCE
+   (evidence status explicit)
+-> SUPPORTED / DISPUTED / UNKNOWN CHANGE
+   in capability / relation / constraint / burden / residue
+-> REPRESENTED FUTURE-SPACE at t+1
+-> NEXT READING
+```
+
+This is a reading pattern, not a new primitive and not an internal-state oracle. Reported experience may be represented as reported; inferred or projected change remains inferred or projected.
+
+```text
+PAST TRANSITION != TOTAL CURRENT ENTITY
+HISTORY RELEVANT != CHARACTER ESSENCE ESTABLISHED
+REALIZED CHANGE != PROJECTED CHANGE
+FORMATION VIEW != PERSONHOOD CLAIM
+```
 
 ---
 
@@ -480,6 +504,14 @@ RECORD_OBSERVED != EVENT_OBSERVED
 
 A record may support an event claim under an evidential contract; observing the record does not make the historical/world event itself directly observed.
 
+A later benefit may contribute to repair when a supported mechanism connects it to the specified loss. It is not repair merely because it is good, and an unchangeable past does not establish continuing impairment.
+
+```text
+LATER_BENEFIT != REPAIR_BY_DEFAULT
+PAST_LOSS_IN_RECORD != CURRENT_IMPAIRMENT
+RECOVERY_OBSERVED != HISTORY_ERASED
+```
+
 ---
 
 # [11] DESIGNATION / MEASURE / VALUE PORTS
@@ -519,6 +551,48 @@ ROUTE_LABEL_DIVERSITY != CORRECTION_INDEPENDENCE
 FUTURE_VIEW != PERMISSION
 ```
 
+## [12.1] Comparison baseline
+
+A claim that a transition improved, preserved, reduced or damaged represented future-space requires a declared comparison basis. Different baselines answer different questions.
+
+Possible baselines include:
+- the represented state before the transition;
+- ordinary process / null input;
+- another feasible action;
+- a supported counterfactual trajectory.
+
+```text
+CHANGE_FROM_PRIOR_STATE != CHANGE_FROM_INACTION
+INACTION_BASELINE != ALTERNATIVE_ACTION_BASELINE
+BASELINE_SELECTED != BASELINE_JUSTIFIED
+FUTURE-SPACE_COMPARISON != FUTURE-SPACE_SCORE
+```
+
+Baseline choice, affected scope, horizon and measure remain exposed and contestable.
+
+## [12.2] Supported prospect — derived view
+
+Without defining or measuring hope, TRACE can ask whether a specified prospect remains supported for a stated use.
+
+A bounded reading identifies:
+- the entity or entities whose future is being discussed;
+- the target condition and horizon;
+- the represented route or dependency chain;
+- who can perform required steps;
+- material access, burden, authority and timing constraints;
+- evidence status, uncertainty and invalidators.
+
+```text
+SUPPORTED_PROSPECT != HOPE_FELT
+HOPE_REPORTED != ROUTE_ESTABLISHED
+NO_SUPPORTED_ROUTE_FOUND != NO_ROUTE_EXISTS
+ROUTE_EXISTS != ROUTE_KNOWN_TO_ACTOR
+ROUTE_KNOWN != ROUTE_USABLE
+PROSPECT_SUPPORTED != DUTY_TO_PURSUE
+```
+
+Where successful use requires an actor to recognise or choose a step, the needed information must be available to that actor in time. A route's causal operation, its discoverability and an affected being's knowledge of it remain distinct.
+
 ---
 
 # [13] ABSENCE / STREAM / PATTERN
@@ -534,6 +608,14 @@ LOCAL_CORRECTION + STREAM_PERSISTENCE != MECHANISM_CHANGE
 LOCAL_CASE_REPAIRED != GENERATING_MECHANISM_REPAIRED
 STREAM_PERSISTENCE != SAME_MECHANISM_PROVEN
 ```
+
+```text
+UNKNOWN != OMITTED_FROM_THIS_RECORD
+OMITTED_FROM_THIS_RECORD != INTENTIONALLY_WITHHELD
+PRIVATE != FALSE
+```
+
+`UNKNOWN` concerns what is known through a stated aperture. `OMITTED FROM THIS RECORD` concerns missing representation relative to a stated expected scope or comparison. The cause of omission, including whether anyone intentionally withheld material, requires separate support.
 
 A load-bearing mechanism-change claim needs evidence about the relevant mechanism/process/coupling at the resolution used downstream; neither one repaired case nor persistence of the outward stream settles that claim alone.
 
@@ -613,6 +695,7 @@ A check being present or executed does not establish that it can detect the fail
 Loss of liveness can close current verification without establishing the cause.
 Correction timing needs an explicit target boundary, comparable clocks and a supported process bound; critical-path precedence remains source-, pathway- and occurrence-bound, acyclic, and separately feasible. Keep hardening distinct from irreversibility, and uncertainty distinct from the selector/policy that chooses action or delay.
 A repeated path label does not establish that the same continuation remains reachable.
+A future-space comparison needs an exposed baseline; a supported prospect is not a feeling, a score, a permission or a duty.
 Expose route usability, coupling, burden, residue, future-path changes, designation and comparison measure at the resolution evidence supports. Keep refusal distinct from malfunction, local correction distinct from mechanism change, future-strategy revisability distinct from realised-transition reversibility, and aggregate recovery distinct from individual repair.
 A TRACE packet is not truth, diligence, permission, authority, ethics, validation or a connected brake.
 Self-application may expose another layer; it does not validate the first.
