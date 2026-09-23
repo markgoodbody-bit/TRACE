@@ -141,7 +141,7 @@ A report may establish a status under a declared domain evidence/authority contr
 
 ## [6.1] Verification discrimination
 
-Do not collapse distinct states into `checked` when the distinction changes a downstream claim:
+Do not collapse distinct states into `checked` when the distinction changes a downstream claim. A check may exist without having run, and may run without being able to detect the failure that matters; claims about its result need evidence of execution and relevant discriminatory power.
 
 Adequacy evidence is domain-specific; TRACE does not require destructive fault injection.
 
