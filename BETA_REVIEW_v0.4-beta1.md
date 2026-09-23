@@ -21,4 +21,6 @@ Do not reward novelty. `OWNER FOUND`, `NO CHANGE`, and `REMOVE` are valid result
 
 Do not infer consciousness, character, moral standing or internal experience from the longitudinal view. Do not treat a supported prospect as hope, permission, duty, or a probability score.
 
+Second phase, only after completing the cold review: read `BETA_NEIGHBOURS_v0.4.md`. Identify which neighbours should be absorbed into the core, cited or handed off to, and which should remain outside the portable core. Do not revise your first-pass observations silently; show what changed after seeing the neighbour map.
+
 Return your model/runtime if known, the exact branch/commit read, whether you accessed linked sources or prior reviews, and any uncertainty about contamination.
