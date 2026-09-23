@@ -1,9 +1,9 @@
 # TRACE
 
-> **Branch status: TRACE v0.4.0-beta1 review candidate.**
+> **Branch status: TRACE v0.4.0-beta2 review candidate.**
 > Released TRACE v0.3.0 remains the current formal baseline. This branch is non-canon, not validated and may be shrunk or abandoned after review.
 
-Beta support: [cold review brief](BETA_REVIEW_v0.4-beta1.md) · [intellectual neighbours](BETA_NEIGHBOURS_v0.4.md)
+Beta support: [cold review brief](BETA_REVIEW_v0.4-beta2.md) · [intellectual neighbours](BETA_NEIGHBOURS_v0.4.md)
 
 TRACE helps examine decisions where time, uncertainty and unequal ability to
 act can make an option exist on paper but unusable in practice.
