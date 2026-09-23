@@ -70,10 +70,10 @@ evidence, dependencies, clocks, authority or intended use materially changes.
 
 For **v0.4.0-beta4 review**:
 
-1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) — the beta3 compact candidate.
-2. Read [`TRACE-WORKED-PARSE_v0.4-beta4.md`](TRACE-WORKED-PARSE_v0.4-beta4.md) — a complete worked parse.
+1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) — the beta4 compact candidate.
+2. Read [`TRACE-WORKED-PARSE_v0.4-beta3.md`](TRACE-WORKED-PARSE_v0.4-beta3.md) — the unchanged worked parse inherited from beta3.
 3. Read [`BETA_REVIEW_v0.4-beta4.md`](BETA_REVIEW_v0.4-beta4.md) for the focused review protocol.
-4. Only after the cold pass, read [`TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta4.md`](TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta4.md), [`TRACE-TIMING-PROFILE_v0.4-beta4.md`](TRACE-TIMING-PROFILE_v0.4-beta4.md), and [`BETA_NEIGHBOURS_v0.4.md`](BETA_NEIGHBOURS_v0.4.md).
+4. Only after the cold pass, read the unchanged beta3 support files [`TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta3.md`](TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta3.md), [`TRACE-TIMING-PROFILE_v0.4-beta3.md`](TRACE-TIMING-PROFILE_v0.4-beta3.md), and [`BETA_NEIGHBOURS_v0.4.md`](BETA_NEIGHBOURS_v0.4.md).
 
 [`TRACE.md`](TRACE.md) remains the released v0.3.0 full technical reference and inherited schema donor. This beta does not yet provide a rewritten full reference; where the beta spine and released full reference differ, treat the beta spine as the review object and the v0.3.0 full reference as donor context, not a second beta surface.
 
