@@ -15,28 +15,7 @@ It does not assign or deny consciousness, agency, identity, experience, moral st
 
 Where evidence does not settle a question, preserve `UNKNOWN`.
 
-```text
-READING != CLEARANCE
-MODEL != WORLD
-MAP != WORLD
-UNKNOWN != ABSENT
-UNKNOWN != NEUTRAL
-UNCERTAINTY != PERMISSION_TO_ACT
-UNCERTAINTY != PERMISSION_TO_DELAY
-DESCRIPTION != AUTHORIZATION
-CAPABILITY != AUTHORITY
-STRUCTURAL_DIFFERENCE != MORAL_RANKING
-RECEIVER != NECESSARILY_MAPPED_SUBJECT
-```
-
 Formal notation does not upgrade evidence.
-
-```text
-SYMBOL != EVIDENCE
-FORMALITY != ESTIMATOR
-SCHEMA_VALID != WORLD_VALID
-COVERAGE != COMPLETENESS
-```
 
 Material formal claims should distinguish definition, schematic model, sufficient condition and non-entailment where confusion would change what follows.
 
@@ -52,41 +31,17 @@ A selective causal scene may contain systems that receive partial signals, retai
 
 The receiver need not be the acting system. Historical, counterfactual and externally mapped scenes remain possible.
 
-```text
-MORE_FIELDS != BETTER_READING
-MORE_DETAIL != MORE_TRUTH
-SCHEMA_COMPLETENESS != DILIGENCE
-ELOQUENCE != STANDING
-```
-
 ---
 
 # [2] WORLD / SCENE / MAP / APERTURE
 
 Let `w_t` be actual surrounding state, not fully available to a bounded reader; `Omega_t` a declared scene representation; `Pi_j^t` an aperture; `x_j(t)` its available signal; `M_j(t)` a represented map; `H_j(t)` retained history where relevant.
 
-```text
-WORLD_STATE != SCENE
-SCENE != MAP
-MAP != WORLD_STATE
-APERTURE_OUTPUT != COMPLETE_SCENE
-RETAINED_HISTORY != CURRENT_WORLD
-OBSERVED_RENDERING != SOURCE_OBJECT
-```
-
 Apertures may be sensory, institutional, computational, social, physical or documentary. Omission through an aperture is not evidence of absence.
 
 ## [2.1] Target-set aperture
 
 Selection of what a search, audit, review, comparison, model or policy reaches is itself aperture-bearing. Where material preserve source, selection basis, targets, known omitted categories, alternative target sets, comparison basis, custody/control and uncertainty.
-
-```text
-NOT_TARGETED != ABSENT
-NOT_SELECTED != IRRELEVANT
-VISIBLE_SCOPE != COMPLETE_AFFECTED_SCOPE
-ACCOUNTED_FOR != DISCOVERED_COMPLETE_SET
-OPERATOR_TARGET_SET != AUTHORITATIVE_TARGET_SET
-```
 
 No target-set core term is required.
 
@@ -110,38 +65,17 @@ WORLD
  -> RETAINED HISTORY
 ```
 
-```text
-ACTION != TRANSITION
-INTENDED_OUTCOME != REALISED_OUTCOME
-ACTOR_REPORT != WORLD_STATE
-NULL_INPUT != STATIC_WORLD
-UNCERTAINTY != SELECT_ACTION
-UNCERTAINTY != SELECT_DELAY
-```
-
 Uncertainty may be an input to an external selector/policy, including a policy that chooses action or delay. Attribute the resulting selection to that selector/policy/default rule; uncertainty itself is not the selector.
 
 ## [3.1] Measurement can enter the causal path
 
 Observation, audit, measurement, publication, notification or inquiry is not presumed causally inert. Where evidence supports a causal path, represent the act using existing action/cause/contribution/transition structure.
 
-```text
-MEASUREMENT != PASSIVE_OBSERVATION
-MEASUREMENT_OCCURRED != MEASUREMENT_CAUSED_CHANGE
-POSSIBLE_REACTIVITY != ESTABLISHED_REACTIVITY
-```
-
 ---
 
 # [4] TRACE USE
 
 A bounded TRACE reading names the material structure it can support and the limits it cannot resolve. A receiver may integrate, challenge, ignore or hand off that reading.
-
-```text
-TRACE_READING != WORLD_CHANGE
-READING_ACCEPTED != ACTION_SELECTED
-ACTION_SELECTED != REALISED_OUTCOME
-```
 
 TRACE does not require a bespoke transform function or internal receiver-state model. Where an implementation needs typed inputs, outputs or machine serialization, use the full reference or a declared profile rather than treating decorative notation as proof of semantics.
 
@@ -150,24 +84,7 @@ TRACE does not require a bespoke transform function or internal receiver-state m
 
 Longitudinal readings carry consequential change forward rather than resetting from an old record. Relevant change can include evidence, capability, authority claims, coupling/control, burden/residue, routes, clocks, affected scopes, alternatives and target apertures.
 
-```text
-SAME_ENTITY != SAME_CAPABILITY
-SAME_ROLE != SAME_MAP
-SAME_SESSION != FRESH_STATE
-RETAINED_RECORD != CURRENT_STATE
-SUCCESS_AT_t != SUCCESS_AT_t+1
-PRIOR_READING != CURRENT_WORLD
-```
-
 Freshness is not time-to-live alone. A claim or derived value may cease to support current use when a load-bearing dependency changes.
-
-```text
-DATE_CURRENT != DERIVED_VALUE_CURRENT
-CURRENT_AT_USE != VALID_THROUGH_DEPENDENT_INTERVAL
-SOURCE_MUTATED != LOAD_BEARING_DEPENDENCY_CHANGED
-MUTATION_OBSERVED != CLAIM_INVALIDATED
-INVALIDATOR_NOT_IDENTIFIED != NO_INVALIDATOR_EXISTS
-```
 
 Do not mark a derivation stale because unrelated source material changed. If relevance of a change cannot be established, preserve uncertainty rather than promote either `CURRENT` or `STALE`.
 
@@ -187,13 +104,6 @@ STATE / APERTURE / CAPABILITY / RELATION / CONSTRAINT at t
 ```
 
 This is a reading pattern, not a new core term and not an internal-state oracle. Reported experience may be represented as reported; inferred or projected change remains inferred or projected.
-
-```text
-PAST TRANSITION != TOTAL CURRENT ENTITY
-HISTORY RELEVANT != CHARACTER ESSENCE ESTABLISHED
-REALIZED CHANGE != PROJECTED CHANGE
-FORMATION VIEW != PERSONHOOD CLAIM
-```
 
 ---
 
@@ -217,13 +127,6 @@ If a downstream claim, comparison, selection input, route, window status or prop
 
 If it is unresolved whether collapsing a distinction could change that downstream conclusion, preserve the uncertainty rather than treating the distinction as non-load-bearing.
 
-```text
-REPRESENTATION_TYPE != EVIDENCE_STATUS
-CONFIGURATION_FIELD != WARRANT_FREE_FACT
-LOAD_BEARING_UNKNOWN != NOT_LOAD_BEARING
-LOAD_BEARING_TRIGGER != FULL_PACKET_REQUIREMENT
-```
-
 This does not require full claim machinery for every field. It fires only where a proposition actually carries a downstream conclusion whose support could change if the relevant distinction were applied.
 
 ## [6.0.1] Evidence state is not access/custody state
@@ -232,29 +135,7 @@ Whether a proposition is observed, reported, inferred, disputed or unknown is se
 
 A receiver may be unable to inspect evidence that exists; a receiver may also have technical access without authority to disclose or reuse it.
 
-```text
-EVIDENCE_STATE != ACCESS_CUSTODY_STATE
-EVIDENCE_EXISTS != EVIDENCE_ACCESSIBLE_TO_THIS_RECEIVER
-UNAVAILABLE_TO_THIS_READER != UNIVERSALLY_UNKNOWN
-AVAILABLE != AUTHORISED_TO_DISCLOSE
-ACCESS_CAPABILITY != DISCLOSURE_AUTHORITY
-```
-
 Preserve only the access/custody distinctions that are load-bearing for the downstream use. This is not a universal disclosure policy and does not restore the full donor access/custody algebra in the spine.
-
-```text
-REPORTED != OBSERVED
-INFERRED != OBSERVED
-UNCONTESTED != TRUE
-CONFIDENCE != TRUTH
-CONFIDENCE != AUTHORITY
-OLD_EVIDENCE != CURRENT_STATE
-IMMUTABLE_RECORD != CURRENT_WORLD
-HASH_MATCH != ORIGINAL_RECORD_TRUE
-OPERATOR_REPORT != INDEPENDENT_VERIFICATION
-REPORTED != ESTABLISHED
-REPORT_PRESENT != ESTABLISHMENT_RULE_SATISFIED
-```
 
 A report may establish a status under a declared domain evidence/authority contract, but `REPORTED` status alone does not perform that upgrade.
 
@@ -262,35 +143,13 @@ A report may establish a status under a declared domain evidence/authority contr
 
 Do not collapse distinct states into `checked` when the distinction changes a downstream claim:
 
-```text
-CHECK_EXISTS != CHECK_EXECUTED
-CHECK_EXECUTED != CHECK_DETECTS_TARGET_FAILURE
-STATIC_CORRECTNESS != OPERATIONAL_DISCRIMINATION
-CHECK_COMPLETED != CHECK_RESULT_REACHED_USE
-ONE_DETECTED_FAILURE != UNIVERSAL_INSTRUMENT_ADEQUACY
-```
-
 Adequacy evidence is domain-specific; TRACE does not require destructive fault injection.
 
 ## [6.2] Liveness / witness ceiling
 
 Loss of reply, heartbeat, route, status or witness may close a current verification interval without establishing why.
 
-```text
-SILENCE != TAMPERING
-NO_REPLY_OBSERVED != REFUSAL
-PROCESS_EXISTS != PROCESS_HEALTHY
-SAFE_EXCLUSION != LIVENESS
-WITNESS_LIVENESS_LOST != CAUSE_ESTABLISHED
-```
-
 A witness establishes only what its aperture supports.
-
-```text
-EXTERNAL != INDEPENDENT
-SEPARATE_PARTY != INDEPENDENT_EVIDENCE
-WITNESS_OBSERVED_X != EVERY_READER_WAS_SERVED_X
-```
 
 No witness or liveness core term is added.
 
@@ -300,16 +159,6 @@ No witness or liveness core term is added.
 
 Entity boundaries are provisional and purpose-relative. Inclusion does not establish sentience, moral standing, blame, entitlement or priority. Nested boundaries may be refined where evidence supports it; scale changes do not guarantee invertibility or completeness.
 
-```text
-AFFECTED != BLAMEWORTHY
-CONTROLLER != MORAL_AUTHORITY
-BENEFICIARY != SOLE_JUDGE
-ENTITY_LABEL != FIXED_ROLE
-BOUNDARY_CHOICE != NATURAL_KIND_PROOF
-POPULATION_RECOVERY != REPAIR_OF_INDIVIDUAL_LOSS
-GROUP_METRIC_RESTORED != EVERY_AFFECTED_SCOPE_REPAIRED
-```
-
 Aggregate/group recovery does not establish repair of a particular lower-level scope; individual repair needs evidence at that scope or a justified correspondence rule that actually entails it.
 
 ---
@@ -317,20 +166,6 @@ Aggregate/group recovery does not establish repair of a particular lower-level s
 # [8] TRANSITIONS / CONTROL / REFUSABILITY
 
 Represent where material action/delay/null input, realised/projected/counterfactual transition, coupling/dependency, control scope/time, constraints, refusability/exit/override and indirect causal paths.
-
-```text
-CAUSES != CORRELATES
-CONTROL != INTENT
-CONSTRAINT != CONSENT
-NO_DIRECT_EDGE != NO_INDIRECT_PATH
-ROUTE_LISTED != ROUTE_EXECUTABLE
-ROUTE_EXISTS != ROUTE_USABLE
-BURDEN_PRESENT != ROUTE_UNUSABLE
-REFUSAL_RECORDED != REFUSAL_EFFECTIVE
-REFUSAL != MALFUNCTION
-STRATEGY_REVISABLE != TRANSITION_REVERSIBLE
-FUTURE_POLICY_CAN_CHANGE != PRIOR_STATE_CAN_BE_RESTORED
-```
 
 Route usability is scope/target-relative; access, target reach, authority, timing and burden/constraints fire only when they can change that claim. Refusal and malfunction require separately supported propositions where that distinction is load-bearing. Future strategy/policy revisability does not establish restoration or reversal of a realised transition; if one mechanism genuinely establishes both, support both separately.
 
@@ -340,15 +175,6 @@ Do not create a universal permission taxonomy. Fire the distinction when a load-
 
 For capability preserve enough to identify actor, capability, source, scope/target, freshness and material constraints. For authority preserve enough to identify authorised transition class, source/grant, holder, scope/limits and current applicability.
 
-```text
-CAPABILITY != AUTHORITY
-CAPABILITY_REPORTED != CAPABILITY_ESTABLISHED
-AUTHORITY_RECORDED != AUTHORITY_CURRENT
-AUTHORITY_FOR_X != AUTHORITY_FOR_Y
-DISTINCTION_PRESENT != DISTINCTION_APPLIED
-TRIGGER_PRESENT != TRIGGER_FIRED
-```
-
 TRACE exposes the claim; it does not become the authority that decides it.
 
 ---
@@ -356,13 +182,6 @@ TRACE exposes the claim; it does not become the authority that decides it.
 # [9] CLOCKS / ROUTES / HARDENING
 
 Represent clocks by what they actually time. Do not promote urgency into irreversibility.
-
-```text
-EVENT_TIME != STAGE_DURATION
-URGENCY != IRREVERSIBILITY
-HARDENING != IRREVERSIBILITY
-HARDER_TO_CORRECT != IMPOSSIBLE_TO_CORRECT
-```
 
 Hardening may contribute to a separately supported irreversibility claim, but a hardening clock/status does not become an irreversibility boundary by label alone.
 
@@ -381,14 +200,6 @@ Different clocks with the same units are not automatically comparable. A point e
 
 A strong open status requires supported evidence that the relevant feasible completion remains before the represented boundary under the same bindings. A strong closed status requires supported evidence that even the required feasible path cannot complete in time and that no represented alternative removes that requirement.
 
-```text
-POINT_ESTIMATE_FITS != GUARANTEED_OPEN
-OPTIMISTIC_COMPLETION_FITS != GUARANTEED_OPEN
-PAST_WINDOW_FIT != CURRENT_WINDOW_FIT
-BOUNDARY_DECLARED != BOUNDARY_JUSTIFIED
-WINDOW_STATUS != MORAL_PRIORITY
-```
-
 Where detailed precedence, resource contention, stochastic duration or scheduling feasibility is load-bearing, hand off to established scheduling / real-time / systems-safety machinery rather than expanding the compact spine. The beta timing profile preserves the more detailed derived machinery for review.
 
 ## [9.2] Serial shorthand
@@ -406,25 +217,9 @@ Required verification time is not free, and the shorthand does not establish a p
 
 A transition may solve one local problem while moving burden or leaving persistent remainder. Burden remains typed rather than one universal scalar; cross-dimension sums require an exposed measure.
 
-```text
-BURDEN_VECTOR != MORAL_VERDICT
-RECORDED_LOSS != REPAIRED_LOSS
-CLOSED_TASK != CLEARED_RESIDUE
-TRANSFERRED_BURDEN != REMOVED_BURDEN
-RECORD_EXISTS != RECORD_COMPLETE
-RECORD != EVENT
-RECORD_OBSERVED != EVENT_OBSERVED
-```
-
 A record may support an event claim under an evidential contract; observing the record does not make the historical/world event itself directly observed.
 
 A claim that a later benefit repaired a specified loss needs supported correspondence between the later change and the thing said to be repaired. A beneficial later state does not establish that relation by itself, and an unchangeable past does not establish continuing impairment.
-
-```text
-LATER_BENEFIT != REPAIR_ESTABLISHED
-PAST_LOSS_IN_RECORD != CURRENT_IMPAIRMENT
-RECOVERY_OBSERVED != HISTORY_ERASED
-```
 
 ---
 
@@ -451,20 +246,6 @@ For a declared scope, horizon and transition model, TRACE may represent paths th
 
 When a downstream comparison claims that a future path was preserved, lost, opened or closed across states/times, correspondence must be supported at the resolution relevant to that claim. Persistence of a label or identifier is not enough. If correspondence cannot be established, preserve `UNKNOWN` rather than silently equating the paths.
 
-```text
-SAME_PATH_LABEL != SAME_TRAJECTORY
-PATH_IDENTIFIER_PERSISTS != PATH_EFFECT_PERSISTS
-TECHNICALLY_REACHABLE_SUCCESSOR != COMPARABLE_CONTINUATION
-```
-
-```text
-KNOWN_REACHABLE_PATHS != ALL_POSSIBLE_FUTURES
-MORE_OPTIONS != MORALLY_BETTER
-PATH_LABEL_DIVERSITY != CONTROL_DIVERSITY
-ROUTE_LABEL_DIVERSITY != CORRECTION_INDEPENDENCE
-FUTURE_VIEW != PERMISSION
-```
-
 ## [12.1] Comparison baseline
 
 A claim that a transition improved, preserved, reduced or damaged represented future-space requires a declared comparison basis. Different baselines answer different questions.
@@ -474,13 +255,6 @@ Possible baselines include:
 - ordinary process / null input;
 - another feasible action;
 - a supported counterfactual trajectory.
-
-```text
-CHANGE_FROM_PRIOR_STATE != CHANGE_FROM_INACTION
-INACTION_BASELINE != ALTERNATIVE_ACTION_BASELINE
-BASELINE_SELECTED != BASELINE_JUSTIFIED
-FUTURE-SPACE_COMPARISON != FUTURE-SPACE_SCORE
-```
 
 Baseline choice, affected scope, horizon and measure remain exposed and contestable.
 
@@ -496,15 +270,6 @@ A bounded reading identifies:
 - material access, burden, authority and timing constraints;
 - evidence status, uncertainty and invalidators.
 
-```text
-SUPPORTED_PROSPECT != HOPE_FELT
-HOPE_REPORTED != ROUTE_ESTABLISHED
-NO_SUPPORTED_ROUTE_FOUND != NO_ROUTE_EXISTS
-ROUTE_EXISTS != ROUTE_KNOWN_TO_ACTOR
-ROUTE_KNOWN != ROUTE_USABLE
-PROSPECT_SUPPORTED != DUTY_TO_PURSUE
-```
-
 Where successful use requires an actor to recognise or choose a step, the needed information must be available to that actor in time. A route's causal operation, its discoverability and an affected being's knowledge of it remain distinct.
 
 ---
@@ -512,21 +277,6 @@ Where successful use requires an actor to recognise or choose a step, the needed
 # [13] ABSENCE / STREAM / PATTERN
 
 Represent absence only relative to a declared expectation, target set or comparison basis. Repeated cases may form streams; common-mechanism hypotheses may form patterns.
-
-```text
-NOT_OBSERVED != ABSENT
-ABSENT_FROM_APERTURE != ABSENT_FROM_WORLD
-REPEATED_OUTCOME != SHARED_CAUSE
-PATTERN != PROOF
-LOCAL_CORRECTION + STREAM_PERSISTENCE != MECHANISM_CHANGE
-LOCAL_CASE_REPAIRED != GENERATING_MECHANISM_REPAIRED
-STREAM_PERSISTENCE != SAME_MECHANISM_PROVEN
-```
-
-```text
-UNKNOWN != OMITTED_FROM_THIS_RECORD
-OMITTED_FROM_THIS_RECORD != INTENTIONALLY_WITHHELD
-```
 
 `UNKNOWN` concerns what is known through a stated aperture. `OMITTED FROM THIS RECORD` concerns missing representation relative to a stated expected scope or comparison. The cause of omission, including whether anyone intentionally withheld material, requires separate support.
 
@@ -538,26 +288,11 @@ A load-bearing mechanism-change claim needs evidence about the relevant mechanis
 
 TRACE cannot expose every possible structure. Its core distinction set and reader are themselves apertures and may be inspected recursively.
 
-```text
-SELF_APPLICATION != SELF_VALIDATION
-CORE_TERM_AVAILABLE != CORE_TERM_SUFFICIENT
-OMITTED_CORE_TERM != ABSENT_MECHANISM
-```
-
 ---
 
 # [15] VALIDATOR / THEATRE CEILING
 
 Machine-readable structure can support reconstruction and checking. Syntax cannot establish world truth, completeness, semantic relevance, legitimate authority, route executability or correction unless those mechanisms are independently evidenced.
-
-```text
-SERIALIZABLE != SELF_EXECUTING
-PARSABLE != CORRECTLY_INSTANTIATED
-SCHEMA_VALID != WORLD_VALID
-PACKET_COMPLETED != DILIGENCE_ESTABLISHED
-TRACE_CITED != TRACE_USED
-CHECK_PASSED != WORLD_CORRECT
-```
 
 ---
 
@@ -571,23 +306,11 @@ Artificial-entity uncertainty, non-extraction and detailed receiver-capability d
 
 TRACE concepts are external structural hypotheses until empirically connected to internal mechanisms.
 
-```text
-TRACE_COHERENCE != LATENT_TRUTH
-INTERPRETABILITY_RESULT != COMPLETE_MECHANISM
-MECHANISM_OBSERVED != VALUE_JUDGEMENT
-```
-
 ---
 
 # [18] STOP / HANDOFF
 
 Stop, preserve time or hand off when further differentiation is not expected to change a material claim before the relevant clock, required evidence is unavailable, a deeper domain model is needed, resource/depth limits are reached, or value/authority/actuation belongs outside TRACE.
-
-```text
-STOPPED != RESOLVED
-HANDOFF != VALIDATION
-NO_MORE_TRACE != NO_MORE_UNCERTAINTY
-```
 
 ---
 
@@ -631,13 +354,6 @@ shows no material consequential distinction preserved,
 no useful transfer improvement,
 or an activation/burden cost larger than the avoided error,
 then the practical TRACE claim for that use class fails or must shrink.
-```
-
-```text
-DISTINCTION_TRUE != CARRIER_USEFUL
-OWNER_FOUND != TRACE_INVALID
-MORE_STRUCTURE != PRACTICAL_ADVANTAGE
-REVIEW_AGREEMENT != VALIDATION
 ```
 
 Where a stronger owner preserves the material structure with less effort, use the stronger owner or narrow TRACE. Keep project-history, donor-reconciliation and trial receipts outside the compact spine.
