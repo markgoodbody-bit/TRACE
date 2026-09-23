@@ -1,9 +1,9 @@
 # TRACE
 
-> **Branch status: TRACE v0.4.0-beta3 review candidate.**
+> **Branch status: TRACE v0.4.0-beta4 review candidate.**
 > Released TRACE v0.3.0 remains the current formal baseline. This branch is non-canon, not validated and may be shrunk or abandoned after review.
 
-Beta support: [cold review brief](BETA_REVIEW_v0.4-beta3.md) · [intellectual neighbours](BETA_NEIGHBOURS_v0.4.md)
+Beta support: [cold review brief](BETA_REVIEW_v0.4-beta4.md) · [intellectual neighbours](BETA_NEIGHBOURS_v0.4.md)
 
 TRACE helps examine decisions where time, uncertainty and unequal ability to
 act can make an option exist on paper but unusable in practice.
@@ -68,12 +68,12 @@ evidence, dependencies, clocks, authority or intended use materially changes.
 
 ## Start here
 
-For **v0.4.0-beta3 review**:
+For **v0.4.0-beta4 review**:
 
 1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) — the beta3 compact candidate.
-2. Read [`TRACE-WORKED-PARSE_v0.4-beta3.md`](TRACE-WORKED-PARSE_v0.4-beta3.md) — a complete worked parse.
-3. Read [`BETA_REVIEW_v0.4-beta3.md`](BETA_REVIEW_v0.4-beta3.md) for the focused review protocol.
-4. Only after the cold pass, read [`TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta3.md`](TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta3.md), [`TRACE-TIMING-PROFILE_v0.4-beta3.md`](TRACE-TIMING-PROFILE_v0.4-beta3.md), and [`BETA_NEIGHBOURS_v0.4.md`](BETA_NEIGHBOURS_v0.4.md).
+2. Read [`TRACE-WORKED-PARSE_v0.4-beta4.md`](TRACE-WORKED-PARSE_v0.4-beta4.md) — a complete worked parse.
+3. Read [`BETA_REVIEW_v0.4-beta4.md`](BETA_REVIEW_v0.4-beta4.md) for the focused review protocol.
+4. Only after the cold pass, read [`TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta4.md`](TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta4.md), [`TRACE-TIMING-PROFILE_v0.4-beta4.md`](TRACE-TIMING-PROFILE_v0.4-beta4.md), and [`BETA_NEIGHBOURS_v0.4.md`](BETA_NEIGHBOURS_v0.4.md).
 
 [`TRACE.md`](TRACE.md) remains the released v0.3.0 full technical reference and inherited schema donor. This beta does not yet provide a rewritten full reference; where the beta spine and released full reference differ, treat the beta spine as the review object and the v0.3.0 full reference as donor context, not a second beta surface.
 
@@ -94,9 +94,9 @@ TRACE further.
 
 ## Current status
 
-The two current documents form the **released TRACE v0.3.0 specification**:
+The released **TRACE v0.3.0 baseline** has the identities below. On this beta branch, `TRACE-SPINE.md` is replaced by the v0.4.0-beta4 review candidate, while `TRACE.md` remains the released v0.3.0 full reference and donor context.
 
-| Object | Bytes | SHA-256 |
+| Released object | Bytes | SHA-256 |
 |---|---:|---|
 | compact spine v0.3.0 | 25,838 | `be6d1b4109576b8c182822120a0cd002435e522f02a77c048bc769715611b6c6` |
 | full reference v0.3.0 | 180,619 | `b9431ecc07e711c4abd1e70d4159acfd1cb8cecb8bdbd22086e8073b10c01d34` |
