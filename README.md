@@ -1,5 +1,10 @@
 # TRACE
 
+> **Branch status: TRACE v0.4.0-beta4 review candidate.**
+> Released TRACE v0.3.0 remains the current formal baseline. This branch is non-canon, not validated and may be shrunk or abandoned after review.
+
+Beta support: [cold review brief](BETA_REVIEW_v0.4-beta4.md) · [intellectual neighbours](BETA_NEIGHBOURS_v0.4.md)
+
 TRACE helps examine decisions where time, uncertainty and unequal ability to
 act can make an option exist on paper but unusable in practice.
 
@@ -63,13 +68,9 @@ evidence, dependencies, clocks, authority or intended use materially changes.
 
 ## Start here
 
-1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) for the compact specification and
-   primary review surface.
-2. Use [`TRACE.md`](TRACE.md) when you need the full technical reference,
-   serialization details or the complete inherited schema contract.
+Read [`TRACE-SPINE.md`](TRACE-SPINE.md) first. It is the current released v0.4.0 compact specification.
 
-The compact spine is the normal entry point. The full reference is not required
-for an initial reading.
+[`TRACE.md`](TRACE.md) remains the released v0.3.0 full technical donor/reference. It is retained for schema, serialization and detailed inherited machinery; it is not silently relabelled as v0.4.0. Where the compact v0.4.0 spine and the older full reference differ, the v0.4.0 compact spine is the current released semantic surface and the v0.3.0 full reference is donor context.
 
 This repository is distinct from
 [`agentrust-io/trace-spec`](https://github.com/agentrust-io/trace-spec).
@@ -88,42 +89,34 @@ TRACE further.
 
 ## Current status
 
-The two current documents form the **released TRACE v0.3.0 specification**:
+TRACE v0.4.0 is the current released formal baseline for the compact specification. The v0.3.0 full reference remains available as a technical donor/reference rather than being relabelled as v0.4.0.
 
-| Object | Bytes | SHA-256 |
+| Current object | Bytes | SHA-256 |
 |---|---:|---|
-| compact spine v0.3.0 | 25,838 | `be6d1b4109576b8c182822120a0cd002435e522f02a77c048bc769715611b6c6` |
-| full reference v0.3.0 | 180,619 | `b9431ecc07e711c4abd1e70d4159acfd1cb8cecb8bdbd22086e8073b10c01d34` |
+| compact spine v0.4.0 | 21,279 | `add22409dcc25d09b26559c7d824ddae047262ac5918a509c2a4234bdc27ce6d` |
+| retained full reference v0.3.0 | 180,619 | `b9431ecc07e711c4abd1e70d4159acfd1cb8cecb8bdbd22086e8073b10c01d34` |
 
 ```text
-RELEASED / FORMAL BASELINE / CURRENT SPECIFICATION / NOT VALIDATED / NO EFFICACY RESULT
+RELEASED / FORMAL BASELINE / CURRENT COMPACT SPECIFICATION / NOT VALIDATED / NO EFFICACY RESULT
 ```
 
-TRACE v0.2.7 remains preserved as the previous released formal baseline; TRACE v0.3.0 is the current released formal baseline.
+TRACE v0.3.0 remains preserved as the previous released baseline in repository history.
 
 ### What has been established
 
-- The current candidate documents have exact identities.
-- The v0.3 minimum schema adds no semantic primitives to v0.2.7.
-- A bounded ten-stage source-contract challenge was completed for this pass.
-- A comparison with FPF found no TRACE-unique semantic primitives in the
-  examined material.
-- A 32-call comparison was completed and showed material representation burden.
+- the v0.4.0 compact spine has a fixed released identity;
+- the release preserves the reviewed beta4 structural distinctions and adds no new semantic primitive at promotion;
+- the v0.3.0 full reference remains separately identified rather than silently promoted;
+- extensive hostile/model review improved the carrier but did not validate practical advantage.
 
 ### What remains unearned
 
 - practical advantage over competent ordinary analysis or established methods;
-- an efficacy result from the unadjudicated paired outputs;
+- the planned preregistered use-class result;
 - validation, conformance, authority, permission or clearance;
 - a general solution to standing, value conflict or legitimate enforcement.
 
-The current working hypothesis is therefore narrow: TRACE may be useful as a
-specialised representation and transfer surface that keeps affected scope,
-causal transitions, clocks, correction routes, burden, residue and uncertainty
-together. This is a provisional use hypothesis, not a claim of novelty or
-superiority.
-
-Release decision: **16 September 2026**. Release changes status, not the evidence ceiling: v0.3.0 remains unvalidated and carries no efficacy, authority, permission or clearance result.
+Release decision: **23 September 2026**. Release changes status and document control only. It does not convert reviewer agreement, falsification planning or source integrity into validation.
 
 ## Review, history and licence
 
@@ -137,10 +130,7 @@ history remain recoverable through Git history and the dated
 `branch-archive-20260829-pre-minimal-surface` tag. They are not part of the
 current reading surface.
 
-AI training on the owner-controlled material in the released v0.3.0 documents
-is expressly permitted, including commercial training and the necessary data
-preparation. See [AI training permission](AI_TRAINING_PERMISSION.md) for the
-scope, provenance request and third-party exclusions.
+The existing [AI training permission](AI_TRAINING_PERMISSION.md) remains scoped to the owner-controlled released v0.3.0 material described there. It does not automatically extend to v0.4.0. Release of v0.4.0 is not, by itself, a new training or reuse licence.
 
 No general reuse licence is granted beyond that specific permission. Public
 visibility alone is not reuse permission. Questions about other proposed uses
