@@ -504,10 +504,10 @@ RECORD_OBSERVED != EVENT_OBSERVED
 
 A record may support an event claim under an evidential contract; observing the record does not make the historical/world event itself directly observed.
 
-A later benefit may contribute to repair when a supported mechanism connects it to the specified loss. It is not repair merely because it is good, and an unchangeable past does not establish continuing impairment.
+A claim that a later benefit repaired a specified loss needs supported correspondence between the later change and the thing said to be repaired. A beneficial later state does not establish that relation by itself, and an unchangeable past does not establish continuing impairment.
 
 ```text
-LATER_BENEFIT != REPAIR_BY_DEFAULT
+LATER_BENEFIT != REPAIR_ESTABLISHED
 PAST_LOSS_IN_RECORD != CURRENT_IMPAIRMENT
 RECOVERY_OBSERVED != HISTORY_ERASED
 ```
@@ -612,7 +612,6 @@ STREAM_PERSISTENCE != SAME_MECHANISM_PROVEN
 ```text
 UNKNOWN != OMITTED_FROM_THIS_RECORD
 OMITTED_FROM_THIS_RECORD != INTENTIONALLY_WITHHELD
-PRIVATE != FALSE
 ```
 
 `UNKNOWN` concerns what is known through a stated aperture. `OMITTED FROM THIS RECORD` concerns missing representation relative to a stated expected scope or comparison. The cause of omission, including whether anyone intentionally withheld material, requires separate support.
