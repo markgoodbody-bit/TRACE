@@ -16,6 +16,12 @@ TRACE is an integration language. The existence of a stronger or older owner is 
 
 TRACE does **not** import either work as a moral score. The v0.4 beta uses them as pressure to expose comparison baselines and to avoid `MORE_OPTIONS = BETTER`.
 
+## Supported prospect / hope
+
+- C. R. Snyder et al., “The Will and the Ways: Development and Validation of an Individual-Differences Measure of Hope” (1991). Snyder's hope theory separates agency and pathways around goals; it is a major psychological neighbour of the route/actor structure in TRACE's supported-prospect view.
+
+TRACE keeps the represented route and actor conditions while dropping the psychological “sense of” construct. It does not infer felt hope, define a hope measure, or claim Snyder conformance.
+
 ## Formation / longitudinal change
 
 - John Dewey, *Human Nature and Conduct* (1922), especially habit as interaction between organism and environment and the idea that conduct helps form later dispositions.
