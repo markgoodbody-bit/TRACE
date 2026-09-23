@@ -1,9 +1,9 @@
 # TRACE
 
-> **Branch status: TRACE v0.4.0-beta2 review candidate.**
+> **Branch status: TRACE v0.4.0-beta3 review candidate.**
 > Released TRACE v0.3.0 remains the current formal baseline. This branch is non-canon, not validated and may be shrunk or abandoned after review.
 
-Beta support: [cold review brief](BETA_REVIEW_v0.4-beta2.md) · [intellectual neighbours](BETA_NEIGHBOURS_v0.4.md)
+Beta support: [cold review brief](BETA_REVIEW_v0.4-beta3.md) · [intellectual neighbours](BETA_NEIGHBOURS_v0.4.md)
 
 TRACE helps examine decisions where time, uncertainty and unequal ability to
 act can make an option exist on paper but unusable in practice.
@@ -68,10 +68,10 @@ evidence, dependencies, clocks, authority or intended use materially changes.
 
 ## Start here
 
-For **v0.4.0-beta2 review**:
+For **v0.4.0-beta3 review**:
 
 1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) — the beta2 compact candidate.
-2. Read [`BETA_REVIEW_v0.4-beta2.md`](BETA_REVIEW_v0.4-beta2.md) for the cold review protocol.
+2. Read [`BETA_REVIEW_v0.4-beta3.md`](BETA_REVIEW_v0.4-beta3.md) for the cold review protocol.
 3. Only after the cold pass, read [`BETA_NEIGHBOURS_v0.4.md`](BETA_NEIGHBOURS_v0.4.md).
 
 [`TRACE.md`](TRACE.md) remains the released v0.3.0 full technical reference and inherited schema donor. This beta does not yet provide a rewritten full reference; where the beta spine and released full reference differ, treat the beta spine as the review object and the v0.3.0 full reference as donor context, not a second beta surface.
