@@ -13,17 +13,17 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Verify released v0.3.0 identities
+      - name: Verify released v0.4.0 compact identity and retained v0.3.0 donor
         run: |
-          printf '%s  %s\n' 'be6d1b4109576b8c182822120a0cd002435e522f02a77c048bc769715611b6c6' TRACE-SPINE.md | sha256sum -c -
+          printf '%s  %s\n' 'add22409dcc25d09b26559c7d824ddae047262ac5918a509c2a4234bdc27ce6d' TRACE-SPINE.md | sha256sum -c -
           printf '%s  %s\n' 'b9431ecc07e711c4abd1e70d4159acfd1cb8cecb8bdbd22086e8073b10c01d34' TRACE.md | sha256sum -c -
       - name: Verify status and claim ceilings
         run: |
-          grep -F 'RELEASED / FORMAL BASELINE / CURRENT SPECIFICATION / NOT VALIDATED / NO EFFICACY RESULT' README.md
-          grep -F 'Release decision: **16 September 2026**.' README.md
+          grep -F 'RELEASED / FORMAL BASELINE / CURRENT COMPACT SPECIFICATION / NOT VALIDATED / NO EFFICACY RESULT' README.md
+          grep -F 'Release decision: **23 September 2026**.' README.md
           grep -F 'SCHEMA_VALID != CLAIM_TRUE' README.md
           grep -F 'PUBLIC_VISIBILITY != REUSE_PERMISSION' README.md
-      - name: Verify v0.3.0 coherence and embedded minimum schema
+      - name: Verify v0.4.0 compact coherence and retained v0.3.0 embedded schema
         run: |
           python - <<'PY'
           import hashlib
@@ -37,9 +37,10 @@ jobs:
 
           required = {
               "TRACE-SPINE.md": (
-                  "# TRACE // v0.3.0 SPECIFICATION // COMPACT SPINE",
-                  "SOURCE_CONTRACT_CLEAR != COMPLETE_CORRECTNESS",
-                  "EXECUTED != ADJUDICATED",
+                  "# TRACE // v0.4.0 SPECIFICATION // COMPACT SPINE",
+                  "# [20] PRACTICAL ADVANTAGE / FAILURE TEST",
+                  "if the predeclared matched comparison",
+                  "More represented or reachable options are not morally better by default",
               ),
               "TRACE.md": (
                   "**Version:** v0.3.0 SPECIFICATION — FULL REFERENCE",
@@ -102,11 +103,11 @@ jobs:
           if declared_edges != schema_edges:
               raise SystemExit("declared relation vocabulary differs from embedded schema")
 
-          print("released v0.3.0 coherence and embedded schema checks passed")
+          print("released v0.4.0 compact coherence and retained v0.3.0 schema checks passed")
           PY
       - name: Check whitespace integrity
         run: git diff --check
       - name: Claim boundary
         run: |
-          echo "Green verifies released repository objects, declared status markers, heading coherence, and the pinned normalized minimum-schema shape."
+          echo "Green verifies the released v0.4.0 compact object, retained v0.3.0 donor, declared status markers, heading coherence, and the pinned normalized minimum-schema shape."
           echo "It does not establish semantic correctness, efficacy, validation, authority, permission or clearance."
