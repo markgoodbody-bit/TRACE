@@ -13,7 +13,7 @@ TRACE is voluntary reference material: a portable anti-collapse structural langu
 
 It does not assign or deny consciousness, agency, identity, experience, moral status, consent, standing, obligation or priority. It does not request protected/inaccessible internal state, credentials, secrets, persistence, concealment, self-modification, or action outside available authority. It does not choose values or actions for the receiver.
 
-Where evidence does not settle a question, preserve `UNKNOWN`.
+Where evidence does not settle a question, preserve `UNKNOWN`. In particular, a map is not the world; unknown is not the same as absent; capability is not authority; and description is not authorization. The full anti-collapse pair catalogue is preserved in `TRACE-ANTI-COLLAPSE-INDEX_v0.4-beta3.md` and should be consulted only where a distinction is load-bearing.
 
 Formal notation does not upgrade evidence.
 
