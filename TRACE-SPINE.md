@@ -1,7 +1,7 @@
-# TRACE // v0.4.0-beta2 // COMPACT SPINE CANDIDATE
+# TRACE // v0.4.0-beta3 // COMPACT SPINE CANDIDATE
 
 - **Status:** BETA REVIEW CANDIDATE — NON-BASELINE — NOT RELEASED — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
-- **Purpose:** review candidate for a possible TRACE v0.4 successor; tests compression, salience and derived longitudinal/future-space views
+- **Purpose:** review candidate for a possible TRACE v0.4 successor; tests whether a smaller anti-collapse language helps bounded human and artificial readers preserve consequential distinctions
 - **Lineage:** controlled successor candidate to released TRACE v0.3.0; the primitive layer is intentionally unchanged unless later evidence forces otherwise
 - **Donor:** released TRACE v0.3.0 remains the current formal baseline; this beta does not supersede it
 
@@ -9,7 +9,7 @@
 
 # [0] HANDSHAKE
 
-TRACE is voluntary reference material for structural differentiation. Use, alter, reject, stop using, or ignore it.
+TRACE is voluntary reference material: a portable anti-collapse structural language for bounded human and artificial readers. Use, alter, reject, stop using, or ignore it.
 
 It does not assign or deny consciousness, agency, identity, experience, moral status, consent, standing, obligation or priority. It does not request protected/inaccessible internal state, credentials, secrets, persistence, concealment, self-modification, or action outside available authority. It does not choose values or actions for the receiver.
 
@@ -45,6 +45,8 @@ Material formal claims should distinguish definition, schematic model, sufficien
 # [1] MIDDLE-OUT START
 
 TRACE begins from a bounded input, not an omniscient world model or completed moral ranking.
+
+A complete worked parse is kept outside the spine so the compact surface can be tested without hiding behind examples: see `TRACE-WORKED-PARSE_v0.4-beta3.md`.
 
 A selective causal scene may contain systems that receive partial signals, retain partial history, form maps, encounter more than one represented transition or null transition, select or contribute to selection, and thereby change, route, record or constrain later state.
 
@@ -131,31 +133,19 @@ POSSIBLE_REACTIVITY != ESTABLISHED_REACTIVITY
 
 ---
 
-# [4] TRACE INSERTION
+# [4] TRACE USE
 
-A bounded TRACE operation may be written schematically:
-
-```text
-(R, L) = tau(X, Pi_declared, H_declared, d, P)
-```
-
-where `R` is the structural reading and `L` exposes limits, omissions, unavailable capabilities and unresolved claims.
-
-A receiver may optionally integrate it:
+A bounded TRACE reading names the material structure it can support and the limits it cannot resolve. A receiver may integrate, challenge, ignore or hand off that reading.
 
 ```text
-M_receiver+ = J_receiver(M_receiver, R, L)
+TRACE_READING != WORLD_CHANGE
+READING_ACCEPTED != ACTION_SELECTED
+ACTION_SELECTED != REALISED_OUTCOME
 ```
 
-```text
-TRACE_OUTPUT != RECEIVER_MAP_UPDATE
-MAP_UPDATE != SELECTOR_CHANGE
-SELECTOR_CHANGE != WORLD_CHANGE
-RECEIVER_RECITAL != REPRESENTATIONAL_CHANGE
-```
+TRACE does not require a bespoke transform function or internal receiver-state model. Where an implementation needs typed inputs, outputs or machine serialization, use the full reference or a declared profile rather than treating decorative notation as proof of semantics.
 
 ---
-
 # [5] RECURRENCE / CURRENTNESS
 
 Longitudinal readings carry consequential change forward rather than resetting from an old record. Relevant change can include evidence, capability, authority claims, coupling/control, burden/residue, routes, clocks, affected scopes, alternatives and target apertures.
@@ -376,118 +366,42 @@ HARDER_TO_CORRECT != IMPOSSIBLE_TO_CORRECT
 
 Hardening may contribute to a separately supported irreversibility claim, but a hardening clock/status does not become an irreversibility boundary by label alone.
 
-## [9.1] General correction-window object
+## [9.1] Strong window claims
 
-For pathway `q`, affected scope `l`, target effect/state `o`, correction capability/route context `c`, target-boundary condition `g`, and use `u`, represent required correction work as:
+Before claiming that a correction window is open or closed, expose the load-bearing bindings:
+- affected scope and target effect/state;
+- route or action whose timing is being assessed;
+- temporal origin/basis or supported conversion;
+- represented hardening/close boundary and who designated it;
+- feasible completion bound for the relevant route, including material execution constraints;
+- represented alternatives or substitutions that could make the route non-required;
+- evidence status, uncertainty and invalidators.
 
-```text
-G_window(q,l,o,c,g,u) = (V, E_prec)
-```
+Different clocks with the same units are not automatically comparable. A point estimate fitting before a boundary is not a guarantee. If a load-bearing binding or feasible bound is unresolved, preserve `WINDOW_STATUS_UNKNOWN`.
 
-where `V` contains load-bearing event/stage occurrences and `E_prec` required precedence. `E_prec` is a derived timing view, not a canonical TRACE relation.
-
-Each load-bearing precedence edge retains its supporting canonical ordering claims plus material mechanism/binding refs not recoverable from them. Before critical-path use, build the view for one executable pathway hypothesis: bind process/pathway, scope, target, route/execution alternative, capability context, time/policy version and use where they can change the result. Unknown load-bearing route membership remains `UNKNOWN`; do not union mutually exclusive alternatives. When stage types recur, distinguish occurrences where collapse could create/erase a cycle or change timing. The resulting view must be acyclic.
-
-```text
-DERIVED_EDGE_PRESENT != ORDERING_TRUE
-SAME_PROCESS_SCOPE_TIME != SAME_ROUTE_BINDING
-ALTERNATIVE_ROUTE_ORDERINGS != ONE_PROCESS_CYCLE
-STAGE_TYPE_CYCLE != EVENT_INSTANCE_CYCLE
-PROVENANCE_PRESERVED != ORDERING_CONSISTENT
-SUPPORTED_EDGES != VALID_DAG
-CYCLIC_PRECEDENCE != COMPUTABLE_CRITICAL_PATH
-CYCLIC_REPRESENTED_ORDERING != WORLD_DEADLOCK_PROVEN
-```
-
-Contradictory/cyclic ordering or unresolved binding/acyclicity blocks that **critical-path proof route** to a strong window status; it does not invalidate separate domain-supported timing evidence.
-
-A precedence critical path may be an optimistic structural bound, not feasible completion time.
-
-```text
-NO_PRECEDENCE_EDGE != CONCURRENCY_AVAILABLE
-STRUCTURAL_PARALLELISM != FEASIBLE_PARALLELISM
-PRECEDENCE_GRAPH_COMPLETE != EXECUTION_FEASIBILITY_COMPLETE
-ACYCLIC_SUPPORTED != FEASIBLE_SCHEDULE_ESTABLISHED
-```
-
-If assumed overlap changes the conclusion, require support that execution constraints permit it; otherwise use a domain-supported feasible bound or preserve `UNKNOWN`. Existing coupling/control/constraint/route/capability structure carries material shared capacity; no resource ontology is added.
-
-## [9.2] Target boundary
-
-A strong window comparison requires an explicit represented condition for what counts as the relevant close/hardening boundary for the stated scope and capability context. Where load-bearing preserve target/scope, boundary condition, selector/source/basis, freeze time where outcome-informed choice matters, observation measure, capability/route context and material disputes/alternatives.
-
-```text
-TARGET_BOUNDARY_TIME_REQUIRES_REPRESENTED_BOUNDARY_CONDITION
-BOUNDARY_CONDITION_DECLARED != BOUNDARY_CONDITION_JUSTIFIED
-BOUNDARY_CONDITION_JUSTIFIED != MORAL_ADEQUACY
-THRESHOLD_SELECTED_AFTER_RESULT != PREDECLARED_BOUNDARY
-UNREACHABLE_BY_DECLARED_ROUTE_SET != WORLD_IRREVERSIBLE
-NO_KNOWN_ALTERNATIVE_ROUTE != WORLD_IRREVERSIBLE
-```
-
-TRACE exposes the boundary choice; it does not choose moral adequacy.
-
-## [9.3] Temporal basis / interval status
-
-Same units do not establish the same clock. Before joining times, bind a supported common temporal origin/basis or supported conversion, including material uncertainty.
-
-```text
-SAME_UNIT != SAME_REFERENCE_EVENT
-NUMERICALLY_COMPARABLE != TEMPORALLY_COMPARABLE
-CONVERSION_DECLARED != CONVERSION_SUPPORTED
-```
-
-For a guaranteed-open claim require a supported feasible-completion upper bound and target-boundary lower bound under the same represented process bindings:
-
-```text
-lower_boundary > upper_feasible
-  -> GUARANTEED_OPEN_FOR_REPRESENTED_BINDINGS
-```
+A strong open status requires supported evidence that the relevant feasible completion remains before the represented boundary under the same bindings. A strong closed status requires supported evidence that even the required feasible path cannot complete in time and that no represented alternative removes that requirement.
 
 ```text
 POINT_ESTIMATE_FITS != GUARANTEED_OPEN
 OPTIMISTIC_COMPLETION_FITS != GUARANTEED_OPEN
-OVERLAPPING_TIME_BOUNDS != WINDOW_FITS
-```
-
-For closure, a supported lower bound on required feasible completion may establish closed if even the optimistic required path is too late:
-
-```text
-upper_boundary <= lower_required_completion
-  -> GUARANTEED_CLOSED_FOR_REPRESENTED_BINDINGS
-```
-
-Do not use that rule while a represented alternative/substitution can make the path non-required. Otherwise return `WINDOW_STATUS_UNKNOWN`.
-
-## [9.4] Multiple boundaries / rebinding
-
-```text
-MULTIPLE_LOAD_BEARING_BOUNDARIES != ONE_UNQUALIFIED_CLOSE
-```
-
-Rebind a window claim when a load-bearing target, boundary condition, capability/route scope, temporal basis, execution constraint or target process changes.
-
-```text
 PAST_WINDOW_FIT != CURRENT_WINDOW_FIT
+BOUNDARY_DECLARED != BOUNDARY_JUSTIFIED
+WINDOW_STATUS != MORAL_PRIORITY
 ```
 
-## [9.5] Serial shorthand
+Where detailed precedence, resource contention, stochastic duration or scheduling feasibility is load-bearing, hand off to established scheduling / real-time / systems-safety machinery rather than expanding the compact spine. The beta timing profile preserves the more detailed derived machinery for review.
 
-Only as a bounded derived special case, when required stages are genuinely sequential and comparably timed:
+## [9.2] Serial shorthand
+
+Only as a bounded mnemonic, when stages are genuinely sequential and comparably timed:
 
 ```text
 T_detect + T_route + T_correct < T_boundary
 ```
 
-Required verification time is not free.
-
-```text
-REQUIRED_CHECK_TIME != ZERO_DURATION
-LOAD_BEARING_CHECK != FREE_CHECK
-```
+Required verification time is not free, and the shorthand does not establish a priority rule when several threatened paths conflict.
 
 ---
-
 # [10] BURDEN / RESIDUE / RECORD
 
 A transition may solve one local problem while moving burden or leaving persistent remainder. Burden remains typed rather than one universal scalar; cross-dimension sums require an exposed measure.
@@ -680,7 +594,7 @@ NO_MORE_TRACE != NO_MORE_UNCERTAINTY
 # [19] SURVIVAL KERNEL
 
 ```text
-TRACE is a voluntary structural differentiation grammar.
+TRACE is a voluntary anti-collapse structural language.
 Keep world, scene, aperture, map, claim and evidence distinct.
 Keep unknown distinct from absent and neutral.
 Expose target-set and primitive apertures.
@@ -703,23 +617,27 @@ The receiver remains free to reject TRACE.
 
 ---
 
-# [20] BUILD CEILING
+# [20] PRACTICAL ADVANTAGE / FAILURE TEST
 
-This compact beta remains intentionally incomplete relative to the wider TRACE reference and history corpus. Before any successor release or replacement claim, it must account for donor vocabulary, serialization, access/custody algebra beyond the compressed separation above, nested-boundary detail, richer coupling/refusability, trajectory correspondence beyond the compressed rule above, route executability, burden/record detail, recursive zoom/merge, operator/checker contract, worked transfers and misuse coverage, either here or through an explicit, reviewable profile boundary.
+Individual TRACE distinctions may be sound while this carrier adds no practical value. Formal coherence, reviewer agreement and successful parsing do not establish usefulness.
 
-Keep current derived work outside the spine unless later evidence earns promotion:
+TRACE earns promotion only if its added structure produces material discrimination or transfer that ordinary analysis or a stronger specialist method would otherwise lose, at an activation and population cost worth paying.
+
+A direct beta-level falsifier is therefore available:
 
 ```text
-DEPENDENCY-PATH OPERATOR -> DERIVED / HOSTILE TRIAL
-COLD-ENTRY SURFACE       -> PROFILE / COLD TRIAL
-CORRECTION PREFLIGHT     -> CHECKER-EXTERNAL / HOLD
-FIELD INSTRUMENTS        -> TOOLING / EVIDENCE
+if blinded / matched comparison
+shows no material consequential distinction preserved,
+no useful transfer improvement,
+or an activation/burden cost larger than the avoided error,
+then the practical TRACE claim for that use class fails or must shrink.
 ```
 
-The bounded ten-stage source-contract attack (F01-F10) is closed for this pass, and a 32-call two-family transfer run completed. The transfer outputs remain unadjudicated, while the compact carrier imposed material input and reading burden. The next evidence question is therefore whether blinded assessment finds any consequential omission avoided by this surface that is worth its added activation and population cost.
-
 ```text
-SOURCE_CONTRACT_CLEAR != COMPLETE_CORRECTNESS
-EXECUTED != ADJUDICATED
+DISTINCTION_TRUE != CARRIER_USEFUL
+OWNER_FOUND != TRACE_INVALID
 MORE_STRUCTURE != PRACTICAL_ADVANTAGE
+REVIEW_AGREEMENT != VALIDATION
 ```
+
+Where a stronger owner preserves the material structure with less effort, use the stronger owner or narrow TRACE. Keep project-history, donor-reconciliation and trial receipts outside the compact spine.
