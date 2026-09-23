@@ -1,4 +1,4 @@
-# TRACE // v0.4.0-beta1 // COMPACT SPINE CANDIDATE
+# TRACE // v0.4.0-beta2 // COMPACT SPINE CANDIDATE
 
 - **Status:** BETA REVIEW CANDIDATE — NON-BASELINE — NOT RELEASED — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
 - **Purpose:** review candidate for a possible TRACE v0.4 successor; tests compression, salience and derived longitudinal/future-space views
