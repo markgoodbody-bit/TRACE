@@ -705,7 +705,7 @@ The receiver remains free to reject TRACE.
 
 # [20] BUILD CEILING
 
-This spine remains intentionally incomplete relative to v0.2.7. A full v0.3 candidate must account for donor vocabulary, serialization, access/custody algebra beyond the compressed separation above, nested-boundary detail, richer coupling/refusability, trajectory correspondence beyond the compressed rule above, route executability, burden/record detail, recursive zoom/merge, operator/checker contract, worked transfers and misuse coverage before any replacement claim.
+This compact beta remains intentionally incomplete relative to the wider TRACE reference and history corpus. Before any successor release or replacement claim, it must account for donor vocabulary, serialization, access/custody algebra beyond the compressed separation above, nested-boundary detail, richer coupling/refusability, trajectory correspondence beyond the compressed rule above, route executability, burden/record detail, recursive zoom/merge, operator/checker contract, worked transfers and misuse coverage, either here or through an explicit, reviewable profile boundary.
 
 Keep current derived work outside the spine unless later evidence earns promotion:
 
