@@ -504,7 +504,7 @@ RECORD_OBSERVED != EVENT_OBSERVED
 
 A record may support an event claim under an evidential contract; observing the record does not make the historical/world event itself directly observed.
 
-A later benefit may contribute to repair when a supported mechanism connects it to the specified loss. It is not repair merely because it is good, and an unchangeable past does not establish continuing impairment.
+Where a declared external value/designation source identifies a specified loss and candidate repair, a later benefit may contribute to repair when a supported mechanism connects the two. TRACE does not establish benefit or repair merely by naming them. A later state is not repair merely because it is designated good, and an unchangeable past does not establish continuing impairment.
 
 ```text
 LATER_BENEFIT != REPAIR_BY_DEFAULT
@@ -593,6 +593,8 @@ PROSPECT_SUPPORTED != DUTY_TO_PURSUE
 
 Where successful use requires an actor to recognise or choose a step, the needed information must be available to that actor in time. A route's causal operation, its discoverability and an affected being's knowledge of it remain distinct.
 
+Neighbouring owners include viability theory, capability and affordance accounts, relative reachability, attainable utility preservation and empowerment. This derived view is audit-facing and non-scalar; naming those neighbours does not import their estimators, baselines or normative commitments into TRACE.
+
 ---
 
 # [13] ABSENCE / STREAM / PATTERN
@@ -612,7 +614,7 @@ STREAM_PERSISTENCE != SAME_MECHANISM_PROVEN
 ```text
 UNKNOWN != OMITTED_FROM_THIS_RECORD
 OMITTED_FROM_THIS_RECORD != INTENTIONALLY_WITHHELD
-PRIVATE != FALSE
+EVIDENCE_WITHHELD_FROM_RECEIVER != CLAIM_FALSE
 ```
 
 `UNKNOWN` concerns what is known through a stated aperture. `OMITTED FROM THIS RECORD` concerns missing representation relative to a stated expected scope or comparison. The cause of omission, including whether anyone intentionally withheld material, requires separate support.
@@ -706,7 +708,7 @@ The receiver remains free to reject TRACE.
 
 # [20] BUILD CEILING
 
-This spine remains intentionally incomplete relative to v0.2.7. A full v0.3 candidate must account for donor vocabulary, serialization, access/custody algebra beyond the compressed separation above, nested-boundary detail, richer coupling/refusability, trajectory correspondence beyond the compressed rule above, route executability, burden/record detail, recursive zoom/merge, operator/checker contract, worked transfers and misuse coverage before any replacement claim.
+This compact beta remains intentionally incomplete relative to the wider TRACE reference/history corpus. Before any successor release or replacement claim, account for donor vocabulary, serialization, access/custody algebra beyond the compressed separation above, nested-boundary detail, richer coupling/refusability, trajectory correspondence beyond the compressed rule above, route executability, burden/record detail, recursive zoom/merge, operator/checker contract, worked transfers and misuse coverage — either here or through an explicit, reviewable profile boundary.
 
 Keep current derived work outside the spine unless later evidence earns promotion:
 
