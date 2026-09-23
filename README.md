@@ -68,13 +68,13 @@ evidence, dependencies, clocks, authority or intended use materially changes.
 
 ## Start here
 
-1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) for the compact specification and
-   primary review surface.
-2. Use [`TRACE.md`](TRACE.md) when you need the full technical reference,
-   serialization details or the complete inherited schema contract.
+For **v0.4.0-beta2 review**:
 
-The compact spine is the normal entry point. The full reference is not required
-for an initial reading.
+1. Read [`TRACE-SPINE.md`](TRACE-SPINE.md) — the beta2 compact candidate.
+2. Read [`BETA_REVIEW_v0.4-beta2.md`](BETA_REVIEW_v0.4-beta2.md) for the cold review protocol.
+3. Only after the cold pass, read [`BETA_NEIGHBOURS_v0.4.md`](BETA_NEIGHBOURS_v0.4.md).
+
+[`TRACE.md`](TRACE.md) remains the released v0.3.0 full technical reference and inherited schema donor. This beta does not yet provide a rewritten full reference; where the beta spine and released full reference differ, treat the beta spine as the review object and the v0.3.0 full reference as donor context, not a second beta surface.
 
 This repository is distinct from
 [`agentrust-io/trace-spec`](https://github.com/agentrust-io/trace-spec).
