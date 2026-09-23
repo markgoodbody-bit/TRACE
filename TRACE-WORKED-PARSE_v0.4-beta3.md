@@ -32,7 +32,7 @@ Nothing in the parse establishes which hidden model feature caused the initial r
 |---|---|---|
 | Two records were incorrectly joined | reported / later institutionally confirmed in the scene | review result, underlying record comparison |
 | Review route exists | observed from refusal notice | route terms/current policy |
-| Review can protect the first-car opportunity | unsupported / then contradicted by timing | dealer hold duration + review completion bound |
+| Review can protect the first-car opportunity | not established prospectively; this review did not preserve it in the narrated outcome | dealer hold duration + supported review completion evidence |
 | Correcting the joined record may protect later applications | projected | later applications/outcomes |
 
 Representation type does not change the evidence duty. A status field saying `review_available=true` would not establish that the route can reach the threatened opportunity.
@@ -54,7 +54,7 @@ ROUTE_TIMELY_FOR_FIRST_CAR = not supported
 CORRECTION_ROUTE_USEFUL_FOR_LATER_RECORD = supported by scene
 ```
 
-A strong timing proof would require actual compatible bounds. The teaching scene is sufficient only for the weaker conclusion that the stated review period does not protect the first-car route once the dealer will not hold it.
+A strong timing proof would require actual compatible bounds. The stated response period does not guarantee protection before the dealer deadline. The later narrated sale and correction establish that this instance did not preserve the first-car opportunity. They do not establish that every feasible execution of the review route would have been too late.
 
 ## 4. Action / transition / hardening
 
