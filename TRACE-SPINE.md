@@ -2,7 +2,7 @@
 
 - **Status:** BETA REVIEW CANDIDATE — NON-BASELINE — NOT RELEASED — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
 - **Purpose:** review candidate for a possible TRACE v0.4 successor; tests whether a smaller anti-collapse language helps bounded human and artificial readers preserve consequential distinctions
-- **Lineage:** controlled successor candidate to released TRACE v0.3.0; the primitive layer is intentionally unchanged unless later evidence forces otherwise
+- **Lineage:** controlled successor candidate to released TRACE v0.3.0; the core distinction layer is intentionally unchanged unless later evidence forces otherwise
 - **Donor:** released TRACE v0.3.0 remains the current formal baseline; this beta does not supersede it
 
 ---
@@ -88,7 +88,7 @@ ACCOUNTED_FOR != DISCOVERED_COMPLETE_SET
 OPERATOR_TARGET_SET != AUTHORITATIVE_TARGET_SET
 ```
 
-No target-set primitive is required.
+No target-set core term is required.
 
 ---
 
@@ -186,7 +186,7 @@ STATE / APERTURE / CAPABILITY / RELATION / CONSTRAINT at t
 -> NEXT READING
 ```
 
-This is a reading pattern, not a new primitive and not an internal-state oracle. Reported experience may be represented as reported; inferred or projected change remains inferred or projected.
+This is a reading pattern, not a new core term and not an internal-state oracle. Reported experience may be represented as reported; inferred or projected change remains inferred or projected.
 
 ```text
 PAST TRANSITION != TOTAL CURRENT ENTITY
@@ -292,7 +292,7 @@ SEPARATE_PARTY != INDEPENDENT_EVIDENCE
 WITNESS_OBSERVED_X != EVERY_READER_WAS_SERVED_X
 ```
 
-No witness or liveness primitive is added.
+No witness or liveness core term is added.
 
 ---
 
@@ -534,14 +534,14 @@ A load-bearing mechanism-change claim needs evidence about the relevant mechanis
 
 ---
 
-# [14] SELF-APPLICATION / PRIMITIVE APERTURE
+# [14] SELF-APPLICATION / CORE APERTURE
 
-TRACE cannot expose every possible structure. Its primitive set and reader are themselves apertures and may be inspected recursively.
+TRACE cannot expose every possible structure. Its core distinction set and reader are themselves apertures and may be inspected recursively.
 
 ```text
 SELF_APPLICATION != SELF_VALIDATION
-PRIMITIVE_AVAILABLE != PRIMITIVE_SUFFICIENT
-OMITTED_PRIMITIVE != ABSENT_MECHANISM
+CORE_TERM_AVAILABLE != CORE_TERM_SUFFICIENT
+OMITTED_CORE_TERM != ABSENT_MECHANISM
 ```
 
 ---
@@ -597,7 +597,7 @@ NO_MORE_TRACE != NO_MORE_UNCERTAINTY
 TRACE is a voluntary anti-collapse structural language.
 Keep world, scene, aperture, map, claim and evidence distinct.
 Keep unknown distinct from absent and neutral.
-Expose target-set and primitive apertures.
+Expose target-set and core-language apertures.
 Keep action distinct from realised transition.
 Keep capability, authority, value, selection and actuation from silently collapsing.
 Any proposition carrying a downstream conclusion inherits the relevant TRACE discipline regardless of whether it appears as a claim, field or configuration.
