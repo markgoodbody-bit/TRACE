@@ -329,7 +329,7 @@ Carry consequential state forward through time; freshness can expire through rel
 Presume neither that measurement is passive nor that it caused change without evidence.
 A check being present or executed does not establish that it can detect the failure that matters.
 Loss of liveness can close current verification without establishing the cause.
-Correction timing needs an explicit target boundary, comparable clocks and a supported process bound; critical-path precedence remains source-, pathway- and occurrence-bound, acyclic, and separately feasible. Keep hardening distinct from irreversibility, and uncertainty distinct from the selector/policy that chooses action or delay.
+Correction timing needs an explicit target boundary, comparable clocks and a supported feasible process bound. Detailed precedence and scheduling claims belong in the timing profile or a stronger domain method. Keep hardening distinct from irreversibility, and uncertainty distinct from the selector/policy that chooses action or delay.
 A repeated path label does not establish that the same continuation remains reachable.
 A future-space comparison needs an exposed baseline; a supported prospect is not a feeling, a score, a permission or a duty.
 Expose route usability, coupling, burden, residue, future-path changes, designation and comparison measure at the resolution evidence supports. Keep refusal distinct from malfunction, local correction distinct from mechanism change, future-strategy revisability distinct from realised-transition reversibility, and aggregate recovery distinct from individual repair.
@@ -344,16 +344,24 @@ The receiver remains free to reject TRACE.
 
 Individual TRACE distinctions may be sound while this carrier adds no practical value. Formal coherence, reviewer agreement and successful parsing do not establish usefulness.
 
-TRACE earns promotion only if its added structure produces material discrimination or transfer that ordinary analysis or a stronger specialist method would otherwise lose, at an activation and population cost worth paying.
+TRACE earns promotion only if its added structure produces discrimination or transfer that a declared comparator would otherwise lose, at an activation and user burden justified by a predeclared use criterion.
 
-A direct beta-level falsifier is therefore available:
+For a beta test, state **before seeing the results**:
+- the use class and task;
+- the comparator (for example careful ordinary analysis or a named specialist method);
+- which distinctions/outcomes count as consequential for that task and who designated them;
+- the activation/burden measure;
+- the adjudication method and, where feasible, an assessor not told which carrier produced which output.
+
+A direct beta-level falsifier is then available:
 
 ```text
-if blinded / matched comparison
-shows no material consequential distinction preserved,
-no useful transfer improvement,
-or an activation/burden cost larger than the avoided error,
+if the predeclared matched comparison
+shows no consequential discrimination / transfer advantage,
+or the declared activation/burden ceiling is exceeded,
 then the practical TRACE claim for that use class fails or must shrink.
 ```
+
+Do not redefine the task, comparator, consequence measure or burden ceiling after observing the result merely to preserve TRACE. A later test may use different declared criteria, but it is a different claim.
 
 Where a stronger owner preserves the material structure with less effort, use the stronger owner or narrow TRACE. Keep project-history, donor-reconciliation and trial receipts outside the compact spine.
