@@ -1,4 +1,4 @@
-# TRACE // v0.4.0-beta3 // COMPACT SPINE CANDIDATE
+# TRACE // v0.4.0-beta4 // COMPACT SPINE CANDIDATE
 
 - **Status:** BETA REVIEW CANDIDATE — NON-BASELINE — NOT RELEASED — NOT VALIDATED — VOLUNTARY — NOT AUTHORITY — NOT PERMISSION — NOT CLEARANCE
 - **Purpose:** review candidate for a possible TRACE v0.4 successor; tests whether a smaller anti-collapse language helps bounded human and artificial readers preserve consequential distinctions
@@ -141,7 +141,7 @@ A report may establish a status under a declared domain evidence/authority contr
 
 ## [6.1] Verification discrimination
 
-Do not collapse distinct states into `checked` when the distinction changes a downstream claim. A check may exist without having run, and may run without being able to detect the failure that matters; claims about its result need evidence of execution and relevant discriminatory power.
+Do not collapse distinct states into `checked` when the distinction changes a downstream claim. A check may exist without having run, and may run without being able to detect the failure that matters; claims about its result need evidence of execution and relevant discriminatory power. Even a valid result can fail to reach the point where it could change the live decision.
 
 Adequacy evidence is domain-specific; TRACE does not require destructive fault injection.
 
@@ -149,7 +149,7 @@ Adequacy evidence is domain-specific; TRACE does not require destructive fault i
 
 Loss of reply, heartbeat, route, status or witness may close a current verification interval without establishing why.
 
-A witness establishes only what its aperture supports.
+A witness establishes only what its aperture supports. Evidence being external to the actor under review does not by itself make the evidence independent; shared custody, incentives, derivation paths or control may still couple the witness to the same mechanism.
 
 No witness or liveness core term is added.
 
@@ -242,7 +242,7 @@ DESCRIPTION != PERMISSION
 
 # [12] FUTURE-SPACE
 
-For a declared scope, horizon and transition model, TRACE may represent paths the current map says are reachable, blocked, preserved, opened, closed, hardened, unknown or omitted. This is represented future-space, not the future itself.
+For a declared scope, horizon and transition model, TRACE may represent paths the current map says are reachable, blocked, preserved, opened, closed, hardened, unknown or omitted. This is represented future-space, not the future itself. More represented or reachable options are not morally better by default; some commitments, protections and legitimate closures deliberately reduce option count.
 
 When a downstream comparison claims that a future path was preserved, lost, opened or closed across states/times, correspondence must be supported at the resolution relevant to that claim. Persistence of a label or identifier is not enough. If correspondence cannot be established, preserve `UNKNOWN` rather than silently equating the paths.
 
@@ -351,7 +351,7 @@ For a beta test, state **before seeing the results**:
 - the comparator (for example careful ordinary analysis or a named specialist method);
 - which distinctions/outcomes count as consequential for that task and who designated them;
 - the activation/burden measure;
-- the adjudication method and, where feasible, an assessor not told which carrier produced which output.
+- the adjudication method, who selected it, and, where feasible, an assessor not told which carrier produced which output.
 
 A direct beta-level falsifier is then available:
 
