@@ -1,60 +1,45 @@
-# TRACE
+# TRACE v0.5.0 — current released research specification
 
-TRACE is a voluntary structural language for examining and developing possible futures under uncertainty. It keeps participants' aims, evidence, usable routes, timing, burdens, refusal and correction connected across a changing situation.
+**Current release: [Read the complete TRACE v0.5.0 specification](TRACE-v0.5.md).**
 
-Start with a bounded question: what could change, for whom, through which route, and on what evidence? A useful result may be a short prose account. Use a specialist method or ordinary notebook when it does the job with less effort.
+**v0.5.0 / RELEASED RESEARCH SPECIFICATION / efficacy UNVALIDATED**
+
+One file contains the introduction, notation, continuous navigator narrative, three synthetic cases, limitations, glossary and source crosswalk. [Release and shareable snapshot](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.5.0).
+
+TRACE is a voluntary structural language for examining and developing possible futures under uncertainty. It connects participants' aims, evidence, usable routes, timing, burdens, refusal and correction across a changing situation.
+
+Start with a bounded question: what could change, for whom, through which route, and on what evidence? Use ordinary prose or a specialist method when it does the job with less effort.
 
 ## A small example
 
-An appeal may formally exist, but the decision being appealed could take effect
-before the appeal can be heard. The route exists in the rules while remaining
-too slow, expensive or inaccessible to protect what is at stake.
+An appeal may formally exist, but the decision being appealed could take effect before the appeal can be heard. The route exists in the rules while remaining too slow, expensive or inaccessible to protect what is at stake.
 
-TRACE distinguishes between:
+TRACE distinguishes between a route existing and being usable; correction being possible and arriving in time; a record being repaired and the original loss being restored. The description does not settle the dispute. It identifies claims, dependencies, deadlines, burdens and remaining paths to examine.
 
-- a route existing and a route being practically usable;
-- a correction being possible and arriving in time;
-- a record being repaired and the original loss being restored;
-- evidence supporting a claim and a document merely containing that claim;
-- work being required and who is made to carry it.
+## Explore the current specification
 
-The resulting description does not settle the dispute. It shows which claims,
-dependencies, deadlines, burdens and remaining paths need to be tested.
-
-## Read
-
-**Current release: [TRACE v0.5 — complete research specification](TRACE-v0.5.md).** One file contains the entrance, notation, continuous navigator narrative, three synthetic cases, limitations, glossary and source crosswalk. Status: **v0.5.0 / RELEASED RESEARCH SPECIFICATION / efficacy UNVALIDATED**. [GitHub release](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.5.0) · [release record](RELEASE_v0.5.0.md).
-
-**Historical compact baseline: [TRACE v0.4 compact spine](TRACE-SPINE.md).** The [v0.3 full reference](TRACE.md) remains the detailed technical donor. Neither file is overwritten or relabelled by this release.
-
-## What v0.5 adds
-
-- A continuous encounter: participants create alternatives, cooperate within scope, refuse, learn and return with unfinished work.
-- Separate attempt conditions, actor-specific success criteria and durable-capability maintenance.
-- Explicit aim revision without rewriting earlier commitments as successes.
-- Local notation for evidence, source scope, clocks and faithful compression, with worked examples.
-- An optional binding-interface description, clearly separated from a complete executable language.
-
-See the [change log](CHANGELOG.md), [version/source index](VERSIONS.md) and [release source checks](checks/trace05-v0.5.0.json). The [Mechanical Ethics casebook](https://github.com/markgoodbody-bit/mechanical-ethics/tree/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook) provides historical studies; it is not a TRACE efficacy benchmark.
+- [Continuous navigator narrative](TRACE-v0.5.md#2a-one-encounter-through-time--candidate-navigation-profile): alternatives, cooperation, refusal, learning and unfinished work.
+- [Three synthetic cases](TRACE-v0.5.md#3-synthetic-encounter-a-a-capability-created-together): shared fabrication, restoration access, memory and revision.
+- [Evidence and implementation limits](TRACE-v0.5.md#6-evidence-and-implementation-status): what is specified, tested or not implemented.
+- [Mechanical Ethics casebook](https://github.com/markgoodbody-bit/mechanical-ethics/tree/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook): historical studies, not a TRACE efficacy benchmark.
 
 ## Limits and rights
 
-A representation is not the world. Parsing does not authenticate evidence, establish moral standing, confer permission or perform an action. This research specification is not a shipped full-language decoder, a demonstrated universal translator or evidence of improved model reasoning. Private experimental code is not part of this distribution.
+This is a research specification, not a shipped full-language decoder, demonstrated universal translator or evidence of improved model reasoning. Optional interfaces remain proposed. Private experimental software is not included.
 
-The unchanged [AI training permission](AI_TRAINING_PERMISSION.md) covers the owner-controlled released v0.3 material it names. It does not automatically cover v0.4 or v0.5. Public visibility is not a general reuse licence; no new rights are granted by this release.
+`SCHEMA_VALID != CLAIM_TRUE` · `PUBLIC_VISIBILITY != REUSE_PERMISSION`
 
-## Review and history
+Parsing does not authenticate evidence, confer permission or perform an action. The unchanged [AI training permission](AI_TRAINING_PERMISSION.md) covers only the owner-controlled released v0.3 material it names; it does not automatically cover v0.4 or v0.5. No additional training or general reuse rights are granted here.
 
-### Released v0.4 baseline
+## Repository guide
 
-Release decision: **23 September 2026**. The following status describes the retained v0.4 compact specification, not the current v0.5 research specification:
+| Path | Purpose |
+|---|---|
+| [TRACE-v0.5.md](TRACE-v0.5.md) | **Current complete specification — start here** |
+| [VERSIONS.md](VERSIONS.md), [CHANGELOG.md](CHANGELOG.md) | Version identities and changes |
+| [HISTORY.md](HISTORY.md) | Historical specifications, release records and development documents |
+| [checks/](checks/) | Source-integrity checks; not efficacy tests |
 
-```text
-HISTORICAL v0.4 / RELEASED FORMAL BASELINE / NOT VALIDATED / NO EFFICACY RESULT
-SCHEMA_VALID != CLAIM_TRUE
-PUBLIC_VISIBILITY != REUSE_PERMISSION
-```
+**The root files `TRACE.md` (v0.3) and `TRACE-SPINE.md` (v0.4) are historical references, not alternate current specifications.** They remain at their original paths to preserve citations and exact source identities. Older release records and `research/` also remain historical; use [HISTORY.md](HISTORY.md) to navigate them.
 
-Specific counterexamples, simpler comparators and no-material-benefit findings are welcome through the [standing criticism issue](https://github.com/markgoodbody-bit/TRACE/issues/52). No one is required to agree, disclose private reasoning or adopt TRACE.
-
-Historical research remains [labelled as such](research/TRACE-0.5-CANDIDATE-START.md). See [release history](https://github.com/markgoodbody-bit/TRACE/releases) for actual releases. This project is distinct from [agentrust-io/trace-spec](https://github.com/agentrust-io/trace-spec).
+Specific counterexamples, simpler comparators and no-material-benefit findings are welcome through the [standing criticism issue](https://github.com/markgoodbody-bit/TRACE/issues/52). No one is required to agree, disclose private reasoning or adopt TRACE. This project is distinct from [agentrust-io/trace-spec](https://github.com/agentrust-io/trace-spec).
