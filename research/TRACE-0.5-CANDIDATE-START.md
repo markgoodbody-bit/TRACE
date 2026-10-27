@@ -1,4 +1,4 @@
-> **Historical development document.** Superseded as the proposed reading entrance by the [complete v0.5 candidate](../TRACE-v0.5.md). Original text follows unchanged; statements of “current” or “next” below are historical, not current release status.
+> **Historical development document.** Superseded as the reading entrance by the [released v0.5 research specification](../TRACE-v0.5.md). Original text follows unchanged; statements of “current” or “next” below are historical, not current release status.
 
 # TRACE 0.5 — research candidate (NOT RELEASED)
 

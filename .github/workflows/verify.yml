@@ -19,8 +19,8 @@ jobs:
           printf '%s  %s\n' 'b9431ecc07e711c4abd1e70d4159acfd1cb8cecb8bdbd22086e8073b10c01d34' TRACE.md | sha256sum -c -
       - name: Verify status and claim ceilings
         run: |
-          grep -F 'RELEASED / FORMAL BASELINE / CURRENT COMPACT SPECIFICATION / NOT VALIDATED / NO EFFICACY RESULT' README.md
-          grep -F 'Release decision: **23 September 2026**.' README.md
+          python checks/verify_v050.py
+          grep -F 'v0.5.0 / RELEASED RESEARCH SPECIFICATION / efficacy UNVALIDATED' README.md
           grep -F 'SCHEMA_VALID != CLAIM_TRUE' README.md
           grep -F 'PUBLIC_VISIBILITY != REUSE_PERMISSION' README.md
       - name: Verify v0.4.0 compact coherence and retained v0.3.0 embedded schema
@@ -109,5 +109,5 @@ jobs:
         run: git diff --check
       - name: Claim boundary
         run: |
-          echo "Green verifies the released v0.4.0 compact object, retained v0.3.0 donor, declared status markers, heading coherence, and the pinned normalized minimum-schema shape."
+          echo "Green verifies the v0.5.0 research specification identity and examples, historical v0.4.0 compact object, retained v0.3.0 donor, declared status markers, heading coherence, and the pinned normalized minimum-schema shape."
           echo "It does not establish semantic correctness, efficacy, validation, authority, permission or clearance."

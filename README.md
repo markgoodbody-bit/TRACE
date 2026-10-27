@@ -23,9 +23,9 @@ dependencies, deadlines, burdens and remaining paths need to be tested.
 
 ## Read
 
-**Proposed next version: [TRACE v0.5 — complete research specification](TRACE-v0.5.md).** One file contains the entrance, notation, continuous navigator narrative, three synthetic cases, limitations, glossary and source crosswalk. Status: **0.5.0-rc1 / draft research specification / not released / not empirically validated**.
+**Current release: [TRACE v0.5 — complete research specification](TRACE-v0.5.md).** One file contains the entrance, notation, continuous navigator narrative, three synthetic cases, limitations, glossary and source crosswalk. Status: **v0.5.0 / RELEASED RESEARCH SPECIFICATION / efficacy UNVALIDATED**. [GitHub release](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.5.0) · [release record](RELEASE_v0.5.0.md).
 
-**Current released baseline: [TRACE v0.4 compact spine](TRACE-SPINE.md).** The [v0.3 full reference](TRACE.md) remains the detailed technical donor. Neither file is overwritten or relabelled by this candidate.
+**Historical compact baseline: [TRACE v0.4 compact spine](TRACE-SPINE.md).** The [v0.3 full reference](TRACE.md) remains the detailed technical donor. Neither file is overwritten or relabelled by this release.
 
 ## What v0.5 adds
 
@@ -35,22 +35,22 @@ dependencies, deadlines, burdens and remaining paths need to be tested.
 - Local notation for evidence, source scope, clocks and faithful compression, with worked examples.
 - An optional binding-interface description, clearly separated from a complete executable language.
 
-See the [change log](CHANGELOG.md), [version/source index](VERSIONS.md) and [candidate checks](checks/trace05-rc1.json). The [Mechanical Ethics casebook](https://github.com/markgoodbody-bit/mechanical-ethics/tree/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook) provides historical studies; it is not a TRACE efficacy benchmark.
+See the [change log](CHANGELOG.md), [version/source index](VERSIONS.md) and [release source checks](checks/trace05-v0.5.0.json). The [Mechanical Ethics casebook](https://github.com/markgoodbody-bit/mechanical-ethics/tree/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook) provides historical studies; it is not a TRACE efficacy benchmark.
 
 ## Limits and rights
 
-A representation is not the world. Parsing does not authenticate evidence, establish moral standing, confer permission or perform an action. The candidate is not a shipped full-language decoder, a demonstrated universal translator or evidence of improved model reasoning. Private experimental code is not part of this distribution.
+A representation is not the world. Parsing does not authenticate evidence, establish moral standing, confer permission or perform an action. This research specification is not a shipped full-language decoder, a demonstrated universal translator or evidence of improved model reasoning. Private experimental code is not part of this distribution.
 
-The unchanged [AI training permission](AI_TRAINING_PERMISSION.md) covers the owner-controlled released v0.3 material it names. It does not automatically cover v0.4 or v0.5. Public visibility is not a general reuse licence; no new rights are granted by this candidate.
+The unchanged [AI training permission](AI_TRAINING_PERMISSION.md) covers the owner-controlled released v0.3 material it names. It does not automatically cover v0.4 or v0.5. Public visibility is not a general reuse licence; no new rights are granted by this release.
 
 ## Review and history
 
 ### Released v0.4 baseline
 
-Release decision: **23 September 2026**. The following status describes the retained v0.4 compact specification, not the proposed v0.5 candidate:
+Release decision: **23 September 2026**. The following status describes the retained v0.4 compact specification, not the current v0.5 research specification:
 
 ```text
-RELEASED / FORMAL BASELINE / CURRENT COMPACT SPECIFICATION / NOT VALIDATED / NO EFFICACY RESULT
+HISTORICAL v0.4 / RELEASED FORMAL BASELINE / NOT VALIDATED / NO EFFICACY RESULT
 SCHEMA_VALID != CLAIM_TRUE
 PUBLIC_VISIBILITY != REUSE_PERMISSION
 ```

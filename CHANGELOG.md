@@ -1,5 +1,9 @@
 # Change log
 
+## 0.5.0 — released research specification, 27 October 2026
+
+Promotes the reviewed rc1 document under Mark's final release instruction. Updates current-version navigation and status; preserves substantive contracts and all four illustrative JSON blocks. Optional interfaces remain PROPOSED, experimental code NOT SHIPPED and efficacy UNVALIDATED. The v0.4/v0.3 sources, older tags and version-specific rights remain unchanged. See the [release record](RELEASE_v0.5.0.md).
+
 ## 0.5.0-rc1 — proposed, 27 October 2026
 
 This is a versioned research-specification candidate, not a release receipt.
