@@ -1,5 +1,9 @@
 # Change log
 
+## Post-release documentation — 27 October 2026
+
+Makes the current v0.5.0 reader the first README link and adds a historical-file guide. Clarifies the role of root-level older specifications and release records, and labels rc1 as development provenance. This changes main-branch navigation only: the v0.5.0 tag, released specification, historical source bytes and training permission remain unchanged.
+
 ## 0.5.0 — released research specification, 27 October 2026
 
 Promotes the reviewed rc1 document under Mark's final release instruction. Updates current-version navigation and status; preserves substantive contracts and all four illustrative JSON blocks. Optional interfaces remain PROPOSED, experimental code NOT SHIPPED and efficacy UNVALIDATED. The v0.4/v0.3 sources, older tags and version-specific rights remain unchanged. See the [release record](RELEASE_v0.5.0.md).
