@@ -1,0 +1,47 @@
+{
+  "status": "SOURCE_CHECKED_DRAFT_NOT_RELEASED",
+  "base": "475772354a29cdd96b3c8fae7be93449c4737d71",
+  "candidate": {
+    "path": "TRACE-v0.5.md",
+    "bytes": 92613,
+    "sha256": "50bc28658509826e539d61fb3501fbaaffc227700a4ac43b292ad6a6cdc83628"
+  },
+  "json_blocks_parsed": 4,
+  "json_blocks_byte_identical_to_N3": true,
+  "case_A_refs_resolve": true,
+  "attempt_excludes_production_and_usability_outcome": true,
+  "historical_files_sha256": {
+    "TRACE-SPINE.md": "add22409dcc25d09b26559c7d824ddae047262ac5918a509c2a4234bdc27ce6d",
+    "TRACE.md": "b9431ecc07e711c4abd1e70d4159acfd1cb8cecb8bdbd22086e8073b10c01d34"
+  },
+  "local_links_and_anchors_checked": 28,
+  "local_link_errors": [],
+  "external_links": [
+    "https://github.com/agentrust-io/trace-spec",
+    "https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md",
+    "https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md",
+    "https://github.com/markgoodbody-bit/TRACE/issues/52",
+    "https://github.com/markgoodbody-bit/TRACE/releases",
+    "https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.3.0",
+    "https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.4.0",
+    "https://github.com/markgoodbody-bit/mechanical-ethics/blob/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook/06-gitlab-recovery.md",
+    "https://github.com/markgoodbody-bit/mechanical-ethics/tree/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook",
+    "https://github.com/markgoodbody-bit/mechanical-ethics/tree/v1.0.0"
+  ],
+  "external_scope": "GitHub source identities checked through connected repository API; no universal anonymous availability or rendered-browser claim",
+  "native_receiver_world_tests": "NOT_RUN_NOT_CLAIMED",
+  "first_failures_preserved": [
+    "Local full-donor transfer exceeded shell argument limit before execution; corrected to bounded chunks, resulting donor hash matched. No source mutation or VM action involved.",
+    "First local link pass found the receipt path not yet created; created it and reran successfully.",
+    "Aggregate text transfer was truncated; reacquired each file separately before Git writes.",
+    "Missing-branch update-ref and initial PR head validation returned 422; dedicated create-branch operation succeeded.",
+    "GitHub run 40579120382 failed README status-marker check after both donor hashes passed. Restored explicitly scoped historical v0.4 status/date and claim-ceiling markers without weakening workflow."
+  ],
+  "specialist_integration": {
+    "codex_reviewed_head": "7ea23cc0c2e93275113a347365b5c7380dafe954",
+    "codex_material_findings": 0,
+    "cc_receipt": "COM877 c6453162047",
+    "cc_material_findings": 3,
+    "build_disposition": "All three adopted; three exact spec prose replacements and original README example restored. No JSON change. Optional licence-link precision and repeated-entrance note deferred; no rights ambiguity found or rights change made."
+  }
+}

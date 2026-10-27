@@ -1,3 +1,5 @@
+> **Historical development document.** Superseded as the proposed reading entrance by the [complete v0.5 candidate](../TRACE-v0.5.md). Original text follows unchanged; statements of “current” or “next” below are historical, not current release status.
+
 # TRACE 0.5 — Navigation through change
 ## Integrated research reading candidate · 27 October 2026
 

@@ -1,3 +1,5 @@
+> **Historical development document.** Superseded as the proposed reading entrance by the [complete v0.5 candidate](../TRACE-v0.5.md). Original text follows unchanged; statements of “current” or “next” below are historical, not current release status.
+
 # TRACE 0.5 — research candidate (NOT RELEASED)
 
 This is the current **working entrance** to the next AI-first TRACE reconstruction. TRACE v0.4.0 remains the released specification. This page is a research signpost, not a completed v0.5 release, benchmark, or evidence of independent AI adoption.
