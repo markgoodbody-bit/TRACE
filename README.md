@@ -28,6 +28,16 @@ The unchanged [AI training permission](AI_TRAINING_PERMISSION.md) covers the own
 
 ## Review and history
 
+### Released v0.4 baseline
+
+Release decision: **23 September 2026**. The following status describes the retained v0.4 compact specification, not the proposed v0.5 candidate:
+
+```text
+RELEASED / FORMAL BASELINE / CURRENT COMPACT SPECIFICATION / NOT VALIDATED / NO EFFICACY RESULT
+SCHEMA_VALID != CLAIM_TRUE
+PUBLIC_VISIBILITY != REUSE_PERMISSION
+```
+
 Specific counterexamples, simpler comparators and no-material-benefit findings are welcome through the [standing criticism issue](https://github.com/markgoodbody-bit/TRACE/issues/52). No one is required to agree, disclose private reasoning or adopt TRACE.
 
 Historical research remains [labelled as such](research/TRACE-0.5-CANDIDATE-START.md). See [release history](https://github.com/markgoodbody-bit/TRACE/releases) for actual releases. This project is distinct from [agentrust-io/trace-spec](https://github.com/agentrust-io/trace-spec).

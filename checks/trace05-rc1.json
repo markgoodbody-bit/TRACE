@@ -32,6 +32,9 @@
   "native_receiver_world_tests": "NOT_RUN_NOT_CLAIMED",
   "first_failures_preserved": [
     "Local full-donor transfer exceeded shell argument limit before execution; corrected to bounded chunks, resulting donor hash matched. No source mutation or VM action involved.",
-    "First link pass correctly failed on the not-yet-created check receipt path; created receipt then reran to zero link errors."
+    "First local link pass found the receipt path not yet created; created it and reran successfully.",
+    "Aggregate text transfer was truncated; reacquired each file separately before Git writes.",
+    "Missing-branch update-ref and initial PR head validation returned 422; dedicated create-branch operation succeeded.",
+    "GitHub run 40579120382 failed README status-marker check after both donor hashes passed. Restored explicitly scoped historical v0.4 status/date and claim-ceiling markers without weakening workflow."
   ]
 }
