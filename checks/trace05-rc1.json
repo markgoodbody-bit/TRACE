@@ -3,8 +3,8 @@
   "base": "475772354a29cdd96b3c8fae7be93449c4737d71",
   "candidate": {
     "path": "TRACE-v0.5.md",
-    "bytes": 91801,
-    "sha256": "78b149ceb989a2f354e0b6f057c2c37ab0f5cca321444a301903131a17680b2d"
+    "bytes": 92613,
+    "sha256": "50bc28658509826e539d61fb3501fbaaffc227700a4ac43b292ad6a6cdc83628"
   },
   "json_blocks_parsed": 4,
   "json_blocks_byte_identical_to_N3": true,
@@ -36,5 +36,12 @@
     "Aggregate text transfer was truncated; reacquired each file separately before Git writes.",
     "Missing-branch update-ref and initial PR head validation returned 422; dedicated create-branch operation succeeded.",
     "GitHub run 40579120382 failed README status-marker check after both donor hashes passed. Restored explicitly scoped historical v0.4 status/date and claim-ceiling markers without weakening workflow."
-  ]
+  ],
+  "specialist_integration": {
+    "codex_reviewed_head": "7ea23cc0c2e93275113a347365b5c7380dafe954",
+    "codex_material_findings": 0,
+    "cc_receipt": "COM877 c6453162047",
+    "cc_material_findings": 3,
+    "build_disposition": "All three adopted; three exact spec prose replacements and original README example restored. No JSON change. Optional licence-link precision and repeated-entrance note deferred; no rights ambiguity found or rights change made."
+  }
 }

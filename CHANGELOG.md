@@ -10,6 +10,10 @@ Editorial integration removes private review routing, obsolete current-version l
 
 Retains TRACE-SPINE.md v0.4 and TRACE.md v0.3 byte-for-byte. Historical research stays available with a supersession notice. Existing releases, tags and training permission are unchanged.
 
+### Reader corrections after specialist review
+
+Explicitly lists the story/JSON differences in aim, supplied reports, permission and clocks; prohibits importing unresolved values or outcome criteria between them. Clarifies that continued access cannot turn an absent renewed agreement into permission. Restores the concrete appeal example to the README. The four JSON blocks remain unchanged. These corrections address reader interpretation and do not extend the implementation or rights claims.
+
 ## 0.4.0 — released 23 September 2026
 
 [Release receipt](RELEASE_v0.4.0.md). Compact specification promoted from the reviewed beta4; no new semantic primitive at promotion. Full v0.3 reference retained.

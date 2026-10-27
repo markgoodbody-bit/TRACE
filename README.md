@@ -4,6 +4,23 @@ TRACE is a voluntary structural language for examining and developing possible f
 
 Start with a bounded question: what could change, for whom, through which route, and on what evidence? A useful result may be a short prose account. Use a specialist method or ordinary notebook when it does the job with less effort.
 
+## A small example
+
+An appeal may formally exist, but the decision being appealed could take effect
+before the appeal can be heard. The route exists in the rules while remaining
+too slow, expensive or inaccessible to protect what is at stake.
+
+TRACE distinguishes between:
+
+- a route existing and a route being practically usable;
+- a correction being possible and arriving in time;
+- a record being repaired and the original loss being restored;
+- evidence supporting a claim and a document merely containing that claim;
+- work being required and who is made to carry it.
+
+The resulting description does not settle the dispute. It shows which claims,
+dependencies, deadlines, burdens and remaining paths need to be tested.
+
 ## Read
 
 **Proposed next version: [TRACE v0.5 — complete research specification](TRACE-v0.5.md).** One file contains the entrance, notation, continuous navigator narrative, three synthetic cases, limitations, glossary and source crosswalk. Status: **0.5.0-rc1 / draft research specification / not released / not empirically validated**.
