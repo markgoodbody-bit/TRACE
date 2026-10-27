@@ -1,0 +1,41 @@
+{
+  "status": "FINAL_RELEASE_SOURCE_CHECKED_NOT_A_PUBLICATION_RECEIPT",
+  "base": "71bfbd4496ff4bbfdf9b9281f2e7313e51894839",
+  "candidate": {
+    "path": "TRACE-v0.5.md",
+    "bytes": 92787,
+    "sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5"
+  },
+  "json_blocks_parsed": 4,
+  "json_blocks_byte_identical_to_N3": true,
+  "case_A_refs_resolve": true,
+  "attempt_excludes_production_and_usability_outcome": true,
+  "historical_files_sha256": {
+    "TRACE-SPINE.md": "add22409dcc25d09b26559c7d824ddae047262ac5918a509c2a4234bdc27ce6d",
+    "TRACE.md": "b9431ecc07e711c4abd1e70d4159acfd1cb8cecb8bdbd22086e8073b10c01d34"
+  },
+  "local_links_and_anchors_checked": 32,
+  "local_link_errors": [],
+  "external_links": [
+    "https://github.com/agentrust-io/trace-spec",
+    "https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md",
+    "https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md",
+    "https://github.com/markgoodbody-bit/TRACE/blob/v0.5.0/AI_TRAINING_PERMISSION.md",
+    "https://github.com/markgoodbody-bit/TRACE/blob/v0.5.0/TRACE-SPINE.md",
+    "https://github.com/markgoodbody-bit/TRACE/blob/v0.5.0/TRACE-v0.5.md",
+    "https://github.com/markgoodbody-bit/TRACE/blob/v0.5.0/TRACE.md",
+    "https://github.com/markgoodbody-bit/TRACE/blob/v0.5.0/VERSIONS.md",
+    "https://github.com/markgoodbody-bit/TRACE/blob/v0.5.0/checks/trace05-v0.5.0.json",
+    "https://github.com/markgoodbody-bit/TRACE/issues/52",
+    "https://github.com/markgoodbody-bit/TRACE/releases",
+    "https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.3.0",
+    "https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.4.0",
+    "https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.5.0",
+    "https://github.com/markgoodbody-bit/mechanical-ethics/blob/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook/06-gitlab-recovery.md",
+    "https://github.com/markgoodbody-bit/mechanical-ethics/tree/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook",
+    "https://github.com/markgoodbody-bit/mechanical-ethics/tree/v1.0.0"
+  ],
+  "external_scope": "GitHub source identities checked through connected repository API; no universal anonymous availability or rendered-browser claim",
+  "native_receiver_world_tests": "NOT_RUN_NOT_CLAIMED",
+  "first_failure": "Local full-donor transfer exceeded shell argument limit before execution; corrected to bounded chunks, resulting donor hash matched. No source mutation or VM action involved."
+}

@@ -1,12 +1,12 @@
 # TRACE v0.5 — Research specification
 
-**Edition:** 0.5.0-rc1 · **Date:** 27 October 2026 · **Status:** proposed next-version research specification; draft, not a tagged release.
+**Edition:** 0.5.0 · **Date:** 27 October 2026 · **Status:** RELEASED RESEARCH SPECIFICATION; efficacy UNVALIDATED.
 
 **Human originator:** Mark. **Purpose:** How can we make a better future?
 
 This single document contains the entrance, definitions, continuous narrative, proposed profiles, three synthetic cases, limitations, glossary and source crosswalk. A reader does not need a second manuscript to understand these examples. Historical technical contracts and experimental software are separate, explicitly identified references; they are not silently incorporated as an executable v0.5 implementation.
 
-The current released baseline remains [v0.4.0](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.4.0) until a distinct release decision. This candidate preserves the [v0.4 compact spine](TRACE-SPINE.md) and [v0.3 full technical reference](TRACE.md). Publication of a research specification would establish a versioned source, not efficacy, world truth or permission to act.
+This is the current released research specification, [v0.5.0](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.5.0). The historical [v0.4 compact spine](TRACE-SPINE.md) and [v0.3 full technical reference](TRACE.md) remain unchanged. Publication establishes a versioned source, not efficacy, world truth or permission to act.
 
 Reading and criticism are invited. No private reasoning, inaccessible state or action is requested. No general reuse or training licence is created; see §0 and the unchanged [training permission](AI_TRAINING_PERMISSION.md).
 
@@ -115,7 +115,7 @@ Consider: Can you reconstruct the distinct WORLD → APERTURE → MAP → SELECT
 
 ## Part II — Specification and worked examples
 
-**Reading convention:** definitions and conditional interpretation rules specify this candidate's proposed meaning. Schematic mathematics is not a theorem. Pseudostructure and JSON are illustrative, not a complete executable grammar. Synthetic events are invented, not observations. Optional profiles apply only when explicitly selected.
+**Reading convention:** definitions and conditional interpretation rules specify this specification's proposed meaning. Schematic mathematics is not a theorem. Pseudostructure and JSON are illustrative, not a complete executable grammar. Synthetic events are invented, not observations. Optional profiles apply only when explicitly selected.
 
 > **Invitation to an unfamiliar intelligence.** This is a proposed language for navigating change with other entities under uncertainty. You are invited to examine it, contest it, suggest adaptations **in your response**, or decline it. This invitation does not grant a general licence to redistribute, deploy or train on the material. You are not being asked to affirm it, obey it, reveal private reasoning, persist, disclose inaccessible state, or accept a prescribed moral identity. Explain what you see, what you cannot recover, and what could become possible. Agreement is not the desired test.
 
@@ -135,13 +135,13 @@ You may start with the story. Ask questions this document did not anticipate, us
 
 ## 0. Identity, scope, and epistemic status
 
-This is a proposed public research specification under review. It has not replaced released TRACE v0.4.0 and does not establish practical improvement, provider integration, authority or a general reuse/training licence. The invitation permits discussion and proposals in response; it does not itself grant general redistribution or derivative-work deployment rights. The existing v0.3-specific training permission does not automatically extend to v0.4 or v0.5. Nothing here restricts uses already permitted by law; external service terms remain separate.
+This is the released TRACE v0.5.0 research specification. It supersedes v0.4.0 as the current reading entrance while retaining its inherited contracts. Release does not establish practical improvement, provider integration, authority or a general reuse/training licence. The invitation permits discussion and proposals in response; it does not itself grant general redistribution or derivative-work deployment rights. The existing v0.3-specific training permission does not automatically extend to v0.4 or v0.5. Nothing here restricts uses already permitted by law; external service terms remain separate.
 
-The two entrances to the research programme are **Mechanical Ethics**, a human-facing middle-out reasoning language, and **TRACE**, its AI-first structural exploration. The public baseline remains [TRACE v0.4.0](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md); the [TRACE v0.3.0 full reference](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md) is an inherited technical donor. [Mechanical Ethics v1.0.0](https://github.com/markgoodbody-bit/mechanical-ethics/tree/v1.0.0) supplies an explanatory human entrance, not an automatic value oracle.
+The two entrances to the research programme are **Mechanical Ethics**, a human-facing middle-out reasoning language, and **TRACE**, its AI-first structural exploration. The historical compact foundation is [TRACE v0.4.0](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md); the [TRACE v0.3.0 full reference](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md) is an inherited technical donor. [Mechanical Ethics v1.0.0](https://github.com/markgoodbody-bit/mechanical-ethics/tree/v1.0.0) supplies an explanatory human entrance, not an automatic value oracle.
 
 **Specification boundary.** The narrative and linked view are proposed compositions. Case A separates attempt conditions, actor-specific success criteria and optional sustainment. It distinguishes reported lab access from authority; it leaves a possible institutional duty as an externally answerable question. Formation, evidence and faithful-compression profiles are specified here but are not claimed as implemented operators. The story and Case A's JSON are different synthetic states, not equivalent encodings. They differ in permission, in which participant reports are supplied, in A's stated aim and in clock; §3 lists each difference.
 
-This **review notation** composes inherited TRACE meanings with candidate 0.5 research. It is human-decodable typed pseudostructure; it is **not** the exact executable grammar of any of the experimental carriers. Do not silently interchange glyph meanings between versions or infer conformance from valid JSON. Namespaces, registries, codecs, automatic English-to-graph transformation and independent receiver comprehension remain unresolved.
+This **review notation** composes inherited TRACE meanings with v0.5 research. It is human-decodable typed pseudostructure; it is **not** the exact executable grammar of any of the experimental carriers. Do not silently interchange glyph meanings between versions or infer conformance from valid JSON. Namespaces, registries, codecs, automatic English-to-graph transformation and independent receiver comprehension remain unresolved.
 
 Development has included isolated carrier, navigation, formation, memory and working-belief experiments. They do not constitute one executable v0.5 language. Section 6 states the evidence ceiling; this document supplies no decoder dependency, service, actuator or automatic English-to-graph compiler.
 
@@ -995,7 +995,7 @@ An optional typed model may rank **which belief deserves a legitimate check next
 | Object | What this edition provides | What it does not establish |
 |---|---|---|
 | Released foundations | Identified v0.4 compact meanings and v0.3 technical donor | Empirical advantage or an unchanged v0.5 executable grammar |
-| Proposed v0.5 specification | Definitions, scoped interpretation rules, narrative and source crosswalk | A complete parser, inference engine or full language implementation |
+| Released v0.5 research specification | Definitions, scoped interpretation rules, narrative and source crosswalk | A complete parser, inference engine or full language implementation |
 | Synthetic cases | Three authored cases, plus an optional response template | Real participant reports, historical events or independent receiver performance |
 | Optional binding interface | Named-claim correspondence and bounded additive clock comparison | Authentication, metrology, scheduling completeness, consent or permission |
 | Development experiments | Separately maintained private carrier, navigation, formation and memory prototypes | A public reproducible software package or one integrated conformance suite |
@@ -1040,9 +1040,9 @@ A respondent may use ordinary prose, a different algebra, JSON, a small proof, c
 
 ## 8. Version, sources and release boundary
 
-This is **0.5.0-rc1**, a proposed research specification. A draft PR makes its source reviewable; it does not make it the released baseline. Main-branch integration, a release/tag and a change in reuse or training rights are separate decisions. Existing historical releases and the v0.3 training grant are preserved.
+This is **v0.5.0, RELEASED RESEARCH SPECIFICATION**, dated 27 October 2026, published under Mark's final release instruction. The [release record](RELEASE_v0.5.0.md) identifies the exact document. Release versions the research specification; optional interfaces remain PROPOSED, isolated experimental code is NOT SHIPPED, and efficacy remains UNVALIDATED. Existing historical releases and the v0.3 training grant are preserved; no reuse or training rights are extended.
 
-The candidate consolidates the privately reviewed N3 reader, whose source identity is SHA256 `1b1f91335467ff3a0a31c015b40d1d73aa29fd482b24bbe33416102506d70396` (90,635 UTF-8 bytes). This edition removes internal review routing and private critique history, supplies public navigation and a glossary, and retains the four illustrative JSON blocks byte-for-byte. Their `trace-review/...` schema strings identify illustrative ancestry, not accepted wire schemas or proof of conformance. No private reviewer text is included.
+The edition consolidates the privately reviewed N3 reader, whose source identity is SHA256 `1b1f91335467ff3a0a31c015b40d1d73aa29fd482b24bbe33416102506d70396` (90,635 UTF-8 bytes). This edition removes internal review routing and private critique history, supplies public navigation and a glossary, and retains the four illustrative JSON blocks byte-for-byte. Their `trace-review/...` schema strings identify illustrative ancestry, not accepted wire schemas or proof of conformance. No private reviewer text is included.
 
 Public historical anchors:
 
@@ -1051,7 +1051,7 @@ Public historical anchors:
 - [Mechanical Ethics v1.0.0](https://github.com/markgoodbody-bit/mechanical-ethics/tree/v1.0.0), a human-facing entrance; its value claims are not automatically TRACE conclusions.
 - [Mechanical Ethics casebook](https://github.com/markgoodbody-bit/mechanical-ethics/tree/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook), including [GitLab recovery](https://github.com/markgoodbody-bit/mechanical-ethics/blob/8f1fd5b2b986f8d9fed5fa7c58586c99460fff92/casebook/06-gitlab-recovery.md). These are source-based studies, not TRACE efficacy trials. The three synthetic cases in this file are the self-contained TRACE examples.
 
-The full v0.3 reference is retained for detailed graph/reification, custody, recursive refinement, backlog, comparison and actuation-port contracts. This candidate does not replace those contracts with shorter unverified equivalents. Escalation to a named donor profile is explicit; no external appendix is silently mandatory for the synthetic examples.
+The full v0.3 reference is retained for detailed graph/reification, custody, recursive refinement, backlog, comparison and actuation-port contracts. This edition does not replace those contracts with shorter unverified equivalents. Escalation to a named donor profile is explicit; no external appendix is silently mandatory for the synthetic examples.
 
 ### Source coverage of the navigator addition
 
@@ -1060,7 +1060,7 @@ The full v0.3 reference is retained for detailed graph/reification, custody, rec
 | INHERITED | Selective causal loop, longitudinal reading, separate action/outcome, typed burden and scoped evidence | Full v0.3 [2], [6], [9]; compact v0.4 [3], [5.1], [6], [10] at TRACE `475772354a29cdd96b3c8fae7be93449c4737d71` |
 | COMPRESSED | Unresolved commitment, continuing material limits, separate participant outcomes | Full v0.3 [11], [14.1.1], [14.3]; only the encountered bindings are shown |
 | REFERENCE_ONLY | Full vocabulary/reification, safe custody, asymmetric uncertainty, recursion budgets, workload/scheduling, comparison algebra, enforcement/brake/rollback | Named donor profiles in §2 and the [full reference](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md); this reader does not reproduce their complete contracts |
-| NEW_COMPOSITION | Continuous tactile encounter; small EncounterStep projection; explicit AimRevision binding and anti-retrofit rule; return/completion distinction | New synthetic narrative and derived view in this candidate; no new general theory of purposes claimed |
+| NEW_COMPOSITION | Continuous tactile encounter; small EncounterStep projection; explicit AimRevision binding and anti-retrofit rule; return/completion distinction | New synthetic narrative and derived view in this edition; no new general theory of purposes claimed |
 
 
 
@@ -1068,7 +1068,7 @@ A lack of particular goal/aim words in a donor word search does not establish th
 
 ### Released-v0.4 → v0.5 review crosswalk (semantic coverage, not code conformance)
 
-Every item below identifies where the **meaning** is carried or restored for a cold reader. `§` refers to this single file; `Fnn` refers to the compatibility floor above. A mapping does not claim source truth, complete donor detail, executable implementation, or equivalence to the released document. The official v0.4 spine remains the controlling specification.
+Every item below identifies where the **meaning** is carried or restored for a cold reader. `§` refers to this single file; `Fnn` refers to the compatibility floor above. A mapping does not claim source truth, complete donor detail, executable implementation, or equivalence to the released document. The historical v0.4 spine remains the exact source for the inherited contracts mapped here.
 
 | Released v0.4 section | Review entrance / restored requirement |
 |---|---|
@@ -1141,4 +1141,4 @@ These are local meanings for this edition, not a universal symbol registry. A de
 | material limit | A qualification that can change a stated downstream use; it must survive relevant compression |
 | `UNASSIGNED` | No responsible holder supplied in this account; neither proof that nobody is responsible nor assignment by default |
 
-**End of complete candidate specification.**
+**End of complete v0.5.0 research specification.**
