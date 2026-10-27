@@ -90,3 +90,25 @@ A candidate fails locally if it (a) treats passive motion as demonstrated select
 ## Next integration
 
 Compare symbol types and claims line-by-line with released v0.4.0 and the v0.3.0 full reference, then with the Lattice/Codex/Eidoran lineage. Integrate the actual private grammar 0.1 and Build's PR284 only through explicit compatibility mapping. Run the COMSYNC sender/carrier/receiver changed-state probe. Preserve negative results and all source limits. No automatic release.
+
+## Time-first integration note — 27 October 2026
+
+A sequence index is not a duration or a deadline. A time-sensitive claim needs a declared clock domain, observation timestamp and freshness condition, with uncertainty where clocks cannot be aligned. For a proposed intervention `a`, distinguish:
+
+```text
+τ_obs     when information was observed (not necessarily when it became available)
+τ_recv    when the navigator received it
+τ_dec     decision interval or deadline
+τ_act     earliest/latest effective intervention window
+τ_hard    interval after which a particular loss cannot be prevented
+τ_corr    correction discovery, delivery and effective-action window
+τ_form    capability formation, maintenance and decay horizon
+```
+
+An action can be syntactically available and authorised yet physically infeasible before `τ_hard`. An accurate late correction may repair the record without restoring the lost future. A future that is reachable in a model may not be reachable within the clocks, resources and capabilities of the actual entities. If times are incomparable or unknown, mark the timing conclusion unknown; do not infer a universal safe threshold.
+
+**Three independent revision types:** `REV_K` resolves previously unknown information; `REV_E` corrects a mistaken claim; `REV_W` records a world change. One event may involve several types, but a changed record is not evidence of a changed world. Preserve prior state, source, author, temporal scope and dependencies.
+
+**Three actor bindings:** for every proposed action record who proposes it, who can execute it, and who authorises it, with separate evidence and uncertainty. For every offered refusal or exit distinguish the statement of availability, practical capability to use it, and its effective timing. A represented invitation is not proof of a usable exit.
+
+These are **candidate semantic obligations**, not implemented grammar0.1 operators. They respond to CC's documented hostile review of private candidate PR284; the existing decoder has not been changed or retested by this note. Do not count this as closing the defects. The purpose is to make the next implementation target precise.
