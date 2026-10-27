@@ -1,12 +1,12 @@
 # TRACE v0.5.0 — current released research specification
 
+TRACE is a voluntary structural language for examining and developing possible futures under uncertainty. It connects participants' aims, evidence, usable routes, timing, burdens, refusal and correction across a changing situation.
+
 **Current release: [Read the complete TRACE v0.5.0 specification](TRACE-v0.5.md).**
 
 **v0.5.0 / RELEASED RESEARCH SPECIFICATION / efficacy UNVALIDATED**
 
 One file contains the introduction, notation, continuous navigator narrative, three synthetic cases, limitations, glossary and source crosswalk. [Release and shareable snapshot](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.5.0).
-
-TRACE is a voluntary structural language for examining and developing possible futures under uncertainty. It connects participants' aims, evidence, usable routes, timing, burdens, refusal and correction across a changing situation.
 
 Start with a bounded question: what could change, for whom, through which route, and on what evidence? Use ordinary prose or a specialist method when it does the job with less effort.
 
