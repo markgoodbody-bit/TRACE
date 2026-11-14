@@ -363,6 +363,14 @@ A's deadline is not B's obligation. B may report that the additional time was wo
 
 B's calibration work also opens a possible future independent of A's project. Whether B later teaches it effectively is open. The language must preserve this possibility alongside B's burden and refusal, rather than summarise the encounter as A's success with B's costs attached.
 
+### Optional inquiry during a similar activity
+
+In a similar encounter, A could choose to show what using the model makes easier and what remains difficult. B could describe what the joint work enabled B to practise and whether further involvement is wanted. These invitations could open inquiry into what each is trying to do, including purposes the initial model request did not express. Refusal must be materially possible; another demonstration, explanation or trial is not a condition of having one's earlier claim heard.
+
+Use may support keeping the existing plan or changing it. A wanted form of assistance need not mean acquiring every skill alone; B's learning may lead somewhere beyond A's project. Later attempts and ordinary use can alter the account again. A revised aim does not fulfil an earlier commitment, and a changed plan does not by itself establish benefit.
+
+This is optional guidance for a comparable activity, not an additional event in the authored story. Its usefulness depends on the participants and circumstances, including time and effort; the example supplies no observed outcome from applying it.
+
 ### Small linked view — specified, not implemented
 
 The proposed `EncounterStep` is a **derived view over existing claims, records, routes and limits**, not a new core primitive or executable wire format. This small projection uses stable references into the source account. `?` is unresolved; `~` is unsupplied. Empty lists mean no supplied items, not exhaustive absence.
