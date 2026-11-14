@@ -353,7 +353,7 @@ There is a limited constructive result in the fixture: a produced object and sep
 
 **d7 — Return with a changed account.** A encounters a dated makerspace notice reporting reopening a month earlier. The new report gives a reason to reconsider the current exclusion; it does not establish that the older note was wrong when written, nor prove present suitability for A's job. A proposes a different aim: plastic junctions, a card stair representation still to be tried, and—if the colleague agrees—a spoken description. Record A's authorship and retain the original full-floor aim and d5 commitment. The new aim cannot retroactively make the old one fulfilled.
 
-B reports wanting to try teaching the calibration adjustment rather than become A's maintenance provider. No second session has been offered or agreed; none is assumed from the first. Whether B's access continues is a separate unresolved question; continued access would not turn the absent renewed agreement into permission. Maintenance is unassigned. The return carries the local junction report, untested stairs, unasked colleague, makerspace candidate, B's reported time burden and both participants' still-distinct aims.
+B reports wanting to try teaching the calibration adjustment rather than become A's maintenance provider. No second session has been offered or agreed; none is assumed from the first. Whether B's access continues is a separate unresolved question; continued access would not turn the absent renewed agreement into permission. Maintenance is unassigned. The return carries A's report of readable junctions and an unreadable printed stair region, the untested card-stair proposal, unasked colleague, makerspace candidate, B's reported time burden and both participants' still-distinct aims.
 
 At d28, or whenever the arrangement is next used, new evidence may revise this account. The present narrative ends at d7; it does not manufacture that future result.
 
@@ -419,7 +419,7 @@ ONE_PARTICIPANT_SATISFIED != ALL_PARTICIPANTS_SERVED
 
 “A and B succeeded, the floor model works, access and privacy are resolved, and B will help next time” is **not supported** by this encounter. It loses the failed stair target, old aim, source differences, reported-only deletion, unowned maintenance, B's costs and absence of renewed agreement. The same summary would wrongly fit both a newly agreed session and use of B's files or time without renewed permission.
 
-A faithful short return can instead say: “A reports readable junctions; stairs and building use remain untested. B reports partial practice benefit, a teaching possibility and additional time cost; no further session is agreed. A proposes a revised aim. Maintenance remains unassigned.” This is a source-bounded account, not a guarantee that its reports are true.
+A faithful short return can instead say: “A reports readable junctions and an unreadable printed stair region; the proposed card stairs and building use remain untested. B reports partial practice benefit, a teaching possibility and additional time cost; no further session is agreed. A proposes a revised aim. Maintenance remains unassigned.” This is a source-bounded account, not a guarantee that its reports are true.
 
 ## 2B. Optional binding profile — separate from the story
 
