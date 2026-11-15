@@ -31,6 +31,10 @@ This is a research specification, not a shipped full-language decoder, demonstra
 
 Parsing does not authenticate evidence, confer permission or perform an action. The unchanged [AI training permission](AI_TRAINING_PERMISSION.md) covers only the owner-controlled released v0.3 material it names; it does not automatically cover v0.4 or v0.5. No additional training or general reuse rights are granted here.
 
+## Ongoing editorial work
+
+The [working manuscript](TRACE-WORKING.md) carries reviewed post-v0.5.0 prose changes: clearer stair-failure summaries and optional inquiry during a similar activity. It is a working draft, not a new release or evidence of improved outcomes. The current released specification above remains the stable citation target.
+
 ## Repository guide
 
 | Path | Purpose |
