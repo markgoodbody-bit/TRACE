@@ -1,0 +1,182 @@
+{
+  "status": "PASS",
+  "checks": 29,
+  "scope": "Independent synthetic dependency checks on the initial packet's assumptions; not a final simulator test.",
+  "initial_source": "09c07a4b20134c6fccec2b6eb26fa4daf612bc5e",
+  "findings": [
+    {
+      "name": "early_information_feasible_exclusive_policy",
+      "observed": "79/100",
+      "expected": "79/100",
+      "meaning": "An early observation supports an executable direct-else-fallback policy."
+    },
+    {
+      "name": "late_information_best_precommitted_policy",
+      "observed": "18/25",
+      "expected": "18/25",
+      "meaning": "With exclusive pre-cutoff choice, the pathwise union is not an available policy."
+    },
+    {
+      "name": "shared_fallback_resource",
+      "observed": "18/25",
+      "expected": "18/25",
+      "meaning": "Two simultaneous fallback demands cannot both use a single available unit."
+    },
+    {
+      "name": "capacity_restores_constructive_route",
+      "observed": "79/100",
+      "expected": "79/100",
+      "meaning": "Restoring the second resource restores the conditional cooperative route."
+    },
+    {
+      "name": "strict_before_cutoff_reveal_at_9",
+      "observed": "79/100",
+      "expected": "79/100",
+      "meaning": "At the cutoff is not before it under this declared event ordering."
+    },
+    {
+      "name": "strict_before_cutoff_reveal_at_10",
+      "observed": "18/25",
+      "expected": "18/25",
+      "meaning": "At the cutoff is not before it under this declared event ordering."
+    },
+    {
+      "name": "strict_before_cutoff_reveal_at_11",
+      "observed": "18/25",
+      "expected": "18/25",
+      "meaning": "At the cutoff is not before it under this declared event ordering."
+    },
+    {
+      "name": "inclusive_cutoff_alternative_contract",
+      "observed": "79/100",
+      "expected": "79/100",
+      "meaning": "An inclusive choice contract has a different equality boundary; neither is implicit."
+    },
+    {
+      "name": "van_room_joint_7/10",
+      "observed": "31/40",
+      "expected": "31/40",
+      "meaning": "Same component marginals allow different dependence and joint outcomes."
+    },
+    {
+      "name": "van_room_joint_18/25",
+      "observed": "79/100",
+      "expected": "79/100",
+      "meaning": "Same component marginals allow different dependence and joint outcomes."
+    },
+    {
+      "name": "van_room_joint_4/5",
+      "observed": "17/20",
+      "expected": "17/20",
+      "meaning": "Same component marginals allow different dependence and joint outcomes."
+    },
+    {
+      "name": "fallback_joint_0",
+      "observed": "18/25",
+      "expected": "18/25",
+      "meaning": "Independent versus shared or opposed fallbacks change the joint guarantee."
+    },
+    {
+      "name": "fallback_joint_1/4",
+      "observed": "79/100",
+      "expected": "79/100",
+      "meaning": "Independent versus shared or opposed fallbacks change the joint guarantee."
+    },
+    {
+      "name": "fallback_joint_1/2",
+      "observed": "43/50",
+      "expected": "43/50",
+      "meaning": "Independent versus shared or opposed fallbacks change the joint guarantee."
+    },
+    {
+      "name": "direct_fallback_overlap_0",
+      "observed": "97/100",
+      "expected": "97/100",
+      "meaning": "Even direct and fallback marginals do not fix their union without a joint law."
+    },
+    {
+      "name": "direct_fallback_overlap_9/50",
+      "observed": "79/100",
+      "expected": "79/100",
+      "meaning": "Even direct and fallback marginals do not fix their union without a joint law."
+    },
+    {
+      "name": "direct_fallback_overlap_1/4",
+      "observed": "18/25",
+      "expected": "18/25",
+      "meaning": "Even direct and fallback marginals do not fix their union without a joint law."
+    },
+    {
+      "name": "partial_reveal_0",
+      "observed": "1/2",
+      "expected": "1/2",
+      "meaning": "A common policy uses actual observations, not the hidden target-world identity."
+    },
+    {
+      "name": "partial_reveal_1/2",
+      "observed": "3/4",
+      "expected": "3/4",
+      "meaning": "A common policy uses actual observations, not the hidden target-world identity."
+    },
+    {
+      "name": "partial_reveal_1",
+      "observed": "1",
+      "expected": "1",
+      "meaning": "A common policy uses actual observations, not the hidden target-world identity."
+    },
+    {
+      "name": "delivery_by_due_9",
+      "observed": "True",
+      "expected": "True",
+      "meaning": "An early acknowledgement cannot substitute for timely delivery."
+    },
+    {
+      "name": "delivery_by_due_10",
+      "observed": "True",
+      "expected": "True",
+      "meaning": "An early acknowledgement cannot substitute for timely delivery."
+    },
+    {
+      "name": "delivery_by_due_11",
+      "observed": "False",
+      "expected": "False",
+      "meaning": "An early acknowledgement cannot substitute for timely delivery."
+    },
+    {
+      "name": "delivery_by_due_None",
+      "observed": "False",
+      "expected": "False",
+      "meaning": "An early acknowledgement cannot substitute for timely delivery."
+    },
+    {
+      "name": "early_promise_no_replacement_and_cancelled_backup",
+      "observed": "False",
+      "expected": "False",
+      "meaning": "A late delivery and a previously cancelled fallback give no timely result."
+    },
+    {
+      "name": "retained_timely_backup_positive_control",
+      "observed": "True",
+      "expected": "True",
+      "meaning": "A retained backup can deliver before the same deadline."
+    },
+    {
+      "name": "inconsistent_probability_inputs_rejected",
+      "observed": "4",
+      "expected": "4",
+      "meaning": "A future parameterised interface needs validation; this is not a failed initial fixture."
+    },
+    {
+      "name": "maintenance_without_delivery",
+      "observed": "False",
+      "expected": "False",
+      "meaning": "The second required service cannot consume a missing resource."
+    },
+    {
+      "name": "maintenance_with_delivered_support",
+      "observed": "True",
+      "expected": "True",
+      "meaning": "Delivered recurring support makes an otherwise impossible maintenance plan feasible."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "task": "TRACE-06-FOUNDATIONS-20261116",
+  "status": "PRELIMINARY_INITIAL_PACKET_REPRODUCED_FINAL_PROTOTYPE_PENDING",
+  "receipt_created_utc": "2026-11-16T23:23:40.538719+00:00",
+  "environment": {
+    "os": "Windows",
+    "python": "3.10.11",
+    "execution": "Host Python isolated stdlib mode; no VM queue or provider use"
+  },
+  "initial_source": "09c07a4b20134c6fccec2b6eb26fa4daf612bc5e",
+  "initial_git_blob_verification": "All eight acquired files matched Git blob identities",
+  "initial_result": {
+    "status": "PASS",
+    "groups": 18,
+    "checks": 83,
+    "semantic_json_equal": true,
+    "byte_equality_claimed": false
+  },
+  "independent_dependency_checks": 29,
+  "final_simulator": "PIN_NOT_YET_AVAILABLE",
+  "preservation_manifest": "PIN_NOT_YET_AVAILABLE",
+  "hashes": {
+    "initial/countermodels.py": "22c04e25b83531253b132ac2869ef75cd3d5f9a16982b8a0b9d6c2709b6330fe",
+    "initial/RESULTS.json": "99852ab288c2a0f9ca3c6503090709c9b56ea093a6e5e22e2da5f7ad94d38744",
+    "INITIAL-REPRODUCED.json": "a504d217a57036fd1ec1ac6eeaa22ba5d69c7a366f01544f51d598383a3baeee",
+    "dependency_attacks.py": "48d8c69e2c4b9f7afe8d3faf7f53ee8bf89ab731188f17c54e5ff660a0c45ad0",
+    "DEPENDENCY-RESULTS.json": "304054550d47192e7898e40f5fb2c807938a9e9fb44b79cd1bc78ef690f1d86e",
+    "TRACE-v0.5.md": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5"
+  },
+  "final_scope": "Initial fixture reproduction and alternative-assumption arithmetic only"
+}
