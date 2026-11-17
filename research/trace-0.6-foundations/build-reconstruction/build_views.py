@@ -91,7 +91,7 @@ def render_spine(candidate):
             "A missing material distinction means UNKNOWN, not permission.\n\n"
             + "Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; "
               "controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; "
-              "the second co-evolving worked case and its limits. A section's later paragraphs are omitted here.\n\n"
+              "the co-evolving social layer of the paired worked case and its limits. A section's later paragraphs are omitted here.\n\n"
             + "\n\n".join(excerpts) + "\n")
 
 

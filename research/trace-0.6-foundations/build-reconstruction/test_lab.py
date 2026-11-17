@@ -84,7 +84,7 @@ class LaboratoryTests(unittest.TestCase):
     def test_spine_is_derived_and_flags_unknown(self):
         spine = build_views.render_spine(build_views.CANDIDATE.read_text(encoding="utf8"))
         self.assertIn("UNRESOLVED", spine)
-        self.assertIn("co-evolving worked case", spine)
+        self.assertIn("co-evolving social layer", spine)
         self.assertIn("## 3. Offers, duties and power", spine)
 
 

@@ -4,7 +4,7 @@
 
 ## Files and execution
 
-- CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning.
+- CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning. Its paired community-learning probe applies bounded logistics and evolving social interaction to the same situation.
 - SPINE.md is generated directly from selected first paragraphs and carries explicit omissions and an expansion condition. It is not a separate source of authority.
 - crosswalk.json inventories 38 exact heading-to-next-heading source spans and 206 blank-delimited review blocks, proposes candidate-section destinations and marks **every one UNRESOLVED**. These mechanical blocks are not the earlier unrecovered reported 114 semantic units. Explicit mapping is a review prompt, not a reviewed correspondence.
 - SEMANTIC-REVIEW.md compares selected high-value source blocks against the candidate and names omissions and repairs; it does not complete the crosswalk.
@@ -29,7 +29,7 @@ This cloud environment passed the mechanical check and nine grouped unit tests. 
 1. Audit the 206 mechanical blocks, splitting or joining as necessary into meaning-bearing units, against the candidate, assigning reviewed dispositions and explicit gaps. Retain the source distinction between reproduced and reference-only donors. Selected high-value cases are in SEMANTIC-REVIEW.md; they are not a blanket reviewed disposition.
 2. The finite simulator does not yet model general observations/histories, arbitrary multi-actor actions, general delivery schedules or evidence of actual deliveries, partial-contributor burden, controlled UNKNOWN in evidence, preference formation, valid normative authority, or complete consent/commitment records. It examines a declared joint law with one observation/action deadline and shared capacity, plus a separate stipulated delivery/backup event predicate. Codex's other PR71 dependence cases remain unimplemented here. Never use these passes as proof of complete acceptance.
 3. The spine's mechanical selection has not been tested with cold readers, against ordinary prose, or under actual downstream decisions; materiality perturbation is a stated procedure, not an implemented checker.
-4. The co-evolving social probe is an invented example, not a formal complexity model or validation of the method's treatment of emergence. Read the relevant primary literature before attributing claims.
+4. The co-evolving social probe is an invented example, not a formal complexity model or validation of the method's treatment of emergence. Read the relevant primary literature before attributing claims. The separate two-track brief at COM b1f0515cbc6920236e2ae34292f35d7b395620f0 and updated integration contract at TRACE f928f04e99e1b87c3c9b65fc9bcad6375bcda739 supersede earlier direction; this draft branch remains based on the earlier contract commit and does not itself contain that updated contract.
 5. This packet has not recovered the earlier reported simulator or 114-unit manifest. Retain a later recovered copy separately and compare rather than overwrite.
 
 No new paid inference, provider action, live YAC change, Workshop runtime, model agency claim, semantic equivalence, canonical release or independent reproduction.
