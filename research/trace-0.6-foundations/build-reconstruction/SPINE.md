@@ -4,11 +4,11 @@ Research candidate; all inherited source-unit dispositions remain UNRESOLVED. Th
 
 Use class: a first decision on an intervention affecting another participant. Expand the complete candidate and the released source when omitted detail changes authority, burden, consent, evidence, time or a constructive possibility. A missing material distinction means UNKNOWN, not permission.
 
-Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; the co-evolving social layer of the paired worked case and its limits. A section's later paragraphs are omitted here.
+Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; the co-evolving social layer of the paired worked case and its limits. In the community return, distinguish proposed from accepted room revision; supported from independent performance; the unfinished earlier aim from a later choice; a conditional offer from an agreed session; and unresolved room, tool and maintenance arrangements. A section's later paragraphs are omitted here.
 
 ## 1. Begin with a living situation
 
-An entity, group or institution encounters a changing world through bounded observation. The world, signals, accounts, maps and retained records are different. A boundary and a participant list are provisional, not declarations of moral standing. Other entities have perspectives and possibilities of their own. Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost, before choosing a verdict. Honest uncertainty includes unknown, unsupplied, false, disputed and out-of-scope; lack of a recorded route is not proof that no route exists.
+An entity, group or institution encounters a changing world through bounded observation. The world, signals, accounts, maps and retained records are different. A boundary and a participant list are provisional, not declarations of moral standing. Other entities have perspectives and possibilities of their own. Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost, before choosing a verdict. Keep what a source asserts separate from its warrant, our access to it and anyone's decision. An assertion can have a definite value while its evidence is unavailable or disputed. A missing answer is different again; silence alone establishes neither withholding nor refusal. Lack of a recorded route is not proof that no route exists.
 
 ## 2. People, relationships and possibilities
 

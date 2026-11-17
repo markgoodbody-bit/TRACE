@@ -36,6 +36,14 @@ This is the same author's comparison, not an independent reader or implementatio
 
 ## A mixed result and its short return
 
+Historical note: the previous stand-alone mixed-result fixture described below was subsequently replaced by the continuous encounter and return in candidate §7. The older fixture remains available in source history; the updated partial decisions below describe the current candidate.
+
 The candidate's invented bicycle case now has a hypothetical after-session return and an explicitly misleading versus more faithful compression. It holds the unattempted part of A's original aim, A's reported supported performance, B's reported cost and independent teaching possibility, C's reported participation and unknown disclosure permission, no renewed session and unassigned maintenance. These are fixture premises, not evidence of a real event, consent, safe performance or independent understanding.
 
 This makes the failure mode in v0.5 B0121/B0137 more usable in the reconstructed case. It does not reproduce the source encounter's specific reported deletion, failed stair region, grant or every causal and temporal qualification. The older fixture remains the authoritative source for those distinctions; both reviews remain PARTIAL pending a full correspondence and a cold reader comparison. Existing partial findings were rechecked after this additive change.
+
+## Continuous encounter and donor index
+
+The current new-composition encounter replaces the former separate contrasts and return. It carries a bounded authorised-keeper evidence rule, an unresolved-conflict branch, corrected operative invitation alongside retained dated history and unrelated useful knowledge, participant-specific results, changed aims, B's own future and rest, C's conditional offer, no renewal and unassigned maintenance. The smaller room bypasses a noise constraint without fixing the larger room. These are invented fixture premises. B0121 and B0137 remain PARTIAL: the source's exact deletion report, stair failure, access grant and other qualifications remain in the released source. No cold-reader comparison has established comprehension. Other partial decisions were checked against the replacement and remain partial.
+
+The optional donor index names historical destinations and use triggers; REFERENCE_ONLY is an instruction to consult the source, not a claim of integrated machinery. Its classifications are working judgements, not complete or independent semantic disposition.
