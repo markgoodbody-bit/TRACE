@@ -33,6 +33,22 @@ class LaboratoryTests(unittest.TestCase):
         self.assertEqual(simulator.support(world, "early", 2)["success"], "1")
         self.assertEqual(simulator.support(world, "early", 1)["success"], "0")
 
+    def test_controlled_observation_and_fallback(self):
+        rows = [{"direct": d, "f1": True, "f2": b,
+                 "prob": str(Fraction(1, 2) * (Fraction(3, 4) if b else Fraction(1, 4)))}
+                for d, b in itertools.product((False, True), repeat=2)]
+        scenario = {"worlds": rows, "observation_time": 4, "action_deadline": 5,
+                    "capacity": 2, "fallback_units": 2}
+        self.assertEqual(simulator.simulate_scenario(scenario)["result"]["success"], "7/8")
+        scenario["observation_time"] = 6
+        self.assertEqual(simulator.simulate_scenario(scenario)["result"]["success"], "3/4")
+        scenario["observation_time"] = 5
+        self.assertEqual(simulator.simulate_scenario(scenario)["result"]["success"], "7/8")
+
+    def test_no_joint_law_or_extra_field_is_not_guessed(self):
+        with self.assertRaises(ValueError):
+            simulator.simulate_scenario({"marginals": [0.9, 0.8]})
+
     def test_unknown_and_temporal_boundaries(self):
         self.assertFalse(simulator.before_hardening(5, 5))
         self.assertTrue(simulator.delivered_by_due(5, 5))

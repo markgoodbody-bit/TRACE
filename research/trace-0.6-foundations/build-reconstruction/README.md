@@ -18,14 +18,15 @@ python3 build_views.py
 python3 build_views.py --check
 python3 -m unittest discover -s . -p 'test_lab.py' -v
 python3 simulator.py
+python3 simulator.py --input scenario.example.json
 ```
 
-This cloud environment passed the mechanical check and six grouped unit tests. The original fetched source initially acquired an extra newline; this was discovered by a Git-blob mismatch and corrected before generating the packet. Git blob then matched the released 0.5 source.
+This cloud environment passed the mechanical check and eight grouped unit tests. The example explicitly defines observation time and a deadline where observation is available before the choice at equality. It returns 7/8 with early observation; the same law returns 3/4 after the fallback deadline. These are specified calculations, not evidence that a real actor controls or exploits the clock. The original fetched source initially acquired an extra newline; this was discovered by a Git-blob mismatch and corrected before generating the packet. Git blob then matched the released 0.5 source.
 
 ## Outstanding construction
 
 1. Split the 38 coarse spans into meaning-bearing units and audit each against the candidate, assigning reviewed dispositions and explicit gaps. Retain the source distinction between reproduced and reference-only donors.
-2. The finite simulator does not yet model general observations/histories, arbitrary multi-actor actions, full deadlines, actual delivery events, partial-contributor burden, controlled UNKNOWN, preference formation, valid normative authority, or complete consent/commitment records. It only examines a tiny declared joint law and a few separate predicates. Codex's other PR71 dependence and delivery cases remain unimplemented here. Never use these passes as proof of complete acceptance.
+2. The finite simulator does not yet model general observations/histories, arbitrary multi-actor actions, full delivery deadlines, actual delivery events, partial-contributor burden, controlled UNKNOWN in evidence, preference formation, valid normative authority, or complete consent/commitment records. It examines a declared joint law with one observation/action deadline and shared capacity, plus a few separate predicates. Codex's other PR71 dependence and delivery cases remain unimplemented here. Never use these passes as proof of complete acceptance.
 3. The spine's mechanical selection has not been tested with cold readers, against ordinary prose, or under actual downstream decisions; materiality perturbation is a stated procedure, not an implemented checker.
 4. The co-evolving social probe is an invented example, not a formal complexity model or validation of the method's treatment of emergence. Read the relevant primary literature before attributing claims.
 5. This packet has not recovered the earlier reported simulator or 114-unit manifest. Retain a later recovered copy separately and compare rather than overwrite.

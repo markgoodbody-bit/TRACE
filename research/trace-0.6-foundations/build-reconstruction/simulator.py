@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Finite, declared-law support/observation laboratory, not an ethical solver."""
+import argparse
 import itertools
 import json
 from fractions import Fraction
@@ -60,7 +61,31 @@ def unknown_conditions(agreement, delivery):
             "authorization": "UNASSESSED", "claim": "neither promise nor agreement proves delivery"}
 
 
+def simulate_scenario(scenario):
+    expected = {"worlds", "observation_time", "action_deadline", "capacity", "fallback_units"}
+    if not isinstance(scenario, dict) or set(scenario) != expected:
+        raise ValueError("scenario needs exact declared fields")
+    observation_time = scenario["observation_time"]
+    action_deadline = scenario["action_deadline"]
+    if type(observation_time) is not int or type(action_deadline) is not int:
+        raise ValueError("observation and action deadline must be integer clocks")
+    # Convention: observation at the deadline is available before the action.
+    timing = "early" if observation_time <= action_deadline else "late"
+    return {"observation_timing": timing,
+            "boundary": "observation at deadline available before choice",
+            "result": support(scenario["worlds"], timing, scenario["capacity"],
+                              scenario["fallback_units"])}
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", help="local JSON scenario with explicit joint law")
+    args = parser.parse_args()
+    if args.input:
+        with open(args.input, encoding="utf-8") as stream:
+            scenario = json.load(stream)
+        print(json.dumps(simulate_scenario(scenario), indent=2))
+        return
     rows = [{"direct": d, "f1": a, "f2": b,
              "prob": str((Fraction(18,25) if d else Fraction(7,25)) * Fraction(1,4))}
             for d, a, b in itertools.product((False, True), repeat=3)]

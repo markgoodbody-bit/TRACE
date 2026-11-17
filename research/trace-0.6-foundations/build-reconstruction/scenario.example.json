@@ -1,0 +1,12 @@
+{
+  "worlds": [
+    {"direct": false, "f1": true, "f2": false, "prob": "1/8"},
+    {"direct": false, "f1": true, "f2": true, "prob": "3/8"},
+    {"direct": true, "f1": true, "f2": false, "prob": "1/8"},
+    {"direct": true, "f1": true, "f2": true, "prob": "3/8"}
+  ],
+  "observation_time": 4,
+  "action_deadline": 5,
+  "capacity": 2,
+  "fallback_units": 2
+}
