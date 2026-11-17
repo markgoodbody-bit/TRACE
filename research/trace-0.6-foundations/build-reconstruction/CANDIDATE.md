@@ -8,6 +8,8 @@ An entity, group or institution encounters a changing world through bounded obse
 
 For each consequential claim name its source, scope, time, evidence and relevant competing account. Separate a report from the event reported, the status warranted under a named contract from the truth of its whole contents, and a corrected record from a changed world or repaired harm. Witnesses may need protected custody; a useful record must not force unsafe disclosure. Send, receipt, understanding and effective downstream use differ.
 
+Different participants can hold conflicting maps, aims and clocks. Some processes have no evidenced selector; in others selection can be distributed. Inquiry can itself change the situation being observed. A working-belief map is held, reported or attributed from a stated aperture; it is not direct access to hidden mental or model states. A stored counteraccount is not by itself a change of belief, and a change of belief does not by itself improve an outcome.
+
 ## 2. People, relationships and possibilities
 
 Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success.
@@ -25,6 +27,10 @@ Distinguish offers, prior agreement, ongoing commitments, externally grounded du
 ## 4. Change, interaction and evidence of influence
 
 Where a bounded engineered dependency is warranted, name component relations and conditional tests; keep proposed connections distinct from confirmed ones. Do not make association or an editable graph a proof of causal attribution. Where relationships co-evolve and the model cannot support a decomposed causal path, describe interacting constraints and dispositions, diverse plausible explanations, observation and small revisable interventions; do not force additive contribution weights or invented probabilities. Both modes support action, not a claim that the situation has been classified correctly forever.
+
+A stated requirement is a necessary condition within its declared route model, not automatically a sufficient recipe for acting in the world. Nor does one represented route establish that all alternatives have been found. A question proposed by a model does not itself authorise the probe: consider its scope, cost, timing, authority and the participants' constraints. An observation about a participant does not substitute for that participant's own choice.
+
+When a later account differs, check subject, scope and time before calling the earlier one mistaken: the evidence or the world may have changed. Distinguish a proposed revision of an attributed belief, a revision of the evidence account and a claim that the world changed. Record the basis and whether each revision is proposed, accepted under a named contract, rejected or unresolved. Acceptance under a contract does not by itself prove the world changed.
 
 Every search or review selects a target set. Where relevant record who selected it, the basis, known omissions, alternatives and uncertainties. Exclusion from the search is not evidence that a category is absent from the world.
 

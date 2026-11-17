@@ -19,3 +19,9 @@
 4. A synthetic omission test is evidence about that test; a complete account may still omit untested material or be misleading for another use. A genuinely independent recipient and comparison with ordinary prose remain needed.
 
 No test assertions have been run against the prose itself. No outside person, provider, VM or public operating service was contacted by this research step.
+
+## Further core-meaning reconciliation
+
+17 November 2026, same-author comparison against v0.5 source lines 150–165, 178–181, 221–230 and 233–240. The candidate now makes four previously insufficiently explicit distinctions: observation may alter the situation; counterevidence storage is not belief revision or better outcomes; necessary route conditions are not sufficient for world execution; and a proposed question does not authorise a probe or replace the participant's decision. Revision kind, named-contract status and basis are also carried in prose.
+
+These are PARTIAL reviews of B0058, B0060, B0063, B0064, B0075, B0076 and B0078. The compact candidate does not reproduce the full formal signature, exact revision labels, all typed return values or every source guard. Carry the original specification for those uses; no executable interpreter or full semantic equivalence follows. Its subject/scope/time reconciliation remains a decision for a reviewer, not an automatic test. The eight earlier partial findings were rechecked against this additive candidate change; their cited gaps remain open.

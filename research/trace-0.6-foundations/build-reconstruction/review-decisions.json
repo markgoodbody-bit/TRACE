@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "a4109d60eaf2c46644df1d5fccf553ad06b9f43d887c85ba93866bf9036256b6",
+  "candidate_sha256": "a0e4fd09609ece70a28d8ec4f9966c9c3b9cb5cac72c11fa7811c241e4df8516",
   "note": "Partial same-author review overlays; all source blocks remain unresolved until full semantic disposition. Anchor checks cannot verify interpretation.",
   "reviews": [
     {
@@ -75,6 +75,69 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "Automated inventory distinguishes its proposed headings from reviewed meaning.",
       "remaining": "Reconcile original donor classifications and exact source references; automation is not semantic review."
+    },
+    {
+      "block_id": "B0058",
+      "block_sha256": "133bea30d148d37a325880ef98a6b41b21feca5098291ba08af45cc5934aeb6c",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate begins with bounded participants and sources; section 5 names baseline and horizon in comparisons.",
+      "remaining": "Confirm baseline, entity, horizon and aperture are carried for each consequential bounded difference, not only comparisons."
+    },
+    {
+      "block_id": "B0060",
+      "block_sha256": "10e0cebaaba575c7222044d9f1a724db7fb6dc6636edf3d7951b00910a4744d1",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate names incompatible maps, distributed or unevidenced selection and inquiry changing the situation.",
+      "remaining": "Full schematic loop and participant-specific application remain reference-only; assess context-specific retention."
+    },
+    {
+      "block_id": "B0063",
+      "block_sha256": "0510ecda6863482859840ee4cb6155c74fda5487fc084c4167eaf681f1b7beb6",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate distinguishes attributed working-belief maps from direct access to hidden internal states.",
+      "remaining": "The schematic mathematical signature and update semantics are not reproduced; retain source for those uses."
+    },
+    {
+      "block_id": "B0064",
+      "block_sha256": "a5feaf8fe8dc58df5e2d0e6ea9faf551bfe2338608aba7e694c4a22fec73fd2c",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate separates a proposed question from authority to probe and counterevidence storage from belief or outcome change.",
+      "remaining": "The source-specific Q and U signatures and evidence contract remain reference-only."
+    },
+    {
+      "block_id": "B0075",
+      "block_sha256": "005e8addbcb4c3ba0d7c7a03bf3bccb6536d602fca8f459fd686c5feefc1c0fb",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate preserves open choices, route uncertainty and revision basis in prose.",
+      "remaining": "Exact typed output statuses and InspectFormation and InspectMemory signatures are not reproduced; preserve the original for those uses."
+    },
+    {
+      "block_id": "B0076",
+      "block_sha256": "11cd53dffaddcf57941026a0b1ba5a764fa937774176c38b19a31e90ded0688d",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate distinguishes changes of attributed belief, evidence and world and records revision basis and status.",
+      "remaining": "Edition-local formal labels and full scope constraints remain reference-only; no evaluator implements the categories."
+    },
+    {
+      "block_id": "B0078",
+      "block_sha256": "d61471843866a9c6b80daf82f1173ca862c462c471fae56c9a57627b5ba0a194",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate preserves key guards on route necessity, probe authority, time and participant choice.",
+      "remaining": "The seven numbered guards include further evidence, clock and source-authentication conditions; reconcile each before claiming full preservation."
     }
   ]
 }
