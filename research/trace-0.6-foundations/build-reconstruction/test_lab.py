@@ -91,6 +91,8 @@ class LaboratoryTests(unittest.TestCase):
         self.assertIn("UNRESOLVED", spine)
         self.assertIn("co-evolving social layer", spine)
         self.assertIn("## 3. Offers, duties and power", spine)
+        self.assertIn("[Expand section 3](CANDIDATE.md#3-offers-duties-and-power)", spine)
+        self.assertIn("[donor and case index](DONOR-AND-CASE-INDEX.md)", spine)
 
 
 if __name__ == "__main__":

@@ -81,12 +81,15 @@ def render_spine(candidate):
     excerpts = []
     for n in SELECTED:
         paragraphs = mapping[n].split("\n\n")
-        excerpts.append(paragraphs[0] + "\n\n" + paragraphs[1])
+        title = paragraphs[0][3:]
+        anchor = re.sub(r"[^a-z0-9 -]", "", title.lower()).replace(" ", "-")
+        excerpts.append(paragraphs[0] + "\n\n" + paragraphs[1] +
+                        f"\n\n[Expand section {n}](CANDIDATE.md#{anchor})")
     return ("# TRACE 0.6 generated first-decision spine\n\n"
             "Research candidate; all inherited source-unit dispositions remain UNRESOLVED. "
             "This generated extract is not a release or proof of preservation.\n\n"
             "Use class: a first decision on an intervention affecting another participant. "
-            "Expand the complete candidate and the released source when omitted detail changes "
+            "Expand the candidate and the released source when omitted detail changes "
             "authority, burden, consent, evidence, time or a constructive possibility. "
             "A missing material distinction means UNKNOWN, not permission.\n\n"
             + "Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; "
@@ -94,7 +97,9 @@ def render_spine(candidate):
               "the co-evolving social layer of the paired worked case and its limits. In the community return, distinguish "
               "proposed from accepted room revision; supported from independent performance; the unfinished earlier aim from "
               "a later choice; a conditional offer from an agreed session; and unresolved room, tool and maintenance arrangements. "
-              "A section's later paragraphs are omitted here.\n\n"
+              "A section's later paragraphs are omitted here. Use the section links below, the "
+              "[donor and case index](DONOR-AND-CASE-INDEX.md), or the "
+              "[released v0.5 reference](TRACE-v0.5-reference.md) to inspect them.\n\n"
             + "\n\n".join(excerpts) + "\n")
 
 
