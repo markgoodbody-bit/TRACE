@@ -28,6 +28,8 @@ Prior access to a person's files is not, by itself, permission to reuse them. A 
 
 Distinguish offers, prior agreement, ongoing commitments, externally grounded duties and performed actions. Preserve each holder, ground, scope, recipient, trigger, due time, support dependency, renewal, refusal, withdrawal and usable exit where material. Acceptance under pressure is not automatically free agreement. A capacity shortage does not itself erase a duty or settle blame. A choice between competing acceptable plans needs an accountable holder, affected interests and contest route; an equation does not supply legitimacy.
 
+When a decision proceeds with material uncertainties, preserve the decision holder, selected action, reasons and basis, live alternatives, unresolved or disputed claims, potentially foreclosed paths, expected burdens and what still needs review. Proceeding does not itself resolve the uncertainty. This record can support a bounded attempt without turning the account into permission to act.
+
 ## 4. Change, interaction and evidence of influence
 
 Where a bounded engineered dependency is warranted, name component relations and conditional tests; keep proposed connections distinct from confirmed ones. Do not make association or an editable graph a proof of causal attribution. Where relationships co-evolve and the model cannot support a decomposed causal path, describe interacting constraints and dispositions, diverse plausible explanations, observation and small revisable interventions; do not force additive contribution weights or invented probabilities. Both modes support action, not a claim that the situation has been classified correctly forever.
@@ -48,6 +50,8 @@ In the stipulated early-versus-late disclosure example in the accompanying simul
 
 Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations.
 
+Several organisations responding within their own remit do not necessarily provide a route to the result. Where a route crosses boundaries, identify who coordinates it, who can authorise the necessary steps, what actually reaches the affected target, and who bears navigation and evidence work. A claim moving between offices is not itself a repair.
+
 Urgency, hardening and irreversibility are distinct claims: identify and support the particular boundary being used. Hardening can contribute to an irreversibility claim without establishing it by label alone.
 
 Clock values may be ordered together only under a declared comparable clock or a supported conversion. The laboratory's integer clock is invented; it does not align real sources. A reported failure followed by a later receipt establishes neither continued failure nor restored access or permission.
@@ -59,6 +63,8 @@ An event may be unchangeable while its effects can still change. Assess continui
 ## 6. A compact view with an escape hatch
 
 One versioned source graph can serve different readers. A complete account carries the situated distinctions above plus the source units and unresolved qualifications in the crosswalk. A spine selects a named use: perturb a value, source, actor, scope or time; if that can change the action, burden, authority or interpretation, retain it or mark the condition for expansion. Source spans and checksums prove neither semantic retention nor reader understanding. An omitted material fact requires UNKNOWN or expansion, not an all-clear. Stopping a bounded inquiry is not failure if the unresolved question, receiving owner and usable handoff survive.
+
+When a closer inspection is folded back into an account, carry any material limit with its target, scope, source and relevant repair route. Similar wording can hide different causes, so merging the findings must not silently merge away their limits. Reaching a depth or time budget explains why inspection stopped; it does not establish that the account is sufficient for the decision.
 
 ### Compatibility floor: explicit review meanings
 
