@@ -1,0 +1,3 @@
+# Spine generation contract
+
+The generated spine uses the candidate sections with explicit section identifiers and a named use class: first decision about an intervention with a possible affected party. It is a selected extract from the same pinned candidate, not a different authority. It includes source-section links and the UNRESOLVED inheritance warning. Expand the complete candidate and released v0.5 when the affected person's own aims, source warrant, controlled clock, consent renewal, material capacity, donor contract or complex interaction could change the decision. The selection is authored; no guarantee of semantic completeness follows from generation.

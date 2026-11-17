@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Finite, declared-law support/observation laboratory, not an ethical solver."""
+import itertools
+import json
+from fractions import Fraction
+
+
+def law(rows):
+    result = []
+    seen = set()
+    for row in rows:
+        if set(row) != {"direct", "f1", "f2", "prob"}:
+            raise ValueError("each world needs direct, f1, f2 and prob")
+        key = (row["direct"], row["f1"], row["f2"])
+        if any(type(x) is not bool for x in key) or key in seen:
+            raise ValueError("worlds must be distinct boolean triples")
+        seen.add(key)
+        p = Fraction(str(row["prob"]))
+        if p < 0 or p > 1:
+            raise ValueError("probability out of range")
+        result.append((key, p))
+    if sum((p for _, p in result), Fraction(0)) != 1:
+        raise ValueError("joint law must sum to one")
+    return result
+
+
+def support(rows, timing, capacity, fallback_units=2):
+    """direct or fallback, never both; observation of direct may be early or late."""
+    worlds = law(rows)
+    if timing not in ("early", "late"):
+        raise ValueError("observation timing must be early or late")
+    if type(capacity) is not int or type(fallback_units) is not int or capacity < 0 or fallback_units < 1:
+        raise ValueError("capacity and demand must be integer and nonnegative")
+    def succeeds(key, action):
+        d, f1, f2 = key
+        return d if action == "direct" else bool(f1 and f2 and capacity >= fallback_units)
+    policies = list(itertools.product(("direct", "fallback"), repeat=2 if timing == "early" else 1))
+    scored = []
+    for policy in policies:
+        chance = sum((p for key, p in worlds
+                      if succeeds(key, policy[int(key[0])] if timing == "early" else policy[0])), Fraction())
+        scored.append((chance, policy))
+    best = max(x[0] for x in scored)
+    return {"success": str(best), "policies": [list(p) for v, p in scored if v == best],
+            "basis": "stipulated joint law; support is not consent, authority or delivery proof"}
+
+
+def before_hardening(effect_time, hardening_time):
+    return effect_time < hardening_time
+
+
+def delivered_by_due(delivery_time, due_time):
+    return delivery_time <= due_time
+
+
+def unknown_conditions(agreement, delivery):
+    if agreement not in ("yes", "no", "unknown") or delivery not in ("yes", "no", "unknown"):
+        raise ValueError("unsupported tri-state input")
+    return {"agreement": agreement, "delivery": delivery,
+            "authorization": "UNASSESSED", "claim": "neither promise nor agreement proves delivery"}
+
+
+def main():
+    rows = [{"direct": d, "f1": a, "f2": b,
+             "prob": str((Fraction(18,25) if d else Fraction(7,25)) * Fraction(1,4))}
+            for d, a, b in itertools.product((False, True), repeat=3)]
+    print(json.dumps({"early": support(rows, "early", 2), "late": support(rows, "late", 2),
+                      "insufficient_capacity": support(rows, "early", 1),
+                      "commitment": unknown_conditions("yes", "unknown")}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+"""Build and check bounded source-span inventory and candidate-derived spine."""
+import argparse
+import hashlib
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+SOURCE = ROOT / "TRACE-v0.5-reference.md"
+CANDIDATE = ROOT / "CANDIDATE.md"
+MANIFEST = ROOT / "crosswalk.json"
+SPINE = ROOT / "SPINE.md"
+SOURCE_SHA256 = "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5"
+SELECTED = ("1", "2", "3", "4", "5", "6", "7")
+# Proposed destinations aid the later human review; they are NOT verdicts.
+DESTINATIONS = [
+ "8", "8", "1", "1", "1", "7", "4", "8", "1",
+ "8", "1", "1,8", "1", "1,3,5", "1,3,5,6", "2,5,6",
+ "8", "5", "1,8", "2", "7", "7", "2,7", "4,7", "6,7",
+ "3,5", "3,5", "5", "1,5", "2,7", "1,5", "1,6", "8",
+ "1,8", "8", "8", "8", "8",
+]
+
+
+def digest(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def partition(raw):
+    lines = raw.decode("utf-8").splitlines(keepends=True)
+    starts = [i for i, line in enumerate(lines) if re.match(r"^#{1,4} ", line)]
+    if not starts or starts[0] != 0:
+        raise ValueError("source must start with a heading")
+    starts.append(len(lines))
+    out = []
+    for n, (start, end) in enumerate(zip(starts, starts[1:]), 1):
+        body = "".join(lines[start:end]).encode("utf-8")
+        out.append({"id": f"V05-{n:03}", "heading": lines[start].strip(),
+                    "start_line": start + 1, "end_line": end,
+                    "sha256": digest(body), "status": "UNRESOLVED",
+                    "proposed_candidate_sections": DESTINATIONS[n - 1],
+                    "reason": "Mechanical source span inventoried; semantic correspondence not yet reviewed."})
+    if len(out) != len(DESTINATIONS):
+        raise ValueError("source headings differ from proposed mapping")
+    return out
+
+
+def render_spine(candidate):
+    pieces = re.split(r"(?m)(?=^## [1-8]\. )", candidate)
+    mapping = {}
+    for part in pieces:
+        found = re.match(r"## ([1-8])\. ", part)
+        if found:
+            if found.group(1) in mapping:
+                raise ValueError("duplicate candidate section")
+            mapping[found.group(1)] = part.rstrip()
+    if set(mapping) != set("12345678"):
+        raise ValueError("candidate sections 1 through 8 required")
+    excerpts = []
+    for n in SELECTED:
+        paragraphs = mapping[n].split("\n\n")
+        excerpts.append(paragraphs[0] + "\n\n" + paragraphs[1])
+    return ("# TRACE 0.6 generated first-decision spine\n\n"
+            "Research candidate; all inherited source-unit dispositions remain UNRESOLVED. "
+            "This generated extract is not a release or proof of preservation.\n\n"
+            "Use class: a first decision on an intervention affecting another participant. "
+            "Expand the complete candidate and the released source when omitted detail changes "
+            "authority, burden, consent, evidence, time or a constructive possibility. "
+            "A missing material distinction means UNKNOWN, not permission.\n\n"
+            + "Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; "
+              "controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; "
+              "the second co-evolving worked case and its limits. A section's later paragraphs are omitted here.\n\n"
+            + "\n\n".join(excerpts) + "\n")
+
+
+def expected():
+    source = SOURCE.read_bytes()
+    if digest(source) != SOURCE_SHA256:
+        raise ValueError("reference source hash mismatch")
+    candidate = CANDIDATE.read_text(encoding="utf-8")
+    units = partition(source)
+    manifest = {"schema": 1, "source_git_commit": "d688c149afc15c90ab51afaf08fe303771e9de20",
+                "source_git_blob": "39d943b26dd355781f2d01986b229b4f1da6c793",
+                "source_sha256": SOURCE_SHA256, "candidate_sha256": digest(candidate.encode("utf-8")),
+                "scope": "Heading spans cover source bytes; not a semantic audit. Every unit unresolved.",
+                "units": units}
+    return json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", render_spine(candidate)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    args = parser.parse_args()
+    manifest, spine = expected()
+    if args.check:
+        if MANIFEST.read_text(encoding="utf-8") != manifest or SPINE.read_text(encoding="utf-8") != spine:
+            raise SystemExit("FAIL: derived views differ from source")
+        print(f"PASS mechanical coverage: {len(json.loads(manifest)['units'])} spans; all semantic dispositions UNRESOLVED")
+    else:
+        MANIFEST.write_text(manifest, encoding="utf-8")
+        SPINE.write_text(spine, encoding="utf-8")
+        print(f"Generated {len(json.loads(manifest)['units'])} spans and spine; no semantic preservation claim")
+
+
+if __name__ == "__main__":
+    main()
