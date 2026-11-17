@@ -10,6 +10,8 @@ For each consequential claim name its source, scope, time, evidence and relevant
 
 Different participants can hold conflicting maps, aims and clocks. Some processes have no evidenced selector; in others selection can be distributed. Inquiry can itself change the situation being observed. A working-belief map is held, reported or attributed from a stated aperture; it is not direct access to hidden mental or model states. A stored counteraccount is not by itself a change of belief, and a change of belief does not by itself improve an outcome.
 
+When uncertainty is an input to action or delay, identify the actor, policy or default that selects it where the evidence permits; uncertainty itself is not a selector. The responsible selector may remain unknown or distributed.
+
 ## 2. People, relationships and possibilities
 
 Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success.
@@ -44,9 +46,13 @@ In the stipulated early-versus-late disclosure example in the accompanying simul
 
 Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations.
 
+Urgency, hardening and irreversibility are distinct claims: identify and support the particular boundary being used. Hardening can contribute to an irreversibility claim without establishing it by label alone.
+
 Clock values may be ordered together only under a declared comparable clock or a supported conversion. The laboratory's integer clock is invented; it does not align real sources. A reported failure followed by a later receipt establishes neither continued failure nor restored access or permission.
 
 Compare declared alternatives using the same stated affected scope, aim, protective measures, burden units, baseline, horizon and assumptions; disclose frame changes. A model-relative forecast is not a guaranteed world outcome. A promise is not delivery; delivering one component of a joint effort can cost a contributor even if the other component never arrives. Rest, companionship or maintenance need not show an increase in a selected score to matter.
+
+An event may be unchangeable while its effects can still change. Assess continuing impairment separately from the historical fact, just as a later benefit alone does not establish that a particular earlier loss was repaired.
 
 ## 6. A compact view with an escape hatch
 
@@ -59,7 +65,7 @@ Activate the following when their loss could affect the use; unresolved material
 1. **Selection:** preserve who selected the target, why, known omissions, alternatives and relevant custody. Unsearched is not absent.
 2. **Currentness:** check the dependencies relevant to the claim, including changed authority, evidence, burden and routes. Age alone proves neither currentness nor staleness.
 3. **Warrant at use:** retain a consequential proposition's source, scope, applicability and counterevidence whether it appears as prose, a label, configuration, cache or model output. Copying is not independent verification.
-4. **Witness and access:** evidence, access, control and disclosure are different. A specified check is not an executed one; execution may miss the defect or arrive too late. Loss of a witness, heartbeat or reply limits verification without proving a cause. A different name does not establish witness independence.
+4. **Witness and access:** evidence, access, control and disclosure are different. A specified check is not an executed one; execution may miss the defect or arrive too late. Loss of a witness, heartbeat, reply, route or status may end the current verification interval without establishing why. A different name does not establish witness independence.
 5. **Affected scale:** boundaries are selected for a purpose and do not establish personhood or equivalent kinds of entities. Aggregate recovery does not establish that a particular smaller entity or loss was repaired.
 6. **Control and exit:** distinguish action, delay, null input and effect; refusal and failure; a formal offer and usable exit. An authority record needs its source, holder, action, scope, limits and applicability. A changed strategy does not undo an executed transition.
 7. **Correction-window claim:** name the effect, common clock basis, hardening boundary, supported executable route and alternatives. Strong OPEN needs a supported route before the boundary; unknown alternatives alone do not defeat a supported sufficient route unless they change its necessity, feasibility or claim scope. Strong CLOSED is scoped to the represented aperture and needs evidence the required route cannot complete and no represented alternative removes the requirement. Material uncertainty remains WINDOW_STATUS_UNKNOWN. Use compatible conservative bounds where relevant; scheduling shared resources needs appropriate domain methods.
