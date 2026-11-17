@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
+  "candidate_sha256": "a4109d60eaf2c46644df1d5fccf553ad06b9f43d887c85ba93866bf9036256b6",
+  "note": "Partial same-author review overlays; all source blocks remain unresolved until full semantic disposition. Anchor checks cannot verify interpretation.",
+  "reviews": [
+    {
+      "block_id": "B0036",
+      "block_sha256": "b731f4cf375cbf4825786d409b8a191d017e1124ef378d400673fce58944367d",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Donor profiles and witness custody are reference-only in the candidate.",
+      "remaining": "Provide exact donor anchors and check custody and contamination provisions."
+    },
+    {
+      "block_id": "B0102",
+      "block_sha256": "8bbe31cc1080e42b8a16e08e9309053589892662a5383fba1e5e726f17406932",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Asymmetric uncertainty and donor profiles are not fully reproduced.",
+      "remaining": "Check exact source-specific obligations and donor anchors."
+    },
+    {
+      "block_id": "B0091",
+      "block_sha256": "051bdf5d08e5da41eef8ad06a2b2e1c4c5215496c8f3a7551c76e8e51f8ec6e3",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate section 6 presents the fifteen compatibility-floor items.",
+      "remaining": "Verify clause-by-clause against v0.5 and the referenced v0.4 source; no equivalence or implementation established."
+    },
+    {
+      "block_id": "B0121",
+      "block_sha256": "de1a919848ad40480422c238b6e99ed95f49beceaf169fc94cba725b018c56d9",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate distinguishes prior access from permission, renewed agreement and maintenance.",
+      "remaining": "Retain the original encounter and qualifications; independently test the compressed probe."
+    },
+    {
+      "block_id": "B0137",
+      "block_sha256": "49b992c2897f5fe3d679a0bb729fff7db5ea523f43c6d684a61027472d41d4d8",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The candidate preserves some distinctions that a compressed success account can hide.",
+      "remaining": "Carry the original negative fixture and verify old aims, failed stairs, deletion evidence, costs and renewal."
+    },
+    {
+      "block_id": "B0165",
+      "block_sha256": "e5b2f9a1fca54cd80034ad88cba2d8cf40ff128f5b907913a2bb33c4156e5c8d",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The candidate distinguishes comparable clocks from an undeclared real-clock conversion.",
+      "remaining": "Retain the original synthetic clock packet; real-source conversion remains unresolved."
+    },
+    {
+      "block_id": "B0167",
+      "block_sha256": "473b6c1efc07b72c2039e6f2405ce96fe7bfdd6ccc79fce1de86bcba37128aaf",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "A report and later receipt do not independently establish restoration or permission.",
+      "remaining": "Retain and reconcile the complete original packet and its event-specific qualifications."
+    },
+    {
+      "block_id": "B0192",
+      "block_sha256": "63cde829c329eb8a95c0f2e077286f6e7b696f6824489ec4e3959fe83350b24e",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Automated inventory distinguishes its proposed headings from reviewed meaning.",
+      "remaining": "Reconcile original donor classifications and exact source references; automation is not semantic review."
+    }
+  ]
+}

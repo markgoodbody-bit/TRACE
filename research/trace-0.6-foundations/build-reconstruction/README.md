@@ -7,10 +7,10 @@
 - CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning. Its paired community-learning probe applies bounded logistics and evolving social interaction to the same situation.
 - SPINE.md is generated directly from selected first paragraphs and carries explicit omissions and an expansion condition. It is not a separate source of authority.
 - crosswalk.json inventories 38 exact heading-to-next-heading source spans and 206 blank-delimited review blocks, proposes candidate-section destinations and marks **every one UNRESOLVED**. These mechanical blocks are not the earlier unrecovered reported 114 semantic units. Explicit mapping is a review prompt, not a reviewed correspondence.
-- SEMANTIC-REVIEW.md compares selected high-value source blocks against the candidate and names omissions and repairs; it does not complete the crosswalk.
+- SEMANTIC-REVIEW.md compares selected high-value source blocks against the candidate and names omissions and repairs; it does not complete the crosswalk. review-decisions.json retains these same-author PARTIAL reviews separately from generated files; check_reviews.py checks their source and candidate digests, individual block hashes, required evidence and open gaps. This guards against silently carrying reviews onto changed text; it does not decide meaning or prove an evidence citation supports the review.
 - FLOOR-RECONCILIATION.md compares each of the 15 v0.5 compatibility-floor items with the candidate and records three initially missing qualifications subsequently restored. This is same-author comparison, not independent verification or donor-source coverage.
 - TRACE-v0.5-reference.md is an exact byte-matched copy of released source, Git blob 39d943b26dd355781f2d01986b229b4f1da6c793, SHA-256 83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5.
-- build_views.py generates the crosswalk and spine and verifies source hash and generated outputs; it checks contiguous spans and drift, not preservation of meaning. Hand-reviewed dispositions are not yet supported; regeneration replaces this WIP manifest.
+- build_views.py generates the crosswalk and spine and verifies source hash and generated outputs; it checks contiguous spans and drift, not preservation of meaning. Regeneration replaces the WIP manifest, but not the separately maintained review-decisions.json. All manifest entries remain UNRESOLVED; partial reviews are not completed dispositions.
 - simulator.py and test_lab.py provide a small exact-arithmetic, finite shared-capacity and observation-policy example. The supplied law is explicit; early 79/100, late 18/25, insufficient capacity 18/25. These are stipulated outputs under the given exclusive-choice model, not predictions.
 
 Commands in this directory:
@@ -18,6 +18,7 @@ Commands in this directory:
 ```sh
 python3 build_views.py
 python3 build_views.py --check
+python3 check_reviews.py
 python3 -m unittest discover -s . -p 'test_lab.py' -v
 python3 simulator.py
 python3 simulator.py --input scenario.example.json
