@@ -24,6 +24,27 @@ class ReviewAnchorTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     check_reviews.validate(self.data, source, candidate, self.exists)
 
+    def test_invalid_ledger_shapes_fail_but_explicit_empty_is_valid(self):
+        invalid = []
+        for name, value in [('schema', True), ('reviews', {}), ('reviews', ''), ('reviews', None)]:
+            data = copy.deepcopy(self.data)
+            data[name] = value
+            invalid.append(data)
+        missing = copy.deepcopy(self.data)
+        del missing['reviews']
+        invalid.append(missing)
+        for data in invalid:
+            with self.subTest(data=data):
+                with self.assertRaises(ValueError):
+                    check_reviews.validate(data, self.source, self.candidate, self.exists)
+        data = copy.deepcopy(self.data)
+        data['reviews'] = []
+        self.assertEqual(check_reviews.validate(data, self.source, self.candidate, self.exists), (0, 206))
+
+    def test_duplicate_json_fields_are_rejected(self):
+        with self.assertRaises(ValueError):
+            json.loads('{"reviews": [1], "reviews": []}', object_pairs_hook=check_reviews.unique_object)
+
     def test_duplicate_block_missing_gap_and_wrong_hash_are_rejected(self):
         for corruption in ('duplicate', 'gap', 'hash', 'evidence'):
             data = copy.deepcopy(self.data)
