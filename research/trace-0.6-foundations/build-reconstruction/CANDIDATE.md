@@ -114,6 +114,8 @@ The room opens. C participates and offers a technique. A adjusts the front brake
 
 At the return, A chooses to learn a different repair next. Record that aim from now on alongside the unfinished earlier aim. B declines another evening and chooses rest. C offers later practice if a suitable room and tools can be arranged. A new offer has formed; a continuing service has not. No one has agreed to maintain the tools, and the organiser still needs to establish whether any institutional duty applies.
 
+A's learning, the group's ability to arrange another session, and participants securing a room together are related possibilities, but they occur at different levels and require different evidence. Record each, then ask what is usable for each participant, what needs maintaining and whether anyone can leave or disagree. [Robeyns](https://doi.org/10.11647/OBP.0130) distinguishes individual opportunities that depend on others from capabilities secured through collective action; this case uses those distinctions without settling the broader debate or assigning moral standing to the group.
+
 The next action is to ask whether A wants C's proposal and check its room, tools and support. Retain the useful guide, the accepted room revision, each participant's result and disclosure permission, the revised aim, and unfinished work. A compact return could say:
 
 > A adjusted the front brake with B's cues; the rear remains unattempted, and A now wants another repair. B reports teaching practice, extra effort and a separate teaching idea, and declines another session. C reports easier participation and offers later practice subject to room and tools. No next session or maintenance arrangement is agreed; external sharing permissions need checking.
