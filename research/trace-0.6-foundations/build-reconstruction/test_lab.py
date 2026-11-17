@@ -60,6 +60,19 @@ class LaboratoryTests(unittest.TestCase):
         self.assertEqual(simulator.unknown_conditions("yes", "unknown")["delivery"], "unknown")
         self.assertEqual(simulator.unknown_conditions("yes", "unknown")["authorization"], "UNASSESSED")
 
+    def test_acknowledgement_does_not_establish_timely_effect(self):
+        sample = dict(acknowledgement_time=3, delivery_time=8, backup_available=True,
+                      backup_cancelled=True, backup_time=4, due_time=6, hardening_time=7)
+        self.assertEqual(simulator.delivery_route(**sample)["status"], "NOT_SUPPORTED_IN_MODEL")
+        sample["backup_cancelled"] = False
+        self.assertEqual(simulator.delivery_route(**sample)["status"], "SUPPORTED_IN_MODEL")
+        sample["backup_cancelled"] = True
+        sample["delivery_time"] = None
+        self.assertEqual(simulator.delivery_route(**sample)["status"], "UNKNOWN")
+        sample["delivery_time"] = 7
+        sample["due_time"] = 7
+        self.assertEqual(simulator.delivery_route(**sample)["status"], "NOT_SUPPORTED_IN_MODEL")
+
     def test_reject_incomplete_or_invalid_joint_law(self):
         with self.assertRaises(ValueError):
             simulator.support([], "early", 2)

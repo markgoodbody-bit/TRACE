@@ -61,6 +61,31 @@ def unknown_conditions(agreement, delivery):
             "authorization": "UNASSESSED", "claim": "neither promise nor agreement proves delivery"}
 
 
+def delivery_route(*, acknowledgement_time, delivery_time, backup_available, backup_cancelled,
+                   backup_time, due_time, hardening_time):
+    """Stipulated event times on one declared clock; None is unknown, not absence."""
+    for value in (acknowledgement_time, delivery_time, backup_time, due_time, hardening_time):
+        if value is not None and type(value) is not int:
+            raise ValueError("times must be integers or null")
+    if type(backup_available) is not bool or type(backup_cancelled) is not bool:
+        raise ValueError("backup states must be explicit booleans")
+    if due_time is None or hardening_time is None:
+        return {"status": "UNKNOWN", "reason": "due or hardening time unavailable"}
+    available_times = [delivery_time]
+    if backup_available and not backup_cancelled:
+        available_times.append(backup_time)
+    known_success = any(t is not None and delivered_by_due(t, due_time) and
+                        before_hardening(t, hardening_time) for t in available_times)
+    if known_success:
+        status = "SUPPORTED_IN_MODEL"
+    elif any(t is None for t in available_times):
+        status = "UNKNOWN"
+    else:
+        status = "NOT_SUPPORTED_IN_MODEL"
+    return {"status": status, "acknowledgement": acknowledgement_time,
+            "basis": "single stipulated comparable clock; not authorisation or observed delivery"}
+
+
 def simulate_scenario(scenario):
     expected = {"worlds", "observation_time", "action_deadline", "capacity", "fallback_units"}
     if not isinstance(scenario, dict) or set(scenario) != expected:

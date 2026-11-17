@@ -42,6 +42,28 @@ Compare declared alternatives using the same stated affected scope, aim, protect
 
 One versioned source graph can serve different readers. A complete account carries the situated distinctions above plus the source units and unresolved qualifications in the crosswalk. A spine selects a named use: perturb a value, source, actor, scope or time; if that can change the action, burden, authority or interpretation, retain it or mark the condition for expansion. Source spans and checksums prove neither semantic retention nor reader understanding. An omitted material fact requires UNKNOWN or expansion, not an all-clear. Stopping a bounded inquiry is not failure if the unresolved question, receiving owner and usable handoff survive.
 
+### Compatibility floor: explicit review meanings
+
+Activate the following when their loss could affect the use; unresolved materiality stays unresolved. These are reading obligations, not claims that the laboratory enforces them:
+
+1. **Selection:** preserve who selected the target, why, known omissions, alternatives and relevant custody. Unsearched is not absent.
+2. **Currentness:** check the dependencies relevant to the claim, including changed authority, evidence, burden and routes. Age alone proves neither currentness nor staleness.
+3. **Warrant at use:** retain a consequential proposition's source, scope, applicability and counterevidence whether it appears as prose, a label, configuration, cache or model output. Copying is not independent verification.
+4. **Witness and access:** evidence, access, control and disclosure are different. A specified check is not an executed one; execution may miss the defect or arrive too late. A different name does not establish witness independence.
+5. **Affected scale:** a useful boundary does not establish personhood. Aggregate recovery does not establish that a particular smaller entity or loss was repaired.
+6. **Control and exit:** distinguish action, delay, null input and effect; refusal and failure; a formal offer and usable exit. An authority record needs its source, holder, action, scope, limits and applicability. A changed strategy does not undo an executed transition.
+7. **Correction-window claim:** name the effect, common clock basis, hardening boundary, supported route and alternatives. Strong OPEN needs a supported route before the boundary; strong CLOSED is scoped to the represented aperture and needs evidence the required route cannot complete and no represented alternative removes the requirement. Material uncertainty remains WINDOW_STATUS_UNKNOWN. Use compatible conservative bounds where relevant.
+8. **Burden and residue:** retain type and bearer, and expose any conversion of unlike measures. A later benefit or corrected record does not itself repair a particular earlier loss.
+9. **Future correspondence:** name scope, horizon, baseline and value or measure. A reused route label does not prove the same continuation remains reachable; ability to discover and use a route in time differs from its physical operation. More options are not automatically better.
+10. **Absence and recurrence:** distinguish UNKNOWN, OMITTED_FROM_RECORD and evidenced ABSENT relative to an expectation. Repeated outcomes can suggest, but do not establish, a shared mechanism. One repair does not prove the mechanism has changed.
+11. **Self-application:** examine what this account, its categories, examples and tests select or leave out. It cannot certify itself or the world.
+12. **Receiver protection:** use is voluntary. Neither a map nor complexity establishes experience, rights or status. Do not demand secrets, inaccessible internal reasoning, self-modification or unauthorised action as proof of compliance.
+13. **Internal mechanisms:** external causal descriptions are hypotheses about internals unless supported by an independent empirical connection.
+14. **Stop or handoff:** preserve and route unresolved work to an appropriate established domain owner when evidence, resources, time or authority run out. Consider the cost of inquiry and the correction window; UNKNOWN alone dictates neither action nor delay.
+15. **Practical advantage:** predeclare a use class, relevant ordinary or expert comparator, consequence or transfer criterion, burden ceiling and adjudication. Where feasible use a blind assessor. A failed matched comparison narrows that use claim; it does not reject the whole purpose. Track maintenance cost when material.
+
+The original [v0.5 floor](https://github.com/markgoodbody-bit/TRACE/blob/d688c149afc15c90ab51afaf08fe303771e9de20/TRACE-v0.5.md) and its v0.4 source remain the comparison authority. This rendering is pending a clause-by-clause reconciliation.
+
 ## 7. Paired worked probe
 
 **Engineered dependency.** A technician proposes a backup restore. A person has offered assistance, but no one has confirmed availability for this specific run. The old approval covers a different backup. Next: retain the old decision as history, verify the specific restoration target and renewed authority, reserve a fallback and record when its usefulness expires. A graph can expose known prerequisites, not prove that every dependency has been discovered.
