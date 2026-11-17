@@ -21,6 +21,11 @@ class LaboratoryTests(unittest.TestCase):
         self.assertTrue(all(a["end_line"] + 1 == b["start_line"] for a, b in zip(units, units[1:])))
         self.assertTrue(all(x["status"] == "UNRESOLVED" and x["proposed_candidate_sections"] for x in units))
         self.assertEqual(build_views.digest(raw), build_views.SOURCE_SHA256)
+        blocks = build_views.review_blocks(raw, units)
+        self.assertEqual(blocks[0]["start_line"], 1)
+        self.assertEqual(blocks[-1]["end_line"], len(lines))
+        self.assertTrue(all(a["end_line"] + 1 == b["start_line"] for a, b in zip(blocks, blocks[1:])))
+        self.assertEqual(b"".join("".join(lines[b["start_line"]-1:b["end_line"]]).encode("utf8") for b in blocks), raw)
 
     def test_early_late_and_capacity(self):
         rows = distribution()

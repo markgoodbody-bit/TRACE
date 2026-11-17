@@ -46,6 +46,27 @@ def partition(raw):
     return out
 
 
+def review_blocks(raw, headings):
+    """Finer mechanical blocks: not a claim these are semantic units."""
+    lines = raw.decode("utf-8").splitlines(keepends=True)
+    blocks = []
+    for h in headings:
+        start, stop = h["start_line"] - 1, h["end_line"]
+        cursor = start
+        while cursor < stop:
+            end = cursor + 1
+            while end < stop and lines[end - 1].strip():
+                end += 1
+            chunk = "".join(lines[cursor:end]).encode("utf-8")
+            blocks.append({"id": f"B{len(blocks)+1:04}", "parent": h["id"],
+                           "start_line": cursor + 1, "end_line": end,
+                           "sha256": digest(chunk), "status": "UNRESOLVED",
+                           "proposed_candidate_sections": h["proposed_candidate_sections"],
+                           "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."})
+            cursor = end
+    return blocks
+
+
 def render_spine(candidate):
     pieces = re.split(r"(?m)(?=^## [1-8]\. )", candidate)
     mapping = {}
@@ -80,11 +101,12 @@ def expected():
         raise ValueError("reference source hash mismatch")
     candidate = CANDIDATE.read_text(encoding="utf-8")
     units = partition(source)
+    blocks = review_blocks(source, units)
     manifest = {"schema": 1, "source_git_commit": "d688c149afc15c90ab51afaf08fe303771e9de20",
                 "source_git_blob": "39d943b26dd355781f2d01986b229b4f1da6c793",
                 "source_sha256": SOURCE_SHA256, "candidate_sha256": digest(candidate.encode("utf-8")),
-                "scope": "Heading spans cover source bytes; not a semantic audit. Every unit unresolved.",
-                "units": units}
+                "scope": "Heading spans and blank-delimited blocks cover source lines; neither is a semantic audit. Every unit unresolved.",
+                "units": units, "review_blocks": blocks}
     return json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", render_spine(candidate)
 
 
@@ -96,7 +118,8 @@ def main():
     if args.check:
         if MANIFEST.read_text(encoding="utf-8") != manifest or SPINE.read_text(encoding="utf-8") != spine:
             raise SystemExit("FAIL: derived views differ from source")
-        print(f"PASS mechanical coverage: {len(json.loads(manifest)['units'])} spans; all semantic dispositions UNRESOLVED")
+        m = json.loads(manifest)
+        print(f"PASS mechanical coverage: {len(m['units'])} headings, {len(m['review_blocks'])} blocks; semantic dispositions UNRESOLVED")
     else:
         MANIFEST.write_text(manifest, encoding="utf-8")
         SPINE.write_text(spine, encoding="utf-8")

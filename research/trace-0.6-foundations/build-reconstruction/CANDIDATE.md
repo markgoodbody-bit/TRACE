@@ -14,6 +14,8 @@ Ask whose lives, aims and burdens could change; whose voice is absent; who may c
 
 Supporters are not only resources for a beneficiary: they can form capabilities and futures of their own, including through cooperation, care, learning and maintenance. A possible route in a map, material access to it, chosen participation and sustainable support are different. One participant's benefit does not establish another's consent or obligation.
 
+Prior access to a person's files is not, by itself, permission to reuse them. A previous session does not establish a new session or an obligation to maintain the result. Identify unassigned maintenance as unassigned, and preserve what the supporter actually says separately from another person's account.
+
 ## 3. Offers, duties and power
 
 Distinguish offers, prior agreement, ongoing commitments, externally grounded duties and performed actions. Preserve each holder, ground, scope, recipient, trigger, due time, support dependency, renewal, refusal, withdrawal and usable exit where material. Acceptance under pressure is not automatically free agreement. A capacity shortage does not itself erase a duty or settle blame. A choice between competing acceptable plans needs an accountable holder, affected interests and contest route; an equation does not supply legitimacy.
@@ -22,11 +24,17 @@ Distinguish offers, prior agreement, ongoing commitments, externally grounded du
 
 Where a bounded engineered dependency is warranted, name component relations and conditional tests; keep proposed connections distinct from confirmed ones. Do not make association or an editable graph a proof of causal attribution. Where relationships co-evolve and the model cannot support a decomposed causal path, describe interacting constraints and dispositions, diverse plausible explanations, observation and small revisable interventions; do not force additive contribution weights or invented probabilities. Both modes support action, not a claim that the situation has been classified correctly forever.
 
+Every search or review selects a target set. Where relevant record who selected it, the basis, known omissions, alternatives and uncertainties. Exclusion from the search is not evidence that a category is absent from the world.
+
 For each intervention, name who may act, what may change, affected scopes, reversibility, indicators, observation limits and a return or stop route. Distinguish feasibility, permission, choice, actuation and actual effect. Unknown evidence can be controlled: identify who authors, controls or can pause the clock, who controls observation timing, who benefits from delay and who bears its costs. UNKNOWN is not automatically neutral or bad faith.
+
+In the stipulated early-versus-late disclosure example in the accompanying simulator, the carrier controls reveal timing. If that choice is the only changed condition, it changes the recipient's best modelled outcome from 7/8 to 3/4, a difference of 1/8. This is attributable to the specified reveal-timing choice in the toy model, not proof of an actual person's motivation or real-world effect. If supported evidence also shows the carrier benefits from delay while the recipient bears its costs, record that possible contamination and its source qualification; control of a clock alone is not enough.
 
 ## 5. Clocks, correction and construction
 
 Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations.
+
+Clock values may be ordered together only under a declared comparable clock or a supported conversion. The laboratory's integer clock is invented; it does not align real sources. A reported failure followed by a later receipt establishes neither continued failure nor restored access or permission.
 
 Compare declared alternatives using the same stated affected scope, aim, protective measures, burden units, baseline, horizon and assumptions; disclose frame changes. A model-relative forecast is not a guaranteed world outcome. A promise is not delivery; delivering one component of a joint effort can cost a contributor even if the other component never arrives. Rest, companionship or maintenance need not show an increase in a selected score to matter.
 

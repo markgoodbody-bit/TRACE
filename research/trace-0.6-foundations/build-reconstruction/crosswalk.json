@@ -3,8 +3,8 @@
   "source_git_commit": "d688c149afc15c90ab51afaf08fe303771e9de20",
   "source_git_blob": "39d943b26dd355781f2d01986b229b4f1da6c793",
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "7dfbcbbf4747cf626ef274a67a9dc9cd82b3e683ddc6df3bcd248a09e4ae88ae",
-  "scope": "Heading spans cover source bytes; not a semantic audit. Every unit unresolved.",
+  "candidate_sha256": "8ab3f809e0b74ec837564fb979bab0b43237cc129889845e7bdfa9baeff13df7",
+  "scope": "Heading spans and blank-delimited blocks cover source lines; neither is a semantic audit. Every unit unresolved.",
   "units": [
     {
       "id": "V05-001",
@@ -385,6 +385,2068 @@
       "status": "UNRESOLVED",
       "proposed_candidate_sections": "8",
       "reason": "Mechanical source span inventoried; semantic correspondence not yet reviewed."
+    }
+  ],
+  "review_blocks": [
+    {
+      "id": "B0001",
+      "parent": "V05-001",
+      "start_line": 1,
+      "end_line": 2,
+      "sha256": "46b9eb5b3c0b896be5caa76434187c7df795317fa38a13d8eb73233028c0c5b4",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0002",
+      "parent": "V05-001",
+      "start_line": 3,
+      "end_line": 4,
+      "sha256": "49dea503b1fa5f436dca08cd82da715a8585e41463068a55250b2e07af22ff4e",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0003",
+      "parent": "V05-001",
+      "start_line": 5,
+      "end_line": 6,
+      "sha256": "a8477d2e4ec6bdba860b9c7b1d2135a10b1981050240df88a5955153e8f7043f",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0004",
+      "parent": "V05-001",
+      "start_line": 7,
+      "end_line": 8,
+      "sha256": "2311353bee051e24b809038d7421ca58dd247e2f12aa5b71851969193fa35b03",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0005",
+      "parent": "V05-001",
+      "start_line": 9,
+      "end_line": 10,
+      "sha256": "2ea4d7386ec4a38539af2638203d79aa0af4e3b19c68e9a32c8c53be8b776cc8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0006",
+      "parent": "V05-001",
+      "start_line": 11,
+      "end_line": 12,
+      "sha256": "19758137a366dab10726798d408f87f78cbd01b9155ff4f681df8105772bac33",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0007",
+      "parent": "V05-002",
+      "start_line": 13,
+      "end_line": 14,
+      "sha256": "41cfd09581d6dfcfc97535c4e87af85e22c246dac9be6894045043412e853d41",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0008",
+      "parent": "V05-002",
+      "start_line": 15,
+      "end_line": 25,
+      "sha256": "1ed49a24e0252f964825b377b5c271ed544408a3a09e40f5cbe1cc52e278d1b8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0009",
+      "parent": "V05-002",
+      "start_line": 26,
+      "end_line": 27,
+      "sha256": "ce4c2fbbd23ff5267d74d0b1e5ff6cc3bce2cd2386a601e715e0496d13026bfa",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0010",
+      "parent": "V05-003",
+      "start_line": 28,
+      "end_line": 29,
+      "sha256": "86ce35c0a39cf1d541a438795e80b63270500b0a1713f179ea1051cd0b6a6f74",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0011",
+      "parent": "V05-004",
+      "start_line": 30,
+      "end_line": 31,
+      "sha256": "2ff2597013e4222e8645cf569961cd3fb8d0abf9b9ee917225fefe2c200353cc",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0012",
+      "parent": "V05-004",
+      "start_line": 32,
+      "end_line": 33,
+      "sha256": "973a7cb790cc92a9f92138281c1cbb651732013d922ec911862b174fb1a2dc54",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0013",
+      "parent": "V05-004",
+      "start_line": 34,
+      "end_line": 35,
+      "sha256": "b94daa6fa9ef7ec830d4d9d4af9f9c6cc92771bde2a5aff2df48430c5210ffa3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0014",
+      "parent": "V05-004",
+      "start_line": 36,
+      "end_line": 37,
+      "sha256": "454ebba799b95a8426a877e94ddcaf0e726863f7b1cf053c971981974e40dc91",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0015",
+      "parent": "V05-004",
+      "start_line": 38,
+      "end_line": 49,
+      "sha256": "3b690f683192447f2c1d7b032c0832dd33d089b73745dbf5b8a5411412836975",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0016",
+      "parent": "V05-004",
+      "start_line": 50,
+      "end_line": 51,
+      "sha256": "f9195bd83b086ae524b999d8620ed685b19060a5d1994d1b9367c4eaaac66e37",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0017",
+      "parent": "V05-005",
+      "start_line": 52,
+      "end_line": 53,
+      "sha256": "d9802a368b93b700f578ae781a633266f48b948740c8d44a73d05fb1f9d5e3c8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0018",
+      "parent": "V05-005",
+      "start_line": 54,
+      "end_line": 55,
+      "sha256": "be95f48bc42b5a4b6f2ad90fbffb18fb9197e1abfa9ea024a96c9c9cfd885715",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0019",
+      "parent": "V05-005",
+      "start_line": 56,
+      "end_line": 70,
+      "sha256": "43b300a98bb4f263673ae2c2d53dea663a3ba8bf74ac5821b2c1ccd3ef161e89",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0020",
+      "parent": "V05-005",
+      "start_line": 71,
+      "end_line": 72,
+      "sha256": "7eb5d38d0a3dda8ebc28625809ba5043cb729d9ef82f445445df7e82fe34aef3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0021",
+      "parent": "V05-005",
+      "start_line": 73,
+      "end_line": 74,
+      "sha256": "579bf5755b0ac8c7717901aa8d83f7664869b8fba482c114275f68c30eef1c92",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0022",
+      "parent": "V05-005",
+      "start_line": 75,
+      "end_line": 76,
+      "sha256": "b1c8780c4945962044ed24bd184f4cdb2cd9a57d36cd10a8c4524b93494ce255",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0023",
+      "parent": "V05-005",
+      "start_line": 77,
+      "end_line": 78,
+      "sha256": "9d462a9dc60c725aff67248c004ba07176fc73b8637c8f5356ffe435a4a50cad",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0024",
+      "parent": "V05-006",
+      "start_line": 79,
+      "end_line": 80,
+      "sha256": "b0c15f1672b14cdedb3a9d45614f296ee70a8d058844071172b33fca1ed8c215",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0025",
+      "parent": "V05-006",
+      "start_line": 81,
+      "end_line": 82,
+      "sha256": "db667a4b1fd5ac840167f4c4ee0cb3831eb2f330cbffbf8edb9b7abac64b2eab",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0026",
+      "parent": "V05-006",
+      "start_line": 83,
+      "end_line": 84,
+      "sha256": "894620d0a8db1409e944064dc3bb2a038349fb98804969fc2eea6fac6818b4e7",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0027",
+      "parent": "V05-006",
+      "start_line": 85,
+      "end_line": 86,
+      "sha256": "b9dda42aea6f8580d1f37dbfdb988ec3c8619cfc3e205f1294e4979ccfada65c",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0028",
+      "parent": "V05-006",
+      "start_line": 87,
+      "end_line": 88,
+      "sha256": "206f53f518256a116c954105be14eb3f3d7e15c78eddf04d68f95d193a83f419",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0029",
+      "parent": "V05-006",
+      "start_line": 89,
+      "end_line": 90,
+      "sha256": "b9e08e3c38cfb9457ee7f72ebb331f8364cabf8ae90fcebbdc0c73ad92058c18",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0030",
+      "parent": "V05-007",
+      "start_line": 91,
+      "end_line": 92,
+      "sha256": "1d4214a30a9f8d224a45451df62a3f0d1b483d920eebfae4c51d1f1bee6cbb44",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0031",
+      "parent": "V05-007",
+      "start_line": 93,
+      "end_line": 94,
+      "sha256": "101a3c6abfb01616798cdcca15bd77b1626ce1ee0caeee2efb54b60a11bf898d",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0032",
+      "parent": "V05-007",
+      "start_line": 95,
+      "end_line": 96,
+      "sha256": "63b787ab9cd257347770ffe285bcb5bacd2fadd44c91d74a84edf87159118f8a",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0033",
+      "parent": "V05-007",
+      "start_line": 97,
+      "end_line": 98,
+      "sha256": "6acacdcaac02b53dc57c2d3556a07614d4a285c16f96fb7e2c557259532ad90a",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0034",
+      "parent": "V05-007",
+      "start_line": 99,
+      "end_line": 100,
+      "sha256": "af7196c16ece5d6b58ec2543284cedb81e7c658e337f56230516975a7df53914",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0035",
+      "parent": "V05-008",
+      "start_line": 101,
+      "end_line": 102,
+      "sha256": "1d9cb228b91dc896421c800baf33bf09ef57acc67a9ff120938f45cdd466f9aa",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0036",
+      "parent": "V05-008",
+      "start_line": 103,
+      "end_line": 104,
+      "sha256": "b731f4cf375cbf4825786d409b8a191d017e1124ef378d400673fce58944367d",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0037",
+      "parent": "V05-009",
+      "start_line": 105,
+      "end_line": 106,
+      "sha256": "048e6974b9c92791d4f48748ba06aab5d81aff71a460c29741d0c4460c796c7f",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0038",
+      "parent": "V05-009",
+      "start_line": 107,
+      "end_line": 108,
+      "sha256": "79ed07791f2503052490423b09408ebc1002749c4022e4d2ac1cb3b5d5acd747",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0039",
+      "parent": "V05-009",
+      "start_line": 109,
+      "end_line": 110,
+      "sha256": "eb7f99639a8f8b896424805c9823453236b7dfdd7c3ff3713b89d9995db4b847",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0040",
+      "parent": "V05-009",
+      "start_line": 111,
+      "end_line": 112,
+      "sha256": "5e31fb8be953cb456d76b9e6676ddf044c78bd795000dfdc9f7ee9fec9e082b6",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0041",
+      "parent": "V05-009",
+      "start_line": 113,
+      "end_line": 113,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0042",
+      "parent": "V05-009",
+      "start_line": 114,
+      "end_line": 115,
+      "sha256": "fb9f586eb6a7d7113a63492f0f563b1b46c410e47f561c4fd527ca2e35f232fe",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0043",
+      "parent": "V05-010",
+      "start_line": 116,
+      "end_line": 117,
+      "sha256": "e220ad8b33e0850128d9a5b994b99f11bfe4f7739a764b5ce9a9db339655df0d",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0044",
+      "parent": "V05-010",
+      "start_line": 118,
+      "end_line": 119,
+      "sha256": "67f51d4947d44ab23aee0bea4f67d9750c88e53027a36a4df2e0d8b2e4c73be5",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0045",
+      "parent": "V05-010",
+      "start_line": 120,
+      "end_line": 121,
+      "sha256": "9877b74cab80628754356ac3ab10f4c4ef0f77f83e58e224d92c89c904ab17c6",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0046",
+      "parent": "V05-011",
+      "start_line": 122,
+      "end_line": 123,
+      "sha256": "6cf5b5acad1ddfa6f701cb53d8297f7890e1851cdba81d3831c8e0a6df8abe85",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0047",
+      "parent": "V05-011",
+      "start_line": 124,
+      "end_line": 125,
+      "sha256": "83e86a0068c2510b8ae2b34fbcf160eab2e5e6f6b8d462c00129e8efd9ccd4f3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0048",
+      "parent": "V05-011",
+      "start_line": 126,
+      "end_line": 127,
+      "sha256": "d3baa81fc14c2d02c90d80e57f3c1f02962a68dc726980ab413cc092485414fa",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0049",
+      "parent": "V05-011",
+      "start_line": 128,
+      "end_line": 133,
+      "sha256": "a4247d40b4dee1fad0dc389ca74dd1bd37622af041d7408a748592bca9e4d801",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0050",
+      "parent": "V05-011",
+      "start_line": 134,
+      "end_line": 135,
+      "sha256": "fde3760254bef5c354f79a1e7692d338dfa54e2c3ebed4c933bdc15d0d1e2cb0",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0051",
+      "parent": "V05-012",
+      "start_line": 136,
+      "end_line": 137,
+      "sha256": "a186499cda883e3dcfd814e33e19754de9f0fa8f4009ff97ac5eea6eae1cbe18",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0052",
+      "parent": "V05-012",
+      "start_line": 138,
+      "end_line": 139,
+      "sha256": "f58ed9b7340291f16b34dae8984efab037d9f23ece81234a4e3762580917fb70",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0053",
+      "parent": "V05-012",
+      "start_line": 140,
+      "end_line": 141,
+      "sha256": "e74d2c7192d704e8b71845ce5c52148db8fd167230b8dd8fb28b24a8cf52900c",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0054",
+      "parent": "V05-012",
+      "start_line": 142,
+      "end_line": 143,
+      "sha256": "f4b2c36bc0109be912c9f80938ba8ec606fd7faa3a140f300e4eba9b9ce989fa",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0055",
+      "parent": "V05-012",
+      "start_line": 144,
+      "end_line": 145,
+      "sha256": "91a0f03591300083c84d306f67ce0eadac2753b93b8608ad18440f0c020e79cf",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0056",
+      "parent": "V05-012",
+      "start_line": 146,
+      "end_line": 147,
+      "sha256": "34e8f55bbafaccadfb31a04acf62fedc00e226e94bef69b1b93cacdb029c14f1",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0057",
+      "parent": "V05-013",
+      "start_line": 148,
+      "end_line": 149,
+      "sha256": "8b6ca3df342b19c635807d89138d8edc6a788c527cc3b40fc82aa5903cca3a23",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0058",
+      "parent": "V05-013",
+      "start_line": 150,
+      "end_line": 151,
+      "sha256": "133bea30d148d37a325880ef98a6b41b21feca5098291ba08af45cc5934aeb6c",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0059",
+      "parent": "V05-013",
+      "start_line": 152,
+      "end_line": 163,
+      "sha256": "84bbace301df4e6dc661ed0e8977aaf539a4046a8ea22718aee7f0406a726663",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0060",
+      "parent": "V05-013",
+      "start_line": 164,
+      "end_line": 165,
+      "sha256": "10e0cebaaba575c7222044d9f1a724db7fb6dc6636edf3d7951b00910a4744d1",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0061",
+      "parent": "V05-013",
+      "start_line": 166,
+      "end_line": 167,
+      "sha256": "dac3a160f9866166adf8af1e9ead5bc8abd91c4ebe052cfac3e7695690bbd1fb",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0062",
+      "parent": "V05-013",
+      "start_line": 168,
+      "end_line": 177,
+      "sha256": "ae982eceea154470655aad7af489e79d09a94309277d17aced9145cb1341c4c4",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0063",
+      "parent": "V05-013",
+      "start_line": 178,
+      "end_line": 179,
+      "sha256": "0510ecda6863482859840ee4cb6155c74fda5487fc084c4167eaf681f1b7beb6",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0064",
+      "parent": "V05-013",
+      "start_line": 180,
+      "end_line": 181,
+      "sha256": "a5feaf8fe8dc58df5e2d0e6ea9faf551bfe2338608aba7e694c4a22fec73fd2c",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0065",
+      "parent": "V05-014",
+      "start_line": 182,
+      "end_line": 183,
+      "sha256": "b4f0353d95c955584351c5e648e44be505f10d9279189d30facdbb5b752aaeb2",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0066",
+      "parent": "V05-014",
+      "start_line": 184,
+      "end_line": 193,
+      "sha256": "86e4bfed239b0d52af21006919c621ca0e945b3a5b9a26ac0c9ef1856bcd783b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0067",
+      "parent": "V05-014",
+      "start_line": 194,
+      "end_line": 195,
+      "sha256": "8029769a5d37ad35626dc0487751cc5a2a901bff87f34d5c4a0599e0a0b2e417",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0068",
+      "parent": "V05-015",
+      "start_line": 196,
+      "end_line": 197,
+      "sha256": "2a5810cc6ec6b38ea8cd62ed31f173a32ef58c52afde08ce64f43df99a21b421",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0069",
+      "parent": "V05-015",
+      "start_line": 198,
+      "end_line": 199,
+      "sha256": "9cd859747becc43753eeee52b9079694d2775c2f503726ba930a81561468d471",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0070",
+      "parent": "V05-015",
+      "start_line": 200,
+      "end_line": 205,
+      "sha256": "d270f4b675ddc97109b8f3f2d81be4272ee0c23e8d73376ab690b05d226de212",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0071",
+      "parent": "V05-015",
+      "start_line": 206,
+      "end_line": 211,
+      "sha256": "ae017d77f17ad5c01893304753df834671ea0043878b312eceb22397b4a80bf3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0072",
+      "parent": "V05-015",
+      "start_line": 212,
+      "end_line": 214,
+      "sha256": "ed7b5e6fe6fb80bb9f845bf1fbb7ec6cb9ecfca6cd6eb07100e521f6acab5be1",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0073",
+      "parent": "V05-015",
+      "start_line": 215,
+      "end_line": 217,
+      "sha256": "b1ca615ba0b476796a4779875717ffe82153ef20e8f1c07642eec4cd04df7ed6",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0074",
+      "parent": "V05-015",
+      "start_line": 218,
+      "end_line": 220,
+      "sha256": "45603d6910948eeabfc11d87b49219db7075564005f7f7fe0036cbb8191be815",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0075",
+      "parent": "V05-015",
+      "start_line": 221,
+      "end_line": 228,
+      "sha256": "005e8addbcb4c3ba0d7c7a03bf3bccb6536d602fca8f459fd686c5feefc1c0fb",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0076",
+      "parent": "V05-015",
+      "start_line": 229,
+      "end_line": 230,
+      "sha256": "11cd53dffaddcf57941026a0b1ba5a764fa937774176c38b19a31e90ded0688d",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0077",
+      "parent": "V05-015",
+      "start_line": 231,
+      "end_line": 232,
+      "sha256": "cc8701d33e1d0111fa323f0e179078f17398cfa837fec98daf3cccb71ab22533",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0078",
+      "parent": "V05-015",
+      "start_line": 233,
+      "end_line": 240,
+      "sha256": "d61471843866a9c6b80daf82f1173ca862c462c471fae56c9a57627b5ba0a194",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,3,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0079",
+      "parent": "V05-016",
+      "start_line": 241,
+      "end_line": 242,
+      "sha256": "b36b9532e11e24b4e3d2406236fa02c1fd83ea76f8fc691f1c52c34aab7214d1",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0080",
+      "parent": "V05-016",
+      "start_line": 243,
+      "end_line": 244,
+      "sha256": "99ab72f85cc482a292a32fb27b794f4c9983f88c340780862030c632ff23a3d0",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0081",
+      "parent": "V05-016",
+      "start_line": 245,
+      "end_line": 246,
+      "sha256": "689ada3a23a39d60be9cd8810b533eb8b2e9de3174c9bf7ed7c73c2dcf0b02a1",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0082",
+      "parent": "V05-016",
+      "start_line": 247,
+      "end_line": 248,
+      "sha256": "51d626b01c8b72304fd4c72f179546884352d551ef955b95f5927df270f59d2a",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0083",
+      "parent": "V05-016",
+      "start_line": 249,
+      "end_line": 250,
+      "sha256": "c4061f49f8b48d49f521645e79545028ce8b29d1c13e226808ce22c016f2c4e3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0084",
+      "parent": "V05-016",
+      "start_line": 251,
+      "end_line": 252,
+      "sha256": "fa463c21791ecbc3fac735e8df2a9bb8676e02f2958d48b5d4e4f88b80af9140",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0085",
+      "parent": "V05-016",
+      "start_line": 253,
+      "end_line": 254,
+      "sha256": "79c89927377e8d52835fc1516efeed839e24e08dc3c984a761bbab1fc9c063bf",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0086",
+      "parent": "V05-016",
+      "start_line": 255,
+      "end_line": 256,
+      "sha256": "b03e6fafd9835118519acc6aa70eb5d0e0e2ebd01a63a4173f5b8217d2bf8722",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0087",
+      "parent": "V05-016",
+      "start_line": 257,
+      "end_line": 258,
+      "sha256": "8ae1e5544b9d08ad5c31d0864614a7b6755d8d5c67450d8031a9240a72b961a8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0088",
+      "parent": "V05-016",
+      "start_line": 259,
+      "end_line": 260,
+      "sha256": "fa5cfdcbfa2cf6ca6e6f5a3701c203a86ae0fe121a903d3d457a2b004a0306fb",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,5,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0089",
+      "parent": "V05-017",
+      "start_line": 261,
+      "end_line": 262,
+      "sha256": "2a3ce82eae2c7a072beadf27398208d2638dec4f122c24ff9a3e87589cf543f9",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0090",
+      "parent": "V05-017",
+      "start_line": 263,
+      "end_line": 264,
+      "sha256": "f7aa8d7172acf795056b1656e4276226c53a3d88ae2756bc275f2b40ad83c0a5",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0091",
+      "parent": "V05-017",
+      "start_line": 265,
+      "end_line": 280,
+      "sha256": "051bdf5d08e5da41eef8ad06a2b2e1c4c5215496c8f3a7551c76e8e51f8ec6e3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0092",
+      "parent": "V05-017",
+      "start_line": 281,
+      "end_line": 282,
+      "sha256": "4811b602ae318b77be58a0f619ab000bd7cf66e70b217049f4edda7cf1b4b6b4",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0093",
+      "parent": "V05-018",
+      "start_line": 283,
+      "end_line": 284,
+      "sha256": "cbfc6003b64d876feb31d5ea45677ce13a8b140ec55084b1eb13309f79b541d5",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0094",
+      "parent": "V05-018",
+      "start_line": 285,
+      "end_line": 286,
+      "sha256": "a496734db34cc14904db694b93e780c87d00d7a8c8cea782fb33ed746db82b14",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0095",
+      "parent": "V05-018",
+      "start_line": 287,
+      "end_line": 290,
+      "sha256": "ea6c390da0d2cbf873d5f241d09c935852ce94d9aeabb98e70414dbf9d0dac39",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0096",
+      "parent": "V05-018",
+      "start_line": 291,
+      "end_line": 292,
+      "sha256": "3c4ed685613f62279c17d0aa1f62a787b8dc37899f83b0b74b5dc69eb77179ad",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0097",
+      "parent": "V05-018",
+      "start_line": 293,
+      "end_line": 296,
+      "sha256": "1e2f0905a3a99290ebf976d5399d3d019991a080bdb4ed44fac9465bcb615b08",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0098",
+      "parent": "V05-018",
+      "start_line": 297,
+      "end_line": 298,
+      "sha256": "a80c90694eb6b13555a67a5aff7bb9ef6dc238d87ad5c47944881babffe80d15",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0099",
+      "parent": "V05-019",
+      "start_line": 299,
+      "end_line": 300,
+      "sha256": "217373de899513c2e980181780aec87bf8c5deec6ad9ea160bdcb3ff48622080",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0100",
+      "parent": "V05-019",
+      "start_line": 301,
+      "end_line": 302,
+      "sha256": "3745ddd2904b253484904ff9ba087292481762780f49ee5a734a38c54681516e",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0101",
+      "parent": "V05-019",
+      "start_line": 303,
+      "end_line": 304,
+      "sha256": "24fdf3bd1848cecce057a8f2b53d7698f56cc3b5f10e43d4d56ec067a2b95ea4",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0102",
+      "parent": "V05-019",
+      "start_line": 305,
+      "end_line": 312,
+      "sha256": "8bbe31cc1080e42b8a16e08e9309053589892662a5383fba1e5e726f17406932",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0103",
+      "parent": "V05-019",
+      "start_line": 313,
+      "end_line": 314,
+      "sha256": "e5e0c229741ec7a86df03d6e37dd28be31c300f50565848c25ec3a599330e4d8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0104",
+      "parent": "V05-020",
+      "start_line": 315,
+      "end_line": 316,
+      "sha256": "3f0a092eef036b48cde526e1b31ff2f47af94f5e83663852817a42bceae4ec37",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0105",
+      "parent": "V05-020",
+      "start_line": 317,
+      "end_line": 318,
+      "sha256": "b74fa1dd425ff004bfa01eb0a51bd3a1399b92af95c7ba78edf9edb20999a8bb",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0106",
+      "parent": "V05-020",
+      "start_line": 319,
+      "end_line": 327,
+      "sha256": "f5c097883a48036dceb017eaa3f24771546915b1eba62f4470b5f3cd532d9132",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0107",
+      "parent": "V05-020",
+      "start_line": 328,
+      "end_line": 329,
+      "sha256": "c436bf9a4c299d00ec5bfb83078ac767e80f65543945c7f399b24f047dd13320",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0108",
+      "parent": "V05-021",
+      "start_line": 330,
+      "end_line": 331,
+      "sha256": "7fe47be36981834d5dee5885b22c1d699ca5d180bdb80110af8d736edc32b3b9",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0109",
+      "parent": "V05-021",
+      "start_line": 332,
+      "end_line": 333,
+      "sha256": "ef2a4681e62909570db9f13c61a7ffb56bda147683d21ab23ec067224689f6bc",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0110",
+      "parent": "V05-021",
+      "start_line": 334,
+      "end_line": 335,
+      "sha256": "7318aafb5ff6945c6c0a5f4dc58d946c419949a537524fd573add86f822d0c1b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0111",
+      "parent": "V05-022",
+      "start_line": 336,
+      "end_line": 337,
+      "sha256": "2336e8779d481be72c671c6138325915989efa2614b7f0ef1881881aa1f2fc8a",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0112",
+      "parent": "V05-022",
+      "start_line": 338,
+      "end_line": 339,
+      "sha256": "4d0fd6604a9b764c3a6d3e80abb229d0bb4014dfb56792843644ee3788e30f9a",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0113",
+      "parent": "V05-022",
+      "start_line": 340,
+      "end_line": 341,
+      "sha256": "3bce45c396614324ed61022ee10ae1c23282b8cb06387ab07f990949045058ff",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0114",
+      "parent": "V05-022",
+      "start_line": 342,
+      "end_line": 343,
+      "sha256": "6ce1980c1952b91d5914a9404095473ee46f471bc1d9dc68e22cd47fac5e3318",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0115",
+      "parent": "V05-022",
+      "start_line": 344,
+      "end_line": 345,
+      "sha256": "ab80435c7e6de24047dc8c708cb772f140bd599c6686664a4cc311cb34f39d0f",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0116",
+      "parent": "V05-022",
+      "start_line": 346,
+      "end_line": 347,
+      "sha256": "559de5c0afeb42ae6ee2ec6ca8fbdab0a0c930cec0ef020554f2edbd4390f828",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0117",
+      "parent": "V05-022",
+      "start_line": 348,
+      "end_line": 349,
+      "sha256": "a4bda80927bae44f01402506abb6f9f63262469ed36a0badd741b9720f81eb35",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0118",
+      "parent": "V05-022",
+      "start_line": 350,
+      "end_line": 351,
+      "sha256": "6102e7cf90da6fb40ff4c99b3d23a20a210da39671032e76e9da6c95928ce418",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0119",
+      "parent": "V05-022",
+      "start_line": 352,
+      "end_line": 353,
+      "sha256": "a0db16c845a5c9b749f69ac117d9664a323617c9db5fbe9313b92c9a0a00c172",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0120",
+      "parent": "V05-022",
+      "start_line": 354,
+      "end_line": 355,
+      "sha256": "0decbfe0f3624e5b97087308f231b7279e93115fcf7238c8a416999f17090db4",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0121",
+      "parent": "V05-022",
+      "start_line": 356,
+      "end_line": 357,
+      "sha256": "de1a919848ad40480422c238b6e99ed95f49beceaf169fc94cba725b018c56d9",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0122",
+      "parent": "V05-022",
+      "start_line": 358,
+      "end_line": 359,
+      "sha256": "97fa66a0df3439620a3c1b4b554e03f6524399d87fabaaf57ae3f98c16a55972",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0123",
+      "parent": "V05-023",
+      "start_line": 360,
+      "end_line": 361,
+      "sha256": "40961640aed1f08fa7eb958751f9a38fd24bc3177405a92c455c218169faacbf",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0124",
+      "parent": "V05-023",
+      "start_line": 362,
+      "end_line": 363,
+      "sha256": "319f692a6970c79306e8a4532454c82de572691ea9773ab5bcf7e29da0ae3f31",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0125",
+      "parent": "V05-023",
+      "start_line": 364,
+      "end_line": 365,
+      "sha256": "987aebbc50af1409d8104f790d49143a1a7345be8d52b4b24ff552399a0ea163",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0126",
+      "parent": "V05-024",
+      "start_line": 366,
+      "end_line": 367,
+      "sha256": "d83e7fe1a2ba4d84c8b661625b5cff72eaef1e6dd269b2b05ea5e9bfc65bde1e",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0127",
+      "parent": "V05-024",
+      "start_line": 368,
+      "end_line": 369,
+      "sha256": "0707635f5915d3833ecd4db080cdb7898255f6edfcd2c59ca159a4829e264640",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0128",
+      "parent": "V05-024",
+      "start_line": 370,
+      "end_line": 393,
+      "sha256": "6bad889372768561f58e0680395e0d7d1fef0b4f592b5086bedea7c29bae2f8c",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0129",
+      "parent": "V05-024",
+      "start_line": 394,
+      "end_line": 395,
+      "sha256": "2eef5c45d827f1b6f728b0884f24321690742aa05177e54887aa6009337797ba",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0130",
+      "parent": "V05-024",
+      "start_line": 396,
+      "end_line": 397,
+      "sha256": "b092809b53e608ac446aa87a7ad553a93a0667c24d87519095c338a5303948c3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0131",
+      "parent": "V05-024",
+      "start_line": 398,
+      "end_line": 404,
+      "sha256": "7c19bf776a2ea8538b82bb59bad7ad78437dfbf0f7f69577880187e1d929692a",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0132",
+      "parent": "V05-024",
+      "start_line": 405,
+      "end_line": 406,
+      "sha256": "309ce5ad2a24518da53b6b3b9bb1235d4db128ee253d4824fb6331b2ea58d4a3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0133",
+      "parent": "V05-024",
+      "start_line": 407,
+      "end_line": 408,
+      "sha256": "1950bef7e40476d7549b67842ab863962d345843cfd4cc3eb7ce2c1de2ae0187",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0134",
+      "parent": "V05-024",
+      "start_line": 409,
+      "end_line": 410,
+      "sha256": "b04fb3e8ce3f17c5abb6d4ecda73f13c16d345d8580253e54eb1520aba73b1c7",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0135",
+      "parent": "V05-024",
+      "start_line": 411,
+      "end_line": 417,
+      "sha256": "9ab79e3ff6210382e424abf48a9b94b930afbd87e98fb8bf5075251bf16aba7f",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "4,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0136",
+      "parent": "V05-025",
+      "start_line": 418,
+      "end_line": 419,
+      "sha256": "4ae6e4f8029922fd7f60b3bf44926a32b3b67a76884699681ad7349b419655a8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "6,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0137",
+      "parent": "V05-025",
+      "start_line": 420,
+      "end_line": 421,
+      "sha256": "49b992c2897f5fe3d679a0bb729fff7db5ea523f43c6d684a61027472d41d4d8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "6,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0138",
+      "parent": "V05-025",
+      "start_line": 422,
+      "end_line": 423,
+      "sha256": "5b8c5cfde7d82bbd973b02dd3032d0b2e6b187cf8d6afd74701281cf1434e1d7",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "6,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0139",
+      "parent": "V05-026",
+      "start_line": 424,
+      "end_line": 425,
+      "sha256": "46667a4266b2b125f291e97d0e65e5f3948a4db0ff6ff706249db84e9724c69e",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0140",
+      "parent": "V05-026",
+      "start_line": 426,
+      "end_line": 427,
+      "sha256": "278ce492cb8f394055bf8b479242ccd9590a14abcc2aedaf6fecb7b701b260c6",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0141",
+      "parent": "V05-027",
+      "start_line": 428,
+      "end_line": 429,
+      "sha256": "d39fef50fd9f82fa0edf12dbee521ff9590d444aaa3ea2c0c4f00ec02c126dc7",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0142",
+      "parent": "V05-027",
+      "start_line": 430,
+      "end_line": 431,
+      "sha256": "95f337f84e9f2d2cf322fd1b6ed2e8a6ae945137d6981778dfa725d772d827ea",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0143",
+      "parent": "V05-027",
+      "start_line": 432,
+      "end_line": 439,
+      "sha256": "74651c35b60f5016c0fa108b61faa1502bfbc15af833586b0eda7ba49ad0c4e8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0144",
+      "parent": "V05-027",
+      "start_line": 440,
+      "end_line": 441,
+      "sha256": "87fd0671caa8b1ea78c31718cfaeeb1d99c050f1b401b2419b5483ba31324644",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0145",
+      "parent": "V05-027",
+      "start_line": 442,
+      "end_line": 443,
+      "sha256": "08795be451e2a3f6e84197510a3b48a6c75194922007289cd402028c0ccb2a06",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0146",
+      "parent": "V05-027",
+      "start_line": 444,
+      "end_line": 445,
+      "sha256": "ec0020401bedcf2691c165ee276492588831671dbe890d875aad7a36d33659e3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0147",
+      "parent": "V05-027",
+      "start_line": 446,
+      "end_line": 447,
+      "sha256": "9d5673b159f26e6cda74d8e6479fa36897e9c202d72b2d99fa401a90831d25a9",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "3,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0148",
+      "parent": "V05-028",
+      "start_line": 448,
+      "end_line": 449,
+      "sha256": "baee15a61ba2ec70cdfea9d7dc2eac4a00b05c593ea53bf172049763e70c552f",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0149",
+      "parent": "V05-028",
+      "start_line": 450,
+      "end_line": 451,
+      "sha256": "5e96f8d3910741cbd5dc084082a63a5665341b5be2ece101b6b376201a43bf8d",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0150",
+      "parent": "V05-028",
+      "start_line": 452,
+      "end_line": 457,
+      "sha256": "ce99d82c38127e8c9930ae7a1151316b64071b298ecd21e96a146756d36f2bc0",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0151",
+      "parent": "V05-028",
+      "start_line": 458,
+      "end_line": 459,
+      "sha256": "4bec42baf66237f436223b5fb0c4d759561f47a904f3740476d4759999a48d1f",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0152",
+      "parent": "V05-028",
+      "start_line": 460,
+      "end_line": 461,
+      "sha256": "b45382888852b740199adfe4ba9a161f79d2e2f0457f0a0b68ada84eabf142ea",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0153",
+      "parent": "V05-028",
+      "start_line": 462,
+      "end_line": 463,
+      "sha256": "b504dbdec5ea81bc3ef99edb4138520503f31d03e1629be3283fe14761be57ba",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0154",
+      "parent": "V05-029",
+      "start_line": 464,
+      "end_line": 465,
+      "sha256": "629383b0998f732ca8514c49998697de6e13340f4cbedde3ebeacde409eaea78",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0155",
+      "parent": "V05-029",
+      "start_line": 466,
+      "end_line": 467,
+      "sha256": "b9c5b7ef6db9c961a2de8f0f7a8a6a6b88b3365af8e71405cc171f902c389c96",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0156",
+      "parent": "V05-029",
+      "start_line": 468,
+      "end_line": 469,
+      "sha256": "acd99036153197fed01e5328dc1cf9a80fc9d9a2de50379642413cfffcf47694",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0157",
+      "parent": "V05-029",
+      "start_line": 470,
+      "end_line": 471,
+      "sha256": "f989350d15aa0161e8236082dad11f9c3ee1cd787edee0b0a8876b48cef7e674",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0158",
+      "parent": "V05-030",
+      "start_line": 472,
+      "end_line": 473,
+      "sha256": "d69186f413344f45f3cfe4fb4abf74b833abec70605ea53324813973ca1c1937",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0159",
+      "parent": "V05-030",
+      "start_line": 474,
+      "end_line": 475,
+      "sha256": "2122a8501563886aa3ce970c69933f979877ad5aae35a21235315eb244a051fd",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0160",
+      "parent": "V05-030",
+      "start_line": 476,
+      "end_line": 797,
+      "sha256": "b34c00eef194c4532f5ddbfe6459c656a7a93557e8ac1995321e3d73b020751e",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0161",
+      "parent": "V05-030",
+      "start_line": 798,
+      "end_line": 799,
+      "sha256": "a701c05470243e4ca0b4401ea409010d751c29baa1510bfa11189b9bcd311af2",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0162",
+      "parent": "V05-030",
+      "start_line": 800,
+      "end_line": 801,
+      "sha256": "356df8937a5d4d1505b91e5d8b011197ff09043cb6d1ca9033dc2e520eeebc4b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "2,7",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0163",
+      "parent": "V05-031",
+      "start_line": 802,
+      "end_line": 803,
+      "sha256": "2a42f5891ab7ea743d1c68628238b002385983878d47be009d26629ebc9498e7",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0164",
+      "parent": "V05-031",
+      "start_line": 804,
+      "end_line": 805,
+      "sha256": "a5ced27a59fae8b091eabac8e78f63e5eae2cac8f99a8111a648867416b811b4",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0165",
+      "parent": "V05-031",
+      "start_line": 806,
+      "end_line": 911,
+      "sha256": "e5b2f9a1fca54cd80034ad88cba2d8cf40ff128f5b907913a2bb33c4156e5c8d",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0166",
+      "parent": "V05-031",
+      "start_line": 912,
+      "end_line": 913,
+      "sha256": "2b81728551a7a0c8201c56846d8177d6b495ef3e4564f42418aa86ec150bd812",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0167",
+      "parent": "V05-031",
+      "start_line": 914,
+      "end_line": 915,
+      "sha256": "473b6c1efc07b72c2039e6f2405ce96fe7bfdd6ccc79fce1de86bcba37128aaf",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,5",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0168",
+      "parent": "V05-032",
+      "start_line": 916,
+      "end_line": 917,
+      "sha256": "78456dd216605cfa9a22cde0338ca9a0abf77fb20c7ca7897fff45ac86806d27",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0169",
+      "parent": "V05-032",
+      "start_line": 918,
+      "end_line": 919,
+      "sha256": "6914fa4b18a028953ef17907c04a7534f589e679d5bfe5ba59bb06b298a32c43",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0170",
+      "parent": "V05-032",
+      "start_line": 920,
+      "end_line": 988,
+      "sha256": "009521b663d3bc02d7a98d0678321f184adfd739e30a7ca827d1ec3472518ae2",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0171",
+      "parent": "V05-032",
+      "start_line": 989,
+      "end_line": 990,
+      "sha256": "b846d66ea4e8ce474f90641bf06dc3fca970271c55237c10bbbf9d0eac6744cb",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0172",
+      "parent": "V05-032",
+      "start_line": 991,
+      "end_line": 992,
+      "sha256": "a66826034dc11bef6becfb602e8c716f886e9f625bfbebce64d9273ee389b08c",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,6",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0173",
+      "parent": "V05-033",
+      "start_line": 993,
+      "end_line": 994,
+      "sha256": "4d1245325e455fef7d262d2c3ce3393cc7f86cee9118c8a919b6c82423015007",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0174",
+      "parent": "V05-033",
+      "start_line": 995,
+      "end_line": 1003,
+      "sha256": "930642f0cd5e45869f8210ad3fb402a26fc337b73270ac2da378e7f6f9dd5c8c",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0175",
+      "parent": "V05-033",
+      "start_line": 1004,
+      "end_line": 1005,
+      "sha256": "497b4207d0b312d16833499c7a89b624d9cb0a894e95a553b95f31958a4c2860",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0176",
+      "parent": "V05-033",
+      "start_line": 1006,
+      "end_line": 1007,
+      "sha256": "a3a42d1f833c19b36e3ef23fa4476066b15d5fcf8b037fa392db6c26bd9fcdb3",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0177",
+      "parent": "V05-033",
+      "start_line": 1008,
+      "end_line": 1009,
+      "sha256": "9fa72e80f51b06853a22105668c1780609cb7e389214175bab93dde5fa7ff596",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0178",
+      "parent": "V05-034",
+      "start_line": 1010,
+      "end_line": 1011,
+      "sha256": "398bb186e183ed7003cf330644ed2ecf7d3cad6579d43009e30d7ba501e5121f",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0179",
+      "parent": "V05-034",
+      "start_line": 1012,
+      "end_line": 1013,
+      "sha256": "aebb8e86efdbf2e97896a3b1caa06ed2b9de3a0da97329d70c3fd44799127955",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0180",
+      "parent": "V05-034",
+      "start_line": 1014,
+      "end_line": 1015,
+      "sha256": "3753abf51d41a0d4eabd7a17d3fd8f1a16d993a0edcc4d3150b19dc6c07757d4",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0181",
+      "parent": "V05-034",
+      "start_line": 1016,
+      "end_line": 1021,
+      "sha256": "198e41974157573a3d808deca3a631a04dbf325cd7523895c2e391697bb486ec",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0182",
+      "parent": "V05-034",
+      "start_line": 1022,
+      "end_line": 1023,
+      "sha256": "3ba777bb6f3b0a85714a6475e60b59212898aee5568d8d575b759bbb36e44753",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0183",
+      "parent": "V05-034",
+      "start_line": 1024,
+      "end_line": 1038,
+      "sha256": "825cd9c4875ff5e10d521644431c368ea88caa483168e4ecc2b31be2b7d71712",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0184",
+      "parent": "V05-034",
+      "start_line": 1039,
+      "end_line": 1040,
+      "sha256": "268fdf9ab11739ca1f67686be468f73d3f7ce46661c251b8e85afca55b92ffe7",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "1,8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0185",
+      "parent": "V05-035",
+      "start_line": 1041,
+      "end_line": 1042,
+      "sha256": "ce8c0bfde2e1bf1bed8313182a7a9d2d053049e3ba16d49d181ab02131b6cce7",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0186",
+      "parent": "V05-035",
+      "start_line": 1043,
+      "end_line": 1044,
+      "sha256": "e329ea3b086fc96f92b5253a5e585328435bb103bf748a87ff77c805d32b5f07",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0187",
+      "parent": "V05-035",
+      "start_line": 1045,
+      "end_line": 1046,
+      "sha256": "54495bd4a0b98bdcf72dc2f621a803ef3721e0aeb756d3413f7423615646544d",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0188",
+      "parent": "V05-035",
+      "start_line": 1047,
+      "end_line": 1048,
+      "sha256": "d5df2105b539a1a733dba41ee562beb9269e4768ac405a3312e198a1de597a47",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0189",
+      "parent": "V05-035",
+      "start_line": 1049,
+      "end_line": 1053,
+      "sha256": "ebc148dcb50e7b51bf3b3815bc340320c68fa38d08e54e41062aa1a428425ca8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0190",
+      "parent": "V05-035",
+      "start_line": 1054,
+      "end_line": 1055,
+      "sha256": "e208368eac58434b23f19cb18468f7cf9a4768a6d0987987ba7acd5431f25c97",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0191",
+      "parent": "V05-036",
+      "start_line": 1056,
+      "end_line": 1057,
+      "sha256": "7beed84ad302308a45756935acdbbc7af4e9026651b9084f3840bef9d20a5b0c",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0192",
+      "parent": "V05-036",
+      "start_line": 1058,
+      "end_line": 1064,
+      "sha256": "63cde829c329eb8a95c0f2e077286f6e7b696f6824489ec4e3959fe83350b24e",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0193",
+      "parent": "V05-036",
+      "start_line": 1065,
+      "end_line": 1065,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0194",
+      "parent": "V05-036",
+      "start_line": 1066,
+      "end_line": 1066,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0195",
+      "parent": "V05-036",
+      "start_line": 1067,
+      "end_line": 1068,
+      "sha256": "e4e20f7e76f61c5935db75b341300ddbd45f3619250a91bd9adc5acec76b110b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0196",
+      "parent": "V05-037",
+      "start_line": 1069,
+      "end_line": 1070,
+      "sha256": "2f9c13d79114f670ce00ea9b5421fa14822b1a941641923706eb9e997d25d82a",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0197",
+      "parent": "V05-037",
+      "start_line": 1071,
+      "end_line": 1072,
+      "sha256": "474294d4bb7b549e1f0b14aeb91c29c5cf15c69c3e3e3e439011902546bace4d",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0198",
+      "parent": "V05-037",
+      "start_line": 1073,
+      "end_line": 1097,
+      "sha256": "72cbc84dc645e32802446da59dae2358e1602168969a08c4912847f3efa8d8d8",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0199",
+      "parent": "V05-037",
+      "start_line": 1098,
+      "end_line": 1099,
+      "sha256": "867dce964911e5a7e0346c0ab3f444ece50cabdedeedfedf1046e22e5d0b4506",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0200",
+      "parent": "V05-037",
+      "start_line": 1100,
+      "end_line": 1110,
+      "sha256": "b4152f887ee54b7a2e470f08bec754f6a5420ef0e67df1b14a8879d9329067ee",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0201",
+      "parent": "V05-037",
+      "start_line": 1111,
+      "end_line": 1111,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0202",
+      "parent": "V05-037",
+      "start_line": 1112,
+      "end_line": 1112,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0203",
+      "parent": "V05-038",
+      "start_line": 1113,
+      "end_line": 1114,
+      "sha256": "42cd9ac3dd1f503e806059590c674f850a35a2844d9d300cd29414bca8cc7f96",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0204",
+      "parent": "V05-038",
+      "start_line": 1115,
+      "end_line": 1116,
+      "sha256": "ffba770b5ab1380641ef5e53f3ccc3cd6855fc64ab8bd14570c4199d02616b34",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0205",
+      "parent": "V05-038",
+      "start_line": 1117,
+      "end_line": 1143,
+      "sha256": "9ba5a04429e1de7ec54548c3a5ad482825dc21502ce7ad1f401c694db419b842",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
+    },
+    {
+      "id": "B0206",
+      "parent": "V05-038",
+      "start_line": 1144,
+      "end_line": 1144,
+      "sha256": "e1de74722899f66ec89a8543dc7174b6bd9266208d6c3eed1b338e56bb30bad6",
+      "status": "UNRESOLVED",
+      "proposed_candidate_sections": "8",
+      "reason": "Unreviewed block; inherited heading mapping is not semantic evidence."
     }
   ]
 }

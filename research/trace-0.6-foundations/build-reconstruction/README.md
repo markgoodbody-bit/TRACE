@@ -6,7 +6,8 @@
 
 - CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning.
 - SPINE.md is generated directly from selected first paragraphs and carries explicit omissions and an expansion condition. It is not a separate source of authority.
-- crosswalk.json inventories 38 exact heading-to-next-heading source spans, proposes candidate-section destinations and marks **every one UNRESOLVED**. These coarse spans are not the earlier unrecovered reported 114 semantic units. Explicit mapping is a review prompt, not a reviewed correspondence.
+- crosswalk.json inventories 38 exact heading-to-next-heading source spans and 206 blank-delimited review blocks, proposes candidate-section destinations and marks **every one UNRESOLVED**. These mechanical blocks are not the earlier unrecovered reported 114 semantic units. Explicit mapping is a review prompt, not a reviewed correspondence.
+- SEMANTIC-REVIEW.md compares selected high-value source blocks against the candidate and names omissions and repairs; it does not complete the crosswalk.
 - TRACE-v0.5-reference.md is an exact byte-matched copy of released source, Git blob 39d943b26dd355781f2d01986b229b4f1da6c793, SHA-256 83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5.
 - build_views.py generates the crosswalk and spine and verifies source hash and generated outputs; it checks contiguous spans and drift, not preservation of meaning. Hand-reviewed dispositions are not yet supported; regeneration replaces this WIP manifest.
 - simulator.py and test_lab.py provide a small exact-arithmetic, finite shared-capacity and observation-policy example. The supplied law is explicit; early 79/100, late 18/25, insufficient capacity 18/25. These are stipulated outputs under the given exclusive-choice model, not predictions.
@@ -25,7 +26,7 @@ This cloud environment passed the mechanical check and eight grouped unit tests.
 
 ## Outstanding construction
 
-1. Split the 38 coarse spans into meaning-bearing units and audit each against the candidate, assigning reviewed dispositions and explicit gaps. Retain the source distinction between reproduced and reference-only donors.
+1. Audit the 206 mechanical blocks, splitting or joining as necessary into meaning-bearing units, against the candidate, assigning reviewed dispositions and explicit gaps. Retain the source distinction between reproduced and reference-only donors. Selected high-value cases are in SEMANTIC-REVIEW.md; they are not a blanket reviewed disposition.
 2. The finite simulator does not yet model general observations/histories, arbitrary multi-actor actions, full delivery deadlines, actual delivery events, partial-contributor burden, controlled UNKNOWN in evidence, preference formation, valid normative authority, or complete consent/commitment records. It examines a declared joint law with one observation/action deadline and shared capacity, plus a few separate predicates. Codex's other PR71 dependence and delivery cases remain unimplemented here. Never use these passes as proof of complete acceptance.
 3. The spine's mechanical selection has not been tested with cold readers, against ordinary prose, or under actual downstream decisions; materiality perturbation is a stated procedure, not an implemented checker.
 4. The co-evolving social probe is an invented example, not a formal complexity model or validation of the method's treatment of emergence. Read the relevant primary literature before attributing claims.
