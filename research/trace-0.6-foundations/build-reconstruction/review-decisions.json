@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "65c182be932b8864028dee9d72aa7a3388b537df3f92468daa5c9e3f129f45e5",
-  "note": "Partial same-author v0.5 reviews; all source blocks remain unresolved until full semantic disposition. Reviews rechecked after the commitment, coordination and recursive-limit additions. Anchor checks cannot verify interpretation.",
+  "candidate_sha256": "d6fd8cb11d29917896f7c056e8a83f928948c882c7810e0cc1bc9391ae341722",
+  "note": "Partial same-author v0.5 reviews; all source blocks remain unresolved until full semantic disposition. Reviews rechecked after the changing-conditions paragraph; previous gaps remain. Anchor checks cannot verify interpretation.",
   "reviews": [
     {
       "block_id": "B0036",
