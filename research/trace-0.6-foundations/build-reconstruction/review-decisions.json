@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "0ad3e2ac82379d042771fcdafce59d74206f61f35ed3e73752d231a006502477",
-  "note": "Partial same-author v0.5 reviews; all source blocks remain unresolved until full semantic disposition. Reviews rechecked after the guard and witness additions; cited gaps remain open. Anchor checks cannot verify interpretation.",
+  "candidate_sha256": "a63b8117fd6a4606400ea85bae35c9ba536840781518428d1713784ed12c14f4",
+  "note": "Partial same-author v0.5 reviews; all source blocks remain unresolved until full semantic disposition. Reviews rechecked after the invented mixed-outcome return; cited gaps remain open. Anchor checks cannot verify interpretation.",
   "reviews": [
     {
       "block_id": "B0036",
@@ -37,8 +37,8 @@
       "status": "PARTIAL",
       "reviewer": "Build, same author as candidate",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate distinguishes prior access from permission, renewed agreement and maintenance.",
-      "remaining": "Retain the original encounter and qualifications; independently test the compressed probe."
+      "finding": "Candidate distinguishes prior access from permission, renewed agreement, independent teaching possibility and unassigned maintenance; the invented bicycle return makes the latter three concrete.",
+      "remaining": "Retain original encounter and exact access, disclosure, refusal and source qualifications; independently test the compressed probe."
     },
     {
       "block_id": "B0137",
@@ -46,8 +46,8 @@
       "status": "PARTIAL",
       "reviewer": "Build, same author as candidate",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The candidate preserves some distinctions that a compressed success account can hide.",
-      "remaining": "Carry the original negative fixture and verify old aims, failed stairs, deletion evidence, costs and renewal."
+      "finding": "Candidate now has a hypothetical mixed outcome and a misleading versus more faithful short return, including unattempted aim, support, costs, independent possibilities and no renewed agreement.",
+      "remaining": "Retain original negative fixture: its reported deletion, failed stairs, specific grant and other qualifications are not reproduced; conduct an independent reader comparison."
     },
     {
       "block_id": "B0165",
