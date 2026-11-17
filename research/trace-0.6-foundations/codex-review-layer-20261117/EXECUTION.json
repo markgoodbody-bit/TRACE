@@ -1,0 +1,39 @@
+{
+  "source": "cb9f9b2c0c1b5b024c493d9205892f7aff26e375",
+  "observed_at": "2026-11-17T10:12:44.050390+00:00",
+  "environment": {
+    "os": "Windows",
+    "python": "3.10.11",
+    "cli_mode": "-E -S -B for trusted sibling-module imports"
+  },
+  "baseline": {
+    "mechanical_check": "PASS_38_SPANS_206_UNRESOLVED_BLOCKS",
+    "review_check": "PASS_15_PARTIAL_206_UNRESOLVED",
+    "owner_review_tests": 3,
+    "broad_finite_baseline_rerun": false
+  },
+  "matrix": {
+    "cases_each_version": 35,
+    "original_unexpected_acceptances": [
+      "boolean_schema",
+      "missing_reviews",
+      "object_reviews",
+      "string_reviews",
+      "duplicate_json_reviews_field"
+    ],
+    "patched_unexpected_acceptances": []
+  },
+  "original_files_unchanged": 16,
+  "patched_owner_review_tests": 3,
+  "patch_apply": "PASS_BYTE_EXACT_WITH_PER_COMMAND_CORE_AUTOCRLF_FALSE",
+  "invocation_correction": "Initial -I direct command omitted sibling module path; corrected -E -S -B passes; not a source defect",
+  "hashes": {
+    "review_layer_attacks.py": "b0771b33478c1d81abb97fe4d3c5e61ed590a02b0ea059ecaedd8ab489657d98",
+    "INPUT-VALIDATION.patch": "f3d82f1cfe1b802018e8bca1c99d5cead99c5698b16ea2d0e405268058f8b883",
+    "ORIGINAL-RESULTS.json": "6863d779c6af1629296d3dcb2414106c2a654ac960c81c0b901a4587b242c77a",
+    "PATCHED-RESULTS.json": "66f86d039dd3e397a692706df96a22fda5de1d11c6cc536aede05619ec069280"
+  },
+  "proposed_checker_sha256": "be5abda11320db357b3b4ba2a84c156f13674a197fecf484f94941a9ec392b4c",
+  "scope": "Mechanical input integrity and regeneration; not semantic preservation or evidence-content authentication",
+  "upstream_changes": 0
+}
