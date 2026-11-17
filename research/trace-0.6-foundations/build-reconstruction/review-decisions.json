@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "7bd65182eface599cd01727c65eebea7c5f03632d2e7897617f25e3e8d4bfbed",
-  "note": "Partial same-author v0.5 reviews; all source blocks remain unresolved until full semantic disposition. Reviews rechecked after four v0.4 historical repairs; cited gaps remain open. Anchor checks cannot verify interpretation.",
+  "candidate_sha256": "0ad3e2ac82379d042771fcdafce59d74206f61f35ed3e73752d231a006502477",
+  "note": "Partial same-author v0.5 reviews; all source blocks remain unresolved until full semantic disposition. Reviews rechecked after the guard and witness additions; cited gaps remain open. Anchor checks cannot verify interpretation.",
   "reviews": [
     {
       "block_id": "B0036",
@@ -136,8 +136,8 @@
       "status": "PARTIAL",
       "reviewer": "Build, same author as candidate",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate preserves key guards on route necessity, probe authority, time and participant choice.",
-      "remaining": "The seven numbered guards include further evidence, clock and source-authentication conditions; reconcile each before claiming full preservation."
+      "finding": "The seven source guards received a clause-level partial review; named aperture, report time, route necessity, probe authority and participant choice are carried in prose.",
+      "remaining": "Exact evidence-contract, clock-conversion, typed route, correspondence and ranking-specific conditions remain source-dependent; no full guard equivalence has been established."
     }
   ]
 }
