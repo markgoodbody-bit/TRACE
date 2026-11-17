@@ -12,6 +12,8 @@ Keep the time a claim is about separate from when a report is received. A point 
 
 Different participants can hold conflicting maps, aims and clocks. Some processes have no evidenced selector; in others selection can be distributed. Inquiry can itself change the situation being observed. A working-belief map is held, reported or attributed from a stated aperture; it is not direct access to hidden mental or model states. A stored counteraccount is not by itself a change of belief, and a change of belief does not by itself improve an outcome.
 
+Not asked, inaccessible, disputed and deliberately withheld can overlap; where the difference matters, retain the holder, scope and source. A person's choice to withhold is a boundary, not automatically a gap others are entitled to fill. Silence alone proves neither refusal nor withholding.
+
 When uncertainty is an input to action or delay, identify the actor, policy or default that selects it where the evidence permits; uncertainty itself is not a selector. The responsible selector may remain unknown or distributed.
 
 ## 2. People, relationships and possibilities
@@ -37,6 +39,8 @@ Where a bounded engineered dependency is warranted, name component relations and
 A stated requirement is a necessary condition within its declared route model, not automatically a sufficient recipe for acting in the world. Nor does one represented route establish that all alternatives have been found. A question proposed by a model does not itself authorise the probe: consider its scope, cost, timing, authority and the participants' constraints. An observation about a participant does not substitute for that participant's own choice.
 
 When a later account differs, check subject, scope and time before calling the earlier one mistaken: the evidence or the world may have changed. Distinguish a proposed revision of an attributed belief, a revision of the evidence account and a claim that the world changed. Record the basis and whether each revision is proposed, accepted under a named contract, rejected or unresolved. Acceptance under a contract does not by itself prove the world changed.
+
+Keep divergent testimony and assess its applicability, source access, corroboration and the costs or beneficiaries of delay under the actual decision contract. A contrary assertion is not automatically decisive, and a witness count does not prove independence. A disputed claim does not by itself choose action or inaction: a separately supported alternative or bounded authorised attempt may remain available. If a decision proceeds, retain the conflict rather than treating it as resolved.
 
 Every search or review selects a target set. Where relevant record who selected it, the basis, known omissions, alternatives and uncertainties. Exclusion from the search is not evidence that a category is absent from the world.
 

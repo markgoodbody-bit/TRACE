@@ -51,3 +51,7 @@ The optional donor index names historical destinations and use triggers; REFEREN
 ## Three donor mechanisms in the main account
 
 The candidate now carries a compact unresolved-commitment record, cross-boundary coordination and the return of a refined part's material limits. These draw respectively on v0.3 §14.3, the §15.2 violin case and §11 recursive integration; the donor index keeps exact source routes and remaining contracts. The additions do not implement a receipt, demonstrate a real completed service route, or certify full recursive limit propagation. Existing v0.5 partial decisions were rechecked against these additive changes and remain partial.
+
+## Inquiry and disagreement
+
+Selected v0.5 B0083–B0085 and B0088 were compared against the candidate. The account separates source assertions from warrant, access and choice; names overlapping inquiry states and withholding as a possible boundary; and preserves disagreement without treating it as an automatic veto. The exact Val/Ev combinations, full conditional-assumption contract, and every profile-specific safeguard remain in the source. The candidate does not implement the typed profile or decide a contested route. These are PARTIAL same-author assessments; existing reviews were rechecked after the prose additions.

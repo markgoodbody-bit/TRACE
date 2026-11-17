@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "cdf80f77f8e6021d0ab0abfd01b4ffb225392c107879c8bcd446d1ec7ed2918c",
-  "note": "Partial same-author v0.5 reviews; all source blocks remain unresolved until full semantic disposition. Reviews rechecked after the shared-capability case addition; prior gaps remain. Anchor checks cannot verify interpretation.",
+  "candidate_sha256": "36ef57b0591f13aa9906e95f0fc40dc72ece04d9f06c309b9f19e99f92a1a638",
+  "note": "Partial same-author reviews; all source blocks remain unresolved overall. Reviews rechecked after inquiry and disagreement additions. Anchor checks cannot verify meaning.",
   "reviews": [
     {
       "block_id": "B0036",
@@ -138,6 +138,42 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "The seven source guards received a clause-level partial review; named aperture, report time, route necessity, probe authority and participant choice are carried in prose.",
       "remaining": "Exact evidence-contract, clock-conversion, typed route, correspondence and ranking-specific conditions remain source-dependent; no full guard equivalence has been established."
+    },
+    {
+      "block_id": "B0083",
+      "block_sha256": "c4061f49f8b48d49f521645e79545028ce8b29d1c13e226808ce22c016f2c4e3",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate separates an asserted value from evidence, access and decisions.",
+      "remaining": "Preserve the exact Val/Ev combinations and source-specific evidence contracts; no typed profile is implemented."
+    },
+    {
+      "block_id": "B0084",
+      "block_sha256": "fa463c21791ecbc3fac735e8df2a9bb8676e02f2958d48b5d4e4f88b80af9140",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate preserves overlapping inquiry states and withholding as a possible participant boundary.",
+      "remaining": "The complete holder, scope and source qualification remains subject to case-level review; silence must not establish intent."
+    },
+    {
+      "block_id": "B0085",
+      "block_sha256": "79c89927377e8d52835fc1516efeed839e24e08dc3c984a761bbab1fc9c063bf",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate retains named-contract conditional revision, feasible versus permitted and actual effect.",
+      "remaining": "Full named-reader-assumptions and acceptance contract are not explicitly reconstructed; retain the donor."
+    },
+    {
+      "block_id": "B0088",
+      "block_sha256": "fa5cfdcbfa2cf6ca6e6f5a3701c203a86ae0fe121a903d3d457a2b004a0306fb",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate carries conflict, applicability, source access, corroboration, costs, independence and non-veto of a separately supported route.",
+      "remaining": "Check the full decision-specific control, delay-beneficiary and source-relative evidence conditions; this prose does not decide the route."
     }
   ]
 }
