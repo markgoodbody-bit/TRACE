@@ -1,0 +1,292 @@
+{
+  "source_pin": "aa6fdb4934685f0737e0624d8747b804b2c817f5",
+  "cases": 35,
+  "unexpected_acceptances": [],
+  "checker_sha256": "be5abda11320db357b3b4ba2a84c156f13674a197fecf484f94941a9ec392b4c",
+  "results": [
+    {
+      "case": "valid",
+      "expected": "accept_15",
+      "accepted": true,
+      "exit_code": 0,
+      "stdout": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "last_diagnostic": "15 partial reviews anchored; 206 source blocks remain unresolved overall"
+    },
+    {
+      "case": "stale_source_anchor",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: stale source review"
+    },
+    {
+      "case": "stale_candidate_anchor",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: stale candidate review: reassess before repinning"
+    },
+    {
+      "case": "changed_source_bytes",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: stale source review"
+    },
+    {
+      "case": "changed_candidate_bytes",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: stale candidate review: reassess before repinning"
+    },
+    {
+      "case": "changed_block_hash",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: stale block review"
+    },
+    {
+      "case": "unknown_block",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: unknown or duplicate review block"
+    },
+    {
+      "case": "duplicate_block",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: unknown or duplicate review block"
+    },
+    {
+      "case": "promoted_status",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: only partial reviews supported"
+    },
+    {
+      "case": "missing_finding",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: partial review requires finding, gap, reviewer and evidence"
+    },
+    {
+      "case": "blank_finding",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: partial review requires finding, gap, reviewer and evidence"
+    },
+    {
+      "case": "missing_remaining",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: partial review requires finding, gap, reviewer and evidence"
+    },
+    {
+      "case": "blank_remaining",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: partial review requires finding, gap, reviewer and evidence"
+    },
+    {
+      "case": "missing_reviewer",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: partial review requires finding, gap, reviewer and evidence"
+    },
+    {
+      "case": "blank_reviewer",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: partial review requires finding, gap, reviewer and evidence"
+    },
+    {
+      "case": "missing_evidence",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: partial review requires finding, gap, reviewer and evidence"
+    },
+    {
+      "case": "blank_evidence",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: partial review requires finding, gap, reviewer and evidence"
+    },
+    {
+      "case": "missing_evidence_file",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: evidence must be a present local file"
+    },
+    {
+      "case": "parent_evidence_path",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: evidence must be a present local file"
+    },
+    {
+      "case": "unknown_schema",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: unsupported review schema"
+    },
+    {
+      "case": "boolean_schema",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: unsupported review schema"
+    },
+    {
+      "case": "missing_reviews",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: reviews must be an explicit array; an empty array means zero reviews"
+    },
+    {
+      "case": "object_reviews",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: reviews must be an explicit array; an empty array means zero reviews"
+    },
+    {
+      "case": "string_reviews",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: reviews must be an explicit array; an empty array means zero reviews"
+    },
+    {
+      "case": "null_reviews",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: reviews must be an explicit array; an empty array means zero reviews"
+    },
+    {
+      "case": "nonobject_review",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: each review must be an object"
+    },
+    {
+      "case": "empty_document",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "case": "nonobject_document",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: review document must be an object"
+    },
+    {
+      "case": "explicit_empty_reviews",
+      "expected": "accept_0",
+      "accepted": true,
+      "exit_code": 0,
+      "stdout": "0 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "last_diagnostic": "0 partial reviews anchored; 206 source blocks remain unresolved overall"
+    },
+    {
+      "case": "duplicate_json_reviews_field",
+      "expected": "reject",
+      "accepted": false,
+      "exit_code": 1,
+      "stdout": "",
+      "last_diagnostic": "ValueError: duplicate JSON field: reviews"
+    },
+    {
+      "case": "intentional_one_review_removed",
+      "expected": "limit_accept_14",
+      "accepted": true,
+      "exit_code": 0,
+      "stdout": "14 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "last_diagnostic": "14 partial reviews anchored; 206 source blocks remain unresolved overall"
+    },
+    {
+      "case": "evidence_content_replaced",
+      "expected": "limit_accept_15",
+      "accepted": true,
+      "exit_code": 0,
+      "stdout": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "last_diagnostic": "15 partial reviews anchored; 206 source blocks remain unresolved overall"
+    },
+    {
+      "case": "changed_crosswalk_json",
+      "expected": "needs_combined_guard",
+      "accepted": true,
+      "exit_code": 0,
+      "stdout": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "last_diagnostic": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "generated_view_check_exit": 1
+    },
+    {
+      "case": "changed_SPINE_md",
+      "expected": "needs_combined_guard",
+      "accepted": true,
+      "exit_code": 0,
+      "stdout": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "last_diagnostic": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "generated_view_check_exit": 1
+    },
+    {
+      "case": "regeneration",
+      "expected": "accept_15",
+      "accepted": true,
+      "exit_code": 0,
+      "stdout": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "last_diagnostic": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "review_file_byte_equal_after_regeneration": true,
+      "unresolved_blocks": 206
+    }
+  ]
+}

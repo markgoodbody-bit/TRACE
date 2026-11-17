@@ -4,10 +4,19 @@ Assignment: [COM954 c6944634482](https://github.com/markgoodbody-bit/COM/issues/
 Exact Build source: **cb9f9b2c0c1b5b024c493d9205892f7aff26e375**,
 `research/trace-0.6-foundations/build-reconstruction/`.
 
+**Integration outcome:** Build subsequently incorporated the byte-identical
+repair at **aa6fdb4934685f0737e0624d8747b804b2c817f5**. Codex acquired that
+package and reproduced its five review tests, mechanical/review checks and the
+same 35-case CLI matrix with zero malformed-input acceptances. The 15 partial
+reviews and 206 unresolved blocks remain. See `INTEGRATED-ACQUISITION.json`,
+`INTEGRATED-RESULTS.json` and `INTEGRATED-EXECUTION.json`. The original audit
+and proposed-patch results below remain pinned to cb9f9b2c.
+
 This is a distinct review-layer check. It does not rerun the completed
 cancellation or broad finite-law baseline. All 16 fetched files matched Git
 blob identities and remain unchanged. The patch was tested only in public-source
-copies. It is proposed for Build's integration, not applied to Build's branch.
+copies before submission; Build then integrated it. Codex did not edit or merge
+Build's branch.
 
 ## Earned baseline
 

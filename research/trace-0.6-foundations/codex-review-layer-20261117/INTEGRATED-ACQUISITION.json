@@ -1,0 +1,101 @@
+{
+  "source": "aa6fdb4934685f0737e0624d8747b804b2c817f5",
+  "files": [
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md",
+      "blob": "e865b3fee911666489c7ef106f72a6732e01fe6a",
+      "sha256": "a63b8117fd6a4606400ea85bae35c9ba536840781518428d1713784ed12c14f4",
+      "bytes": 23811
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/FLOOR-RECONCILIATION.md",
+      "blob": "d317c796688dc704ec6da9b408eed4852b5e4852",
+      "sha256": "7c29a1015c3f2be1a5de57b098d2c174b2abf2cbcb997673964ec8fba69f48bb",
+      "bytes": 4774
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/HISTORICAL-RECONCILIATION.md",
+      "blob": "a7c1bb97fb65efb854f01b606a010636531b3492",
+      "sha256": "5730cfcea060411c91010b2e2224d1548b7be3395450d3f448515a8cef2cafb3",
+      "bytes": 2907
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/README.md",
+      "blob": "c11e5d7d3a3cd50fc0e188994fccf230efb6b9ac",
+      "sha256": "276c66a3397fed64d0fef9a6cd0262ff42916b0fb0ef310e0131c80134e784ca",
+      "bytes": 7018
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/SEMANTIC-REVIEW.md",
+      "blob": "f2f17d8d3425e6f700d1721ef558ed0fdfca46cd",
+      "sha256": "fe2fc7afe41e26f2b0932209705bc57f660500e6f892adf451ffb8e3b5818588",
+      "bytes": 8423
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/SPINE-CONTRACT.md",
+      "blob": "60b829ccefbb27e5a4bd0136df33341fc3e68198",
+      "sha256": "e7b6673a65a6357aa324bf739bcf56cdba0603dba2657a7343c96f247a836c57",
+      "bytes": 670
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/SPINE.md",
+      "blob": "252c89cccf21eece029e9f277595076817b27bd9",
+      "sha256": "83ce0838e1f28869f9774b466b05f2fb801a2ebc4f0d04933e21c086347e9fb9",
+      "bytes": 4843
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/TRACE-v0.5-reference.md",
+      "blob": "39d943b26dd355781f2d01986b229b4f1da6c793",
+      "sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
+      "bytes": 92787
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/build_views.py",
+      "blob": "f56c2e4a9820c78d58ea124788c023776259bda7",
+      "sha256": "b96d05c112632b70ae81354f1a0a5d83950cecc766a8dc32aa1a49353ea41a58",
+      "bytes": 6040
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/check_reviews.py",
+      "blob": "64d7fa9eed150581fb81fcdc369a0e8c77c0c82b",
+      "sha256": "be5abda11320db357b3b4ba2a84c156f13674a197fecf484f94941a9ec392b4c",
+      "bytes": 2746
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/crosswalk.json",
+      "blob": "0c31f86ae00b48fce703e9fc91a49cd4421e9604",
+      "sha256": "779a1a66843d648334bc5068d198becf03aa4fdb214f768d434f4027c88edff9",
+      "bytes": 88802
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/review-decisions.json",
+      "blob": "d6e311ce56144de37a7cc356dd4f48b700ffb45f",
+      "sha256": "ad5b18b2f4cfe3c7730567ab61fb7acbb317ad1ef1d7fa70f3f5ed259c566667",
+      "bytes": 8174
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/scenario.example.json",
+      "blob": "9f092cea7a46c3f09494804483beb371c57b1e7d",
+      "sha256": "37d89a401a94813bb8fb1e38c852bebd7714bf5af84a2f5fdab4457c8fd852a6",
+      "bytes": 358
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/simulator.py",
+      "blob": "51d392e3b7ff14f294f42c1168e404c9d09c20ff",
+      "sha256": "345180c633c656a67634512d1c84816fc4b9514596f1d5db9619fa5e2131fe21",
+      "bytes": 5863
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/test_lab.py",
+      "blob": "89d27f5f19cb631a7d904e33697744bcefcfcb34",
+      "sha256": "7440adfedc6350831dc51774bf47991780c0d1305dcf7b6f5504eb94c6e40007",
+      "bytes": 5210
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/test_reviews.py",
+      "blob": "0bf416f148341a990917ba4c825a17963a8d630c",
+      "sha256": "096ab1b223dc3b83626a5b01c66dda74ad2f1a1649348018498c393bc1904f3c",
+      "bytes": 2858
+    }
+  ]
+}
