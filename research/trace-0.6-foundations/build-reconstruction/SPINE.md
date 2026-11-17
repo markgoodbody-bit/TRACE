@@ -28,7 +28,7 @@ Track the relevant event ordering. A review after a route closes may improve the
 
 ## 6. A compact view with an escape hatch
 
-One versioned source graph can serve different readers. A complete account carries the situated distinctions above plus the source units and unresolved qualifications in the crosswalk. A spine selects a named use: perturb a value, source, actor, scope or time; if that can change the action, burden, authority or interpretation, retain it or mark the condition for expansion. Source spans and checksums prove neither semantic retention nor reader understanding. An omitted material fact requires UNKNOWN or expansion, not an all-clear. Stopping a bounded inquiry is not failure if the unresolved question, receiving owner and usable handoff survive.
+One versioned source graph can serve different readers. A complete account carries the situated distinctions above plus the source units and unresolved qualifications in the crosswalk. A spine selects a named use: perturb a value, source, actor, scope or time; if that can change the action, burden, authority or interpretation, retain it or mark the condition for expansion. Not thinking of a consequence does not prove a distinction irrelevant. Source spans and checksums prove neither semantic retention nor reader understanding. An omitted material fact requires UNKNOWN or expansion, not an all-clear. Stopping a bounded inquiry is not failure if the unresolved question, receiving owner and usable handoff survive.
 
 ## 7. Paired worked probe
 

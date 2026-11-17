@@ -22,6 +22,8 @@ Ask whose lives, aims and burdens could change; whose voice is absent; who may c
 
 Supporters are not only resources for a beneficiary: they can form capabilities and futures of their own, including through cooperation, care, learning and maintenance. A possible route in a map, material access to it, chosen participation and sustainable support are different. One participant's benefit does not establish another's consent or obligation.
 
+When people make something together, preserve their different aims, offers, counterproposals, substitutions and refusals. An attempt can produce different results for each person. A claimed usable result needs a named participant, conditions, evidence and relevant horizon. If an arrangement is meant to continue, identify who has agreed to maintain or renew it, who bears the cost and how it can end; otherwise leave those questions open. A single-use contribution can be worthwhile without creating an ongoing service.
+
 Learning can change an account, a capability, a relationship or a purpose. Ask separately what someone has understood, what they can do under which conditions and support, and what they now want, with evidence for each. These are not mandatory stages. Completing a task with help may be valuable without establishing independent performance; a changed aim may be worthwhile without fulfilling the earlier one. When an account is hard to hear, examine the communication channel and conditions of participation as well as the speaker. Improving the channel may reveal a contribution that was missed; difficulty interpreting an account does not diminish the participant's standing. Ask whether the person actually wants the proposed change.
 
 Prior access to a person's files is not, by itself, permission to reuse them. A previous session does not establish a new session or an obligation to maintain the result. Identify unassigned maintenance as unassigned, and preserve what the supporter actually says separately from another person's account.
@@ -31,6 +33,8 @@ Prior access to a person's files is not, by itself, permission to reuse them. A 
 Distinguish offers, prior agreement, ongoing commitments, externally grounded duties and performed actions. Preserve each holder, ground, scope, recipient, trigger, due time, support dependency, renewal, refusal, withdrawal and usable exit where material. Acceptance under pressure is not automatically free agreement. A capacity shortage does not itself erase a duty or settle blame. A choice between competing acceptable plans needs an accountable holder, affected interests and contest route; an equation does not supply legitimacy.
 
 When a decision proceeds with material uncertainties, preserve the decision holder, selected action, reasons and basis, live alternatives, unresolved or disputed claims, potentially foreclosed paths, expected burdens and what still needs review. Proceeding does not itself resolve the uncertainty. This record can support a bounded attempt without turning the account into permission to act.
+
+If a volunteer cannot continue, ask whether another person or institution has a separately grounded responsibility to the affected participant. Name its source, holder and scope when known; an omitted duty-holder is not proof that no duty exists. Do not transfer an unestablished duty to the volunteer or infer a legal answer from the map.
 
 ## 4. Change, interaction and evidence of influence
 
@@ -68,7 +72,7 @@ An event may be unchangeable while its effects can still change. Assess continui
 
 ## 6. A compact view with an escape hatch
 
-One versioned source graph can serve different readers. A complete account carries the situated distinctions above plus the source units and unresolved qualifications in the crosswalk. A spine selects a named use: perturb a value, source, actor, scope or time; if that can change the action, burden, authority or interpretation, retain it or mark the condition for expansion. Source spans and checksums prove neither semantic retention nor reader understanding. An omitted material fact requires UNKNOWN or expansion, not an all-clear. Stopping a bounded inquiry is not failure if the unresolved question, receiving owner and usable handoff survive.
+One versioned source graph can serve different readers. A complete account carries the situated distinctions above plus the source units and unresolved qualifications in the crosswalk. A spine selects a named use: perturb a value, source, actor, scope or time; if that can change the action, burden, authority or interpretation, retain it or mark the condition for expansion. Not thinking of a consequence does not prove a distinction irrelevant. Source spans and checksums prove neither semantic retention nor reader understanding. An omitted material fact requires UNKNOWN or expansion, not an all-clear. Stopping a bounded inquiry is not failure if the unresolved question, receiving owner and usable handoff survive.
 
 When a closer inspection is folded back into an account, carry any material limit with its target, scope, source and relevant repair route. Similar wording can hide different causes, so merging the findings must not silently merge away their limits. Reaching a depth or time budget explains why inspection stopped; it does not establish that the account is sufficient for the decision.
 

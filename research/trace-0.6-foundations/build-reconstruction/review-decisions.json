@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "36ef57b0591f13aa9906e95f0fc40dc72ece04d9f06c309b9f19e99f92a1a638",
-  "note": "Partial same-author reviews; all source blocks remain unresolved overall. Reviews rechecked after inquiry and disagreement additions. Anchor checks cannot verify meaning.",
+  "candidate_sha256": "3a1571813f9fee6ded2080ee27a1415eeb33cbc8f8349d6a4d2ebcb5d0a3cf14",
+  "note": "Partial same-author reviews; all source blocks remain unresolved overall. Reviews rechecked after formation and intended-use additions. Anchor checks cannot verify meaning.",
   "reviews": [
     {
       "block_id": "B0036",
@@ -174,6 +174,33 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "Candidate carries conflict, applicability, source access, corroboration, costs, independence and non-veto of a separately supported route.",
       "remaining": "Check the full decision-specific control, delay-beneficiary and source-relative evidence conditions; this prose does not decide the route."
+    },
+    {
+      "block_id": "B0081",
+      "block_sha256": "689ada3a23a39d60be9cd8810b533eb8b2e9de3174c9bf7ed7c73c2dcf0b02a1",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate names participant aims, offers, counterproposals, refusals, actor-specific evidence and conditional maintenance.",
+      "remaining": "The neutral-object route and full sustainment trigger, renewal and retirement conditions remain source-dependent."
+    },
+    {
+      "block_id": "B0082",
+      "block_sha256": "51d626b01c8b72304fd4c72f179546884352d551ef955b95f5927df270f59d2a",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate asks about separately grounded obligations and avoids assigning an unknown duty to a volunteer.",
+      "remaining": "Specific legal or institutional duty and complete attribution remain open and external to TRACE."
+    },
+    {
+      "block_id": "B0087",
+      "block_sha256": "8ae1e5544b9d08ad5c31d0864614a7b6755d8d5c67450d8031a9240a72b961a8",
+      "status": "PARTIAL",
+      "reviewer": "Build, same author as candidate",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Candidate states declared use, premise perturbation and the failure of imagined consequences as proof of irrelevance.",
+      "remaining": "The complete procedure and actual reader effectiveness remain unverified; source remains authoritative for its edition."
     }
   ]
 }

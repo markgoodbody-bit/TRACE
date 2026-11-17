@@ -55,3 +55,7 @@ The candidate now carries a compact unresolved-commitment record, cross-boundary
 ## Inquiry and disagreement
 
 Selected v0.5 B0083–B0085 and B0088 were compared against the candidate. The account separates source assertions from warrant, access and choice; names overlapping inquiry states and withholding as a possible boundary; and preserves disagreement without treating it as an automatic veto. The exact Val/Ev combinations, full conditional-assumption contract, and every profile-specific safeguard remain in the source. The candidate does not implement the typed profile or decide a contested route. These are PARTIAL same-author assessments; existing reviews were rechecked after the prose additions.
+
+## Formation and intended use
+
+The candidate now carries actor-specific aims, contributions, refusal, usable-result evidence, conditional maintenance and the question of externally grounded responsibility. It also makes explicit that failure to imagine a consequence does not establish irrelevance. This advances B0081, B0082 and B0087, but the specific neutral-object alternative, full contribution sequence, exact maintenance trigger/retirement and the complete materiality procedure remain source-dependent. These reviews remain PARTIAL and are not empirical or independent validation. Existing partial decisions were rechecked against the additive edit.
