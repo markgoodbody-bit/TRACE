@@ -1,17 +1,18 @@
 {
-  "source": "d1eb4161bfc4d6ecbfc0e56b30872c5d6ab81b48",
+  "source": "32ba2e0dfd08f6301390d523771a8f504cb40419",
+  "acquired_at": "2026-11-17T09:41:02.386483+00:00",
   "files": [
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md",
-      "blob": "616d3cbeb4af0bec136ee60dcfde435ca6fa9dda",
-      "sha256": "31a085d3b087ee37d08333051712d6284fcb4d4fd46516d248bfee30399933d4",
-      "bytes": 12727
+      "blob": "0cd306056f3dc4a1d18a342ae570b1ffd12e7cf6",
+      "sha256": "c840b18f52b6b1b4863dc02380c3d58a2f37b2cf86d2306c74e6616fb2018c5a",
+      "bytes": 16855
     },
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/README.md",
-      "blob": "13adfa31df25f502adf773cce5b61fdd8be36e52",
-      "sha256": "50092411650b416f59ed744df8f20350a7c7a6fdcd50d20bfe979ea3fb739534",
-      "bytes": 4810
+      "blob": "20946f65696d3c303b8a72144c0900de90bb7235",
+      "sha256": "3a0d830637eba378b415892141ef1d15aaaab86e9c54cdd49f3a3ad54a23a130",
+      "bytes": 5510
     },
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/SEMANTIC-REVIEW.md",
@@ -27,9 +28,9 @@
     },
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/SPINE.md",
-      "blob": "62331901f9e57e9063a1dbe87db88f1ffca7d7da",
-      "sha256": "0c5ecd8e3ca2009a2451c8b2a1db1c1f62c3f9565b731b67fce491ac33bde2f3",
-      "bytes": 4705
+      "blob": "252c89cccf21eece029e9f277595076817b27bd9",
+      "sha256": "83ce0838e1f28869f9774b466b05f2fb801a2ebc4f0d04933e21c086347e9fb9",
+      "bytes": 4843
     },
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/TRACE-v0.5-reference.md",
@@ -39,14 +40,14 @@
     },
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/build_views.py",
-      "blob": "ff332febb8decb9a8a78c63cf27bb483f245cfd0",
-      "sha256": "89872e1c1119bf116ff19dab0d7d624ed316daf09ea281235054b5bf9f7d3d5f",
-      "bytes": 6020
+      "blob": "f56c2e4a9820c78d58ea124788c023776259bda7",
+      "sha256": "b96d05c112632b70ae81354f1a0a5d83950cecc766a8dc32aa1a49353ea41a58",
+      "bytes": 6040
     },
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/crosswalk.json",
-      "blob": "bbc33cfad1c6d98c4ba6ae5c1697edd54090d514",
-      "sha256": "71871b2ba6f9dd399ea7d0485b6c7e2045923de6657dd3f1198517cf23de7208",
+      "blob": "cf45f1b24fd6e33d131fe97b59f91de5d2362c76",
+      "sha256": "cc5957b24dc76fcaed7d1489affd0a390c056cc223fdf056cbbe593b02849ec2",
       "bytes": 88802
     },
     {
@@ -57,15 +58,15 @@
     },
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/simulator.py",
-      "blob": "0f37741a274d29999e756f104ad33685f72da765",
-      "sha256": "9a2bae43bbb37517bb49b1ae5ec1422ee4a541ca6bfe515c212a72e725575b4b",
-      "bytes": 5768
+      "blob": "51d392e3b7ff14f294f42c1168e404c9d09c20ff",
+      "sha256": "345180c633c656a67634512d1c84816fc4b9514596f1d5db9619fa5e2131fe21",
+      "bytes": 5863
     },
     {
       "path": "research/trace-0.6-foundations/build-reconstruction/test_lab.py",
-      "blob": "4127452b1e94b73d4d6c151a29d1b15b9f54ac3a",
-      "sha256": "76d05a60aa2b3b0708324c28d9b7d31e5de1ec9092bcdca863dfd9f9a5eac482",
-      "bytes": 4844
+      "blob": "89d27f5f19cb631a7d904e33697744bcefcfcb34",
+      "sha256": "7440adfedc6350831dc51774bf47991780c0d1305dcf7b6f5504eb94c6e40007",
+      "bytes": 5210
     }
   ]
 }

@@ -62,16 +62,21 @@ class LaboratoryTests(unittest.TestCase):
 
     def test_acknowledgement_does_not_establish_timely_effect(self):
         sample = dict(acknowledgement_time=3, delivery_time=8, backup_available=True,
-                      backup_cancelled=True, backup_time=4, due_time=6, hardening_time=7)
+                      backup_cancelled_before_delivery=True, backup_time=4, due_time=6, hardening_time=7)
         self.assertEqual(simulator.delivery_route(**sample)["status"], "NOT_SUPPORTED_IN_MODEL")
-        sample["backup_cancelled"] = False
+        sample["backup_cancelled_before_delivery"] = False
         self.assertEqual(simulator.delivery_route(**sample)["status"], "SUPPORTED_IN_MODEL")
-        sample["backup_cancelled"] = True
+        sample["backup_cancelled_before_delivery"] = True
         sample["delivery_time"] = None
         self.assertEqual(simulator.delivery_route(**sample)["status"], "UNKNOWN")
         sample["delivery_time"] = 7
         sample["due_time"] = 7
         self.assertEqual(simulator.delivery_route(**sample)["status"], "NOT_SUPPORTED_IN_MODEL")
+
+    def test_legacy_ambiguous_cancellation_name_is_rejected(self):
+        with self.assertRaises(TypeError):
+            simulator.delivery_route(acknowledgement_time=1, delivery_time=8, backup_available=True,
+                                     backup_cancelled=True, backup_time=4, due_time=6, hardening_time=7)
 
     def test_reject_incomplete_or_invalid_joint_law(self):
         with self.assertRaises(ValueError):
@@ -84,7 +89,7 @@ class LaboratoryTests(unittest.TestCase):
     def test_spine_is_derived_and_flags_unknown(self):
         spine = build_views.render_spine(build_views.CANDIDATE.read_text(encoding="utf8"))
         self.assertIn("UNRESOLVED", spine)
-        self.assertIn("co-evolving worked case", spine)
+        self.assertIn("co-evolving social layer", spine)
         self.assertIn("## 3. Offers, duties and power", spine)
 
 

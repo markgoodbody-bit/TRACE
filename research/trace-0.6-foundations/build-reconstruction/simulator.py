@@ -61,18 +61,18 @@ def unknown_conditions(agreement, delivery):
             "authorization": "UNASSESSED", "claim": "neither promise nor agreement proves delivery"}
 
 
-def delivery_route(*, acknowledgement_time, delivery_time, backup_available, backup_cancelled,
+def delivery_route(*, acknowledgement_time, delivery_time, backup_available, backup_cancelled_before_delivery,
                    backup_time, due_time, hardening_time):
-    """Stipulated event times on one declared clock; None is unknown, not absence."""
+    """Stipulated events: cancellation flag applies strictly before backup delivery."""
     for value in (acknowledgement_time, delivery_time, backup_time, due_time, hardening_time):
         if value is not None and type(value) is not int:
             raise ValueError("times must be integers or null")
-    if type(backup_available) is not bool or type(backup_cancelled) is not bool:
+    if type(backup_available) is not bool or type(backup_cancelled_before_delivery) is not bool:
         raise ValueError("backup states must be explicit booleans")
     if due_time is None or hardening_time is None:
         return {"status": "UNKNOWN", "reason": "due or hardening time unavailable"}
     available_times = [delivery_time]
-    if backup_available and not backup_cancelled:
+    if backup_available and not backup_cancelled_before_delivery:
         available_times.append(backup_time)
     known_success = any(t is not None and delivered_by_due(t, due_time) and
                         before_hardening(t, hardening_time) for t in available_times)
@@ -83,7 +83,7 @@ def delivery_route(*, acknowledgement_time, delivery_time, backup_available, bac
     else:
         status = "NOT_SUPPORTED_IN_MODEL"
     return {"status": status, "acknowledgement": acknowledgement_time,
-            "basis": "single stipulated comparable clock; not authorisation or observed delivery"}
+            "basis": "single stipulated comparable clock; cancellation flag is before backup delivery; not authorisation or observed delivery"}
 
 
 def simulate_scenario(scenario):

@@ -1,6 +1,6 @@
 {
-  "source": "d1eb4161bfc4d6ecbfc0e56b30872c5d6ab81b48",
-  "observed_at": "2026-11-17T09:22:42.017717+00:00",
+  "source": "32ba2e0dfd08f6301390d523771a8f504cb40419",
+  "observed_at": "2026-11-17T09:41:29.484178+00:00",
   "runs": [
     {
       "name": "mechanical-check",
@@ -12,12 +12,12 @@
       "name": "owner-unit-tests",
       "exit_code": 0,
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "stderr_sha256": "e6862f9221992c1d9a885bd7899e18535eddd20d759d607a9d6d0a96f4899336"
+      "stderr_sha256": "f1c26e5fff8485a31c1883c639471a44d3220aa3f554c668fb486aaa4a2424ee"
     },
     {
       "name": "independent-review",
       "exit_code": 0,
-      "stdout_sha256": "9d00df04394f8edf3f8ec4414ef737c287e00cd5d898b38755648ef75dc67868",
+      "stdout_sha256": "d2310116f36cb3fe3665f5d3d651b12b189c18365bcc7f08e8bb705614a4f890",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ],
@@ -27,7 +27,7 @@
     "mode": "-I -S -B; stdlib only"
   },
   "source_files_unchanged": 11,
-  "reviewer_script_sha256": "971a3113a61c28ab1f801b03ba95b48fa27ff3a17c91356592cca224c4e6c20e",
-  "independent_results_sha256": "e7fe6c0b0cb668897ea07daa3bddb1b1545353a28eb3d56cc7887b8834f61ab9",
+  "reviewer_script_sha256": "8dfefca71b9254c69008586492d0c831018ccec100a3d0f6f40dc2b6aaaf103d",
+  "independent_results_sha256": "e685a83173991ef6c780f25f4eef4afe0d80a9ddf93786bf739488eb28688403",
   "stdout_hash_basis": "UTF-8 text after subprocess newline decoding, not raw pipe bytes"
 }

@@ -9,6 +9,7 @@ import argparse
 from fractions import Fraction as F
 import hashlib
 import importlib.util
+import inspect
 import itertools
 import json
 from pathlib import Path
@@ -107,7 +108,13 @@ def run():
             raise AssertionError("Invalid input accepted")
 
     delivery_checks = 0
+    cancellation_keyword = None
+    cancellation_regressions = 0
     if hasattr(simulator, "delivery_route"):
+        parameters = inspect.signature(simulator.delivery_route).parameters
+        cancellation_keyword = ("backup_cancelled_before_delivery"
+                                if "backup_cancelled_before_delivery" in parameters
+                                else "backup_cancelled")
         # Resolve unknown times both before and after the declared boundary.
         # Set-valued outcomes give the three-valued oracle under this static
         # availability/cancellation contract, independently of the implementation.
@@ -120,12 +127,27 @@ def run():
                         for world in itertools.product(*completions)}
             expected = ("SUPPORTED_IN_MODEL" if outcomes == {True}
                         else "NOT_SUPPORTED_IN_MODEL" if outcomes == {False} else "UNKNOWN")
-            actual = simulator.delivery_route(acknowledgement_time=ack,
-                delivery_time=primary, backup_available=available,
-                backup_cancelled=cancelled, backup_time=backup,
-                due_time=6, hardening_time=7)["status"]
+            fields = dict(acknowledgement_time=ack, delivery_time=primary,
+                          backup_available=available, backup_time=backup,
+                          due_time=6, hardening_time=7)
+            fields[cancellation_keyword] = cancelled
+            actual = simulator.delivery_route(**fields)["status"]
             assert actual == expected, (primary, backup, available, cancelled, ack)
             delivery_checks += 1
+        if cancellation_keyword == "backup_cancelled_before_delivery":
+            sample = dict(acknowledgement_time=1, delivery_time=8,
+                          backup_available=True, backup_time=4, due_time=6,
+                          hardening_time=7)
+            assert simulator.delivery_route(**sample,
+                backup_cancelled_before_delivery=True)["status"] == "NOT_SUPPORTED_IN_MODEL"
+            assert simulator.delivery_route(**sample,
+                backup_cancelled_before_delivery=False)["status"] == "SUPPORTED_IN_MODEL"
+            try:
+                simulator.delivery_route(**sample, backup_cancelled=True)
+            except TypeError:
+                cancellation_regressions = 3
+            else:
+                raise AssertionError("Legacy ambiguous cancellation keyword accepted")
 
     # Independent coverage check operates on bytes, not the generator's functions.
     manifest = json.loads((SOURCE / "crosswalk.json").read_text(encoding="utf-8"))
@@ -190,6 +212,8 @@ def run():
             "joint_laws_quarter_grid": laws, "policy_capacity_comparisons": comparisons,
             "dependence_controls": dependence, "invalid_inputs_rejected": rejected,
             "delivery_completion_comparisons": delivery_checks,
+            "cancellation_keyword": cancellation_keyword,
+            "cancellation_regressions": cancellation_regressions,
             "coverage": counts, "all_semantic_dispositions": "UNRESOLVED",
             "mutation_rejections": mutation_results, "regeneration": regenerated}
 

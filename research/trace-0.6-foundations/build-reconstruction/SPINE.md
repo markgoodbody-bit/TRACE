@@ -4,7 +4,7 @@ Research candidate; all inherited source-unit dispositions remain UNRESOLVED. Th
 
 Use class: a first decision on an intervention affecting another participant. Expand the complete candidate and the released source when omitted detail changes authority, burden, consent, evidence, time or a constructive possibility. A missing material distinction means UNKNOWN, not permission.
 
-Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; the second co-evolving worked case and its limits. A section's later paragraphs are omitted here.
+Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; the co-evolving social layer of the paired worked case and its limits. A section's later paragraphs are omitted here.
 
 ## 1. Begin with a living situation
 
@@ -32,4 +32,4 @@ One versioned source graph can serve different readers. A complete account carri
 
 ## 7. Paired worked probe
 
-**Engineered dependency.** A technician proposes a backup restore. A person has offered assistance, but no one has confirmed availability for this specific run. The old approval covers a different backup. Next: retain the old decision as history, verify the specific restoration target and renewed authority, reserve a fallback and record when its usefulness expires. A graph can expose known prerequisites, not prove that every dependency has been discovered.
+**One community learning project, two lenses.** A wants to learn to repair a bicycle. B offers to facilitate one evening and wants practice explaining repairs. C wants to take part but needs a quieter setting. A local group proposes an 18:00 session with a room and tools, and a driver expresses interest in shared transport. B's offer is for this one session; neither transport nor the room's access arrangement is yet confirmed. Learning, enjoyment, repair and possible future mutual help all matter. None creates permission to reuse someone's story or assume another session.
