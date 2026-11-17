@@ -2,6 +2,11 @@
 
 Research direction, not a release or completed reconstruction. Purpose: make change, worthwhile formation, harm, correction and answerability portable. Preserve every released v0.5 meaning while permitting a better architecture. The complete edition and spine must be views of the same versioned construction.
 
+
+## Authorial scope clarification — 17 November voice session
+
+The [two-track revision brief](https://github.com/markgoodbody-bit/COM/blob/b1f0515cbc6920236e2ae34292f35d7b395620f0/coordination/ME11-TRACE06-REVISION-BRIEF-20261117.md) preserves the current audience and overall presentation while distinguishing TRACE0.6 internal reconstruction from ME1.1's focused literature/prose revision. Start TRACE's complexity treatment with the paired logistical/evolving-social case in that brief; share source findings with the ME task955. Existing human-feedback relationships continue; choosing new readers is not a construction prerequisite. CC's c6943344820 controller correction is incorporated in the acceptance row below.
+
 ## Source basis and actual returns
 
 - Initial mathematical packet: 09c07a4b20134c6fccec2b6eb26fa4daf612bc5e, research/trace-0.6-foundations/. All eight initial files remain unchanged.
@@ -22,7 +27,7 @@ Therefore status is REPORTED_WRITTEN / FINAL_SOURCE_NOT_RECOVERED. Do not upgrad
 
 | Area | Construction requirement | Case that must change the account |
 | --- | --- | --- |
-| Clock and evidence control | Carry clock author/controller/pauser, observation-timing controller, delay burden and beneficiary where material; retain contaminated UNKNOWN and its reference-only source qualification. | The same support probability gives7/8 with timely disclosure but3/4 after the fallback cutoff in CC's stipulated case. Attribute the lost1/8 to the changed timing assumption. |
+| Clock and evidence control | Carry clock author/controller/pauser, observation-timing controller, delay burden and beneficiary where material; retain contaminated UNKNOWN and its reference-only source qualification. | The same support probability gives7/8 with timely disclosure but3/4 after the fallback cutoff in CC's stipulated case. Attribute the lost1/8 to the reveal-timing choice and name its controller, the carrier. If an extended case stipulates that the carrier benefits from delay while the recipient bears the cost, mark the unresolved support status as controlled/contaminated with the v0.3[4.3] reference-only qualification, not neutral uncertainty. |
 | Feasible policy | Actions may depend only on the actor's available observations. Compose shared resource demands across promises and plans. | Codex's exclusive late-choice or one-unit fallback variant gives0.72 instead of0.79; restored information/capacity restores the route. |
 | Dependence | Require a supplied joint law or return declared attainable bounds/UNKNOWN; do not multiply marginals without independence. | Retain the exact dependence fixtures and attainable bounds in PR71, with their model-sensitivity label. |
 | Normative authority | Record chooser, grounds/authority, affected coordinates, acceptance and usable contest for constraints and non-dominated choices. | Two feasible, non-dominated plans redistribute loss differently; the account exposes the decision and holder rather than inferring legitimacy. |
