@@ -20,7 +20,7 @@ Ask whose lives, aims and burdens could change; whose voice is absent; who may c
 
 ## 3. Offers, duties and power
 
-Distinguish offers, prior agreement, ongoing commitments, externally grounded duties and performed actions. Preserve each holder, ground, scope, recipient, trigger, due time, support dependency, renewal, refusal, withdrawal and usable exit where material. Acceptance under pressure is not automatically free agreement. A capacity shortage does not itself erase a duty or settle blame. A choice between competing acceptable plans needs an accountable holder, affected interests and contest route; an equation does not supply legitimacy.
+Distinguish offers, prior agreement, ongoing commitments, externally grounded duties and performed actions. Preserve each holder, ground, scope, recipient, trigger, due time, support dependency, renewal, refusal, withdrawal and usable exit where material. Before asking people to rely on a promise, check that those providing essential support have agreed to the work and can do it in time. If support falls through, the party making the promise owes those relying on it a timely response. Name who can give notice, arrange cover and address any loss. Acceptance under pressure is not automatically free agreement. A capacity shortage does not itself erase a duty or settle blame. A choice between competing acceptable plans needs an accountable holder, affected interests and contest route; an equation does not supply legitimacy.
 
 [Expand section 3](CANDIDATE.md#3-offers-duties-and-power)
 
