@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "0903b12a1cc774d579f3ac515b6bc688a42ed33431a934f90a0b67be05326b9c",
-  "note": "Partial same-author reviews; all source blocks remain unresolved overall. Reviews rechecked after reader-navigation and incomplete-coverage wording changes. Anchor checks cannot verify meaning.",
+  "candidate_sha256": "1a7636f0df09582231b91a5528e377d524f2ca0759610591a5d4f2b9100ed559",
+  "note": "Partial same-team reviews. The 18 November comparison revises B0081 and B0082 after an additive change to the candidate. Other findings and their gaps were rechecked against the changed passages. All source blocks remain unresolved overall. Anchor checks cannot verify meaning.",
   "reviews": [
     {
       "block_id": "B0036",
@@ -179,19 +179,19 @@
       "block_id": "B0081",
       "block_sha256": "689ada3a23a39d60be9cd8810b533eb8b2e9de3174c9bf7ed7c73c2dcf0b02a1",
       "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "reviewer": "Campfire construction pass, 18 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate names participant aims, offers, counterproposals, refusals, actor-specific evidence and conditional maintenance.",
-      "remaining": "The neutral-object route and full sustainment trigger, renewal and retirement conditions remain source-dependent."
+      "finding": "Candidate §§2 and 7 give the independent practice route a shared-object example and carry the keeper, upkeep trigger, cost, renewal and retirement for repeated use.",
+      "remaining": "The original encounter and exact participation, disclosure and horizon conditions still need broader contextual review. The new scenario is a constructed example."
     },
     {
       "block_id": "B0082",
       "block_sha256": "51d626b01c8b72304fd4c72f179546884352d551ef955b95f5927df270f59d2a",
       "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "reviewer": "Campfire construction pass, 18 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate asks about separately grounded obligations and avoids assigning an unknown duty to a volunteer.",
-      "remaining": "Specific legal or institutional duty and complete attribution remain open and external to TRACE."
+      "finding": "Candidate §3 and the follow-up case explicitly carry an externally grounded duty with holder, source, beneficiary and scope, separate from the volunteer’s offer.",
+      "remaining": "The example leaves actual duty attribution open. Source-specific duties require their own evidence and competence."
     },
     {
       "block_id": "B0087",

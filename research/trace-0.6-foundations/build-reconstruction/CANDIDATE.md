@@ -20,11 +20,13 @@ When uncertainty is an input to action or delay, identify the actor, policy or d
 
 ## 2. People, relationships and possibilities
 
-Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success.
+Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others.
 
 Supporters are not only resources for a beneficiary: they can form capabilities and futures of their own, including through cooperation, care, learning and maintenance. A possible route in a map, material access to it, chosen participation and sustainable support are different. One participant's benefit does not establish another's consent or obligation.
 
-When people make something together, preserve their different aims, offers, counterproposals, substitutions and refusals. An attempt can produce different results for each person. A claimed usable result needs a named participant, conditions, evidence and relevant horizon. If an arrangement is meant to continue, identify who has agreed to maintain or renew it, who bears the cost and how it can end; otherwise leave those questions open. A single-use contribution can be worthwhile without creating an ongoing service.
+When people make something together, preserve their different aims, offers, counterproposals, substitutions and refusals. An attempt can produce different results for each person. A claimed usable result needs a named participant, conditions, evidence and relevant horizon. If an arrangement is meant to continue, record who keeps it usable, what triggers upkeep, who carries the work and cost, how it is renewed and how it ends. Mark any terms still unassigned. A one-off contribution can be worthwhile on its own.
+
+People can use a common object while pursuing different aims. A permitted guide or a spare part can be enough for someone to practise a demonstration. Record the resources and permissions that route needs and whose aim it serves.
 
 Learning can change an account, a capability, a relationship or a purpose. Ask separately what someone has understood, what they can do under which conditions and support, and what they now want, with evidence for each. These are not mandatory stages. Completing a task with help may be valuable without establishing independent performance; a changed aim may be worthwhile without fulfilling the earlier one. When an account is hard to hear, examine the communication channel and conditions of participation as well as the speaker. Improving the channel may reveal a contribution that was missed; difficulty interpreting an account does not diminish the participant's standing. Ask whether the person actually wants the proposed change.
 
@@ -36,7 +38,7 @@ Distinguish offers, prior agreement, ongoing commitments, externally grounded du
 
 When a decision proceeds with material uncertainties, preserve the decision holder, selected action, reasons and basis, live alternatives, unresolved or disputed claims, potentially foreclosed paths, expected burdens and what still needs review. Proceeding does not itself resolve the uncertainty. This record can support a bounded attempt without turning the account into permission to act.
 
-If a volunteer cannot continue, ask whether another person or institution has a separately grounded responsibility to the affected participant. Name its source, holder and scope when known; an omitted duty-holder is not proof that no duty exists. Do not transfer an unestablished duty to the volunteer or infer a legal answer from the map.
+If a volunteer cannot continue, ask whether another person or institution has a separately grounded responsibility to the affected participant. Name its source, holder, beneficiary and scope when known; an omitted duty-holder is not proof that no duty exists. Do not transfer an unestablished duty to the volunteer or infer a legal answer from the map.
 
 ## 4. Change, interaction and evidence of influence
 
@@ -60,7 +62,7 @@ Following [Gordon's ecological questions](https://doi.org/10.1111/ede.12439), ex
 
 ## 5. Clocks, correction and construction
 
-Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations.
+Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available.
 
 Several organisations responding within their own remit do not necessarily provide a route to the result. Where a route crosses boundaries, identify who coordinates it, who can authorise the necessary steps, what actually reaches the affected target, and who bears navigation and evidence work. A claim moving between offices is not itself a repair.
 
@@ -102,7 +104,7 @@ The original [v0.5 floor](https://github.com/markgoodbody-bit/TRACE/blob/d688c14
 
 ## 7. Paired worked probe
 
-**One community learning project, two lenses.** A wants to learn to repair a bicycle. B offers to facilitate one evening and wants practice explaining repairs. C wants to take part but needs a quieter setting. A local group proposes an 18:00 session with a room and tools, and a driver expresses interest in shared transport. B's offer is for this one session; neither transport nor the room's access arrangement is yet confirmed. Learning, enjoyment, repair and possible future mutual help all matter. None creates permission to reuse someone's story or assume another session.
+**One community learning project, two lenses.** A wants to learn to repair a bicycle. B offers to facilitate one evening and wants practice explaining repairs. C wants to take part but needs a quieter setting. A local group proposes an 18:00 session with a room and tools, and a driver expresses interest in shared transport. B's offer is for this one session; neither transport nor the room's access arrangement is yet confirmed. Learning, enjoyment, repair and possible future mutual help all matter. None creates permission to reuse someone's story or assume another session. At the return, check what would make one further session usable and who could keep it going.
 
 **Bounded logistical layer.** The coordinator can ask the room holder about access, the driver about the specific trip and the participants about their needs; each may decline. If the group establishes a common local timetable, it can identify when transport confirmation must arrive for a separately offered backup to remain usable, and whether the room and transport can serve the number of people expected. If the driver replies after that point, the record can be corrected but the lost backup opportunity is not automatically restored. The driver controls whether and when to reply; the coordinator may control the date selected. Record known costs and availability rather than assuming either person is at fault. A missing response means UNKNOWN, not refusal. No timetable is validly inferred from unrelated clocks.
 
@@ -131,6 +133,14 @@ The next action is to ask whether A wants C's proposal and check its room, tools
 > A adjusted the front brake with B's cues; the rear remains unattempted, and A now wants another repair. B reports teaching practice, extra effort and a separate teaching idea, and declines another session. C reports easier participation and offers later practice subject to room and tools. No next session or maintenance arrangement is agreed; external sharing permissions need checking.
 
 That account gives the next participants something usable. “Everyone succeeded and B will teach again” would erase the very differences needed to decide what happens next.
+
+### Follow-up choices
+
+Consider two possible follow-ups. Keep the quiet room and the 18:00–19:00 slot fixed. A wants to try the new repair and C is willing to help for one session if the kit is available. If the tool keeper confirms the kit is available and permitted for this slot, the coordinator can offer that specific session to A and C. Both can confirm, decline or leave. If the keeper's reply is outstanding, mark kit access unresolved. The coordinator asks the keeper before anyone relies on the kit and can look for a permitted substitute.
+
+B can keep the evening for rest and choose another day to practise teaching. If B can use a spare wheel and a guide already cleared for that purpose, they can practise without using A's account or asking for a second commitment. That route serves B's aim. Carry A's unfinished earlier repair in the record.
+
+If the group wants regular sessions, ask who will check the kit when it comes back or someone reports damage, who carries repair costs, and how participants will renew the arrangement. Agree who will return the kit and close the booking when it ends, and keep any guide or learning the participants have permission to carry forward. Keep the plan to one session until the continuing work has an owner. Record any continuing duties separately with their source and beneficiary.
 
 The distinction between uncertainty in an observation and change in the world is informed by [Parr and Friston (2017)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5721148/); changing where or how one looks is an analogy to [Parr and colleagues (2021)](https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2021.651432/full). Neither model decides anyone's standing or establishes this group's behaviour. [Kiverstein, Kirchhoff and Froese (2022)](https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2022.844773/full) discuss a possible bridge between active inference and enactive autonomy while preserving open questions; modelling autonomy does not establish that it has been instantiated. The participation proposal here is our synthesis, not a prescription demonstrated by those papers.
 

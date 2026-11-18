@@ -59,3 +59,7 @@ Selected v0.5 B0083–B0085 and B0088 were compared against the candidate. The a
 ## Formation and intended use
 
 The candidate now carries actor-specific aims, contributions, refusal, usable-result evidence, conditional maintenance and the question of externally grounded responsibility. It also makes explicit that failure to imagine a consequence does not establish irrelevance. This advances B0081, B0082 and B0087, but the specific neutral-object alternative, full contribution sequence, exact maintenance trigger/retirement and the complete materiality procedure remain source-dependent. These reviews remain PARTIAL and are not empirical or independent validation. Existing partial decisions were rechecked against the additive edit.
+
+## Shared practice and sustainment, 18 November 2026
+
+The [released formation and external-obligation passage](https://github.com/markgoodbody-bit/TRACE/blob/d688c149afc15c90ab51afaf08fe303771e9de20/TRACE-v0.5.md#L245-L248) supports separate routes through a common object, a trigger and cost bearer for upkeep, renewal and retirement, and an externally grounded duty with a beneficiary. Candidate §§2–3 and §7 now give these a practical home. The spare-wheel route serves B's teaching aim. The equal-slot comparison turns on kit access and permission, while the earlier repair and the ownership of continuing work stay visible. The comparison is a constructed use of the source meanings. B0081 and B0082 remain PARTIAL pending broader contextual review.

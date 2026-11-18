@@ -14,7 +14,7 @@ An entity, group or institution encounters a changing world through bounded obse
 
 ## 2. People, relationships and possibilities
 
-Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success.
+Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others.
 
 [Expand section 2](CANDIDATE.md#2-people-relationships-and-possibilities)
 
@@ -32,7 +32,7 @@ Where a bounded engineered dependency is warranted, name component relations and
 
 ## 5. Clocks, correction and construction
 
-Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations.
+Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available.
 
 [Expand section 5](CANDIDATE.md#5-clocks-correction-and-construction)
 
@@ -44,6 +44,6 @@ One versioned source graph can serve different readers. A complete account would
 
 ## 7. Paired worked probe
 
-**One community learning project, two lenses.** A wants to learn to repair a bicycle. B offers to facilitate one evening and wants practice explaining repairs. C wants to take part but needs a quieter setting. A local group proposes an 18:00 session with a room and tools, and a driver expresses interest in shared transport. B's offer is for this one session; neither transport nor the room's access arrangement is yet confirmed. Learning, enjoyment, repair and possible future mutual help all matter. None creates permission to reuse someone's story or assume another session.
+**One community learning project, two lenses.** A wants to learn to repair a bicycle. B offers to facilitate one evening and wants practice explaining repairs. C wants to take part but needs a quieter setting. A local group proposes an 18:00 session with a room and tools, and a driver expresses interest in shared transport. B's offer is for this one session; neither transport nor the room's access arrangement is yet confirmed. Learning, enjoyment, repair and possible future mutual help all matter. None creates permission to reuse someone's story or assume another session. At the return, check what would make one further session usable and who could keep it going.
 
 [Expand section 7](CANDIDATE.md#7-paired-worked-probe)
