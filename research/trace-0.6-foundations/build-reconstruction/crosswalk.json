@@ -3,7 +3,7 @@
   "source_git_commit": "d688c149afc15c90ab51afaf08fe303771e9de20",
   "source_git_blob": "39d943b26dd355781f2d01986b229b4f1da6c793",
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "bef737effc30d57d9f4019d56e85d076b9f8ca58c26fd611acbc51fab92c455a",
+  "candidate_sha256": "6c908e1bf65fb62afc176a8ffb868222f52d6ddb5f772bb403222edaef16ac2f",
   "scope": "Heading spans and blank-delimited blocks cover source lines; neither is a semantic audit. Every unit unresolved.",
   "units": [
     {

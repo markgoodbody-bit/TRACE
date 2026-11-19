@@ -13,6 +13,7 @@ MANIFEST = ROOT / "crosswalk.json"
 SPINE = ROOT / "SPINE.md"
 SOURCE_SHA256 = "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5"
 SELECTED = ("1", "2", "3", "4", "5", "6", "7")
+DECISION_HEADING = "## Start with the next decision"
 # Proposed destinations aid the later human review; they are NOT verdicts.
 DESTINATIONS = [
  "8", "8", "1", "1", "1", "7", "4", "8", "1",
@@ -68,9 +69,12 @@ def review_blocks(raw, headings):
 
 
 def render_spine(candidate):
-    pieces = re.split(r"(?m)(?=^## [1-8]\. )", candidate)
+    preface, *sections = re.split(r"(?m)(?=^## [1-8]\. )", candidate)
+    _, heading, decision = preface.partition("\n\n" + DECISION_HEADING + "\n\n")
+    if not heading or not decision.strip():
+        raise ValueError("candidate first-decision guidance required")
     mapping = {}
-    for part in pieces:
+    for part in sections:
         found = re.match(r"## ([1-8])\. ", part)
         if found:
             if found.group(1) in mapping:
@@ -92,6 +96,7 @@ def render_spine(candidate):
             "Expand the candidate and the released source when omitted detail changes "
             "authority, burden, consent, evidence, time or a constructive possibility. "
             "A missing material distinction means UNKNOWN, not permission.\n\n"
+            + DECISION_HEADING + "\n\n" + decision.rstrip() + "\n\n"
             + "Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; "
               "controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; "
               "the co-evolving social layer of the paired worked case and its limits. In the community return, distinguish "

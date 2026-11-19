@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "bef737effc30d57d9f4019d56e85d076b9f8ca58c26fd611acbc51fab92c455a",
-  "note": "Partial same-team reviews. The 18 November quiet-access correction revises B0082 and checks the other findings and gaps against the changed passages. All source blocks remain unresolved overall. Anchor checks cannot verify meaning.",
+  "candidate_sha256": "6c908e1bf65fb62afc176a8ffb868222f52d6ddb5f772bb403222edaef16ac2f",
+  "note": "Partial same-team reviews. On 19 November the first-decision guide and source applications were checked against the existing partial findings. All source blocks remain unresolved overall. Anchor checks cannot verify meaning.",
   "reviews": [
     {
       "block_id": "B0036",
