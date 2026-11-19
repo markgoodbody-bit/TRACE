@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "39412772f6218e4fd71eedd0b554638962c79dd7c6ada9756fe3918a87a1f49b",
-  "note": "Partial same-team reviews. The 18 November quiet-access comparison updates B0082 and checks the other findings and gaps against the added passages. All source blocks remain unresolved overall. Anchor checks cannot verify meaning.",
+  "candidate_sha256": "bef737effc30d57d9f4019d56e85d076b9f8ca58c26fd611acbc51fab92c455a",
+  "note": "Partial same-team reviews. The 18 November quiet-access correction revises B0082 and checks the other findings and gaps against the changed passages. All source blocks remain unresolved overall. Anchor checks cannot verify meaning.",
   "reviews": [
     {
       "block_id": "B0036",
@@ -190,8 +190,8 @@
       "status": "PARTIAL",
       "reviewer": "Campfire construction pass, 18 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate section 3 and the follow-up case carry an externally grounded duty with holder, source, beneficiary and scope. The quiet-access variant grounds timely notice and a response to incurred costs in the group's assurance, with B's offer still scoped.",
-      "remaining": "Any independently grounded duty remains open and requires its own source, scope and competence. The variant stipulates the relevant support, reliance and clock."
+      "finding": "Candidate section 3 and the follow-up case carry an externally grounded duty with holder, source, beneficiary and scope. The quiet-access example attributes the coordinator's response to the group's supported assurance. It preserves the separate fallback and fare deadlines and B's one-evening commitment.",
+      "remaining": "Any independently grounded duty needs its own evidence, scope and competence. The variant stipulates support, reasonable reliance and the local clock."
     },
     {
       "block_id": "B0087",
