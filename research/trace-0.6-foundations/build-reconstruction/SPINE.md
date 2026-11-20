@@ -39,7 +39,7 @@ Where a bounded engineered dependency is warranted, name component relations and
 
 ## 5. Clocks, correction and construction
 
-Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available.
+Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available. For a proposed pause, trace the warning to someone who can act within scope, then ask how they can verify the effect before the boundary. The [dispatch case](CANDIDATE.md#a-warning-before-dispatch) works through this route.
 
 [Expand section 5](CANDIDATE.md#5-clocks-correction-and-construction)
 

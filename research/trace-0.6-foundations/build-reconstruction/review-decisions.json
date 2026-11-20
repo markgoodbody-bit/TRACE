@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "6c908e1bf65fb62afc176a8ffb868222f52d6ddb5f772bb403222edaef16ac2f",
-  "note": "Partial same-team reviews. On 19 November the first-decision guide and source applications were checked against the existing partial findings. All source blocks remain unresolved overall. Anchor checks cannot verify meaning.",
+  "candidate_sha256": "e0a334d358e438c58d5a8dea357e778c5559c1a1b108bc282c268d071ac69cfc",
+  "note": "Partial same-team reviews. On 19 November the first-decision guide and source applications were checked against the existing partial findings. All source blocks remain unresolved overall. Anchor checks cannot verify meaning. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence.",
   "reviews": [
     {
       "block_id": "B0036",
