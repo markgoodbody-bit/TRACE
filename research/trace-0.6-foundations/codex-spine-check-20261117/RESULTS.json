@@ -1,0 +1,54 @@
+{
+  "source": "0941c4f6efc480cc125acffdca12f9e01ae76926",
+  "status": "PASS",
+  "source_files_unchanged": 17,
+  "scope": "Changed generator, drift and review-anchor interaction only; no numerical baseline rerun.",
+  "results": [
+    {
+      "case": "baseline_build_views.py",
+      "exit_code": 0,
+      "stdout": "PASS mechanical coverage: 38 headings, 206 blocks; semantic dispositions UNRESOLVED",
+      "stderr_last_line": ""
+    },
+    {
+      "case": "baseline_check_reviews.py",
+      "exit_code": 0,
+      "stdout": "15 partial reviews anchored; 206 source blocks remain unresolved overall",
+      "stderr_last_line": ""
+    },
+    {
+      "case": "unchanged_regeneration",
+      "review_file_byte_equal": true,
+      "spine_text_equal": true,
+      "partial_reviews": 15,
+      "unresolved_blocks": 206
+    },
+    {
+      "case": "selection_and_structure",
+      "first_paragraph_change_carried": true,
+      "later_paragraph_omitted_as_declared": true,
+      "missing_and_duplicate_sections_rejected": true,
+      "limit": "This is authored selection, not semantic materiality detection."
+    },
+    {
+      "case": "changed_later_claim",
+      "derived_drift_before_regeneration": {
+        "exit_code": 1,
+        "stdout": "",
+        "stderr_last_line": "FAIL: derived views differ from source"
+      },
+      "review_stale_before": {
+        "exit_code": 1,
+        "stdout": "",
+        "stderr_last_line": "ValueError: stale candidate review: reassess before repinning"
+      },
+      "review_stale_after_regeneration": {
+        "exit_code": 1,
+        "stdout": "",
+        "stderr_last_line": "ValueError: stale candidate review: reassess before repinning"
+      },
+      "review_file_not_rewritten": true,
+      "limit": "Regeneration makes the derived view consistent; it does not reassess the review."
+    }
+  ]
+}

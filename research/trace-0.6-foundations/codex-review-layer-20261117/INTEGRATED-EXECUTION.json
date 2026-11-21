@@ -1,0 +1,32 @@
+{
+  "source": "aa6fdb4934685f0737e0624d8747b804b2c817f5",
+  "observed_at": "2026-11-17T10:20:46.754750+00:00",
+  "runs": [
+    {
+      "name": "mechanical",
+      "exit_code": 0,
+      "stdout": "PASS mechanical coverage: 38 headings, 206 blocks; semantic dispositions UNRESOLVED\n",
+      "stderr": ""
+    },
+    {
+      "name": "reviews",
+      "exit_code": 0,
+      "stdout": "15 partial reviews anchored; 206 source blocks remain unresolved overall\n",
+      "stderr": ""
+    },
+    {
+      "name": "owner-review-tests",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_changed_source_or_candidate_invalidates_reviews (test_reviews.ReviewAnchorTests) ... ok\ntest_current_reviews_are_anchored_and_only_partial (test_reviews.ReviewAnchorTests) ... ok\ntest_duplicate_block_missing_gap_and_wrong_hash_are_rejected (test_reviews.ReviewAnchorTests) ... ok\ntest_duplicate_json_fields_are_rejected (test_reviews.ReviewAnchorTests) ... ok\ntest_invalid_ledger_shapes_fail_but_explicit_empty_is_valid (test_reviews.ReviewAnchorTests) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.012s\n\nOK\n"
+    },
+    {
+      "name": "integrated-matrix",
+      "exit_code": 0,
+      "stdout": "{\n  \"source_pin\": \"aa6fdb4934685f0737e0624d8747b804b2c817f5\",\n  \"cases\": 35,\n  \"unexpected_acceptances\": [],\n  \"checker_sha256\": \"be5abda11320db357b3b4ba2a84c156f13674a197fecf484f94941a9ec392b4c\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "original_acquired_files_unchanged": 16,
+  "checker_identical_to_tested_proposal": true
+}

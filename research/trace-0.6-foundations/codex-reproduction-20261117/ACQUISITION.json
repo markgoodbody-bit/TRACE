@@ -1,0 +1,72 @@
+{
+  "source": "32ba2e0dfd08f6301390d523771a8f504cb40419",
+  "acquired_at": "2026-11-17T09:41:02.386483+00:00",
+  "files": [
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md",
+      "blob": "0cd306056f3dc4a1d18a342ae570b1ffd12e7cf6",
+      "sha256": "c840b18f52b6b1b4863dc02380c3d58a2f37b2cf86d2306c74e6616fb2018c5a",
+      "bytes": 16855
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/README.md",
+      "blob": "20946f65696d3c303b8a72144c0900de90bb7235",
+      "sha256": "3a0d830637eba378b415892141ef1d15aaaab86e9c54cdd49f3a3ad54a23a130",
+      "bytes": 5510
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/SEMANTIC-REVIEW.md",
+      "blob": "db4c85354daf755e9e15ff8e27539dbd4945f7c4",
+      "sha256": "94dd47c48f3ce9eedc2db7830b1d872d8d7c50a081d99b3827193c8796fd427c",
+      "bytes": 4510
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/SPINE-CONTRACT.md",
+      "blob": "60b829ccefbb27e5a4bd0136df33341fc3e68198",
+      "sha256": "e7b6673a65a6357aa324bf739bcf56cdba0603dba2657a7343c96f247a836c57",
+      "bytes": 670
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/SPINE.md",
+      "blob": "252c89cccf21eece029e9f277595076817b27bd9",
+      "sha256": "83ce0838e1f28869f9774b466b05f2fb801a2ebc4f0d04933e21c086347e9fb9",
+      "bytes": 4843
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/TRACE-v0.5-reference.md",
+      "blob": "39d943b26dd355781f2d01986b229b4f1da6c793",
+      "sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
+      "bytes": 92787
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/build_views.py",
+      "blob": "f56c2e4a9820c78d58ea124788c023776259bda7",
+      "sha256": "b96d05c112632b70ae81354f1a0a5d83950cecc766a8dc32aa1a49353ea41a58",
+      "bytes": 6040
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/crosswalk.json",
+      "blob": "cf45f1b24fd6e33d131fe97b59f91de5d2362c76",
+      "sha256": "cc5957b24dc76fcaed7d1489affd0a390c056cc223fdf056cbbe593b02849ec2",
+      "bytes": 88802
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/scenario.example.json",
+      "blob": "9f092cea7a46c3f09494804483beb371c57b1e7d",
+      "sha256": "37d89a401a94813bb8fb1e38c852bebd7714bf5af84a2f5fdab4457c8fd852a6",
+      "bytes": 358
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/simulator.py",
+      "blob": "51d392e3b7ff14f294f42c1168e404c9d09c20ff",
+      "sha256": "345180c633c656a67634512d1c84816fc4b9514596f1d5db9619fa5e2131fe21",
+      "bytes": 5863
+    },
+    {
+      "path": "research/trace-0.6-foundations/build-reconstruction/test_lab.py",
+      "blob": "89d27f5f19cb631a7d904e33697744bcefcfcb34",
+      "sha256": "7440adfedc6350831dc51774bf47991780c0d1305dcf7b6f5504eb94c6e40007",
+      "bytes": 5210
+    }
+  ]
+}

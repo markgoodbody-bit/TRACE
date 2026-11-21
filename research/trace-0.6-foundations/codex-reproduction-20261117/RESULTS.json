@@ -1,0 +1,62 @@
+{
+  "source": "32ba2e0dfd08f6301390d523771a8f504cb40419",
+  "status": "PASS",
+  "scope": "Finite shared-law oracle and mechanical source/derived-view checks; not full TRACE semantics.",
+  "joint_laws_quarter_grid": 330,
+  "policy_capacity_comparisons": 7920,
+  "dependence_controls": [
+    {
+      "direct_fallback_overlap": "0",
+      "success": "97/100"
+    },
+    {
+      "direct_fallback_overlap": "9/50",
+      "success": "79/100"
+    },
+    {
+      "direct_fallback_overlap": "1/4",
+      "success": "18/25"
+    }
+  ],
+  "invalid_inputs_rejected": 11,
+  "delivery_completion_comparisons": 288,
+  "cancellation_keyword": "backup_cancelled_before_delivery",
+  "cancellation_regressions": 3,
+  "coverage": {
+    "units": 38,
+    "review_blocks": 206
+  },
+  "all_semantic_dispositions": "UNRESOLVED",
+  "mutation_rejections": [
+    {
+      "mutation": "reference",
+      "exit_code": 1,
+      "diagnostic": "ValueError: reference source hash mismatch"
+    },
+    {
+      "mutation": "candidate",
+      "exit_code": 1,
+      "diagnostic": "FAIL: derived views differ from source"
+    },
+    {
+      "mutation": "manifest",
+      "exit_code": 1,
+      "diagnostic": "FAIL: derived views differ from source"
+    },
+    {
+      "mutation": "spine",
+      "exit_code": 1,
+      "diagnostic": "FAIL: derived views differ from source"
+    }
+  ],
+  "regeneration": {
+    "crosswalk.json": {
+      "byte_equal": false,
+      "lf_normalized_text_equal": true
+    },
+    "SPINE.md": {
+      "byte_equal": false,
+      "lf_normalized_text_equal": true
+    }
+  }
+}
