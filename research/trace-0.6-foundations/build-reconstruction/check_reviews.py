@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Check review anchors, not the semantic correctness of the reviews."""
 import json
+import re
 from pathlib import Path
 import build_views
 
 ROOT = Path(__file__).resolve().parent
+RESOLVED = ("REPRODUCED", "COMPRESSED", "REFERENCE_ONLY")
 
 
 def unique_object(pairs):
@@ -39,20 +41,35 @@ def validate(data, source, candidate, evidence_exists):
         seen.add(block_id)
         if review.get('block_sha256') != by_id[block_id]['sha256']:
             raise ValueError('stale block review')
-        if review.get('status') != 'PARTIAL':
-            raise ValueError('only partial reviews supported')
         if not all(isinstance(review.get(k), str) and review[k].strip()
-                   for k in ('finding', 'remaining', 'reviewer', 'evidence')):
-            raise ValueError('partial review requires finding, gap, reviewer and evidence')
+                   for k in ('finding', 'reviewer', 'evidence')):
+            raise ValueError('review requires finding, reviewer and evidence')
         evidence = review['evidence']
         if Path(evidence).name != evidence or not evidence_exists(evidence):
             raise ValueError('evidence must be a present local file')
+        status = review.get('status')
+        remaining = review.get('remaining', '')
+        if status == 'PARTIAL':
+            if not isinstance(remaining, str) or not remaining.strip():
+                raise ValueError('partial review requires an open gap')
+        elif status in RESOLVED:
+            if remaining != '':
+                raise ValueError('resolved review cannot carry an open gap')
+            target = source if status == 'REFERENCE_ONLY' else candidate
+            headings = re.findall(r'^#{1,6} (.+)$', target.decode('utf-8'), re.MULTILINE)
+            if review.get('destination') not in headings:
+                raise ValueError('resolved review requires an existing destination heading')
+        else:
+            raise ValueError('unsupported review status')
     return len(seen), len(blocks)
 
 
 if __name__ == '__main__':
-    result = validate(json.loads((ROOT / 'review-decisions.json').read_text(encoding='utf-8'),
-                                 object_pairs_hook=unique_object),
-                      build_views.SOURCE.read_bytes(), build_views.CANDIDATE.read_bytes(),
-                      lambda name: (ROOT / name).is_file())
-    print(f'{result[0]} partial reviews anchored; {result[1]} source blocks remain unresolved overall')
+    data = json.loads((ROOT / 'review-decisions.json').read_text(encoding='utf-8'),
+                      object_pairs_hook=unique_object)
+    reviewed, total = validate(data, build_views.SOURCE.read_bytes(),
+                               build_views.CANDIDATE.read_bytes(),
+                               lambda name: (ROOT / name).is_file())
+    resolved = sum(review['status'] in RESOLVED for review in data['reviews'])
+    print(f'{resolved} resolved and {reviewed - resolved} partial reviews anchored; '
+          f'{total - resolved} source blocks remain unresolved')

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "e0a334d358e438c58d5a8dea357e778c5559c1a1b108bc282c268d071ac69cfc",
+  "candidate_sha256": "7058fbb8b4d74f6afdb620912f2c30a759451bc361dc09471e55649a65577046",
   "note": "Partial same-team reviews. On 19 November the first-decision guide and source applications were checked against the existing partial findings. All source blocks remain unresolved overall. Anchor checks cannot verify meaning. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence.",
   "reviews": [
     {
@@ -196,11 +196,11 @@
     {
       "block_id": "B0087",
       "block_sha256": "8ae1e5544b9d08ad5c31d0864614a7b6755d8d5c67450d8031a9240a72b961a8",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate states declared use, premise perturbation and the failure of imagined consequences as proof of irrelevance.",
-      "remaining": "The complete procedure and actual reader effectiveness remain unverified; source remains authoritative for its edition."
+      "status": "COMPRESSED",
+      "reviewer": "Codex, scoped source comparison and replay",
+      "evidence": "DISPATCH-REVIEW.md",
+      "finding": "Named use, premise changes, consequences and unresolved omissions are carried into the candidate and extracted in the spine. The dispatch replay exercises timed and evidenced changes.",
+      "destination": "6. A compact view with an escape hatch"
     }
   ]
 }
