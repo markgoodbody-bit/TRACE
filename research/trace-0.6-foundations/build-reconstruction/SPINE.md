@@ -21,7 +21,7 @@ An entity, group or institution encounters a changing world through bounded obse
 
 ## 2. People, relationships and possibilities
 
-Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others.
+Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change).
 
 [Expand section 2](CANDIDATE.md#2-people-relationships-and-possibilities)
 

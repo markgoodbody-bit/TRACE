@@ -83,3 +83,7 @@ I rechecked the existing partial findings against this addition. B0165 and B0167
 ## Dispatch replay and materiality, 23 November 2026
 
 The [dispatch review](DISPATCH-REVIEW.md) records B0087 as a scoped compression into candidate and spine §6. The replay varies the receipt and effect evidence, authority and clock while keeping the same notice and affected households in view. The other partial findings and their remaining qualifications were checked against the changes to the preface, §6 and the dispatch links. Reader results remain open.
+
+## Choice and option history, 23 November 2026
+
+The [released aim-revision passage](https://github.com/markgoodbody-bit/TRACE/blob/d688c149afc15c90ab51afaf08fe303771e9de20/TRACE-v0.5.md#L394-L407) preserves the earlier commitment and distinguishes an attributed inference from the person's decision. The [new workshop comparison](CANDIDATE.md#a-choice-after-the-options-change) develops the option history behind the current choice. It adds a source for a changed route, a check of what was usable and a decision about whether to offer a route again. The finite example compares the two rankings under a declared unchanged-ranking assumption. The source comparison changes the application in §2 and §7. The earlier ledger dispositions retain their evidence and remaining conditions.

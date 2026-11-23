@@ -19,6 +19,7 @@
 - build_views.py checks contiguous spans and drift in the generated crosswalk and spine. The separately maintained review decisions record how far the semantic review has reached.
 - simulator.py and test_lab.py provide a small exact-arithmetic, finite shared-capacity and observation-policy example. The supplied law is explicit; early 79/100, late 18/25, insufficient capacity 18/25. These are stipulated outputs under the given exclusive-choice model, not predictions.
 - dispatch.py replays the fictional North Hall decision. It distinguishes the venue warning, steward's authority, request, acknowledgement, effect and dispatch readback. The duty line can be called at 10:22. A hold at 10:30 reaches the release boundary too late for the stipulated protection. See the [review and assumptions](DISPATCH-REVIEW.md).
+- [A choice after the options change](CANDIDATE.md#a-choice-after-the-options-change) extends the workshop return. The same present choice can follow a usable alternative or the withdrawal of a route. choice_history.py supplies the two-option calculation and its fixed-ranking assumption.
 
 Commands in this directory:
 
@@ -30,6 +31,7 @@ python3 -m unittest discover -s . -p 'test_*.py' -v
 python3 simulator.py
 python3 simulator.py --input scenario.example.json
 python3 dispatch.py
+python3 choice_history.py
 ```
 
 This cloud environment passed the mechanical check and ten grouped unit tests. The example explicitly defines observation time and a deadline where observation is available before the choice at equality. It returns 7/8 with early observation; the same law returns 3/4 after the fallback deadline. A separate stipulated event-time test distinguishes acknowledgement, delivery, retained or cancelled backup, inclusive due time and strict hardening boundary. After Codex's independent review on COM954 c6944069677, the ambiguous `backup_cancelled` flag was renamed `backup_cancelled_before_delivery`; the older keyword is rejected. This is a static before-delivery assumption, not a representation of cancellation occurring after delivery. These are specified calculations, not evidence that a real actor controls or exploits the clock. The original fetched source initially acquired an extra newline; this was discovered by a Git-blob mismatch and corrected before generating the packet. Git blob then matched the released 0.5 source.

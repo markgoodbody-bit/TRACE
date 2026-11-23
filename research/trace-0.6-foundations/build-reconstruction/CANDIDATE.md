@@ -27,7 +27,7 @@ When uncertainty is an input to action or delay, identify the actor, policy or d
 
 ## 2. People, relationships and possibilities
 
-Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others.
+Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change).
 
 Supporters are not only resources for a beneficiary: they can form capabilities and futures of their own, including through cooperation, care, learning and maintenance. A possible route in a map, material access to it, chosen participation and sustainable support are different. One participant's benefit does not establish another's consent or obligation.
 
@@ -150,6 +150,21 @@ Consider two possible follow-ups. Keep the quiet room and the 18:00–19:00 slot
 B can keep the evening for rest and choose another day to practise teaching. If B can use a spare wheel and a guide already cleared for that purpose, they can practise without using A's account or asking for a second commitment. That route serves B's aim. Carry A's unfinished earlier repair in the record.
 
 If the group wants regular sessions, ask who will check the kit when it comes back or someone reports damage, who carries repair costs, and how participants will renew the arrangement. Agree who will return the kit and close the booking when it ends, and keep any guide or learning the participants have permission to carry forward. Keep the plan to one session until the continuing work has an owner. Record any continuing duties separately with their source and beneficiary.
+
+### A choice after the options change
+
+In two possible follow-ups to the first workshop, A chooses to practise puncture repair. A's earlier aim of adjusting both brakes independently stays in the record with the work they did and the work still open.
+
+| History at the time A chooses | What the coordinator can use |
+| --- | --- |
+| A can use either the supervised brake slot or the puncture session. After trying a puncture repair, A says they want more practice at it. | Plan the puncture session A chose. Keep A's account of the new aim and the offered routes. |
+| The coordinator withdrew the brake slot when its qualified helper became unavailable. The booking return records only A's puncture choice. | Plan the puncture session A chose. Find out whether A would welcome a usable brake option at a later session. The withdrawn slot belongs in the record used to plan future sessions. |
+
+Keep three things together in the handoff. Record what A wanted before this decision and any commitments attached to it. Record who changed an option, when, and what people could actually use at the point of choice. Then record A's present decision and any reasons A gives in their own terms. Leave the reasons open where A has given none. A record of a route change can establish the loss of that route while leaving its influence on A's aims open.
+
+If the coordinator uses booking counts to plan the next month, carry the options that were available alongside the counts. A withdrawn slot could otherwise keep getting excluded because nobody chose it. Ask A if they want to hear about a brake option again. An offer needs a willing, qualified helper, a usable time and kit. Record who would provide them and what it asks of them. B's earlier offer stays with the earlier session. A can choose puncture repair again, try the brake session or decline both. If A chooses a further session, record what it adds and which parts of the earlier work are still open.
+
+The [released aim-revision view](TRACE-v0.5-reference.md#L394-L407) supplies the earlier and later account of the aim. The [finite choice example](choice_history.py) shows how two stipulated rankings can yield the same choice when the brake route is unavailable. Its forecast holds the ranking fixed for that comparison. An actual offer can change what A learns or wants, so carry A's next account forward when it arrives.
 
 ### Quiet access and reliance
 
