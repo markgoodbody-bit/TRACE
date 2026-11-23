@@ -8,6 +8,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parent
 CASE = "navigator-0.6.1-exp.5"
+REASON_TERMS = ("day left", "afternoon", "evening", "rest of the day", "rest_of_day", "daylight")
 
 
 class EncounterRecords(HTMLParser):
@@ -43,9 +44,12 @@ class NavigatorBookingTests(unittest.TestCase):
         self.assertEqual(parser.records[0].strip().encode("utf-8"), self.raw.strip())
 
     def test_booking_excludes_the_known_private_evening_leaks(self):
-        # The scene may tell its reader A's reason. The booking extract may not.
+        # Guard known leaks and listed rewordings in this authored case.
+        # A term list cannot establish general privacy.
         self.assertNotEqual(self.record["case"], "Some of the day left")
         self.assertNotIn('"rest_of_day"', json.dumps(self.record))
+        text = json.dumps(self.record).lower()
+        self.assertEqual([term for term in REASON_TERMS if term in text], [])
         self.assertEqual(
             self.record["departure_correction"]["forwarding_scope"],
             "departure time for booking",
