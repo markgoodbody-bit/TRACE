@@ -205,6 +205,16 @@ A replacement coordinator can carry forward the participants' reports of taking 
 
 A message saying “kit sorted” is a proposed update. Ask which kit, who can release it, for which date, and who can get it to the room. A confirmed second loan can give the next session a usable kit route with a willing collector. The cupboard limit stays with the cupboard. If the authorised keeper confirms release for the new date and a willing volunteer can deliver it, record the cupboard route as supported for that slot. Check the delivery on the day. The room and participants each keep their own decisions. Give people an update while they can still act on it. [Earlier TRACE account of returning limits and outcomes](TRACE-v0.5-reference.md#L405).
 
+### A's departure and the next offer
+
+In a further invented visit, A has enjoyed the afternoon and wants to leave by 17:40. A tells the desk the time but keeps the reason private, and agrees that the departure time can be passed to the duty organiser. The booking still records 18:00. A's attempt will finish at 17:15 and a qualified check is booked for 17:35–17:50. The facilitator can instead offer one check at 17:20–17:35. The organiser can change the booking before 17:10, subject to A's acceptance.
+
+The desk has a receipt. If it reaches the organiser at 17:04, A accepts the earlier offer at 17:06 and the organiser books it at 17:08. The check finishes at 17:35 and A leaves by 17:40. If the ordinary return reaches the organiser at 17:12, the booking has locked and the check remains outstanding. A still leaves by 17:40. Record receipt, A's acceptance, the booking change and the completed check from their respective sources; a receipt alone does not establish the later steps. A can ask to speak to the organiser while a change is possible.
+
+Today's checked attempt can be a useful step towards A's wish to work at home. Whether A can do that later and what support is available there remain open. A can choose whether to take a fresh offer or to leave, and a helper can decline. If A wants another session or a nearby qualified service, ask what is available, what it costs and when A needs the answer. Do not promise a route before its holder agrees. If none is confirmed, carry A's aim and the open question to the next decision with A's permission. Keep B's rest and C's access needs in their own accounts.
+
+The [complete scene and two fictional histories](GOOD-DAY-0.6.1-exp.3.md) show the reason A chooses to keep private. The booking extract carries the authorised time and the observed steps. A handoff for an actual session would carry the history that happened and only what A agreed to share.
+
 ### Quiet access and reliance
 
 Take the follow-up with the confirmed kit. The smaller room is C's only usable way to attend this session. In the first variant, the coordinator can prepare it in fifteen minutes within their agreed role, with no material cost to anyone else. They agree to do the set-up and A and C accept the one-session offer. The arrangement gives C a place to take part once the room is ready. Record whether the room opens and how the participants use it when the session happens.
