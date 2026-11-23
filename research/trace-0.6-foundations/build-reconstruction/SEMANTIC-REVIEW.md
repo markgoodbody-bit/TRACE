@@ -105,3 +105,9 @@ The [next Saturday handoff](CANDIDATE.md#what-next-saturday-needs) supports one 
 | [B0134, return and completion](TRACE-v0.5-reference.md#L409) | §6 carries changes, uncertainty, burdens, unassigned work and who can respond. It scopes each completion claim to its target, horizon and evidence contract. | C's report and attendance concern Saturday's use. The returned kit gives evidence of ending that loan. The next booking, continued access and the participants' later choices have their own required evidence. |
 
 The ledger treats these three paragraphs as COMPRESSED. The review concerns the named use and the cited parts of v0.5. The adjoining symbolic fixture and the detailed recursive merge contract remain at their source.
+
+## Present value and constructive formation, 23 November 2026
+
+The released [B0107 formation paragraph](TRACE-v0.5-reference.md#L328) distinguishes a represented possibility from a capability formed in the world. It also says that a successful session does not transfer B's equipment, validate consent or establish future use, and that care, creative activity and play can be worthwhile in the present without reduction to economic output or a risk metric. Curiosity and refusal remain alongside construction and correction.
+
+The new paragraph in [§2 of the candidate](CANDIDATE.md#2-people-relationships-and-possibilities) carries these distinctions, with refusal and participant-specific boundaries in the surrounding paragraphs. The workshop already keeps B's own teaching possibility, extra work and decision to rest distinct from A's results. This comparison covers B0107 itself. The preceding formation sequence, its baseline and evidence conditions remain separate source blocks and are not resolved by this paragraph.

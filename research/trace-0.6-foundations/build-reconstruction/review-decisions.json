@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "5d1cdbcb0288d72aa6a021df7aeb859ccdb284a21806ca849440019f150ea4fd",
+  "candidate_sha256": "08d2caad531661e975560356cfc7ec62448602a1f43e28bc4bd47eaa6e2abc4f",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -230,6 +230,16 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "Carries changes, uncertainty, burdens, unresolved work and who can respond. A completion claim has its own target, scope, horizon and evidence under a stated criterion. The handoff preserves what was completed for one Saturday and what needs fresh evidence.",
       "destination": "6. A compact view with an escape hatch",
+      "remaining": ""
+    },
+    {
+      "block_id": "B0107",
+      "block_sha256": "c436bf9a4c299d00ec5bfb83078ac767e80f65543945c7f399b24f047dd13320",
+      "status": "COMPRESSED",
+      "reviewer": "Build source comparison, 23 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Distinguishes represented possibility from formation, successful cooperation from transfer, consent and future access, and present value of care, creation and play from economic or risk scores. Curiosity and refusal remain visible.",
+      "destination": "2. People, relationships and possibilities",
       "remaining": ""
     }
   ]
