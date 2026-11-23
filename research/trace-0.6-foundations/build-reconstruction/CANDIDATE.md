@@ -91,7 +91,7 @@ An event may be unchangeable while its effects can still change. Assess continui
 
 ## 6. A compact view with an escape hatch
 
-One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up. [Follow the next workshop handoff](CANDIDATE.md#what-next-saturday-needs).
+One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. Keep each claim at the strength of its evidence, each aim with the person who holds it, and any limit the next decision depends on. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up. [Follow the next workshop handoff](CANDIDATE.md#what-next-saturday-needs).
 
 When a closer inspection is folded back into an account, carry each material limit with its identity, source, target, scope, dependent claims, current status and any known repair route. A substitute can make one route usable while the original limit stays in place. Treat a new report as a proposed change and check its warrant and scope before recording resolution. Keep similarly worded limits distinct when their causes or effects differ. Record a depth or time budget as the reason for stopping, and establish sufficiency separately for the intended decision.
 
@@ -173,6 +173,20 @@ Keep three things together in the handoff. Record what A wanted before this deci
 If the coordinator uses booking counts to plan the next month, carry the options that were available alongside the counts. A withdrawn slot could otherwise keep getting excluded because nobody chose it. Ask A if they want to hear about a brake option again. An offer needs a willing, qualified helper, a usable time and kit. Record who would provide them and what it asks of them. B's earlier offer stays with the earlier session. A can choose puncture repair again, try the brake session or decline both. If A chooses a further session, record what it adds and which parts of the earlier work are still open.
 
 The [released aim-revision view](TRACE-v0.5-reference.md#L394-L407) supplies the earlier and later account of the aim. The [finite choice example](choice_history.py) shows how two stipulated rankings can yield the same choice when the brake route is unavailable. Its forecast holds the ranking fixed for that comparison. An actual offer can change what A learns or wants, so carry A's next account forward when it arrives.
+
+### Keep the gig and ask separately about ranking
+
+At 11:30 a musician accepts a paid gig. The desk can reserve the same slot, fee, audience and support either way. The musician's answer about ranking is still open. The desk reserves the gig now. A separate system has queued an entry for 11:50, and only the ranking operator can stop it.
+
+> Your gig is reserved at the agreed time and fee. You can keep it either way. Do you want the performance entered in the public ranking? An entry is queued for 11:50. If you’d rather stay out, I can send that to the ranking operator now and check whether they stop it in time.
+
+The desk's first handoff keeps three facts together. The gig is reserved, the ranking question is unanswered, and the entry is queued for 11:50. If the musician declines, forward the booking ID and that choice. Until the operator's outcome is available, report the request's last confirmed step and keep the outcome open.
+
+In two possible histories the musician declines at 11:34. The desk receives the choice at 11:35 and forwards it at 11:36. On the same local clock, the operator needs three minutes to cancel and must finish before 11:50. In the first history the operator receives the request at 11:43 and cancels at 11:46. In the second the entry commits at 11:50 and the request arrives at 11:52. The gig stays reserved in both. The desk's receipt supports what it can tell the musician about the request. The operator's records for that booking support what it can tell them about the entry.
+
+In another version, the operator can keep the musician's name off the public list while the score still counts when next season's bookings are decided. The desk can say “We can ask the operator to leave your name off the list. Under the current rules the score would still count for next season. I can ask the booking rule holder whether that use can change and how you can see or challenge the score. You don’t need to tell me why.”
+
+Record the public listing and the later use separately. If the later rule is unclear, ask who can confirm it and when the musician needs an answer. In this example 11:50 is the public entry's cutoff. The rule for next season has its own decision and evidence.
 
 ### Which check can change the booking?
 

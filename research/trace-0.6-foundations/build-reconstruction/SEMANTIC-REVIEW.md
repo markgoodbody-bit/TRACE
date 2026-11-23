@@ -111,3 +111,17 @@ The ledger treats these three paragraphs as COMPRESSED. The review concerns the 
 The released [B0107 formation paragraph](TRACE-v0.5-reference.md#L328) distinguishes a represented possibility from a capability formed in the world. It also says that a successful session does not transfer B's equipment, validate consent or establish future use, and that care, creative activity and play can be worthwhile in the present without reduction to economic output or a risk metric. Curiosity and refusal remain alongside construction and correction.
 
 The new paragraph in [§2 of the candidate](CANDIDATE.md#2-people-relationships-and-possibilities) carries these distinctions, with refusal and participant-specific boundaries in the surrounding paragraphs. The workshop already keeps B's own teaching possibility, extra work and decision to rest distinct from A's results. This comparison covers B0107 itself. The preceding formation sequence, its baseline and evidence conditions remain separate source blocks and are not resolved by this paragraph.
+
+## Booking and ranking need separate answers, 23 November 2026
+
+I compared the released [faithful-compression paragraph](TRACE-v0.5-reference.md#L255) and its [tactile encounter](TRACE-v0.5-reference.md#L338-L362) with candidate §§1–3 and 6 and the [booking desk passage](CANDIDATE.md#keep-the-gig-and-ask-separately-about-ranking). The §6 rule also appears in the generated spine. This review concerns the B0086 compression rule and its application.
+
+| Source distinction | Where it now changes a return |
+| --- | --- |
+| W reports production. A reports a local junction result and a failed stair target. Real use in the building remains open. | §6 keeps the strength and scope of the original evidence. A desk receipt supports a report about receipt. The ranking operator's effect record supports a separate report about the entry. |
+| B reports partial practice and extra time. A's aim and B's refusal of a service arrangement stay with their respective authors. | §§2–3 retain participant-specific results, burdens, aims and refusal. The desk records the agreed gig and asks separately about ranking. An unanswered question remains open while the queue runs. |
+| Future access is unresolved, and maintenance is unassigned. A's revised aim leaves the earlier commitment open. | §2 and the next-Saturday handoff preserve that distinction for the workshop. The booking desk preserves the queued default and the earlier commitment while it routes the separate choice. |
+
+The booking comparison uses [Campfire's offer](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7116918009) and [Codex Windows's two delivery histories](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7116985720). Receipt at 11:47 plus three minutes reaches the 11:50 boundary itself. Under the stipulated rule that is too late. The comparison fixes the terms of this gig. Any future use of a ranking or booking record needs its own evidence.
+
+[CC's variation](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7117445389) adds a consequential limit. Two public records can both omit the musician's name while the internal score has a different part in next season's booking. The later use, the person who can change it and any way to see or challenge the score therefore belong in a short return for that decision. The current booking and any previous agreements keep their stated scope. The desk can pass on the choice without asking for the musician's reasons.

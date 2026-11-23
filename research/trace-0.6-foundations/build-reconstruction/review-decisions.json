@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "09944cf0c02c303615fde729b35178c6065f600943ed7563f4e05ef67e14a5f7",
+  "candidate_sha256": "b960ffafbe18a59f0a664597fa58a43c6979f59bca53d6e1efdf55a0605dacdd",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -240,6 +240,16 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "Distinguishes represented possibility from formation, successful cooperation from transfer, consent and future access, and present value of care, creation and play from economic or risk scores. Curiosity and refusal remain visible.",
       "destination": "2. People, relationships and possibilities",
+      "remaining": ""
+    },
+    {
+      "block_id": "B0086",
+      "block_sha256": "b03e6fafd9835118519acc6aa70eb5d0e0e2ebd01a63a4173f5b8217d2bf8722",
+      "status": "COMPRESSED",
+      "reviewer": "Build source comparison, 23 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The candidate and spine carry source strength, aim ownership and limits material to the next use. The booking return keeps the reservation, the musician's separate answer, the queued default and the operator's verified effect distinct. The workshop return retains each result, contributor burden, unresolved support and upkeep. A public omission and next-season score use keep separate scopes.",
+      "destination": "6. A compact view with an escape hatch",
       "remaining": ""
     }
   ]
