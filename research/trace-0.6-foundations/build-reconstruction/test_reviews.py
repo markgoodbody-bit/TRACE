@@ -12,7 +12,7 @@ class ReviewAnchorTests(unittest.TestCase):
         self.candidate = build_views.CANDIDATE.read_bytes()
         self.exists = lambda name: (check_reviews.ROOT / name).is_file()
 
-    def test_current_reviews_are_anchored_and_only_partial(self):
+    def test_current_reviews_are_anchored(self):
         reviewed, total = check_reviews.validate(self.data, self.source, self.candidate, self.exists)
         self.assertGreater(reviewed, 0)
         self.assertGreater(total, reviewed)
@@ -44,6 +44,25 @@ class ReviewAnchorTests(unittest.TestCase):
     def test_duplicate_json_fields_are_rejected(self):
         with self.assertRaises(ValueError):
             json.loads('{"reviews": [1], "reviews": []}', object_pairs_hook=check_reviews.unique_object)
+
+    def test_resolved_review_requires_a_real_destination_and_no_gap(self):
+        data = copy.deepcopy(self.data)
+        row = data['reviews'][0]
+        row.update(status='COMPRESSED', remaining='',
+                   destination='6. A compact view with an escape hatch')
+        check_reviews.validate(data, self.source, self.candidate, self.exists)
+        for field, value in [('destination', 'Missing heading'), ('remaining', 'Still open'),
+                             ('status', 'UNVERIFIED')]:
+            with self.subTest(field=field):
+                invalid = copy.deepcopy(data)
+                invalid['reviews'][0][field] = value
+                with self.assertRaises(ValueError):
+                    check_reviews.validate(invalid, self.source, self.candidate, self.exists)
+        row['status'] = 'REFERENCE_ONLY'
+        with self.assertRaises(ValueError):
+            check_reviews.validate(data, self.source, self.candidate, self.exists)
+        row['destination'] = self.source.decode('utf-8').splitlines()[0].split(' ', 1)[1]
+        check_reviews.validate(data, self.source, self.candidate, self.exists)
 
     def test_duplicate_block_missing_gap_and_wrong_hash_are_rejected(self):
         for corruption in ('duplicate', 'gap', 'hash', 'evidence'):

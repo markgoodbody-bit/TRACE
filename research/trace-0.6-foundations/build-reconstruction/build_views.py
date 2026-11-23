@@ -90,8 +90,8 @@ def render_spine(candidate):
         excerpts.append(paragraphs[0] + "\n\n" + paragraphs[1] +
                         f"\n\n[Expand section {n}](CANDIDATE.md#{anchor})")
     return ("# TRACE 0.6 generated first-decision spine\n\n"
-            "Research candidate; all inherited source-unit dispositions remain UNRESOLVED. "
-            "This generated extract is not a release or proof of preservation.\n\n"
+            "Research candidate. The [review ledger](review-decisions.json) records "
+            "source comparisons. Unreviewed material remains UNRESOLVED.\n\n"
             "Use class: a first decision on an intervention affecting another participant. "
             "Expand the candidate and the released source when omitted detail changes "
             "authority, burden, consent, evidence, time or a constructive possibility. "
@@ -118,7 +118,7 @@ def expected():
     manifest = {"schema": 1, "source_git_commit": "d688c149afc15c90ab51afaf08fe303771e9de20",
                 "source_git_blob": "39d943b26dd355781f2d01986b229b4f1da6c793",
                 "source_sha256": SOURCE_SHA256, "candidate_sha256": digest(candidate.encode("utf-8")),
-                "scope": "Heading spans and blank-delimited blocks cover source lines; neither is a semantic audit. Every unit unresolved.",
+                "scope": "Mechanical source spans and proposed destinations. See review-decisions.json for authored semantic dispositions.",
                 "units": units, "review_blocks": blocks}
     return json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", render_spine(candidate)
 
@@ -132,7 +132,8 @@ def main():
         if MANIFEST.read_text(encoding="utf-8") != manifest or SPINE.read_text(encoding="utf-8") != spine:
             raise SystemExit("FAIL: derived views differ from source")
         m = json.loads(manifest)
-        print(f"PASS mechanical coverage: {len(m['units'])} headings, {len(m['review_blocks'])} blocks; semantic dispositions UNRESOLVED")
+        print(f"PASS mechanical coverage: {len(m['units'])} headings, {len(m['review_blocks'])} blocks; "
+              "semantic dispositions are in the review ledger")
     else:
         MANIFEST.write_text(manifest, encoding="utf-8")
         SPINE.write_text(spine, encoding="utf-8")
