@@ -213,7 +213,7 @@ The desk has a receipt. If it reaches the organiser at 17:04, A accepts the earl
 
 Today's checked attempt can be a useful step towards A's wish to work at home. Whether A can do that later and what support is available there remain open. A can choose whether to take a fresh offer or to leave, and a helper can decline. If A wants another session or a nearby qualified service, ask what is available, what it costs and when A needs the answer. Do not promise a route before its holder agrees. If none is confirmed, carry A's aim and the open question to the next decision with A's permission. Keep B's rest and C's access needs in their own accounts.
 
-The [complete scene and two fictional histories](GOOD-DAY-0.6.1-exp.3.md) show the reason A chooses to keep private. The booking extract carries the authorised time and the observed steps. A handoff for an actual session would carry the history that happened and only what A agreed to share.
+The [complete scene and two fictional histories](GOOD-DAY-0.6.1-exp.5.md) show the reason A chooses to keep private. The booking extract carries the authorised time and the observed steps. A handoff for an actual session would carry the history that happened and only what A agreed to share.
 
 ### Quiet access and reliance
 
