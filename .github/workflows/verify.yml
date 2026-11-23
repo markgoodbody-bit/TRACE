@@ -105,9 +105,15 @@ jobs:
 
           print("released v0.4.0 compact coherence and retained v0.3.0 schema checks passed")
           PY
+      - name: Check working reconstruction
+        working-directory: research/trace-0.6-foundations/build-reconstruction
+        run: |
+          python3 -B build_views.py --check
+          python3 -B check_reviews.py
+          python3 -B -m unittest discover -s . -p 'test_*.py' -v
       - name: Check whitespace integrity
         run: git diff --check
       - name: Claim boundary
         run: |
-          echo "Green verifies the v0.5.0 research specification identity and examples, historical v0.4.0 compact object, retained v0.3.0 donor, declared status markers, heading coherence, and the pinned normalized minimum-schema shape."
+          echo "Green verifies the v0.5.0 research specification identity and examples, historical v0.4.0 compact object, retained v0.3.0 donor, declared status markers, heading coherence, the pinned normalized minimum-schema shape, and working reconstruction source checks."
           echo "It does not establish semantic correctness, efficacy, validation, authority, permission or clearance."
