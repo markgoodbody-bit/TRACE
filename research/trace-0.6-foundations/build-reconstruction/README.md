@@ -24,7 +24,7 @@
 - [What next Saturday needs](CANDIDATE.md#what-next-saturday-needs) gives the replacement coordinator a short return. It carries the previous result, the scope of the loan and each condition for a new offer.
 - [TRACE 0.6.1-exp.1 — Why this future?](NAVIGATOR-0.6.1-exp.1.md) follows the navigator through a choice changed by the learner's reason. It includes a finite replay and a TRACE reading of Ren's *Hi Ren*.
 - [TRACE 0.6.1-exp.2 — Chalk Outlines](CHALK-OUTLINES-0.6.1-exp.2.md) follows the duet through several readings. [The quiet room](navigator-0.6.1-exp.2.html) gives a reader the workshop decision and lets them open each participant's account.
-- [TRACE 0.6.1-exp.2 — Chalk Outlines](CHALK-OUTLINES-0.6.1-exp.2.md) follows several readings of the duet and the distinctions they need. The [standalone navigator encounter](navigator-0.6.1-exp.2.html) lets a reader take one of two routes through a further workshop scene.
+- [TRACE 0.6.1-exp.3 — Some of the day left](GOOD-DAY-0.6.1-exp.3.md) follows the learner's correction through a booking deadline. [Enter the scene](navigator-0.6.1-exp.3.html) or read the [booking record](navigator-0.6.1-exp.3.json).
 
 Commands in this directory:
 
