@@ -23,6 +23,8 @@
 - [Which check can change the booking?](CANDIDATE.md#which-check-can-change-the-booking) compares conditional evidence and decisions under the joint law in scenario.example.json. In the replay, direct is the cupboard kit and fallback is the loan kit with both support conditions. Time counts minutes after 16:00. The later [handover](CANDIDATE.md#what-survives-a-handover) follows the shared session when its main kit route closes.
 - [What next Saturday needs](CANDIDATE.md#what-next-saturday-needs) gives the replacement coordinator a short return. It carries the previous result, the scope of the loan and each condition for a new offer.
 - [TRACE 0.6.1-exp.1 — Why this future?](NAVIGATOR-0.6.1-exp.1.md) follows the navigator through a choice changed by the learner's reason. It includes a finite replay and a TRACE reading of Ren's *Hi Ren*.
+- [TRACE 0.6.1-exp.2 — Chalk Outlines](CHALK-OUTLINES-0.6.1-exp.2.md) follows the duet through several readings. [The quiet room](navigator-0.6.1-exp.2.html) gives a reader the workshop decision and lets them open each participant's account.
+- [TRACE 0.6.1-exp.2 — Chalk Outlines](CHALK-OUTLINES-0.6.1-exp.2.md) follows several readings of the duet and the distinctions they need. The [standalone navigator encounter](navigator-0.6.1-exp.2.html) lets a reader take one of two routes through a further workshop scene.
 
 Commands in this directory:
 

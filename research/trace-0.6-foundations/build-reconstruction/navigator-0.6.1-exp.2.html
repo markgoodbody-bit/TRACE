@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The quiet room | TRACE 0.6.1-exp.2</title>
+  <style>
+    body { margin: 0; background: #1b211f; color: #f0eadd; font: 1.125rem/1.65 Georgia, serif; }
+    main { max-width: 38rem; margin: 0 auto; padding: clamp(2rem, 8vw, 5rem) 1.25rem; }
+    h1 { font-size: clamp(2.8rem, 10vw, 5rem); line-height: 1.05; margin: .2em 0 .55em; }
+    h2 { font-size: 1.4rem; margin: 2em 0 .5em; }
+    p { margin: 0 0 1em; }
+    .version { color: #bcc7b4; font: .875rem/1.5 system-ui, sans-serif; }
+    .question { border-inline-start: 3px solid #a9bda0; padding-inline-start: 1em; }
+    details { border-top: 1px solid #7b8a81; padding: .85em 0; }
+    summary { cursor: pointer; font-weight: 700; }
+    summary:focus-visible { outline: 2px solid #efca8b; outline-offset: 4px; }
+    details p { margin: .8em 0 .2em; padding-inline-start: 1.15em; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="version">TRACE 0.6.1-exp.2 · A fictional workshop encounter</p>
+  <h1>The quiet room</h1>
+  <p>A photograph comes in from the workshop. A learner is smiling and still holding the spanner. The booking record says they came and tried the adjustment unaided.</p>
+  <p class="question">The organiser will use your account to choose what to offer next Saturday. What would you send?</p>
+
+  <h2>Open another account</h2>
+  <details id="attendance">
+    <summary>The booking record</summary>
+    <p>One learner attended and made an unaided attempt. The organiser can count a completed booking. The choice of next session still depends on what the learner came to be able to do.</p>
+  </details>
+  <details id="learner">
+    <summary>The learner's answer</summary>
+    <p>“I could hear myself think in there. I got a turn with the tools. Next week I'll be on my own with my bike. I'd like to know what I can do then, and who to ask if I'm unsure.”</p>
+  </details>
+  <details id="helper">
+    <summary>The facilitator's answer</summary>
+    <p>The learner finished the attempt at minute 30. The facilitator can start the check at minute 40 and it takes ten minutes. At minute 40 the learner has to leave. The facilitator offered help today and has yet to decide about next Saturday.</p>
+  </details>
+  <details id="return">
+    <summary>Go back to your first answer</summary>
+    <p>Carry forward the learner's unaided attempt, the support the quiet room supplied, and the check that could not be completed in time. Ask what would make a further quiet slot usable and who could give the learner a way to get a qualified judgement next week. The learner can consider that offer when it exists.</p>
+    <p>If the check had finished today, the person heading home would still need a route they can use there. The offer to return and the capability at home have their own evidence.</p>
+  </details>
+</main>
+<script type="application/json" id="trace-encounter">
+{
+  "version": "0.6.1-exp.2",
+  "status": "fictional",
+  "scene": "The quiet room",
+  "clock": "elapsed workshop minutes",
+  "atoms": {
+    "photo": {"source": "workshop photograph", "signal": "learner smiling", "meaning": "unresolved"},
+    "booking": {"source": "booking record", "reports": ["attendance", "unaided attempt"]},
+    "learner": {"source": "learner", "reason": "quiet enough to think, a turn with tools, a usable way forward at home"},
+    "helper": {"source": "facilitator", "attempt_end": 30, "check_start": 40, "check_duration": 10, "future_commitment": "unresolved"},
+    "departure": {"source": "learner's travel window", "at": 40}
+  },
+  "return": {
+    "check_complete_by_departure": false,
+    "home_capability": "unresolved",
+    "candidate_offer": "quiet slot with timely willing qualified support and a usable way to obtain a judgement at home",
+    "next_offer_accepted": "unresolved"
+  }
+}
+</script>
+</body>
+</html>
