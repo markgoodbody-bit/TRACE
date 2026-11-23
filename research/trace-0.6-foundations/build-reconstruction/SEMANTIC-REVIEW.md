@@ -87,3 +87,9 @@ The [dispatch review](DISPATCH-REVIEW.md) records B0087 as a scoped compression 
 ## Choice and option history, 23 November 2026
 
 The [released aim-revision passage](https://github.com/markgoodbody-bit/TRACE/blob/d688c149afc15c90ab51afaf08fe303771e9de20/TRACE-v0.5.md#L394-L407) preserves the earlier commitment and distinguishes an attributed inference from the person's decision. The [new workshop comparison](CANDIDATE.md#a-choice-after-the-options-change) develops the option history behind the current choice. It adds a source for a changed route, a check of what was usable and a decision about whether to offer a route again. The finite example compares the two rankings under a declared unchanged-ranking assumption. The source comparison changes the application in §2 and §7. The earlier ledger dispositions retain their evidence and remaining conditions.
+
+## Timely inquiry and a handover, 23 November 2026
+
+The [booking example](CANDIDATE.md#which-check-can-change-the-booking) applies the released [witness and stop checks](TRACE-v0.5-reference.md#L268-L278) to a single decision. The review holds the world law fixed and varies the source, amount of information, time to effect and permitted routes. The score is a probability of one stipulated booking outcome. The prose carries the effort and possible loss of an option with their bearers and clocks. When an answer comes too late, the replay compares with the booking the coordinator could complete on the evidence already in hand.
+
+The [handover](CANDIDATE.md#what-survives-a-handover) applies the released [formation and sustainment passage](TRACE-v0.5-reference.md#L245-L247). One keeper's exit closes two nominally separate routes. A's independently demonstrated repair, the group's actual practice with a borrowed kit and the unresolved following Saturday support different claims. The earlier ledger dispositions retain their evidence and remaining conditions.

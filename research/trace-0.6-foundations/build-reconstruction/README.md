@@ -20,6 +20,7 @@
 - simulator.py and test_lab.py provide a small exact-arithmetic, finite shared-capacity and observation-policy example. The supplied law is explicit; early 79/100, late 18/25, insufficient capacity 18/25. These are stipulated outputs under the given exclusive-choice model, not predictions.
 - dispatch.py replays the fictional North Hall decision. It distinguishes the venue warning, steward's authority, request, acknowledgement, effect and dispatch readback. The duty line can be called at 10:22. A hold at 10:30 reaches the release boundary too late for the stipulated protection. See the [review and assumptions](DISPATCH-REVIEW.md).
 - [A choice after the options change](CANDIDATE.md#a-choice-after-the-options-change) extends the workshop return. The same present choice can follow a usable alternative or the withdrawal of a route. choice_history.py supplies the two-option calculation and its fixed-ranking assumption.
+- [Which check can change the booking?](CANDIDATE.md#which-check-can-change-the-booking) compares conditional evidence and decisions under the joint law in scenario.example.json. In the replay, direct is the cupboard kit and fallback is the loan kit with both support conditions. Time counts minutes after 16:00. The later [handover](CANDIDATE.md#what-survives-a-handover) follows the shared session when its main kit route closes.
 
 Commands in this directory:
 
@@ -30,6 +31,7 @@ python3 check_reviews.py
 python3 -m unittest discover -s . -p 'test_*.py' -v
 python3 simulator.py
 python3 simulator.py --input scenario.example.json
+python3 simulator.py --inquiry
 python3 dispatch.py
 python3 choice_history.py
 ```
@@ -39,7 +41,7 @@ This cloud environment passed the mechanical check and ten grouped unit tests. T
 ## Outstanding construction
 
 1. Continue from the 206-block inventory, splitting or joining blocks where their meanings require it. B0087 has a resolved compression at this pin. The remaining blocks still need reviewed dispositions or explicit gaps. Retain the source distinction between reproduced and reference-only donors.
-2. The finite simulator does not yet model general observations/histories, arbitrary multi-actor actions, general delivery schedules or evidence of actual deliveries, partial-contributor burden, controlled UNKNOWN in evidence, preference formation, valid normative authority, or complete consent/commitment records. It examines a declared joint law with one observation/action deadline and shared capacity, plus a separate stipulated delivery/backup event predicate. Codex's other PR71 dependence cases remain unimplemented here. Never use these passes as proof of complete acceptance.
+2. The finite simulator examines a declared joint law, one observation with conditional likelihoods, allowed booking routes and shared capacity, plus a separate stipulated delivery/backup event predicate. General observation histories, multi-actor actions, delivery schedules, actual delivery evidence, partial-contributor burden, controlled UNKNOWN, preference formation, normative authority and complete consent/commitment records remain open. See Codex's other PR71 dependence cases for further tests.
 3. The spine's mechanical selection has not been tested with cold readers, against ordinary prose, or under actual downstream decisions; materiality perturbation is a stated procedure, not an implemented checker.
 4. The co-evolving social probe is an invented example, not a formal complexity model or validation of the method's treatment of emergence. Read the relevant primary literature before attributing claims. The separate two-track brief at COM b1f0515cbc6920236e2ae34292f35d7b395620f0 and updated integration contract at TRACE f928f04e99e1b87c3c9b65fc9bcad6375bcda739 supersede earlier direction; this draft branch remains based on the earlier contract commit and does not itself contain that updated contract.
 5. This packet has not recovered the earlier reported simulator or 114-unit manifest. Retain a later recovered copy separately and compare rather than overwrite.

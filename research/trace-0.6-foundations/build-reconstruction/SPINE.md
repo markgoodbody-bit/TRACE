@@ -7,7 +7,7 @@ Use class: a first decision on an intervention affecting another participant. Ex
 ## Start with the next decision
 
 1. **Give the account a job.** Name what someone needs to understand, choose or make possible now, whose purposes might differ, and the period that matters. Let the inquiry change the question. If you are using Mechanical Ethics, state which commitments guide this use, such as making harm visible, keeping correction reachable or building useful capability without hiding its costs.
-2. **Follow what could change it.** Keep the source, status and scope of evidence the next step depends on. When something seems to have failed, ask what observation could distinguish the plausible causes before assigning a repair. Carry unresolved questions that could change the choice.
+2. **Follow what could change it.** Keep the source, status and scope of evidence the next step depends on. When something seems to have failed, ask what observation could distinguish the plausible causes before assigning a repair. For a choice on a clock, work back from the effect to the latest useful answer. Carry unresolved questions that could change the choice.
 3. **Find a usable next move.** Check who can take it, with what agreement, authority, time and resources. Help keep a willing alternative within reach while a material question is being resolved. For protection, follow the move through to its effect before the particular loss hardens.
 4. **Return what someone can use.** Carry what actually happened, any new ability or changed purpose, unresolved costs and what would require a fresh decision. End with a next act or handoff someone can take up.
 
