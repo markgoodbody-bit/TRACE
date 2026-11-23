@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "7058fbb8b4d74f6afdb620912f2c30a759451bc361dc09471e55649a65577046",
-  "note": "Partial same-team reviews. On 19 November the first-decision guide and source applications were checked against the existing partial findings. All source blocks remain unresolved overall. Anchor checks cannot verify meaning. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence.",
+  "candidate_sha256": "b5d052fb823c249098f710dd05c4af8364f6fcf3c6454ed19dc18215ece70b13",
+  "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
       "block_id": "B0036",
@@ -201,6 +201,36 @@
       "evidence": "DISPATCH-REVIEW.md",
       "finding": "Named use, premise changes, consequences and unresolved omissions are carried into the candidate and extracted in the spine. The dispatch replay exercises timed and evidenced changes.",
       "destination": "6. A compact view with an escape hatch"
+    },
+    {
+      "block_id": "B0132",
+      "block_sha256": "309ce5ad2a24518da53b6b3b9bb1235d4db128ee253d4824fb6331b2ea58d4a3",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire construction pass, 23 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Carries the source, identity, target, scope, dependent claims and disposition of a material limit. The worked handoff varies the scope of a bypass and the warrant for a resolution.",
+      "destination": "6. A compact view with an escape hatch",
+      "remaining": ""
+    },
+    {
+      "block_id": "B0133",
+      "block_sha256": "1950bef7e40476d7549b67842ab863962d345843cfd4cc3eb7ce2c1de2ae0187",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire construction pass, 23 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Carries the earlier aim and criterion at commitment, a dated new choice and the attribution of inference. The workshop keeps the earlier brake aim open alongside the puncture result.",
+      "destination": "2. People, relationships and possibilities",
+      "remaining": ""
+    },
+    {
+      "block_id": "B0134",
+      "block_sha256": "b04fb3e8ce3f17c5abb6d4ecda73f13c16d345d8580253e54eb1520aba73b1c7",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire construction pass, 23 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Carries changes, uncertainty, burdens, unresolved work and who can respond. A completion claim has its own target, scope, horizon and evidence under a stated criterion. The handoff preserves what was completed for one Saturday and what needs fresh evidence.",
+      "destination": "6. A compact view with an escape hatch",
+      "remaining": ""
     }
   ]
 }

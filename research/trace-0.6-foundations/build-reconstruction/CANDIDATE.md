@@ -7,7 +7,7 @@ Start with a situation and ask what might change, for whom, and what can be pres
 ## Start with the next decision
 
 1. **Give the account a job.** Name what someone needs to understand, choose or make possible now, whose purposes might differ, and the period that matters. Let the inquiry change the question. If you are using Mechanical Ethics, state which commitments guide this use, such as making harm visible, keeping correction reachable or building useful capability without hiding its costs.
-2. **Follow what could change it.** Keep the source, status and scope of evidence the next step depends on. When something seems to have failed, ask what observation could distinguish the plausible causes before assigning a repair. Carry unresolved questions that could change the choice.
+2. **Follow what could change it.** Keep the source, status and scope of evidence the next step depends on. When something seems to have failed, ask what observation could distinguish the plausible causes before assigning a repair. For a choice on a clock, work back from the effect to the latest useful answer. Carry unresolved questions that could change the choice.
 3. **Find a usable next move.** Check who can take it, with what agreement, authority, time and resources. Help keep a willing alternative within reach while a material question is being resolved. For protection, follow the move through to its effect before the particular loss hardens.
 4. **Return what someone can use.** Carry what actually happened, any new ability or changed purpose, unresolved costs and what would require a fresh decision. End with a next act or handoff someone can take up.
 
@@ -27,11 +27,13 @@ When uncertainty is an input to action or delay, identify the actor, policy or d
 
 ## 2. People, relationships and possibilities
 
-Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others.
+Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. Assess a result against the aim and criterion in the commitment it concerns. When someone states a new aim, preserve the earlier commitment and date the new choice. Keep any inference about their aim attributed to the observer. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change).
 
 Supporters are not only resources for a beneficiary: they can form capabilities and futures of their own, including through cooperation, care, learning and maintenance. A possible route in a map, material access to it, chosen participation and sustainable support are different. One participant's benefit does not establish another's consent or obligation.
 
 When people make something together, preserve their different aims, offers, counterproposals, substitutions and refusals. An attempt can produce different results for each person. A claimed usable result needs a named participant, conditions, evidence and relevant horizon. If an arrangement is meant to continue, record who keeps it usable, what triggers upkeep, who carries the work and cost, how it is renewed and how it ends. Mark any terms still unassigned. A one-off contribution can be worthwhile on its own.
+
+When a contribution ends, follow the routes people can still use. Look for a common person, permission or resource in apparently separate substitutes. [Follow a handover through the workshop](CANDIDATE.md#what-survives-a-handover).
 
 People can use a common object while pursuing different aims. A permitted guide or a spare part can be enough for someone to practise a demonstration. Record the resources and permissions that route needs and whose aim it serves.
 
@@ -63,6 +65,8 @@ For each intervention, name who may act, what may change, affected scopes, rever
 
 In the stipulated early-versus-late disclosure example in the accompanying simulator, the carrier controls reveal timing. If that choice is the only changed condition, it changes the recipient's best modelled outcome from 7/8 to 3/4, a difference of 1/8. This is attributable to the specified reveal-timing choice in the toy model, not proof of an actual person's motivation or real-world effect. If supported evidence also shows the carrier benefits from delay while the recipient bears its costs, record that possible contamination and its source qualification; control of a clock alone is not enough.
 
+To choose a check, name the claim it would test, what it adds to the sources already in hand, and what someone could do after each answer. Include the time to understand the answer, choose and put the move in effect. Carry who would do the checking and what would be displaced by the wait. [Compare four checks at the workshop](CANDIDATE.md#which-check-can-change-the-booking).
+
 **A practical record for evolving constraints.** Record the particular constraint and its source, who can change or contest it, its role in enabling or limiting different participants, estimated effort and time to change with uncertainty, the relevant planning horizon, potential high-impact changes and what can be observed. Some constraints may support a repeatable activity; others may not. Mark an assessment as disputed or unknown where appropriate. This draws on [Snowden's estuarine mapping, outline steps 1–7](https://thecynefin.co/estuarine-mapping/), which places constraints by change effort and time and suggests monitored portfolios of small interventions. TRACE's addition here is a proposed linkage to affected participants, authority, usable contest and correction; equivalence or added benefit has not been demonstrated. A small trial is not automatically safe for the person bearing its cost.
 
 [Juarrero, *Context Changes Everything*, chapter 6](https://doi.org/10.7551/mitpress/14630.003.0009), distinguishes relations that bring a coordinated pattern into being from the relations through which it persists and shapes what participants can do next. In the workshop, a quiet slot and agreed help let people try the work together. A regular session depends on people keeping arrangements for rooms, opening and equipment in working order. Once established, that routine shapes who can plan around a later session. Check which arrangements the people involved can maintain before inviting continuing reliance. Keep the costs and the possibility of revising or leaving the arrangement visible.
@@ -85,9 +89,11 @@ An event may be unchangeable while its effects can still change. Assess continui
 
 ## 6. A compact view with an escape hatch
 
-One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up.
+One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up. [Follow the next workshop handoff](CANDIDATE.md#what-next-saturday-needs).
 
-When a closer inspection is folded back into an account, carry any material limit with its target, scope, source and relevant repair route. Similar wording can hide different causes, so merging the findings must not silently merge away their limits. Reaching a depth or time budget explains why inspection stopped; it does not establish that the account is sufficient for the decision.
+When a closer inspection is folded back into an account, carry each material limit with its identity, source, target, scope, dependent claims, current status and any known repair route. A substitute can make one route usable while the original limit stays in place. Treat a new report as a proposed change and check its warrant and scope before recording resolution. Keep similarly worded limits distinct when their causes or effects differ. Record a depth or time budget as the reason for stopping, and establish sufficiency separately for the intended decision.
+
+A return carries the result, remaining uncertainty, burdens and unassigned work to the next reader. Name who can answer, challenge or decline. For each claim of completion, state the target, scope, horizon and what evidence counts under the applicable criterion. A participant's report can meet a declared criterion about their experience. Safety, continued access and another participant's result each need evidence for their own claim. Record whose criterion applies and where it comes from.
 
 ### Compatibility floor: explicit review meanings
 
@@ -150,6 +156,54 @@ Consider two possible follow-ups. Keep the quiet room and the 18:00–19:00 slot
 B can keep the evening for rest and choose another day to practise teaching. If B can use a spare wheel and a guide already cleared for that purpose, they can practise without using A's account or asking for a second commitment. That route serves B's aim. Carry A's unfinished earlier repair in the record.
 
 If the group wants regular sessions, ask who will check the kit when it comes back or someone reports damage, who carries repair costs, and how participants will renew the arrangement. Agree who will return the kit and close the booking when it ends, and keep any guide or learning the participants have permission to carry forward. Keep the plan to one session until the continuing work has an owner. Record any continuing duties separately with their source and beneficiary.
+
+### A choice after the options change
+
+In two possible follow-ups to the first workshop, A chooses to practise puncture repair. A's earlier aim of adjusting both brakes independently stays in the record with the work they did and the work still open.
+
+| History at the time A chooses | What the coordinator can use |
+| --- | --- |
+| A can use either the supervised brake slot or the puncture session. After trying a puncture repair, A says they want more practice at it. | Plan the puncture session A chose. Keep A's account of the new aim and the offered routes. |
+| The coordinator withdrew the brake slot when its qualified helper became unavailable. The booking return records only A's puncture choice. | Plan the puncture session A chose. Find out whether A would welcome a usable brake option at a later session. The withdrawn slot belongs in the record used to plan future sessions. |
+
+Keep three things together in the handoff. Record what A wanted before this decision and any commitments attached to it. Record who changed an option, when, and what people could actually use at the point of choice. Then record A's present decision and any reasons A gives in their own terms. Leave the reasons open where A has given none. A record of a route change can establish the loss of that route while leaving its influence on A's aims open.
+
+If the coordinator uses booking counts to plan the next month, carry the options that were available alongside the counts. A withdrawn slot could otherwise keep getting excluded because nobody chose it. Ask A if they want to hear about a brake option again. An offer needs a willing, qualified helper, a usable time and kit. Record who would provide them and what it asks of them. B's earlier offer stays with the earlier session. A can choose puncture repair again, try the brake session or decline both. If A chooses a further session, record what it adds and which parts of the earlier work are still open.
+
+The [released aim-revision view](TRACE-v0.5-reference.md#L394-L407) supplies the earlier and later account of the aim. The [finite choice example](choice_history.py) shows how two stipulated rankings can yield the same choice when the brake route is unavailable. Its forecast holds the ranking fixed for that comparison. An actual offer can change what A learns or wants, so carry A's next account forward when it arrives.
+
+### Which check can change the booking?
+
+A and C want to practise puncture repair in the agreed quiet room. The coordinator can reserve either the kit in the group's cupboard or the offered loan kit. The rota has space for one reservation and locks at 16:10. Allow two minutes to interpret an answer and put the booking in effect. The loan route needs an available kit and timely delivery by the agreed collector. Stipulate a one-in-two chance that the cupboard route works. The chance the loan works is three in four in either state of the cupboard. Booking the loan on the current evidence is the comparison.
+
+| What the coordinator checks | What the answer can change for this booking |
+| --- | --- |
+| A second screen shows a known copy of the listing. | It supplies the same reading of the cupboard route. The loan remains the better-supported booking in the model. |
+| A fresh partial check arrives at 16:04. In the example its yes or no has two-in-three accuracy in either state. | It shifts the chance the cupboard route works to two in three or one in three. Either answer leaves the loan better supported. |
+| A full check arrives at 16:07. Its answer establishes whether the cupboard route will work under the stipulated conditions. | The coordinator can complete the booking at 16:09. Choose the cupboard on yes and the loan on no. Under the model, that policy raises the success chance from 3/4 to 7/8. |
+| The same full check arrives at 16:08. | Completing the booking at 16:10 would meet the lock itself. Use the current evidence to book before then. The answer can inform the next session. |
+
+The calculation assumes the checks leave the situation unchanged. In the actual handoff, name who can check the cupboard, who can book after each answer and who bears the time and work. If the check would divert the room opener, include the effect on access before choosing it. If the coordinator can book only the cupboard, the full answer still changes their knowledge while the loan remains outside their authority. An authorised colleague may be able to preserve it. A report with uncertain ancestry needs its own assessment. The [finite replay](simulator.py) lays out the declared probabilities and the strict booking boundary.
+
+### What survives a handover?
+
+On a later date the group has run two quiet practice sessions. At the second, A set up the practice wheel and repaired a puncture independently. C used the quiet room and demonstrated a technique. The kit keeper now leaves the role. The group wants to know what it can offer for the next two Saturdays. Two volunteers can set up, and both depend on the departing keeper to release the cupboard kit.
+
+With that access closed, A still has the demonstrated skill and can use their own puncture kit at home. The two volunteers' offers remain useful if equipment can reach them. C's place in the quiet session depends on finding another usable kit route. Keep the individual route, the shared session and the ways to organise one in view.
+
+The coordinator makes a one-session arrangement with a neighbouring workshop. Its keeper can release a separate kit. A willing volunteer collects and returns it in a half-hour round trip at the group's agreed expense. The quiet room keeps its agreed opener. A and C accept the offer and both practise on that Saturday. The session gives the group evidence of organising practice with a different kit and keeper under those terms. The volunteer checks the returned tools and hands them back that evening. The loan ends there. Before confirming the following Saturday, the coordinator takes up the next access decision with the room and kit holders, and gives participants time to choose another session if needed.
+
+### What next Saturday needs
+
+A replacement coordinator can carry forward the participants' reports of taking part, the voluntary collection and its cost, and the lender's record of the kit returned. The author has already cleared the general practice guide for use by incoming organisers. The coordinator saw A repair a puncture independently on the practice wheel. A's earlier aim of adjusting both brakes independently is still open.
+
+| Limit and where it comes from | What it affects at the next handoff |
+| --- | --- |
+| **Cupboard release.** The original keeper's term ended. | The cupboard route is closed. The borrowed kit supplied a separate route for the completed session. |
+| **Loan and collection.** The lender and collector agreed to one date. | The next Saturday needs kit for that date and a named person willing to collect and return it. Carry the earlier expense as a cost already incurred. |
+| **Room and participation.** The room keeper, opener, A and C agreed to the last session. | Confirm quiet access and an opener for the next date. Give A and C a specific offer and time to decide, and check when they need an answer to keep another option open. |
+
+A message saying “kit sorted” is a proposed update. Ask which kit, who can release it, for which date, and who can get it to the room. A confirmed second loan can give the next session a usable kit route with a willing collector. The cupboard limit stays with the cupboard. If the authorised keeper confirms release for the new date and a willing volunteer can deliver it, record the cupboard route as supported for that slot. Check the delivery on the day. The room and participants each keep their own decisions. Give people an update while they can still act on it. [Earlier TRACE account of returning limits and outcomes](TRACE-v0.5-reference.md#L405).
 
 ### Quiet access and reliance
 
