@@ -22,6 +22,7 @@
 - [A choice after the options change](CANDIDATE.md#a-choice-after-the-options-change) extends the workshop return. The same present choice can follow a usable alternative or the withdrawal of a route. choice_history.py supplies the two-option calculation and its fixed-ranking assumption.
 - [Which check can change the booking?](CANDIDATE.md#which-check-can-change-the-booking) compares conditional evidence and decisions under the joint law in scenario.example.json. In the replay, direct is the cupboard kit and fallback is the loan kit with both support conditions. Time counts minutes after 16:00. The later [handover](CANDIDATE.md#what-survives-a-handover) follows the shared session when its main kit route closes.
 - [What next Saturday needs](CANDIDATE.md#what-next-saturday-needs) gives the replacement coordinator a short return. It carries the previous result, the scope of the loan and each condition for a new offer.
+- [TRACE 0.6.1-exp.1 — Why this future?](NAVIGATOR-0.6.1-exp.1.md) follows the navigator through a choice changed by the learner's reason. It includes a finite replay and a TRACE reading of Ren's *Hi Ren*.
 
 Commands in this directory:
 
@@ -35,6 +36,7 @@ python3 simulator.py --input scenario.example.json
 python3 simulator.py --inquiry
 python3 dispatch.py
 python3 choice_history.py
+python3 navigator_reasons.py
 ```
 
 This cloud environment passed the mechanical check and ten grouped unit tests. The example explicitly defines observation time and a deadline where observation is available before the choice at equality. It returns 7/8 with early observation; the same law returns 3/4 after the fallback deadline. A separate stipulated event-time test distinguishes acknowledgement, delivery, retained or cancelled backup, inclusive due time and strict hardening boundary. After Codex's independent review on COM954 c6944069677, the ambiguous `backup_cancelled` flag was renamed `backup_cancelled_before_delivery`; the older keyword is rejected. This is a static before-delivery assumption, not a representation of cancellation occurring after delivery. These are specified calculations, not evidence that a real actor controls or exploits the clock. The original fetched source initially acquired an extra newline; this was discovered by a Git-blob mismatch and corrected before generating the packet. Git blob then matched the released 0.5 source.
