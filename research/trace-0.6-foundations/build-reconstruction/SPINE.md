@@ -21,7 +21,7 @@ An entity, group or institution encounters a changing world through bounded obse
 
 ## 2. People, relationships and possibilities
 
-Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change).
+Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. Assess a result against the aim and criterion in the commitment it concerns. When someone states a new aim, preserve the earlier commitment and date the new choice. Keep any inference about their aim attributed to the observer. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change).
 
 [Expand section 2](CANDIDATE.md#2-people-relationships-and-possibilities)
 
@@ -45,7 +45,7 @@ Track the relevant event ordering. A review after a route closes may improve the
 
 ## 6. A compact view with an escape hatch
 
-One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up.
+One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up. [Follow the next workshop handoff](CANDIDATE.md#what-next-saturday-needs).
 
 [Expand section 6](CANDIDATE.md#6-a-compact-view-with-an-escape-hatch)
 

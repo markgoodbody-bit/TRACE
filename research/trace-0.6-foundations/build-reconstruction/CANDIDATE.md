@@ -27,7 +27,7 @@ When uncertainty is an input to action or delay, identify the actor, policy or d
 
 ## 2. People, relationships and possibilities
 
-Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. An aim revision does not retroactively make an earlier failure a success. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change).
+Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. Assess a result against the aim and criterion in the commitment it concerns. When someone states a new aim, preserve the earlier commitment and date the new choice. Keep any inference about their aim attributed to the observer. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change).
 
 Supporters are not only resources for a beneficiary: they can form capabilities and futures of their own, including through cooperation, care, learning and maintenance. A possible route in a map, material access to it, chosen participation and sustainable support are different. One participant's benefit does not establish another's consent or obligation.
 
@@ -89,9 +89,11 @@ An event may be unchangeable while its effects can still change. Assess continui
 
 ## 6. A compact view with an escape hatch
 
-One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up.
+One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up. [Follow the next workshop handoff](CANDIDATE.md#what-next-saturday-needs).
 
-When a closer inspection is folded back into an account, carry any material limit with its target, scope, source and relevant repair route. Similar wording can hide different causes, so merging the findings must not silently merge away their limits. Reaching a depth or time budget explains why inspection stopped; it does not establish that the account is sufficient for the decision.
+When a closer inspection is folded back into an account, carry each material limit with its identity, source, target, scope, dependent claims, current status and any known repair route. A substitute can make one route usable while the original limit stays in place. Treat a new report as a proposed change and check its warrant and scope before recording resolution. Keep similarly worded limits distinct when their causes or effects differ. Record a depth or time budget as the reason for stopping, and establish sufficiency separately for the intended decision.
+
+A return carries the result, remaining uncertainty, burdens and unassigned work to the next reader. Name who can answer, challenge or decline. For each claim of completion, state the target, scope, horizon and what evidence counts under the applicable criterion. A participant's report can meet a declared criterion about their experience. Safety, continued access and another participant's result each need evidence for their own claim. Record whose criterion applies and where it comes from.
 
 ### Compatibility floor: explicit review meanings
 
@@ -190,6 +192,18 @@ On a later date the group has run two quiet practice sessions. At the second, A 
 With that access closed, A still has the demonstrated skill and can use their own puncture kit at home. The two volunteers' offers remain useful if equipment can reach them. C's place in the quiet session depends on finding another usable kit route. Keep the individual route, the shared session and the ways to organise one in view.
 
 The coordinator makes a one-session arrangement with a neighbouring workshop. Its keeper can release a separate kit. A willing volunteer collects and returns it in a half-hour round trip at the group's agreed expense. The quiet room keeps its agreed opener. A and C accept the offer and both practise on that Saturday. The session gives the group evidence of organising practice with a different kit and keeper under those terms. The volunteer checks the returned tools and hands them back that evening. The loan ends there. Before confirming the following Saturday, the coordinator takes up the next access decision with the room and kit holders, and gives participants time to choose another session if needed.
+
+### What next Saturday needs
+
+A replacement coordinator can carry forward the participants' reports of taking part, the voluntary collection and its cost, and the lender's record of the kit returned. The author has already cleared the general practice guide for use by incoming organisers. The coordinator saw A repair a puncture independently on the practice wheel. A's earlier aim of adjusting both brakes independently is still open.
+
+| Limit and where it comes from | What it affects at the next handoff |
+| --- | --- |
+| **Cupboard release.** The original keeper's term ended. | The cupboard route is closed. The borrowed kit supplied a separate route for the completed session. |
+| **Loan and collection.** The lender and collector agreed to one date. | The next Saturday needs kit for that date and a named person willing to collect and return it. Carry the earlier expense as a cost already incurred. |
+| **Room and participation.** The room keeper, opener, A and C agreed to the last session. | Confirm quiet access and an opener for the next date. Give A and C a specific offer and time to decide, and check when they need an answer to keep another option open. |
+
+A message saying “kit sorted” is a proposed update. Ask which kit, who can release it, for which date, and who can get it to the room. A confirmed second loan can give the next session a usable kit route with a willing collector. The cupboard limit stays with the cupboard. If the authorised keeper confirms release for the new date and a willing volunteer can deliver it, record the cupboard route as supported for that slot. Check the delivery on the day. The room and participants each keep their own decisions. Give people an update while they can still act on it. [Earlier TRACE account of returning limits and outcomes](TRACE-v0.5-reference.md#L405).
 
 ### Quiet access and reliance
 

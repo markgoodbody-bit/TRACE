@@ -93,3 +93,15 @@ The [released aim-revision passage](https://github.com/markgoodbody-bit/TRACE/bl
 The [booking example](CANDIDATE.md#which-check-can-change-the-booking) applies the released [witness and stop checks](TRACE-v0.5-reference.md#L268-L278) to a single decision. The review holds the world law fixed and varies the source, amount of information, time to effect and permitted routes. The score is a probability of one stipulated booking outcome. The prose carries the effort and possible loss of an option with their bearers and clocks. When an answer comes too late, the replay compares with the booking the coordinator could complete on the evidence already in hand.
 
 The [handover](CANDIDATE.md#what-survives-a-handover) applies the released [formation and sustainment passage](TRACE-v0.5-reference.md#L245-L247). One keeper's exit closes two nominally separate routes. A's independently demonstrated repair, the group's actual practice with a borrowed kit and the unresolved following Saturday support different claims. The earlier ledger dispositions retain their evidence and remaining conditions.
+
+## Returning a result and its limits, 23 November 2026
+
+The [next Saturday handoff](CANDIDATE.md#what-next-saturday-needs) supports one decision about whether to confirm another quiet session. The full account and the spine give a route to the same example. The following comparisons concern three paragraphs of the released linked view.
+
+| Released paragraph | What the reconstruction carries | Change checked in the workshop |
+| --- | --- | --- |
+| [B0132, material limits](TRACE-v0.5-reference.md#L405) | §6 carries identity, origin, target and scope, dependents and disposition when a part is folded back in. It keeps a scoped bypass distinct from supported resolution. | Renewing the loan supplies a kit for the named date if its delivery is arranged. The cupboard stays closed until applicable evidence changes its own status. A general message that the kit is sorted is a proposed update. |
+| [B0133, aim revision](TRACE-v0.5-reference.md#L407) | §2 retains the aim and criterion applicable to a commitment, the actor's subsequent dated choice and the attribution of another person's inference. | A's successful puncture repair gives evidence for that practice exercise. Changing the next aim leaves the earlier independent-brakes result open. |
+| [B0134, return and completion](TRACE-v0.5-reference.md#L409) | §6 carries changes, uncertainty, burdens, unassigned work and who can respond. It scopes each completion claim to its target, horizon and evidence contract. | C's report and attendance concern Saturday's use. The returned kit gives evidence of ending that loan. The next booking, continued access and the participants' later choices have their own required evidence. |
+
+The ledger treats these three paragraphs as COMPRESSED. The review concerns the named use and the cited parts of v0.5. The adjoining symbolic fixture and the detailed recursive merge contract remain at their source.
