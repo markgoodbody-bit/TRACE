@@ -11,6 +11,12 @@ Start with a situation and ask what might change, for whom, and what can be pres
 3. **Find a usable next move.** Check who can take it, with what agreement, authority, time and resources. Help keep a willing alternative within reach while a material question is being resolved. For protection, follow the move through to its effect before the particular loss hardens.
 4. **Return what someone can use.** Carry what actually happened, any new ability or changed purpose, unresolved costs and what would require a fresh decision. End with a next act or handoff someone can take up.
 
+In the [bicycle workshop](CANDIDATE.md#what-next-saturday-needs), A came to learn repairs and C needs a quiet place to take part. After several sessions, the next organiser gets this handover.
+
+> The organiser saw A mend a puncture on the practice wheel without help. A has a kit at home. How A manages both brakes there is still unknown. Last Saturday’s borrowed tools were returned. A new session needs a keeper to release a kit, a willing volunteer to collect and return it, and someone to open a quiet room C can use. A and C each need time to decide whether to come while other plans are still possible.
+
+Before naming A on a notice, ask whether they want to teach and whether they want their name used. Ask C directly, while another plan is still possible, whether they want to come.
+
 ## 1. Begin with a living situation
 
 An entity, group or institution encounters a changing world through bounded observation. The world, signals, accounts, maps and retained records are different. A boundary and a participant list are provisional, not declarations of moral standing. Other entities have perspectives and possibilities of their own. Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost, before choosing a verdict. Keep what a source asserts separate from its warrant, our access to it and anyone's decision. An assertion can have a definite value while its evidence is unavailable or disputed. A missing answer is different again; silence alone establishes neither withholding nor refusal. Lack of a recorded route is not proof that no route exists.

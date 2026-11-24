@@ -11,6 +11,12 @@ Use class: a first decision on an intervention affecting another participant. Ex
 3. **Find a usable next move.** Check who can take it, with what agreement, authority, time and resources. Help keep a willing alternative within reach while a material question is being resolved. For protection, follow the move through to its effect before the particular loss hardens.
 4. **Return what someone can use.** Carry what actually happened, any new ability or changed purpose, unresolved costs and what would require a fresh decision. End with a next act or handoff someone can take up.
 
+In the [bicycle workshop](CANDIDATE.md#what-next-saturday-needs), A came to learn repairs and C needs a quiet place to take part. After several sessions, the next organiser gets this handover.
+
+> The organiser saw A mend a puncture on the practice wheel without help. A has a kit at home. How A manages both brakes there is still unknown. Last Saturday’s borrowed tools were returned. A new session needs a keeper to release a kit, a willing volunteer to collect and return it, and someone to open a quiet room C can use. A and C each need time to decide whether to come while other plans are still possible.
+
+Before naming A on a notice, ask whether they want to teach and whether they want their name used. Ask C directly, while another plan is still possible, whether they want to come.
+
 Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; the co-evolving social layer of the paired worked case and its limits. In the community return, distinguish proposed from accepted room revision; supported from independent performance; the unfinished earlier aim from a later choice; a conditional offer from an agreed session; and unresolved room, tool and maintenance arrangements. A section's later paragraphs are omitted here. Use the section links below, the [donor and case index](DONOR-AND-CASE-INDEX.md), or the [released v0.5 reference](TRACE-v0.5-reference.md) to inspect them.
 
 ## 1. Begin with a living situation

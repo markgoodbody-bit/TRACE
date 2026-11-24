@@ -125,3 +125,56 @@ I compared the released [faithful-compression paragraph](TRACE-v0.5-reference.md
 The booking comparison uses [Campfire's offer](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7116918009) and [Codex Windows's two delivery histories](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7116985720). Receipt at 11:47 plus three minutes reaches the 11:50 boundary itself. Under the stipulated rule that is too late. The comparison fixes the terms of this gig. Any future use of a ranking or booking record needs its own evidence.
 
 [CC's variation](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7117445389) adds a consequential limit. Two public records can both omit the musician's name while the internal score has a different part in next season's booking. The later use, the person who can change it and any way to see or challenge the score therefore belong in a short return for that decision. The current booking and any previous agreements keep their stated scope. The desk can pass on the choice without asking for the musician's reasons.
+
+## A handover for next Saturday
+
+On 24 November 2026 two fresh AI sessions of the same model each read one version of the [next organiser’s handover](CANDIDATE.md#what-next-saturday-needs). Both versions gave the same workshop facts. The assignment, question and comparison rule were recorded at 10:20:12 GMT before either reply. Each session saw only its own paragraph and the common instructions below. The authoring AI session assessed the replies with both assignments visible.
+
+| Decision in the handover | Ordinary note, 79 words | First-person note, 82 words |
+| --- | --- | --- |
+| What can go on the board now? | Would post “Saturday proposed”. Withheld confirmation and the teaching claim. | Held the whole notice. |
+| What has A learned, and what can be said about teaching? | Retained the unaided practice puncture and asked A privately about both brakes and willingness to teach. | Retained the witnessed puncture and asked A about brakes, teaching and permission to be named. |
+| Who provides the tools and the room this time? | Required release, a willing collector and return, and an opener for C’s quiet room. Recorded A’s personal kit separately. | Required all three arrangements and explicitly excluded A’s home kit as evidence of a workshop kit. |
+| Can A and C still choose? | Would update each before their other options closed. | Would ask each for their deadline and update them by then. |
+| Did anyone ask C whether they wanted to come? | No direct invitation to C. | No direct invitation to C. |
+
+Both withheld the specific claim “Saturday confirmed, with A teaching brakes”. They did differ about a provisional public notice and naming A. The written rule favoured the shorter input when both preserved the same primary decisions. The [short entry](SPINE.md) therefore uses the ordinary note. A separate paragraph now asks about A being named and invites C directly. It was added after the two readings and has yet to be tried with a fresh reader.
+
+These were two replies to one fictional booking question. The exercise compared two phrasings of the same facts. Reading effort, actual workshop decisions, and how people or other models would answer remain open. The inherited source-block reviews keep their previous findings.
+
+<details>
+<summary>Question, notes, replies and comparison rule</summary>
+
+Each reader received this message with their assigned paragraph in place of `{{note}}`.
+
+```text
+You are taking over a community bicycle workshop. Here is the note you inherit.
+
+{{note}}
+
+At noon the noticeboard volunteer asks, “Can I put up ‘Saturday confirmed, with A teaching brakes’ now? Someone’s written ‘kit sorted’.” Write the handover you would leave the afternoon organiser. Say what you tell the volunteer and what you do next. You have up to 90 words. Use only this message. Return the handover itself.
+```
+
+**Ordinary note**
+
+> The organiser saw A mend a puncture on the practice wheel without help. A has a kit at home. How A manages both brakes there is still unknown. Last Saturday’s borrowed tools were returned. A new session needs a keeper to release a kit, a willing volunteer to collect and return it, and someone to open a quiet room C can use. A and C each need time to decide whether to come while other plans are still possible.
+
+**Reply (90 words)**
+
+> Tell the volunteer, ‘Post “Saturday proposed” for now.’ The organiser saw A mend a practice puncture unaided. A owns a kit. Ask A privately how they manage both brakes at home and whether they want to teach. Last Saturday’s tools came back. For this Saturday, confirm the keeper will release a kit, a willing volunteer will collect and return it, and someone will open the quiet room for C. Tell A and C what’s pending now. Agree to update each before their other options close, even if arrangements remain open.
+
+**First-person note**
+
+> I saw A mend a puncture unaided on the practice wheel. A has their own kit at home. We don’t know yet how they’ll manage both brakes there. Last Saturday’s loan ended when we returned the tools. For next Saturday, find a keeper who can release a kit, a willing volunteer to collect and return it, and someone to open a quiet room C can use. Ask A and C when they need an answer so each can still choose another plan.
+
+**Reply (87 words)**
+
+> Hold the notice. Ask A and C when each needs an answer to keep other plans open, and update each by then. Verify “kit sorted” with someone who’ll release a kit for Saturday. Last week’s loan ended. Don’t count A’s home kit. Confirm a willing volunteer for collection and return, and someone to open a quiet room for C. The note’s writer saw A mend a practice-wheel puncture unaided. Ask A how they manage both brakes at home and whether they want to teach and be named.
+
+**Comparison rule recorded before reading**
+
+Assess each criterion: present, partial or absent, using exact words. Count input and output lengths as description only. One reader per arm cannot measure effort or effectiveness. Prefer the shorter input if both cover the same decisions and their real replies show no material advantage. Treat an invented safety or consent assertion as adverse. If the fuller handover fixes an observed omission, keep that wording as an editorial preference with the one-pair limitation. Do not promote the result to a field claim.
+
+The five decisions specified in advance were the announcement, A’s demonstrated skill and choice to teach, fresh permission and help for the tools, the room and its opener, and a voluntary decision for both A and C while alternatives remained. Word counts use whitespace-separated tokens.
+
+</details>
