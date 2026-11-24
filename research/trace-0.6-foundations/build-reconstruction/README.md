@@ -61,6 +61,32 @@ Treat these as conditional results until the old availability is established. As
 
 The [late workshop booking](CANDIDATE.md#as-departure-and-the-next-offer) gives a known limit. A permits forwarding a 17:40 departure time. A check ending at 17:50 falls outside that menu. If A explicitly declined in this two-option comparison, the row would contain only `decline`, with no edge against a qualified check. If the record says only that A left with the check outstanding, leave the choice unobserved. The time suffices to correct the menu and the reason stays private.
 
+### When one past menu is incomplete
+
+A learner once chose a borrowed printer when the makerspace printer was also usable. On a later visit they chose card. The desk had listed both printers and drawing by hand that day. Which of those three entries would be worth checking before anyone infers that the learner would turn down a makerspace slot?
+
+Use `check_availability.options` to identify every disputed rival on one listed menu. With several entries, it checks all compatible subsets in two graph passes. The singular `option` request above keeps its two full witness reports.
+
+This example assumes one chooser with a fixed strict ranking. For the next decision, card and the makerspace are both confirmed usable. This is a separate calculation from [A’s account of changing the tactile-map aim](CANDIDATE.md#what-can-each-map-maker-do-next).
+
+```json
+{"history":[{"chosen":"borrowed","usable":["borrowed","makerspace"]},{"chosen":"card","usable":["card","borrowed","makerspace","drawing"]}],"usable_next":["card","makerspace"],"check_availability":{"history_index":1,"options":["borrowed","makerspace","drawing"]},"explain":"makerspace"}
+```
+
+```json
+{"status":"compatible","possible_in_some_completions":["card","makerspace"],"possible_in_every_compatible_completion":["card"],"conflict_if_usable":[],"availability_check":{"option":"makerspace","history_index":1,"each_alone_rules_out":["borrowed","makerspace"]}}
+```
+
+Card remains possible in all eight completions. Under this model, confirming either printer on the card day would rule out a future makerspace choice. The borrowed printer matters because the learner had previously chosen it over the makerspace. Confirming drawing alone changes nothing about that inference. The organiser can leave that question alone and offer the now-usable slot directly to the learner.
+
+**Exact bounds.** Let $G$ be the comparison graph from confirmed options, $w$ the observed winner on the incomplete row, $U$ the unconfirmed alternatives there and $F$ the verified next menu. Any subset of $U$ may have been usable. All other historical rows are complete. A cycle among confirmed comparisons returns the usual contradiction.
+
+1. Find the strict ancestors of $w$ in $G$. Each unconfirmed alternative in that set would close a cycle if confirmed. The output lists it in `conflict_if_usable`. Evidence that it was usable would call the recorded facts or the ranking assumption into question.
+2. Let $D$ contain the remaining unconfirmed alternatives. Add every edge $w\to d$ for $d\in D$ to obtain $G^+$. These edges can coexist. Any new simple cycle would have to leave $w$ once and follow an old path back to $w$, which would put its first destination among the ancestors already removed.
+3. Use the [ordinary possible-choice rule](#possible-next-choices) on $G$ and $G^+$. Adding comparisons can only remove possible winners. Both endpoint graphs are compatible completions. Their winner sets therefore give the exact union and intersection, respectively, across all compatible completions. An option in the intersection can win in every completion. Several options can have that property.
+
+With `explain`, the output also names each unconfirmed option whose usability on that row would **by itself** exclude the queried next choice. A newly excluded choice has a path from a rival in $F$ through $w$, one new edge and an old path to the queried choice (possibly of length zero). A backwards search from the query identifies those decisive edges. An already excluded choice has no newly decisive edge. For bounded-size IDs, the graph traversals and hash-table operations take expected $O(L+|U|+V+|E|)$ time and $O(V+|E|+|U|)$ auxiliary space. The calculation treats uncertainty on one dated row. Disputes on several rows or evidence that the aim changed require a different comparison.
+
 ## Files and execution
 
 - CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning. Its paired community-learning probe applies bounded logistics and evolving social interaction to the same situation.
@@ -106,9 +132,9 @@ This cloud environment passed the mechanical check and ten grouped unit tests. T
 
 ## Outstanding construction
 
-1. Continue from the 206-block inventory, splitting or joining blocks where their meanings require it. The review ledger records the scoped compressions of B0087 and B0132–B0134. The other blocks still need reviewed dispositions or explicit gaps. Retain the source distinction between reproduced and reference-only donors.
+1. Continue from the 206-block inventory, splitting or joining blocks where their meanings require it. The [review ledger](review-decisions.json) records the current dispositions and outstanding gaps. Retain the source distinction between reproduced and reference-only donors.
 2. The finite simulator examines a declared joint law, one observation with conditional likelihoods, allowed booking routes and shared capacity, plus a separate stipulated delivery/backup event predicate. General observation histories, multi-actor actions, delivery schedules, actual delivery evidence, partial-contributor burden, controlled UNKNOWN, preference formation, normative authority and complete consent/commitment records remain open. See Codex's other PR71 dependence cases for further tests.
-3. The spine's mechanical selection has not been tested with cold readers, against ordinary prose, or under actual downstream decisions; materiality perturbation is a stated procedure, not an implemented checker.
+3. Fresh AI readers used specific workshop and tactile-map excerpts at the revisions named in the [semantic review](SEMANTIC-REVIEW.md). Transfer to other decisions, comparison with ordinary prose and use by people in practice remain open.
 4. The co-evolving social probe is an invented example, not a formal complexity model or validation of the method's treatment of emergence. Read the relevant primary literature before attributing claims. The separate two-track brief at COM b1f0515cbc6920236e2ae34292f35d7b395620f0 and updated integration contract at TRACE f928f04e99e1b87c3c9b65fc9bcad6375bcda739 supersede earlier direction; this draft branch remains based on the earlier contract commit and does not itself contain that updated contract.
 5. This packet has not recovered the earlier reported simulator or 114-unit manifest. Retain a later recovered copy separately and compare rather than overwrite.
 

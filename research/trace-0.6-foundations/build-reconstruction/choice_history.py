@@ -50,19 +50,9 @@ def _choice_witness(target, offered, predecessors, order):
             "example_ranking": [*ancestors, target, *remaining]}
 
 
-def possible_choices(history, usable_next, *, explain=None):
-    """Return all possible next winners or a cycle refuting the fixed-order model.
-
-    Each observation has a complete usable menu and one chosen member. All
-    observations concern one chooser over a period with a fixed strict ranking.
-    Request a witness by naming a member of the next menu with explain.
-    """
+def _comparison_graph(history, next_menu):
     if not isinstance(history, (list, tuple)):
         raise ValueError("history must be an array of observations")
-    next_menu = _read_menu(usable_next)
-    offered = set(next_menu)
-    if explain is not None and (not isinstance(explain, str) or explain not in offered):
-        raise ValueError("explain must name an option in usable_next")
     predecessors = {option: {} for option in next_menu}
     for index, observation in enumerate(history):
         if not isinstance(observation, dict) or observation.keys() != {"usable", "chosen"}:
@@ -76,6 +66,62 @@ def possible_choices(history, usable_next, *, explain=None):
             if option != chosen:
                 # Keep one source row for a comparison even when it recurs.
                 predecessors.setdefault(option, {}).setdefault(chosen, index)
+    return predecessors
+
+
+def _possible_winners(next_menu, predecessors, order):
+    offered = set(next_menu)
+    has_offered_ancestor = set()
+    for option in order:
+        # A path may pass through options missing from the next menu.
+        if any(parent in offered or parent in has_offered_ancestor
+               for parent in predecessors[option]):
+            has_offered_ancestor.add(option)
+    return [option for option in next_menu if option not in has_offered_ancestor]
+
+
+def _upstream(option, predecessors):
+    """Options that reach this option in the recorded graph, including itself."""
+    seen = {option}
+    pending = [option]
+    while pending:
+        for parent in predecessors[pending.pop()]:
+            if parent not in seen:
+                seen.add(parent)
+                pending.append(parent)
+    return seen
+
+
+def _availability_bounds(predecessors, next_menu, winners, index, chosen, unconfirmed, explain):
+    # All conditional edges start at one winner. A new edge to a strict
+    # ancestor closes a cycle even when every other unconfirmed option is absent.
+    ancestors = _upstream(chosen, predecessors)
+    compatible = [option for option in unconfirmed if option not in ancestors]
+    query_ancestors = _upstream(explain, predecessors) if explain is not None else set()
+    for option in compatible:
+        predecessors.setdefault(option, {}).setdefault(chosen, index)
+    fullest_order = list(TopologicalSorter(predecessors).static_order())
+    every = _possible_winners(next_menu, predecessors, fullest_order)
+    result = {
+        "status": "compatible",
+        "possible_in_some_completions": winners,
+        "possible_in_every_compatible_completion": every,
+        "conflict_if_usable": [option for option in unconfirmed if option in ancestors],
+    }
+    if explain is not None:
+        decisive = []
+        if explain in winners and explain not in every:
+            decisive = [option for option in compatible if option in query_ancestors]
+        result["availability_check"] = {"option": explain, "history_index": index,
+                                        "each_alone_rules_out": decisive}
+    return result
+
+
+def _calculate(history, usable_next, explain, unconfirmed_row=None):
+    next_menu = _read_menu(usable_next)
+    if explain is not None and (not isinstance(explain, str) or explain not in next_menu):
+        raise ValueError("explain must name an option in usable_next")
+    predecessors = _comparison_graph(history, next_menu)
 
     try:
         order = list(TopologicalSorter(predecessors).static_order())
@@ -87,43 +133,53 @@ def possible_choices(history, usable_next, *, explain=None):
                                  "steps": _observed_steps(cycle, predecessors)}
         return result
 
-    has_offered_ancestor = set()
-    for option in order:
-        # A path may pass through options missing from the next menu.
-        if any(parent in offered or parent in has_offered_ancestor
-               for parent in predecessors[option]):
-            has_offered_ancestor.add(option)
-    winners = [option for option in next_menu if option not in has_offered_ancestor]
+    winners = _possible_winners(next_menu, predecessors, order)
+    if unconfirmed_row is not None:
+        index, extras = unconfirmed_row
+        return _availability_bounds(predecessors, next_menu, winners, index,
+                                    history[index]["chosen"], extras, explain)
+
     result = {"status": "compatible", "possible_next_choices": winners}
     if explain is not None:
-        result["witness"] = _choice_witness(explain, offered, predecessors, order)
+        result["witness"] = _choice_witness(explain, set(next_menu), predecessors, order)
     return result
 
 
-def compare_availability(history, usable_next, disputed, *, explain=None):
-    """Compare two answers about one recorded rival in a past choice."""
-    if not isinstance(disputed, dict) or disputed.keys() != {"history_index", "option"}:
-        raise ValueError("check_availability needs history_index and option")
+def possible_choices(history, usable_next, *, explain=None):
+    """Return the possible next winners for a complete history, optionally with a witness."""
+    return _calculate(history, usable_next, explain)
 
-    if_usable = possible_choices(history, usable_next, explain=explain)
+
+def compare_availability(history, usable_next, disputed, *, explain=None):
+    """Check one listed rival in both worlds, or bound all completions of one row."""
+    if not isinstance(disputed, dict) or disputed.keys() not in (
+        {"history_index", "option"}, {"history_index", "options"}
+    ):
+        raise ValueError("check_availability needs history_index and either option or options")
+    if not isinstance(history, (list, tuple)):
+        raise ValueError("history must be an array of observations")
     index = disputed["history_index"]
     if type(index) is not int or not 0 <= index < len(history):
         raise ValueError("history_index must identify an observation in history")
-    option = disputed["option"]
     row = history[index]
-    if not isinstance(option, str) or option not in row["usable"] or option == row["chosen"]:
-        raise ValueError("the disputed option must be an unchosen member of that usable menu")
+    if not isinstance(row, dict) or row.keys() != {"usable", "chosen"}:
+        raise ValueError("each observation must have usable and chosen fields")
+    listed = _read_menu(row["usable"])
+    single = "option" in disputed
+    extras = _read_menu([disputed["option"]] if single else disputed["options"])
+    disputed_set = set(extras)
+    if row["chosen"] in extras or not disputed_set.issubset(listed):
+        raise ValueError("each disputed option must be an unchosen member of the listed menu")
+    confirmed = list(history)
+    confirmed[index] = {"chosen": row["chosen"], "usable": [x for x in listed if x not in disputed_set]}
 
-    without_option = list(history)
-    without_option[index] = {
-        "usable": [member for member in row["usable"] if member != option],
-        "chosen": row["chosen"],
-    }
-    return {
-        "check_availability": {"history_index": index, "option": option},
-        "if_usable": if_usable,
-        "if_unusable": possible_choices(without_option, usable_next, explain=explain),
-    }
+    if single:
+        return {
+            "check_availability": {"history_index": index, "option": disputed["option"]},
+            "if_usable": possible_choices(history, usable_next, explain=explain),
+            "if_unusable": possible_choices(confirmed, usable_next, explain=explain),
+        }
+    return _calculate(confirmed, usable_next, explain, unconfirmed_row=(index, extras))
 
 
 def choose(ranking, usable):

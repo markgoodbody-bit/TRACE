@@ -277,5 +277,86 @@ class DisputedAvailabilityTests(unittest.TestCase):
         })
 
 
+class UnconfirmedMenuTests(unittest.TestCase):
+    def test_which_checks_can_actually_change_this_offer(self):
+        history = [{"chosen": winner, "usable": menu} for winner, menu in (
+            ("a", ["a", "w"]), ("w", ["w", "k", "u", "p", "other", "t"]), ("k", ["k", "t"]),
+            ("u", ["u", "k"]), ("p", ["p", "w"]))]
+        availability = {"history_index": 1, "options": ["k", "u", "p", "other", "t", "u"]}
+        result = compare_availability(history, ["t", "a", "new"], availability, explain="t")
+        self.assertEqual(result, {
+            "status": "compatible",
+            "possible_in_some_completions": ["t", "a", "new"],
+            "possible_in_every_compatible_completion": ["a", "new"],
+            "conflict_if_usable": ["p"],
+            "availability_check": {"option": "t", "history_index": 1,
+                                   "each_alone_rules_out": ["k", "u", "t"]},
+        })
+        self.assertEqual(history[1]["usable"], ["w", "k", "u", "p", "other", "t"])
+
+    def test_json_reader_keeps_the_reopening_question_open(self):
+        request = {"history": [{"chosen": "card", "usable": ["card", "makerspace"]}],
+                   "usable_next": ["card", "makerspace"], "explain": "makerspace",
+                   "check_availability": {"history_index": 0, "options": ["makerspace"]}}
+        reply = subprocess.run(
+            [sys.executable, str(Path(__file__).with_name("choice_history.py")), "--stdin"],
+            input=json.dumps(request), capture_output=True, check=True, text=True)
+        result = json.loads(reply.stdout)
+        self.assertEqual(result["possible_in_some_completions"], ["card", "makerspace"])
+        self.assertEqual(result["possible_in_every_compatible_completion"], ["card"])
+        self.assertEqual(result["availability_check"]["each_alone_rules_out"], ["makerspace"])
+
+    def test_unconfirmed_facts_need_one_known_observation_and_distinct_statuses(self):
+        history = [{"chosen": "a", "usable": ["a", "b"]}]
+        for invalid in (
+            [], {}, {"history_index": 0}, {"history_index": True, "options": []},
+            {"history_index": -1, "options": []}, {"history_index": 1, "options": []},
+            {"history_index": 0, "options": "c"}, {"history_index": 0, "options": [None]},
+            {"history_index": 0, "options": ["a"]}, {"history_index": 0, "options": ["missing"]},
+            {"history_index": 0, "options": ["c"], "other_row": 1},
+        ):
+            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                compare_availability(history, ["a"], invalid)
+
+    def test_all_three_option_graphs_against_menu_completions_and_rankings(self):
+        options = ("a", "b", "c")
+        edges = list(permutations(options, 2))
+        orders = list(permutations(options))
+
+        def subsets(items):
+            return [subset for size in range(len(items) + 1) for subset in combinations(items, size)]
+
+        for mask in range(1 << len(edges)):
+            known = [edge for bit, edge in enumerate(edges) if mask & (1 << bit)]
+            observations = [{"chosen": a, "usable": [a, b]} for a, b in known]
+            usable_orders = [order for order in orders if all(order.index(a) < order.index(b) for a, b in known)]
+            for chosen in options:
+                for extras in subsets([name for name in options if name != chosen]):
+                    history = [*observations, {"chosen": chosen, "usable": [chosen, *extras]}]
+                    availability = {"history_index": len(observations), "options": extras}
+                    completions = {}
+                    for added in subsets(extras):
+                        fits = [order for order in usable_orders
+                                if all(order.index(chosen) < order.index(name) for name in added)]
+                        if fits:
+                            completions[added] = fits
+                    for future in subsets(options):
+                        result = compare_availability(history, future, availability)
+                        if not completions:
+                            self.assertEqual(result["status"], "inconsistent")
+                            continue
+                        winners = {added: {min(future, key=order.index) for order in fits} if future else set()
+                                   for added, fits in completions.items()}
+                        self.assertEqual(set(result["possible_in_some_completions"]), set.union(*winners.values()))
+                        self.assertEqual(set(result["possible_in_every_compatible_completion"]),
+                                         set.intersection(*winners.values()))
+                        self.assertEqual(result["conflict_if_usable"], [e for e in extras if (e,) not in winners])
+                        for target in future:
+                            query = compare_availability(history, future, availability, explain=target)
+                            decisive = [e for e in extras if target in winners[()] and (e,) in winners
+                                        and target not in winners[(e,)]]
+                            self.assertEqual(query["availability_check"]["each_alone_rules_out"], decisive)
+
+
 if __name__ == "__main__":
     unittest.main()

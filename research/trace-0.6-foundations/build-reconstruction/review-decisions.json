@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "b3545f917d056884baa4e34fb3d6f358fa1e0267bae0eefcbe15cb5b8b0c48c2",
+  "candidate_sha256": "d1132fc82684356958c77bc24aa5e81a35023a3d77cd6994378bb91e87985a57",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -32,13 +32,24 @@
       "remaining": "Verify clause-by-clause against v0.5 and the referenced v0.4 source; no equivalence or implementation established."
     },
     {
+      "block_id": "B0120",
+      "block_sha256": "0decbfe0f3624e5b97087308f231b7279e93115fcf7238c8a416999f17090db4",
+      "status": "COMPRESSED",
+      "reviewer": "Build source comparison, 24 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "For the organiser helping A choose a fabrication route, the revised handover carries the earlier printer report, the later reopening notice and the open question of usable access for this job. A's proposed change of aim preserves the original whole-floor aim and the day 5 agreement.",
+      "destination": "What can each map-maker do next?",
+      "remaining": ""
+    },
+    {
       "block_id": "B0121",
       "block_sha256": "de1a919848ad40480422c238b6e99ed95f49beceaf169fc94cba725b018c56d9",
-      "status": "PARTIAL",
-      "reviewer": "Build initial review and TRACE editorial source comparison on 24 November 2026",
+      "status": "COMPRESSED",
+      "reviewer": "Build source comparison following the TRACE editorial review, 24 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The tactile handover now carries B’s own calibration and teaching possibility, three extra hours, the one-session grant, the absence of a new offer, separate file permissions and unassigned maintenance. The full passage also carries A’s card and spoken-description alternatives.",
-      "remaining": "The short handover omits the dated reopening notice and its uncertain applicability to A’s work. Use the original day 7 account when selecting another place to fabricate."
+      "finding": "For deciding where and with whom to try the next fabrication, the handover now carries the makerspace lead and its scope, A’s junction report, untried card stairs and unasked colleague, B’s own teaching aim and time cost, the dated grant, open future access, absence of a second agreement and unassigned maintenance.",
+      "destination": "What can each map-maker do next?",
+      "remaining": ""
     },
     {
       "block_id": "B0137",
