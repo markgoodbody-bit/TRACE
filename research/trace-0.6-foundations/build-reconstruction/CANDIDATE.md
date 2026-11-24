@@ -190,6 +190,8 @@ If the coordinator uses booking counts to plan the next month, carry the options
 
 The [released aim-revision view](TRACE-v0.5-reference.md#L394-L407) supplies the earlier and later account of the aim. The [finite choice example](choice_history.py) shows how two stipulated rankings can yield the same choice when the brake route is unavailable. Its forecast holds the ranking fixed for that comparison. An actual offer can change what A learns or wants, so carry A's next account forward when it arrives.
 
+A previous booking form can list a brake slot while the helper's availability on that occasion is still in question. If A chose wheel truing, keep that choice in both readings. [Check what changes if the brake slot was unavailable](README.md#check-a-disputed-availability-entry). The result can show whether the answer changes what A's earlier choices imply. Other records may still rule out brake practice under the model. A renewed offer depends on suitable support now and what A wants to do.
+
 ### Keep the gig and ask separately about ranking
 
 At 11:30 a musician accepts a paid gig. The desk can reserve the same slot, fee, audience and support either way. The musician's answer about ranking is still open. The desk reserves the gig now. A separate system has queued an entry for 11:50, and only the ranking operator can stop it.

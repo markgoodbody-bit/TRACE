@@ -48,6 +48,17 @@ The search runs backwards from the queried option. The first other member of the
 
 If the search finds no rival, `kind:"possible"` gives one `example_ranking` consistent with every recorded choice and placing the queried option first among the next offers. Its strict ancestors come first, then the option, then the remaining nodes, preserving topological order within each group. This witnesses possibility. If the history contains a cycle anywhere, `kind:"inconsistent_history"` cites a row for each edge of that cycle. Requesting one witness keeps the time and space bounds above. Omitting `explain` or passing `null` returns the original compact result.
 
+### Check a disputed availability entry
+
+If the second row's brake slot is unresolved, add `"check_availability":{"history_index":1,"option":"c"}` to the example request. Keep `"explain":"c"` to get a witness in each branch. The result has two complete answers, `if_usable` and `if_unusable`. For the latter, the calculation drops `c` from that row and keeps the observed choice of `b`, the other rows and the next menu.
+
+| Could the learner use the brake slot on the second occasion? | Possible next choices under the model |
+| --- | --- |
+| Yes | `a,d` |
+| No | `a,c,d` |
+
+Treat these as conditional results until the old availability is established. Ask whether a qualified helper was still available to check the learner’s work at the time of that choice. If both branches exclude brakes, the second witness shows which comparisons still support that result. Either branch may report a contradictory history. The comparison applies to one recorded unchosen option at a time and runs the same solver twice. The next offer still needs the support and choice appropriate to the new occasion.
+
 ## Files and execution
 
 - CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning. Its paired community-learning probe applies bounded logistics and evolving social interaction to the same situation.

@@ -209,3 +209,7 @@ Both readers offered A a card trial, left teaching to B and deferred another pri
 </details>
 
 **B0137 is compressed for the stated booking and file questions.** Keep every first-session fact fixed. A new lab grant and fresh agreement from both people would support booking another session. Someone who knows only that B’s login still works would have to leave the session unbooked. In either case, B’s report is the evidence available about the sketch. **B0121 remains partial.** Someone choosing where to fabricate next also needs the dated makerspace reopening notice and the uncertainty about its suitability. Those details are in the [day 7 source](TRACE-v0.5-reference.md#L354-L356). Neither excerpt alone supplies them.
+
+## Choice with one disputed historical option, 24 November 2026
+
+In the [workshop availability comparison](README.md#check-a-disputed-availability-entry), the choice remains recorded and the scope of doubt is one unchosen option on one occasion. The paired result applies the released [distinctions among an asserted value, evidence and conditional support](TRACE-v0.5-reference.md#L249-L253). It gives the organiser a specific question about that helper and that time. Other evidence can leave the calculation unchanged, and a contradiction can remain in either branch. Both readings use the same stipulated fixed ranking rule and next menu. The existing partial reviews retain their broader gaps.

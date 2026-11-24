@@ -5,7 +5,7 @@ import unittest
 from itertools import combinations, permutations, product
 from pathlib import Path
 
-from choice_history import BRAKES, OPTIONS, PUNCTURES, compare, possible_choices
+from choice_history import BRAKES, OPTIONS, PUNCTURES, compare, compare_availability, possible_choices
 
 
 class ChoiceHistoryTests(unittest.TestCase):
@@ -206,6 +206,63 @@ class ChoiceWitnessTests(unittest.TestCase):
                         rivals = [p for p in supported_paths if p[0] in menu and p[-1] == target]
                         self.assertIn(tuple(path), rivals)
                         self.assertEqual(len(path), min(map(len, rivals)))
+
+
+class DisputedAvailabilityTests(unittest.TestCase):
+    def test_one_entry_can_change_the_possible_choices_without_editing_the_input(self):
+        history = [{"usable": ["puncture", "wheel"], "chosen": "puncture"},
+                   {"usable": ["wheel", "brakes"], "chosen": "wheel"}]
+        original = json.loads(json.dumps(history))
+        future = ["puncture", "brakes", "decline"]
+        disputed = {"history_index": 1, "option": "brakes"}
+        result = compare_availability(history, future, disputed, explain="brakes")
+        self.assertEqual(history, original)
+        self.assertEqual(result["check_availability"], disputed)
+        self.assertEqual(result["if_usable"]["possible_next_choices"], ["puncture", "decline"])
+        self.assertEqual(result["if_usable"]["witness"]["kind"], "excluded")
+        self.assertEqual(result["if_unusable"]["possible_next_choices"], future)
+        self.assertEqual(result["if_unusable"]["witness"]["kind"], "possible")
+
+    def test_another_observation_can_still_support_the_same_comparison(self):
+        history = [{"usable": ["puncture", "brakes"], "chosen": "puncture"}] * 2
+        result = compare_availability(history, ["puncture", "brakes"],
+                                      {"history_index": 0, "option": "brakes"}, explain="brakes")
+        for branch, row in (("if_usable", 0), ("if_unusable", 1)):
+            self.assertEqual(result[branch]["possible_next_choices"], ["puncture"])
+            self.assertEqual(result[branch]["witness"]["steps"][0]["history_index"], row)
+
+    def test_removing_one_entry_can_restore_consistency(self):
+        history = [{"usable": ["a", "b"], "chosen": "a"},
+                   {"usable": ["a", "b"], "chosen": "b"}]
+        result = compare_availability(history, ["a", "b"],
+                                      {"history_index": 1, "option": "a"}, explain="b")
+        self.assertEqual(result["if_usable"]["status"], "inconsistent")
+        self.assertCountEqual([s["history_index"] for s in result["if_usable"]["witness"]["steps"]],
+                         [0, 1])
+        self.assertEqual(result["if_unusable"]["possible_next_choices"], ["a"])
+
+    def test_check_requires_a_real_row_and_an_unchosen_recorded_option(self):
+        history = [{"usable": ["a", "b"], "chosen": "a"}]
+        for disputed in (None, {"option": "b"}, {"history_index": True, "option": "b"},
+                         {"history_index": -1, "option": "b"}, {"history_index": 1, "option": "b"},
+                         {"history_index": 0, "option": "a"}, {"history_index": 0, "option": "c"}):
+            with self.subTest(disputed=disputed), self.assertRaises(ValueError):
+                compare_availability(history, ["a", "b"], disputed)
+
+    def test_json_entry_point_returns_both_conditions(self):
+        request = {
+            "history": [{"usable": ["a", "b"], "chosen": "a"}],
+            "usable_next": ["a", "b"],
+            "check_availability": {"history_index": 0, "option": "b"},
+        }
+        completed = subprocess.run(
+            [sys.executable, str(Path(__file__).with_name("choice_history.py")), "--stdin"],
+            input=json.dumps(request), text=True, capture_output=True, check=True)
+        self.assertEqual(json.loads(completed.stdout), {
+            "check_availability": request["check_availability"],
+            "if_usable": {"status": "compatible", "possible_next_choices": ["a"]},
+            "if_unusable": {"status": "compatible", "possible_next_choices": ["a", "b"]},
+        })
 
 
 if __name__ == "__main__":

@@ -100,6 +100,32 @@ def possible_choices(history, usable_next, *, explain=None):
     return result
 
 
+def compare_availability(history, usable_next, disputed, *, explain=None):
+    """Compare two answers about one recorded rival in a past choice."""
+    if not isinstance(disputed, dict) or disputed.keys() != {"history_index", "option"}:
+        raise ValueError("check_availability needs history_index and option")
+
+    if_usable = possible_choices(history, usable_next, explain=explain)
+    index = disputed["history_index"]
+    if type(index) is not int or not 0 <= index < len(history):
+        raise ValueError("history_index must identify an observation in history")
+    option = disputed["option"]
+    row = history[index]
+    if not isinstance(option, str) or option not in row["usable"] or option == row["chosen"]:
+        raise ValueError("the disputed option must be an unchosen member of that usable menu")
+
+    without_option = list(history)
+    without_option[index] = {
+        "usable": [member for member in row["usable"] if member != option],
+        "chosen": row["chosen"],
+    }
+    return {
+        "check_availability": {"history_index": index, "option": option},
+        "if_usable": if_usable,
+        "if_unusable": possible_choices(without_option, usable_next, explain=explain),
+    }
+
+
 def choose(ranking, usable):
     return next((option for option in ranking if option in usable), None)
 
@@ -128,15 +154,22 @@ def compare(usable_now, observed_choice, usable_next):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stdin", action="store_true",
-                        help="read JSON with history, usable_next and an optional option to explain")
+                        help="read JSON history and next menu, with optional witness and availability check")
     if parser.parse_args().stdin:
         try:
             request = json.load(sys.stdin)
             required = {"history", "usable_next"}
-            if not isinstance(request, dict) or request.keys() not in (required, required | {"explain"}):
-                raise ValueError("the request needs history and usable_next, with optional explain")
-            result = possible_choices(request["history"], request["usable_next"],
-                                      explain=request.get("explain"))
+            allowed = required | {"explain", "check_availability"}
+            if not isinstance(request, dict) or not required <= request.keys() <= allowed:
+                raise ValueError("the request needs history and usable_next, "
+                                 "with optional explain and check_availability")
+            history, usable_next = request["history"], request["usable_next"]
+            explain = request.get("explain")
+            if "check_availability" in request:
+                result = compare_availability(history, usable_next, request["check_availability"],
+                                              explain=explain)
+            else:
+                result = possible_choices(history, usable_next, explain=explain)
         except ValueError as error:
             parser.error(str(error))
         print(json.dumps(result, ensure_ascii=False, separators=(",", ":")))
