@@ -96,6 +96,8 @@ def render_spine(candidate):
             "Expand the candidate and the released source when omitted detail changes "
             "authority, burden, consent, evidence, time or a constructive possibility. "
             "A missing material distinction means UNKNOWN, not permission.\n\n"
+            "For an observed choice history, [compute the possible next choices]"
+            "(README.md#possible-next-choices).\n\n"
             + DECISION_HEADING + "\n\n" + decision.rstrip() + "\n\n"
             + "Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; "
               "controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; "
