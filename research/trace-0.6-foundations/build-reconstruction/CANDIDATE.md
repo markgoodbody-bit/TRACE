@@ -83,7 +83,7 @@ Following [Gordon's ecological questions](https://doi.org/10.1111/ede.12439), ex
 
 ## 5. Clocks, correction and construction
 
-Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available. For a proposed pause, trace the warning to someone who can act within scope, then ask how they can verify the effect before the boundary. The [dispatch case](CANDIDATE.md#a-warning-before-dispatch) works through this route.
+Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available. For a proposed pause, trace the warning to someone who can act within scope, then ask how they can verify the effect before the boundary. The [dispatch case](CANDIDATE.md#a-warning-before-dispatch) works through this route. When an offer keeps a decision open, verify the hold and the route for each answer the offer promises. [See the ranking hold](CANDIDATE.md#hold-the-listing-while-the-musician-decides).
 
 Several organisations responding within their own remit do not necessarily provide a route to the result. Where a route crosses boundaries, identify who coordinates it, who can authorise the necessary steps, what actually reaches the affected target, and who bears navigation and evidence work. A claim moving between offices is not itself a repair.
 
@@ -193,6 +193,22 @@ In two possible histories the musician declines at 11:34. The desk receives the 
 In another version, the operator can keep the musician's name off the public list while the score still counts when next season's bookings are decided. The desk can say “We can ask the operator to leave your name off the list. Under the current rules the score would still count for next season. I can ask the booking rule holder whether that use can change and how you can see or challenge the score. You don’t need to tell me why.”
 
 Record the public listing and the later use separately. If the later rule is unclear, ask who can confirm it and when the musician needs an answer. In this example 11:50 is the public entry's cutoff. The rule for next season has its own decision and evidence.
+
+#### Hold the listing while the musician decides
+
+At 11:30 the desk can also ask the ranking operator to hold just this entry. Suppose the ranking rules allow the operator to stop the automatic entry before 11:50 and keep a separate public registration slot open until 12:05. The agreed gig and fee continue. At 11:38 the operator stops the automatic entry and confirms the later slot. The desk can now tell the musician what each answer would do.
+
+> Your gig is booked. The operator has stopped the automatic listing. If you want to be listed, I can forward your answer. The operator needs to receive it before 12:02 to finish by the cutoff. If you prefer to stay out or leave the question unanswered, the entry will close unlisted.
+
+The new slot needs the same three minutes to apply a decision, with registration complete before 12:05. Use the same local clock for both arrangements.
+
+| What reaches the operator | Automatic entry at 11:50 | Confirmed hold and later slot |
+| --- | --- | --- |
+| Decline at 11:52 | The entry has already committed. | The gig closes unlisted with a recorded decline. |
+| Approval at 11:52 | The entry has already committed. | The operator can list at 11:55 on the musician's approval. |
+| No answer | The queued entry commits. | The entry closes unlisted. The decision remains unanswered. |
+
+The hold needs the operator's record for this booking and a supported route for later registration. An operator able to stop an entry may still lack a later slot. Check what work it takes to keep that slot available and who would wait if capacity is shared. A musician who needs the listing by 11:50 has an earlier aim to account for. Carry any use of the score in next season's bookings on its own terms.
 
 ### Which check can change the booking?
 

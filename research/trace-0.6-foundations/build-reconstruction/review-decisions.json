@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "4e06966d33d22018859c42ef1316eab068e4c2b9c20b9e882ef0eb3ff8e398c7",
+  "candidate_sha256": "9ec71ff355c872fd77d8e22910a0d1666ea926871a57cde121589dee63e2b4c2",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {

@@ -178,3 +178,7 @@ Assess each criterion: present, partial or absent, using exact words. Count inpu
 The five decisions specified in advance were the announcement, A’s demonstrated skill and choice to teach, fresh permission and help for the tools, the room and its opener, and a voluntary decision for both A and C while alternatives remained. Word counts use whitespace-separated tokens.
 
 </details>
+
+## Keeping the ranking choice open, 24 November 2026
+
+The [hold variation](CANDIDATE.md#hold-the-listing-while-the-musician-decides) applies the released [control and correction-window distinctions](TRACE-v0.5-reference.md#L270-L271). The booking desk's request, permission under the ranking rule, the operator's effect by 11:38 and the later slot have different sources. The operator can stop one entry without touching the booking. A supported approval route takes three minutes and has its own strict boundary. The same answer arriving at 11:52 may make no change to an automatic entry or determine what is made public under the hold. A hold with no later registration capacity supports staying out and leaves later listing unsupported. Silence remains unanswered even when the process closes the entry unlisted. The comparison stipulates the ranking rules, evidence and times. The source-block dispositions remain as recorded.
