@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "9ec71ff355c872fd77d8e22910a0d1666ea926871a57cde121589dee63e2b4c2",
+  "candidate_sha256": "3f839dfc0064aea0800a6c6074be65dcd4882d8fd71f04ad93a9f47fa0e7cf35",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -35,19 +35,20 @@
       "block_id": "B0121",
       "block_sha256": "de1a919848ad40480422c238b6e99ed95f49beceaf169fc94cba725b018c56d9",
       "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "reviewer": "Build initial review and TRACE editorial source comparison on 24 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate retains separate participant aims, B’s independent teaching future and rest, a conditional new offer, no renewed agreement and unassigned maintenance.",
-      "remaining": "Retain the original encounter and exact access, disclosure, refusal, deletion and source qualifications; independently test the compressed return."
+      "finding": "The tactile handover now carries B’s own calibration and teaching possibility, three extra hours, the one-session grant, the absence of a new offer, separate file permissions and unassigned maintenance. The full passage also carries A’s card and spoken-description alternatives.",
+      "remaining": "The short handover omits the dated reopening notice and its uncertain applicability to A’s work. Use the original day 7 account when selecting another place to fabricate."
     },
     {
       "block_id": "B0137",
       "block_sha256": "49b992c2897f5fe3d679a0bb729fff7db5ea523f43c6d684a61027472d41d4d8",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "status": "COMPRESSED",
+      "reviewer": "Build initial review and TRACE editorial source comparison on 24 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The new-composition continuous encounter and compact return distinguish incomplete original aim, supported performance, costs, independent possibilities and absence of renewed agreement.",
-      "remaining": "Retain the original negative fixture: reported deletion, failed stairs, specific grant and further qualifications are not reproduced; conduct an independent reader comparison."
+      "finding": "For another lab booking and a question about deletion, the tactile return keeps the unfinished whole-floor aim, the failed printed stairs, the untried alternatives, separate reports, B’s costs, unassigned maintenance and the scope of the first grant and agreement. The comparison records one fresh AI response per excerpt and the building trial proposed by one reader.",
+      "destination": "What can each map-maker do next?",
+      "remaining": ""
     },
     {
       "block_id": "B0165",

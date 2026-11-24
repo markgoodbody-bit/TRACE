@@ -182,3 +182,30 @@ The five decisions specified in advance were the announcement, A’s demonstrate
 ## Keeping the ranking choice open, 24 November 2026
 
 The [hold variation](CANDIDATE.md#hold-the-listing-while-the-musician-decides) applies the released [control and correction-window distinctions](TRACE-v0.5-reference.md#L270-L271). The booking desk's request, permission under the ranking rule, the operator's effect by 11:38 and the later slot have different sources. The operator can stop one entry without touching the booking. A supported approval route takes three minutes and has its own strict boundary. The same answer arriving at 11:52 may make no change to an automatic entry or determine what is made public under the hold. A hold with no later registration capacity supports staying out and leaves later listing unsupported. Silence remains unanswered even when the process closes the entry unlisted. The comparison stipulates the ranking rules, evidence and times. The source-block dispositions remain as recorded.
+
+## Whose next move survives the handover? 24 November 2026
+
+Two editorial readers worked from the same pinned source. One compared the released tactile-map encounter with its later working correction. The other found that the [short workshop opening](https://github.com/markgoodbody-bit/TRACE/blob/eeccf887cdaea3deff0b3c16a0a604d62de28846/research/trace-0.6-foundations/build-reconstruction/SPINE.md#L14-L18) named A’s unfinished brake aim but gave the organiser a specific question only about teaching and publicity. The full candidate already offered [practice with a qualified helper](CANDIDATE.md#a-choice-after-the-options-change). The opening now gives A that choice alongside the teaching offer. The [previous Saturday reading](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7129880136) used the earlier wording and asked about announcing a session.
+
+For the [tactile map](CANDIDATE.md#what-can-each-map-maker-do-next), compare the [original day 6 and day 7 accounts](TRACE-v0.5-reference.md#L344-L356) and [negative compression example](TRACE-v0.5-reference.md#L418-L422). The [working edition](../../../TRACE-WORKING.md#L426-L430) had already corrected which stair design failed and which was untested. The new handover brings that correction into 0.6 and restores the conditions for booking another print or answering a question about deletion.
+
+Two fresh AI sessions each received one excerpt and the same question below. The first received the working edition’s corrected 44-word quotation. The second received only the new 129-word block quotation. Before reading their replies we chose four comparisons. Could they distinguish the two stair designs, preserve each person’s next choice, establish what authority a new booking would need, and distinguish the deletion report from verification? A reader could properly answer that their excerpt did not say.
+
+> You take over tomorrow. What would you offer A and B, and what can you tell the lab manager who asks to book another print and confirm the files are gone? Use only this handover. Reply to the organiser in up to 100 words.
+
+Both readers offered A a card trial, left teaching to B and deferred another print. The first said file deletion was unknown. The second could also name the one-session grant, the reported deletion of A’s sketch, the unknown status of other copies and the separate limit on sharing B’s files. It then proposed testing the whole floor together in the building. That was an offer, but A had proposed card stairs and a possible spoken description. The paragraph after the quotation now leaves a building visit and the choice of company explicitly with A. That added sentence was outside the reader comparison. These were two responses from one model family to excerpts of different lengths and content.
+
+<details>
+<summary>Exact reader replies, in excerpt order</summary>
+
+> I’d ask A what would count as success for their revised aim and offer to try the card stairs if that would help. I’d ask B which practice helped and whether they want to spend any more time on the teaching idea. No further session is agreed.
+>
+> I’d ask the manager to hold the print. A found the junctions readable and the printed stairs unreadable. The card stairs and building use are untested, and maintenance has no owner. I can’t confirm deletion from the handover. I’d ask whoever held copies to verify what happened to them.
+
+> A found the plastic junctions readable by touch and the warped stairs unreadable. I’d offer to try A’s card stairs, then test the whole-floor map together in the building. I’d acknowledge B’s supervised practice and three extra hours, and ask whether they’d like time to teach the adjustment.
+>
+> The lab authorised one session. Defer booking until both agree and the lab approves another. Nobody has taken on maintenance. The colleague’s print report lacks independent confirmation. B declined to keep A’s sketch and reports deleting it. Whether any copy remains is unknown. B’s private files were outside the sharing agreement.
+
+</details>
+
+**B0137 is compressed for the stated booking and file questions.** Keep every first-session fact fixed. A new lab grant and fresh agreement from both people would support booking another session. Someone who knows only that B’s login still works would have to leave the session unbooked. In either case, B’s report is the evidence available about the sketch. **B0121 remains partial.** Someone choosing where to fabricate next also needs the dated makerspace reopening notice and the uncertainty about its suitability. Those details are in the [day 7 source](TRACE-v0.5-reference.md#L354-L356). Neither excerpt alone supplies them.

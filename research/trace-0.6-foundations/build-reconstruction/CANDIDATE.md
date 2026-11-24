@@ -15,7 +15,7 @@ In the [bicycle workshop](CANDIDATE.md#what-next-saturday-needs), A came to lear
 
 > The organiser saw A mend a puncture on the practice wheel without help. A has a kit at home. How A manages both brakes there is still unknown. Last Saturday’s borrowed tools were returned. A new session needs a keeper to release a kit, a willing volunteer to collect and return it, and someone to open a quiet room C can use. A and C each need time to decide whether to come while other plans are still possible.
 
-Before naming A on a notice, ask whether they want to teach and whether they want their name used. Ask C directly, while another plan is still possible, whether they want to come.
+Ask A what they would like to do next. If they still want to adjust their own brakes, offer to look for a session where A can do the work and a qualified helper can check it. Ask separately whether A wants to teach puncture repair and whether their name can go on the notice. Ask C directly, while another plan is still possible, whether they want to come.
 
 ## 1. Begin with a living situation
 
@@ -97,11 +97,21 @@ An event may be unchangeable while its effects can still change. Assess continui
 
 ## 6. A compact view with an escape hatch
 
-One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. Keep each claim at the strength of its evidence, each aim with the person who holds it, and any limit the next decision depends on. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up. [Follow the next workshop handoff](CANDIDATE.md#what-next-saturday-needs).
+One versioned source graph can serve different readers. Before shortening an account, name the conclusion and its intended use. Change a premise's value, source, actor, scope or time and ask whether the supported conclusion, permitted action or distribution of burdens changes. Keep the distinction if it does. Where the spine omits the detail, read it before relying on a conclusion it could change. Keep uncertainty about omissions visible. Record the changes considered so a reader can challenge anything overlooked. Keep each claim at the strength of its evidence, each aim with the person who holds it, and any limit the next decision depends on. The check applies to that decision. Claims about reader behaviour or completeness across uses need their own evidence. A bounded inquiry can end with the unresolved question and a usable route to someone who can take it up. Compare the [workshop handoff](CANDIDATE.md#what-next-saturday-needs) with the [tactile map its makers want to take in different directions](CANDIDATE.md#what-can-each-map-maker-do-next).
 
 When a closer inspection is folded back into an account, carry each material limit with its identity, source, target, scope, dependent claims, current status and any known repair route. A substitute can make one route usable while the original limit stays in place. Treat a new report as a proposed change and check its warrant and scope before recording resolution. Keep similarly worded limits distinct when their causes or effects differ. Record a depth or time budget as the reason for stopping, and establish sufficiency separately for the intended decision.
 
 A return carries the result, remaining uncertainty, burdens and unassigned work to the next reader. Name who can answer, challenge or decline. For each claim of completion, state the target, scope, horizon and what evidence counts under the applicable criterion. A participant's report can meet a declared criterion about their experience. Safety, continued access and another participant's result each need evidence for their own claim. Record whose criterion applies and where it comes from.
+
+### What can each map-maker do next?
+
+In the original tactile-map example, A wants to learn the layout before starting work in a new building. B declines to print the model as a service and offers a joint practice session. Here is a handover for whoever helps the two people decide what comes next.
+
+> A reports that the plastic junctions were readable by touch and the warped printed stairs were unreadable. The whole-floor aim is still open. A proposes trying the stairs in card. The card stairs and using the map in the building are both untested. B’s lab colleague reported the print. No independent check of that report is recorded.
+>
+> B reports gaining some supervised practice, spending three extra hours and finding a calibration adjustment they might like to teach. The lab authorised one session and both people agreed to it. Future access is unknown. Nobody has offered a second session or taken on maintenance. B declined to keep A’s simplified sketch and reports deleting it. Whether any copy remains is unknown. B’s own private files were outside the agreement to share.
+
+A could try the card stairs without booking B. A has also suggested asking a colleague for a spoken description. The colleague has yet to be asked. After a card trial, let A decide whether a visit to the building would help and whom to involve. B could practise on a neutral object if materials and suitable access are available, and decide whether to turn the adjustment into a lesson. Even if B’s lab login works tomorrow, another joint print would need a grant for that date and fresh agreement from both people. [Original encounter and B’s account](TRACE-v0.5-reference.md#L338-L364) · [Neutral-object option](TRACE-v0.5-reference.md#L79-L87) · [Working edition’s correction about the two stair designs](../../../TRACE-WORKING.md#L426-L430)
 
 ### Compatibility floor: explicit review meanings
 
