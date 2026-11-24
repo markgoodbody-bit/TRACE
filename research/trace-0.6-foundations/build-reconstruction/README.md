@@ -34,6 +34,20 @@ Feed this request to `python3 choice_history.py --stdin`.
 
 The path through the unavailable `b` still rules out `c`. The history leaves `d` open. An empty history leaves every next option possible. An empty next menu yields an empty set when the history is compatible. A contradiction among comparisons returns a closed cycle of option IDs. Actual consent and future aims require their own evidence. [Implementation](choice_history.py) · [Worked choice after an option is restored](CANDIDATE.md#a-choice-after-the-options-change)
 
+### Check one choice
+
+Suppose a handover rules out brake practice. Which booking records support that conclusion? In the request above, let `a` mean puncture practice, `b` wheel truing, `c` brake practice and `d` declining today's session. Add `"explain":"c"`. The result includes this witness.
+
+```json
+{"kind":"excluded","option":"c","steps":[{"history_index":0,"chosen":"a","over":"b"},{"history_index":1,"chosen":"b","over":"c"}]}
+```
+
+Each index counts from zero in the supplied history. It identifies a choice and the rival recorded as usable that day. If the qualified brake helper had already withdrawn on the second occasion, the corrected menu for that row is `["b"]`. Both recorded choices stand. Running the corrected history leaves `a`, `c` and `d` possible. The organiser can offer the learner a turn with the tools once the helper is available and ask what they want. Include declining wherever that option was actually available. Silence supplies no observed choice.
+
+The search runs backwards from the queried option. The first other member of the next menu reached by breadth-first search gives a chain with the fewest observed comparisons. Each edge cites its first supporting row. Other rows or chains can independently sustain the exclusion, so rerun after a correction.
+
+If the search finds no rival, `kind:"possible"` gives one `example_ranking` consistent with every recorded choice and placing the queried option first among the next offers. Its strict ancestors come first, then the option, then the remaining nodes, preserving topological order within each group. This witnesses possibility. If the history contains a cycle anywhere, `kind:"inconsistent_history"` cites a row for each edge of that cycle. Requesting one witness keeps the time and space bounds above. Omitting `explain` or passing `null` returns the original compact result.
+
 ## Files and execution
 
 - CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning. Its paired community-learning probe applies bounded logistics and evolving social interaction to the same situation.

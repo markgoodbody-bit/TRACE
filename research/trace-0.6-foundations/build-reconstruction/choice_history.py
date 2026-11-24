@@ -2,6 +2,7 @@
 import argparse
 import json
 import sys
+from collections import deque
 from graphlib import CycleError, TopologicalSorter
 from itertools import permutations
 
@@ -19,40 +20,84 @@ def _read_menu(options):
     return tuple(dict.fromkeys(options))
 
 
-def possible_choices(history, usable_next):
+def _observed_steps(path, predecessors):
+    return [{"history_index": predecessors[other][winner], "chosen": winner, "over": other}
+            for winner, other in zip(path, path[1:])]
+
+
+def _choice_witness(target, offered, predecessors, order):
+    # Search backwards for the nearest rival in the next menu.
+    pending = deque([target])
+    towards_target = {target: None}
+    while pending:
+        option = pending.popleft()
+        if option != target and option in offered:
+            path = [option]
+            while path[-1] != target:
+                path.append(towards_target[path[-1]])
+            return {"kind": "excluded", "option": target,
+                    "steps": _observed_steps(path, predecessors)}
+        for winner in predecessors[option]:
+            if winner not in towards_target:
+                towards_target[winner] = option
+                pending.append(winner)
+
+    # Every strict ancestor was visited. They can all precede the target
+    # without placing any other offered option first.
+    ancestors = [node for node in order if node != target and node in towards_target]
+    remaining = [node for node in order if node not in towards_target]
+    return {"kind": "possible", "option": target,
+            "example_ranking": [*ancestors, target, *remaining]}
+
+
+def possible_choices(history, usable_next, *, explain=None):
     """Return all possible next winners or a cycle refuting the fixed-order model.
 
     Each observation has a complete usable menu and one chosen member. All
     observations concern one chooser over a period with a fixed strict ranking.
+    Request a witness by naming a member of the next menu with explain.
     """
     if not isinstance(history, (list, tuple)):
         raise ValueError("history must be an array of observations")
     next_menu = _read_menu(usable_next)
-    predecessors = {option: set() for option in next_menu}
-    for observation in history:
+    offered = set(next_menu)
+    if explain is not None and (not isinstance(explain, str) or explain not in offered):
+        raise ValueError("explain must name an option in usable_next")
+    predecessors = {option: {} for option in next_menu}
+    for index, observation in enumerate(history):
         if not isinstance(observation, dict) or observation.keys() != {"usable", "chosen"}:
             raise ValueError("each observation must have usable and chosen fields")
         menu = _read_menu(observation["usable"])
         chosen = observation["chosen"]
         if not isinstance(chosen, str) or chosen not in menu:
             raise ValueError("the chosen option must belong to that observation's usable menu")
-        predecessors.setdefault(chosen, set())
+        predecessors.setdefault(chosen, {})
         for option in menu:
             if option != chosen:
-                predecessors.setdefault(option, set()).add(chosen)
+                # Keep one source row for a comparison even when it recurs.
+                predecessors.setdefault(option, {}).setdefault(chosen, index)
 
-    offered = set(next_menu)
-    has_offered_ancestor = set()
     try:
-        for option in TopologicalSorter(predecessors).static_order():
-            # A path may pass through options missing from the next menu.
-            if any(parent in offered or parent in has_offered_ancestor
-                   for parent in predecessors[option]):
-                has_offered_ancestor.add(option)
+        order = list(TopologicalSorter(predecessors).static_order())
     except CycleError as error:
-        return {"status": "inconsistent", "cycle": error.args[1]}
+        cycle = error.args[1]
+        result = {"status": "inconsistent", "cycle": cycle}
+        if explain is not None:
+            result["witness"] = {"kind": "inconsistent_history",
+                                 "steps": _observed_steps(cycle, predecessors)}
+        return result
+
+    has_offered_ancestor = set()
+    for option in order:
+        # A path may pass through options missing from the next menu.
+        if any(parent in offered or parent in has_offered_ancestor
+               for parent in predecessors[option]):
+            has_offered_ancestor.add(option)
     winners = [option for option in next_menu if option not in has_offered_ancestor]
-    return {"status": "compatible", "possible_next_choices": winners}
+    result = {"status": "compatible", "possible_next_choices": winners}
+    if explain is not None:
+        result["witness"] = _choice_witness(explain, offered, predecessors, order)
+    return result
 
 
 def choose(ranking, usable):
@@ -83,13 +128,15 @@ def compare(usable_now, observed_choice, usable_next):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stdin", action="store_true",
-                        help="read a JSON request with history and usable_next")
+                        help="read JSON with history, usable_next and an optional option to explain")
     if parser.parse_args().stdin:
         try:
             request = json.load(sys.stdin)
-            if not isinstance(request, dict) or request.keys() != {"history", "usable_next"}:
-                raise ValueError("the request must have history and usable_next fields")
-            result = possible_choices(request["history"], request["usable_next"])
+            required = {"history", "usable_next"}
+            if not isinstance(request, dict) or request.keys() not in (required, required | {"explain"}):
+                raise ValueError("the request needs history and usable_next, with optional explain")
+            result = possible_choices(request["history"], request["usable_next"],
+                                      explain=request.get("explain"))
         except ValueError as error:
             parser.error(str(error))
         print(json.dumps(result, ensure_ascii=False, separators=(",", ":")))
