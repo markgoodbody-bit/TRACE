@@ -2,6 +2,38 @@
 
 17 November 2026. This is a first usable construction packet, not a completed semantic audit, complete simulator, release or proof of field value. Origin: released v0.5 at d688c149afc15c90ab51afaf08fe303771e9de20; construction contract 257494ea201d4f0b6b515dd570270fd45cbed234; prior Build 8952a4f84a5ce0ebbcee897927ac2db7a14c0da5; Codex draft PR71 39033c279576d3d824ca90a368731afcbdd993a0; CC public contribution COM954 comment 6932365622. Dave Snowden's private critique was considered as a challenge; no correspondence is reproduced here.
 
+## Possible next choices
+
+**Input.** One chooser, a finite history $H=((M_t,c_t))$ and the next usable menu $F$. Each $M_t$ contains exactly the options available at that choice, and $c_t$ is its observed winner. The model assumes the chooser selects the highest option under one fixed strict ordering. A changed aim or a different chooser calls for a separate comparison.
+
+Build a directed graph on all option IDs. Add an edge from each winner to each alternative it beat. An option absent at the time contributes no comparison.
+
+$$
+E=\bigcup_t\{(c_t,y):y\in M_t\setminus\{c_t\}\}.
+$$
+
+A directed cycle refutes the assumptions for this history. Otherwise the exact set of possible next choices is
+
+$$
+P(H,F)=\{x\in F:\nexists y\in F\setminus\{x\},\;y\leadsto_E x\}.
+$$
+
+**Proof.** A ranking that explains the history is a topological ordering of the graph. Making $x$ first in $F$ adds edges from $x$ to the other members of $F$. These edges create a cycle exactly when one of those members already reaches $x$. Paths can run through options absent from $F$.
+
+**Algorithm.** In topological order, mark a node if any predecessor is in $F$ or is already marked. Return the unmarked members of $F$ in input order. With $L$ supplied option occurrences, $V$ distinct options and $|E|$ distinct edges, expected time is $O(L+V+|E|)$ and auxiliary space is $O(V+|E|)$ for bounded-size IDs and hash tables.
+
+Feed this request to `python3 choice_history.py --stdin`.
+
+```json
+{"history":[{"usable":["a","b"],"chosen":"a"},{"usable":["b","c"],"chosen":"b"}],"usable_next":["a","c","d"]}
+```
+
+```json
+{"status":"compatible","possible_next_choices":["a","d"]}
+```
+
+The path through the unavailable `b` still rules out `c`. The history leaves `d` open. An empty history leaves every next option possible. An empty next menu yields an empty set when the history is compatible. A contradiction among comparisons returns a closed cycle of option IDs. Actual consent and future aims require their own evidence. [Implementation](choice_history.py) · [Worked choice after an option is restored](CANDIDATE.md#a-choice-after-the-options-change)
+
 ## Files and execution
 
 - CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning. Its paired community-learning probe applies bounded logistics and evolving social interaction to the same situation.

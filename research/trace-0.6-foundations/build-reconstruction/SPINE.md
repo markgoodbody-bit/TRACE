@@ -4,6 +4,8 @@ Research candidate. The [review ledger](review-decisions.json) records source co
 
 Use class: a first decision on an intervention affecting another participant. Expand the candidate and the released source when omitted detail changes authority, burden, consent, evidence, time or a constructive possibility. A missing material distinction means UNKNOWN, not permission.
 
+For an observed choice history, [compute the possible next choices](README.md#possible-next-choices).
+
 ## Start with the next decision
 
 1. **Give the account a job.** Name what someone needs to understand, choose or make possible now, whose purposes might differ, and the period that matters. Let the inquiry change the question. If you are using Mechanical Ethics, state which commitments guide this use, such as making harm visible, keeping correction reachable or building useful capability without hiding its costs.
