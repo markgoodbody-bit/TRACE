@@ -265,6 +265,8 @@ Today's checked attempt can be a useful step towards A's wish to adjust the brak
 
 The [complete scene and two fictional histories](GOOD-DAY-0.6.1-exp.5.md) show the reason A chooses to keep private. The booking extract carries the authorised time and the observed steps. A handoff for an actual session would carry the history that happened and only what A agreed to share.
 
+An organiser using the choice calculation can keep A's permitted departure time and check which offers fit it. The original check ended after A needed to leave. A departure with the check outstanding records what happened. Use a decline as a choice only when A actually made and reported it. A later qualified check remains a distinct offer.
+
 ### Quiet access and reliance
 
 Take the follow-up with the confirmed kit. The smaller room is C's only usable way to attend this session. In the first variant, the coordinator can prepare it in fifteen minutes within their agreed role, with no material cost to anyone else. They agree to do the set-up and A and C accept the one-session offer. The arrangement gives C a place to take part once the room is ready. Record whether the room opens and how the participants use it when the session happens.

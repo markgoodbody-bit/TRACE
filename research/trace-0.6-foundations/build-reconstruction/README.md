@@ -4,7 +4,7 @@
 
 ## Possible next choices
 
-**Input.** One chooser, a finite history $H=((M_t,c_t))$ and the next usable menu $F$. Each $M_t$ contains exactly the options available at that choice, and $c_t$ is its observed winner. The model assumes the chooser selects the highest option under one fixed strict ordering. A changed aim or a different chooser calls for a separate comparison.
+**Input.** One chooser, a finite history $H=((M_t,c_t))$ and the next usable menu $F$. Each $M_t$ contains exactly the options available at that choice, and $c_t$ is its observed winner. Each option counted in a recorded choice must fit the limits the chooser stated for that occasion. Carry a limit with the chooser's permission. Their reason can stay private. The model assumes the chooser selects the highest option under one fixed strict ordering. A changed aim or a different chooser calls for a separate comparison.
 
 Build a directed graph on all option IDs. Add an edge from each winner to each alternative it beat. An option absent at the time contributes no comparison.
 
@@ -58,6 +58,8 @@ If the second row's brake slot is unresolved, add `"check_availability":{"histor
 | No | `a,c,d` |
 
 Treat these as conditional results until the old availability is established. Ask whether a qualified helper was still available to check the learner’s work at the time of that choice. If both branches exclude brakes, the second witness shows which comparisons still support that result. Either branch may report a contradictory history. The comparison applies to one recorded unchosen option at a time and runs the same solver twice. The next offer still needs the support and choice appropriate to the new occasion.
+
+The [late workshop booking](CANDIDATE.md#as-departure-and-the-next-offer) gives a known limit. A permits forwarding a 17:40 departure time. A check ending at 17:50 falls outside that menu. If A explicitly declined in this two-option comparison, the row would contain only `decline`, with no edge against a qualified check. If the record says only that A left with the check outstanding, leave the choice unobserved. The time suffices to correct the menu and the reason stays private.
 
 ## Files and execution
 

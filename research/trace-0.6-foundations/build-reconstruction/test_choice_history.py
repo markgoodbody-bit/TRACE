@@ -241,6 +241,18 @@ class DisputedAvailabilityTests(unittest.TestCase):
                          [0, 1])
         self.assertEqual(result["if_unusable"]["possible_next_choices"], ["a"])
 
+    def test_a_check_outside_the_departure_limit_supplies_no_comparison(self):
+        # A check ending at 17:50 does not fit this learner's 17:40 departure.
+        # This input separately stipulates an explicit decline.
+        check, decline = "qualified check", "decline"
+        wrongly_recorded = [{"usable": [check, decline], "chosen": decline}]
+        next_menu = [check, decline]
+        corrected = compare_availability(wrongly_recorded, next_menu,
+                                         {"history_index": 0, "option": check}, explain=check)
+        self.assertEqual(corrected["if_usable"]["witness"]["kind"], "excluded")
+        self.assertEqual(corrected["if_unusable"]["possible_next_choices"], next_menu)
+        self.assertEqual(corrected["if_unusable"]["witness"]["kind"], "possible")
+
     def test_check_requires_a_real_row_and_an_unchosen_recorded_option(self):
         history = [{"usable": ["a", "b"], "chosen": "a"}]
         for disputed in (None, {"option": "b"}, {"history_index": True, "option": "b"},
