@@ -207,13 +207,22 @@ def compare(usable_now, observed_choice, usable_next):
     }
 
 
+def _unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON field: {key}")
+        result[key] = value
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stdin", action="store_true",
                         help="read JSON history and next menu, with optional witness and availability check")
     if parser.parse_args().stdin:
         try:
-            request = json.load(sys.stdin)
+            request = json.load(sys.stdin, object_pairs_hook=_unique_object)
             required = {"history", "usable_next"}
             allowed = required | {"explain", "check_availability"}
             if not isinstance(request, dict) or not required <= request.keys() <= allowed:
