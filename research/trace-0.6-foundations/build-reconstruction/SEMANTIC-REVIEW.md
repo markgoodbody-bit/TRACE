@@ -271,3 +271,43 @@ Campfire read Build’s [first-decision passage at 634cdee2](https://github.com/
 | [B0076](TRACE-v0.5-reference.md#L229-L230) | COMPRESSED for the same handover | The case gives the edition-local revision kinds, four decisions on a revision, and the evidence, contract and dates that could support each. A dated later reopening leaves the historical closure compatible with the evidence. |
 
 Changing only the report can change the enquiry. A new booking needs evidence for the correct venue and date. The makerspace notice concerns a different venue from B’s lab grant. Changing B’s choice needs B’s own answer. The manuscript uses the typed labels as readings that a person can challenge. The complete interchange declarations, their source and witness fields, and the remaining use-site guards still need their own comparisons.
+
+## A future after refusal, 25 November 2026
+
+The [next-season application](CANDIDATE.md#can-the-musician-apply-next-season) asks what the musician can still do after declining ranking. The observed booking, fee and confirmed exclusion from both listing and score stay fixed. The goal is an eligible unranked application by the next season’s deadline. The comparison is filing through one fixed channel versus acting on a timely, accurate answer from the rule holder. Both plans leave the musician free to decline to file. We have stipulated two filing channels, one submission and three possible rules. A claim about an actual venue would need its rules and evidence of any other usable routes.
+
+This exercise puts the [foundations’ compression condition](../SYNTHESIS.md#7-recursive-refinement-make-compression-answerable) into a decision. Restricting the table to the first two rows makes “an unranked route exists” true throughout. The desk column and the portal column each contain a zero. A single filing choice based on that handover therefore cannot guarantee a valid application. A timely rule-specific answer supplies the missing distinction. In the third row changing what the musician knows leaves both channels closed under the stated terms. There is no probability distribution over the rules in this exercise.
+
+This is a case-level reading of F06 (usable refusal) and F09 (a supported future) within B0091. It retains the affected musician’s stated aim, two different horizons, the booking and listing witnesses, the alternative courses of action, the next rule holder and the time needed for the answer to matter. The fifteen-clause block stays partial. [0.5 clauses](TRACE-v0.5-reference.md#L270-L273) · [0.4 control](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md#L166-L176) · [0.4 comparison and actor knowledge](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md#L243-L273)
+
+The replay below reads the table in the manuscript. The columns name the channel the musician actually uses. Waiting for a reply is one plan. If no answer arrives under that plan, the calculation records no filing. Someone may choose a fixed channel instead. Run from this directory with Python 3.10 or later.
+
+```python
+from pathlib import Path
+
+text = Path("CANDIDATE.md").read_text(encoding="utf-8")
+case = text.split("#### Can the musician apply next season?", 1)[1].split("\n### ", 1)[0]
+rows = []
+for line in case.splitlines():
+    if line.startswith("| "):
+        _, desk, portal = (cell.strip() for cell in line.strip("|").split("|"))
+        if desk in {"0", "1"} and portal in {"0", "1"}:
+            rows.append((int(desk), int(portal)))
+assert rows == [(1, 0), (0, 1), (0, 0)]
+
+def results(channels, start, chooses_to_file=True):
+    in_time = start is not None and start + 6 < 12 * 60
+    return tuple(row[channel] if chooses_to_file and in_time and channel is not None else 0
+                 for row, channel in zip(rows, channels, strict=True))
+
+desk, portal = 0, 1
+early, boundary = 11 * 60 + 53, 11 * 60 + 54
+directions = (desk, portal, None)
+assert results((desk, desk, desk), early) == (1, 0, 0)
+assert results((portal, portal, portal), early) == (0, 1, 0)
+assert results(directions, early) == (1, 1, 0)
+assert results(directions, boundary) == (0, 0, 0)
+assert results((portal, desk, None), early) == (0, 0, 0)
+assert results((None, None, None), None) == (0, 0, 0)
+assert results(directions, early, chooses_to_file=False) == (0, 0, 0)
+```

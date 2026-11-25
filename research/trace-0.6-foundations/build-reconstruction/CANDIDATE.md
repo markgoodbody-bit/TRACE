@@ -162,7 +162,7 @@ Following [Gordon's ecological questions](https://doi.org/10.1111/ede.12439), ex
 
 ## 5. Clocks, correction and construction
 
-Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available. For a proposed pause, trace the warning to someone who can act within scope, then ask how they can verify the effect before the boundary. The [dispatch case](CANDIDATE.md#a-warning-before-dispatch) works through this route. When an offer keeps a decision open, verify the hold and the route for each answer the offer promises. [See the ranking hold](CANDIDATE.md#hold-the-listing-while-the-musician-decides).
+Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available. For a proposed pause, trace the warning to someone who can act within scope, then ask how they can verify the effect before the boundary. The [dispatch case](CANDIDATE.md#a-warning-before-dispatch) works through this route. When an offer keeps a decision open, verify the hold and the route for each answer the offer promises. See the [ranking hold](CANDIDATE.md#hold-the-listing-while-the-musician-decides) and [the musician’s next-season application](CANDIDATE.md#can-the-musician-apply-next-season).
 
 Several organisations responding within their own remit do not necessarily provide a route to the result. Where a route crosses boundaries, identify who coordinates it, who can authorise the necessary steps, what actually reaches the affected target, and who bears navigation and evidence work. A claim moving between offices is not itself a repair.
 
@@ -339,6 +339,22 @@ The new slot needs the same three minutes to apply a decision, with registration
 | No answer | The queued entry commits. | The entry closes unlisted. The decision remains unanswered. |
 
 The hold needs the operator's record for this booking and a supported route for later registration. An operator able to stop an entry may still lack a later slot. Check what work it takes to keep that slot available and who would wait if capacity is shared. A musician who needs the listing by 11:50 has an earlier aim to account for. Carry any use of the score in next season's bookings on its own terms.
+
+#### Can the musician apply next season?
+
+Take the version where the desk confirms today’s paid gig and the operator confirms that the musician’s refusal kept this performance out of both the public list and the score. The musician wants to apply next season without entering the ranking. What can the desk promise from those two records?
+
+Suppose the musician can file one application, either at the desk or through the portal. Filing takes six minutes and must finish **before noon on the application day**. Both channels are accessible to the musician. These are the only channels in this example. Consider three possible booking rules, all consistent with today’s handover. Each entry shows whether a timely filing through that channel would count towards the musician’s stated aim.
+
+| Rule in force next season | File at the desk | File through the portal |
+| --- | ---: | ---: |
+| Unranked applications go through the desk | 1 | 0 |
+| Unranked applications go through the portal | 0 | 1 |
+| Only applicants who opt in to ranking are eligible | 0 | 0 |
+
+Let $o$ be today’s handover and $\gamma(o)$ the rules consistent with it. Let $S_c$ contain the rules under which a timely application through channel $c$ counts. In this example the desk can promise the musician a particular channel on the strength of $o$ only if $\gamma(o)\subseteq S_c$. Even learning that unranked applications are accepted leaves the first two rows. Each has a working channel. Neither channel works in both. From today’s records, the musician’s eligibility under the rule in force is **unknown**.
+
+The desk can ask the person who sets next season’s bookings which rule applies and get the answer back to the musician. If the reply names the right channel and reaches the musician at 11:53, they can finish at 11:59 if they choose to apply. Starting at 11:54 would finish at noon and miss the cutoff. Under the ranked-only rule, directions alone leave both entries at zero. An authorised change admitting unranked applications could open a route if it takes effect and reaches the musician while they can use it. Selection for a gig is a later decision. [Supported prospects in 0.4](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md#L261-L273) · [Compression and the actor’s available information](../SYNTHESIS.md#7-recursive-refinement-make-compression-answerable)
 
 ### Which check can change the booking?
 
