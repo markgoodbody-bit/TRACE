@@ -70,9 +70,13 @@ def review_blocks(raw, headings):
 
 def render_spine(candidate):
     preface, *sections = re.split(r"(?m)(?=^## [1-8]\. )", candidate)
-    _, heading, decision = preface.partition("\n\n" + DECISION_HEADING + "\n\n")
+    introduction, heading, decision = preface.partition("\n\n" + DECISION_HEADING + "\n\n")
     if not heading or not decision.strip():
         raise ValueError("candidate first-decision guidance required")
+    edition_title, _, opening = introduction.partition("\n\n")
+    lead = opening.partition("\n\n")[0]
+    if not edition_title.startswith("# TRACE ") or not lead.strip():
+        raise ValueError("candidate edition title and opening paragraph required")
     mapping = {}
     for part in sections:
         found = re.match(r"## ([1-8])\. ", part)
@@ -85,26 +89,20 @@ def render_spine(candidate):
     excerpts = []
     for n in SELECTED:
         paragraphs = mapping[n].split("\n\n")
-        title = paragraphs[0][3:]
-        anchor = re.sub(r"[^a-z0-9 -]", "", title.lower()).replace(" ", "-")
+        section_title = paragraphs[0][3:]
+        anchor = re.sub(r"[^a-z0-9 -]", "", section_title.lower()).replace(" ", "-")
         excerpts.append(paragraphs[0] + "\n\n" + paragraphs[1] +
                         f"\n\n[Expand section {n}](CANDIDATE.md#{anchor})")
-    return ("# TRACE 0.6 generated first-decision spine\n\n"
-            "Research candidate. The [review ledger](review-decisions.json) records "
-            "source comparisons. Unreviewed material remains UNRESOLVED.\n\n"
-            "Use class: a first decision on an intervention affecting another participant. "
-            "Expand the candidate and the released source when omitted detail changes "
-            "authority, burden, consent, evidence, time or a constructive possibility. "
-            "A missing material distinction means UNKNOWN, not permission.\n\n"
-            "For an observed choice history, [compute the possible next choices]"
-            "(README.md#possible-next-choices).\n\n"
+    return (f"{edition_title} (short spine)\n\n{lead}\n\n"
+            "Use this view for a first decision affecting another participant. "
+            "The [full working edition](CANDIDATE.md) carries the worked cases and their assumptions. "
+            "The [review ledger](review-decisions.json) marks gaps in the comparison with 0.5. "
+            "Material without a completed comparison remains UNRESOLVED.\n\n"
             + DECISION_HEADING + "\n\n" + decision.rstrip() + "\n\n"
-            + "Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; "
-              "controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; "
-              "the co-evolving social layer of the paired worked case and its limits. In the community return, distinguish "
-              "proposed from accepted room revision; supported from independent performance; the unfinished earlier aim from "
-              "a later choice; a conditional offer from an agreed session; and unresolved room, tool and maintenance arrangements. "
-              "A section's later paragraphs are omitted here. Use the section links below, the "
+            + "Expand a section when another person’s aim, a condition of consent, a clock or a shared resource "
+              "could change the next act. In the co-evolving social layer of the workshop, notice who can keep the "
+              "room and equipment available after the first session and who can still choose to leave. Use the "
+              "section links below, the "
               "[donor and case index](DONOR-AND-CASE-INDEX.md), or the "
               "[released v0.5 reference](TRACE-v0.5-reference.md) to inspect them.\n\n"
             + "\n\n".join(excerpts) + "\n")

@@ -1,6 +1,8 @@
-# TRACE v0.5.0 — current released research specification
+# TRACE
 
 TRACE is a voluntary structural language for examining and developing possible futures under uncertainty. It connects participants' aims, evidence, usable routes, timing, burdens, refusal and correction across a changing situation.
+
+**TRACE 0.6 working edition** · [Read the short spine](research/trace-0.6-foundations/build-reconstruction/SPINE.md) · [Read the full working manuscript](research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md) · [Run the mathematics](research/trace-0.6-foundations/build-reconstruction/README.md)
 
 **Current release: [Read the complete TRACE v0.5.0 specification](TRACE-v0.5.md).**
 
@@ -33,7 +35,7 @@ Parsing does not authenticate evidence, confer permission or perform an action. 
 
 ## Ongoing editorial work
 
-The [working manuscript](TRACE-WORKING.md) carries reviewed post-v0.5.0 prose changes: clearer stair-failure summaries and optional inquiry during a similar activity. It is a working draft, not a new release or evidence of improved outcomes. The current released specification above remains the stable citation target.
+In the [0.6 workshop](research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md#when-a-learners-aim-changes), a learner’s earlier choice could wrongly remove an opportunity they want today. The worked mathematics identifies which choices stay possible and when an answer has to arrive to keep a particular route open. The [earlier 0.5 working manuscript](TRACE-WORKING.md) preserves the stair correction and optional inquiry that fed the reconstruction.
 
 ## Repository guide
 

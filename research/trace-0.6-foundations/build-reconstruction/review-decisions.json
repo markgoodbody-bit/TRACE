@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "77c7522ec6e664d0cb23986447a63ebd44c4474a4acef99f8d72d5f30303a3ac",
+  "candidate_sha256": "57061c095dfeb0fad8b54e40e6de246317e1849fbd7ea7af086cf2390e532d96",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -263,6 +263,85 @@
       "finding": "The candidate and spine carry source strength, aim ownership and limits material to the next use. The booking return keeps the reservation, the musician's separate answer, the queued default and the operator's verified effect distinct. The workshop return retains each result, contributor burden, unresolved support and upkeep. A public omission and next-season score use keep separate scopes.",
       "destination": "6. A compact view with an escape hatch",
       "remaining": ""
+    },
+    {
+      "block_id": "B0009",
+      "block_sha256": "ce4c2fbbd23ff5267d74d0b1e5ff6cc3bce2cd2386a601e715e0496d13026bfa",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Stop once additional detail cannot affect the decision. Reopen for changed evidence, dependencies, scope or use, and use ordinary or specialist accounts where they are more economical.",
+      "remaining": "",
+      "destination": "One navigation pass"
+    },
+    {
+      "block_id": "B0012",
+      "block_sha256": "973a7cb790cc92a9f92138281c1cbb651732013d922ec911862b174fb1a2dc54",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The first decision and navigation pass keep baseline, horizon, observer, each participant’s purposes, constructive possibilities, harm, refusal, witnesses, time for correction and an answerable next act.",
+      "remaining": "",
+      "destination": "One navigation pass"
+    },
+    {
+      "block_id": "B0015",
+      "block_sha256": "3b690f683192447f2c1d7b032c0832dd33d089b73745dbf5b8a5411412836975",
+      "status": "PARTIAL",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The shared navigation passage follows signals, maps, participant-scoped options, contribution, outcome witnesses and the return to another decision.",
+      "remaining": "The 0.5 notation separates retained history from the attributed working-belief map more explicitly than this short view."
+    },
+    {
+      "block_id": "B0028",
+      "block_sha256": "206f53f518256a116c954105be14eb3f3d7e15c78eddf04d68f95d193a83f419",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The dated reopening changes the next inquiry. The handover retains A’s earlier commitment and changed proposal, untested stairs, B’s costs and separate teaching choice, disputed or missing warrant and unowned maintenance.",
+      "remaining": "",
+      "destination": "What can each map-maker do next?"
+    },
+    {
+      "block_id": "B0094",
+      "block_sha256": "a496734db34cc14904db694b93e780c87d00d7a8c8cea782fb33ed746db82b14",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The strict condition relates an actual protective effect to the particular loss and its boundary.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0095",
+      "block_sha256": "ea6c390da0d2cbf873d5f241d09c935852ce94d9aeabb98e70414dbf9d0dac39",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The explicit e < h condition distinguishes a strict protective effect from an inclusive delivery time. The guide booking separates the two at equality.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0098",
+      "block_sha256": "a80c90694eb6b13555a67a5aff7bb9ef6dc238d87ad5c47944881babffe80d15",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "A shared person or tool needs an actual scheduling decision. The latest-time calculation only covers a declared ordering of required events.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0129",
+      "block_sha256": "2eef5c45d827f1b6f728b0884f24321690742aa05177e54887aa6009337797ba",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The source retains AimRevision and the 0.5 revision kinds. The current comparison adds no revision kind and does not infer a new permission or boundary from a changed aim.",
+      "remaining": "",
+      "destination": "Small linked view — specified, not implemented"
     }
   ]
 }

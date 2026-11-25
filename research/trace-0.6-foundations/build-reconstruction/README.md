@@ -1,6 +1,16 @@
-# TRACE 0.6 reconstruction — Build work in progress
+# TRACE 0.6 working edition · mathematical companion
 
-17 November 2026. This is a first usable construction packet, not a completed semantic audit, complete simulator, release or proof of field value. Origin: released v0.5 at d688c149afc15c90ab51afaf08fe303771e9de20; construction contract 257494ea201d4f0b6b515dd570270fd45cbed234; prior Build 8952a4f84a5ce0ebbcee897927ac2db7a14c0da5; Codex draft PR71 39033c279576d3d824ca90a368731afcbdd993a0; CC public contribution COM954 comment 6932365622. Dave Snowden's private critique was considered as a challenge; no correspondence is reproduced here.
+Begin with the [short spine](SPINE.md) or the [full working manuscript](CANDIDATE.md). The finite calculations here answer different questions about a declared case.
+
+| Question | Calculation |
+| --- | --- |
+| Which choices fit this person’s recorded options and decisions? | [Possible choices and the supporting rows](#possible-next-choices) |
+| Was a past option actually usable? | [Conditional answers for disputed entries](#when-one-past-menu-is-incomplete) |
+| Which offers remain possible if the person’s priorities changed? | [Two periods with an uncertain boundary](#when-the-order-may-have-changed) |
+| How late can an answer arrive and still meet the plan’s deadlines? | [Work back from the required events](#how-late-can-the-answer-arrive) |
+| Would an observation arrive in time to change a booking? | [Workshop inquiry](simulator.py) and [dispatch replay](DISPATCH-REVIEW.md) |
+
+The construction began on 17 November with the [released 0.5 source](TRACE-v0.5-reference.md), the [integration brief](../INTEGRATION-20261117.md), the prior Build work at `8952a4f8`, [Codex’s reproduction](https://github.com/markgoodbody-bit/TRACE/pull/71) and [CC’s challenge](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-6932365622). The [ledger](review-decisions.json) tracks comparisons with the earlier source.
 
 ## Possible next choices
 
@@ -88,6 +98,53 @@ Card remains possible in all eight completions. Under this model, confirming eit
 With `explain`, the output also names each unconfirmed option whose usability on that row would **by itself** exclude the queried next choice. A newly excluded choice has a path from a rival in $F$ through $w$, one new edge and an old path to the queried choice (possibly of length zero). A backwards search from the query identifies those decisive edges. An already excluded choice has no newly decisive edge. For bounded-size IDs, the graph traversals and hash-table operations take expected $O(L+|U|+V+|E|)$ time and $O(V+|E|+|U|)$ auxiliary space. The calculation treats uncertainty on one dated row. Disputes on several rows or evidence that the aim changed require a different comparison.
 
 Two dates can require two answers together. Suppose the learner chose card when the borrowed printer’s availability was disputed, and chose the borrowed printer on another day when makerspace availability was disputed. With card and makerspace on the next menu, either old comparison alone leaves makerspace possible. Both together give `card > borrowed > makerspace`, which excludes it under the model. Compare the full histories explicitly when the question depends on more than one date.
+
+### When the order may have changed
+
+One chooser made $n$ observed choices in chronological order. All listed menus used here have been checked. A supplied range $a\leq k\leq b$ contains the possible boundary between two periods. Exactly $k$ observations precede it. Each period can have its own strict preference order, and the next choice belongs to the second period. The orders are allowed to coincide. The evidence for using this model belongs with the account.
+
+Send this [learner’s request](CANDIDATE.md#when-a-learners-aim-changes) to `python3 choice_history.py --stdin`.
+
+```json
+{"history":[{"chosen":"repair","usable":["repair","teach"]},{"chosen":"teach","usable":["teach","guide"]}],"usable_next":["teach","guide","decline"],"change_window":{"earliest":1,"latest":2}}
+```
+
+```json
+{"status":"compatible","compatible_boundaries":{"earliest":1,"latest":2},"possible_at_some_boundary":["teach","guide","decline"],"possible_at_every_boundary":["teach","decline"]}
+```
+
+For each boundary, the prefix and suffix must both have acyclic comparison graphs. Growing a prefix keeps every cycle it already contains. Shortening a suffix can only remove comparisons. The compatible boundaries therefore form a single interval $[s,p]$, possibly empty. As the boundary moves later within that interval, the current order has fewer constraints. If $P_k$ denotes the possible next choices at $k$, then
+
+$$
+P_s=\bigcap_{k=s}^{p}P_k,\qquad P_p=\bigcup_{k=s}^{p}P_k .
+$$
+
+An option in $P_s$ can win under at least one order for every compatible boundary. Several options can meet that condition. The result supplies neither a choice nor a commitment from the person.
+
+The first occurrence of a comparison decides whether it appears in a prefix. Its last occurrence decides whether it appears in a suffix. Index those two records per comparison, binary-search the two monotone cycle tests, then run the existing winner calculation at the endpoints. For $L$ supplied option occurrences, $V$ distinct options, $E$ distinct comparisons and $W=b-a+1$, the expected time is $O(L+(V+E)\log(W+1))$ and auxiliary space is $O(V+E)$, for bounded-size IDs and hash tables. With `explain`, endpoint witnesses cite original row indices or exhibit a compatible current order. If no split works, the cited prefix and suffix cycles together cover every requested boundary. More changes, errors in the record and other choice rules remain possible explanations. For unresolved menus and a change window together, run each evidenced menu scenario separately.
+
+### How late can the answer arrive?
+
+The illustrated guide is one option A might want. Consider one arranged kit booking on one common clock. It takes four minutes from receiving A’s choice for it to reach the duty desk, two more to complete the booking and ten more to have the kit ready. The booking must complete **before** 17:20. The kit must be ready **by** 17:30. Nobody has assumed how long A takes to decide.
+
+Pass this plan to `python3 simulator.py --deadlines -` on standard input, or replace `-` with a JSON file. IDs name events. Each link supplies a required elapsed time between two events. Each deadline names an event, an instant and its equality rule.
+
+```json
+{"clock":"minutes after 17:00","events":["answer","desk","booking","kit"],"links":[["answer","desk",4],["desk","booking",2],["booking","kit",10]],"deadlines":[["booking",20,"before"],["kit",30,"by"]],"check":{"event":"answer","at":14}}
+```
+
+| Event | Bound on this clock |
+| --- | --- |
+| A’s answer is received | Before 17:14 |
+| It reaches the duty desk | Before 17:18 |
+| Booking is complete | Before 17:20 |
+| Kit is ready | By 17:30 |
+
+An answer received at 17:14 leaves time for the kit. It misses the booking lock exactly. The result cites links 0 and 1 and deadline 0. A different arrangement with the kit deadline alone would allow 17:14. If A has yet to answer, another slot can be offered. Booking evidence and the learner’s own decision are separate inputs.
+
+For an acyclic plan each link $u\to v$ with elapsed time $d$ requires $t_v\geq t_u+d$. Write $D(u)$ for its tightest direct deadline, including whether equality is allowed. Working in reverse topological order, take the tightest among $D(u)$ and every downstream bound $B(v)-d$ on an outgoing link. Subtraction preserves the equality rule. At the same instant “before” is tighter than “by”. Each path to a deadline supplies exactly that deadline minus the sum of its lags. The recurrence takes the tightest across all paths without listing them. Time and space are $O(V+E+D)$ for bounded-size inputs and $D$ supplied deadlines. A requested witness follows one limiting path.
+
+An event with no reachable declared deadline has a `null` bound. All links in one plan are required. Compare alternative plans separately. Parallel jobs that share a person or a tool need an actual allocation and ordering. New lags, missing authority, clock uncertainty or a withdrawn offer can change whether a plan works in practice. [Implementation](event_bounds.py) · [Correction and hardening in the released reference](TRACE-v0.5-reference.md#correction-and-hardening)
 
 ## Files and execution
 
