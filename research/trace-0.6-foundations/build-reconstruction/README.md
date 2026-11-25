@@ -65,7 +65,7 @@ The [late workshop booking](CANDIDATE.md#as-departure-and-the-next-offer) gives 
 
 A learner once chose a borrowed printer when the makerspace printer was also usable. On a later visit they chose card. The desk had listed both printers and drawing by hand that day. Which of those three entries would be worth checking before anyone infers that the learner would turn down a makerspace slot?
 
-Use `check_availability.options` to identify every disputed rival on one listed menu. With several entries, it checks all compatible subsets in two graph passes. The singular `option` request above keeps its two full witness reports.
+Use `check_availability.options` to identify every disputed rival on one listed menu. It computes the bounds from the confirmed graph and the graph with every compatible disputed comparison. The singular `option` request above keeps its two full witness reports.
 
 This example assumes one chooser with a fixed strict ranking. For the next decision, card and the makerspace are both confirmed usable. This is a separate calculation from [A’s account of changing the tactile-map aim](CANDIDATE.md#what-can-each-map-maker-do-next).
 
@@ -77,7 +77,7 @@ This example assumes one chooser with a fixed strict ranking. For the next decis
 {"status":"compatible","possible_in_some_completions":["card","makerspace"],"possible_in_every_compatible_completion":["card"],"conflict_if_usable":[],"availability_check":{"option":"makerspace","history_index":1,"each_alone_rules_out":["borrowed","makerspace"]}}
 ```
 
-Card remains possible in all eight completions. Under this model, confirming either printer on the card day would rule out a future makerspace choice. The borrowed printer matters because the learner had previously chosen it over the makerspace. Confirming drawing alone changes nothing about that inference. The organiser can leave that question alone and offer the now-usable slot directly to the learner.
+Card remains possible in all eight completions. Under this model, confirming either printer on the card day would rule out a future makerspace choice. The borrowed printer matters because the learner had previously chosen it over the makerspace. Confirming drawing alone changes nothing about that inference. Establishing that one printer was unavailable leaves the other printer’s availability open. The organiser can offer the now-usable slot directly to the learner.
 
 **Exact bounds.** Let $G$ be the comparison graph from confirmed options, $w$ the observed winner on the incomplete row, $U$ the unconfirmed alternatives there and $F$ the verified next menu. Any subset of $U$ may have been usable. All other historical rows are complete. A cycle among confirmed comparisons returns the usual contradiction.
 
@@ -86,6 +86,8 @@ Card remains possible in all eight completions. Under this model, confirming eit
 3. Use the [ordinary possible-choice rule](#possible-next-choices) on $G$ and $G^+$. Adding comparisons can only remove possible winners. Both endpoint graphs are compatible completions. Their winner sets therefore give the exact union and intersection, respectively, across all compatible completions. An option in the intersection can win in every completion. Several options can have that property.
 
 With `explain`, the output also names each unconfirmed option whose usability on that row would **by itself** exclude the queried next choice. A newly excluded choice has a path from a rival in $F$ through $w$, one new edge and an old path to the queried choice (possibly of length zero). A backwards search from the query identifies those decisive edges. An already excluded choice has no newly decisive edge. For bounded-size IDs, the graph traversals and hash-table operations take expected $O(L+|U|+V+|E|)$ time and $O(V+|E|+|U|)$ auxiliary space. The calculation treats uncertainty on one dated row. Disputes on several rows or evidence that the aim changed require a different comparison.
+
+Two dates can require two answers together. Suppose the learner chose card when the borrowed printer’s availability was disputed, and chose the borrowed printer on another day when makerspace availability was disputed. With card and makerspace on the next menu, either old comparison alone leaves makerspace possible. Both together give `card > borrowed > makerspace`, which excludes it under the model. Compare the full histories explicitly when the question depends on more than one date.
 
 ## Files and execution
 

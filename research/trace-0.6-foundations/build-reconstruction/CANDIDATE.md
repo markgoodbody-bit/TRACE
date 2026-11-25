@@ -113,11 +113,11 @@ In the original tactile-map example, A wants to learn the layout before starting
 >
 > A’s three-month-old notebook entry reported that the makerspace printer was unavailable. On day 7 A found a notice reporting that the makerspace reopened a month earlier. If A wants to print there, check whether A can book a suitable printer for this job before work starts on day 28.
 
-The reopening is consistent with the older report. A booking could establish access for the next job. A trial would let A judge which features they can read by touch.
+The reopening is consistent with the older report. Ask the keeper to confirm a suitable printer and a session A could use before work starts. A trial would let A judge which features they can read by touch.
 
 The day 5 agreement was for a joint attempt at the whole-floor model. That aim is still unfinished. A now proposes keeping the plastic junctions, trying the stairs in card and asking a colleague for a spoken description. The colleague has yet to be asked. A can pursue the card trial without booking B. Let A decide afterwards whether a visit to the building would help and whom to involve. B could practise on a neutral object if materials and suitable access are available, and decide whether to turn the adjustment into a lesson. Even if B’s lab login works tomorrow, another joint print would need a grant for that date and fresh agreement from both people. [Original encounter and B’s account](TRACE-v0.5-reference.md#L338-L364) · [Neutral-object option](TRACE-v0.5-reference.md#L79-L87) · [Working edition’s correction about the two stair designs](../../../TRACE-WORKING.md#L426-L430)
 
-For a different case where the aim stays fixed and one past option’s availability is unknown, the [choice calculation](README.md#when-one-past-menu-is-incomplete) identifies which fact could change what the next organiser can infer.
+For a different case where the aim stays fixed and some entries on one past menu are unconfirmed, the [choice calculation](README.md#when-one-past-menu-is-incomplete) identifies which facts could change what the next organiser can infer.
 
 ### Compatibility floor: explicit review meanings
 
