@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "acc01157f7163f9faa92f21869483f0dd71bc7995b53a77b28819a70d65bd890",
+  "candidate_sha256": "0348f143ccdeb5b2044d07954d679d08ffb4d40aee4e14e4a6bef6beb0e43945",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -130,20 +130,22 @@
     {
       "block_id": "B0075",
       "block_sha256": "005e8addbcb4c3ba0d7c7a03bf3bccb6536d602fca8f459fd686c5feefc1c0fb",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, author of the makerspace comparison",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate preserves open choices, route uncertainty and revision basis in prose.",
-      "remaining": "Exact typed output statuses and InspectFormation and InspectMemory signatures are not reproduced; preserve the original for those uses."
+      "finding": "The handover names the four route statuses and gives the inputs and practical outputs for ReadRoute, InspectFormation and InspectMemory, including the makers’ open choices and the limits of a dated notice.",
+      "remaining": "",
+      "destination": "Can A book another print?"
     },
     {
       "block_id": "B0076",
       "block_sha256": "11cd53dffaddcf57941026a0b1ba5a764fa937774176c38b19a31e90ded0688d",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, author of the makerspace comparison",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate distinguishes changes of attributed belief, evidence and world and records revision basis and status.",
-      "remaining": "Edition-local formal labels and full scope constraints remain reference-only; no evaluator implements the categories."
+      "finding": "The worked revision distinguishes all four edition-local kinds and all four dispositions. Each claim retains its time, grounds and scope under a named contract, including the rejected reuse of a one-session lab grant.",
+      "remaining": "",
+      "destination": "Can A book another print?"
     },
     {
       "block_id": "B0078",
@@ -346,6 +348,26 @@
       "finding": "The source retains AimRevision and the 0.5 revision kinds. The current comparison adds no revision kind and does not infer a new permission or boundary from a changed aim.",
       "remaining": "",
       "destination": "Small linked view — specified, not implemented"
+    },
+    {
+      "block_id": "B0061",
+      "block_sha256": "dac3a160f9866166adf8af1e9ead5bc8abd91c4ebe052cfac3e7695690bbd1fb",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, source comparison of Build’s worked equations with prior exposure",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The organiser’s decision introduces the mathematical signature as a schematic reading of a worked example and states how far that signature reaches.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
+    },
+    {
+      "block_id": "B0062",
+      "block_sha256": "ae982eceea154470655aad7af489e79d09a94309277d17aced9145cb1341c4c4",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, source comparison of Build’s worked equations with prior exposure",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The donor’s observation, update using prior belief and history, inquiry using available actions and limits, selection under authority, and world transition with other influences each have a corresponding term in the worked equations.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
     }
   ]
 }
