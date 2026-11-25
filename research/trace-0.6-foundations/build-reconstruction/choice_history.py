@@ -290,6 +290,19 @@ def compare(usable_now, observed_choice, usable_next):
     }
 
 
+def load_json_request(stream):
+    """Read one request without letting a later copy silently replace a recorded field."""
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"duplicate JSON field: {key}")
+            result[key] = value
+        return result
+
+    return json.load(stream, object_pairs_hook=unique_object)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stdin", action="store_true",
@@ -297,7 +310,7 @@ def main():
                              "availability check or change window")
     if parser.parse_args().stdin:
         try:
-            request = json.load(sys.stdin)
+            request = load_json_request(sys.stdin)
             required = {"history", "usable_next"}
             allowed = required | {"explain", "check_availability", "change_window"}
             if not isinstance(request, dict) or not required <= request.keys() <= allowed:

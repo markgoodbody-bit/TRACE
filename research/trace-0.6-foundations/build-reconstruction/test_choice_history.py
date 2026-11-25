@@ -306,6 +306,20 @@ class UnconfirmedMenuTests(unittest.TestCase):
         self.assertEqual(result["possible_in_every_compatible_completion"], ["card"])
         self.assertEqual(result["availability_check"]["each_alone_rules_out"], ["makerspace"])
 
+    def test_json_reader_rejects_duplicate_availability_fields(self):
+        prefix = ('{"history":[{"usable":["a","b","c"],"chosen":"a"}],'
+                  '"usable_next":["a","b"],"check_availability":{"history_index":0,')
+        script = str(Path(__file__).with_name("choice_history.py"))
+        for fields in ('"options":["b"],"options":["c"]',
+                       '"options":["c"],"options":["b"]'):
+            with self.subTest(fields=fields):
+                reply = subprocess.run(
+                    [sys.executable, script, "--stdin"], input=prefix + fields + "}}",
+                    text=True, capture_output=True, check=False)
+                self.assertEqual(reply.returncode, 2)
+                self.assertIn("duplicate JSON field: options", reply.stderr)
+                self.assertEqual(reply.stdout, "")
+
     def test_unconfirmed_facts_need_one_known_observation_and_distinct_statuses(self):
         history = [{"chosen": "a", "usable": ["a", "b"]}]
         for invalid in (

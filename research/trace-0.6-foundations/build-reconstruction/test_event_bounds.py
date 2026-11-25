@@ -4,6 +4,7 @@ import sys
 import unittest
 from itertools import product
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from event_bounds import event_bounds
 
@@ -90,3 +91,21 @@ class EventBoundsTests(unittest.TestCase):
                              capture_output=True)
         self.assertEqual(run.returncode, 0, run.stderr)
         self.assertEqual(json.loads(run.stdout), event_bounds(guide_booking()))
+
+    def test_conflicting_deadline_fields_are_rejected_from_stdin_and_file(self):
+        strict = '"deadlines":[["booking",20,"before"]]'
+        inclusive = '"deadlines":[["booking",20,"by"]]'
+        command = [sys.executable, str(Path(__file__).with_name("simulator.py")), "--deadlines"]
+        with TemporaryDirectory() as folder:
+            path = Path(folder) / "plan.json"
+            for first, second in ((strict, inclusive), (inclusive, strict)):
+                request = ('{"clock":"minutes","events":["booking"],"links":[],'
+                           + first + ',' + second + ',"check":{"event":"booking","at":20}}')
+                path.write_text(request, encoding="utf-8")
+                for source in ("-", str(path)):
+                    with self.subTest(first=first, source=source):
+                        reply = subprocess.run(command + [source], input=request if source == "-" else "",
+                                               text=True, capture_output=True)
+                        self.assertEqual(reply.returncode, 2)
+                        self.assertIn("duplicate JSON field: deadlines", reply.stderr)
+                        self.assertEqual(reply.stdout, "")

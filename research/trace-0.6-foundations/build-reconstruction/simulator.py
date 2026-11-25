@@ -7,6 +7,7 @@ import sys
 from fractions import Fraction
 from pathlib import Path
 
+from choice_history import load_json_request
 from event_bounds import event_bounds
 
 
@@ -207,9 +208,10 @@ def main():
     if args.deadlines is not None:
         try:
             if args.deadlines == "-":
-                plan = json.load(sys.stdin)
+                plan = load_json_request(sys.stdin)
             else:
-                plan = json.loads(Path(args.deadlines).read_text(encoding="utf-8"))
+                with open(args.deadlines, encoding="utf-8") as stream:
+                    plan = load_json_request(stream)
             result = event_bounds(plan)
         except (ValueError, OSError) as error:
             parser.error(str(error))
