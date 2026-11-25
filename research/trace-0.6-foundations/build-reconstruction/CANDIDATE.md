@@ -19,11 +19,20 @@ Ask A what they would like to do next. If they still want to adjust their own br
 
 ### One navigation pass
 
-Take a difference someone cares about. Relative to which starting point, for whom, and over what time could something be created, sustained or lost? For reader $i$, write $x_i(t)=\Pi_i^t(w_t)$ for the signal their observation route supplies about the world at time $t$. Record what that route can reach, what it leaves out and, where it matters, who controls it. Read the signal alongside its source and the history behind the reader’s working map. Another participant may see something different or value a different future.
+The workshop organiser counts attendance. A says they want to try the brake adjustment unaided and have a qualified person check it before they leave. Keep the attendance record and add the question A’s account makes relevant. What can A do and have checked within the time they have?
 
-Keep the options each participant could use at the time, the constraint on each option, and who could choose, share a decision, delay or decline. If someone acts, observe what follows through each affected participant’s route. Check whether two witnesses drew on the same report. Carry the supported change, competing accounts, earlier commitments and remaining possibilities into the next decision. An entry in a map can change while the booking, the equipment and the person’s options stay exactly as they were.
+The organiser can offer one slot. A 20-minute demonstration lets A watch. A 40-minute practice lets A attempt the adjustment and have it checked. The room and kit are ready, both offers are authorised, and a qualified helper has agreed to check this bike today. Before making the offer the organiser has even odds that A has 20 or 40 minutes. In this worked comparison A takes the offer if it fits. A still decides what to do in the room, including whether to stop or leave.
 
-Two quantities do different jobs in the workshop. A booking change at 17:08 beats the 17:10 lock ($17{:}08 < 17{:}10$). A check ending at 17:35 fits A’s inclusive 17:40 departure limit ($17{:}35 \leq 17{:}40$). A desk receipt alone establishes neither event. For a different question, [check which past choices still bear on a present offer after an aim changes](CANDIDATE.md#when-a-learners-aim-changes). Use ordinary words or a specialist method whenever they carry the answer more economically. Stop adding detail when it cannot affect this decision. Reopen the account when the evidence, dependencies, scope or intended use change.
+| Outcome by A’s departure limit | Demonstration | Practice | Practice minus demonstration |
+| --- | ---: | ---: | ---: |
+| A attends | 1 | 1/2 | −1/2 |
+| A tries unaided and the helper checks the attempt | 0 | 1/2 | +1/2 |
+
+Use the same evidence and deadline for each pair of figures. Practice is the offer that can meet A’s stated aim in this example. Before A leaves, ask what A tried and what the helper actually checked. Return the result to A while they can still correct the account and decide what to do with it. Check who carries the helper’s time and cost before promising another session. A’s ability to do the job at home remains open.
+
+Can the venue and helper keep the slot changeable long enough for A to choose how to use it? If they agree, keep the confirmed demonstration available and [ask while A’s reply can change the booking](CANDIDATE.md#let-as-reply-change-the-booking).
+
+Use the [full working and glyph key](CANDIDATE.md#one-offer-two-outcomes) to see where evidence, choice and observable change enter the calculation. The [booking example](CANDIDATE.md#as-departure-and-the-next-offer) uses a strict reservation lock and an inclusive departure limit. Use ordinary words or a specialist method whenever they carry the answer more economically. Stop adding detail when it cannot affect this decision. Reopen when the evidence, support or purpose changes.
 
 ## 1. Begin with a living situation
 
@@ -38,6 +47,68 @@ Different participants can hold conflicting maps, aims and clocks. Some processe
 Not asked, inaccessible, disputed and deliberately withheld can overlap; where the difference matters, retain the holder, scope and source. A person's choice to withhold is a boundary, not automatically a gap others are entitled to fill. Silence alone proves neither refusal nor withholding.
 
 When uncertainty is an input to action or delay, identify the actor, policy or default that selects it where the evidence permits; uncertainty itself is not a selector. The responsible selector may remain unknown or distributed.
+
+### One offer, two outcomes
+
+The organiser has an attendance register and A’s statement about the brake adjustment. Those are two sources with different reach. A can say which future they want and what they attempted. The helper can say what they checked. An attendance tick can establish presence under the register’s rules. On its own it leaves the attempted work, the check and A’s continuing capability open. A’s stated aim gives the organiser reason to add a criterion to the working account while keeping the evidence about attendance.
+
+The selective-causal loop is a way to read the encounter. The organiser, A and the helper can hold different accounts, scopes and clocks. Selection can be shared across them, and some changes, such as a slot expiring, may have no evidenced selector. Asking whether someone is available can itself change the situation when that person chooses to offer help.
+
+| Glyph | Read it in the workshop |
+| --- | --- |
+| $w_t$, $\Pi_i^t$, $x_i(t)$ | The situation at time $t$, the observation route for participant $i$, and what comes through it. Name the targets, exclusions and custody that could affect the decision. A’s statement, the register and the helper’s observation reach different parts of the situation. |
+| $M_i$, $H_i$, $B_i$ | The represented map of constraints and routes, the retained history, and the working belief the person uses or has reported. For the organiser, keep A’s dated report and the old attendance record in $H_i$. Attribute the working account $B_i$ from their words or actions within a stated aperture. Their inner mechanism remains outside this evidence. |
+| $U_i$, $Q_i$ | Updating the working account on warranted evidence, and posing a question or candidate action from that account and the usable options. A newly stored report may still await review. A proposed check still needs authority to make the inquiry and the helper’s agreement to do the work. |
+| $\sigma_i$, $a_i$ | A person’s or a policy’s contribution to selection, and the resulting action, delay or refusal. The organiser can offer the slot, A can accept or decline it, and the helper chooses what they will undertake. A possibility in the map supplies none of those decisions by itself. |
+| $\Phi$, $\Pi_j^{t+1}$, ↩ | The change after the actions, a later observation of it and a return to a recipient who can still respond. Booking a session changes the reservation. A’s attempt and the helper’s check are later events. Return their scoped accounts and any disagreement to A while the next choice remains usable. |
+
+With $o$ the organiser and $h$ the helper, the 0.5 schematic functions can be read as follows.
+
+$$
+\begin{aligned}
+x_i(t)&=\Pi_i^t(w_t), &
+B_i(t)&=U_i(B_i(t^-),H_i(t),x_i(t)),\\
+q_i(t)&=Q_i(B_i(t),\mathcal A_i(t),\mathcal L_i(t)), &
+a_i(t)&=\sigma_i(q_i(t),\text{applicable policy or authority}),\\
+w_{t+1}&=\Phi(w_t,a_o(t),a_A(t),a_h(t),\varepsilon_t), &
+x_j(t+1)&=\Pi_j^{t+1}(w_{t+1}).
+\end{aligned}
+$$
+
+Here $\mathcal A_i$ carries the actions in view and $\mathcal L_i$ the applicable limits or value inputs. $\varepsilon_t$ stands for other influences on the transition. The signature describes the distinctions a reader needs. It supplies neither an executable controller nor a theory of how a participant thinks. An attributed revision of $B_i$ establishes a change in the working account at the stated warrant. Changes to the booking or to the bike require their own outcome evidence.
+
+#### Compare the offers
+
+Let $\rho$ be the demonstration and $\pi$ the practice offer. The model $m$ gives A either 20 or 40 minutes, with long-window probability $p$ conditional on the common evidence $E$ available before the offer. The organiser has one slot and learns which window applies only after making the offer. In this model the outcome can occur at the endpoint of A’s window. For either offer in a given world, the completion deadline is the same $T_A=t_0+\text{A’s available minutes}$.
+
+$$
+J_m(s;G,T_A)=\Pr_m^s(G\text{ achieved by }T_A\mid E),
+\qquad
+D_m(\pi:\rho;G,T_A)=J_m(\pi;G,T_A)-J_m(\rho;G,T_A).
+$$
+
+The demonstration fits either window and supplies no unaided checked attempt in the session. Practice fits the long window and yields the checked attempt if A takes it and the agreed check happens, as stipulated in the model. So the absolute prospects for attendance and a checked attempt are $(1,0)$ under $\rho$ and $(p,p)$ under $\pi$. The paired differences are $(p-1,p)$. At $p=1/2$ these give the two results in the [first-decision reading](CANDIDATE.md#one-navigation-pass). [Exact replay](navigator_reasons.py) · [Hope comparison and typed outcomes](../SYNTHESIS.md#2-a-common-mathematical-setting)
+
+If the organiser learns the actual time in advance, they can reconsider the offer using that evidence. If the helper withdraws, the practice plan loses a condition the calculation used. Keep a protective outcome, such as A retaining a usable way home by their deadline, in its own field. Establishing the attempt or the check still leaves its scope, A’s ability to leave and the arrangements at home to be evidenced.
+
+In one continuation A has 40 minutes, chooses to try, finishes the attempt and the helper checks it. The helper’s own observation can support the check claim. The organiser’s copy of the helper’s report has the same origin. If A says somebody had to take over part of the task, keep both accounts and check which step they cover. Carry the disagreement or a warranted correction before reporting what A did unaided. Ask A what they want to do next and keep any unfulfilled part of their aim, the choice to leave and the check’s actual scope in the handover.
+
+#### Let A’s reply change the booking
+
+Suppose the venue and helper agree to leave the same slot changeable. The organiser can ask whether A wants to watch, try the adjustment or leave it today, with a confirmed demonstration available while a switch is possible. In this continuation A would ask to watch with 20 minutes and ask to practise with 40. Keep that assumption and the consenting support fixed across the comparison. Within each plan, A can still decline.
+
+On the booking clock, a change takes one minute and must take effect strictly before minute 10. A reply at minute 8 can change the booking at 9. A reply at minute 9 would reach the effect at 10 and miss the lock. This is separate from the inclusive deadline for the check during the session. If a timely request switches each long-window case to practice, the absolute prospects are $(1,p)$ under the same attendance and check assumptions as before. If the switch misses the lock and the fitting demonstration is taken, the prospects are $(1,0)$. Silence leaves that offer available and A’s choice open. Name who keeps the slot and helper’s time free and what that commitment costs. [Campfire’s worked comparison](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7161796035)
+
+#### Carry the helper’s agreement and the cost
+
+The same organiser belief $B_o$ about A’s aim and the feasibility of today’s offer can fit two different cost records with the same prospects. Suppose the practice runs and needs 20 extra minutes of the helper’s time. Here the burden field names its bearer and units.
+
+| Terms for today’s extra work | Extra time worked by the helper | Who carries the additional cost | What another session needs |
+| --- | ---: | --- | --- |
+| The venue pays the agreed fee | 20 minutes | The venue pays the fee. The helper supplies the time. | Authority to use the relevant budget and an available helper’s agreement for the new session. |
+| The helper gives the time unpaid | 20 minutes | The helper gives 20 minutes of unpaid work. | A fresh offer of time from an available, willing helper, or a different arrangement. |
+
+These entries cover an actual practice turn in the example. The cost of reserving unused time would need its own terms. Today’s agreement finishes at its stated scope. Before offering a second session, the organiser must establish what can be booked and what A wants, with the parties still free to decline. Keep the working belief $B_o$ and the typed burden field distinct even when an account of today’s success stays the same.
 
 ## 2. People, relationships and possibilities
 
@@ -349,7 +420,7 @@ At 10:18, what can the steward establish, who can act next, and what can continu
 
 The 10:22 fallback call deadline and the 10:30 release boundary do different work. A hold taking effect at 10:30 gives no assured lead over release on this clock. Record when the observation was made, who received it, who had authority, and what the dispatch desk can verify. Independence is specific to what is being established. The venue observation and the dispatch record support different claims. An outside reviewer can still inherit the planning team's source if they see only its copies.
 
-A pause preserves time to recover a usable plan. Recovery still takes a venue that people can reach, a willing driver and a way to tell the relevant households. Record remaining burdens for people who have already set out or lost their slot.
+A pause preserves time to recover a usable plan. Check with the venue and a driver who can choose to help. Once both agree to a reachable arrangement, offer it through a channel the households can use. Each household can take it or decline. Record costs already borne by people who set out or lost their slot. Name who will follow up each cost whichever way the household decides. If responsibility for repayment is still open, tell the people affected and identify who will check it.
 
 The [local replay](dispatch.py) separates the time a hold takes effect from the time the steward receives dispatch confirmation. The [source review](DISPATCH-REVIEW.md) follows that distinction into the short spine and the reader comparison.
 

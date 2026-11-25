@@ -19,11 +19,20 @@ Ask A what they would like to do next. If they still want to adjust their own br
 
 ### One navigation pass
 
-Take a difference someone cares about. Relative to which starting point, for whom, and over what time could something be created, sustained or lost? For reader $i$, write $x_i(t)=\Pi_i^t(w_t)$ for the signal their observation route supplies about the world at time $t$. Record what that route can reach, what it leaves out and, where it matters, who controls it. Read the signal alongside its source and the history behind the reader’s working map. Another participant may see something different or value a different future.
+The workshop organiser counts attendance. A says they want to try the brake adjustment unaided and have a qualified person check it before they leave. Keep the attendance record and add the question A’s account makes relevant. What can A do and have checked within the time they have?
 
-Keep the options each participant could use at the time, the constraint on each option, and who could choose, share a decision, delay or decline. If someone acts, observe what follows through each affected participant’s route. Check whether two witnesses drew on the same report. Carry the supported change, competing accounts, earlier commitments and remaining possibilities into the next decision. An entry in a map can change while the booking, the equipment and the person’s options stay exactly as they were.
+The organiser can offer one slot. A 20-minute demonstration lets A watch. A 40-minute practice lets A attempt the adjustment and have it checked. The room and kit are ready, both offers are authorised, and a qualified helper has agreed to check this bike today. Before making the offer the organiser has even odds that A has 20 or 40 minutes. In this worked comparison A takes the offer if it fits. A still decides what to do in the room, including whether to stop or leave.
 
-Two quantities do different jobs in the workshop. A booking change at 17:08 beats the 17:10 lock ($17{:}08 < 17{:}10$). A check ending at 17:35 fits A’s inclusive 17:40 departure limit ($17{:}35 \leq 17{:}40$). A desk receipt alone establishes neither event. For a different question, [check which past choices still bear on a present offer after an aim changes](CANDIDATE.md#when-a-learners-aim-changes). Use ordinary words or a specialist method whenever they carry the answer more economically. Stop adding detail when it cannot affect this decision. Reopen the account when the evidence, dependencies, scope or intended use change.
+| Outcome by A’s departure limit | Demonstration | Practice | Practice minus demonstration |
+| --- | ---: | ---: | ---: |
+| A attends | 1 | 1/2 | −1/2 |
+| A tries unaided and the helper checks the attempt | 0 | 1/2 | +1/2 |
+
+Use the same evidence and deadline for each pair of figures. Practice is the offer that can meet A’s stated aim in this example. Before A leaves, ask what A tried and what the helper actually checked. Return the result to A while they can still correct the account and decide what to do with it. Check who carries the helper’s time and cost before promising another session. A’s ability to do the job at home remains open.
+
+Can the venue and helper keep the slot changeable long enough for A to choose how to use it? If they agree, keep the confirmed demonstration available and [ask while A’s reply can change the booking](CANDIDATE.md#let-as-reply-change-the-booking).
+
+Use the [full working and glyph key](CANDIDATE.md#one-offer-two-outcomes) to see where evidence, choice and observable change enter the calculation. The [booking example](CANDIDATE.md#as-departure-and-the-next-offer) uses a strict reservation lock and an inclusive departure limit. Use ordinary words or a specialist method whenever they carry the answer more economically. Stop adding detail when it cannot affect this decision. Reopen when the evidence, support or purpose changes.
 
 Expand a section when another person’s aim, a condition of consent, a clock or a shared resource could change the next act. In the co-evolving social layer of the workshop, notice who can keep the room and equipment available after the first session and who can still choose to leave. Use the section links below, the [donor and case index](DONOR-AND-CASE-INDEX.md), or the [released v0.5 reference](TRACE-v0.5-reference.md) to inspect them.
 

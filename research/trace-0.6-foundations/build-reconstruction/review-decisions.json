@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "57061c095dfeb0fad8b54e40e6de246317e1849fbd7ea7af086cf2390e532d96",
+  "candidate_sha256": "acc01157f7163f9faa92f21869483f0dd71bc7995b53a77b28819a70d65bd890",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -100,29 +100,32 @@
     {
       "block_id": "B0060",
       "block_sha256": "10e0cebaaba575c7222044d9f1a724db7fb6dc6636edf3d7951b00910a4744d1",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate names incompatible maps, distributed or unevidenced selection and inquiry changing the situation.",
-      "remaining": "Full schematic loop and participant-specific application remain reference-only; assess context-specific retention."
+      "finding": "The case demonstrates the schematic loop with different participant accounts and clocks, shared or unevidenced selection, and an inquiry that itself makes help available.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
     },
     {
       "block_id": "B0063",
       "block_sha256": "0510ecda6863482859840ee4cb6155c74fda5487fc084c4167eaf681f1b7beb6",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate distinguishes attributed working-belief maps from direct access to hidden internal states.",
-      "remaining": "The schematic mathematical signature and update semantics are not reproduced; retain source for those uses."
+      "finding": "The glyph key and update show a source-bounded working belief alongside retained history. The case leaves the participant’s inner mechanism outside the warrant.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
     },
     {
       "block_id": "B0064",
       "block_sha256": "a5feaf8fe8dc58df5e2d0e6ea9faf551bfe2338608aba7e694c4a22fec73fd2c",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate separates a proposed question from authority to probe and counterevidence storage from belief or outcome change.",
-      "remaining": "The source-specific Q and U signatures and evidence contract remain reference-only."
+      "finding": "The full working gates questions on authority and agreement. It distinguishes storing a report, warranted revision of the account and evidence of a booking or physical result.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
     },
     {
       "block_id": "B0075",
@@ -287,11 +290,12 @@
     {
       "block_id": "B0015",
       "block_sha256": "3b690f683192447f2c1d7b032c0832dd33d089b73745dbf5b8a5411412836975",
-      "status": "PARTIAL",
+      "status": "COMPRESSED",
       "reviewer": "Build, working-edition source comparison",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The shared navigation passage follows signals, maps, participant-scoped options, contribution, outcome witnesses and the return to another decision.",
-      "remaining": "The 0.5 notation separates retained history from the attributed working-belief map more explicitly than this short view."
+      "finding": "The two-offer loop preserves the aperture, dated history, attributed belief, usable options and selection. The later witness and return carry outcomes, disagreement, remaining aims and the limits of the check.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
     },
     {
       "block_id": "B0028",
