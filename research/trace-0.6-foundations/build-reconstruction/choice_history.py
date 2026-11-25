@@ -1,4 +1,4 @@
-"""Compute possible choices from observed usable menus under a fixed strict order."""
+"""Compute possible choices from usable menus within a stated preference model."""
 import argparse
 import json
 import sys
@@ -50,11 +50,13 @@ def _choice_witness(target, offered, predecessors, order):
             "example_ranking": [*ancestors, target, *remaining]}
 
 
-def _comparison_graph(history, next_menu):
+def _comparison_graph(history, next_menu, *, latest=False):
     if not isinstance(history, (list, tuple)):
         raise ValueError("history must be an array of observations")
     predecessors = {option: {} for option in next_menu}
-    for index, observation in enumerate(history):
+    indices = range(len(history) - 1, -1, -1) if latest else range(len(history))
+    for index in indices:
+        observation = history[index]
         if not isinstance(observation, dict) or observation.keys() != {"usable", "chosen"}:
             raise ValueError("each observation must have usable and chosen fields")
         menu = _read_menu(observation["usable"])
@@ -64,7 +66,7 @@ def _comparison_graph(history, next_menu):
         predecessors.setdefault(chosen, {})
         for option in menu:
             if option != chosen:
-                # Keep one source row for a comparison even when it recurs.
+                # First occurrence in this traversal supplies the witness.
                 predecessors.setdefault(option, {}).setdefault(chosen, index)
     return predecessors
 
@@ -117,12 +119,14 @@ def _availability_bounds(predecessors, next_menu, winners, index, chosen, unconf
     return result
 
 
-def _calculate(history, usable_next, explain, unconfirmed_row=None):
+def _next_menu(usable_next, explain):
     next_menu = _read_menu(usable_next)
     if explain is not None and (not isinstance(explain, str) or explain not in next_menu):
         raise ValueError("explain must name an option in usable_next")
-    predecessors = _comparison_graph(history, next_menu)
+    return next_menu
 
+
+def _graph_result(predecessors, next_menu, explain, unconfirmed_row=None):
     try:
         order = list(TopologicalSorter(predecessors).static_order())
     except CycleError as error:
@@ -135,9 +139,9 @@ def _calculate(history, usable_next, explain, unconfirmed_row=None):
 
     winners = _possible_winners(next_menu, predecessors, order)
     if unconfirmed_row is not None:
-        index, extras = unconfirmed_row
+        index, chosen, extras = unconfirmed_row
         return _availability_bounds(predecessors, next_menu, winners, index,
-                                    history[index]["chosen"], extras, explain)
+                                    chosen, extras, explain)
 
     result = {"status": "compatible", "possible_next_choices": winners}
     if explain is not None:
@@ -147,7 +151,8 @@ def _calculate(history, usable_next, explain, unconfirmed_row=None):
 
 def possible_choices(history, usable_next, *, explain=None):
     """Return the possible next winners for a complete history, optionally with a witness."""
-    return _calculate(history, usable_next, explain)
+    menu = _next_menu(usable_next, explain)
+    return _graph_result(_comparison_graph(history, menu), menu, explain)
 
 
 def compare_availability(history, usable_next, disputed, *, explain=None):
@@ -179,7 +184,85 @@ def compare_availability(history, usable_next, disputed, *, explain=None):
             "if_usable": possible_choices(history, usable_next, explain=explain),
             "if_unusable": possible_choices(confirmed, usable_next, explain=explain),
         }
-    return _calculate(confirmed, usable_next, explain, unconfirmed_row=(index, extras))
+    menu = _next_menu(usable_next, explain)
+    return _graph_result(_comparison_graph(confirmed, menu), menu, explain,
+                         unconfirmed_row=(index, row["chosen"], extras))
+
+
+def _segment_graph(occurrences, start, stop):
+    return {option: {parent: index for parent, index in sources.items() if start <= index < stop}
+            for option, sources in occurrences.items()}
+
+
+def _cycle_steps(graph):
+    """Give source rows for a cycle, or None for a compatible segment."""
+    try:
+        TopologicalSorter(graph).prepare()
+    except CycleError as error:
+        return _observed_steps(error.args[1], graph)
+    return None
+
+
+def _first_true(first, last, predicate):
+    """First true point of a monotone predicate, or last + 1 when all are false."""
+    stop = last + 1
+    while first < stop:
+        mid = (first + stop) // 2
+        if predicate(mid):
+            stop = mid
+        else:
+            first = mid + 1
+    return first
+
+
+def choices_across_change(history, usable_next, window, *, explain=None):
+    """Bound next choices with one possible switch between independent strict orders.
+
+    A boundary counts the original observations before the switch. Only supplied
+    boundaries are considered; consistency supplies no evidence about a person's reason.
+    """
+    if not isinstance(history, (list, tuple)):
+        raise ValueError("history must be an array of observations")
+    if not isinstance(window, dict) or window.keys() != {"earliest", "latest"}:
+        raise ValueError("change_window needs earliest and latest boundaries")
+    first, last = window["earliest"], window["latest"]
+    n = len(history)
+    if type(first) is not int or type(last) is not int or not 0 <= first <= last <= n:
+        raise ValueError("boundaries must be integers with 0 <= earliest <= latest <= history length")
+    menu = _next_menu(usable_next, explain)
+    first_seen = _comparison_graph(history, menu)
+    last_seen = _comparison_graph(history, menu, latest=True)
+
+    def before(boundary):
+        return _segment_graph(first_seen, 0, boundary)
+
+    def after(boundary):
+        return _segment_graph(last_seen, boundary, n)
+
+    # Growing a prefix cannot repair a cycle. Shortening a suffix cannot create one.
+    earliest = _first_true(first, last, lambda cut: _cycle_steps(after(cut)) is None)
+    latest = _first_true(first, last, lambda cut: _cycle_steps(before(cut)) is not None) - 1
+    if earliest > latest:
+        conflicts = []
+        if latest < last:
+            cut = latest + 1
+            conflicts.append({"segment": "before", "boundary": cut, "steps": _cycle_steps(before(cut))})
+        if earliest > first:
+            cut = earliest - 1
+            conflicts.append({"segment": "after", "boundary": cut, "steps": _cycle_steps(after(cut))})
+        return {"status": "inconsistent", "conflicts": conflicts}
+
+    early_result = _graph_result(after(earliest), menu, explain)
+    late_result = early_result if earliest == latest else _graph_result(after(latest), menu, explain)
+    result = {
+        "status": "compatible",
+        "compatible_boundaries": {"earliest": earliest, "latest": latest},
+        "possible_at_some_boundary": late_result["possible_next_choices"],
+        "possible_at_every_boundary": early_result["possible_next_choices"],
+    }
+    if explain is not None:
+        result["witnesses"] = {"earliest": early_result["witness"], "latest": late_result["witness"]}
+    return result
 
 
 def choose(ranking, usable):
@@ -210,18 +293,25 @@ def compare(usable_now, observed_choice, usable_next):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stdin", action="store_true",
-                        help="read JSON history and next menu, with optional witness and availability check")
+                        help="read JSON history and next menu, with an optional witness, "
+                             "availability check or change window")
     if parser.parse_args().stdin:
         try:
             request = json.load(sys.stdin)
             required = {"history", "usable_next"}
-            allowed = required | {"explain", "check_availability"}
+            allowed = required | {"explain", "check_availability", "change_window"}
             if not isinstance(request, dict) or not required <= request.keys() <= allowed:
                 raise ValueError("the request needs history and usable_next, "
-                                 "with optional explain and check_availability")
+                                 "with optional explain, check_availability or change_window")
             history, usable_next = request["history"], request["usable_next"]
             explain = request.get("explain")
-            if "check_availability" in request:
+            if "change_window" in request:
+                if "check_availability" in request:
+                    raise ValueError("change_window needs complete historical menus; "
+                                     "resolve the disputed availability or run each menu separately")
+                result = choices_across_change(history, usable_next, request["change_window"],
+                                               explain=explain)
+            elif "check_availability" in request:
                 result = compare_availability(history, usable_next, request["check_availability"],
                                               explain=explain)
             else:

@@ -3,8 +3,11 @@
 import argparse
 import itertools
 import json
+import sys
 from fractions import Fraction
 from pathlib import Path
+
+from event_bounds import event_bounds
 
 
 ROUTES = ("direct", "fallback")
@@ -199,7 +202,19 @@ def main():
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--input", help="local JSON scenario with explicit joint law")
     mode.add_argument("--inquiry", action="store_true", help="compare the workshop checks")
+    mode.add_argument("--deadlines", metavar="FILE", help="work back from event deadlines, or use - for stdin")
     args = parser.parse_args()
+    if args.deadlines is not None:
+        try:
+            if args.deadlines == "-":
+                plan = json.load(sys.stdin)
+            else:
+                plan = json.loads(Path(args.deadlines).read_text(encoding="utf-8"))
+            result = event_bounds(plan)
+        except (ValueError, OSError) as error:
+            parser.error(str(error))
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
     if args.inquiry:
         scenario = json.loads(Path(__file__).with_name("scenario.example.json").read_text(encoding="utf-8"))
         print(json.dumps(workshop_inquiry(scenario["worlds"]), indent=2))

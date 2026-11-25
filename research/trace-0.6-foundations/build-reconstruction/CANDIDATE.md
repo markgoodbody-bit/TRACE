@@ -1,8 +1,8 @@
-# TRACE 0.6 reconstruction — research candidate
+# TRACE 0.6 — working edition
 
-Status: INCOMPLETE. The released v0.5 source has exact spans in crosswalk.json. The [review ledger](review-decisions.json) records comparisons with this reconstruction and their open gaps. Read the source where it could change the decision. Consult each reference-only donor at its recorded scope.
+**How can we make a better future?** Mark originated TRACE as a navigation language for an unfamiliar AI. A human can read and challenge the same account. You can use it from the position of someone choosing, someone affected or someone trying to understand what happened.
 
-Start with a situation and ask what might change, for whom, and what can be preserved or created. The [short spine](SPINE.md) offers a first-decision view; this candidate expands its sections. Use the [community encounter](#7-paired-worked-probe) to see an invented account change through a session, and the [donor and case index](DONOR-AND-CASE-INDEX.md) when an older source contract matters. The [released v0.5 reference](TRACE-v0.5-reference.md) remains available for its full edition-specific detail.
+Use the [short spine](SPINE.md) for a first decision. The [workshop encounter](#7-paired-worked-probe) follows what the people involved learn, make possible and leave unfinished. The [source ledger](review-decisions.json) records which earlier meanings have been checked. Follow the [donor index](DONOR-AND-CASE-INDEX.md) or the [complete 0.5 reference](TRACE-v0.5-reference.md) where an unresolved meaning could change your decision.
 
 ## Start with the next decision
 
@@ -16,6 +16,14 @@ In the [bicycle workshop](CANDIDATE.md#what-next-saturday-needs), A came to lear
 > The organiser saw A mend a puncture on the practice wheel without help. A has a kit at home. How A manages both brakes there is still unknown. Last Saturday’s borrowed tools were returned. A new session needs a keeper to release a kit, a willing volunteer to collect and return it, and someone to open a quiet room C can use. A and C each need time to decide whether to come while other plans are still possible.
 
 Ask A what they would like to do next. If they still want to adjust their own brakes, offer to look for a session where A can do the work and a qualified helper can check it. Ask separately whether A wants to teach puncture repair and whether their name can go on the notice. Ask C directly, while another plan is still possible, whether they want to come.
+
+### One navigation pass
+
+Take a difference someone cares about. Relative to which starting point, for whom, and over what time could something be created, sustained or lost? For reader $i$, write $x_i(t)=\Pi_i^t(w_t)$ for the signal their observation route supplies about the world at time $t$. Record what that route can reach, what it leaves out and, where it matters, who controls it. Read the signal alongside its source and the history behind the reader’s working map. Another participant may see something different or value a different future.
+
+Keep the options each participant could use at the time, the constraint on each option, and who could choose, share a decision, delay or decline. If someone acts, observe what follows through each affected participant’s route. Check whether two witnesses drew on the same report. Carry the supported change, competing accounts, earlier commitments and remaining possibilities into the next decision. An entry in a map can change while the booking, the equipment and the person’s options stay exactly as they were.
+
+Two quantities do different jobs in the workshop. A booking change at 17:08 beats the 17:10 lock ($17{:}08 < 17{:}10$). A check ending at 17:35 fits A’s inclusive 17:40 departure limit ($17{:}35 \leq 17{:}40$). A desk receipt alone establishes neither event. For a different question, [check which past choices still bear on a present offer after an aim changes](CANDIDATE.md#when-a-learners-aim-changes). Use ordinary words or a specialist method whenever they carry the answer more economically. Stop adding detail when it cannot affect this decision. Reopen the account when the evidence, dependencies, scope or intended use change.
 
 ## 1. Begin with a living situation
 
@@ -86,6 +94,8 @@ Following [Gordon's ecological questions](https://doi.org/10.1111/ede.12439), ex
 Track the relevant event ordering. A review after a route closes may improve the record without restoring that route. Protective effect before hardening is strict where specified; a separate delivery-by-deadline contract may be inclusive. A correction route requires accessible capacity and time, not merely a published address. Preserve unattempted alternatives and residual burden when shared capacity cannot satisfy all obligations. For a scheduled opportunity, check what enables each participant to use it in the time available. For a proposed pause, trace the warning to someone who can act within scope, then ask how they can verify the effect before the boundary. The [dispatch case](CANDIDATE.md#a-warning-before-dispatch) works through this route. When an offer keeps a decision open, verify the hold and the route for each answer the offer promises. [See the ranking hold](CANDIDATE.md#hold-the-listing-while-the-musician-decides).
 
 Several organisations responding within their own remit do not necessarily provide a route to the result. Where a route crosses boundaries, identify who coordinates it, who can authorise the necessary steps, what actually reaches the affected target, and who bears navigation and evidence work. A claim moving between offices is not itself a repair.
+
+For a particular harm that hardens at $h$, a protective effect at $e$ must meet $e<h$ to prevent it under that strict boundary. A due-by agreement may instead allow equality. Work backwards from every deadline on the proposed route, including intermediate locks. If two jobs require the same person at the same time, first establish which job they can take and when. Separate timing calculations for the two jobs cannot allocate that person. The [guide booking](README.md#how-late-can-the-answer-arrive) gives an executable example with one named clock and a witness for the limiting deadline.
 
 Urgency, hardening and irreversibility are distinct claims: identify and support the particular boundary being used. Hardening can contribute to an irreversibility claim without establishing it by label alone.
 
@@ -197,6 +207,23 @@ If the coordinator uses booking counts to plan the next month, carry the options
 The [released aim-revision view](TRACE-v0.5-reference.md#L394-L407) supplies the earlier and later account of the aim. The [finite choice example](choice_history.py) shows how two stipulated rankings can yield the same choice when the brake route is unavailable. Its forecast holds the ranking fixed for that comparison. An actual offer can change what A learns or wants, so carry A's next account forward when it arrives.
 
 A previous booking form can list a brake slot while the helper's availability on that occasion is still in question. If A chose wheel truing, keep that choice in both readings. [Check what changes if the brake slot was unavailable](README.md#check-a-disputed-availability-entry). The result can show whether the answer changes what A's earlier choices imply. Other records may still rule out brake practice under the model. A renewed offer depends on suitable support now and what A wants to do.
+
+### When a learner's aim changes
+
+In a separate version of the workshop, A chooses to practise a repair when teaching is also available. On the second booking A chooses to teach when making an illustrated guide is also available. Both alternatives on each occasion were genuinely usable. Before the third booking A tells the organiser that what they want from these sessions has changed since the first booking. A leaves the timing and the reason private.
+
+Today A can teach, work on the guide, or decline. Which of those offers should the organiser keep open? Suppose A had one strict preference order before the change and could have a different one afterwards. The organiser knows the change falls on one side or the other of the second booking.
+
+| If A’s priorities changed… | What the bookings support for today |
+| --- | --- |
+| Before the second booking | A chose teaching over the guide under the current order. Teaching and declining are both possible today. |
+| After the second booking | The record contains no comparison under the current order. The guide, teaching and declining are all possible today. |
+
+Keep the guide on the offer. Ask A what they would like to do with this session. The organiser can put out the drawing materials without asking A to explain when or why their priorities shifted. Someone else’s interest in learning creates no teaching commitment for A. A’s earlier repair practice and any undertaking to return borrowed tools still belong to their original occasions.
+
+For the [exact calculation](README.md#when-the-order-may-have-changed), the boundary counts how many choices came before the possible change. A pair of orders may coincide. The calculation tests which histories fit that assumption. Evidence that a person revised an aim, its effective date, and evidence that they changed a permission each have their own source. In the [map-makers’ handover](CANDIDATE.md#what-can-each-map-maker-do-next), A actually proposes a different outcome. B’s file boundary and the day 5 agreement still stand. The [0.5 aim-revision view](TRACE-v0.5-reference.md#small-linked-view--specified-not-implemented) keeps the attribution and commitment references for readers who need the original notation.
+
+Suppose making the guide today needs a particular kit. Its keeper can have it ready ten minutes after a completed booking. Bookings lock at 17:20 and A needs the kit by 17:30. An answer from A takes four minutes to reach the duty desk and two more to book. If A’s answer is received at 17:13, the booking can finish at 17:19. At 17:14 the booking reaches the lock exactly and that route closes. Tell A the real limit while they still have a choice. If this slot goes, ask whether a later session or another set of materials would help. The [backward calculation](README.md#how-late-can-the-answer-arrive) can be rerun when a keeper changes a time.
 
 ### Keep the gig and ask separately about ranking
 

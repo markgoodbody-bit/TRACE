@@ -1,10 +1,8 @@
-# TRACE 0.6 generated first-decision spine
+# TRACE 0.6 — working edition (short spine)
 
-Research candidate. The [review ledger](review-decisions.json) records source comparisons. Unreviewed material remains UNRESOLVED.
+**How can we make a better future?** Mark originated TRACE as a navigation language for an unfamiliar AI. A human can read and challenge the same account. You can use it from the position of someone choosing, someone affected or someone trying to understand what happened.
 
-Use class: a first decision on an intervention affecting another participant. Expand the candidate and the released source when omitted detail changes authority, burden, consent, evidence, time or a constructive possibility. A missing material distinction means UNKNOWN, not permission.
-
-For an observed choice history, [compute the possible next choices](README.md#possible-next-choices).
+Use this view for a first decision affecting another participant. The [full working edition](CANDIDATE.md) carries the worked cases and their assumptions. The [review ledger](review-decisions.json) marks gaps in the comparison with 0.5. Material without a completed comparison remains UNRESOLVED.
 
 ## Start with the next decision
 
@@ -19,7 +17,15 @@ In the [bicycle workshop](CANDIDATE.md#what-next-saturday-needs), A came to lear
 
 Ask A what they would like to do next. If they still want to adjust their own brakes, offer to look for a session where A can do the work and a qualified helper can check it. Ask separately whether A wants to teach puncture repair and whether their name can go on the notice. Ask C directly, while another plan is still possible, whether they want to come.
 
-Expansion markers: inspect both participants' independent futures; offer, renewal and usable exit; controlled evidence and clocks; strict versus inclusive deadlines; reference-only donors; the co-evolving social layer of the paired worked case and its limits. In the community return, distinguish proposed from accepted room revision; supported from independent performance; the unfinished earlier aim from a later choice; a conditional offer from an agreed session; and unresolved room, tool and maintenance arrangements. A section's later paragraphs are omitted here. Use the section links below, the [donor and case index](DONOR-AND-CASE-INDEX.md), or the [released v0.5 reference](TRACE-v0.5-reference.md) to inspect them.
+### One navigation pass
+
+Take a difference someone cares about. Relative to which starting point, for whom, and over what time could something be created, sustained or lost? For reader $i$, write $x_i(t)=\Pi_i^t(w_t)$ for the signal their observation route supplies about the world at time $t$. Record what that route can reach, what it leaves out and, where it matters, who controls it. Read the signal alongside its source and the history behind the reader’s working map. Another participant may see something different or value a different future.
+
+Keep the options each participant could use at the time, the constraint on each option, and who could choose, share a decision, delay or decline. If someone acts, observe what follows through each affected participant’s route. Check whether two witnesses drew on the same report. Carry the supported change, competing accounts, earlier commitments and remaining possibilities into the next decision. An entry in a map can change while the booking, the equipment and the person’s options stay exactly as they were.
+
+Two quantities do different jobs in the workshop. A booking change at 17:08 beats the 17:10 lock ($17{:}08 < 17{:}10$). A check ending at 17:35 fits A’s inclusive 17:40 departure limit ($17{:}35 \leq 17{:}40$). A desk receipt alone establishes neither event. For a different question, [check which past choices still bear on a present offer after an aim changes](CANDIDATE.md#when-a-learners-aim-changes). Use ordinary words or a specialist method whenever they carry the answer more economically. Stop adding detail when it cannot affect this decision. Reopen the account when the evidence, dependencies, scope or intended use change.
+
+Expand a section when another person’s aim, a condition of consent, a clock or a shared resource could change the next act. In the co-evolving social layer of the workshop, notice who can keep the room and equipment available after the first session and who can still choose to leave. Use the section links below, the [donor and case index](DONOR-AND-CASE-INDEX.md), or the [released v0.5 reference](TRACE-v0.5-reference.md) to inspect them.
 
 ## 1. Begin with a living situation
 

@@ -137,6 +137,8 @@ class LaboratoryTests(unittest.TestCase):
         candidate = build_views.CANDIDATE.read_text(encoding="utf8")
         spine = build_views.render_spine(candidate)
         decision = candidate.split(build_views.DECISION_HEADING, 1)[1].split("\n## 1.", 1)[0]
+        title, lead, _ = candidate.split("\n\n", 2)
+        self.assertTrue(spine.startswith(f"{title} (short spine)\n\n{lead}\n"))
         self.assertIn(build_views.DECISION_HEADING + decision.rstrip(), spine)
         self.assertIn("UNRESOLVED", spine)
         self.assertIn("co-evolving social layer", spine)
