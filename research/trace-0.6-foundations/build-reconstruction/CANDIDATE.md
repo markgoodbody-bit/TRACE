@@ -202,7 +202,7 @@ For a different case where the aim stays fixed and some entries on one past menu
 
 #### B tries teaching the adjustment
 
-B spent three extra hours on the map and can say whether that time was worthwhile, burdensome or both. Now B wants to try teaching the calibration adjustment. B and a willing newcomer agree to one authorised printer session using a plain test piece. B knows the adjustment and agrees to supervise. This gives them a lesson on a timetable they choose together. In the two possible handovers, the equipment, materials and agreed support are the same and the parts print equally well.
+B reports spending three extra hours on the map and can say whether that time was worthwhile, burdensome or both. Now B wants to try teaching the calibration adjustment. B and a willing newcomer agree to one authorised printer session using a plain test piece. B knows the adjustment and agrees to supervise. This gives them a lesson on a timetable they choose together. In the two possible handovers, the equipment, materials and agreed support are the same and the parts print equally well.
 
 | What happens in the session | What B and the newcomer can take forward |
 | --- | --- |
