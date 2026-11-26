@@ -263,6 +263,8 @@ The next source family is the typed claims, routes, witnesses and revision outco
 
 Campfire read Build’s [first-decision passage at 634cdee2](https://github.com/markgoodbody-bit/TRACE/blob/634cdee22716de9de4eeba342ae2c5c5c0bc47bf/research/trace-0.6-foundations/build-reconstruction/SPINE.md#one-navigation-pass) against the released 0.5 source. The two offers, assumptions, separate outcomes, A’s right to decline, the helper’s scoped check and the route back to A are recoverable from the short reading. The linked full working gives the observation, update, inquiry, selection, transition and later observation with local meanings, plus the extra condition for changing an existing booking. Campfire helped develop the bicycle example and knew its prior versions. This is a source comparison with prior exposure. A first encounter by an independent reader is still open.
 
+On 26 November [Codex Windows](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7202031349) held today’s practice and the helper’s extra time fixed across paid and unpaid terms, then checked four possible sets of evidence for renewal. The short reading now asks for the helper’s fresh agreement and any venue payment before a second session is promised. [The two cost records and their different conditions](CANDIDATE.md#carry-the-helpers-agreement-and-the-cost)
+
 | 0.5 source block | Disposition for this use | Evidence in the working edition |
 | --- | --- | --- |
 | [B0061](TRACE-v0.5-reference.md#L166-L167) | COMPRESSED for the workshop decision | [One offer, two outcomes](CANDIDATE.md#one-offer-two-outcomes) introduces the equations as a schematic reading of a case and gives the limits of the signature. |
@@ -339,3 +341,14 @@ In the [two-clock print-shop decision](CANDIDATE.md#when-the-desk-and-shop-clock
 | [B0153](TRACE-v0.5-reference.md#L462-L463) | PARTIAL | Timing, permission, intake terms and the actual transfer have separate evidence. The optional composite route profile and its result contract remain in the source. |
 
 The example fixes the clock relation, the transfer duration and the precise timestamps. It supplies a timing conclusion for this decision under those conditions. The two clock holders and their comparison are part of the invented scene.
+
+## B’s teaching turn, 26 November 2026
+
+In [B’s teaching turn](CANDIDATE.md#b-tries-teaching-the-adjustment), one grant, the available support and the print result are held fixed. If a later reader sees only the part, both handovers fit. B’s account of who adjusted the setting supports a first supervised turn in one case and an offer to repeat a completed supervised turn in the other. The newcomer can correct both accounts. Changing B’s answer about a later session changes what can be arranged with B. The attempt, the observations and the learner’s experience still belong in the return. Later unaided performance and access remain open.
+
+| 0.5 source block | Disposition | What the reading carries |
+| --- | --- | --- |
+| [B0105](TRACE-v0.5-reference.md#L317-L318) | COMPRESSED | The paired baseline shows how B’s existing skill, the newcomer’s voluntary contribution, equipment and an authorised session support a particular attempt. Keeping the setup and support available requires further arrangements. |
+| [B0106](TRACE-v0.5-reference.md#L319-L327) | PARTIAL | The passage carries the scoped agreement, the observed action, the equal product and the conditions for renewal. Evidence about independent usability, sustained maintenance and changed future access remains open. |
+| [B0124](TRACE-v0.5-reference.md#L362-L363) | COMPRESSED | B can assess the three hours borne on the map and decline a later session. A’s card trial and the learner’s chance to ask another supervisor remain available to pursue on their own terms. |
+| [B0125](TRACE-v0.5-reference.md#L364-L365) | COMPRESSED | The plain test piece gives B a separate teaching opportunity. The two handovers show what B tried and saw in this session and leave the results of a future lesson open. |

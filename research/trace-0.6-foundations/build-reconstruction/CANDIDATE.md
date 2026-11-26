@@ -28,7 +28,7 @@ The organiser can offer one slot. A 20-minute demonstration lets A watch. A 40-m
 | A attends | 1 | 1/2 | −1/2 |
 | A tries unaided and the helper checks the attempt | 0 | 1/2 | +1/2 |
 
-Use the same evidence and deadline for each pair of figures. Practice is the offer that can meet A’s stated aim in this example. Before A leaves, ask what A tried and what the helper actually checked. Return the result to A while they can still correct the account and decide what to do with it. Check who carries the helper’s time and cost before promising another session. A’s ability to do the job at home remains open.
+Use the same evidence and deadline for each pair of figures. Practice is the offer that can meet A’s stated aim in this example. Before A leaves, ask what A tried and what the helper actually checked. Return the result to A while they can still correct the account and decide what to do with it. Before promising another session, [confirm the helper’s agreement for that session and any venue payment](CANDIDATE.md#carry-the-helpers-agreement-and-the-cost). A’s ability to do the job at home remains open.
 
 Can the venue and helper keep the slot changeable long enough for A to choose how to use it? If they agree, keep the confirmed demonstration available and [ask while A’s reply can change the booking](CANDIDATE.md#let-as-reply-change-the-booking).
 
@@ -196,9 +196,22 @@ In the original tactile-map example, A wants to learn the layout before starting
 
 The reopening is consistent with the older report. Ask the keeper to confirm a suitable printer and a session A could use before work starts. A trial would let A judge which features they can read by touch.
 
-The day 5 agreement was for a joint attempt at the whole-floor model. That aim is still unfinished. A now proposes keeping the plastic junctions, trying the stairs in card and asking a colleague for a spoken description. The colleague has yet to be asked. A can pursue the card trial without booking B. Let A decide afterwards whether a visit to the building would help and whom to involve. B could practise on a neutral object if materials and suitable access are available, and decide whether to turn the adjustment into a lesson. Even if B’s lab login works tomorrow, another joint print would need a grant for that date and fresh agreement from both people. [Original encounter and B’s account](TRACE-v0.5-reference.md#L338-L364) · [Neutral-object option](TRACE-v0.5-reference.md#L79-L87) · [Working edition’s correction about the two stair designs](../../../TRACE-WORKING.md#L426-L430)
+The day 5 agreement was for a joint attempt at the whole-floor model. That aim is still unfinished. A now proposes keeping the plastic junctions, trying the stairs in card and asking a colleague for a spoken description. The colleague has yet to be asked. A can pursue the card trial without booking B. Let A decide afterwards whether a visit to the building would help and whom to involve. B could practise on a neutral object if materials and suitable access are available, and decide whether to [try teaching the adjustment](CANDIDATE.md#b-tries-teaching-the-adjustment). Even if B’s lab login works tomorrow, another joint print would need a grant for that date and fresh agreement from both people. [Original encounter and B’s account](TRACE-v0.5-reference.md#L338-L364) · [Neutral-object option](TRACE-v0.5-reference.md#L79-L87) · [Working edition’s correction about the two stair designs](../../../TRACE-WORKING.md#L426-L430)
 
 For a different case where the aim stays fixed and some entries on one past menu are unconfirmed, the [choice calculation](README.md#when-one-past-menu-is-incomplete) identifies which facts could change what the next organiser can infer.
+
+#### B tries teaching the adjustment
+
+B reports spending three extra hours on the map and can say whether that time was worthwhile, burdensome or both. Now B wants to try teaching the calibration adjustment. B and a willing newcomer agree to one authorised printer session using a plain test piece. B knows the adjustment and agrees to supervise. This gives them a lesson on a timetable they choose together. In the two possible handovers, the equipment, materials and agreed support are the same and the parts print equally well.
+
+| What happens in the session | What B and the newcomer can take forward |
+| --- | --- |
+| B makes the adjustment and explains it while the newcomer watches. | B has tried an explanation and can ask what made sense. The newcomer has seen the steps and can ask for a first supervised turn. |
+| The newcomer makes the adjustment before any prompt. B is there to check and help if needed. | B has practised watching the turn and checking the result. The newcomer has done the adjustment under these conditions and can choose whether to try it again with agreed support. |
+
+B saw who adjusted the setting and can describe what help was available. The newcomer can say what they noticed, correct the account and decide what to try next. The finished part shows how the print turned out. The newcomer’s later performance without supervision remains open in both cases.
+
+Ask B and the newcomer separately whether they want another session. A new booking needs the lab keeper’s authorisation for that date, working equipment and materials, and someone willing to make time to supervise. Access on another date is still open. If B declines, today’s teaching attempt and the newcomer’s experience still belong in the handover. The newcomer can ask about another willing supervisor. A can still choose the card trial. [0.5 formation chain](TRACE-v0.5-reference.md#constructive-formation-not-only-prevention) · [B’s own side of the encounter](TRACE-v0.5-reference.md#the-same-encounter-from-bs-side)
 
 #### Can A book another print?
 
