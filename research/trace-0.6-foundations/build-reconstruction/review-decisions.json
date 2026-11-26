@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "9a274a0894787fc947a2404ef13b5ab5cdeb8ee94ca13a6bbd3079961f7634bf",
+  "candidate_sha256": "060347ed9d77b183056a6ea7ae3aaa85e4ca0c7e3a94ed0f4a290508253a4424",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -386,6 +386,63 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "The print-shop case ties the witness aperture and shared origin of a forward to the permission claim. The preceding booking case carries the old and new claims and their revision basis.",
       "remaining": "Full witness identity and independence records and exact typed revision bindings beyond these cases remain open."
+    },
+    {
+      "block_id": "B0148",
+      "block_sha256": "baee15a61ba2ec70cdfea9d7dc2eac4a00b05c593ea53bf172049763e70c552f",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for the two-clock print-shop case",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The worked print-shop encounter has a dedicated conditional clock-ordering passage.",
+      "remaining": "",
+      "destination": "When the desk and shop clocks differ"
+    },
+    {
+      "block_id": "B0149",
+      "block_sha256": "5e96f8d3910741cbd5dc084082a63a5665341b5be2ece101b6b376201a43bf8d",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for the two-clock print-shop case",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The reply and cutoff retain named clock bases, the comparison source and method, agreed current settings, the minute unit and the comparison period.",
+      "remaining": "",
+      "destination": "When the desk and shop clocks differ"
+    },
+    {
+      "block_id": "B0150",
+      "block_sha256": "ce99d82c38127e8c9930ae7a1151316b64071b298ecd21e96a146756d36f2bc0",
+      "status": "PARTIAL",
+      "reviewer": "Build, source comparison for the two-clock print-shop case",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The example supplies distinct clocks, their current settings, the comparison source, lower and upper offset bounds and the source-clock validity interval.",
+      "remaining": "Exact typed alignment field bindings and value and status conventions remain in the optional source profile."
+    },
+    {
+      "block_id": "B0151",
+      "block_sha256": "4bec42baf66237f436223b5fb0c4d759561f47a904f3740476d4759999a48d1f",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for the two-clock print-shop case",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The same-rate, same-unit clock relation is a bounded additive offset in the stated interval. A clock reset or replacement invalidates reliance on that comparison.",
+      "remaining": "",
+      "destination": "When the desk and shop clocks differ"
+    },
+    {
+      "block_id": "B0152",
+      "block_sha256": "b45382888852b740199adfe4ba9a161f79d2e2f0457f0a0b68ada84eabf142ea",
+      "status": "PARTIAL",
+      "reviewer": "Build, source comparison for the two-clock print-shop case",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The arrival range classifies the strict cutoff under all, some or none of the allowed offsets. Expired comparisons leave the timing open.",
+      "remaining": "The general equality and ordering cases, ambiguous or unadmitted alignment, unit validation and numeric bounds remain in the source profile."
+    },
+    {
+      "block_id": "B0153",
+      "block_sha256": "b504dbdec5ea81bc3ef99edb4138520503f31d03e1629be3283fe14761be57ba",
+      "status": "PARTIAL",
+      "reviewer": "Build, source comparison for the two-clock print-shop case",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The timing claim, A’s permission, the shop intake terms and actual transfer require distinct support.",
+      "remaining": "The optional composite route profile and result contract remain in the source."
     }
   ]
 }
