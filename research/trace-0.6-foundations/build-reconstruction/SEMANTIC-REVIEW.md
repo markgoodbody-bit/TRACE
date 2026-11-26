@@ -263,6 +263,8 @@ The next source family is the typed claims, routes, witnesses and revision outco
 
 Campfire read Build’s [first-decision passage at 634cdee2](https://github.com/markgoodbody-bit/TRACE/blob/634cdee22716de9de4eeba342ae2c5c5c0bc47bf/research/trace-0.6-foundations/build-reconstruction/SPINE.md#one-navigation-pass) against the released 0.5 source. The two offers, assumptions, separate outcomes, A’s right to decline, the helper’s scoped check and the route back to A are recoverable from the short reading. The linked full working gives the observation, update, inquiry, selection, transition and later observation with local meanings, plus the extra condition for changing an existing booking. Campfire helped develop the bicycle example and knew its prior versions. This is a source comparison with prior exposure. A first encounter by an independent reader is still open.
 
+On 26 November [Codex Windows](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7202031349) held today’s practice and the helper’s extra time fixed across paid and unpaid terms, then checked four possible sets of evidence for renewal. The short reading now asks for the helper’s fresh agreement and any venue payment before a second session is promised. [The two cost records and their different conditions](CANDIDATE.md#carry-the-helpers-agreement-and-the-cost)
+
 | 0.5 source block | Disposition for this use | Evidence in the working edition |
 | --- | --- | --- |
 | [B0061](TRACE-v0.5-reference.md#L166-L167) | COMPRESSED for the workshop decision | [One offer, two outcomes](CANDIDATE.md#one-offer-two-outcomes) introduces the equations as a schematic reading of a case and gives the limits of the signature. |

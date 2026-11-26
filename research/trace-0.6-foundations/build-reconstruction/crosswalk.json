@@ -3,7 +3,7 @@
   "source_git_commit": "d688c149afc15c90ab51afaf08fe303771e9de20",
   "source_git_blob": "39d943b26dd355781f2d01986b229b4f1da6c793",
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "019caa802f3d04e70e068a6ed84ec601d79e7e0888b7b697b38e142457526579",
+  "candidate_sha256": "7b703f14b25887b3ebb5412821ed90ecf36af3be2f2e9ac84ce971d34aa6d659",
   "scope": "Mechanical source spans and proposed destinations. See review-decisions.json for authored semantic dispositions.",
   "units": [
     {

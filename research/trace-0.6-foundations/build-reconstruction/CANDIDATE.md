@@ -28,7 +28,7 @@ The organiser can offer one slot. A 20-minute demonstration lets A watch. A 40-m
 | A attends | 1 | 1/2 | −1/2 |
 | A tries unaided and the helper checks the attempt | 0 | 1/2 | +1/2 |
 
-Use the same evidence and deadline for each pair of figures. Practice is the offer that can meet A’s stated aim in this example. Before A leaves, ask what A tried and what the helper actually checked. Return the result to A while they can still correct the account and decide what to do with it. Check who carries the helper’s time and cost before promising another session. A’s ability to do the job at home remains open.
+Use the same evidence and deadline for each pair of figures. Practice is the offer that can meet A’s stated aim in this example. Before A leaves, ask what A tried and what the helper actually checked. Return the result to A while they can still correct the account and decide what to do with it. Before promising another session, [confirm the helper’s agreement for that session and any venue payment](CANDIDATE.md#carry-the-helpers-agreement-and-the-cost). A’s ability to do the job at home remains open.
 
 Can the venue and helper keep the slot changeable long enough for A to choose how to use it? If they agree, keep the confirmed demonstration available and [ask while A’s reply can change the booking](CANDIDATE.md#let-as-reply-change-the-booking).
 
