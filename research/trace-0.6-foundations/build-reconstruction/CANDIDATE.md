@@ -229,6 +229,23 @@ The organiser may be able to inspect A’s original reply. If all they have is a
 
 On this invented clock, checking the reply and getting the file to the shop takes three minutes. A reply received at 16:16 can reach the shop at 16:19. A reply at 16:17 would meet a delivery promise *by* 16:20 and miss this shop’s *before* 16:20 cutoff. Carry the answer and the missed slot separately. A can still decide to try the card stairs. B can choose neutral-object practice if the materials and access are available. A’s reply covers the sketch named in it. B’s private files and the earlier one-session lab grant have their own boundaries. [Claim and witness fields in 0.5](TRACE-v0.5-reference.md#L200-L219)
 
+##### When the desk and shop clocks differ
+
+Now the organiser stamps A’s reply on the desk clock and Oak Print sets the cutoff and stamps receipt on the shop clock. Suppose the two clock holders have compared their readings against a shared timing signal. The dated comparison names both current clock settings, the minute unit, how they compared the readings and the desk-clock interval it covers. During the full three-minute route the two clocks run at the same rate and the shop is zero to two minutes ahead. Use the comparison when the readings match those recorded settings and fall within its validity period.
+
+Add the three minutes to the desk time first, then add the bounded offset to express the arrival on the shop clock. Oak Print needs the file strictly before 16:20 on its own clock. The table uses exact times, with 16:15 standing for 16:15:00.
+
+| Reply on the desk clock | Arrival on the shop clock | Fits the intake cutoff |
+| --- | --- | --- |
+| 16:14 | 16:17–16:19 | Every allowed offset |
+| 16:15 | 16:18–16:20 | Some allowed offsets |
+| 16:16 | 16:19–16:21 | Some allowed offsets |
+| 16:17 | 16:20–16:22 | No allowed offset |
+
+At 16:15 the latest possible arrival is exactly the cutoff. Equality misses a strict deadline. At 16:16 the organiser can explain both the timely and late possibilities. If the comparison expires, or either clock is reset or replaced, ask the clock holders for a current comparison and keep the arrival timing open in the meantime.
+
+Ask Oak Print whether it can hold intake longer and ask A whether that would still help. When confirmation of a new cutoff reaches the organiser, check the time still needed and which booking A’s permission covers. A can choose the card trial while those answers are open. The dated clock comparison supports the timing claim. A’s scoped reply and Oak Print’s intake terms each come from their own holder. [The 0.5 alignment fields and their limits](TRACE-v0.5-reference.md#conditional-ordering-across-clocks)
+
 ### Compatibility floor: explicit review meanings
 
 Activate the following when their loss could affect the use; unresolved materiality stays unresolved. These are reading obligations, not claims that the laboratory enforces them:

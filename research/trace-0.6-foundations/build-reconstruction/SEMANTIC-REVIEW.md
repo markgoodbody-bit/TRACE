@@ -324,3 +324,18 @@ The [new print decision](CANDIDATE.md#can-the-organiser-send-as-sketch) starts f
 This is the author’s comparison of the two passages. Preserving the booking section lets its B0075 and B0076 readings keep their original warrant. The shop’s three minutes, the strict intake cutoff and both authority records are stipulated. The example gives the next organiser a decision they can explain and an action the affected person can still take up.
 
 On 26 November Campfire checked two possible replies from Oak Print after the first slot expires. Everything the organiser knows at 16:20 is the same. In one case the shop then offers a new date. In the other it has no capacity. At 16:20 the organiser can ask about another date. A confirmed slot can be offered to A, who decides whether the terms work for them. The two replies give the same account of the missed slot and support different next offers. This check leaves both partial source dispositions as recorded.
+
+## The desk and the shop clocks, 26 November 2026
+
+In the [two-clock print-shop decision](CANDIDATE.md#when-the-desk-and-shop-clocks-differ), reply and intake use different clock bases. From an exact desk time $t$, the stipulated route takes three minutes. For a current shop-ahead offset $d\in[0,2]$, the arrival reads $t+3+d$ on the shop clock. Comparing the latest arrival with the strict cutoff tests whether every allowed offset fits. Comparing the earliest tests whether any fits. The boundary is the shop’s stated intake cutoff. If the shop changes it, recompute from the time at which the organiser can act. A can still decline sharing or try the card stairs.
+
+| 0.5 source block | Disposition | What the reading carries |
+| --- | --- | --- |
+| [B0148](TRACE-v0.5-reference.md#L448-L449) | COMPRESSED | The conditional ordering topic has a named destination in the print-shop decision. |
+| [B0149](TRACE-v0.5-reference.md#L450-L451) | COMPRESSED | The reply and cutoff keep their own clock bases. A dated comparison names both current settings, its source, the unit, how the readings were compared and what period was covered. |
+| [B0150](TRACE-v0.5-reference.md#L452-L457) | PARTIAL | The worked comparison carries the two clocks, their settings, the source, the offset bounds and the period. Exact field bindings and value and status conventions remain in the optional source profile. |
+| [B0151](TRACE-v0.5-reference.md#L458-L459) | COMPRESSED | Equal rates and minute units make the bounded additive offset monotonic. Both readings have to match the recorded bases and the desk-clock validity interval. A reset or replacement calls for a fresh comparison. |
+| [B0152](TRACE-v0.5-reference.md#L460-L461) | PARTIAL | The worked rows carry strict ordering, overlap and the equality edge. Expired applicability keeps timing open. General equality, ambiguous or unadmitted alignments, unit validation and numeric bounds remain in the source profile. |
+| [B0153](TRACE-v0.5-reference.md#L462-L463) | PARTIAL | Timing, permission, intake terms and the actual transfer have separate evidence. The optional composite route profile and its result contract remain in the source. |
+
+The example fixes the clock relation, the transfer duration and the precise timestamps. It supplies a timing conclusion for this decision under those conditions. The two clock holders and their comparison are part of the invented scene.
