@@ -339,3 +339,14 @@ In the [two-clock print-shop decision](CANDIDATE.md#when-the-desk-and-shop-clock
 | [B0153](TRACE-v0.5-reference.md#L462-L463) | PARTIAL | Timing, permission, intake terms and the actual transfer have separate evidence. The optional composite route profile and its result contract remain in the source. |
 
 The example fixes the clock relation, the transfer duration and the precise timestamps. It supplies a timing conclusion for this decision under those conditions. The two clock holders and their comparison are part of the invented scene.
+
+## B’s teaching turn, 26 November 2026
+
+In [B’s teaching turn](CANDIDATE.md#b-tries-teaching-the-adjustment), one grant, the available support and the print result are held fixed. If a later reader sees only the part, both handovers fit. B’s account of who adjusted the setting supports a first supervised turn in one case and an offer to repeat a completed supervised turn in the other. The newcomer can correct both accounts. Changing B’s answer about a later session changes what can be arranged with B. The attempt, the observations and the learner’s experience still belong in the return. Later unaided performance and access remain open.
+
+| 0.5 source block | Disposition | What the reading carries |
+| --- | --- | --- |
+| [B0105](TRACE-v0.5-reference.md#L317-L318) | COMPRESSED | The paired baseline shows how B’s existing skill, the newcomer’s voluntary contribution, equipment and an authorised session support a particular attempt. Keeping the setup and support available requires further arrangements. |
+| [B0106](TRACE-v0.5-reference.md#L319-L327) | PARTIAL | The passage carries the scoped agreement, the observed action, the equal product and the conditions for renewal. Evidence about independent usability, sustained maintenance and changed future access remains open. |
+| [B0124](TRACE-v0.5-reference.md#L362-L363) | COMPRESSED | B can assess the three hours borne on the map and decline a later session. A’s card trial and the learner’s chance to ask another supervisor remain available to pursue on their own terms. |
+| [B0125](TRACE-v0.5-reference.md#L364-L365) | COMPRESSED | The plain test piece gives B a separate teaching opportunity. The two handovers show what B tried and saw in this session and leave the results of a future lesson open. |

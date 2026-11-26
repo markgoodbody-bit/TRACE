@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "060347ed9d77b183056a6ea7ae3aaa85e4ca0c7e3a94ed0f4a290508253a4424",
+  "candidate_sha256": "ee28f4cb0884ed233cd17ed0052b6057e95f7b64c89e724db26399bef9afc8f2",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -443,6 +443,45 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "The timing claim, A’s permission, the shop intake terms and actual transfer require distinct support.",
       "remaining": "The optional composite route profile and result contract remain in the source."
+    },
+    {
+      "block_id": "B0105",
+      "block_sha256": "b74fa1dd425ff004bfa01eb0a51bd3a1399b92af95c7ba78edf9edb20999a8bb",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for B’s teaching turn",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "A common baseline holds the part, equipment and supervision fixed. B’s existing skill, the learner’s agreement and the keeper’s grant support the two attempts. Keeping support available needs further arrangements.",
+      "remaining": "",
+      "destination": "B tries teaching the adjustment"
+    },
+    {
+      "block_id": "B0106",
+      "block_sha256": "f5c097883a48036dceb017eaa3f24771546915b1eba62f4470b5f3cd532d9132",
+      "status": "PARTIAL",
+      "reviewer": "Build, source comparison for B’s teaching turn",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The paired session carries agreed contributions, observed action, the equal product and the conditions for another booking.",
+      "remaining": "Independent usability, sustained maintenance and genuinely changed future access are still open."
+    },
+    {
+      "block_id": "B0124",
+      "block_sha256": "319f692a6970c79306e8a4532454c82de572691ea9773ab5bcf7e29da0ae3f31",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for B’s teaching turn",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "B can assess the three hours carried on the map and decline a further session. A still has the card route and the newcomer can seek another willing supervisor.",
+      "remaining": "",
+      "destination": "B tries teaching the adjustment"
+    },
+    {
+      "block_id": "B0125",
+      "block_sha256": "987aebbc50af1409d8104f790d49143a1a7345be8d52b4b24ff552399a0ea163",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for B’s teaching turn",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "B’s calibration work supports a teaching opportunity on a neutral test piece. B can describe the explanation or supervised turn while the effectiveness of a future lesson remains open.",
+      "remaining": "",
+      "destination": "B tries teaching the adjustment"
     }
   ]
 }
