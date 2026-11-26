@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "ad3e0f0348bbe58836fed580fb9078e35d127db1ad36f8f8e1957e5bdbed20c9",
+  "candidate_sha256": "9a274a0894787fc947a2404ef13b5ab5cdeb8ee94ca13a6bbd3079961f7634bf",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -368,6 +368,24 @@
       "finding": "The donor’s observation, update using prior belief and history, inquiry using available actions and limits, selection under authority, and world transition with other influences each have a corresponding term in the worked equations.",
       "remaining": "",
       "destination": "One offer, two outcomes"
+    },
+    {
+      "block_id": "B0071",
+      "block_sha256": "ae017d77f17ad5c01893304753df834671ea0043878b312eceb22397b4a80bf3",
+      "status": "PARTIAL",
+      "reviewer": "Build, author of the print-shop comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The scoped print-shop decision retains a named permission claim, source, value, evidence, scope, receipt, attribution and access. Actual disclosure needs its own permission and a timely route.",
+      "remaining": "General claim typing and exact dependency and competing-claim references remain in the released source."
+    },
+    {
+      "block_id": "B0074",
+      "block_sha256": "45603d6910948eeabfc11d87b49219db7075564005f7f7fe0036cbb8191be815",
+      "status": "PARTIAL",
+      "reviewer": "Build, author of the print-shop comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The print-shop case ties the witness aperture and shared origin of a forward to the permission claim. The preceding booking case carries the old and new claims and their revision basis.",
+      "remaining": "Full witness identity and independence records and exact typed revision bindings beyond these cases remain open."
     }
   ]
 }

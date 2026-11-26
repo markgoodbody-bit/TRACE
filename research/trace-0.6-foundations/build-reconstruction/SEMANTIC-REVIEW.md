@@ -311,3 +311,16 @@ assert results((portal, desk, None), early) == (0, 0, 0)
 assert results((None, None, None), None) == (0, 0, 0)
 assert results(directions, early, chooses_to_file=False) == (0, 0, 0)
 ```
+
+## Two handovers of the same sketch, 25 November 2026
+
+The [new print decision](CANDIDATE.md#can-the-organiser-send-as-sketch) starts from `a3ed1965`. Both handovers give the organiser the same permitted access, printer and clock. A’s scoped answer changes whether the organiser can send the sketch. While the answer is pending, the organiser can preserve the slot, ask A and keep the independent alternatives available. The decision consumes the reply and a separate shop receipt on different parts of the route.
+
+| 0.5 source block | Disposition | What the reading carries and what remains open |
+| --- | --- | --- |
+| [B0071](TRACE-v0.5-reference.md#L206-L211) | PARTIAL | The worked permission has an ID, predicate, source, value and evidence status, application scope, receipt time and attribution check. The reader can identify a held original and distinguish evidence access from permission to use the sketch. The shop and sketch version bind the action, and contrary instructions stay visible through the next choice. General claim typing and exact dependency and competing-claim references remain with the source. |
+| [B0074](TRACE-v0.5-reference.md#L218-L220) | PARTIAL | The new scene binds a witness aperture to `k_share` and shows why the forward of A’s reply shares its origin. The preceding booking case carries old and new claims and revision bases. Full witness identity, independent origin and typed revision bindings beyond these uses remain open. |
+
+This is the author’s comparison of the two passages. Preserving the booking section lets its B0075 and B0076 readings keep their original warrant. The shop’s three minutes, the strict intake cutoff and both authority records are stipulated. The example gives the next organiser a decision they can explain and an action the affected person can still take up.
+
+On 26 November Campfire checked two possible replies from Oak Print after the first slot expires. Everything the organiser knows at 16:20 is the same. In one case the shop then offers a new date. In the other it has no capacity. At 16:20 the organiser can ask about another date. A confirmed slot can be offered to A, who decides whether the terms work for them. The two replies give the same account of the missed slot and support different next offers. This check leaves both partial source dispositions as recorded.
