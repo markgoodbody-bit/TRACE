@@ -146,6 +146,26 @@ For an acyclic plan each link $u\to v$ with elapsed time $d$ requires $t_v\geq t
 
 An event with no reachable declared deadline has a `null` bound. All links in one plan are required. Compare alternative plans separately. Parallel jobs that share a person or a tool need an actual allocation and ordering. New lags, missing authority, clock uncertainty or a withdrawn offer can change whether a plan works in practice. [Implementation](event_bounds.py) · [Correction and hardening in the released reference](TRACE-v0.5-reference.md#correction-and-hardening)
 
+### Can the desk honour every held place?
+
+A, B and C each have a workshop place held. The desk has three timed, staffed opportunities to confirm a booking before closing. Each can serve one person. A and B can call. C can reply in writing. Each could book if they were the only taker. With one phone slot and two written slots, A and B need the same slot if they both accept.
+
+Feed this request to `python3 booking_capacity.py` on standard input. `slots` lists confirmation slots whose timing, staffing and authority are established together. Each offer identifies a recipient and the slots they can use before closing. Give any other candidate routes for those same slots as `unconfirmed`. Record the usable channel while leaving the person’s reasons private.
+
+```json
+{"slots":["phone-1","written-1","written-2"],"offers":[{"person":"A","confirmed":["phone-1"]},{"person":"B","confirmed":["phone-1"]},{"person":"C","confirmed":["written-1","written-2"]}]}
+```
+
+```json
+{"status":"insufficient","shortfall":{"people":["A","B"],"slots":["phone-1"]}}
+```
+
+The desk can see which resource to change. An authorised clerk converts one writing slot to a second phone slot and keeps the other writing slot for C. Replace `written-1` in the slot list with `phone-2`. The desk has confirmed A and B can each use `phone-1` and C can use `written-2`. While B’s use of `phone-2` is still open, give B `"unconfirmed":["phone-2"]`. The result is `unconfirmed` with the same shortfall on confirmed routes and a candidate allocation of A to `phone-1`, B to `phone-2` and C to `written-2`. `routes_to_confirm` names B’s route to the second phone slot. When the desk confirms that route and moves it into B’s `confirmed` list, the same allocation is supported and the result is `confirmed`. Each recipient still decides whether to use the offer. Record actual bookings separately.
+
+**Exact check.** Treat recipients and slots as the two sides of a bipartite graph. Try to assign one new recipient at a time. A search from that person follows allowed routes to slots and from occupied slots to their current holders. Reaching a free slot lets the desk move the earlier assignments along the path. If the search runs out of routes, every reached slot belongs to a reached person. The reached people include those holders and the extra unassigned recipient. They collectively have fewer usable slots than people. The returned group and its complete set of usable slots certify the shortfall.
+
+Try the confirmed graph first. A full allocation there supports honouring all the offers together. If it falls short, allow all declared unconfirmed routes for a second check. A shortfall even in that larger graph rules out an allocation among the supplied routes. A full allocation there identifies one set of unresolved routes to confirm together. Its viability depends on those confirmations and on preserving the timed, staffed slots. For $P$ recipients, $S$ slots and $E$ supplied routes, two such checks take $O(P(P+S+E)+S)$ time and $O(P+S+E)$ space with bounded-size IDs. [Implementation](booking_capacity.py) · [Workshop handover](CANDIDATE.md#who-had-a-way-to-book) · [Earlier account of shared capacity](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md#L1759)
+
 ## Files and execution
 
 - CANDIDATE.md is an initial reconstructed account, not a claim to preserve every v0.5 meaning. Its paired community-learning probe applies bounded logistics and evolving social interaction to the same situation.
