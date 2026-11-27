@@ -352,3 +352,15 @@ In [B’s teaching turn](CANDIDATE.md#b-tries-teaching-the-adjustment), one gran
 | [B0106](TRACE-v0.5-reference.md#L319-L327) | PARTIAL | The passage carries the scoped agreement, the observed action, the equal product and the conditions for renewal. Evidence about independent usability, sustained maintenance and changed future access remains open. |
 | [B0124](TRACE-v0.5-reference.md#L362-L363) | COMPRESSED | B can assess the three hours borne on the map and decline a later session. A’s card trial and the learner’s chance to ask another supervisor remain available to pursue on their own terms. |
 | [B0125](TRACE-v0.5-reference.md#L364-L365) | COMPRESSED | The plain test piece gives B a separate teaching opportunity. The two handovers show what B tried and saw in this session and leave the results of a future lesson open. |
+
+## Who had a way to book, 27 November 2026
+
+For the [workshop invitation](CANDIDATE.md#who-had-a-way-to-book), let $r_i$ record a usable route before closing and $b_i$ record an accepted booking for person $i$. Use the opted-in set $N=\{A,B,C\}$. Each pair $(r_i,b_i)$ is one of $(0,0),(1,0),(1,1)$. Of the $3^3$ histories, exactly two give $(b_A,b_B,b_C)=(1,1,0)$. The access count $\sum_{i\in N}r_i$ is either 2 or 3. Dividing by the three opted-in people gives $2/3$ or $3/3$ for this cohort. Their interest remains private in both histories.
+
+| Source | Meaning carried in this decision |
+| --- | --- |
+| [0.3’s two target sets](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md#L4986-L5027) | An outcome log and a broader review of who was in scope can support different questions about one event. Acknowledging the broader scope leaves coverage beyond it open. |
+| [0.4 §2.1](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md#L42-L46) · [0.5 F01](TRACE-v0.5-reference.md#L265) | The notice consent selects the denominator, the register selects booked outcomes, and authorised comparison depends on the keepers of both records. People outside the notice list are omitted from the comparison. |
+| [0.5 F10](TRACE-v0.5-reference.md#L274) | C’s booking is absent in the complete bounded register. C’s earlier route remains unknown. Opening a usable reply route for a later date supplies evidence for that date. |
+
+B0091 remains PARTIAL. This addition checks F01 and F10 for the named booking question. The earlier [F06 and F09 review](#a-future-after-refusal-25-november-2026) and the other clauses keep their own evidence and limits.

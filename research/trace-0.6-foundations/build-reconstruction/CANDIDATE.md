@@ -138,7 +138,7 @@ If a volunteer cannot continue, ask whether another person or institution has a 
 
 ## 4. Change, interaction and evidence of influence
 
-Where a bounded engineered dependency is warranted, name component relations and conditional tests; keep proposed connections distinct from confirmed ones. Do not make association or an editable graph a proof of causal attribution. Where relationships co-evolve and the model cannot support a decomposed causal path, describe interacting constraints and dispositions, diverse plausible explanations, observation and small revisable interventions; do not force additive contribution weights or invented probabilities. Both modes support action, not a claim that the situation has been classified correctly forever.
+Where a bounded engineered dependency is warranted, name component relations and conditional tests; keep proposed connections distinct from confirmed ones. Do not make association or an editable graph a proof of causal attribution. Where relationships co-evolve and the model cannot support a decomposed causal path, describe interacting constraints and dispositions, diverse plausible explanations, observation and small revisable interventions; do not force additive contribution weights or invented probabilities. Both modes support action, not a claim that the situation has been classified correctly forever. [Who had a way to book the workshop?](CANDIDATE.md#who-had-a-way-to-book)
 
 A stated requirement is a necessary condition within its declared route model, not automatically a sufficient recipe for acting in the world. Nor does one represented route establish that all alternatives have been found. A question proposed by a model does not itself authorise the probe: consider its scope, cost, timing, authority and the participants' constraints. An observation about a participant does not substitute for that participant's own choice.
 
@@ -413,6 +413,21 @@ A and C want to practise puncture repair in the agreed quiet room. The coordinat
 | The same full check arrives at 16:08. | Completing the booking at 16:10 would meet the lock itself. Use the current evidence to book before then. The answer can inform the next session. |
 
 The calculation assumes the checks leave the situation unchanged. In the actual handoff, name who can check the cupboard, who can book after each answer and who bears the time and work. If the check would divert the room opener, include the effect on access before choosing it. If the coordinator can book only the cupboard, the full answer still changes their knowledge while the loan remains outside their authority. An authorised colleague may be able to preserve it. A report with uncertain ancestry needs its own assessment. The [finite replay](simulator.py) lays out the declared probabilities and the strict booking boundary.
+
+### Who had a way to book?
+
+For another workshop, A, B and C have agreed to receive notices. At closing, the desk’s complete register for those three shows two accepted bookings, A and B. Each accepted booking establishes that its holder used a route in time. C has no booking in the register. The desk is choosing how to invite people to the next session.
+
+| What could have happened for C | People with a usable route before closing |
+| --- | --- |
+| C had a usable route and made no booking. | A, B and C. Three of three. |
+| C lacked a usable route before closing. | A and B. Two of three. |
+
+Both histories give the desk the same two bookings. The notice list supplies the three people to compare. Receipt, ability to use the route, and interest in the session each need their own evidence. People outside the opted-in list are outside this comparison.
+
+The notice keeper can compare the list with the desk’s register if authorised to use both for this workshop. C can tell the keeper privately whether they could use the route in time and can leave the question unanswered. The keeper can carry the route issue to the desk with C’s agreement. C can keep their interest and reasons private.
+
+For the next workshop, the desk has three places. It holds one for each recipient through the reply cutoff and the processing of timely replies. It sends the offer through a channel the recipient has confirmed they can use. A named clerk has time and authority to confirm timely replies before the register closes. The clerk can confirm C’s booking even if C sends the only reply. C may leave the place unused. Record the held place, usable channel and staffed route as evidence about this invitation. Earlier access stays open where the earlier evidence still fits both histories.
 
 ### What survives a handover?
 
