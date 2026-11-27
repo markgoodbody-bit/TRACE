@@ -9,6 +9,7 @@ Begin with the [short spine](SPINE.md) or the [full working manuscript](CANDIDAT
 | Which offers remain possible if the person’s priorities changed? | [Two periods with an uncertain boundary](#when-the-order-may-have-changed) |
 | How late can an answer arrive and still meet the plan’s deadlines? | [Work back from the required events](#how-late-can-the-answer-arrive) |
 | Would an observation arrive in time to change a booking? | [Workshop inquiry](simulator.py) and [dispatch replay](DISPATCH-REVIEW.md) |
+| Would a single session meet the aim, or does access have to continue? | [One session or both?](#one-session-or-both) |
 
 The construction began on 17 November with the [released 0.5 source](TRACE-v0.5-reference.md), the [integration brief](../INTEGRATION-20261117.md), the prior Build work at `8952a4f8`, [Codex’s reproduction](https://github.com/markgoodbody-bit/TRACE/pull/71) and [CC’s challenge](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-6932365622). The [ledger](review-decisions.json) tracks comparisons with the earlier source.
 
@@ -167,6 +168,35 @@ An existing promise also uses capacity. Keep a promised slot as the only route i
 **Exact check.** Treat recipients and slots as the two sides of a bipartite graph. Try to assign one new recipient at a time. A search from that person follows allowed routes to slots and from occupied slots to their current holders. Reaching a free slot lets the desk move the earlier assignments along the path. If the search runs out of routes, every reached slot belongs to a reached person. The reached people include those holders and the extra unassigned recipient. They collectively have fewer usable slots than people. The returned group and its complete set of usable slots certify the shortfall.
 
 Try the confirmed graph first. A full allocation there supports honouring all the offers together. If it falls short, allow all declared unconfirmed routes for a second check. A shortfall even in that larger graph rules out an allocation among the supplied routes. A full allocation there identifies one set of unresolved routes to confirm together. Its viability depends on those confirmations and on preserving the timed, staffed slots. For $P$ recipients, $S$ slots and $E$ supplied routes, two such checks take $O(P(P+S+E)+S)$ time and $O(P+S+E)$ space with bounded-size IDs. [Implementation](booking_capacity.py) · [Workshop handover](CANDIDATE.md#who-had-a-way-to-book) · [Earlier account of shared capacity](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md#L1759)
+
+## One session or both?
+
+For the [two Saturday bookings](CANDIDATE.md#does-c-need-one-quiet-saturday-or-both), let $U_i$ mean that C has a usable quiet session on date $i$. By the end of the second Saturday, access at least once is $U_1\cup U_2$. Access on both dates is $U_1\cap U_2$. The plans, information and dates stay fixed while C’s intended use determines which event matters. The same opening decision covers both dates at the second venue.
+
+```python
+from fractions import Fraction
+
+# Each history records usable access on the first and second Saturday.
+plans = {
+    "first venue": [((True, False), Fraction(1))],
+    "other venue": [((True, True), Fraction(1, 2)),
+                    ((False, False), Fraction(1, 2))],
+}
+
+for venue, histories in plans.items():
+    once = sum(weight for access, weight in histories if any(access))
+    both = sum(weight for access, weight in histories if all(access))
+    print(venue, once, both)
+```
+
+The columns are the probabilities of access at least once and access on both dates, respectively.
+
+```text
+first venue 1 0
+other venue 1/2 1/2
+```
+
+The calculation uses only the two named dates. Continuous access between them would need its own evidence. [Comparing complete plans for a named goal](../SYNTHESIS.md#2-a-common-mathematical-setting) · [The corrected hope calculation](../MATH-REVIEW.md#2-corrected-hope-calculations)
 
 ## Files and execution
 
