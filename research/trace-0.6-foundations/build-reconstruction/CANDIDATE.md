@@ -278,6 +278,12 @@ The organiser may be able to inspect A’s original reply. If all they have is a
 
 On this invented clock, checking the reply and getting the file to the shop takes three minutes. A reply received at 16:16 can reach the shop at 16:19. A reply at 16:17 would meet a delivery promise *by* 16:20 and miss this shop’s *before* 16:20 cutoff. Carry the answer and the missed slot separately. A can still decide to try the card stairs. B can choose neutral-object practice if the materials and access are available. A’s reply covers the sketch named in it. B’s private files and the earlier one-session lab grant have their own boundaries. [Claim and witness fields in 0.5](TRACE-v0.5-reference.md#L200-L219)
 
+##### Did Oak Print receive this version?
+
+Oak Print counts a file as received when its intake register accepts that version for the named job. Suppose the organiser checks that an entry came intact from that register and names A’s current sketch and this trial. They can tell A the shop received the sketch and spare A a second transfer.
+
+If the entry names last week’s sketch or a different job, receipt of this version for this trial stays open. A forwarded “received” with no identifiable source also leaves it open. Ask the shop to check its register before asking A to send the file again. Even after the shop confirms receipt, the accuracy of the drawing, whether the shop printed it and what A could read by touch each need their own evidence. A’s permission still governs sharing. [The earlier example of a packet receipt](TRACE-v0.5-reference.md#4-synthetic-encounter-b-a-record-survives-while-a-route-may-not)
+
 ##### When the desk and shop clocks differ
 
 Now the organiser stamps A’s reply on the desk clock and Oak Print sets the cutoff and stamps receipt on the shop clock. Suppose the two clock holders have compared their readings against a shared timing signal. The dated comparison names both current clock settings, the minute unit, how they compared the readings and the desk-clock interval it covers. During the full three-minute route the two clocks run at the same rate and the shop is zero to two minutes ahead. Use the comparison when the readings match those recorded settings and fall within its validity period.

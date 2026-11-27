@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "3f58c82d4d879b416e00102013c20d4fc109d70cf69c2bdbcec25ce7f02012cb",
+  "candidate_sha256": "cc58a41c4e1f06348962d6d95e89826bc617f9eb05988d59beca6ed66fb24111",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -482,6 +482,26 @@
       "finding": "B’s calibration work supports a teaching opportunity on a neutral test piece. B can describe the explanation or supervised turn while the effectiveness of a future lesson remains open.",
       "remaining": "",
       "destination": "B tries teaching the adjustment"
+    },
+    {
+      "block_id": "B0100",
+      "block_sha256": "3745ddd2904b253484904ff9ba087292481762780f49ee5a734a38c54681516e",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, same-team source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The shop’s intake rule, the intact entry from the designated register and the version and job checks support confirmation of this receipt. Accuracy of the contents, later printing, usability and permission have their own grounds.",
+      "remaining": "",
+      "destination": "Did Oak Print receive this version?"
+    },
+    {
+      "block_id": "B0166",
+      "block_sha256": "2b81728551a7a0c8201c56846d8177d6b495ef3e4564f42418aa86ec150bd812",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, same-team source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Oak Print links the earlier synthetic fixture for R09, EC-RECEIPT-1 and its arrival-only status at cs20. The original specifies hypothetical premises and preserves the separate questions about restoration, timeliness and permission.",
+      "remaining": "",
+      "destination": "4. Synthetic encounter B: a record survives while a route may not"
     }
   ]
 }
