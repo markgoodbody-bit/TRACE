@@ -7,9 +7,9 @@ Use this view for a first decision affecting another participant. The [full work
 ## Start with the next decision
 
 1. **Give the account a job.** Name what someone needs to understand, choose or make possible now, whose purposes might differ, and the period that matters. Let the inquiry change the question. If you are using Mechanical Ethics, state which commitments guide this use, such as making harm visible, keeping correction reachable or building useful capability without hiding its costs.
-2. **Follow what could change it.** Keep the source, status and scope of evidence the next step depends on. When something seems to have failed, ask what observation could distinguish the plausible causes before assigning a repair. For a choice on a clock, work back from the effect to the latest useful answer. Carry unresolved questions that could change the choice.
-3. **Find a usable next move.** Check who can take it, with what agreement, authority, time and resources. Help keep a willing alternative within reach while a material question is being resolved. For protection, follow the move through to its effect before the particular loss hardens.
-4. **Return what someone can use.** Carry what actually happened, any new ability or changed purpose, unresolved costs and what would require a fresh decision. End with a next act or handoff someone can take up.
+2. **Follow what could change it.** Keep the source, status and scope of evidence the next step depends on. When something seems to have failed, ask what observation could distinguish the plausible causes before assigning a repair. For a choice on a clock, work back from the effect to the latest useful answer. If a cutoff or the time needed to act is unknown, say when you plan to check and what timing you still need. Carry unresolved questions that could change the choice.
+3. **Find a usable next move.** Check who can take it, with what agreement, authority, time and resources. To keep an alternative within reach, check what its holder has agreed to keep available, for whom, until when and at whose cost. Ask while their answer can still change the plan. For protection, follow the move through to its effect before the particular loss hardens.
+4. **Return what someone can use.** Carry what actually happened, any new ability or changed purpose, unresolved costs and what would require a fresh decision. End with a next act someone can take up. Distinguish a question still to ask, a request already sent and the answer its holder actually gave.
 
 In the [bicycle workshop](CANDIDATE.md#what-next-saturday-needs), A came to learn repairs and C needs a quiet place to take part. After several sessions, the next organiser gets this handover.
 
@@ -21,11 +21,11 @@ Ask A what they would like to do next. If they still want to adjust their own br
 
 The workshop organiser counts attendance. A says they want to try the brake adjustment unaided and have a qualified person check it before they leave. Keep the attendance record and add the question A’s account makes relevant. What can A do and have checked within the time they have?
 
-The organiser can offer one slot. A 20-minute demonstration lets A watch. A 40-minute practice lets A attempt the adjustment and have it checked. The room and kit are ready, both offers are authorised, and a qualified helper has agreed to check this bike today. Before making the offer the organiser has even odds that A has 20 or 40 minutes. In this worked comparison A takes the offer if it fits. A still decides what to do in the room, including whether to stop or leave.
+The organiser can offer one slot. A 20-minute demonstration lets A watch. A 40-minute practice lets A attempt the adjustment and have it checked. The room and kit are ready, both offers are authorised, and a qualified helper has agreed to check this bike today. For this example, give the 20- and 40-minute windows equal chances and assume A takes an offer that fits. If all the organiser knows is that either window is possible, the odds remain open. A still decides what to do in the room, including whether to stop or leave.
 
 | Outcome by A’s departure limit | Demonstration | Practice | Practice minus demonstration |
 | --- | ---: | ---: | ---: |
-| A attends | 1 | 1/2 | −1/2 |
+| A attends (the offer fits and A takes it) | 1 | 1/2 | −1/2 |
 | A tries unaided and the helper checks the attempt | 0 | 1/2 | +1/2 |
 
 Use the same evidence and deadline for each pair of figures. Practice is the offer that can meet A’s stated aim in this example. Before A leaves, ask what A tried and what the helper actually checked. Return the result to A while they can still correct the account and decide what to do with it. Before promising another session, [confirm the helper’s agreement for that session and any venue payment](CANDIDATE.md#carry-the-helpers-agreement-and-the-cost). A’s ability to do the job at home remains open.
@@ -38,7 +38,7 @@ Expand a section when another person’s aim, a condition of consent, a clock or
 
 ## 1. Begin with a living situation
 
-An entity, group or institution encounters a changing world through bounded observation. The world, signals, accounts, maps and retained records are different. A boundary and a participant list are provisional, not declarations of moral standing. Other entities have perspectives and possibilities of their own. Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost, before choosing a verdict. Keep what a source asserts separate from its warrant, our access to it and anyone's decision. An assertion can have a definite value while its evidence is unavailable or disputed. A missing answer is different again; silence alone establishes neither withholding nor refusal. Lack of a recorded route is not proof that no route exists. [Which table did Sam’s helper check?](CANDIDATE.md#which-table-did-sams-helper-check)
+Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost, before choosing a verdict. An entity, group or institution sees only part of a changing world. The world, signals, accounts, maps and retained records are different. Treat the boundary and the list of participants as provisional. Ask whose options come into view if you draw the boundary differently. Moral standing remains a separate question. Other entities have perspectives and possibilities of their own. Keep what a source asserts separate from its warrant, our access to it and anyone's decision. An assertion can have a definite value while its evidence is unavailable or disputed. A missing answer is different again; silence alone establishes neither withholding nor refusal. Lack of a recorded route is not proof that no route exists. [Which table did Sam’s helper check?](CANDIDATE.md#which-table-did-sams-helper-check)
 
 [Expand section 1](CANDIDATE.md#1-begin-with-a-living-situation)
 
