@@ -99,6 +99,19 @@ Suppose the venue and helper agree to leave the same slot changeable. The organi
 
 On the booking clock, a change takes one minute and must take effect strictly before minute 10. A reply at minute 8 can change the booking at 9. A reply at minute 9 would reach the effect at 10 and miss the lock. This is separate from the inclusive deadline for the check during the session. If a timely request switches each long-window case to practice, the absolute prospects are $(1,p)$ under the same attendance and check assumptions as before. If the switch misses the lock and the fitting demonstration is taken, the prospects are $(1,0)$. Silence leaves that offer available and A’s choice open. Name who keeps the slot and helper’s time free and what that commitment costs. [Campfire’s worked comparison](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-7161796035)
 
+##### Which replies arrive in time for practice?
+
+Suppose A has 40 minutes on half the occasions and half of all replies reach the desk in time for a switch. Asking leaves A’s time window unchanged. In this comparison A replies each time and takes the demonstration if a requested switch misses.
+
+| When the timely replies arrive | Chance of a checked attempt with the demonstration held open for a switch | Chance with practice booked from the start |
+| --- | ---: | ---: |
+| All are on 40-minute occasions | 1/2 | 1/2 |
+| All are on 20-minute occasions | 0 | 1/2 |
+
+Let $p$ be the chance of a 40-minute window and $q$ the chance of a timely reply across the same occasions. The held offer gives A a checked attempt when both events occur. Their overlap $x$ can range from $\max(0,p+q-1)$ to $\min(p,q)$. Multiplying the two half-rates gives $1/4$ under an independence assumption. A attends under the held offer in both rows. With practice booked from the start, A attends on the half of occasions when there is enough time.
+
+Before asking the helper to keep the slot changeable, find out whether a practice request can reach the desk in time on a 40-minute day. If that remains uncertain, explain the two offers to A while A can still choose. [Dependence between two supports](../MATH-REVIEW.md#counterexample-multiplying-marginal-reliability) · [Comparing plans under the same evidence](../SYNTHESIS.md#2-a-common-mathematical-setting)
+
 #### Carry the helper’s agreement and the cost
 
 The same organiser belief $B_o$ about A’s aim and the feasibility of today’s offer can fit two different cost records with the same prospects. Suppose the practice runs and needs 20 extra minutes of the helper’s time. Here the burden field names its bearer and units.
