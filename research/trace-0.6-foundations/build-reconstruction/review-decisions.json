@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "a39f7183abcbe281df1b69a735c2be58a8856e2489439e6b4a7efdecfa8b4120",
+  "candidate_sha256": "ab740f2552501d54ac2611f4a063cfbccad1fa456f2c01ca50c94683cee64917",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -502,6 +502,35 @@
       "finding": "Oak Print links the earlier synthetic fixture for R09, EC-RECEIPT-1 and its arrival-only status at cs20. The original specifies hypothetical premises and preserves the separate questions about restoration, timeliness and permission.",
       "remaining": "",
       "destination": "4. Synthetic encounter B: a record survives while a route may not"
+    },
+    {
+      "block_id": "B0130",
+      "block_sha256": "b092809b53e608ac446aa87a7ad553a93a0667c24d87519095c338a5303948c3",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, same-team source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The dated handover uses the explicitly assumed grant and agreement for one trial. The separate Case A handover asks for grounds appropriate to the actual scope. Section 1 carries the limits of fields and hashes as evidence of source, consent, selection or effect.",
+      "remaining": "",
+      "destination": "What can the separate Case A record support?"
+    },
+    {
+      "block_id": "B0160",
+      "block_sha256": "b34c00eef194c4532f5ddbfe6459c656a7a93557e8ac1995321e3d73b020751e",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, same-team source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The Case A handover points to the full synthetic JSON for the exact participant and claim bindings, proposed criteria, upkeep and unresolved authority.",
+      "remaining": "",
+      "destination": "3. Synthetic encounter A: a capability created together?"
+    },
+    {
+      "block_id": "B0161",
+      "block_sha256": "a701c05470243e4ca0b4401ea409010d751c29baa1510bfa11189b9bcd311af2",
+      "status": "PARTIAL",
+      "reviewer": "Campfire, same-team source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The two readings distinguish reports from scoped grant and agreement, keep each participant’s aim and result with its source, and leave the witness clock unaligned.",
+      "remaining": "Changes to B’s privacy or practical exit and evidence of a newly formed opportunity still need a direct comparison against this record."
     }
   ]
 }

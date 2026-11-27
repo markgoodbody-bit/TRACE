@@ -222,7 +222,7 @@ A return carries the result, remaining uncertainty, burdens and unassigned work 
 
 ### What can each map-maker do next?
 
-In the original tactile-map example, A wants to learn the layout before starting work in a new building. B declines to print the model as a service and offers a joint practice session. Here is a handover for whoever helps the two people decide what comes next.
+In the day-by-day tactile-map story, A wants to learn the layout before starting work in a new building. B declines to print the model as a service and offers a joint practice session. Here is the handover from that story.
 
 > A reports that the plastic junctions were readable by touch and the warped printed stairs were unreadable. The whole-floor aim is still open. A proposes trying the stairs in card. The card stairs and using the map in the building are both untested. B’s lab colleague reported the print. No independent check of that report is recorded.
 >
@@ -235,6 +235,12 @@ The reopening is consistent with the older report. Ask the keeper to confirm a s
 The day 5 agreement was for a joint attempt at the whole-floor model. That aim is still unfinished. A now proposes keeping the plastic junctions, trying the stairs in card and asking a colleague for a spoken description. The colleague has yet to be asked. A can pursue the card trial without booking B. Let A decide afterwards whether a visit to the building would help and whom to involve. B could practise on a neutral object if materials and suitable access are available, and decide whether to [try teaching the adjustment](CANDIDATE.md#b-tries-teaching-the-adjustment). Even if B’s lab login works tomorrow, another joint print would need a grant for that date and fresh agreement from both people. [Original encounter and B’s account](TRACE-v0.5-reference.md#L338-L364) · [Neutral-object option](TRACE-v0.5-reference.md#L79-L87) · [Working edition’s correction about the two stair designs](../../../TRACE-WORKING.md#L426-L430)
 
 For a different case where the aim stays fixed and some entries on one past menu are unconfirmed, the [choice calculation](README.md#when-one-past-menu-is-incomplete) identifies which facts could change what the next organiser can infer.
+
+#### What can the separate Case A record support?
+
+A and B each report agreeing, and W reports that a model was printed. The record leaves open who could grant lab access for this session, what each participant agreed to and whether A chose to share the sketch. Ask the lab what it authorised. A can say what they chose to share and whether the model was useful to them. B can say what practice they gained and whether they could have left on workable terms. Each can answer about their experience while keeping their files private.
+
+The day-by-day story stipulates a lab grant and both people’s agreement on day 5 for the day 6 trial. A’s later report about readable junctions belongs to that story, where the whole-floor model before day 28 is still an unfinished aim. Case A asks whether the model was useful to A and leaves A’s answer open. Carry the source and the aim together in the next handover. [Day 5 and the trial](TRACE-v0.5-reference.md#L344-L353) · [Case A record and its interpretation](TRACE-v0.5-reference.md#L472-L800)
 
 #### B tries teaching the adjustment
 
