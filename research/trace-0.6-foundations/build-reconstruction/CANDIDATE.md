@@ -36,7 +36,7 @@ Use the [full working and glyph key](CANDIDATE.md#one-offer-two-outcomes) to see
 
 ## 1. Begin with a living situation
 
-An entity, group or institution encounters a changing world through bounded observation. The world, signals, accounts, maps and retained records are different. A boundary and a participant list are provisional, not declarations of moral standing. Other entities have perspectives and possibilities of their own. Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost, before choosing a verdict. Keep what a source asserts separate from its warrant, our access to it and anyone's decision. An assertion can have a definite value while its evidence is unavailable or disputed. A missing answer is different again; silence alone establishes neither withholding nor refusal. Lack of a recorded route is not proof that no route exists.
+An entity, group or institution encounters a changing world through bounded observation. The world, signals, accounts, maps and retained records are different. A boundary and a participant list are provisional, not declarations of moral standing. Other entities have perspectives and possibilities of their own. Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost, before choosing a verdict. Keep what a source asserts separate from its warrant, our access to it and anyone's decision. An assertion can have a definite value while its evidence is unavailable or disputed. A missing answer is different again; silence alone establishes neither withholding nor refusal. Lack of a recorded route is not proof that no route exists. [Which table did Sam’s helper check?](CANDIDATE.md#which-table-did-sams-helper-check)
 
 For each consequential claim name its source, scope, time, evidence and relevant competing account. Separate a report from the event reported, the status warranted under a named contract from the truth of its whole contents, and a corrected record from a changed world or repaired harm. Witnesses may need protected custody; a useful record must not force unsafe disclosure. Send, receipt, understanding and effective downstream use differ.
 
@@ -47,6 +47,18 @@ Different participants can hold conflicting maps, aims and clocks. Some processe
 Not asked, inaccessible, disputed and deliberately withheld can overlap; where the difference matters, retain the holder, scope and source. A person's choice to withhold is a boundary, not automatically a gap others are entitled to fill. Silence alone proves neither refusal nor withholding.
 
 When uncertainty is an input to action or delay, identify the actor, policy or default that selects it where the evidence permits; uncertainty itself is not a selector. The responsible selector may remain unknown or distributed.
+
+### Which table did Sam’s helper check?
+
+Sam has given standing authorisation to use a table made from documents. A new version has arrived and the helper has gone home. In Mark Goodbody’s case, the handover needs two records. The first names who compared which version with its originals. The second records what Sam decided to do with that version.
+
+| What the handover contains | What Sam can do next |
+| --- | --- |
+| An unnamed note saying “checked” | Ask which version was checked and who did the comparison. |
+| A completed check of the current table | Sam can decide whether to use it. The helper’s departure leaves the completed check intact. |
+| A check of last week’s table and Sam’s decision to use the new one | Carry Sam’s decision under Sam’s name. Reliance on the new version still needs a check. Sam can practise with it or do the task by hand. |
+
+Vadym Chernets’s team encoded the case twice, once treating generation as sufficient alongside Sam’s authorisation and once requiring a check. In their first version of the checked map, the helper’s departure sent even a completed check back to review. Mark’s question about the handover led the team to change which step depended on the checker. Their published account gives all five handover rows and one Poly Duo run on the invented case. [Poly × UK, worked case and engineering notes](https://polyhelper.ai/britain/)
 
 ### One offer, two outcomes
 
