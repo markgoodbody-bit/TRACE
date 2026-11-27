@@ -364,3 +364,9 @@ For the [workshop invitation](CANDIDATE.md#who-had-a-way-to-book), let $r_i$ rec
 | [0.5 F10](TRACE-v0.5-reference.md#L274) | C’s booking is absent in the complete bounded register. C’s earlier route remains unknown. Opening a usable reply route for a later date supplies evidence for that date. |
 
 B0091 remains PARTIAL. This addition checks F01 and F10 for the named booking question. The earlier [F06 and F09 review](#a-future-after-refusal-25-november-2026) and the other clauses keep their own evidence and limits.
+
+## A promised phone slot, 27 November 2026
+
+In the [booking continuation](CANDIDATE.md#what-if-the-desk-has-already-promised-a-slot), write the two phone slots as $p_1,p_2$ and the written slot as $w$. With A and B each able to use either phone slot and C able to use $p_1$ or $w$, there are two complete allocations of the three confirmation slots. Both give C slot $w$. Binding C to the promised $p_1$ leaves zero complete allocations under the same list of technically usable slots. If C agrees to a timely change while $p_1$ is still ahead, $p_1$ becomes available on completion of that change. When $p_1$ has already been used, the two outstanding phone offers still share the one remaining phone slot.
+
+The result distinguishes the available routes, the desk’s commitment and the time already used. Recheck the available work before making a promise about what can still be completed. This is a case-level application of [0.3’s feasible-completion discussion](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md#L1759) and the [working clock passage](CANDIDATE.md#5-clocks-correction-and-construction).
