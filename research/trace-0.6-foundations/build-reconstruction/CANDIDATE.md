@@ -497,6 +497,14 @@ A replacement coordinator can carry forward the participants' reports of taking 
 
 A message saying “kit sorted” is a proposed update. Ask which kit, who can release it, for which date, and who can get it to the room. A confirmed second loan can give the next session a usable kit route with a willing collector. The cupboard limit stays with the cupboard. If the authorised keeper confirms release for the new date and a willing volunteer can deliver it, record the cupboard route as supported for that slot. Check the delivery on the day. The room and participants each keep their own decisions. Give people an update while they can still act on it. [Earlier TRACE account of returning limits and outcomes](TRACE-v0.5-reference.md#L405).
 
+#### What would renewing the kit loan preserve?
+
+Take one dated Saturday. The outcome is a quiet practice session ready to use at the agreed start time. In this example, the earlier forecast with the loan and collection continuing was 60%. On today’s evidence it is 50% if that support continues and 30% if it ends. The room and opener arrangements are the same in both of today’s plans.
+
+The forecast under the continued-support plan has fallen by 10 percentage points since the earlier review. For today’s choice, compare 50% with support and 30% without it. On today’s evidence, renewing the loan and collection together raises the estimated chance that the session will be ready by 20 percentage points. [Hope and renewing support](../SYNTHESIS.md#6-hope-includes-creating-maintaining-and-recovering-support)
+
+Ask the lender to confirm the kit for this date and a collector whether they’ll take the trip. Agree who will pay the expense with whoever can authorise it. Check the quiet room and opener for the same start time. A and C can each accept or decline once they know what the organiser can offer. A can still practise punctures with their own kit. C can ask about another quiet session and choose whether its terms work once the room, opener and kit are confirmed.
+
 ### A's departure and the next offer
 
 In a further invented visit, A has enjoyed the afternoon and wants to leave by 17:40. A tells the desk the time but keeps the reason private, and agrees that the departure time can be passed to the duty organiser. The booking still records 18:00. A's attempt will finish at 17:15 and a qualified check is booked for 17:35–17:50. The facilitator can instead offer one check at 17:20–17:35. The organiser can change the booking before 17:10, subject to A's acceptance.

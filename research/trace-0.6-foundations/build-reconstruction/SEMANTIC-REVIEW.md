@@ -391,3 +391,9 @@ This calculation describes the stipulated intake rule. Whether a real register i
 | [B0166, receipt of a simulated packet](TRACE-v0.5-reference.md#L912-L913) | **Reference only** for the named recorder, event R09 and the conditional result at simulator time 20. The manuscript links the original fixture. Its author stipulates the premises. An actual authentication, restoration, timely protection and permission to act each require evidence of their own. |
 
 The surrounding partial reviews of the restoration packet and the route available at the later time retain their earlier scope.
+
+## What the kit loan preserves, 27 November 2026
+
+The [single-Saturday handover](CANDIDATE.md#what-would-renewing-the-kit-loan-preserve) fixes the goal of a usable quiet session by the agreed start on one date. Let $J_E(\pi)$ be that forecast on evidence $E$ under plan $\pi$. Write $s$ for continued loan and collection and $e$ for support ending. The older $J_{\text{earlier}}(s)=3/5$ and today’s $J_{\text{today}}(s)=1/2$ give an update of $-1/10$. Holding today’s evidence fixed gives $J_{\text{today}}(s)-J_{\text{today}}(e)=1/2-3/10=1/5$ for the support decision. The first comparison changes the evidence. The second changes the plan. [Foundations on continued support](../SYNTHESIS.md#6-hope-includes-creating-maintaining-and-recovering-support)
+
+The second comparison concerns the whole arrangement for that date. It leaves the lender’s permission, the collector’s time, the agreed expense and the participants’ choices to their holders. The forecasts are stipulated and cover session readiness. Actual delivery and what A or C choose to do need their own records.
