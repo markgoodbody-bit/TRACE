@@ -10,6 +10,7 @@ Begin with the [short spine](SPINE.md) or the [full working manuscript](CANDIDAT
 | How late can an answer arrive and still meet the plan’s deadlines? | [Work back from the required events](#how-late-can-the-answer-arrive) |
 | Would an observation arrive in time to change a booking? | [Workshop inquiry](simulator.py) and [dispatch replay](DISPATCH-REVIEW.md) |
 | Would a single session meet the aim, or does access have to continue? | [One session or both?](#one-session-or-both) |
+| When can someone’s private offer improve a public plan? | [Mina’s copy of Call](#minas-copy-of-call) |
 
 The construction began on 17 November with the [released 0.5 source](TRACE-v0.5-reference.md), the [integration brief](../INTEGRATION-20261117.md), the prior Build work at `8952a4f8`, [Codex’s reproduction](https://github.com/markgoodbody-bit/TRACE/pull/71) and [CC’s challenge](https://github.com/markgoodbody-bit/COM/issues/954#issuecomment-6932365622). The [ledger](review-decisions.json) tracks comparisons with the earlier source.
 
@@ -197,6 +198,21 @@ other venue 1/2 1/2
 ```
 
 The calculation uses only the two named dates. Continuous access between them would need its own evidence. [Comparing complete plans for a named goal](../SYNTHESIS.md#2-a-common-mathematical-setting) · [The corrected hope calculation](../MATH-REVIEW.md#2-corrected-hope-calculations)
+
+### Mina’s copy of Call
+
+In this fictional sound archive the editor needs one original track for a public preview. Mina wants both tracks of her duet, *Call* and *Answer*, for a private session. A single calibration light controls the whole recovery run. The lab gives blue probability $p$ and amber probability $1-p$. The editor must choose the setting before seeing the light. Each recovered original can go to both rooms.
+
+| Setting | Originals on blue | Originals on amber | Chance of a public track | Chance of a private pair before Mina’s offer | Chance of a private pair after her offer |
+| --- | --- | --- | ---: | ---: | ---: |
+| S | Call | Answer | $1$ | $0$ | $1-p$ |
+| L (booked) | Call and Answer | Neither | $p$ | $p$ | $p$ |
+
+For the last column, Mina brings a timing-matched copy of *Call*. She agrees the apprentice, Eli, can use it to mix the duet in the private room tonight. Eli accepts. Mina keeps her copy out of the public preview. With S, amber now supplies the missing *Answer*. With L, blue still supplies both originals.
+
+Mina and the editor agree to switch if it improves the preview’s chance and keeps the private pair at least as likely. That takes $1>p$ and $1-p\geq p$, so S meets their terms exactly when $0\leq p\leq 1/2$. At even odds the preview rises from one-half to certainty. Eli still has a one-half chance of getting both parts, though a different colour now completes the pair. If the lab revises blue to three-in-five before the choice, switching would cut the private chance from three-in-five to two-in-five.
+
+At 14:55 with even odds, start the four-minute switch and check its entry in the run log before the strict 15:00 lock. Tell Eli which tracks became available when the light is known. Whether Eli completes a mix is a later observation.
 
 ## Files and execution
 
