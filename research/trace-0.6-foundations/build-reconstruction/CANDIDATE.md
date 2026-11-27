@@ -442,6 +442,12 @@ The notice keeper can compare the list with the desk’s register if authorised 
 
 For the next workshop, the desk has three places. It holds one for each recipient through the reply cutoff and the processing of timely replies. It sends the offer through a channel the recipient has confirmed they can use. A named clerk has time and authority to confirm timely replies before the register closes. The clerk can confirm C’s booking even if C sends the only reply. C may leave the place unused. Record the held place, usable channel and staffed route as evidence about this invitation. Earlier access stays open where the earlier evidence still fits both histories.
 
+#### What if the desk has already promised a slot?
+
+Suppose there are two staffed phone slots and one written slot still ahead before closing. Each can confirm one booking. A and B can use either phone slot. C can use the first phone slot or the written slot. If C agrees to written confirmation, the desk can keep both phone slots available for A and B. Each person still chooses whether to take a place.
+
+If C replies first and the desk promises them the first phone slot, only one phone slot remains for the two outstanding offers. Keep that promise in the handover. While the slot is still ahead, the desk can ask C privately whether they would agree to use the written slot instead. Release the phone slot once C has agreed and the desk has confirmed the change with them while A or B can still use it. Once the call has used the slot, the time is spent. Look for a new staffed phone slot before closing or tell A and B what the desk can still offer while they have time to decide. [Try the booking-capacity check with these commitments](README.md#can-the-desk-honour-every-held-place).
+
 ### What survives a handover?
 
 On a later date the group has run two quiet practice sessions. At the second, A set up the practice wheel and repaired a puncture independently. C used the quiet room and demonstrated a technique. The kit keeper now leaves the role. The group wants to know what it can offer for the next two Saturdays. Two volunteers can set up, and both depend on the departing keeper to release the cupboard kit.
