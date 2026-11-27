@@ -56,7 +56,7 @@ Distinguish offers, prior agreement, ongoing commitments, externally grounded du
 
 ## 4. Change, interaction and evidence of influence
 
-Where a bounded engineered dependency is warranted, name component relations and conditional tests; keep proposed connections distinct from confirmed ones. Do not make association or an editable graph a proof of causal attribution. Where relationships co-evolve and the model cannot support a decomposed causal path, describe interacting constraints and dispositions, diverse plausible explanations, observation and small revisable interventions; do not force additive contribution weights or invented probabilities. Both modes support action, not a claim that the situation has been classified correctly forever.
+Where a bounded engineered dependency is warranted, name component relations and conditional tests; keep proposed connections distinct from confirmed ones. Do not make association or an editable graph a proof of causal attribution. Where relationships co-evolve and the model cannot support a decomposed causal path, describe interacting constraints and dispositions, diverse plausible explanations, observation and small revisable interventions; do not force additive contribution weights or invented probabilities. Both modes support action, not a claim that the situation has been classified correctly forever. [Who had a way to book the workshop?](CANDIDATE.md#who-had-a-way-to-book)
 
 [Expand section 4](CANDIDATE.md#4-change-interaction-and-evidence-of-influence)
 

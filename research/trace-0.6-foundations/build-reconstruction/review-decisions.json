@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "7b703f14b25887b3ebb5412821ed90ecf36af3be2f2e9ac84ce971d34aa6d659",
+  "candidate_sha256": "a5383d4accc6ba80b970de1fc27bc15b8f4dd38438505b7ceceb4ce9e2e5becd",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -28,8 +28,8 @@
       "status": "PARTIAL",
       "reviewer": "Build, same author as candidate; Campfire, F06 and F09 case comparison",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate section 6 presents the fifteen compatibility-floor items. The musician’s next-season case tests the scope of the current refusal, what future the musician wants, and whether a filing channel is discoverable and usable before its deadline.",
-      "remaining": "The single decision covers aspects of F06 and F09. Check the other requirements of these and the remaining clauses against the exact 0.5 floor and its released 0.4 sources."
+      "finding": "Candidate section 6 presents the fifteen compatibility-floor items. The musician’s next-season case tests the scope of the current refusal, what future the musician wants, and whether a filing channel is discoverable and usable before its deadline. The workshop invitation compares the booking register with the opted-in notice cohort, keeps earlier route access unknown for C, and shows a staffed reply route for a later invitation (F01 and F10).",
+      "remaining": "The cases cover aspects of F01, F06, F09 and F10. Check the other requirements of these and the remaining clauses against the exact 0.5 floor and its released 0.4 sources."
     },
     {
       "block_id": "B0120",
