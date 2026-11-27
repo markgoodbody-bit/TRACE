@@ -125,7 +125,7 @@ These entries cover an actual practice turn in the example. The cost of reservin
 
 ## 2. People, relationships and possibilities
 
-Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. Assess a result against the aim and criterion in the commitment it concerns. When someone states a new aim, preserve the earlier commitment and date the new choice. Keep any inference about their aim attributed to the observer. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change).
+Ask whose lives, aims and burdens could change; whose voice is absent; who may contest the framing; and what the account does not yet know. A stated goal has an author, context and history. Record evidence about the options and constraints under which it formed without overriding the person's own aim. Assess a result against the aim and criterion in the commitment it concerns. When someone states a new aim, preserve the earlier commitment and date the new choice. Keep any inference about their aim attributed to the observer. Ask which useful routes each participant can take on their own and which depend on others. Read a recorded choice alongside the options the person could use at the time. [See how that changes the next offer](CANDIDATE.md#a-choice-after-the-options-change). Ask how long the person needs access. [Would one quiet Saturday serve C’s aim, or do they need both?](CANDIDATE.md#does-c-need-one-quiet-saturday-or-both)
 
 Supporters are not only resources for a beneficiary: they can form capabilities and futures of their own, including through cooperation, care, learning and maintenance. A possible route in a map, material access to it, chosen participation and sustainable support are different. One participant's benefit does not establish another's consent or obligation.
 
@@ -140,6 +140,17 @@ Curiosity, care, creative work and play can be worthwhile as people experience t
 Learning can change an account, a capability, a relationship or a purpose. Ask separately what someone has understood, what they can do under which conditions and support, and what they now want, with evidence for each. These are not mandatory stages. Completing a task with help may be valuable without establishing independent performance; a changed aim may be worthwhile without fulfilling the earlier one. When an account is hard to hear, examine the communication channel and conditions of participation as well as the speaker. Improving the channel may reveal a contribution that was missed; difficulty interpreting an account does not diminish the participant's standing. Ask whether the person actually wants the proposed change.
 
 Prior access to a person's files is not, by itself, permission to reuse them. A previous session does not establish a new session or an obligation to maintain the result. Identify unassigned maintenance as unassigned, and preserve what the supporter actually says separately from another person's account.
+
+### Does C need one quiet Saturday or both?
+
+C wants a quiet place to practise. The organiser has to choose a venue for the next two Saturdays. The first venue guarantees the first Saturday only. At the other venue, one decision covers both dates. In this example there is an even chance of getting both or getting neither. The organiser must choose before that decision is known. Both venues work for C, and the other arrangements are in place whenever the room is available.
+
+| Booking the organiser makes | C has a usable session on at least one Saturday | C has a usable session on both Saturdays |
+| --- | ---: | ---: |
+| Book the first venue for one date | 1 | 0 |
+| Request both dates at the other venue | 1/2 | 1/2 |
+
+Ask C which would serve their purpose while both bookings are still possible. If one session is enough, the first venue can guarantee it. If C needs to start something one week and finish it the next, only the second plan can offer that opportunity, at the stated odds. C can decide whether to attend on each date. [Replay the two-date hope calculation](README.md#one-session-or-both)
 
 ## 3. Offers, duties and power
 
