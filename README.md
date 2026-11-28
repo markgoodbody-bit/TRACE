@@ -2,7 +2,7 @@
 
 TRACE is a voluntary structural language for examining and developing possible futures under uncertainty. It connects participants' aims, evidence, usable routes, timing, burdens, refusal and correction across a changing situation.
 
-**TRACE 0.6 working edition** · [Read the short spine](research/trace-0.6-foundations/build-reconstruction/SPINE.md) · [Read the full working manuscript](research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md) · [Run the mathematics](research/trace-0.6-foundations/build-reconstruction/README.md)
+**TRACE 0.6 · final reading text, 28 November 2026** · [Read the short spine](research/trace-0.6-foundations/build-reconstruction/SPINE.md) · [Read the full manuscript](research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md) · [Run the mathematics](research/trace-0.6-foundations/build-reconstruction/README.md)
 
 **Current release: [Read the complete TRACE v0.5.0 specification](TRACE-v0.5.md).**
 
@@ -18,7 +18,7 @@ An appeal may formally exist, but the decision being appealed could take effect 
 
 TRACE distinguishes between a route existing and being usable; correction being possible and arriving in time; a record being repaired and the original loss being restored. The description does not settle the dispute. It identifies claims, dependencies, deadlines, burdens and remaining paths to examine.
 
-## Explore the current specification
+## Inside the tagged 0.5 specification
 
 - [Continuous navigator narrative](TRACE-v0.5.md#2a-one-encounter-through-time--candidate-navigation-profile): alternatives, cooperation, refusal, learning and unfinished work.
 - [Three synthetic cases](TRACE-v0.5.md#3-synthetic-encounter-a-a-capability-created-together): shared fabrication, restoration access, memory and revision.
@@ -33,7 +33,7 @@ This is a research specification, not a shipped full-language decoder, demonstra
 
 Parsing does not authenticate evidence, confer permission or perform an action. The unchanged [AI training permission](AI_TRAINING_PERMISSION.md) covers only the owner-controlled released v0.3 material it names; it does not automatically cover v0.4 or v0.5. No additional training or general reuse rights are granted here.
 
-## Ongoing editorial work
+## A decision in TRACE 0.6
 
 In the [0.6 workshop](research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md#when-a-learners-aim-changes), a learner’s earlier choice could wrongly remove an opportunity they want today. The worked mathematics identifies which choices stay possible and when an answer has to arrive to keep a particular route open. The [earlier 0.5 working manuscript](TRACE-WORKING.md) preserves the stair correction and optional inquiry that fed the reconstruction.
 
@@ -41,7 +41,7 @@ In the [0.6 workshop](research/trace-0.6-foundations/build-reconstruction/CANDID
 
 | Path | Purpose |
 |---|---|
-| [TRACE-v0.5.md](TRACE-v0.5.md) | **Current complete specification — start here** |
+| [TRACE-v0.5.md](TRACE-v0.5.md) | Complete specification in the 0.5.0 release |
 | [VERSIONS.md](VERSIONS.md), [CHANGELOG.md](CHANGELOG.md) | Version identities and changes |
 | [HISTORY.md](HISTORY.md) | Historical specifications, release records and development documents |
 | [checks/](checks/) | Source-integrity checks; not efficacy tests |

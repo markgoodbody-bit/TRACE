@@ -95,9 +95,10 @@ def render_spine(candidate):
                         f"\n\n[Expand section {n}](CANDIDATE.md#{anchor})")
     return (f"{edition_title} (short spine)\n\n{lead}\n\n"
             "Use this view for a first decision affecting another participant. "
-            "The [full working edition](CANDIDATE.md) carries the worked cases and their assumptions. "
-            "The [review ledger](review-decisions.json) marks gaps in the comparison with 0.5. "
-            "Material without a completed comparison remains UNRESOLVED.\n\n"
+            "The [full edition](CANDIDATE.md) carries the worked cases and their assumptions. "
+            "The [mathematical companion](README.md) gives the calculations. "
+            "Use the [source guide](EDITION-SOURCES.md) for an original definition or technical contract. "
+            "If a missing answer could change the next move, mark it UNRESOLVED and say who can answer in time.\n\n"
             + DECISION_HEADING + "\n\n" + decision.rstrip() + "\n\n"
             + "Expand a section when another person’s aim, a condition of consent, a clock or a shared resource "
               "could change the next act. In the co-evolving social layer of the workshop, notice who can keep the "

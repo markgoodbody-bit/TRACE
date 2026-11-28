@@ -1,8 +1,8 @@
-# TRACE 0.6 — working edition (short spine)
+# TRACE 0.6 (short spine)
 
 **How can we make a better future?** Mark originated TRACE as a navigation language for an unfamiliar AI. A human can read and challenge the same account. You can use it from the position of someone choosing, someone affected or someone trying to understand what happened.
 
-Use this view for a first decision affecting another participant. The [full working edition](CANDIDATE.md) carries the worked cases and their assumptions. The [review ledger](review-decisions.json) marks gaps in the comparison with 0.5. Material without a completed comparison remains UNRESOLVED.
+Use this view for a first decision affecting another participant. The [full edition](CANDIDATE.md) carries the worked cases and their assumptions. The [mathematical companion](README.md) gives the calculations. Use the [source guide](EDITION-SOURCES.md) for an original definition or technical contract. If a missing answer could change the next move, mark it UNRESOLVED and say who can answer in time.
 
 ## Start with the next decision
 
@@ -16,6 +16,8 @@ In the [bicycle workshop](CANDIDATE.md#what-next-saturday-needs), A came to lear
 > The organiser saw A mend a puncture on the practice wheel without help. A has a kit at home. How A manages both brakes there is still unknown. Last Saturday’s borrowed tools were returned. A new session needs a keeper to release a kit, a willing volunteer to collect and return it, and someone to open a quiet room C can use. A and C each need time to decide whether to come while other plans are still possible.
 
 Ask A what they would like to do next. If they still want to adjust their own brakes, offer to look for a session where A can do the work and a qualified helper can check it. Ask separately whether A wants to teach puncture repair and whether their name can go on the notice. Ask C directly, while another plan is still possible, whether they want to come.
+
+Suppose A chooses to practise privately and asks the organiser to leave their name off the public teaching list. Close that listing. A has made a choice about publicity and can still take the practice place. Record who chose the limit and what it covers. If a possible teaching slot turns up next month, first check who can open the room and provide the kit. Once those arrangements hold, A can decide whether to teach. Anyone counting on a second session needs to know who has agreed to keep it available and for how long.
 
 ### One navigation pass
 
@@ -38,7 +40,7 @@ Expand a section when another person’s aim, a condition of consent, a clock or
 
 ## 1. Begin with a living situation
 
-Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost, before choosing a verdict. An entity, group or institution sees only part of a changing world. The world, signals, accounts, maps and retained records are different. Treat the boundary and the list of participants as provisional. Ask whose options come into view if you draw the boundary differently. Moral standing remains a separate question. Other entities have perspectives and possibilities of their own. Keep what a source asserts separate from its warrant, our access to it and anyone's decision. An assertion can have a definite value while its evidence is unavailable or disputed. A missing answer is different again; silence alone establishes neither withholding nor refusal. Lack of a recorded route is not proof that no route exists. [Which table did Sam’s helper check?](CANDIDATE.md#which-table-did-sams-helper-check)
+Ask what is happening and what could be formed, enjoyed, maintained, repaired or lost. For a consequential change, say what you are comparing, for whom, over what period and from whose view. An entity, group or institution sees only part of a changing world. The world, signals, accounts, maps and retained records are different. Treat the boundary and the list of participants as provisional. Ask whose options come into view if you draw the boundary differently. Moral standing remains a separate question. Other entities have perspectives and possibilities of their own. Keep what a source asserts separate from its warrant, our access to it and anyone's decision. An assertion can have a definite value while its evidence is unavailable or disputed. A missing answer is different again; silence alone establishes neither withholding nor refusal. Lack of a recorded route is not proof that no route exists. [Which table did Sam’s helper check?](CANDIDATE.md#which-table-did-sams-helper-check)
 
 [Expand section 1](CANDIDATE.md#1-begin-with-a-living-situation)
 

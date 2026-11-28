@@ -14,8 +14,7 @@ class ReviewAnchorTests(unittest.TestCase):
 
     def test_current_reviews_are_anchored(self):
         reviewed, total = check_reviews.validate(self.data, self.source, self.candidate, self.exists)
-        self.assertGreater(reviewed, 0)
-        self.assertGreater(total, reviewed)
+        self.assertEqual((reviewed, total), (206, 206))
 
     def test_changed_source_or_candidate_invalidates_reviews(self):
         for source, candidate in ((self.source + b'change', self.candidate),
@@ -68,7 +67,8 @@ class ReviewAnchorTests(unittest.TestCase):
         for corruption in ('duplicate', 'gap', 'hash', 'evidence'):
             data = copy.deepcopy(self.data)
             if corruption == 'duplicate': data['reviews'].append(copy.deepcopy(data['reviews'][0]))
-            if corruption == 'gap': data['reviews'][0]['remaining'] = ''
+            if corruption == 'gap':
+                data['reviews'][0].update(status='PARTIAL', remaining='')
             if corruption == 'hash': data['reviews'][0]['block_sha256'] = 'incorrect'
             if corruption == 'evidence': data['reviews'][0]['evidence'] = '../SEMANTIC-REVIEW.md'
             with self.subTest(corruption=corruption):

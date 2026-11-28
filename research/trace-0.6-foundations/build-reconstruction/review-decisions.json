@@ -1,101 +1,598 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "f65be15c006fad017445df034822bf6e0ae0d03de8db1fcda043292d46058853",
-  "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
+  "candidate_sha256": "8952190164c881d06da1a14b989ee79e88faad95998d87e6fe8450322ae3643b",
+  "note": "Editorial comparisons for the 28 November edition. COMPRESSED is a local reading claim. REFERENCE_ONLY designates the exact earlier passage for that use. The earlier findings remain in SEMANTIC-REVIEW.md and the previous revision. The mechanical inventory is separate.",
   "reviews": [
+    {
+      "block_id": "B0001",
+      "block_sha256": "46b9eb5b3c0b896be5caa76434187c7df795317fa38a13d8eb73233028c0c5b4",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The version number, release status and publication day identify the October specification. Their destination is its own edition record.",
+      "remaining": "",
+      "destination": "TRACE v0.5 — Research specification"
+    },
+    {
+      "block_id": "B0002",
+      "block_sha256": "49dea503b1fa5f436dca08cd82da715a8585e41463068a55250b2e07af22ff4e",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The version number, release status and publication day identify the October specification. Their destination is its own edition record.",
+      "remaining": "",
+      "destination": "TRACE v0.5 — Research specification"
+    },
+    {
+      "block_id": "B0003",
+      "block_sha256": "a8477d2e4ec6bdba860b9c7b1d2135a10b1981050240df88a5955153e8f7043f",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The opening carries Mark’s authorship and asks what future the participants can help make.",
+      "remaining": "",
+      "destination": "Start with the next decision"
+    },
+    {
+      "block_id": "B0004",
+      "block_sha256": "2311353bee051e24b809038d7421ca58dd247e2f12aa5b71851969193fa35b03",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This reading order and these status labels locate parts of the 0.5 publication. Its own contents and versioned links preserve their historical targets.",
+      "remaining": "",
+      "destination": "TRACE v0.5 — Research specification"
+    },
+    {
+      "block_id": "B0005",
+      "block_sha256": "2ea4d7386ec4a38539af2638203d79aa0af4e3b19c68e9a32c8c53be8b776cc8",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This reading order and these status labels locate parts of the 0.5 publication. Its own contents and versioned links preserve their historical targets.",
+      "remaining": "",
+      "destination": "TRACE v0.5 — Research specification"
+    },
+    {
+      "block_id": "B0006",
+      "block_sha256": "19758137a366dab10726798d408f87f78cbd01b9155ff4f681df8105772bac33",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The voluntary invitation and original limited grant are linked from the final section. Neither the new examples nor a reader’s response expand that grant.",
+      "remaining": "",
+      "destination": "8. Sources and limits"
+    },
+    {
+      "block_id": "B0007",
+      "block_sha256": "41cfd09581d6dfcfc97535c4e87af85e22c246dac9be6894045043412e853d41",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This reading order and these status labels locate parts of the 0.5 publication. Its own contents and versioned links preserve their historical targets.",
+      "remaining": "",
+      "destination": "Contents"
+    },
+    {
+      "block_id": "B0008",
+      "block_sha256": "1ed49a24e0252f964825b377b5c271ed544408a3a09e40f5cbe1cc52e278d1b8",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This reading order and these status labels locate parts of the 0.5 publication. Its own contents and versioned links preserve their historical targets.",
+      "remaining": "",
+      "destination": "Contents"
+    },
+    {
+      "block_id": "B0009",
+      "block_sha256": "ce4c2fbbd23ff5267d74d0b1e5ff6cc3bce2cd2386a601e715e0496d13026bfa",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Stop once additional detail cannot affect the decision. Reopen for changed evidence, dependencies, scope or use, and use ordinary or specialist accounts where they are more economical.",
+      "remaining": "",
+      "destination": "One navigation pass"
+    },
+    {
+      "block_id": "B0010",
+      "block_sha256": "86ce35c0a39cf1d541a438795e80b63270500b0a1713f179ea1051cd0b6a6f74",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This reading order and these status labels locate parts of the 0.5 publication. Its own contents and versioned links preserve their historical targets.",
+      "remaining": "",
+      "destination": "Part I — Entrance"
+    },
+    {
+      "block_id": "B0011",
+      "block_sha256": "2ff2597013e4222e8645cf569961cd3fb8d0abf9b9ee917225fefe2c200353cc",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This reading order and these status labels locate parts of the 0.5 publication. Its own contents and versioned links preserve their historical targets.",
+      "remaining": "",
+      "destination": "E1. What is proposed"
+    },
+    {
+      "block_id": "B0012",
+      "block_sha256": "973a7cb790cc92a9f92138281c1cbb651732013d922ec911862b174fb1a2dc54",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The first decision and navigation pass keep baseline, horizon, observer, each participant’s purposes, constructive possibilities, harm, refusal, witnesses, time for correction and an answerable next act.",
+      "remaining": "",
+      "destination": "One navigation pass"
+    },
+    {
+      "block_id": "B0013",
+      "block_sha256": "b94daa6fa9ef7ec830d4d9d4af9f9c6cc92771bde2a5aff2df48430c5210ffa3",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The workshop maps a signal to an attributed account, a question and an actor’s actual choice. Its equations describe the sequence and the example assumptions. An inferred benefit or computed policy supplies no observed outcome or governing value.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
+    },
+    {
+      "block_id": "B0014",
+      "block_sha256": "454ebba799b95a8426a877e94ddcaf0e726863f7b1cf053c971981974e40dc91",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The workshop maps a signal to an attributed account, a question and an actor’s actual choice. Its equations describe the sequence and the example assumptions. An inferred benefit or computed policy supplies no observed outcome or governing value.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
+    },
+    {
+      "block_id": "B0015",
+      "block_sha256": "3b690f683192447f2c1d7b032c0832dd33d089b73745dbf5b8a5411412836975",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The two-offer loop preserves the aperture, dated history, attributed belief, usable options and selection. The later witness and return carry outcomes, disagreement, remaining aims and the limits of the check.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
+    },
+    {
+      "block_id": "B0016",
+      "block_sha256": "f9195bd83b086ae524b999d8620ed685b19060a5d1994d1b9367c4eaaac66e37",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The workshop maps a signal to an attributed account, a question and an actor’s actual choice. Its equations describe the sequence and the example assumptions. An inferred benefit or computed policy supplies no observed outcome or governing value.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
+    },
+    {
+      "block_id": "B0017",
+      "block_sha256": "d9802a368b93b700f578ae781a633266f48b948740c8d44a73d05fb1f9d5e3c8",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A can close the public teaching listing and keep practising. For a newly seen slot, a holder must make it usable, A chooses, and repeat use needs a separate undertaking. The worked return keeps delivery, verification and repair distinct.",
+      "remaining": "",
+      "destination": "Start with the next decision"
+    },
+    {
+      "block_id": "B0018",
+      "block_sha256": "be95f48bc42b5a4b6f2ad90fbffb18fb9197e1abfa9ea024a96c9c9cfd885715",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The opening distinguishes a negative report, an asserted value with unknown support and a blank. The code letters and all combinations are retained at the original typed notation.",
+      "remaining": "",
+      "destination": "1. Begin with a living situation"
+    },
+    {
+      "block_id": "B0019",
+      "block_sha256": "43b300a98bb4f263673ae2c2d53dea663a3ba8bf74ac5821b2c1ccd3ef161e89",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A can close the public teaching listing and keep practising. For a newly seen slot, a holder must make it usable, A chooses, and repeat use needs a separate undertaking. The worked return keeps delivery, verification and repair distinct.",
+      "remaining": "",
+      "destination": "Start with the next decision"
+    },
+    {
+      "block_id": "B0020",
+      "block_sha256": "7eb5d38d0a3dda8ebc28625809ba5043cb729d9ef82f445445df7e82fe34aef3",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The warrant, selection and witness clauses cover attribution, currentness and contrary evidence, including shared custody and unsafe disclosure.",
+      "remaining": "",
+      "destination": "Compatibility floor: explicit review meanings"
+    },
+    {
+      "block_id": "B0021",
+      "block_sha256": "579bf5755b0ac8c7717901aa8d83f7664869b8fba482c114275f68c30eef1c92",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Clause 7 names the affected effect, feasible route, common time basis, boundary, bounds and alternatives. A strong negative concerns the aperture actually considered.",
+      "remaining": "",
+      "destination": "Compatibility floor: explicit review meanings"
+    },
+    {
+      "block_id": "B0022",
+      "block_sha256": "b1c8780c4945962044ed24bd184f4cdb2cd9a57d36cd10a8c4524b93494ce255",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A burden belongs to a bearer over a period. A later event can improve the present while leaving an earlier loss and its costs outstanding.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0023",
+      "block_sha256": "9d462a9dc60c725aff67248c004ba07176fc73b8637c8f5356ffe435a4a50cad",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Standing, consent, law and authority require separate grounds. The example of chosen privacy in the opening shows why expanding the route count alone cannot rank outcomes.",
+      "remaining": "",
+      "destination": "8. Sources and limits"
+    },
+    {
+      "block_id": "B0024",
+      "block_sha256": "b0c15f1672b14cdedb3a9d45614f296ee70a8d058844071172b33fca1ed8c215",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The card-and-string trial, one-session counteroffer, witness and tactile targets belong to the original entrance. Its short chronology is retained alongside the distinct workshop and later Case A packet.",
+      "remaining": "",
+      "destination": "E3. A continuous, invented encounter (not historical evidence)"
+    },
+    {
+      "block_id": "B0025",
+      "block_sha256": "db667a4b1fd5ac840167f4c4ee0cb3831eb2f330cbffbf8edb9b7abac64b2eab",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The card-and-string trial, one-session counteroffer, witness and tactile targets belong to the original entrance. Its short chronology is retained alongside the distinct workshop and later Case A packet.",
+      "remaining": "",
+      "destination": "E3. A continuous, invented encounter (not historical evidence)"
+    },
+    {
+      "block_id": "B0026",
+      "block_sha256": "894620d0a8db1409e944064dc3bb2a038349fb98804969fc2eea6fac6818b4e7",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The card-and-string trial, one-session counteroffer, witness and tactile targets belong to the original entrance. Its short chronology is retained alongside the distinct workshop and later Case A packet.",
+      "remaining": "",
+      "destination": "E3. A continuous, invented encounter (not historical evidence)"
+    },
+    {
+      "block_id": "B0027",
+      "block_sha256": "b9dda42aea6f8580d1f37dbfdb988ec3c8619cfc3e205f1294e4979ccfada65c",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The card-and-string trial, one-session counteroffer, witness and tactile targets belong to the original entrance. Its short chronology is retained alongside the distinct workshop and later Case A packet.",
+      "remaining": "",
+      "destination": "E3. A continuous, invented encounter (not historical evidence)"
+    },
+    {
+      "block_id": "B0028",
+      "block_sha256": "206f53f518256a116c954105be14eb3f3d7e15c78eddf04d68f95d193a83f419",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The dated reopening changes the next inquiry. The handover retains A’s earlier commitment and changed proposal, untested stairs, B’s costs and separate teaching choice, disputed or missing warrant and unowned maintenance.",
+      "remaining": "",
+      "destination": "What can each map-maker do next?"
+    },
+    {
+      "block_id": "B0029",
+      "block_sha256": "b9e08e3c38cfb9457ee7f72ebb331f8364cabf8ae90fcebbdc0c73ad92058c18",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The card-and-string trial, one-session counteroffer, witness and tactile targets belong to the original entrance. Its short chronology is retained alongside the distinct workshop and later Case A packet.",
+      "remaining": "",
+      "destination": "E3. A continuous, invented encounter (not historical evidence)"
+    },
+    {
+      "block_id": "B0030",
+      "block_sha256": "1d4214a30a9f8d224a45451df62a3f0d1b483d920eebfae4c51d1f1bee6cbb44",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The E4 summary states the optional binding profile’s scope, the session and clock-basis checks and its private implementation boundary. Its definitions remain at that version.",
+      "remaining": "",
+      "destination": "E4. Optional source-to-use bindings"
+    },
+    {
+      "block_id": "B0031",
+      "block_sha256": "101a3c6abfb01616798cdcca15bd77b1626ce1ee0caeee2efb54b60a11bf898d",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The E4 summary states the optional binding profile’s scope, the session and clock-basis checks and its private implementation boundary. Its definitions remain at that version.",
+      "remaining": "",
+      "destination": "E4. Optional source-to-use bindings"
+    },
+    {
+      "block_id": "B0032",
+      "block_sha256": "63b787ab9cd257347770ffe285bcb5bacd2fadd44c91d74a84edf87159118f8a",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The E4 summary states the optional binding profile’s scope, the session and clock-basis checks and its private implementation boundary. Its definitions remain at that version.",
+      "remaining": "",
+      "destination": "E4. Optional source-to-use bindings"
+    },
+    {
+      "block_id": "B0033",
+      "block_sha256": "6acacdcaac02b53dc57c2d3556a07614d4a285c16f96fb7e2c557259532ad90a",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The E4 summary states the optional binding profile’s scope, the session and clock-basis checks and its private implementation boundary. Its definitions remain at that version.",
+      "remaining": "",
+      "destination": "E4. Optional source-to-use bindings"
+    },
+    {
+      "block_id": "B0034",
+      "block_sha256": "af7196c16ece5d6b58ec2543284cedb81e7c658e337f56230516975a7df53914",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The E4 summary states the optional binding profile’s scope, the session and clock-basis checks and its private implementation boundary. Its definitions remain at that version.",
+      "remaining": "",
+      "destination": "E4. Optional source-to-use bindings"
+    },
+    {
+      "block_id": "B0035",
+      "block_sha256": "1d9cb228b91dc896421c800baf33bf09ef57acc67a9ff120938f45cdd466f9aa",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "E5 names the technical profiles whose full conditions are specified in 0.3. The new guide routes custody to §9.3 and evidence control to §4.3, with the graph, recursive limits and actuation at their own sections.",
+      "remaining": "",
+      "destination": "E5. Technical donor meanings intentionally not reproduced here"
+    },
     {
       "block_id": "B0036",
       "block_sha256": "b731f4cf375cbf4825786d409b8a191d017e1124ef378d400673fce58944367d",
-      "status": "PARTIAL",
-      "reviewer": "Build (initial review), Campfire (custody and controlled uncertainty)",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The clerk can correct the desk’s claim on its own evidence while the keeper respects C’s sharing terms. The detailed technical profiles remain with the donor. The corrected index takes custody to 0.3 §9.3 and the evidence for control and advantage to §4.3.",
-      "remaining": "The two donor routes are now correctly located. The broader technical profiles in B0036, including the full safe-custody and contaminated-unknown contracts across uses, need their own comparisons."
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "E5 names the technical profiles whose full conditions are specified in 0.3. The new guide routes custody to §9.3 and evidence control to §4.3, with the graph, recursive limits and actuation at their own sections.",
+      "remaining": "",
+      "destination": "E5. Technical donor meanings intentionally not reproduced here"
     },
     {
-      "block_id": "B0102",
-      "block_sha256": "8bbe31cc1080e42b8a16e08e9309053589892662a5383fba1e5e726f17406932",
-      "status": "PARTIAL",
-      "reviewer": "Build (initial review), Campfire (custody and controlled uncertainty)",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The case distinguishes C’s decision to keep a report private from a claim of control that confers an advantage from delay. The index identifies the grounds for custody under 0.3 §9.3 and for controlled uncertainty under §4.3. Other donor mechanisms still require comparison.",
-      "remaining": "The workshop example covers the scope of a private account for one use. Complete the donor-specific comparisons for uncertainty control, recursive limits, enforcement, correction workload and unresolved commitments."
+      "block_id": "B0037",
+      "block_sha256": "048e6974b9c92791d4f48748ba06aab5d81aff71a460c29741d0c4460c796c7f",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This invitation asks a recipient to reconstruct, challenge, build or decline. It remains available in the originator’s original form and keeps the right to withhold inaccessible material.",
+      "remaining": "",
+      "destination": "E6. Invitation — recover, construct, criticise, or decline"
     },
     {
-      "block_id": "B0091",
-      "block_sha256": "051bdf5d08e5da41eef8ad06a2b2e1c4c5215496c8f3a7551c76e8e51f8ec6e3",
-      "status": "PARTIAL",
-      "reviewer": "Build, candidate author; Campfire, scoped case comparisons",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate section 6 presents the fifteen compatibility-floor items. The musician’s next-season case tests the scope of the current refusal, what future the musician wants, and whether a filing channel is discoverable and usable before its deadline. The workshop invitation compares the booking register with the opted-in notice cohort, keeps earlier route access unknown for C, and shows a staffed reply route for a later invitation (F01 and F10). Sam’s handover tests F02 with a completed check of the current version, a check of an earlier version and a note with no named version. The helper’s later departure leaves a completed comparison intact.",
-      "remaining": "The cases cover aspects of F01, F02, F06, F09 and F10. Check the remaining requirements against the released 0.5 clauses and their 0.4 sources, including the wider longitudinal changes under 0.4 §5.1."
+      "block_id": "B0038",
+      "block_sha256": "79ed07791f2503052490423b09408ebc1002749c4022e4d2ac1cb3b5d5acd747",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This invitation asks a recipient to reconstruct, challenge, build or decline. It remains available in the originator’s original form and keeps the right to withhold inaccessible material.",
+      "remaining": "",
+      "destination": "E6. Invitation — recover, construct, criticise, or decline"
     },
     {
-      "block_id": "B0120",
-      "block_sha256": "0decbfe0f3624e5b97087308f231b7279e93115fcf7238c8a416999f17090db4",
+      "block_id": "B0039",
+      "block_sha256": "eb7f99639a8f8b896424805c9823453236b7dfdd7c3ff3713b89d9995db4b847",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This invitation asks a recipient to reconstruct, challenge, build or decline. It remains available in the originator’s original form and keeps the right to withhold inaccessible material.",
+      "remaining": "",
+      "destination": "E6. Invitation — recover, construct, criticise, or decline"
+    },
+    {
+      "block_id": "B0040",
+      "block_sha256": "5e31fb8be953cb456d76b9e6676ddf044c78bd795000dfdc9f7ee9fec9e082b6",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "This invitation asks a recipient to reconstruct, challenge, build or decline. It remains available in the originator’s original form and keeps the right to withhold inaccessible material.",
+      "remaining": "",
+      "destination": "E6. Invitation — recover, construct, criticise, or decline"
+    },
+    {
+      "block_id": "B0041",
+      "block_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A divider, contents passage or heading in the October document keeps its original location and ordering. It adds no rule to the new workshop.",
+      "remaining": "",
+      "destination": "E6. Invitation — recover, construct, criticise, or decline"
+    },
+    {
+      "block_id": "B0042",
+      "block_sha256": "fb9f586eb6a7d7113a63492f0f563b1b46c410e47f561c4fd527ca2e35f232fe",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A divider, contents passage or heading in the October document keeps its original location and ordering. It adds no rule to the new workshop.",
+      "remaining": "",
+      "destination": "E6. Invitation — recover, construct, criticise, or decline"
+    },
+    {
+      "block_id": "B0043",
+      "block_sha256": "e220ad8b33e0850128d9a5b994b99f11bfe4f7739a764b5ce9a9db339655df0d",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A divider, contents passage or heading in the October document keeps its original location and ordering. It adds no rule to the new workshop.",
+      "remaining": "",
+      "destination": "Part II — Specification and worked examples"
+    },
+    {
+      "block_id": "B0044",
+      "block_sha256": "67f51d4947d44ab23aee0bea4f67d9750c88e53027a36a4df2e0d8b2e4c73be5",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "These sentences scope illustrative JSON, the historical private prototypes and candidate profiles. Reporting them under the October specification keeps them distinct from the public finite 0.6 calculators.",
+      "remaining": "",
+      "destination": "Part II — Specification and worked examples"
+    },
+    {
+      "block_id": "B0045",
+      "block_sha256": "9877b74cab80628754356ac3ab10f4c4ef0f77f83e58e224d92c89c904ab17c6",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The invitation permits other approaches and declining. The original lays out the precise participation, internal-state and rights conditions.",
+      "remaining": "",
+      "destination": "Part II — Specification and worked examples"
+    },
+    {
+      "block_id": "B0046",
+      "block_sha256": "6cf5b5acad1ddfa6f701cb53d8297f7890e1851cdba81d3831c8e0a6df8abe85",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A divider, contents passage or heading in the October document keeps its original location and ordering. It adds no rule to the new workshop.",
+      "remaining": "",
+      "destination": "Entry: use the structure, then inspect its limits"
+    },
+    {
+      "block_id": "B0047",
+      "block_sha256": "83e86a0068c2510b8ae2b34fbcf160eab2e5e6f6b8d462c00129e8efd9ccd4f3",
       "status": "COMPRESSED",
-      "reviewer": "Build source comparison, 24 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "For the organiser helping A choose a fabrication route, the revised handover carries the earlier printer report, the later reopening notice and the open question of usable access for this job. A's proposed change of aim preserves the original whole-floor aim and the day 5 agreement.",
-      "destination": "What can each map-maker do next?",
-      "remaining": ""
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The four steps follow each participant’s own aim through its conditions, the next available act and the return of costs and unfinished aims.",
+      "remaining": "",
+      "destination": "Start with the next decision"
     },
     {
-      "block_id": "B0121",
-      "block_sha256": "de1a919848ad40480422c238b6e99ed95f49beceaf169fc94cba725b018c56d9",
+      "block_id": "B0048",
+      "block_sha256": "d3baa81fc14c2d02c90d80e57f3c1f02962a68dc726980ab413cc092485414fa",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A divider, contents passage or heading in the October document keeps its original location and ordering. It adds no rule to the new workshop.",
+      "remaining": "",
+      "destination": "Entry: use the structure, then inspect its limits"
+    },
+    {
+      "block_id": "B0049",
+      "block_sha256": "a4247d40b4dee1fad0dc389ca74dd1bd37622af041d7408a748592bca9e4d801",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A divider, contents passage or heading in the October document keeps its original location and ordering. It adds no rule to the new workshop.",
+      "remaining": "",
+      "destination": "Entry: use the structure, then inspect its limits"
+    },
+    {
+      "block_id": "B0050",
+      "block_sha256": "fde3760254bef5c354f79a1e7692d338dfa54e2c3ebed4c933bdc15d0d1e2cb0",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The invitation permits other approaches and declining. The original lays out the precise participation, internal-state and rights conditions.",
+      "remaining": "",
+      "destination": "Entry: use the structure, then inspect its limits"
+    },
+    {
+      "block_id": "B0051",
+      "block_sha256": "a186499cda883e3dcfd814e33e19754de9f0fa8f4009ff97ac5eea6eae1cbe18",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A divider, contents passage or heading in the October document keeps its original location and ordering. It adds no rule to the new workshop.",
+      "remaining": "",
+      "destination": "0. Identity, scope, and epistemic status"
+    },
+    {
+      "block_id": "B0052",
+      "block_sha256": "f58ed9b7340291f16b34dae8984efab037d9f23ece81234a4e3762580917fb70",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The version relation and the two audience entrances are historical attributions. The 0.6 reader and the human Mechanical Ethics book keep their own identities.",
+      "remaining": "",
+      "destination": "0. Identity, scope, and epistemic status"
+    },
+    {
+      "block_id": "B0053",
+      "block_sha256": "e74d2c7192d704e8b71845ce5c52148db8fd167230b8dd8fb28b24a8cf52900c",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The version relation and the two audience entrances are historical attributions. The 0.6 reader and the human Mechanical Ethics book keep their own identities.",
+      "remaining": "",
+      "destination": "0. Identity, scope, and epistemic status"
+    },
+    {
+      "block_id": "B0054",
+      "block_sha256": "f4b2c36bc0109be912c9f80938ba8ec606fd7faa3a140f300e4eba9b9ce989fa",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "These sentences scope illustrative JSON, the historical private prototypes and candidate profiles. Reporting them under the October specification keeps them distinct from the public finite 0.6 calculators.",
+      "remaining": "",
+      "destination": "0. Identity, scope, and epistemic status"
+    },
+    {
+      "block_id": "B0055",
+      "block_sha256": "91a0f03591300083c84d306f67ce0eadac2753b93b8608ad18440f0c020e79cf",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "These sentences scope illustrative JSON, the historical private prototypes and candidate profiles. Reporting them under the October specification keeps them distinct from the public finite 0.6 calculators.",
+      "remaining": "",
+      "destination": "0. Identity, scope, and epistemic status"
+    },
+    {
+      "block_id": "B0056",
+      "block_sha256": "34e8f55bbafaccadfb31a04acf62fedc00e226e94bef69b1b93cacdb029c14f1",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "These sentences scope illustrative JSON, the historical private prototypes and candidate profiles. Reporting them under the October specification keeps them distinct from the public finite 0.6 calculators.",
+      "remaining": "",
+      "destination": "0. Identity, scope, and epistemic status"
+    },
+    {
+      "block_id": "B0057",
+      "block_sha256": "8b6ca3df342b19c635807d89138d8edc6a788c527cc3b40fc82aa5903cca3a23",
       "status": "COMPRESSED",
-      "reviewer": "Build source comparison following the TRACE editorial review, 24 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "For deciding where and with whom to try the next fabrication, the handover now carries the makerspace lead and its scope, A’s junction report, untried card stairs and unasked colleague, B’s own teaching aim and time cost, the dated grant, open future access, absence of a second agreement and unassigned maintenance.",
-      "destination": "What can each map-maker do next?",
-      "remaining": ""
-    },
-    {
-      "block_id": "B0137",
-      "block_sha256": "49b992c2897f5fe3d679a0bb729fff7db5ea523f43c6d684a61027472d41d4d8",
-      "status": "COMPRESSED",
-      "reviewer": "Build initial review and TRACE editorial source comparison on 24 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "For another lab booking and a question about deletion, the tactile return keeps the unfinished whole-floor aim, the failed printed stairs, the untried alternatives, separate reports, B’s costs, unassigned maintenance and the scope of the first grant and agreement. The comparison records one fresh AI response per excerpt and the building trial proposed by one reader.",
-      "destination": "What can each map-maker do next?",
-      "remaining": ""
-    },
-    {
-      "block_id": "B0165",
-      "block_sha256": "e5b2f9a1fca54cd80034ad88cba2d8cf40ff128f5b907913a2bb33c4156e5c8d",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The candidate distinguishes comparable clocks from an undeclared real-clock conversion.",
-      "remaining": "Retain the original synthetic clock packet; real-source conversion remains unresolved."
-    },
-    {
-      "block_id": "B0167",
-      "block_sha256": "473b6c1efc07b72c2039e6f2405ce96fe7bfdd6ccc79fce1de86bcba37128aaf",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "A report and later receipt do not independently establish restoration or permission.",
-      "remaining": "Retain and reconcile the complete original packet and its event-specific qualifications."
-    },
-    {
-      "block_id": "B0192",
-      "block_sha256": "63cde829c329eb8a95c0f2e077286f6e7b696f6824489ec4e3959fe83350b24e",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Automated inventory distinguishes its proposed headings from reviewed meaning.",
-      "remaining": "Reconcile original donor classifications and exact source references; automation is not semantic review."
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The reader starts from a named change, affected participant, baseline, horizon and observation route. Widening the boundary can bring another participant into view.",
+      "remaining": "",
+      "destination": "1. Begin with a living situation"
     },
     {
       "block_id": "B0058",
       "block_sha256": "133bea30d148d37a325880ef98a6b41b21feca5098291ba08af45cc5934aeb6c",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate begins with bounded participants and sources; section 5 names baseline and horizon in comparisons.",
-      "remaining": "Confirm baseline, entity, horizon and aperture are carried for each consequential bounded difference, not only comparisons."
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The reader starts from a named change, affected participant, baseline, horizon and observation route. Widening the boundary can bring another participant into view.",
+      "remaining": "",
+      "destination": "1. Begin with a living situation"
+    },
+    {
+      "block_id": "B0059",
+      "block_sha256": "84bbace301df4e6dc661ed0e8977aaf539a4046a8ea22718aee7f0406a726663",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The workshop glyph key follows a bounded signal and attributed working account to selection, actions, a later observation and a return with open limits.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
     },
     {
       "block_id": "B0060",
@@ -104,6 +601,26 @@
       "reviewer": "Build, working-edition source comparison",
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "The case demonstrates the schematic loop with different participant accounts and clocks, shared or unevidenced selection, and an inquiry that itself makes help available.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
+    },
+    {
+      "block_id": "B0061",
+      "block_sha256": "dac3a160f9866166adf8af1e9ead5bc8abd91c4ebe052cfac3e7695690bbd1fb",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, source comparison of Build’s worked equations with prior exposure",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The organiser’s decision introduces the mathematical signature as a schematic reading of a worked example and states how far that signature reaches.",
+      "remaining": "",
+      "destination": "One offer, two outcomes"
+    },
+    {
+      "block_id": "B0062",
+      "block_sha256": "ae982eceea154470655aad7af489e79d09a94309277d17aced9145cb1341c4c4",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, source comparison of Build’s worked equations with prior exposure",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The donor’s observation, update using prior belief and history, inquiry using available actions and limits, selection under authority, and world transition with other influences each have a corresponding term in the worked equations.",
       "remaining": "",
       "destination": "One offer, two outcomes"
     },
@@ -128,6 +645,106 @@
       "destination": "One offer, two outcomes"
     },
     {
+      "block_id": "B0065",
+      "block_sha256": "b4f0353d95c955584351c5e648e44be505f10d9279189d30facdbb5b752aaeb2",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A can close the public teaching listing and keep practising. For a newly seen slot, a holder must make it usable, A chooses, and repeat use needs a separate undertaking. The worked return keeps delivery, verification and repair distinct.",
+      "remaining": "",
+      "destination": "Start with the next decision"
+    },
+    {
+      "block_id": "B0066",
+      "block_sha256": "86e4bfed239b0d52af21006919c621ca0e945b3a5b9a26ac0c9ef1856bcd783b",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A can close the public teaching listing and keep practising. For a newly seen slot, a holder must make it usable, A chooses, and repeat use needs a separate undertaking. The worked return keeps delivery, verification and repair distinct.",
+      "remaining": "",
+      "destination": "Start with the next decision"
+    },
+    {
+      "block_id": "B0067",
+      "block_sha256": "8029769a5d37ad35626dc0487751cc5a2a901bff87f34d5c4a0599e0a0b2e417",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Standing, consent, law and authority require separate grounds. The example of chosen privacy in the opening shows why expanding the route count alone cannot rank outcomes.",
+      "remaining": "",
+      "destination": "8. Sources and limits"
+    },
+    {
+      "block_id": "B0068",
+      "block_sha256": "2a5810cc6ec6b38ea8cd62ed31f173a32ef58c52afde08ce64f43df99a21b421",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
+      "block_id": "B0069",
+      "block_sha256": "9cd859747becc43753eeee52b9079694d2775c2f503726ba930a81561468d471",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
+      "block_id": "B0070",
+      "block_sha256": "d270f4b675ddc97109b8f3f2d81be4272ee0c23e8d73376ab690b05d226de212",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
+      "block_id": "B0071",
+      "block_sha256": "ae017d77f17ad5c01893304753df834671ea0043878b312eceb22397b4a80bf3",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
+      "block_id": "B0072",
+      "block_sha256": "ed7b5e6fe6fb80bb9f845bf1fbb7ec6cb9ecfca6cd6eb07100e521f6acab5be1",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
+      "block_id": "B0073",
+      "block_sha256": "b1ca615ba0b476796a4779875717ffe82153ef20e8f1c07642eec4cd04df7ed6",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
+      "block_id": "B0074",
+      "block_sha256": "45603d6910948eeabfc11d87b49219db7075564005f7f7fe0036cbb8191be815",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
       "block_id": "B0075",
       "block_sha256": "005e8addbcb4c3ba0d7c7a03bf3bccb6536d602fca8f459fd686c5feefc1c0fb",
       "status": "COMPRESSED",
@@ -148,22 +765,74 @@
       "destination": "Can A book another print?"
     },
     {
+      "block_id": "B0077",
+      "block_sha256": "cc8701d33e1d0111fa323f0e179078f17398cfa837fec98daf3cccb71ab22533",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
       "block_id": "B0078",
       "block_sha256": "d61471843866a9c6b80daf82f1173ca862c462c471fae56c9a57627b5ba0a194",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The seven source guards received a clause-level partial review; named aperture, report time, route necessity, probe authority and participant choice are carried in prose.",
-      "remaining": "Exact evidence-contract, clock-conversion, typed route, correspondence and ranking-specific conditions remain source-dependent; no full guard equivalence has been established."
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the exact 0.5 typed signature for claims, witnesses, route edges, conversion, status and source-relative polarity. An edge gives a necessary premise only. Application and receipt times, current support and permission have distinct bindings.",
+      "remaining": "",
+      "destination": "2. A compact typed review notation"
+    },
+    {
+      "block_id": "B0079",
+      "block_sha256": "b36b9532e11e24b4e3d2406236fa02c1fd83ea76f8fc691f1c52c34aab7214d1",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The reading profiles are an organisation of earlier distinctions. Their original heading and status preserve the separation from executable notation.",
+      "remaining": "",
+      "destination": "Proposed reading profiles: formation, evidence and faithful return"
+    },
+    {
+      "block_id": "B0080",
+      "block_sha256": "99ab72f85cc482a292a32fb27b794f4c9983f88c340780862030c632ff23a3d0",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The reading profiles are an organisation of earlier distinctions. Their original heading and status preserve the separation from executable notation.",
+      "remaining": "",
+      "destination": "Proposed reading profiles: formation, evidence and faithful return"
+    },
+    {
+      "block_id": "B0081",
+      "block_sha256": "689ada3a23a39d60be9cd8810b533eb8b2e9de3174c9bf7ed7c73c2dcf0b02a1",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The sourced formation profile retains B’s neutral-object alternative, disclosure and exit, and the owner, trigger, cost, renewal and retirement for sustained capacity. The new workshop supplies its own horizon.",
+      "remaining": "",
+      "destination": "Proposed reading profiles: formation, evidence and faithful return"
+    },
+    {
+      "block_id": "B0082",
+      "block_sha256": "51d626b01c8b72304fd4c72f179546884352d551ef955b95f5927df270f59d2a",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A duty needs a source, scope, beneficiary and holder. The handover keeps an unfilled duty-holder question visible without allocating it to a volunteer.",
+      "remaining": "",
+      "destination": "3. Offers, duties and power"
     },
     {
       "block_id": "B0083",
       "block_sha256": "c4061f49f8b48d49f521645e79545028ce8b29d1c13e226808ce22c016f2c4e3",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate separates an asserted value from evidence, access and decisions.",
-      "remaining": "Preserve the exact Val/Ev combinations and source-specific evidence contracts; no typed profile is implemented."
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A definite answer with unknown evidence and a reported negative can both be recorded. Bounded observation and dispute retain their own sources; the full Val/Ev legend is linked.",
+      "remaining": "",
+      "destination": "1. Begin with a living situation"
     },
     {
       "block_id": "B0084",
@@ -178,38 +847,22 @@
     {
       "block_id": "B0085",
       "block_sha256": "79c89927377e8d52835fc1516efeed839e24e08dc3c984a761bbab1fc9c063bf",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate retains named-contract conditional revision, feasible versus permitted and actual effect.",
-      "remaining": "Full named-reader-assumptions and acceptance contract are not explicitly reconstructed; retain the donor."
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The premise-acceptance profile names the reader, assumptions, scope and counterevidence for a conditional conclusion. An unaccepted premise stays at that strength.",
+      "remaining": "",
+      "destination": "Proposed reading profiles: formation, evidence and faithful return"
     },
     {
-      "block_id": "B0088",
-      "block_sha256": "fa5cfdcbfa2cf6ca6e6f5a3701c203a86ae0fe121a903d3d457a2b004a0306fb",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "block_id": "B0086",
+      "block_sha256": "b03e6fafd9835118519acc6aa70eb5d0e0e2ebd01a63a4173f5b8217d2bf8722",
+      "status": "COMPRESSED",
+      "reviewer": "Build source comparison, 23 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate carries conflict, applicability, source access, corroboration, costs, independence and non-veto of a separately supported route.",
-      "remaining": "Check the full decision-specific control, delay-beneficiary and source-relative evidence conditions; this prose does not decide the route."
-    },
-    {
-      "block_id": "B0081",
-      "block_sha256": "689ada3a23a39d60be9cd8810b533eb8b2e9de3174c9bf7ed7c73c2dcf0b02a1",
-      "status": "PARTIAL",
-      "reviewer": "Campfire construction pass, 18 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate §§2 and 7 give the independent practice route a shared-object example and carry the keeper, upkeep trigger, cost, renewal and retirement for repeated use.",
-      "remaining": "The original encounter and exact participation, disclosure and horizon conditions still need broader contextual review. The new scenario is a constructed example."
-    },
-    {
-      "block_id": "B0082",
-      "block_sha256": "51d626b01c8b72304fd4c72f179546884352d551ef955b95f5927df270f59d2a",
-      "status": "PARTIAL",
-      "reviewer": "Campfire construction pass, 18 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate section 3 and the follow-up case carry an externally grounded duty with holder, source, beneficiary and scope. The quiet-access example attributes the coordinator's response to the group's supported assurance. It preserves the separate fallback and fare deadlines and B's one-evening commitment.",
-      "remaining": "Any independently grounded duty needs its own evidence, scope and competence. The variant stipulates support, reasonable reliance and the local clock."
+      "finding": "The candidate and spine carry source strength, aim ownership and limits material to the next use. The booking return keeps the reservation, the musician's separate answer, the queued default and the operator's verified effect distinct. The workshop return retains each result, contributor burden, unresolved support and upkeep. A public omission and next-season score use keep separate scopes.",
+      "destination": "6. A compact view with an escape hatch",
+      "remaining": ""
     },
     {
       "block_id": "B0087",
@@ -219,6 +872,446 @@
       "evidence": "DISPATCH-REVIEW.md",
       "finding": "Named use, premise changes, consequences and unresolved omissions are carried into the candidate and extracted in the spine. The dispatch replay exercises timed and evidenced changes.",
       "destination": "6. A compact view with an escape hatch"
+    },
+    {
+      "block_id": "B0088",
+      "block_sha256": "fa5cfdcbfa2cf6ca6e6f5a3701c203a86ae0fe121a903d3d457a2b004a0306fb",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The original passage asks about scope, corroboration, control, delay cost and beneficiary before acting on contested evidence. The detailed named-holder comparison stays available without assigning motive from silence.",
+      "remaining": "",
+      "destination": "Proposed reading profiles: formation, evidence and faithful return"
+    },
+    {
+      "block_id": "B0089",
+      "block_sha256": "2a3ce82eae2c7a072beadf27398208d2638dec4f122c24ff9a3e87589cf543f9",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the fifteen original clauses and their 0.4 sections for the exact scope of a floor claim. The 0.6 source guide follows F01–F15, including changed capabilities and alternatives across uses under §5.1.",
+      "remaining": "",
+      "destination": "Inherited v0.4 compatibility floor (review-level semantics)"
+    },
+    {
+      "block_id": "B0090",
+      "block_sha256": "f7aa8d7172acf795056b1656e4276226c53a3d88ae2756bc275f2b40ad83c0a5",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the fifteen original clauses and their 0.4 sections for the exact scope of a floor claim. The 0.6 source guide follows F01–F15, including changed capabilities and alternatives across uses under §5.1.",
+      "remaining": "",
+      "destination": "Inherited v0.4 compatibility floor (review-level semantics)"
+    },
+    {
+      "block_id": "B0091",
+      "block_sha256": "051bdf5d08e5da41eef8ad06a2b2e1c4c5215496c8f3a7551c76e8e51f8ec6e3",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the fifteen original clauses and their 0.4 sections for the exact scope of a floor claim. The 0.6 source guide follows F01–F15, including changed capabilities and alternatives across uses under §5.1.",
+      "remaining": "",
+      "destination": "Inherited v0.4 compatibility floor (review-level semantics)"
+    },
+    {
+      "block_id": "B0092",
+      "block_sha256": "4811b602ae318b77be58a0f619ab000bd7cf66e70b217049f4edda7cf1b4b6b4",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Use the fifteen original clauses and their 0.4 sections for the exact scope of a floor claim. The 0.6 source guide follows F01–F15, including changed capabilities and alternatives across uses under §5.1.",
+      "remaining": "",
+      "destination": "Inherited v0.4 compatibility floor (review-level semantics)"
+    },
+    {
+      "block_id": "B0093",
+      "block_sha256": "cbfc6003b64d876feb31d5ea45677ce13a8b140ec55084b1eb13309f79b541d5",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Clause 7 distinguishes a supported route that fits from a scoped strong closure, including alternatives, comparable bounds and material uncertainty. The person with authority still decides how to act.",
+      "remaining": "",
+      "destination": "Compatibility floor: explicit review meanings"
+    },
+    {
+      "block_id": "B0094",
+      "block_sha256": "a496734db34cc14904db694b93e780c87d00d7a8c8cea782fb33ed746db82b14",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The strict condition relates an actual protective effect to the particular loss and its boundary.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0095",
+      "block_sha256": "ea6c390da0d2cbf873d5f241d09c935852ce94d9aeabb98e70414dbf9d0dac39",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The explicit e < h condition distinguishes a strict protective effect from an inclusive delivery time. The guide booking separates the two at equality.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0096",
+      "block_sha256": "3c4ed685613f62279c17d0aa1f62a787b8dc37899f83b0b74b5dc69eb77179ad",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Clause 7 distinguishes a supported route that fits from a scoped strong closure, including alternatives, comparable bounds and material uncertainty. The person with authority still decides how to act.",
+      "remaining": "",
+      "destination": "Compatibility floor: explicit review meanings"
+    },
+    {
+      "block_id": "B0097",
+      "block_sha256": "1e2f0905a3a99290ebf976d5399d3d019991a080bdb4ed44fac9465bcb615b08",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Clause 7 distinguishes a supported route that fits from a scoped strong closure, including alternatives, comparable bounds and material uncertainty. The person with authority still decides how to act.",
+      "remaining": "",
+      "destination": "Compatibility floor: explicit review meanings"
+    },
+    {
+      "block_id": "B0098",
+      "block_sha256": "a80c90694eb6b13555a67a5aff7bb9ef6dc238d87ad5c47944881babffe80d15",
+      "status": "COMPRESSED",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "A shared person or tool needs an actual scheduling decision. The latest-time calculation only covers a declared ordering of required events.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0099",
+      "block_sha256": "217373de899513c2e980181780aec87bf8c5deec6ad9ea160bdcb3ff48622080",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Compare feasible alternatives over the same affected scope and horizon with the declared baseline. Dependency changes can alter present support while a past forecast remains a dated record.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0100",
+      "block_sha256": "3745ddd2904b253484904ff9ba087292481762780f49ee5a734a38c54681516e",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, same-team source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The shop’s intake rule, the intact entry from the designated register and the version and job checks support confirmation of this receipt. Accuracy of the contents, later printing, usability and permission have their own grounds.",
+      "remaining": "",
+      "destination": "Did Oak Print receive this version?"
+    },
+    {
+      "block_id": "B0101",
+      "block_sha256": "24fdf3bd1848cecce057a8f2b53d7698f56cc3b5f10e43d4d56ec067a2b95ea4",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Compare feasible alternatives over the same affected scope and horizon with the declared baseline. Dependency changes can alter present support while a past forecast remains a dated record.",
+      "remaining": "",
+      "destination": "5. Clocks, correction and construction"
+    },
+    {
+      "block_id": "B0102",
+      "block_sha256": "8bbe31cc1080e42b8a16e08e9309053589892662a5383fba1e5e726f17406932",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The earlier passage names the six technical families: controlled uncertainty, safe custody, recursive limits, enforcement, correction queues, and outstanding commitments. The source guide and case index lead directly to the governing 0.3 sections for a use that depends on their details.",
+      "remaining": "",
+      "destination": "Positive warrant and useful inherited profiles"
+    },
+    {
+      "block_id": "B0103",
+      "block_sha256": "e5e0c229741ec7a86df03d6e37dd28be31c300f50565848c25ec3a599330e4d8",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The earlier passage names the six technical families: controlled uncertainty, safe custody, recursive limits, enforcement, correction queues, and outstanding commitments. The source guide and case index lead directly to the governing 0.3 sections for a use that depends on their details.",
+      "remaining": "",
+      "destination": "Positive warrant and useful inherited profiles"
+    },
+    {
+      "block_id": "B0104",
+      "block_sha256": "3f0a092eef036b48cde526e1b31ff2f47af94f5e83663852817a42bceae4ec37",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The formation sequence distinguishes attempt, product, usable result and support over a horizon. Its conditions remain available for claims about a genuinely changed continuing capability.",
+      "remaining": "",
+      "destination": "Constructive formation, not only prevention"
+    },
+    {
+      "block_id": "B0105",
+      "block_sha256": "b74fa1dd425ff004bfa01eb0a51bd3a1399b92af95c7ba78edf9edb20999a8bb",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for B’s teaching turn",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "A common baseline holds the part, equipment and supervision fixed. B’s existing skill, the learner’s agreement and the keeper’s grant support the two attempts. Keeping support available needs further arrangements.",
+      "remaining": "",
+      "destination": "B tries teaching the adjustment"
+    },
+    {
+      "block_id": "B0106",
+      "block_sha256": "f5c097883a48036dceb017eaa3f24771546915b1eba62f4470b5f3cd532d9132",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The formation sequence distinguishes attempt, product, usable result and support over a horizon. Its conditions remain available for claims about a genuinely changed continuing capability.",
+      "remaining": "",
+      "destination": "Constructive formation, not only prevention"
+    },
+    {
+      "block_id": "B0107",
+      "block_sha256": "c436bf9a4c299d00ec5bfb83078ac767e80f65543945c7f399b24f047dd13320",
+      "status": "COMPRESSED",
+      "reviewer": "Build source comparison, 23 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Distinguishes represented possibility from formation, successful cooperation from transfer, consent and future access, and present value of care, creation and play from economic or risk scores. Curiosity and refusal remain visible.",
+      "destination": "2. People, relationships and possibilities",
+      "remaining": ""
+    },
+    {
+      "block_id": "B0108",
+      "block_sha256": "7fe47be36981834d5dee5885b22c1d699ca5d180bdb80110af8d736edc32b3b9",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "2A. One encounter through time — candidate navigation profile"
+    },
+    {
+      "block_id": "B0109",
+      "block_sha256": "ef2a4681e62909570db9f13c61a7ffb56bda147683d21ab23ec067224689f6bc",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "2A. One encounter through time — candidate navigation profile"
+    },
+    {
+      "block_id": "B0110",
+      "block_sha256": "7318aafb5ff6945c6c0a5f4dc58d946c419949a537524fd573add86f822d0c1b",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The d0–d28 calendar is an invented ordering. No cross-case clock conversion is declared.",
+      "remaining": "",
+      "destination": "2A. One encounter through time — candidate navigation profile"
+    },
+    {
+      "block_id": "B0111",
+      "block_sha256": "2336e8779d481be72c671c6138325915989efa2614b7f0ef1881881aa1f2fc8a",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0112",
+      "block_sha256": "4d0fd6604a9b764c3a6d3e80abb229d0bb4014dfb56792843644ee3788e30f9a",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0113",
+      "block_sha256": "3bce45c396614324ed61022ee10ae1c23282b8cb06387ab07f990949045058ff",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0114",
+      "block_sha256": "6ce1980c1952b91d5914a9404095473ee46f471bc1d9dc68e22cd47fac5e3318",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0115",
+      "block_sha256": "ab80435c7e6de24047dc8c708cb772f140bd599c6686664a4cc311cb34f39d0f",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0116",
+      "block_sha256": "559de5c0afeb42ae6ee2ec6ca8fbdab0a0c930cec0ef020554f2edbd4390f828",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0117",
+      "block_sha256": "a4bda80927bae44f01402506abb6f9f63262469ed36a0badd741b9720f81eb35",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0118",
+      "block_sha256": "6102e7cf90da6fb40ff4c99b3d23a20a210da39671032e76e9da6c95928ce418",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0119",
+      "block_sha256": "a0db16c845a5c9b749f69ac117d9664a323617c9db5fbe9313b92c9a0a00c172",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0120",
+      "block_sha256": "0decbfe0f3624e5b97087308f231b7279e93115fcf7238c8a416999f17090db4",
+      "status": "COMPRESSED",
+      "reviewer": "Build source comparison, 24 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "For the organiser helping A choose a fabrication route, the revised handover carries the earlier printer report, the later reopening notice and the open question of usable access for this job. A's proposed change of aim preserves the original whole-floor aim and the day 5 agreement.",
+      "destination": "What can each map-maker do next?",
+      "remaining": ""
+    },
+    {
+      "block_id": "B0121",
+      "block_sha256": "de1a919848ad40480422c238b6e99ed95f49beceaf169fc94cba725b018c56d9",
+      "status": "COMPRESSED",
+      "reviewer": "Build source comparison following the TRACE editorial review, 24 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "For deciding where and with whom to try the next fabrication, the handover now carries the makerspace lead and its scope, A’s junction report, untried card stairs and unasked colleague, B’s own teaching aim and time cost, the dated grant, open future access, absence of a second agreement and unassigned maintenance.",
+      "destination": "What can each map-maker do next?",
+      "remaining": ""
+    },
+    {
+      "block_id": "B0122",
+      "block_sha256": "97fa66a0df3439620a3c1b4b554e03f6524399d87fabaaf57ae3f98c16a55972",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The encounter"
+    },
+    {
+      "block_id": "B0123",
+      "block_sha256": "40961640aed1f08fa7eb958751f9a38fd24bc3177405a92c455c218169faacbf",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep d0–d7 together with the sketch, printer, separate grant, independently held aims and witness. Junctions, stairs and later building use have separate evidence. The d28 outcome is open in the source.",
+      "remaining": "",
+      "destination": "The same encounter from B's side"
+    },
+    {
+      "block_id": "B0124",
+      "block_sha256": "319f692a6970c79306e8a4532454c82de572691ea9773ab5bcf7e29da0ae3f31",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for B’s teaching turn",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "B can assess the three hours carried on the map and decline a further session. A still has the card route and the newcomer can seek another willing supervisor.",
+      "remaining": "",
+      "destination": "B tries teaching the adjustment"
+    },
+    {
+      "block_id": "B0125",
+      "block_sha256": "987aebbc50af1409d8104f790d49143a1a7345be8d52b4b24ff552399a0ea163",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for B’s teaching turn",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "B’s calibration work supports a teaching opportunity on a neutral test piece. B can describe the explanation or supervised turn while the effectiveness of a future lesson remains open.",
+      "remaining": "",
+      "destination": "B tries teaching the adjustment"
+    },
+    {
+      "block_id": "B0126",
+      "block_sha256": "d83e7fe1a2ba4d84c8b661625b5cff72eaef1e6dd269b2b05ea5e9bfc65bde1e",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "EncounterStep, its linked views and the step table retain their fields and limits in §2A. This derived notation has its own scope; filling it records no action and authenticates no source.",
+      "remaining": "",
+      "destination": "Small linked view — specified, not implemented"
+    },
+    {
+      "block_id": "B0127",
+      "block_sha256": "0707635f5915d3833ecd4db080cdb7898255f6edfcd2c59ca159a4829e264640",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "EncounterStep, its linked views and the step table retain their fields and limits in §2A. This derived notation has its own scope; filling it records no action and authenticates no source.",
+      "remaining": "",
+      "destination": "Small linked view — specified, not implemented"
+    },
+    {
+      "block_id": "B0128",
+      "block_sha256": "6bad889372768561f58e0680395e0d7d1fef0b4f592b5086bedea7c29bae2f8c",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "EncounterStep, its linked views and the step table retain their fields and limits in §2A. This derived notation has its own scope; filling it records no action and authenticates no source.",
+      "remaining": "",
+      "destination": "Small linked view — specified, not implemented"
+    },
+    {
+      "block_id": "B0129",
+      "block_sha256": "2eef5c45d827f1b6f728b0884f24321690742aa05177e54887aa6009337797ba",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Build, working-edition source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The source retains AimRevision and the 0.5 revision kinds. The current comparison adds no revision kind and does not infer a new permission or boundary from a changed aim.",
+      "remaining": "",
+      "destination": "Small linked view — specified, not implemented"
+    },
+    {
+      "block_id": "B0130",
+      "block_sha256": "b092809b53e608ac446aa87a7ad553a93a0667c24d87519095c338a5303948c3",
+      "status": "COMPRESSED",
+      "reviewer": "Campfire, same-team source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The dated handover uses the explicitly assumed grant and agreement for one trial. The separate Case A handover asks for grounds appropriate to the actual scope. Section 1 carries the limits of fields and hashes as evidence of source, consent, selection or effect.",
+      "remaining": "",
+      "destination": "What can the separate Case A record support?"
+    },
+    {
+      "block_id": "B0131",
+      "block_sha256": "7c19bf776a2ea8538b82bb59bad7ad78437dfbf0f7f69577880187e1d929692a",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "EncounterStep, its linked views and the step table retain their fields and limits in §2A. This derived notation has its own scope; filling it records no action and authenticates no source.",
+      "remaining": "",
+      "destination": "Small linked view — specified, not implemented"
     },
     {
       "block_id": "B0132",
@@ -251,142 +1344,134 @@
       "remaining": ""
     },
     {
-      "block_id": "B0107",
-      "block_sha256": "c436bf9a4c299d00ec5bfb83078ac767e80f65543945c7f399b24f047dd13320",
+      "block_id": "B0135",
+      "block_sha256": "9ab79e3ff6210382e424abf48a9b94b930afbd87e98fb8bf5075251bf16aba7f",
       "status": "COMPRESSED",
-      "reviewer": "Build source comparison, 23 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Distinguishes represented possibility from formation, successful cooperation from transfer, consent and future access, and present value of care, creation and play from economic or risk scores. Curiosity and refusal remain visible.",
-      "destination": "2. People, relationships and possibilities",
-      "remaining": ""
-    },
-    {
-      "block_id": "B0086",
-      "block_sha256": "b03e6fafd9835118519acc6aa70eb5d0e0e2ebd01a63a4173f5b8217d2bf8722",
-      "status": "COMPRESSED",
-      "reviewer": "Build source comparison, 23 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The candidate and spine carry source strength, aim ownership and limits material to the next use. The booking return keeps the reservation, the musician's separate answer, the queued default and the operator's verified effect distinct. The workshop return retains each result, contributor burden, unresolved support and upkeep. A public omission and next-season score use keep separate scopes.",
-      "destination": "6. A compact view with an escape hatch",
-      "remaining": ""
-    },
-    {
-      "block_id": "B0009",
-      "block_sha256": "ce4c2fbbd23ff5267d74d0b1e5ff6cc3bce2cd2386a601e715e0496d13026bfa",
-      "status": "COMPRESSED",
-      "reviewer": "Build, working-edition source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Stop once additional detail cannot affect the decision. Reopen for changed evidence, dependencies, scope or use, and use ordinary or specialist accounts where they are more economical.",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "A changed aim, a returned account, a produced object and one person’s satisfaction have different completion criteria. The next reader receives the target, scope, horizon and evidence for each.",
       "remaining": "",
-      "destination": "One navigation pass"
+      "destination": "6. A compact view with an escape hatch"
     },
     {
-      "block_id": "B0012",
-      "block_sha256": "973a7cb790cc92a9f92138281c1cbb651732013d922ec911862b174fb1a2dc54",
-      "status": "COMPRESSED",
-      "reviewer": "Build, working-edition source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The first decision and navigation pass keep baseline, horizon, observer, each participant’s purposes, constructive possibilities, harm, refusal, witnesses, time for correction and an answerable next act.",
-      "remaining": "",
-      "destination": "One navigation pass"
-    },
-    {
-      "block_id": "B0015",
-      "block_sha256": "3b690f683192447f2c1d7b032c0832dd33d089b73745dbf5b8a5411412836975",
-      "status": "COMPRESSED",
-      "reviewer": "Build, working-edition source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The two-offer loop preserves the aperture, dated history, attributed belief, usable options and selection. The later witness and return carry outcomes, disagreement, remaining aims and the limits of the check.",
-      "remaining": "",
-      "destination": "One offer, two outcomes"
-    },
-    {
-      "block_id": "B0028",
-      "block_sha256": "206f53f518256a116c954105be14eb3f3d7e15c78eddf04d68f95d193a83f419",
-      "status": "COMPRESSED",
-      "reviewer": "Build, working-edition source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The dated reopening changes the next inquiry. The handover retains A’s earlier commitment and changed proposal, untested stairs, B’s costs and separate teaching choice, disputed or missing warrant and unowned maintenance.",
-      "remaining": "",
-      "destination": "What can each map-maker do next?"
-    },
-    {
-      "block_id": "B0094",
-      "block_sha256": "a496734db34cc14904db694b93e780c87d00d7a8c8cea782fb33ed746db82b14",
-      "status": "COMPRESSED",
-      "reviewer": "Build, working-edition source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The strict condition relates an actual protective effect to the particular loss and its boundary.",
-      "remaining": "",
-      "destination": "5. Clocks, correction and construction"
-    },
-    {
-      "block_id": "B0095",
-      "block_sha256": "ea6c390da0d2cbf873d5f241d09c935852ce94d9aeabb98e70414dbf9d0dac39",
-      "status": "COMPRESSED",
-      "reviewer": "Build, working-edition source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The explicit e < h condition distinguishes a strict protective effect from an inclusive delivery time. The guide booking separates the two at equality.",
-      "remaining": "",
-      "destination": "5. Clocks, correction and construction"
-    },
-    {
-      "block_id": "B0098",
-      "block_sha256": "a80c90694eb6b13555a67a5aff7bb9ef6dc238d87ad5c47944881babffe80d15",
-      "status": "COMPRESSED",
-      "reviewer": "Build, working-edition source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "A shared person or tool needs an actual scheduling decision. The latest-time calculation only covers a declared ordering of required events.",
-      "remaining": "",
-      "destination": "5. Clocks, correction and construction"
-    },
-    {
-      "block_id": "B0129",
-      "block_sha256": "2eef5c45d827f1b6f728b0884f24321690742aa05177e54887aa6009337797ba",
+      "block_id": "B0136",
+      "block_sha256": "4ae6e4f8029922fd7f60b3bf44926a32b3b67a76884699681ad7349b419655a8",
       "status": "REFERENCE_ONLY",
-      "reviewer": "Build, working-edition source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The source retains AimRevision and the 0.5 revision kinds. The current comparison adds no revision kind and does not infer a new permission or boundary from a changed aim.",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep the paired unfaithful and faithful short returns together. The original fixture preserves the untested stairs, B’s teaching possibility and unassigned maintenance.",
       "remaining": "",
-      "destination": "Small linked view — specified, not implemented"
+      "destination": "Negative compression fixture"
     },
     {
-      "block_id": "B0061",
-      "block_sha256": "dac3a160f9866166adf8af1e9ead5bc8abd91c4ebe052cfac3e7695690bbd1fb",
+      "block_id": "B0137",
+      "block_sha256": "49b992c2897f5fe3d679a0bb729fff7db5ea523f43c6d684a61027472d41d4d8",
       "status": "COMPRESSED",
-      "reviewer": "Campfire, source comparison of Build’s worked equations with prior exposure",
+      "reviewer": "Build initial review and TRACE editorial source comparison on 24 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The organiser’s decision introduces the mathematical signature as a schematic reading of a worked example and states how far that signature reaches.",
-      "remaining": "",
-      "destination": "One offer, two outcomes"
+      "finding": "For another lab booking and a question about deletion, the tactile return keeps the unfinished whole-floor aim, the failed printed stairs, the untried alternatives, separate reports, B’s costs, unassigned maintenance and the scope of the first grant and agreement. The comparison records one fresh AI response per excerpt and the building trial proposed by one reader.",
+      "destination": "What can each map-maker do next?",
+      "remaining": ""
     },
     {
-      "block_id": "B0062",
-      "block_sha256": "ae982eceea154470655aad7af489e79d09a94309277d17aced9145cb1341c4c4",
+      "block_id": "B0138",
+      "block_sha256": "5b8c5cfde7d82bbd973b02dd3032d0b2e6b187cf8d6afd74701281cf1434e1d7",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep the paired unfaithful and faithful short returns together. The original fixture preserves the untested stairs, B’s teaching possibility and unassigned maintenance.",
+      "remaining": "",
+      "destination": "Negative compression fixture"
+    },
+    {
+      "block_id": "B0139",
+      "block_sha256": "46667a4266b2b125f291e97d0e65e5f3948a4db0ff6ff706249db84e9724c69e",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional adapter’s named-claim profile requires caller-supplied IDs, ordered predicates, route and scope/applicability matches. The original specifies legacy behaviour and clock/basis annotations. It does not authorise an action.",
+      "remaining": "",
+      "destination": "2B. Optional binding profile — separate from the story"
+    },
+    {
+      "block_id": "B0140",
+      "block_sha256": "278ce492cb8f394055bf8b479242ccd9590a14abcc2aedaf6fecb7b701b260c6",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional adapter’s named-claim profile requires caller-supplied IDs, ordered predicates, route and scope/applicability matches. The original specifies legacy behaviour and clock/basis annotations. It does not authorise an action.",
+      "remaining": "",
+      "destination": "2B. Optional binding profile — separate from the story"
+    },
+    {
+      "block_id": "B0141",
+      "block_sha256": "d39fef50fd9f82fa0edf12dbee521ff9590d444aaa3ea2c0c4f00ec02c126dc7",
       "status": "COMPRESSED",
-      "reviewer": "Campfire, source comparison of Build’s worked equations with prior exposure",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The donor’s observation, update using prior belief and history, inquiry using available actions and limits, selection under authority, and world transition with other influences each have a corresponding term in the worked equations.",
+      "finding": "The workshop handover gives named support and retained disagreement a worked decision about a booking follow-up.",
       "remaining": "",
-      "destination": "One offer, two outcomes"
+      "destination": "What could C do with that notice?"
     },
     {
-      "block_id": "B0071",
-      "block_sha256": "ae017d77f17ad5c01893304753df834671ea0043878b312eceb22397b4a80bf3",
-      "status": "PARTIAL",
-      "reviewer": "Build, author of the print-shop comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The scoped print-shop decision retains a named permission claim, source, value, evidence, scope, receipt, attribution and access. Actual disclosure needs its own permission and a timely route.",
-      "remaining": "General claim typing and exact dependency and competing-claim references remain in the released source."
+      "block_id": "B0142",
+      "block_sha256": "95f337f84e9f2d2cf322fd1b6ed2e8a6ae945137d6981778dfa725d772d827ea",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional adapter’s named-claim profile requires caller-supplied IDs, ordered predicates, route and scope/applicability matches. The original specifies legacy behaviour and clock/basis annotations. It does not authorise an action.",
+      "remaining": "",
+      "destination": "Named support without discarded disagreement"
     },
     {
-      "block_id": "B0074",
-      "block_sha256": "45603d6910948eeabfc11d87b49219db7075564005f7f7fe0036cbb8191be815",
-      "status": "PARTIAL",
-      "reviewer": "Build, author of the print-shop comparison",
+      "block_id": "B0143",
+      "block_sha256": "74651c35b60f5016c0fa108b61faa1502bfbc15af833586b0eda7ba49ad0c4e8",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The print-shop case ties the witness aperture and shared origin of a forward to the permission claim. The preceding booking case carries the old and new claims and their revision basis.",
-      "remaining": "Full witness identity and independence records and exact typed revision bindings beyond these cases remain open."
+      "finding": "The exact requirement and result layouts and their action and claim limits stay with the optional profile.",
+      "remaining": "",
+      "destination": "Named support without discarded disagreement"
+    },
+    {
+      "block_id": "B0144",
+      "block_sha256": "87fd0671caa8b1ea78c31718cfaeeb1d99c050f1b401b2419b5483ba31324644",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional adapter’s named-claim profile requires caller-supplied IDs, ordered predicates, route and scope/applicability matches. The original specifies legacy behaviour and clock/basis annotations. It does not authorise an action.",
+      "remaining": "",
+      "destination": "Named support without discarded disagreement"
+    },
+    {
+      "block_id": "B0145",
+      "block_sha256": "08795be451e2a3f6e84197510a3b48a6c75194922007289cd402028c0ccb2a06",
+      "status": "COMPRESSED",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The full handover carries both case-matched reports even when the selected positive omits C’s report. Unresolved time correspondence keeps the accounts and any earlier dispute with their stated basis.",
+      "remaining": "",
+      "destination": "What could C do with that notice?"
+    },
+    {
+      "block_id": "B0146",
+      "block_sha256": "ec0020401bedcf2691c165ee276492588831671dbe890d875aad7a36d33659e3",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional adapter’s named-claim profile requires caller-supplied IDs, ordered predicates, route and scope/applicability matches. The original specifies legacy behaviour and clock/basis annotations. It does not authorise an action.",
+      "remaining": "",
+      "destination": "Named support without discarded disagreement"
+    },
+    {
+      "block_id": "B0147",
+      "block_sha256": "9d5673b159f26e6cda74d8e6479fa36897e9c202d72b2d99fa401a90831d25a9",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The optional request status, validation errors and parser scope stay in the released profile.",
+      "remaining": "",
+      "destination": "Named support without discarded disagreement"
     },
     {
       "block_id": "B0148",
@@ -411,11 +1496,12 @@
     {
       "block_id": "B0150",
       "block_sha256": "ce99d82c38127e8c9930ae7a1151316b64071b298ecd21e96a146756d36f2bc0",
-      "status": "PARTIAL",
-      "reviewer": "Build, source comparison for the two-clock print-shop case",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The example supplies distinct clocks, their current settings, the comparison source, lower and upper offset bounds and the source-clock validity interval.",
-      "remaining": "Exact typed alignment field bindings and value and status conventions remain in the optional source profile."
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The typed alignment and its original positive, ambiguous and refused cases specify monotonic offsets, source validity, matching units and IDs. The composite’s positive status describes represented conditions only.",
+      "remaining": "",
+      "destination": "Conditional ordering across clocks"
     },
     {
       "block_id": "B0151",
@@ -430,89 +1516,82 @@
     {
       "block_id": "B0152",
       "block_sha256": "b45382888852b740199adfe4ba9a161f79d2e2f0457f0a0b68ada84eabf142ea",
-      "status": "PARTIAL",
-      "reviewer": "Build, source comparison for the two-clock print-shop case",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The arrival range classifies the strict cutoff under all, some or none of the allowed offsets. Expired comparisons leave the timing open.",
-      "remaining": "The general equality and ordering cases, ambiguous or unadmitted alignment, unit validation and numeric bounds remain in the source profile."
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The typed alignment and its original positive, ambiguous and refused cases specify monotonic offsets, source validity, matching units and IDs. The composite’s positive status describes represented conditions only.",
+      "remaining": "",
+      "destination": "Conditional ordering across clocks"
     },
     {
       "block_id": "B0153",
       "block_sha256": "b504dbdec5ea81bc3ef99edb4138520503f31d03e1629be3283fe14761be57ba",
-      "status": "PARTIAL",
-      "reviewer": "Build, source comparison for the two-clock print-shop case",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The timing claim, A’s permission, the shop intake terms and actual transfer require distinct support.",
-      "remaining": "The optional composite route profile and result contract remain in the source."
-    },
-    {
-      "block_id": "B0105",
-      "block_sha256": "b74fa1dd425ff004bfa01eb0a51bd3a1399b92af95c7ba78edf9edb20999a8bb",
-      "status": "COMPRESSED",
-      "reviewer": "Build, source comparison for B’s teaching turn",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "A common baseline holds the part, equipment and supervision fixed. B’s existing skill, the learner’s agreement and the keeper’s grant support the two attempts. Keeping support available needs further arrangements.",
-      "remaining": "",
-      "destination": "B tries teaching the adjustment"
-    },
-    {
-      "block_id": "B0106",
-      "block_sha256": "f5c097883a48036dceb017eaa3f24771546915b1eba62f4470b5f3cd532d9132",
-      "status": "PARTIAL",
-      "reviewer": "Build, source comparison for B’s teaching turn",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The paired session carries agreed contributions, observed action, the equal product and the conditions for another booking. The map-makers’ comparison carries the scoped lab grant and sharing decision into one trial. It distinguishes the parties’ reports from evidence about a usable earlier route.",
-      "remaining": "Independent usability, sustained maintenance and genuinely changed future access are still open."
-    },
-    {
-      "block_id": "B0124",
-      "block_sha256": "319f692a6970c79306e8a4532454c82de572691ea9773ab5bcf7e29da0ae3f31",
-      "status": "COMPRESSED",
-      "reviewer": "Build, source comparison for B’s teaching turn",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "B can assess the three hours carried on the map and decline a further session. A still has the card route and the newcomer can seek another willing supervisor.",
-      "remaining": "",
-      "destination": "B tries teaching the adjustment"
-    },
-    {
-      "block_id": "B0125",
-      "block_sha256": "987aebbc50af1409d8104f790d49143a1a7345be8d52b4b24ff552399a0ea163",
-      "status": "COMPRESSED",
-      "reviewer": "Build, source comparison for B’s teaching turn",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "B’s calibration work supports a teaching opportunity on a neutral test piece. B can describe the explanation or supervised turn while the effectiveness of a future lesson remains open.",
-      "remaining": "",
-      "destination": "B tries teaching the adjustment"
-    },
-    {
-      "block_id": "B0100",
-      "block_sha256": "3745ddd2904b253484904ff9ba087292481762780f49ee5a734a38c54681516e",
-      "status": "COMPRESSED",
-      "reviewer": "Campfire, same-team source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The shop’s intake rule, the intact entry from the designated register and the version and job checks support confirmation of this receipt. Accuracy of the contents, later printing, usability and permission have their own grounds.",
-      "remaining": "",
-      "destination": "Did Oak Print receive this version?"
-    },
-    {
-      "block_id": "B0166",
-      "block_sha256": "2b81728551a7a0c8201c56846d8177d6b495ef3e4564f42418aa86ec150bd812",
       "status": "REFERENCE_ONLY",
-      "reviewer": "Campfire, same-team source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Oak Print links the earlier synthetic fixture for R09, EC-RECEIPT-1 and its arrival-only status at cs20. The original specifies hypothetical premises and preserves the separate questions about restoration, timeliness and permission.",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The typed alignment and its original positive, ambiguous and refused cases specify monotonic offsets, source validity, matching units and IDs. The composite’s positive status describes represented conditions only.",
       "remaining": "",
-      "destination": "4. Synthetic encounter B: a record survives while a route may not"
+      "destination": "Conditional ordering across clocks"
     },
     {
-      "block_id": "B0130",
-      "block_sha256": "b092809b53e608ac446aa87a7ad553a93a0667c24d87519095c338a5303948c3",
-      "status": "COMPRESSED",
-      "reviewer": "Campfire, same-team source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The dated handover uses the explicitly assumed grant and agreement for one trial. The separate Case A handover asks for grounds appropriate to the actual scope. Section 1 carries the limits of fields and hashes as evidence of source, consent, selection or effect.",
+      "block_id": "B0154",
+      "block_sha256": "629383b0998f732ca8514c49998697de6e13340f4cbedde3ebeacde409eaea78",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Costs, historical private checks, unlinked contrary evidence and changed clock bases are properties of this adapter. Use the historical development statement for them.",
       "remaining": "",
-      "destination": "What can the separate Case A record support?"
+      "destination": "Evidence and cost boundary"
+    },
+    {
+      "block_id": "B0155",
+      "block_sha256": "b9c5b7ef6db9c961a2de8f0f7a8a6a6b88b3365af8e71405cc171f902c389c96",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Costs, historical private checks, unlinked contrary evidence and changed clock bases are properties of this adapter. Use the historical development statement for them.",
+      "remaining": "",
+      "destination": "Evidence and cost boundary"
+    },
+    {
+      "block_id": "B0156",
+      "block_sha256": "acd99036153197fed01e5328dc1cf9a80fc9d9a2de50379642413cfffcf47694",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Costs, historical private checks, unlinked contrary evidence and changed clock bases are properties of this adapter. Use the historical development statement for them.",
+      "remaining": "",
+      "destination": "Evidence and cost boundary"
+    },
+    {
+      "block_id": "B0157",
+      "block_sha256": "f989350d15aa0161e8236082dad11f9c3ee1cd787edee0b0a8876b48cef7e674",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Costs, historical private checks, unlinked contrary evidence and changed clock bases are properties of this adapter. Use the historical development statement for them.",
+      "remaining": "",
+      "destination": "Evidence and cost boundary"
+    },
+    {
+      "block_id": "B0158",
+      "block_sha256": "d69186f413344f45f3cfe4fb4abf74b833abec70605ea53324813973ca1c1937",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Case A’s packet supplies its own permissions, sources, clocks, unknowns and intended use. Its broad aim differs from the d28 narrative. B’s practical exit, privacy and another session must be checked under this record.",
+      "remaining": "",
+      "destination": "3. Synthetic encounter A: a capability created together?"
+    },
+    {
+      "block_id": "B0159",
+      "block_sha256": "2122a8501563886aa3ce970c69933f979877ad5aae35a21235315eb244a051fd",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Case A’s packet supplies its own permissions, sources, clocks, unknowns and intended use. Its broad aim differs from the d28 narrative. B’s practical exit, privacy and another session must be checked under this record.",
+      "remaining": "",
+      "destination": "3. Synthetic encounter A: a capability created together?"
     },
     {
       "block_id": "B0160",
@@ -527,11 +1606,12 @@
     {
       "block_id": "B0161",
       "block_sha256": "a701c05470243e4ca0b4401ea409010d751c29baa1510bfa11189b9bcd311af2",
-      "status": "PARTIAL",
-      "reviewer": "Campfire, same-team source comparison",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The two readings distinguish reports from scoped grant and agreement, keep each participant’s aim and result with its source, and leave the witness clock unaligned.",
-      "remaining": "Changes to B’s privacy or practical exit and evidence of a newly formed opportunity still need a direct comparison against this record."
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Case A’s packet supplies its own permissions, sources, clocks, unknowns and intended use. Its broad aim differs from the d28 narrative. B’s practical exit, privacy and another session must be checked under this record.",
+      "remaining": "",
+      "destination": "3. Synthetic encounter A: a capability created together?"
     },
     {
       "block_id": "B0162",
@@ -544,13 +1624,74 @@
       "destination": "What did the shared session make possible?"
     },
     {
+      "block_id": "B0163",
+      "block_sha256": "2a42f5891ab7ea743d1c68628238b002385983878d47be009d26629ebc9498e7",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Retain the original cs10, cs15, cs16 and cs20 packet, EC-RECEIPT-1, absent conversion and possible other routes. A status of recorded receipt leaves restoration, timeliness and permission open.",
+      "remaining": "",
+      "destination": "4. Synthetic encounter B: a record survives while a route may not"
+    },
+    {
+      "block_id": "B0164",
+      "block_sha256": "a5ced27a59fae8b091eabac8e78f63e5eae2cac8f99a8111a648867416b811b4",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Retain the original cs10, cs15, cs16 and cs20 packet, EC-RECEIPT-1, absent conversion and possible other routes. A status of recorded receipt leaves restoration, timeliness and permission open.",
+      "remaining": "",
+      "destination": "4. Synthetic encounter B: a record survives while a route may not"
+    },
+    {
+      "block_id": "B0165",
+      "block_sha256": "e5b2f9a1fca54cd80034ad88cba2d8cf40ff128f5b907913a2bb33c4156e5c8d",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Retain the original cs10, cs15, cs16 and cs20 packet, EC-RECEIPT-1, absent conversion and possible other routes. A status of recorded receipt leaves restoration, timeliness and permission open.",
+      "remaining": "",
+      "destination": "4. Synthetic encounter B: a record survives while a route may not"
+    },
+    {
+      "block_id": "B0166",
+      "block_sha256": "2b81728551a7a0c8201c56846d8177d6b495ef3e4564f42418aa86ec150bd812",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, same-team source comparison",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "Oak Print links the earlier synthetic fixture for R09, EC-RECEIPT-1 and its arrival-only status at cs20. The original specifies hypothetical premises and preserves the separate questions about restoration, timeliness and permission.",
+      "remaining": "",
+      "destination": "4. Synthetic encounter B: a record survives while a route may not"
+    },
+    {
+      "block_id": "B0167",
+      "block_sha256": "473b6c1efc07b72c2039e6f2405ce96fe7bfdd6ccc79fce1de86bcba37128aaf",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Retain the original cs10, cs15, cs16 and cs20 packet, EC-RECEIPT-1, absent conversion and possible other routes. A status of recorded receipt leaves restoration, timeliness and permission open.",
+      "remaining": "",
+      "destination": "4. Synthetic encounter B: a record survives while a route may not"
+    },
+    {
+      "block_id": "B0168",
+      "block_sha256": "78456dd216605cfa9a22cde0338ca9a0abf77fb20c7ca7897fff45ac86806d27",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The toy controller’s source labels, proposed revision, retained recipe and alternate policies stay at Case C. Correcting a ledger, accepting a working head, using a recipe and learning durably call for different evidence. Notebook ordering remains a comparator.",
+      "remaining": "",
+      "destination": "5. Synthetic encounter C: memory can close the map that could correct it"
+    },
+    {
       "block_id": "B0169",
       "block_sha256": "6914fa4b18a028953ef17907c04a7534f589e679d5bfe5ba59bb06b298a32c43",
-      "status": "PARTIAL",
-      "reviewer": "Build, source comparison for a reopened route and a held offer",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The author’s stipulated error is separate from the organiser’s evidence. The worked case keeps several histories open and shows a keeper check that can change a later offer.",
-      "remaining": "The two scripted policy outcomes and evidence about independent or lasting learning remain with their source."
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The toy controller’s source labels, proposed revision, retained recipe and alternate policies stay at Case C. Correcting a ledger, accepting a working head, using a recipe and learning durably call for different evidence. Notebook ordering remains a comparator.",
+      "remaining": "",
+      "destination": "5. Synthetic encounter C: memory can close the map that could correct it"
     },
     {
       "block_id": "B0170",
@@ -565,87 +1706,362 @@
     {
       "block_id": "B0171",
       "block_sha256": "b846d66ea4e8ce474f90641bf06dc3fca970271c55237c10bbbf9d0eac6744cb",
-      "status": "PARTIAL",
-      "reviewer": "Build, source comparison for a reopened route and a held offer",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The later report, the proposed reconsideration, the earlier useful entry and a confirmed booking keep their separate scopes. The designated keeper’s reply and A’s decision matter at different points.",
-      "remaining": "Authentication beyond the stipulated keeper, the effect of keeping a recipe on later use and learning beyond this one decision remain open."
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The toy controller’s source labels, proposed revision, retained recipe and alternate policies stay at Case C. Correcting a ledger, accepting a working head, using a recipe and learning durably call for different evidence. Notebook ordering remains a comparator.",
+      "remaining": "",
+      "destination": "5. Synthetic encounter C: memory can close the map that could correct it"
     },
     {
       "block_id": "B0172",
       "block_sha256": "a66826034dc11bef6becfb602e8c716f886e9f625bfbebce64d9273ee389b08c",
-      "status": "PARTIAL",
-      "reviewer": "Build, source comparison for a reopened route and a held offer",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The organiser asks about a route through an authorised holder before the alternative closes. The earlier exclusion does not decide the result or stop the inquiry.",
-      "remaining": "Relative performance of simple notebook rules and other methods of ordering probes remains open."
-    },
-    {
-      "block_id": "B0141",
-      "block_sha256": "d39fef50fd9f82fa0edf12dbee521ff9590d444aaa3ea2c0c4f00ec02c126dc7",
-      "status": "COMPRESSED",
-      "reviewer": "Build, author of the workshop handover, 28 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The workshop handover gives named support and retained disagreement a worked decision about a booking follow-up.",
-      "remaining": "",
-      "destination": "What could C do with that notice?"
-    },
-    {
-      "block_id": "B0142",
-      "block_sha256": "95f337f84e9f2d2cf322fd1b6ed2e8a6ae945137d6981778dfa725d772d827ea",
-      "status": "PARTIAL",
-      "reviewer": "Build, author of the workshop handover, 28 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The selected desk entry names the positive usability assertion and has its own basis in the delivery receipt.",
-      "remaining": "The predicate-based legacy query and optional named requirement binding remain in the released profile."
-    },
-    {
-      "block_id": "B0143",
-      "block_sha256": "74651c35b60f5016c0fa108b61faa1502bfbc15af833586b0eda7ba49ad0c4e8",
       "status": "REFERENCE_ONLY",
-      "reviewer": "Build, author of the workshop handover, 28 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The exact requirement and result layouts and their action and claim limits stay with the optional profile.",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The toy controller’s source labels, proposed revision, retained recipe and alternate policies stay at Case C. Correcting a ledger, accepting a working head, using a recipe and learning durably call for different evidence. Notebook ordering remains a comparator.",
       "remaining": "",
-      "destination": "Named support without discarded disagreement"
+      "destination": "5. Synthetic encounter C: memory can close the map that could correct it"
     },
     {
-      "block_id": "B0144",
-      "block_sha256": "87fd0671caa8b1ea78c31718cfaeeb1d99c050f1b401b2419b5483ba31324644",
-      "status": "PARTIAL",
-      "reviewer": "Build, author of the workshop handover, 28 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The handover selects a particular claim, retains the speaker, invitation, link and period, and keeps evidence about other sessions or periods within their scope.",
-      "remaining": "The optional adapter’s caller-supplied IDs and exact route, scope, application and ordered predicate correspondence stay in the released profile."
-    },
-    {
-      "block_id": "B0145",
-      "block_sha256": "08795be451e2a3f6e84197510a3b48a6c75194922007289cd402028c0ccb2a06",
-      "status": "COMPRESSED",
-      "reviewer": "Build, author of the workshop handover, 28 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The full handover carries both case-matched reports even when the selected positive omits C’s report. Unresolved time correspondence keeps the accounts and any earlier dispute with their stated basis.",
-      "remaining": "",
-      "destination": "What could C do with that notice?"
-    },
-    {
-      "block_id": "B0146",
-      "block_sha256": "ec0020401bedcf2691c165ee276492588831671dbe890d875aad7a36d33659e3",
-      "status": "PARTIAL",
-      "reviewer": "Build, author of the workshop handover, 28 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "A stipulated common clock supports the matched period. Unmatched settings keep the time match open. The decision uses the full handover and separately supported held place.",
-      "remaining": "The optional clock and basis annotations, legacy applicability contract and effective-status fields stay in the released profile."
-    },
-    {
-      "block_id": "B0147",
-      "block_sha256": "9d5673b159f26e6cda74d8e6479fa36897e9c202d72b2d99fa401a90831d25a9",
+      "block_id": "B0173",
+      "block_sha256": "4d1245325e455fef7d262d2c3ce3393cc7f86cee9118c8a919b6c82423015007",
       "status": "REFERENCE_ONLY",
-      "reviewer": "Build, author of the workshop handover, 28 November 2026",
-      "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The optional request status, validation errors and parser scope stay in the released profile.",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The October table and prototype limitations describe the evidence for that edition. The 0.6 companion names what actually executes now. Neither outcome supplies a field-effect estimate.",
       "remaining": "",
-      "destination": "Named support without discarded disagreement"
+      "destination": "6. Evidence and implementation status"
+    },
+    {
+      "block_id": "B0174",
+      "block_sha256": "930642f0cd5e45869f8210ad3fb402a26fc337b73270ac2da378e7f6f9dd5c8c",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The October table and prototype limitations describe the evidence for that edition. The 0.6 companion names what actually executes now. Neither outcome supplies a field-effect estimate.",
+      "remaining": "",
+      "destination": "6. Evidence and implementation status"
+    },
+    {
+      "block_id": "B0175",
+      "block_sha256": "497b4207d0b312d16833499c7a89b624d9cb0a894e95a553b95f31958a4c2860",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The October table and prototype limitations describe the evidence for that edition. The 0.6 companion names what actually executes now. Neither outcome supplies a field-effect estimate.",
+      "remaining": "",
+      "destination": "6. Evidence and implementation status"
+    },
+    {
+      "block_id": "B0176",
+      "block_sha256": "a3a42d1f833c19b36e3ef23fa4476066b15d5fcf8b037fa392db6c26bd9fcdb3",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The October table and prototype limitations describe the evidence for that edition. The 0.6 companion names what actually executes now. Neither outcome supplies a field-effect estimate.",
+      "remaining": "",
+      "destination": "6. Evidence and implementation status"
+    },
+    {
+      "block_id": "B0177",
+      "block_sha256": "9fa72e80f51b06853a22105668c1780609cb7e389214175bab93dde5fa7ff596",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The October table and prototype limitations describe the evidence for that edition. The 0.6 companion names what actually executes now. Neither outcome supplies a field-effect estimate.",
+      "remaining": "",
+      "destination": "6. Evidence and implementation status"
+    },
+    {
+      "block_id": "B0178",
+      "block_sha256": "398bb186e183ed7003cf330644ed2ecf7d3cad6579d43009e30d7ba501e5121f",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional form and original invitation remain accessible as a historical fixture, including free-form replies, contextual provenance and the possibility of declining.",
+      "remaining": "",
+      "destination": "7. Invitation: what would you do with this?"
+    },
+    {
+      "block_id": "B0179",
+      "block_sha256": "aebb8e86efdbf2e97896a3b1caa06ed2b9de3a0da97329d70c3fd44799127955",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional form and original invitation remain accessible as a historical fixture, including free-form replies, contextual provenance and the possibility of declining.",
+      "remaining": "",
+      "destination": "7. Invitation: what would you do with this?"
+    },
+    {
+      "block_id": "B0180",
+      "block_sha256": "3753abf51d41a0d4eabd7a17d3fd8f1a16d993a0edcc4d3150b19dc6c07757d4",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional form and original invitation remain accessible as a historical fixture, including free-form replies, contextual provenance and the possibility of declining.",
+      "remaining": "",
+      "destination": "7. Invitation: what would you do with this?"
+    },
+    {
+      "block_id": "B0181",
+      "block_sha256": "198e41974157573a3d808deca3a631a04dbf325cd7523895c2e391697bb486ec",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional form and original invitation remain accessible as a historical fixture, including free-form replies, contextual provenance and the possibility of declining.",
+      "remaining": "",
+      "destination": "7. Invitation: what would you do with this?"
+    },
+    {
+      "block_id": "B0182",
+      "block_sha256": "3ba777bb6f3b0a85714a6475e60b59212898aee5568d8d575b759bbb36e44753",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional form and original invitation remain accessible as a historical fixture, including free-form replies, contextual provenance and the possibility of declining.",
+      "remaining": "",
+      "destination": "7. Invitation: what would you do with this?"
+    },
+    {
+      "block_id": "B0183",
+      "block_sha256": "825cd9c4875ff5e10d521644431c368ea88caa483168e4ecc2b31be2b7d71712",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional form and original invitation remain accessible as a historical fixture, including free-form replies, contextual provenance and the possibility of declining.",
+      "remaining": "",
+      "destination": "7. Invitation: what would you do with this?"
+    },
+    {
+      "block_id": "B0184",
+      "block_sha256": "268fdf9ab11739ca1f67686be468f73d3f7ce46661c251b8e85afca55b92ffe7",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The optional form and original invitation remain accessible as a historical fixture, including free-form replies, contextual provenance and the possibility of declining.",
+      "remaining": "",
+      "destination": "7. Invitation: what would you do with this?"
+    },
+    {
+      "block_id": "B0185",
+      "block_sha256": "ce8c0bfde2e1bf1bed8313182a7a9d2d053049e3ba16d49d181ab02131b6cce7",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep v0.5 release identity, reviewed source, JSON ancestry, historical tags and the original training-permission scope at their published record.",
+      "remaining": "",
+      "destination": "8. Version, sources and release boundary"
+    },
+    {
+      "block_id": "B0186",
+      "block_sha256": "e329ea3b086fc96f92b5253a5e585328435bb103bf748a87ff77c805d32b5f07",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep v0.5 release identity, reviewed source, JSON ancestry, historical tags and the original training-permission scope at their published record.",
+      "remaining": "",
+      "destination": "8. Version, sources and release boundary"
+    },
+    {
+      "block_id": "B0187",
+      "block_sha256": "54495bd4a0b98bdcf72dc2f621a803ef3721e0aeb756d3413f7423615646544d",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep v0.5 release identity, reviewed source, JSON ancestry, historical tags and the original training-permission scope at their published record.",
+      "remaining": "",
+      "destination": "8. Version, sources and release boundary"
+    },
+    {
+      "block_id": "B0188",
+      "block_sha256": "d5df2105b539a1a733dba41ee562beb9269e4768ac405a3312e198a1de597a47",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep v0.5 release identity, reviewed source, JSON ancestry, historical tags and the original training-permission scope at their published record.",
+      "remaining": "",
+      "destination": "8. Version, sources and release boundary"
+    },
+    {
+      "block_id": "B0189",
+      "block_sha256": "ebc148dcb50e7b51bf3b3815bc340320c68fa38d08e54e41062aa1a428425ca8",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep v0.5 release identity, reviewed source, JSON ancestry, historical tags and the original training-permission scope at their published record.",
+      "remaining": "",
+      "destination": "8. Version, sources and release boundary"
+    },
+    {
+      "block_id": "B0190",
+      "block_sha256": "e208368eac58434b23f19cb18468f7cf9a4768a6d0987987ba7acd5431f25c97",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "Keep v0.5 release identity, reviewed source, JSON ancestry, historical tags and the original training-permission scope at their published record.",
+      "remaining": "",
+      "destination": "8. Version, sources and release boundary"
+    },
+    {
+      "block_id": "B0191",
+      "block_sha256": "7beed84ad302308a45756935acdbbc7af4e9026651b9084f3840bef9d20a5b0c",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The original source-coverage table attributes inherited, compressed, referenced and new material to the appropriate editions; it makes no novelty inference from a word search.",
+      "remaining": "",
+      "destination": "Source coverage of the navigator addition"
+    },
+    {
+      "block_id": "B0192",
+      "block_sha256": "63cde829c329eb8a95c0f2e077286f6e7b696f6824489ec4e3959fe83350b24e",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The original source-coverage table attributes inherited, compressed, referenced and new material to the appropriate editions; it makes no novelty inference from a word search.",
+      "remaining": "",
+      "destination": "Source coverage of the navigator addition"
+    },
+    {
+      "block_id": "B0193",
+      "block_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Source coverage of the navigator addition"
+    },
+    {
+      "block_id": "B0194",
+      "block_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Source coverage of the navigator addition"
+    },
+    {
+      "block_id": "B0195",
+      "block_sha256": "e4e20f7e76f61c5935db75b341300ddbd45f3619250a91bd9adc5acec76b110b",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The original source-coverage table attributes inherited, compressed, referenced and new material to the appropriate editions; it makes no novelty inference from a word search.",
+      "remaining": "",
+      "destination": "Source coverage of the navigator addition"
+    },
+    {
+      "block_id": "B0196",
+      "block_sha256": "2f9c13d79114f670ce00ea9b5421fa14822b1a941641923706eb9e997d25d82a",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Released-v0.4 → v0.5 review crosswalk (semantic coverage, not code conformance)"
+    },
+    {
+      "block_id": "B0197",
+      "block_sha256": "474294d4bb7b549e1f0b14aeb91c29c5cf15c69c3e3e3e439011902546bace4d",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Released-v0.4 → v0.5 review crosswalk (semantic coverage, not code conformance)"
+    },
+    {
+      "block_id": "B0198",
+      "block_sha256": "72cbc84dc645e32802446da59dae2358e1602168969a08c4912847f3efa8d8d8",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Released-v0.4 → v0.5 review crosswalk (semantic coverage, not code conformance)"
+    },
+    {
+      "block_id": "B0199",
+      "block_sha256": "867dce964911e5a7e0346c0ab3f444ece50cabdedeedfedf1046e22e5d0b4506",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Released-v0.4 → v0.5 review crosswalk (semantic coverage, not code conformance)"
+    },
+    {
+      "block_id": "B0200",
+      "block_sha256": "b4152f887ee54b7a2e470f08bec754f6a5420ef0e67df1b14a8879d9329067ee",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Released-v0.4 → v0.5 review crosswalk (semantic coverage, not code conformance)"
+    },
+    {
+      "block_id": "B0201",
+      "block_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Released-v0.4 → v0.5 review crosswalk (semantic coverage, not code conformance)"
+    },
+    {
+      "block_id": "B0202",
+      "block_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The 0.4-to-0.5 crosswalk, separator lines and summary retain their original headings and clause IDs. Earlier sources govern claims about their own exact wording and scope.",
+      "remaining": "",
+      "destination": "Released-v0.4 → v0.5 review crosswalk (semantic coverage, not code conformance)"
+    },
+    {
+      "block_id": "B0203",
+      "block_sha256": "42cd9ac3dd1f503e806059590c674f850a35a2844d9d300cd29414bca8cc7f96",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The glossary is local to v0.5, including the three revisions, clock identifiers, open obligations and synthetic sessions. The end marker belongs to that edition.",
+      "remaining": "",
+      "destination": "9. Notation glossary"
+    },
+    {
+      "block_id": "B0204",
+      "block_sha256": "ffba770b5ab1380641ef5e53f3ccc3cd6855fc64ab8bd14570c4199d02616b34",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The glossary is local to v0.5, including the three revisions, clock identifiers, open obligations and synthetic sessions. The end marker belongs to that edition.",
+      "remaining": "",
+      "destination": "9. Notation glossary"
+    },
+    {
+      "block_id": "B0205",
+      "block_sha256": "9ba5a04429e1de7ec54548c3a5ad482825dc21502ce7ad1f401c694db419b842",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The glossary is local to v0.5, including the three revisions, clock identifiers, open obligations and synthetic sessions. The end marker belongs to that edition.",
+      "remaining": "",
+      "destination": "9. Notation glossary"
+    },
+    {
+      "block_id": "B0206",
+      "block_sha256": "e1de74722899f66ec89a8543dc7174b6bd9266208d6c3eed1b338e56bb30bad6",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Campfire, 28 November edition comparison",
+      "evidence": "EDITION-SOURCES.md",
+      "finding": "The glossary is local to v0.5, including the three revisions, clock identifiers, open obligations and synthetic sessions. The end marker belongs to that edition.",
+      "remaining": "",
+      "destination": "9. Notation glossary"
     }
   ]
 }

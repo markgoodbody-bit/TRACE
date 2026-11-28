@@ -1,6 +1,6 @@
 # Optional donor and case index
 
-17 November 2026. Use these routes when the distinction can change a decision. They point to released sources; they do not make their machinery part of an implemented 0.6 parser. The candidate and these entries are under construction. Source references and proposed destinations do not certify preservation.
+Use these routes when the distinction can change a decision. The [edition source guide](EDITION-SOURCES.md) connects the complete earlier texts and their technical contracts with the 0.6 reading.
 
 **Reading categories:** INHERITED = a meaning carried from a named earlier source; COMPRESSED = a shorter account whose qualifications need checking; REFERENCE_ONLY = consult the donor for the detailed contract; NEW_COMPOSITION = a new arrangement or example. These describe source treatment, not proof of equivalence. The original edition-specific table and names remain at [v0.5 §8](https://github.com/markgoodbody-bit/TRACE/blob/d688c149afc15c90ab51afaf08fe303771e9de20/TRACE-v0.5.md#L1056); symbols in different editions need not have identical contracts.
 
