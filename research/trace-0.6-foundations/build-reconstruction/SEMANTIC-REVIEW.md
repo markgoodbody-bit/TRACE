@@ -433,6 +433,8 @@ The [booking decision](CANDIDATE.md#what-can-a-do-while-the-reopening-is-unconfi
 
 The keeper can confirm terms for a current offer. A chooses whether to use it and whether to share a sketch. In the stipulated fallback case, a 15:30 check-in plus twenty minutes for the return, decision and booking completes at 15:50, before 16:00. A no-answer or a reply about the wrong job leaves that fallback available at the check-in. An answer that arrives after the held offer closes can inform a later decision. The coordinator can carry the later evidence with its date, alongside what A actually chose.
 
+Hold the keeper’s 15:35 reply fixed and vary the state of the supplier booking. With A still choosing and the twenty-minute bound freshly supported, the desk can put both offers to A and confirm a choice by 15:55. If a request is outstanding, check the supplier’s record. A booking confirmed at 15:34 remains in force while A considers whether to request a change. At 15:40 a fresh twenty-minute bound puts the latest confirmation at the strict cutoff, so the bound cannot support a promise of timely confirmation. An earlier request has its own clock and status.
+
 | Released 0.5 source | Treatment in the working edition |
 | --- | --- |
 | [B0169](TRACE-v0.5-reference.md#L918-L919) | **Partial.** The author’s stipulated error remains separate from the organiser’s evidence. The working choice can change when the organiser checks the report. The two scripted policies and evidence of lasting learning remain with their source. |

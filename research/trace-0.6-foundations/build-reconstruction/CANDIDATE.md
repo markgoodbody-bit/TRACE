@@ -289,7 +289,11 @@ In this continuation another supplier has confirmed a usable slot for the same t
 
 If the keeper confirms a usable offer in time, bring both sets of terms to A and let A choose. If the keeper confirms the printer is unavailable for this job in time, carry that finding for this date. The old closure claim still needs evidence about its own date.
 
-At the check-in, if there is no applicable reply, tell A the makerspace question is open. The supplier’s slot is still held. A can take it or leave it unused. If a reply arrives after that choice closes, carry it into the next decision with its time and scope. Record any booking as a separate event, with A’s agreement and the slot holder’s confirmation. [Released Case C](TRACE-v0.5-reference.md#5-synthetic-encounter-c-memory-can-close-the-map-that-could-correct-it)
+At the check-in, if there is no applicable reply, tell A the makerspace question is open. The supplier’s slot is still held. A can take it or leave it unused.
+
+Suppose the keeper confirms a usable offer at 15:35. If A is still choosing and they can still decide and get either choice confirmed within twenty minutes, put both offers to A. A chosen booking can take effect by 15:55. If A’s request went to the supplier and its status is unclear, check whether it took effect before promising a replacement. If the supplier already confirmed A’s booking at 15:34, keep that booking in the handover. A can ask about changing it. Before acting on that choice, check the supplier’s release terms, timing and any cost.
+
+If a reply arrives after the choice closes, carry it into the next decision with its time and scope. Record any booking as a separate event, with A’s agreement and the slot holder’s confirmation. [Released Case C](TRACE-v0.5-reference.md#5-synthetic-encounter-c-memory-can-close-the-map-that-could-correct-it)
 
 #### Can the organiser send A’s sketch?
 
