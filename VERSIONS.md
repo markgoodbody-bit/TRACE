@@ -2,6 +2,7 @@
 
 | Version | Status | Reading surface |
 |---|---|---|
+| 0.6 | Final reading text, 28 November 2026 | [Short spine](research/trace-0.6-foundations/build-reconstruction/SPINE.md), [full manuscript](research/trace-0.6-foundations/build-reconstruction/CANDIDATE.md), [executable cases and assumptions](research/trace-0.6-foundations/build-reconstruction/README.md) |
 | 0.5.0 | Current released research specification; efficacy UNVALIDATED | [Complete specification](TRACE-v0.5.md), [release record](RELEASE_v0.5.0.md), [release](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.5.0) |
 | 0.4.0 | Historical released compact specification | [Compact spine](TRACE-SPINE.md), [immutable source](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md), [release](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.4.0) |
 | 0.3.0 | Historical released full technical donor | [Full reference](TRACE.md), [immutable source](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE.md), [release](https://github.com/markgoodbody-bit/TRACE/releases/tag/v0.3.0) |

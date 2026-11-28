@@ -1,0 +1,732 @@
+{
+  "status": "PASS",
+  "groups": 18,
+  "checks": 83,
+  "scope": "Exact invented finite examples; no empirical or normative validation.",
+  "results": {
+    "bellman_trap": {
+      "old_delta": {
+        "exact": "0/1",
+        "decimal": 0.0
+      },
+      "paired_plan_delta": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    "filtering_and_capability_cost": {
+      "filtering_delta": {
+        "exact": "-3/10",
+        "decimal": -0.3
+      },
+      "costly_capability_delta": {
+        "exact": "-1/5",
+        "decimal": -0.2
+      },
+      "meaning": "Normative permission and physical opportunity are separate inputs; neither is established by maximising a goal."
+    },
+    "regard_not_weight": {
+      "selected_with_positive_weights": "exploit",
+      "selected_with_declared_floor": "cooperate",
+      "meaning": "A positive weight does not establish adequate regard, legitimate floors, consent, or representation."
+    },
+    "reliance_and_assurance": {
+      "physical_support": {
+        "exact": "1/4",
+        "decimal": 0.25
+      },
+      "keep_fallback": {
+        "exact": "13/16",
+        "decimal": 0.8125
+      },
+      "cancel_fallback": {
+        "exact": "1/4",
+        "decimal": 0.25
+      },
+      "causal_loss_in_stipulated_model": {
+        "exact": "-9/16",
+        "decimal": -0.5625
+      },
+      "meaning": "The effect is mediated by a specified receiver policy and actual cancellation, not a theorem that every false statement worsens every outcome."
+    },
+    "commitment_does_not_create_capacity": {
+      "delivery_without_promise": {
+        "exact": "2/5",
+        "decimal": 0.4
+      },
+      "delivery_with_promise_same_resources_and_policy": {
+        "exact": "2/5",
+        "decimal": 0.4
+      },
+      "meaning": "A commitment may motivate later actions in a fuller model; the statement alone is not delivered capacity or a guarantee."
+    },
+    "causal_announcement_confounding": {
+      "P_success_given_announcement": {
+        "exact": "1/1",
+        "decimal": 1.0
+      },
+      "P_success_do_announcement": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "causal_effect": {
+        "exact": "0/1",
+        "decimal": 0.0
+      }
+    },
+    "complementary_support": {
+      "marginal_without_complement": {
+        "exact": "0/1",
+        "decimal": 0.0
+      },
+      "marginal_with_complement": {
+        "exact": "1/1",
+        "decimal": 1.0
+      },
+      "interaction": {
+        "exact": "1/1",
+        "decimal": 1.0
+      }
+    },
+    "shared_budget": {
+      "feasible_allocations": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "meaning": "Individual promises must be checked against the joint allocation; a claimant's standing does not create resources."
+    },
+    "correlated_support": {
+      "actual_both": {
+        "exact": "4/5",
+        "decimal": 0.8
+      },
+      "product_of_marginals": {
+        "exact": "16/25",
+        "decimal": 0.64
+      },
+      "actual_either": {
+        "exact": "4/5",
+        "decimal": 0.8
+      },
+      "independent_redundancy_claim": {
+        "exact": "24/25",
+        "decimal": 0.96
+      }
+    },
+    "attainment_vs_sustaining": {
+      "attainment": {
+        "exact": "1/1",
+        "decimal": 1.0
+      },
+      "sustained": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "unsupported_kernels_t0_t1_t2": [
+        [],
+        [
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "supported_kernels_t0_t1_t2": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "per_step_risk": {
+      "per_step": {
+        "exact": "9/10",
+        "decimal": 0.9
+      },
+      "whole_horizon": {
+        "exact": "81/100",
+        "decimal": 0.81
+      },
+      "union_bound": {
+        "exact": "4/5",
+        "decimal": 0.8
+      }
+    },
+    "nonanticipative_policy": {
+      "max_policy_min_model_deterministic": {
+        "exact": "0/1",
+        "decimal": 0.0
+      },
+      "max_policy_min_model_randomized": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "min_model_max_policy_clairvoyant": {
+        "exact": "1/1",
+        "decimal": 1.0
+      },
+      "analytic_upper_bound": "min(q,1-q) <= (q+1-q)/2 = 1/2 for every q in [0,1]; equality at q=1/2."
+    },
+    "paired_model_difference": {
+      "paired_difference_range": [
+        {
+          "exact": "1/10",
+          "decimal": 0.1
+        },
+        {
+          "exact": "1/10",
+          "decimal": 0.1
+        }
+      ],
+      "unpaired_envelope": [
+        {
+          "exact": "-2/5",
+          "decimal": -0.4
+        },
+        {
+          "exact": "3/5",
+          "decimal": 0.6
+        }
+      ]
+    },
+    "target_and_protection": {
+      "source": "Recovered established Claude Code challenge, 16 November; recomputed here with exact finite distributions.",
+      "reference_goal_and_protection": [
+        {
+          "exact": "1/10",
+          "decimal": 0.1
+        },
+        {
+          "exact": "1/1",
+          "decimal": 1.0
+        }
+      ],
+      "candidate_goal_and_protection": [
+        {
+          "exact": "3/10",
+          "decimal": 0.3
+        },
+        {
+          "exact": "3/10",
+          "decimal": 0.3
+        }
+      ],
+      "paired_goal_and_protection_differences": [
+        {
+          "exact": "1/5",
+          "decimal": 0.2
+        },
+        {
+          "exact": "-7/10",
+          "decimal": -0.7
+        }
+      ],
+      "meaning": "A positive target-attainment difference does not establish that the policy is preferable. Preserve protective targets and failure severity separately."
+    },
+    "model_boundary": {
+      "recorded_route_success": false,
+      "possible_completions_disagree": true,
+      "meaning": "The recorded failures do not identify what lies outside the model. No probability or hopeful real route follows from this logical underdetermination."
+    },
+    "recursion_budget_not_termination": {
+      "sampled_steps": 100,
+      "partial_cost": {
+        "exact": "1267650600228229401496703205375/1267650600228229401496703205376",
+        "decimal": 1.0
+      },
+      "remaining_budget": {
+        "exact": "1/1267650600228229401496703205376",
+        "decimal": 7.888609052210118e-31
+      },
+      "uniform_cost_lower_bound": {
+        "exact": "1/10",
+        "decimal": 0.1
+      },
+      "affordable_step_bound": 10,
+      "analytic_argument": "For every finite n, sum_{k=0}^{n-1} 2^{-(k+1)} = 1-2^{-n} < 1. Positive costs and finite budget alone do not imply a stopping time. A finite step cap or uniform positive cost lower bound supplies one.",
+      "scope": "This challenges an added implementation inference, not an attributed claim that the released text proves termination."
+    },
+    "aggregation_loses_protection": {
+      "balanced": [
+        1,
+        1
+      ],
+      "concentrated": [
+        2,
+        0
+      ],
+      "shared_aggregate": 2,
+      "meaning": "A compressed state or aggregate cannot support person-specific protective checks when it merges outcomes with different floor status."
+    },
+    "worked_workshop_case": {
+      "target": "Both groups receive their agreed session within the same declared programme window.",
+      "baseline_remote_joint": {
+        "exact": "1/4",
+        "decimal": 0.25
+      },
+      "same_slot_promises_and_cancelled_fallback_joint": {
+        "exact": "0/1",
+        "decimal": 0.0
+      },
+      "accepted_rescheduling_direct_joint": {
+        "exact": "18/25",
+        "decimal": 0.72
+      },
+      "rescheduling_and_preserved_observable_fallback_joint": {
+        "exact": "79/100",
+        "decimal": 0.79
+      },
+      "individual_success_each": {
+        "exact": "43/50",
+        "decimal": 0.86
+      },
+      "paired_joint_gain": {
+        "exact": "27/50",
+        "decimal": 0.54
+      },
+      "important_assumptions": [
+        "Voluntary accepted rescheduling; no consent is inferred from a numerical gain.",
+        "Van and room are independent of each other but shared across sessions.",
+        "Support status is observable before the fallback decision deadline.",
+        "Fallbacks remain feasible and have no resource conflict with each other.",
+        "All values are invented exact finite examples, not field estimates."
+      ]
+    }
+  },
+  "check_log": [
+    {
+      "group": "bellman_trap",
+      "name": "unrestricted_initial_optimum",
+      "pass": true
+    },
+    {
+      "group": "bellman_trap",
+      "name": "optimal_enabling_old_delta",
+      "pass": true
+    },
+    {
+      "group": "bellman_trap",
+      "name": "paired_gain_over_blind_plan",
+      "pass": true
+    },
+    {
+      "group": "bellman_trap",
+      "name": "all_old_deltas_nonpositive",
+      "pass": true
+    },
+    {
+      "group": "filtering_and_capability_cost",
+      "name": "filtering_can_lower_selected_goal_optimum",
+      "pass": true
+    },
+    {
+      "group": "filtering_and_capability_cost",
+      "name": "admissibility_filter_is_subset",
+      "pass": true
+    },
+    {
+      "group": "filtering_and_capability_cost",
+      "name": "incompatible_floor_can_leave_empty_menu",
+      "pass": true
+    },
+    {
+      "group": "filtering_and_capability_cost",
+      "name": "free_nested_menu_cannot_lower_max",
+      "pass": true
+    },
+    {
+      "group": "filtering_and_capability_cost",
+      "name": "construction_cost_can_lower_available_value",
+      "pass": true
+    },
+    {
+      "group": "regard_not_weight",
+      "name": "both_weights_positive",
+      "pass": true
+    },
+    {
+      "group": "regard_not_weight",
+      "name": "positive_weight_still_selects_harm",
+      "pass": true
+    },
+    {
+      "group": "regard_not_weight",
+      "name": "declared_floor_changes_menu",
+      "pass": true
+    },
+    {
+      "group": "regard_not_weight",
+      "name": "exploit_weighted_score",
+      "pass": true
+    },
+    {
+      "group": "reliance_and_assurance",
+      "name": "support_probability_unchanged_by_words",
+      "pass": true
+    },
+    {
+      "group": "reliance_and_assurance",
+      "name": "conditional_plan_success",
+      "pass": true
+    },
+    {
+      "group": "reliance_and_assurance",
+      "name": "assurance_induced_plan_success",
+      "pass": true
+    },
+    {
+      "group": "reliance_and_assurance",
+      "name": "loss_due_to_reliance_policy",
+      "pass": true
+    },
+    {
+      "group": "reliance_and_assurance",
+      "name": "fallback_cancellation_strictly_shrinks_menu",
+      "pass": true
+    },
+    {
+      "group": "commitment_does_not_create_capacity",
+      "name": "recorded_commitment_does_not_change_fixed_transition",
+      "pass": true
+    },
+    {
+      "group": "commitment_does_not_create_capacity",
+      "name": "promise_not_probability_one",
+      "pass": true
+    },
+    {
+      "group": "commitment_does_not_create_capacity",
+      "name": "failure_remains_possible",
+      "pass": true
+    },
+    {
+      "group": "causal_announcement_confounding",
+      "name": "observed_success_given_announcement",
+      "pass": true
+    },
+    {
+      "group": "causal_announcement_confounding",
+      "name": "intervention_announcement_success",
+      "pass": true
+    },
+    {
+      "group": "causal_announcement_confounding",
+      "name": "causal_announcement_effect_zero",
+      "pass": true
+    },
+    {
+      "group": "causal_announcement_confounding",
+      "name": "association_not_intervention",
+      "pass": true
+    },
+    {
+      "group": "complementary_support",
+      "name": "first_support_alone",
+      "pass": true
+    },
+    {
+      "group": "complementary_support",
+      "name": "first_support_with_complement",
+      "pass": true
+    },
+    {
+      "group": "complementary_support",
+      "name": "nonadditive_interaction",
+      "pass": true
+    },
+    {
+      "group": "complementary_support",
+      "name": "zero_standalone_gain_does_not_imply_useless",
+      "pass": true
+    },
+    {
+      "group": "shared_budget",
+      "name": "first_commitment_individually_feasible",
+      "pass": true
+    },
+    {
+      "group": "shared_budget",
+      "name": "second_commitment_individually_feasible",
+      "pass": true
+    },
+    {
+      "group": "shared_budget",
+      "name": "combined_commitment_infeasible",
+      "pass": true
+    },
+    {
+      "group": "shared_budget",
+      "name": "no_joint_allocation",
+      "pass": true
+    },
+    {
+      "group": "shared_budget",
+      "name": "capacity_increase_restores_joint_feasibility",
+      "pass": true
+    },
+    {
+      "group": "correlated_support",
+      "name": "actual_both",
+      "pass": true
+    },
+    {
+      "group": "correlated_support",
+      "name": "naive_both_wrong",
+      "pass": true
+    },
+    {
+      "group": "correlated_support",
+      "name": "actual_either_no_redundancy",
+      "pass": true
+    },
+    {
+      "group": "correlated_support",
+      "name": "naive_redundancy_overclaims",
+      "pass": true
+    },
+    {
+      "group": "attainment_vs_sustaining",
+      "name": "attainment_probability",
+      "pass": true
+    },
+    {
+      "group": "attainment_vs_sustaining",
+      "name": "sustained_probability",
+      "pass": true
+    },
+    {
+      "group": "attainment_vs_sustaining",
+      "name": "one_period_viable_without_support",
+      "pass": true
+    },
+    {
+      "group": "attainment_vs_sustaining",
+      "name": "two_period_kernel_empty_without_support",
+      "pass": true
+    },
+    {
+      "group": "attainment_vs_sustaining",
+      "name": "two_period_kernel_with_support",
+      "pass": true
+    },
+    {
+      "group": "per_step_risk",
+      "name": "first_step_success",
+      "pass": true
+    },
+    {
+      "group": "per_step_risk",
+      "name": "second_step_success",
+      "pass": true
+    },
+    {
+      "group": "per_step_risk",
+      "name": "horizon_success",
+      "pass": true
+    },
+    {
+      "group": "per_step_risk",
+      "name": "per_step_threshold_not_horizon_threshold",
+      "pass": true
+    },
+    {
+      "group": "per_step_risk",
+      "name": "union_bound_is_valid_here",
+      "pass": true
+    },
+    {
+      "group": "nonanticipative_policy",
+      "name": "common_deterministic_robust_value",
+      "pass": true
+    },
+    {
+      "group": "nonanticipative_policy",
+      "name": "common_randomized_robust_value",
+      "pass": true
+    },
+    {
+      "group": "nonanticipative_policy",
+      "name": "model_specific_clairvoyant_value",
+      "pass": true
+    },
+    {
+      "group": "nonanticipative_policy",
+      "name": "universal_randomized_upper_bound_on_grid",
+      "pass": true
+    },
+    {
+      "group": "nonanticipative_policy",
+      "name": "clairvoyant_swap_overstates_implementable_value",
+      "pass": true
+    },
+    {
+      "group": "paired_model_difference",
+      "name": "paired_range_preserves_same_model",
+      "pass": true
+    },
+    {
+      "group": "paired_model_difference",
+      "name": "unpaired_range_unnecessarily_wide",
+      "pass": true
+    },
+    {
+      "group": "paired_model_difference",
+      "name": "all_models_agree_candidate_better",
+      "pass": true
+    },
+    {
+      "group": "target_and_protection",
+      "name": "candidate_target_probability_gain",
+      "pass": true
+    },
+    {
+      "group": "target_and_protection",
+      "name": "candidate_protection_probability_loss",
+      "pass": true
+    },
+    {
+      "group": "target_and_protection",
+      "name": "candidate_ruin_probability",
+      "pass": true
+    },
+    {
+      "group": "target_and_protection",
+      "name": "candidate_does_not_pareto_dominate",
+      "pass": true
+    },
+    {
+      "group": "model_boundary",
+      "name": "recorded_model_has_no_success_route",
+      "pass": true
+    },
+    {
+      "group": "model_boundary",
+      "name": "closed_completion_agrees_on_observed",
+      "pass": true
+    },
+    {
+      "group": "model_boundary",
+      "name": "open_completion_agrees_on_observed",
+      "pass": true
+    },
+    {
+      "group": "model_boundary",
+      "name": "closed_completion_no_success",
+      "pass": true
+    },
+    {
+      "group": "model_boundary",
+      "name": "open_completion_has_success",
+      "pass": true
+    },
+    {
+      "group": "recursion_budget_not_termination",
+      "name": "all_sampled_costs_strictly_positive",
+      "pass": true
+    },
+    {
+      "group": "recursion_budget_not_termination",
+      "name": "geometric_partial_sum",
+      "pass": true
+    },
+    {
+      "group": "recursion_budget_not_termination",
+      "name": "finite_budget_not_exhausted_after_sampled_steps",
+      "pass": true
+    },
+    {
+      "group": "recursion_budget_not_termination",
+      "name": "uniform_lower_bound_caps_affordable_steps",
+      "pass": true
+    },
+    {
+      "group": "aggregation_loses_protection",
+      "name": "same_aggregate_burden",
+      "pass": true
+    },
+    {
+      "group": "aggregation_loses_protection",
+      "name": "balanced_respects_A_floor",
+      "pass": true
+    },
+    {
+      "group": "aggregation_loses_protection",
+      "name": "concentrated_violates_A_floor",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "baseline_joint_remote",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "simultaneous_promise_joint_failure",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "accepted_rescheduling_respects_capacity",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "direct_joint_success_shared_dependencies",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "direct_joint_not_independent_sessions",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "supported_joint_with_fallback",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "each_group_success_with_fallback_A",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "each_group_success_with_fallback_B",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "joint_plan_gain_over_named_baseline",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "preserving_fallback_gain_over_direct_only",
+      "pass": true
+    },
+    {
+      "group": "worked_workshop_case",
+      "name": "marginal_product_not_joint",
+      "pass": true
+    }
+  ]
+}

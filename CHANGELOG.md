@@ -1,5 +1,9 @@
 # Change log
 
+## 0.6 · final reading text, 28 November 2026
+
+The short spine, full manuscript and mathematical companion follow decisions through evidence, timing, consent and support. The [source guide](research/trace-0.6-foundations/build-reconstruction/EDITION-SOURCES.md) identifies the original technical profiles and cases that readers can consult in full. The final opening follows a learner who chooses private practice and keeps a separate teaching decision open.
+
 ## Post-release documentation — 27 October 2026
 
 Makes the current v0.5.0 reader the first README link and adds a historical-file guide. Clarifies the role of root-level older specifications and release records, and labels rc1 as development provenance. This changes main-branch navigation only: the v0.5.0 tag, released specification, historical source bytes and training permission remain unchanged.

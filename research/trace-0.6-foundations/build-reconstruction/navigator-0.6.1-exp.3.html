@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Some of the day left | TRACE 0.6.1-exp.3</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #1b211f; color: #f2ebdd; font: 1.125rem/1.65 Georgia, serif; }
+    main { max-width: 38rem; margin: 0 auto; padding: clamp(2rem, 8vw, 5rem) 1.25rem; }
+    h1 { font-size: clamp(2.7rem, 9vw, 4.6rem); line-height: 1.05; margin: .2em 0 .55em; }
+    h2 { font-size: 1.35rem; margin: 1.8em 0 .45em; }
+    p { margin: 0 0 1em; }
+    .version { color: #bcc7b4; font: .875rem/1.5 system-ui, sans-serif; }
+    blockquote { border-inline-start: 3px solid #eec78a; margin: 1.5em 0; padding-inline-start: 1em; }
+    details { border-top: 1px solid #7b8a81; padding: .85em 0; }
+    summary { cursor: pointer; font-weight: 700; }
+    summary:focus-visible { outline: 2px solid #efca8b; outline-offset: 4px; }
+    details p { margin: .8em 0 .15em; padding-inline-start: 1.15em; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="version">TRACE 0.6.1-exp.3 · A fictional workshop encounter</p>
+  <h1>Some of the day left</h1>
+  <p>There is a stripe of daylight left on the workshop floor. A has had a good afternoon and would like some of it left when they get home. That part is for the reader.</p>
+  <p>At 16:58 A messages the front desk.</p>
+  <blockquote>“I need to leave at 17:40. Please get that into the booking. I'd rather keep the reason to myself.”</blockquote>
+  <p>The desk records receipt at 17:00. The booking still says A can stay until six. The facilitator's check is scheduled from 17:35 to 17:50. A qualified facilitator can offer an earlier fifteen-minute check from 17:20 instead, if A agrees and the duty organiser books it before 17:10. The desk can reach the organiser by phone.</p>
+
+  <h2>What do you do with the receipt?</h2>
+  <details id="reach-organiser">
+    <summary>Ask the desk to reach the duty organiser now</summary>
+    <p>At 17:04 the organiser gets A's departure time. A accepts the earlier offer at 17:06. At 17:08 the organiser moves the check.</p>
+    <p>A finishes the attempt at 17:15. The check finishes at 17:35. A leaves by 17:40. The organiser has what they need to act, and A keeps their reason.</p>
+  </details>
+  <details id="ordinary-return">
+    <summary>Leave the correction with the desk's ordinary return</summary>
+    <p>The organiser sees A's departure time at 17:12. The earlier slot is out of reach. A finishes the attempt at 17:15. Staying until 17:50 would make the original check fit, but A has chosen to leave by 17:40. The check does not go ahead.</p>
+    <p>The organiser records the missed check. They can ask A if a fresh offer would help. A can choose whether to take it up.</p>
+  </details>
+
+  <details id="handoff">
+    <summary>What will the next organiser know?</summary>
+    <p>They can know when A asked to leave, whether the booking moved and whether the check happened. If A gets only a receipt, they can ask the desk to put them through to the duty organiser. After the deadline, A can still correct the return. Their skill at home, access to qualified help there and experience of the rest of the day are open in either account.</p>
+  </details>
+</main>
+<script type="application/json" id="trace-encounter">
+{
+  "version": "0.6.1-exp.3",
+  "case": "Some of the day left",
+  "status": "fictional",
+  "clock": {"zero": "17:00", "unit": "minute"},
+  "departure_correction": {
+    "source": "learner",
+    "sent_at": -2,
+    "desk_received_at": 0,
+    "departure_no_later_than": 40,
+    "forwarding_scope": "departure time for booking",
+    "reason_disclosure": "withheld from booking by learner"
+  },
+  "booking": {
+    "source": "booking record and duty organiser",
+    "authority": "duty organiser",
+    "recorded_departure_no_later_than": 60,
+    "amend_before": 10,
+    "scheduled_check_start": 35
+  },
+  "facilitator_offer": {
+    "source": "qualified facilitator",
+    "start_times": [20, 35],
+    "duration": 15,
+    "capacity": 1,
+    "requires_learner_agreement": true
+  },
+  "attempt_end": 15,
+  "histories": {
+    "reach-organiser": {
+      "organiser_received_at": 4,
+      "learner_accepted_earlier_at": 6,
+      "booking_changed_at": 8,
+      "check_start": 20,
+      "check_completed_at": 35,
+      "learner_left_by": 40
+    },
+    "ordinary-return": {
+      "organiser_received_at": 12,
+      "learner_accepted_earlier_at": null,
+      "booking_changed_at": null,
+      "check_start": null,
+      "check_completed_at": null,
+      "learner_left_by": 40
+    }
+  },
+  "event_sources": {
+    "sent_at": "learner's message",
+    "desk_received_at": "desk receipt",
+    "organiser_received_at": "duty organiser's acknowledgement",
+    "learner_accepted_earlier_at": "learner's acceptance",
+    "booking_changed_at": "booking change entry",
+    "attempt_end": "session record",
+    "check_start": "facilitator's session report",
+    "check_completed_at": "facilitator's session report",
+    "learner_left_by": "learner's return"
+  },
+  "handoff": {
+    "correction_holder": "duty organiser",
+    "answer_back_route": "ask the desk to put the learner through to the duty organiser",
+    "home_capability": "unresolved",
+    "qualified_help_at_home": "unresolved",
+    "rest_of_day": "unresolved",
+    "fresh_offer": "learner decision and available support required"
+  }
+}
+</script>
+</body>
+</html>

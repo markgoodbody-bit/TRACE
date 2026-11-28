@@ -1,0 +1,66 @@
+{
+  "version": "0.6.1-exp.3",
+  "case": "Some of the day left",
+  "status": "fictional",
+  "clock": {"zero": "17:00", "unit": "minute"},
+  "departure_correction": {
+    "source": "learner",
+    "sent_at": -2,
+    "desk_received_at": 0,
+    "departure_no_later_than": 40,
+    "forwarding_scope": "departure time for booking",
+    "reason_disclosure": "withheld from booking by learner"
+  },
+  "booking": {
+    "source": "booking record and duty organiser",
+    "authority": "duty organiser",
+    "recorded_departure_no_later_than": 60,
+    "amend_before": 10,
+    "scheduled_check_start": 35
+  },
+  "facilitator_offer": {
+    "source": "qualified facilitator",
+    "start_times": [20, 35],
+    "duration": 15,
+    "capacity": 1,
+    "requires_learner_agreement": true
+  },
+  "attempt_end": 15,
+  "histories": {
+    "reach-organiser": {
+      "organiser_received_at": 4,
+      "learner_accepted_earlier_at": 6,
+      "booking_changed_at": 8,
+      "check_start": 20,
+      "check_completed_at": 35,
+      "learner_left_by": 40
+    },
+    "ordinary-return": {
+      "organiser_received_at": 12,
+      "learner_accepted_earlier_at": null,
+      "booking_changed_at": null,
+      "check_start": null,
+      "check_completed_at": null,
+      "learner_left_by": 40
+    }
+  },
+  "event_sources": {
+    "sent_at": "learner's message",
+    "desk_received_at": "desk receipt",
+    "organiser_received_at": "duty organiser's acknowledgement",
+    "learner_accepted_earlier_at": "learner's acceptance",
+    "booking_changed_at": "booking change entry",
+    "attempt_end": "session record",
+    "check_start": "facilitator's session report",
+    "check_completed_at": "facilitator's session report",
+    "learner_left_by": "learner's return"
+  },
+  "handoff": {
+    "correction_holder": "duty organiser",
+    "answer_back_route": "ask the desk to put the learner through to the duty organiser",
+    "home_capability": "unresolved",
+    "qualified_help_at_home": "unresolved",
+    "rest_of_day": "unresolved",
+    "fresh_offer": "learner decision and available support required"
+  }
+}
