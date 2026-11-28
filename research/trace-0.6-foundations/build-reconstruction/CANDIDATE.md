@@ -236,6 +236,18 @@ The day 5 agreement was for a joint attempt at the whole-floor model. That aim i
 
 For a different case where the aim stays fixed and some entries on one past menu are unconfirmed, the [choice calculation](README.md#when-one-past-menu-is-incomplete) identifies which facts could change what the next organiser can infer.
 
+#### What did the shared session make possible?
+
+In the day-by-day story, the lab’s grant, A’s choice to share the simplified sketch and B’s agreement to work together under supervision give them one fabrication trial. A reports being able to read the junctions by touch. B reports getting supervised practice. For the comparison, pick one part of A’s larger job. Could A get a printed junction to try by touch before work starts on day 28? Keep the part, sharing terms and deadline fixed when comparing what A could do before the grant.
+
+| What the organiser can establish about the earlier options | What the session adds |
+| --- | --- |
+| A has a dated offer from a supplier outside the lab’s records. A agreed the specific use of the simplified sketch with the supplier. Its terms and delivery fit the same trial and the offer is still open when the lab grants its slot. | A gains a second route through the joint session. The trial gives A something to judge by touch and B a chance to practise under supervision. |
+| The earlier records establish that the supplier and makerspace routes could not provide this print in time. The lab grant came later. | The grant and the two scoped contributions open the day 6 trial within the options and deadline compared here. |
+| A supplier was listed and its availability for this job before the deadline is still unknown. | The joint trial has its own support. Whether A already had another usable route is open. If it matters, A can ask the supplier for any dated record of the terms and capacity available before the grant. |
+
+If another print would help, A can ask about a sample before deciding what to share again. If A keeps the sketch private, B can ask the lab keeper for a slot to practise calibration on a [neutral test piece](CANDIDATE.md#b-tries-teaching-the-adjustment) and ask a supervisor whether they can help. B decides whether to take up that route. Any later session needs its own grant, equipment and agreement. [0.5 formation chain](TRACE-v0.5-reference.md#constructive-formation-not-only-prevention) · [Original Case A question](TRACE-v0.5-reference.md#L800)
+
 #### What can the separate Case A record support?
 
 A and B each report agreeing, and W reports that a model was printed. The record leaves open who could grant lab access for this session, what each participant agreed to and whether A chose to share the sketch. Ask the lab what it authorised. A can say what they chose to share and whether the model was useful to them. B can say what practice they gained and whether they could have left on workable terms. Each can answer about their experience while keeping their files private.

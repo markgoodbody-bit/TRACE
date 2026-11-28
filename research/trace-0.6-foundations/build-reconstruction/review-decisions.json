@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "ab740f2552501d54ac2611f4a063cfbccad1fa456f2c01ca50c94683cee64917",
+  "candidate_sha256": "ccd2d8c5cf2abe844967523cead7d5c0e18a91a9d145aeaae535b6d98315fd8e",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -460,7 +460,7 @@
       "status": "PARTIAL",
       "reviewer": "Build, source comparison for B’s teaching turn",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "The paired session carries agreed contributions, observed action, the equal product and the conditions for another booking.",
+      "finding": "The paired session carries agreed contributions, observed action, the equal product and the conditions for another booking. The map-makers’ comparison carries the scoped lab grant and sharing decision into one trial. It distinguishes the parties’ reports from evidence about a usable earlier route.",
       "remaining": "Independent usability, sustained maintenance and genuinely changed future access are still open."
     },
     {
@@ -531,6 +531,16 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "The two readings distinguish reports from scoped grant and agreement, keep each participant’s aim and result with its source, and leave the witness clock unaligned.",
       "remaining": "Changes to B’s privacy or practical exit and evidence of a newly formed opportunity still need a direct comparison against this record."
+    },
+    {
+      "block_id": "B0162",
+      "block_sha256": "356df8937a5d4d1505b91e5d8b011197ff09043cb6d1ca9033dc2e520eeebc4b",
+      "status": "COMPRESSED",
+      "reviewer": "Build, source comparison for the shared fabrication trial",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The scoped comparison includes a usable prior supplier outside the lab’s record, a route formed within the compared options and unresolved prior access. B can ask the keeper and supervisor about an authorised neutral-object trial with its own materials and agreement.",
+      "remaining": "",
+      "destination": "What did the shared session make possible?"
     }
   ]
 }
