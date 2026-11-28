@@ -459,3 +459,21 @@ The duty clerk can correct the desk’s entry and route the follow-up. The autho
 | [B0145](TRACE-v0.5-reference.md#L442-L443) | **Compressed for this handover.** Both applicable accounts remain in view even when the selected entry omits the negative. An unresolved time match leaves the reports and the basis of any earlier dispute available. |
 | [B0146](TRACE-v0.5-reference.md#L444-L445) | **Partial.** The worked decision uses a stipulated common clock and follows the full handover. Missing correspondence leaves the common period open. The declared clock and basis fields, the legacy applicability contract and the effective result rules stay in the profile. |
 | [B0147](TRACE-v0.5-reference.md#L446-L447) | **Reference only.** The optional request status, original validation errors and parser limits stay with the profile. |
+
+## When C keeps the conversation private, 28 November 2026
+
+The [workshop handover](CANDIDATE.md#what-could-c-do-with-that-notice) now identifies when the clerk receives the report C agreed to share. The 14:22 desk entry cites only the 14:03 delivery receipt. That source supports delivery to the agreed address. It leaves C’s ability to use the link during the stated period unverified. The clerk can correct the entry on those grounds during a routine handover.
+
+| What happened at the notice keeper | What the booking clerk has at handover | What the clerk can record about access during the period |
+| --- | --- | --- |
+| C never spoke to the keeper. | Desk entry and delivery receipt. | Unconfirmed. |
+| C told the keeper about the problem and expressly kept the report private. | Desk entry and delivery receipt. | Unconfirmed. The keeper holds C’s confidence. |
+| C agreed to share the report and it has yet to arrive. | Desk entry and delivery receipt. | Unconfirmed. |
+| The clerk received the case-matched report within C’s sharing terms. | Desk entry, delivery receipt and C’s report. | Disputed. The entry relies on a delivery receipt and C reports being unable to book. |
+
+The first three clerk records coincide. In the second history the keeper has C’s stated decision to keep the conversation private. The clerk cannot infer that decision from a blank field. The clerk can preserve the same agreed reply route in all four when the register confirms the hold and staffing is in place. If there is only a request to hold a place, the clerk checks the authorised register before offering it as held. The same two evidence questions give eight combinations in the finite comparison.
+
+| Earlier source | Treatment in this decision |
+| --- | --- |
+| [0.5 B0084, holder and inquiry status](TRACE-v0.5-reference.md#L251) | **Compressed for the clerk’s handover.** Section 1 carries the potentially overlapping inquiry states and the need to name the holder, source and scope. C decides what the keeper may pass on. A missing report in the clerk’s record leaves the reason open. A request to the keeper supplies no entitlement to the conversation. |
+| [0.5 B0036](TRACE-v0.5-reference.md#L103), [B0102](TRACE-v0.5-reference.md#L305-L311) and [0.4 §6.0.1](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md#L132-L140) | **Partial.** Access, safe use, and authority to disclose have distinct grounds. The [donor index](DONOR-AND-CASE-INDEX.md) now takes custody to 0.3 §9.3 and control of uncertainty to §4.3. The previous links took readers to the opposite passages. The 0.3 flag for control and delay also requires evidence about advantage and burden. The fixture supplies no evidence of a delay advantage or a transferred burden. Retaliation, safe-copy conditions and the other mechanisms in these two 0.5 blocks retain their source-specific limits. |

@@ -1,26 +1,26 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "8e57f901261528fe663c022a1aa9e15e8f699b99dcc6d4937633f428c544024e",
+  "candidate_sha256": "f65be15c006fad017445df034822bf6e0ae0d03de8db1fcda043292d46058853",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
       "block_id": "B0036",
       "block_sha256": "b731f4cf375cbf4825786d409b8a191d017e1124ef378d400673fce58944367d",
       "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "reviewer": "Build (initial review), Campfire (custody and controlled uncertainty)",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Donor profiles and witness custody are reference-only in the candidate.",
-      "remaining": "Provide exact donor anchors and check custody and contamination provisions."
+      "finding": "The clerk can correct the desk’s claim on its own evidence while the keeper respects C’s sharing terms. The detailed technical profiles remain with the donor. The corrected index takes custody to 0.3 §9.3 and the evidence for control and advantage to §4.3.",
+      "remaining": "The two donor routes are now correctly located. The broader technical profiles in B0036, including the full safe-custody and contaminated-unknown contracts across uses, need their own comparisons."
     },
     {
       "block_id": "B0102",
       "block_sha256": "8bbe31cc1080e42b8a16e08e9309053589892662a5383fba1e5e726f17406932",
       "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "reviewer": "Build (initial review), Campfire (custody and controlled uncertainty)",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Asymmetric uncertainty and donor profiles are not fully reproduced.",
-      "remaining": "Check exact source-specific obligations and donor anchors."
+      "finding": "The case distinguishes C’s decision to keep a report private from a claim of control that confers an advantage from delay. The index identifies the grounds for custody under 0.3 §9.3 and for controlled uncertainty under §4.3. Other donor mechanisms still require comparison.",
+      "remaining": "The workshop example covers the scope of a private account for one use. Complete the donor-specific comparisons for uncertainty control, recursive limits, enforcement, correction workload and unresolved commitments."
     },
     {
       "block_id": "B0091",
@@ -168,11 +168,12 @@
     {
       "block_id": "B0084",
       "block_sha256": "fa463c21791ecbc3fac735e8df2a9bb8676e02f2958d48b5d4e4f88b80af9140",
-      "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate",
+      "status": "COMPRESSED",
+      "reviewer": "Build (initial review), Campfire (scoped workshop handover)",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate preserves overlapping inquiry states and withholding as a possible participant boundary.",
-      "remaining": "The complete holder, scope and source qualification remains subject to case-level review; silence must not establish intent."
+      "finding": "Section 1 names overlapping inquiry states with the holder, scope and source. In the workshop, C alone sets the sharing terms for their report to the keeper. A clerk with a blank report field cannot distinguish a private conversation, an authorised report still on its way, and no conversation. The agreed booking route survives each history.",
+      "remaining": "",
+      "destination": "What could C do with that notice?"
     },
     {
       "block_id": "B0085",
