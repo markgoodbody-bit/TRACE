@@ -281,6 +281,20 @@ For a revision, link the earlier and later claims to the grounds for the change.
 
 Record the decision on each revision separately. It can be `PROPOSED` pending review. Under a handover rule that accepts attributed reports, “A reports finding the notice on day 7” can be `ACCEPTED_UNDER_NAMED_CONTRACT` at that scope. Applying the expressly one-session grant to a later date is `REJECTED` on the terms of the grant. Whether a fresh reservation exists stays `UNRESOLVED` until there is evidence for it. The old entry and the later notice can both be accurate for their dates.
 
+##### What can A do while the reopening is unconfirmed?
+
+On day 27 A says they would like to try the makerspace for the printed junction before work starts. The old notebook entry says the print route was closed. The later notice says it reopened. These reports fit a route that reopened, one that was open throughout, or one that is still closed. Keep the dated entry, the reopening notice and A’s earlier account of the junctions they could read by touch. That account still helps specify the job. The proposal to put the makerspace back on the list can stay open while the organiser checks it.
+
+In this continuation another supplier has confirmed a usable slot for the same trial, with booking due before 16:00 on the desk’s clock. A and the organiser choose a 15:30 check-in. They have established that if A wants the held slot, they can complete the return, decision and booking within twenty minutes of that check-in. A agrees that the organiser can ask about the junction trial without sending the sketch. The makerspace keeper can authorise a check of their own booking record and say whether a suitable printer, terms and time are available to A for this job.
+
+If the keeper confirms a usable offer in time, bring both sets of terms to A and let A choose. If the keeper confirms the printer is unavailable for this job in time, carry that finding for this date. The old closure claim still needs evidence about its own date.
+
+At the check-in, if there is no applicable reply, tell A the makerspace question is open. The supplier’s slot is still held. A can take it or leave it unused.
+
+Suppose the keeper confirms a usable offer at 15:35. If A is still choosing and they can still decide and get either choice confirmed within twenty minutes, put both offers to A. A chosen booking can take effect by 15:55. If A’s request went to the supplier and its status is unclear, check whether it took effect before promising a replacement. If the supplier already confirmed A’s booking at 15:34, keep that booking in the handover. A can ask about changing it. Before acting on that choice, check the supplier’s release terms, timing and any cost.
+
+If a reply arrives after the choice closes, carry it into the next decision with its time and scope. Record any booking as a separate event, with A’s agreement and the slot holder’s confirmation. [Released Case C](TRACE-v0.5-reference.md#5-synthetic-encounter-c-memory-can-close-the-map-that-could-correct-it)
+
 #### Can the organiser send A’s sketch?
 
 For the next trial A wants to see whether a print of one junction is readable by touch. A has shared a simplified sketch with the organiser to plan the trial. In both handovers Oak Print offers the same suitable printer and can hold the slot while A decides. The shop must receive the sketch before 16:20 on day 27. The two handovers differ at one point.

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "59a8106d14e0bced36a64d80bbfd4eb55aca6eb896f5f14be7d9e29c1f2a43d6",
+  "candidate_sha256": "b32d8230d7eff88d545a62742e995e74d66d3bfccee6da262cbad37307bacb87",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -541,6 +541,43 @@
       "finding": "The scoped comparison includes a usable prior supplier outside the lab’s record, a route formed within the compared options and unresolved prior access. B can ask the keeper and supervisor about an authorised neutral-object trial with its own materials and agreement.",
       "remaining": "",
       "destination": "What did the shared session make possible?"
+    },
+    {
+      "block_id": "B0169",
+      "block_sha256": "6914fa4b18a028953ef17907c04a7534f589e679d5bfe5ba59bb06b298a32c43",
+      "status": "PARTIAL",
+      "reviewer": "Build, source comparison for a reopened route and a held offer",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The author’s stipulated error is separate from the organiser’s evidence. The worked case keeps several histories open and shows a keeper check that can change a later offer.",
+      "remaining": "The two scripted policy outcomes and evidence about independent or lasting learning remain with their source."
+    },
+    {
+      "block_id": "B0170",
+      "block_sha256": "009521b663d3bc02d7a98d0678321f184adfd739e30a7ca827d1ec3472518ae2",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Build, source comparison for a reopened route and a held offer",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The original Case C packet remains the direct reference for the literal history, proposal, conditional working head, retained recipe, scope and authority fields.",
+      "remaining": "",
+      "destination": "5. Synthetic encounter C: memory can close the map that could correct it"
+    },
+    {
+      "block_id": "B0171",
+      "block_sha256": "b846d66ea4e8ce474f90641bf06dc3fca970271c55237c10bbbf9d0eac6744cb",
+      "status": "PARTIAL",
+      "reviewer": "Build, source comparison for a reopened route and a held offer",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The later report, the proposed reconsideration, the earlier useful entry and a confirmed booking keep their separate scopes. The designated keeper’s reply and A’s decision matter at different points.",
+      "remaining": "Authentication beyond the stipulated keeper, the effect of keeping a recipe on later use and learning beyond this one decision remain open."
+    },
+    {
+      "block_id": "B0172",
+      "block_sha256": "a66826034dc11bef6becfb602e8c716f886e9f625bfbebce64d9273ee389b08c",
+      "status": "PARTIAL",
+      "reviewer": "Build, source comparison for a reopened route and a held offer",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The organiser asks about a route through an authorised holder before the alternative closes. The earlier exclusion does not decide the result or stop the inquiry.",
+      "remaining": "Relative performance of simple notebook rules and other methods of ordering probes remains open."
     }
   ]
 }
