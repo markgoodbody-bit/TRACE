@@ -441,3 +441,21 @@ Hold the keeper’s 15:35 reply fixed and vary the state of the supplier booking
 | [B0170](TRACE-v0.5-reference.md#L920-L988) | **Reference only.** Case C retains the literal packet, names, revision fields, proposed working head and authority limits. The booking continuation carries their decision without reusing the toy controller as an actual witness. |
 | [B0171](TRACE-v0.5-reference.md#L989-L990) | **Partial.** The notice and its proposed use stay attributed, the useful prior entry remains available, and a booking needs a usable offer, A’s agreement and a confirmation. The stronger claims about lasting learning and independent authentication remain open. |
 | [B0172](TRACE-v0.5-reference.md#L991-L992) | **Partial.** An authorised keeper check is worth considering because the answer could change the offer before the held slot closes. The comparison between probe-order policies remains open. |
+
+## What the booking desk and C each reported, 28 November 2026
+
+[Who had a way to book?](CANDIDATE.md#who-had-a-way-to-book) already carries A and B’s earlier bookings and leaves C’s earlier access open. The [next handover](CANDIDATE.md#what-could-c-do-with-that-notice) uses a particular desk entry to choose a follow-up for C. The delivery receipt and C’s account that the link was unusable can both be accurate. The desk’s further claim that C could use the link from 14:00 to 14:20 is what C’s report challenges. The source of the desk’s claim is visible, as are the invitation, the link and the period. Sharing C’s report follows their agreement with the keeper. An actual request for correction has its own attribution.
+
+Keep the selected desk entry fixed and vary the rest of the record. C’s acknowledgement of receipt leaves their view of usability open. Their case-matched report of inability makes the usability entry disputed. Reports from the earlier workshop and checks of a repaired link later that day belong to their respective decisions. With clock correspondence missing, the accounts and any dispute supported under the original rule remain available while the time match is unresolved.
+
+The duty clerk can correct the desk’s entry and route the follow-up. The authorised register supplies the hold and its effective interval. An acknowledgement of a request for a hold would leave the clerk a booking-status check. With the hold, the agreed reply channel and processing in place, the clerk can keep the place available through the cutoff and timely processing in both the delivery-only and disputed readings. Taking the place and requesting a correction remain C’s decisions.
+
+| Released 0.5 source | Treatment in the working edition |
+| --- | --- |
+| [B0141](TRACE-v0.5-reference.md#L428-L429) | **Compressed.** The workshop has a named decision where the selected support and the contrary account both matter. |
+| [B0142](TRACE-v0.5-reference.md#L430-L431) | **Partial.** The clerk can see which entry the handover selected and the claim it is meant to support. The predicate query and its optional named binding remain in the profile. |
+| [B0143](TRACE-v0.5-reference.md#L432-L439) | **Reference only.** The requirement and result fields, including the action and claim limits, stay with the optional profile. |
+| [B0144](TRACE-v0.5-reference.md#L440-L441) | **Partial.** The selected entry, speaker, claim, invitation, application and period are explicit. Earlier evidence keeps its earlier scope. The adapter’s caller-supplied identity and exact correspondence checks remain in the profile. |
+| [B0145](TRACE-v0.5-reference.md#L442-L443) | **Compressed for this handover.** Both applicable accounts remain in view even when the selected entry omits the negative. An unresolved time match leaves the reports and the basis of any earlier dispute available. |
+| [B0146](TRACE-v0.5-reference.md#L444-L445) | **Partial.** The worked decision uses a stipulated common clock and follows the full handover. Missing correspondence leaves the common period open. The declared clock and basis fields, the legacy applicability contract and the effective result rules stay in the profile. |
+| [B0147](TRACE-v0.5-reference.md#L446-L447) | **Reference only.** The optional request status, original validation errors and parser limits stay with the profile. |
