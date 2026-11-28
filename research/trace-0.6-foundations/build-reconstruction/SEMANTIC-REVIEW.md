@@ -418,3 +418,11 @@ The [map-makers’ comparison](CANDIDATE.md#what-did-the-shared-session-make-pos
 | --- | --- |
 | [B0106](TRACE-v0.5-reference.md#L319-L327) | **Partial.** The passage follows the separately held sketch, authorised lab access and willing supervision into a one-session trial. The two people’s reports retain their own scope. Earlier alternatives, independent usability and any later renewal have separate evidence. Sustained maintenance and future availability remain open. |
 | [B0162](TRACE-v0.5-reference.md#L800) | **Compressed.** A supplier outside the lab’s records could already serve the same job. The scope and evidence needed for a newly usable route are explicit. A decides what to share. B can ask the keeper and supervisor about an authorised, supported calibration trial on a neutral object, with its own equipment and agreement. |
+
+## Which earlier check still applies? 28 November 2026
+
+The [17 November table](FLOOR-RECONCILIATION.md) compares each of the fifteen clauses with released 0.5. It records an authored reading and names the older donor work still open. The closing sentence in §6 had continued to describe the whole comparison as pending.
+
+For F02 we compared [released 0.4 §5 and §5.1](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md#L83-L106), [0.5’s currentness clause](TRACE-v0.5-reference.md#L266) and [Sam’s handover](CANDIDATE.md#which-table-did-sams-helper-check). Hold Sam’s standing authorisation and the helper’s departure fixed. When the completed check names the current table, Sam can decide how to use that checked version. When the completed check names last week’s table, the new one still needs checking. An entry saying only “checked” leaves its relevance open. Sam’s own choice and the helper’s comparison each keep their named holder.
+
+B0091 stays **partial**. This comparison covers the dependence on version, the effect of an unrelated change and the unnamed check. The [earlier findings](#who-had-a-way-to-book-27-november-2026) remain scoped to their cases. The longitudinal changes in capability, authority and burden in 0.4 §5.1 and the other outstanding clauses still need comparison for their intended uses.

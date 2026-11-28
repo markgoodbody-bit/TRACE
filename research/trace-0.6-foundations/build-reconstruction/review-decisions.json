@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "ccd2d8c5cf2abe844967523cead7d5c0e18a91a9d145aeaae535b6d98315fd8e",
+  "candidate_sha256": "59a8106d14e0bced36a64d80bbfd4eb55aca6eb896f5f14be7d9e29c1f2a43d6",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -26,10 +26,10 @@
       "block_id": "B0091",
       "block_sha256": "051bdf5d08e5da41eef8ad06a2b2e1c4c5215496c8f3a7551c76e8e51f8ec6e3",
       "status": "PARTIAL",
-      "reviewer": "Build, same author as candidate; Campfire, F06 and F09 case comparison",
+      "reviewer": "Build, candidate author; Campfire, scoped case comparisons",
       "evidence": "SEMANTIC-REVIEW.md",
-      "finding": "Candidate section 6 presents the fifteen compatibility-floor items. The musician’s next-season case tests the scope of the current refusal, what future the musician wants, and whether a filing channel is discoverable and usable before its deadline. The workshop invitation compares the booking register with the opted-in notice cohort, keeps earlier route access unknown for C, and shows a staffed reply route for a later invitation (F01 and F10).",
-      "remaining": "The cases cover aspects of F01, F06, F09 and F10. Check the other requirements of these and the remaining clauses against the exact 0.5 floor and its released 0.4 sources."
+      "finding": "Candidate section 6 presents the fifteen compatibility-floor items. The musician’s next-season case tests the scope of the current refusal, what future the musician wants, and whether a filing channel is discoverable and usable before its deadline. The workshop invitation compares the booking register with the opted-in notice cohort, keeps earlier route access unknown for C, and shows a staffed reply route for a later invitation (F01 and F10). Sam’s handover tests F02 with a completed check of the current version, a check of an earlier version and a note with no named version. The helper’s later departure leaves a completed comparison intact.",
+      "remaining": "The cases cover aspects of F01, F02, F06, F09 and F10. Check the remaining requirements against the released 0.5 clauses and their 0.4 sources, including the wider longitudinal changes under 0.4 §5.1."
     },
     {
       "block_id": "B0120",

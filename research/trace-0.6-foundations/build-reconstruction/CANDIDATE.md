@@ -324,7 +324,7 @@ Ask Oak Print whether it can hold intake longer and ask A whether that would sti
 Activate the following when their loss could affect the use; unresolved materiality stays unresolved. These are reading obligations, not claims that the laboratory enforces them:
 
 1. **Selection:** preserve who selected the target, why, known omissions, alternatives and relevant custody. Unsearched is not absent.
-2. **Currentness:** check the dependencies relevant to the claim, including changed authority, evidence, burden and routes. Age alone proves neither currentness nor staleness.
+2. **Currentness.** Trace the conclusion to the evidence, authority, burdens and routes it depends on. Check which of those changed and leave currentness open when their relevance is unclear. Age alone cannot settle it. In [Sam’s handover](#which-table-did-sams-helper-check), the helper’s departure leaves a completed check of the current table intact. If the helper checked last week’s version, the new one still needs checking.
 3. **Warrant at use:** retain a consequential proposition's source, scope, applicability and counterevidence whether it appears as prose, a label, configuration, cache or model output. Copying is not independent verification.
 4. **Witness and access:** evidence, access, control and disclosure are different. A specified check is not an executed one; execution may miss the defect or arrive too late. Loss of a witness, heartbeat, reply, route or status may end the current verification interval without establishing why. A different name or an external position alone does not establish witness independence: custody, incentives, derivation or control may still be shared.
 5. **Affected scale:** boundaries are selected for a purpose and do not establish personhood or equivalent kinds of entities. Aggregate recovery does not establish that a particular smaller entity or loss was repaired.
@@ -339,7 +339,7 @@ Activate the following when their loss could affect the use; unresolved material
 14. **Stop or handoff:** preserve and route unresolved work to an appropriate established domain owner when further differentiation cannot affect a material claim before its clock, evidence is unavailable, resource or depth limits are reached, or authority belongs elsewhere. Consider the cost of inquiry and the correction window; UNKNOWN alone dictates neither action nor delay.
 15. **Practical advantage:** predeclare a use class, relevant ordinary or expert comparator, consequence or transfer criterion, activation-burden measure and ceiling, and adjudication. Where feasible use a blind assessor. A failed matched comparison narrows that use claim; it does not reject the whole purpose. Track maintenance cost when material.
 
-The original [v0.5 floor](https://github.com/markgoodbody-bit/TRACE/blob/d688c149afc15c90ab51afaf08fe303771e9de20/TRACE-v0.5.md) and its v0.4 source remain the comparison authority. This rendering is pending a clause-by-clause reconciliation.
+The [17 November comparison](FLOOR-RECONCILIATION.md) records the author’s reading of all fifteen clauses against released 0.5. The [review ledger](review-decisions.json) keeps the floor partially reviewed. For a decision that turns on a clause, follow its evidence back to the [0.5 floor](TRACE-v0.5-reference.md#inherited-v04-compatibility-floor-review-level-semantics) and the [0.4 source](https://github.com/markgoodbody-bit/TRACE/blob/475772354a29cdd96b3c8fae7be93449c4737d71/TRACE-SPINE.md).
 
 ## 7. Paired worked probe
 
