@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_sha256": "83d96d5e44b269418a7a772ec2ec79151f8bcb1420ac0b99f90276b289b596a5",
-  "candidate_sha256": "b32d8230d7eff88d545a62742e995e74d66d3bfccee6da262cbad37307bacb87",
+  "candidate_sha256": "8e57f901261528fe663c022a1aa9e15e8f699b99dcc6d4937633f428c544024e",
   "note": "Same-team source comparisons. On 19 November the first-decision guide and source applications were checked against the existing partial findings. On 20 November the dispatch case was checked against the existing findings on clocks, receipt, authority, effect and witness independence. The meaning review remains incomplete. Read the evidence behind each disposition.",
   "reviews": [
     {
@@ -578,6 +578,73 @@
       "evidence": "SEMANTIC-REVIEW.md",
       "finding": "The organiser asks about a route through an authorised holder before the alternative closes. The earlier exclusion does not decide the result or stop the inquiry.",
       "remaining": "Relative performance of simple notebook rules and other methods of ordering probes remains open."
+    },
+    {
+      "block_id": "B0141",
+      "block_sha256": "d39fef50fd9f82fa0edf12dbee521ff9590d444aaa3ea2c0c4f00ec02c126dc7",
+      "status": "COMPRESSED",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The workshop handover gives named support and retained disagreement a worked decision about a booking follow-up.",
+      "remaining": "",
+      "destination": "What could C do with that notice?"
+    },
+    {
+      "block_id": "B0142",
+      "block_sha256": "95f337f84e9f2d2cf322fd1b6ed2e8a6ae945137d6981778dfa725d772d827ea",
+      "status": "PARTIAL",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The selected desk entry names the positive usability assertion and has its own basis in the delivery receipt.",
+      "remaining": "The predicate-based legacy query and optional named requirement binding remain in the released profile."
+    },
+    {
+      "block_id": "B0143",
+      "block_sha256": "74651c35b60f5016c0fa108b61faa1502bfbc15af833586b0eda7ba49ad0c4e8",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The exact requirement and result layouts and their action and claim limits stay with the optional profile.",
+      "remaining": "",
+      "destination": "Named support without discarded disagreement"
+    },
+    {
+      "block_id": "B0144",
+      "block_sha256": "87fd0671caa8b1ea78c31718cfaeeb1d99c050f1b401b2419b5483ba31324644",
+      "status": "PARTIAL",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The handover selects a particular claim, retains the speaker, invitation, link and period, and keeps evidence about other sessions or periods within their scope.",
+      "remaining": "The optional adapter’s caller-supplied IDs and exact route, scope, application and ordered predicate correspondence stay in the released profile."
+    },
+    {
+      "block_id": "B0145",
+      "block_sha256": "08795be451e2a3f6e84197510a3b48a6c75194922007289cd402028c0ccb2a06",
+      "status": "COMPRESSED",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The full handover carries both case-matched reports even when the selected positive omits C’s report. Unresolved time correspondence keeps the accounts and any earlier dispute with their stated basis.",
+      "remaining": "",
+      "destination": "What could C do with that notice?"
+    },
+    {
+      "block_id": "B0146",
+      "block_sha256": "ec0020401bedcf2691c165ee276492588831671dbe890d875aad7a36d33659e3",
+      "status": "PARTIAL",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "A stipulated common clock supports the matched period. Unmatched settings keep the time match open. The decision uses the full handover and separately supported held place.",
+      "remaining": "The optional clock and basis annotations, legacy applicability contract and effective-status fields stay in the released profile."
+    },
+    {
+      "block_id": "B0147",
+      "block_sha256": "9d5673b159f26e6cda74d8e6479fa36897e9c202d72b2d99fa401a90831d25a9",
+      "status": "REFERENCE_ONLY",
+      "reviewer": "Build, author of the workshop handover, 28 November 2026",
+      "evidence": "SEMANTIC-REVIEW.md",
+      "finding": "The optional request status, validation errors and parser scope stay in the released profile.",
+      "remaining": "",
+      "destination": "Named support without discarded disagreement"
     }
   ]
 }

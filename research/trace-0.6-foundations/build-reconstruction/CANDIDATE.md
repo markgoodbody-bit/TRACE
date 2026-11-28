@@ -503,6 +503,20 @@ The notice keeper can compare the list with the desk’s register if authorised 
 
 For the next workshop, the desk has three places. It holds one for each recipient through the reply cutoff and the processing of timely replies. It sends the offer through a channel the recipient has confirmed they can use. A named clerk has time and authority to confirm timely replies before the register closes. The clerk can confirm C’s booking even if C sends the only reply. C may leave the place unused. Record the held place, usable channel and staffed route as evidence about this invitation. Earlier access stays open where the earlier evidence still fits both histories.
 
+#### What could C do with that notice?
+
+At the next handover, the clerk is deciding whether to direct C back to the booking link. The handover selects the desk’s 14:22 entry. These records all concern C’s invitation to the new workshop and use the same local clock.
+
+| Source and record time | What the record says |
+| --- | --- |
+| Notice service, 14:03 | The invitation was delivered to C’s agreed address. |
+| Booking desk, 14:22 | C could use the link in that invitation to book between 14:00 and 14:20. The entry cites the delivery receipt. |
+| C, reported privately to the notice keeper at 14:25 | “I got it. I couldn’t book through that link between 14:00 and 14:20.” C agrees the keeper can share this report with the booking clerk. |
+
+If the desk recorded delivery alone, C’s account would fit it. The selected entry also claims that the link was usable for C in the period C describes. Keep both accounts in the handover even if the selected entry leaves C’s report out. The receipt can support delivery. Carry the link’s usability for C in that period as disputed and record the basis of each account. A check of a repaired link later that day could support a new offer. If the clerk cannot match two records’ clock settings, keep the accounts and the basis of any dispute already recorded. Leave open whether the reports cover the same period.
+
+The duty clerk can amend the desk’s entry and change the follow-up. The clerk’s register records C’s place held from 13:50 through the 16:00 reply cutoff and the processing of timely replies. Give C the option of booking the held place by replying through the channel they already agreed they could use. C can choose whether to book while the clerk checks the link. If C separately asks for the entry to be corrected, carry that request as C’s, with the entry named. Keep C’s report within their sharing terms. [Released named support and disagreement](TRACE-v0.5-reference.md#named-support-without-discarded-disagreement)
+
 #### What if the desk has already promised a slot?
 
 Suppose there are two staffed phone slots and one written slot still ahead before closing. Each can confirm one booking. A and B can use either phone slot. C can use the first phone slot or the written slot. If C agrees to written confirmation, the desk can keep both phone slots available for A and B. Each person still chooses whether to take a place.
